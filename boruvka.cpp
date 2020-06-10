@@ -41,7 +41,7 @@ int main()
     cin >> n >> m;
     union_find graph(n);
     vector< tuple<int, int, int> > edges;
-
+    vector<int> cheapest(n, -1);
 
     for(int i = 0; i < m; ++i)
     {
@@ -54,8 +54,7 @@ int main()
 
     while(graph.cc > 1)
     {
-        vector<int> cheapest(n, -1);
-        
+        fill(cheapest.begin(), cheapest.end(), -1); 
         for(int i = 0; i < m; ++i)
         {
             int from, to, cost;
