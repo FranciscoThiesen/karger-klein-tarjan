@@ -61,7 +61,7 @@ int main()
             tie(from, to, cost) = edges[i];
             to = graph.find_parent(to);
             from = graph.find_parent(from);
-            if(graph.find_parent(from) == graph.find_parent(to)) continue;
+            if(from == to) continue;
             if(cheapest[from] == -1 || cost < get<2>(edges[cheapest[from]]) ) cheapest[from] = i;
             if(cheapest[to] == -1 || cost < get<2>(edges[cheapest[to]]) ) cheapest[to] = i;
         }
