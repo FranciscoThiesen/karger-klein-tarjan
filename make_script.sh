@@ -1,1 +1,1 @@
-g++-mp-7 -Wall -g -std=c++14 verification.cpp UnionFind/*.cpp
+g++-mp-7 -Wall -g -std=c++14 verification.cpp UnionFind/*.cpp -o verification
