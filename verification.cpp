@@ -153,17 +153,17 @@ struct tree_path_maxima {
 
     vector<int> median_table(int h) {
         vector<int> T((1 << h) + 1, 0);
-        vector<int> median_T(1 << h + 1, 0);
+        vector<int> median_T(1 << (h + 1), 0);
 
-        std::function<int(int, int, int)> subsets = [&](int a, int b, int c) {
-            if (a < b) return c;
-            if (b == 0) {
-                T[c] = 0;
-                return c + 1;
+        std::function<int(int, int, int)> subsets = [&](int x, int y, int z) {
+            if (x < y) return z;
+            if (y == 0) {
+                T[z] = 0;
+                return z + 1;
             }
-            int q = subsets(a - 1, b - 1, c);
-            for (int i = c; i < q; ++i) T[i] |= 1 << (a - 1);
-            return subsets(a - 1, b, q);
+            int q = subsets(x - 1, y - 1, z);
+            for (int i = z; i < q; ++i) T[i] |= 1 << (x - 1);
+            return subsets(x - 1, y, q);
         };
 
         for (int s = 0; s <= h; ++s) {
@@ -173,7 +173,9 @@ struct tree_path_maxima {
                 q = subsets(s, k + 1, q);
                 for (int i = 0; i < p; ++i) {
                     int b = (1 << s + 1) * T[i] + (1 << s);
-                    for (int j = p; j < q; ++j) median_T[b + T[j]] = s;
+                    for (int j = p; j < q; ++j) {
+                        median_T[b + T[j]] = s;
+                    }
                 }
             }
         }
@@ -205,21 +207,15 @@ struct tree_path_maxima {
     vector<int> compute_answer() {
         fill(L.begin(), L.end(), -1);
         fill(Lnext.begin(), Lnext.end(), -1);
-        TRACE( cout << "preenchendo L" << endl; )
-        WATCHC(lower);
-        WATCHC(upper);
         for (int i = 0; i < m; ++i) {
             Lnext[i] = L[lower[i]];
             L[lower[i]] = i;
         }
-        TRACE( cout << "terminei de preencher L" << endl; )
         fill(D.begin(), D.end(), 0);
-        TRACE( cout << "compute answer vai chamar init" << endl; )
         init(root, 0);
-        P = vector<int>(height + 1);
+        P = vector<int>(height + 1, 0);
         median = median_table(height);
         visit(root, 0);
-        WATCHC(answer);
         return answer;
     }
 };
@@ -264,20 +260,8 @@ struct test_graph {
      
     
     test_graph(vector<tuple<int, int, int>> edges, int n) {
-        TRACE(
-            cout << "test_graph recebeu as arestas" << endl;
-            WATCHC(edges);
-        );
         mst = get_kruskal(edges, n);
-        TRACE(
-            cout << "MST = " << endl;
-            WATCHC(mst);
-        );
         auto fbt_mst = fbt_reduction(mst, n);
-        TRACE(
-            cout << "versao full branching tree da MST" << endl;
-            WATCHC(fbt_mst);
-        );
         G = edges;
         // a raiz arbitraria vai ser o 0
         int max_id = n;
@@ -299,7 +283,6 @@ struct test_graph {
             adj_list[a].emplace_back(b, c);
             adj_list[b].emplace_back(a, c);
         }
-        TRACE( cout << "vou chamar a primeira dfs pra popular a arvore" << endl; )
 
         function<void(int, int)> dfs = [&] (int node, int parent) {
             vector<int> kids;
@@ -322,10 +305,6 @@ struct test_graph {
         // adj_list representa garantidamente o grafo de uma arvore
         // vou fixar a raiz arbitraria dessa arvore em 0...
         dfs(root, -1);
-        TRACE( cout << "terminei as dfs" << endl; )
-        WATCHC(child);
-        WATCHC(sibling);
-        WATCHC(weight);
     }
 
     void verify() {
@@ -333,19 +312,16 @@ struct test_graph {
         for(const auto& e : G) {
             int src, to, cost;
             tie(src, to, cost) = e;
-            upper.push_back(src);
-            lower.push_back(to);
-            gabarito.push_back(cost);
         }
-        TRACE( cout << "vou chamar a tree path maxima " << endl; )
-        tree_path_maxima caixa_de_pandora = tree_path_maxima(root, child, sibling, weight, lower, upper);
-        TRACE( cout << "vou computar a resposta" << endl; ) 
+        upper = vector<int>(3, 3);
+        for(int i = 0; i < 3; ++i) lower.push_back(i);
+        tree_path_maxima caixa_de_pandora = tree_path_maxima(root, child, sibling, weight, upper, lower);
         vector<int> sol = caixa_de_pandora.compute_answer();
         int len = static_cast<int>(lower.size());
         for(int i = 0; i < len; ++i)
         {
             cout << "quero saber a aresta mais barata entre " << lower[i] << " e " << upper[i] << endl;
-            cout << "gabarito = " << gabarito[i] << " retorno arvore = " << weight[sol[i]] << endl << endl;
+            cout << " retorno arvore = " << weight[sol[i]] << endl << endl;
              
         }
     }

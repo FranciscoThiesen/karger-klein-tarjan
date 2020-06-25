@@ -35,6 +35,17 @@ inline ll pow_mod( ll a, ll b, ll mod = MOD) {
     return res;
 }
 // End of template code!
+int func(int x) {
+    auto b = [&] () {
+        auto c = [&] () {
+            return v + 1;
+        };
+        c(x);
+    };
+    b();
+    return x;
+}
+
 int main() 
 {
     buff();
