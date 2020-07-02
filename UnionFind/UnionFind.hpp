@@ -8,7 +8,7 @@ struct UnionFind {
     int find_parent(int node);
     bool unite(int x, int y);
     std::vector<int> parent, rank;
-    int n;
+    int n, cc;
 };
 
 #endif

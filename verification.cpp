@@ -1,8 +1,12 @@
 #include <bits/stdc++.h>
 
 #include "UnionFind/UnionFind.hpp"
+#include "Kruskal/Kruskal.hpp"
+#include "Boruvka/Boruvka.hpp"
+#include "Prim/Prim.hpp"
 
 using namespace std;
+
 #define TRACE(x) x
 #define WATCH(x) TRACE( cout << #x" = " << x << endl)
 #define PRINT(x) TRACE(printf(x))
@@ -220,27 +224,133 @@ struct tree_path_maxima {
     }
 };
 
-// Recebe todas as arestas de um grafo (src, dest, cost) e retorna so as da MST
-vector<tuple<int, int, int>> get_kruskal(const vector<tuple<int, int, int>>& g,
-                                     int n) {
-    UnionFind graph(n);
-    vector<tuple<int, int, int>> edges;
-    vector<tuple<int, int, int>> mst;
-    for (const auto& x : g) {
-        int src, dest, cost;
-        tie(src, dest, cost) = x;
-        edges.emplace_back(cost, src, dest);
+// Code for O(n) LCA, Farach Colton Bender
+int N;
+vector<vector<int> > adj;
+
+int block_size, block_cnt;
+vector<int> first_visit;
+vector<int> euler_tour;
+vector<int> height;
+vector<int> log_2;
+vector<vector<int>> st;
+vector<vector<vector<int> > > blocks;
+vector<int> block_mask;
+
+void dfs_lca(int v, int p, int h) {
+    first_visit[v] = euler_tour.size();
+    euler_tour.push_back(v);
+    height[v] = h;
+
+    for(int u : adj[v]) {
+        if(u == p) continue;
+        dfs_lca(u, v, h + 1);
+        euler_tour.push_back(v);
     }
-    sort(edges.begin(), edges.end());
-    for (const auto& e : edges) {
-        int cost, from, to;
-        tie(cost, from, to) = e;
-        if (graph.unite(from, to)) {
-            mst.emplace_back(from, to, cost);
+}
+
+int min_by_h(int i, int j) {
+    return height[euler_tour[i]] < height[euler_tour[j]];
+}
+
+void precompute_lca(int root) {
+    // get euler tour & indices of first occurences
+    first_visit.assign(N, -1);
+    height.assign(N, 0);
+    euler_tour.reserve(2 * N);
+    dfs_lca(root, -1, 0);
+
+    // precompute all log values
+    int m = euler_tour.size();
+    log_2.reserve(m + 1);
+    log_2.push_back(-1);
+    for (int i = 1; i <= m; i++)
+        log_2.push_back(log_2[i / 2] + 1);
+
+    block_size = max(1, log_2[m] / 2);
+    block_cnt = (m + block_size - 1) / block_size;
+
+    // precompute minimum of each block and build sparse table
+    st.assign(block_cnt, vector<int>(log_2[block_cnt] + 1));
+    for (int i = 0, j = 0, b = 0; i < m; i++, j++) {
+        if (j == block_size)
+            j = 0, b++;
+        if (j == 0 || min_by_h(i, st[b][0]) == i)
+            st[b][0] = i;
+    }
+    for (int l = 1; l <= log_2[block_cnt]; l++) {
+        for (int i = 0; i < block_cnt; i++) {
+            int ni = i + (1 << (l - 1));
+            if (ni >= block_cnt)
+                st[i][l] = st[i][l-1];
+            else
+                st[i][l] = min_by_h(st[i][l-1], st[ni][l-1]);
         }
     }
-    return mst;
+
+    // precompute mask for each block
+    block_mask.assign(block_cnt, 0);
+    for (int i = 0, j = 0, b = 0; i < m; i++, j++) {
+        if (j == block_size)
+            j = 0, b++;
+        if (j > 0 && (i >= m || min_by_h(i - 1, i) == i - 1))
+            block_mask[b] += 1 << (j - 1);
+    }
+
+    // precompute RMQ for each unique block
+    int possibilities = 1 << (block_size - 1);
+    blocks.resize(possibilities);
+    for (int b = 0; b < block_cnt; b++) {
+        int mask = block_mask[b];
+        if (!blocks[mask].empty())
+            continue;
+        blocks[mask].assign(block_size, vector<int>(block_size));
+        for (int l = 0; l < block_size; l++) {
+            blocks[mask][l][l] = l;
+            for (int r = l + 1; r < block_size; r++) {
+                blocks[mask][l][r] = blocks[mask][l][r - 1];
+                if (b * block_size + r < m)
+                    blocks[mask][l][r] = min_by_h(b * block_size + blocks[mask][l][r], 
+                            b * block_size + r) - b * block_size;
+            }
+        }
+    }
 }
+
+int lca_in_block(int b, int l, int r) {
+    return blocks[block_mask[b]][l][r] + b * block_size;
+}
+
+int lca(int v, int u) {
+    int l = first_visit[v];
+    int r = first_visit[u];
+    WATCH(l);
+    WATCH(r);
+    if (l > r)
+        swap(l, r);
+    int bl = l / block_size;
+    int br = r / block_size;
+    WATCH(bl);
+    WATCH(br);
+    if (bl == br)
+        return euler_tour[lca_in_block(bl, l % block_size, r % block_size)];
+    int ans1 = lca_in_block(bl, l % block_size, block_size - 1);
+    int ans2 = lca_in_block(br, 0, r % block_size);
+    int ans = min_by_h(ans1, ans2);
+    if (bl + 1 < br) {
+        int l = log_2[br - bl - 1];
+        int ans3 = st[bl+1][l];
+        int ans4 = st[br - (1 << l)][l];
+        ans = min_by_h(ans, min_by_h(ans3, ans4));
+    }
+    return euler_tour[ans];
+}
+
+// Instruções de uso
+// vetor edges recebe as arestas todas as arestas do grafo, no formato (origem, destino, custo)
+// vetor spanning tree recebe todas as arestas de sua spanning tree, que voce deseja verificar
+// auto V = test_graph(vector<tuple<int, int, int>> edges, vector<tuple<int, int, int> > spanning_tree, int total_nodes);
+// V.verify(); // <- retorna um booleano, e se for falso diz qual aresta eh contra exemplo
 
 struct test_graph {
     // vamos transformar o conjunto de arestas no formato necessario para rodar
@@ -249,21 +359,24 @@ struct test_graph {
     // O tree_path_maxima pede
     // 1 - Uma raiz
     // 2 - Um vetor child que liga um pai ate o seu filho mais a esquerda, ou -1
-    // se for folha 3 - Um vetor sibling, que indica para cada nó qual o "irmão"
-    // da direita 4 - Um vetor weight, que diz o peso que liga um determinado nó
-    // ao seu pai 5 - Além de tudo, isso precisa ser relativo a uma full
-    // branching tree.. 6 - Vetor de arestas do grafo original
+    // se for folha 
+    // 3 - Um vetor sibling, que indica para cada nó qual o "irmão"
+    // da direita 
+    // 4 - Um vetor weight, que diz o peso que liga um determinado nó
+    // ao seu pai 
+    // 5 - Além de tudo, isso precisa ser relativo a uma full
+    // branching tree..
+    // 6 - Vetor de arestas do grafo original
     int root, total_nodes;
-    vector<int> child, sibling, weight, upper, lower;
+    vector<int> child, sibling, weight;
     vector< tuple<int, int, int> > mst;
     vector< tuple<int, int, int> > G;
      
     
-    test_graph(vector<tuple<int, int, int>> edges, int n) {
-        mst = get_kruskal(edges, n);
+    test_graph(vector<tuple<int, int, int>> edges, vector<tuple<int, int, int> > spanning_tree, int n) {
+        mst = spanning_tree;
         auto fbt_mst = fbt_reduction(mst, n);
         G = edges;
-        // a raiz arbitraria vai ser o 0
         int max_id = n;
         for(const auto& e : fbt_mst) {
             int a, b, c;
@@ -271,12 +384,17 @@ struct test_graph {
             max_id = max(max(a, b) + 1, max_id);
         }
         total_nodes = max_id;
+        // This N is for LCA
+        N = total_nodes;
+        // End of LCA Prep
         vector< vector< pair<int, int> > > adj_list(max_id);
-        
+        adj.resize(N);
+
         child.assign(max_id, -1);
         sibling.assign(max_id, -1);
         weight.assign(max_id, -1);
         root = max_id - 1;
+
         for(const auto& e : fbt_mst) {
             int a, b, c;
             tie(a, b, c) = e;
@@ -290,6 +408,9 @@ struct test_graph {
                 int to = edge.first;
                 int cost = edge.second;
                 if(to != parent) {
+                    // Preparing the tree for the LCA
+                    adj[node].push_back(to);
+                    // End of preparation
                     kids.push_back(to);
                     weight[to] = cost;
                     dfs(to, node);
@@ -302,40 +423,109 @@ struct test_graph {
             }
         };
 
-        // adj_list representa garantidamente o grafo de uma arvore
-        // vou fixar a raiz arbitraria dessa arvore em 0...
+        for(int i = 0; i < max_id; ++i)
+        {
+            cout << "Lista " << i << ": ";
+            for(int j = 0; j < static_cast<int>(adj_list[i].size()); ++j)
+            {
+                cout << "( " << adj_list[i][j].first << ", " << adj_list[i][j].second << ")" << ",,";
+            }
+            cout << endl;
+        }
+        // adj_list representa garantidamente o grafo de uma full branching tree, com raiz de índice = |V| - 1
         dfs(root, -1);
+        TRACE(cout << "iniciei o grafo" << endl; )
+        // aqui estou computando o LCA, supostamente em O(n)
+        precompute_lca(root);
+        TRACE(cout << "precomputei o LCA" << endl; )
     }
 
-    void verify() {
-        vector<int> gabarito;
-        for(const auto& e : G) {
+    // Essa funcao efetua a verificacao de fato
+    bool verify() {
+        vector<int> gabarito, upper, lower, corresponding_edge;
+        // LCA Prep
+        TRACE( cout << "entrei em verify" << endl; )
+        int M = static_cast<int>(G.size());
+
+        for(int i = 0; i < M; ++i) {
             int src, to, cost;
-            tie(src, to, cost) = e;
+            WATCH(G[i]);
+            tie(src, to, cost) = G[i];
+            // Agora preciso usar a LCA
+            int anc = lca(src, to);
+            WATCH(anc);
+            if(anc != src) {
+                upper.emplace_back(anc);
+                lower.emplace_back(src);
+                gabarito.emplace_back(cost);
+                corresponding_edge.emplace_back(i);
+            }
+            if(anc != to) {
+                upper.emplace_back(anc);
+                lower.emplace_back(to);
+                gabarito.emplace_back(cost);
+                corresponding_edge.emplace_back(i);
+            }
         }
-        upper = vector<int>(3, 3);
-        for(int i = 0; i < 3; ++i) lower.push_back(i);
-        tree_path_maxima caixa_de_pandora = tree_path_maxima(root, child, sibling, weight, upper, lower);
-        vector<int> sol = caixa_de_pandora.compute_answer();
+
+        tree_path_maxima verifier = tree_path_maxima(root, child, sibling, weight, upper, lower);
+        vector<int> sol = verifier.compute_answer();
         int len = static_cast<int>(lower.size());
         for(int i = 0; i < len; ++i)
         {
-            cout << "quero saber a aresta mais barata entre " << lower[i] << " e " << upper[i] << endl;
-            cout << " retorno arvore = " << weight[sol[i]] << endl << endl;
-             
+            cout << "quero a aresta mais barata entre " << lower[i] << " e " << upper[i] << endl;
+            cout << "na arvore = " << weight[sol[i]] << ", a aresta = " << gabarito[i] << endl;
+            if(weight[sol[i]] > gabarito[i]) {
+
+                cout << "a MST nao é mínima" << '\n';
+                int a, b, c;
+                tie(a,b,c) = G[corresponding_edge[i]];
+                cout << "a aresta" << G[corresponding_edge[i]] << " nao faz parte da MST!" << '\n';
+                return false;
+            }
+            //cout << "quero saber a aresta mais barata entre " << lower[i] << " e " << upper[i] << endl;
+            //cout << "tree_path_maxima = " << weight[sol[i]] << " gabarito = " << gabarito[i] << endl << endl;
         }
+        return true;
     }
 };
 
-int main() {
-    vector<tuple<int, int, int>> graph;
-    graph.emplace_back(0, 1, 1);
-    graph.emplace_back(1, 2, 10);
-    graph.emplace_back(0, 2, 2);
-    
-    auto X = test_graph(graph, 3);
-    X.verify();
-    // Vamos rodar kruskal so pra testar
+int main()
+{
+    // Testing MST algorithms
+    vector< tuple<int, int, int> > graph;
 
+    graph.emplace_back(0, 1, 1);
+    graph.emplace_back(1, 2, 1);
+    graph.emplace_back(2, 3, 4);
+    graph.emplace_back(0, 3, 2);
+
+    auto X = kruskal(graph, 4);
+    WATCHC(X);
+    auto Y = prim(graph, 4);
+    WATCHC(Y);
+    auto Z = boruvka(graph, 4);
+    WATCHC(Z);
+
+    // Vamos testar o verifier
+    vector< tuple<int, int, int> > non_MST;
+     
+    non_MST.emplace_back(graph[0]);
+    non_MST.emplace_back(graph[1]);
+    non_MST.emplace_back(graph[2]);
+
+    auto verifier = test_graph(graph, X, 4);
+    if(verifier.verify() == true) {
+        cout << "Kruskal gerou uma MST" << endl;
+    }
+    else cout << "Kruskal nao gerou uma MSt" << endl;
+    
+    auto verifier2 = test_graph(graph, non_MST, 4);
+    if(verifier2.verify() == true) {
+        cout << "verifier is broken" << endl;
+    }
+    else cout << "verifier working as expected" << endl;
+
+    
     return 0;
 }

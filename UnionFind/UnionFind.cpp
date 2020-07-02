@@ -8,6 +8,7 @@ using namespace std;
 
 UnionFind::UnionFind(int _n) {
     n = _n;
+    cc = n;
     parent.resize(n);
     rank.assign(n, 1);
     iota(parent.begin(), parent.end(), 0);
@@ -25,5 +26,6 @@ bool UnionFind::unite(int x, int y) {
     if(rank[x] < rank[y]) parent[x] = y;
     else parent[y] = x;
     rank[x] += (rank[x] == rank[y]);
+    --cc;
     return true;
 }
