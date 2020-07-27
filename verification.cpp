@@ -7,7 +7,7 @@
 
 using namespace std;
 
-#define TRACE(x) x
+#define TRACE(x)
 #define WATCH(x) TRACE( cout << #x" = " << x << endl)
 #define PRINT(x) TRACE(printf(x))
 #define WATCHR(a, b) TRACE( for(auto c = a; c != b;) cout << *(c++) << " "; cout << endl)
@@ -226,7 +226,7 @@ struct tree_path_maxima {
 
 // Code for O(n) LCA, Farach Colton Bender
 int N;
-vector<vector<int> > adj;
+vector<vector<int>> adj;
 
 int block_size, block_cnt;
 vector<int> first_visit;
@@ -234,23 +234,24 @@ vector<int> euler_tour;
 vector<int> height;
 vector<int> log_2;
 vector<vector<int>> st;
-vector<vector<vector<int> > > blocks;
+vector<vector<vector<int>>> blocks;
 vector<int> block_mask;
 
-void dfs_lca(int v, int p, int h) {
+void dfs(int v, int p, int h) {
     first_visit[v] = euler_tour.size();
     euler_tour.push_back(v);
     height[v] = h;
 
-    for(int u : adj[v]) {
-        if(u == p) continue;
-        dfs_lca(u, v, h + 1);
+    for (int u : adj[v]) {
+        if (u == p)
+            continue;
+        dfs(u, v, h + 1);
         euler_tour.push_back(v);
     }
 }
 
 int min_by_h(int i, int j) {
-    return height[euler_tour[i]] < height[euler_tour[j]];
+    return height[euler_tour[i]] < height[euler_tour[j]] ? i : j;
 }
 
 void precompute_lca(int root) {
@@ -258,7 +259,7 @@ void precompute_lca(int root) {
     first_visit.assign(N, -1);
     height.assign(N, 0);
     euler_tour.reserve(2 * N);
-    dfs_lca(root, -1, 0);
+    dfs(root, -1, 0);
 
     // precompute all log values
     int m = euler_tour.size();
@@ -324,14 +325,10 @@ int lca_in_block(int b, int l, int r) {
 int lca(int v, int u) {
     int l = first_visit[v];
     int r = first_visit[u];
-    WATCH(l);
-    WATCH(r);
     if (l > r)
         swap(l, r);
     int bl = l / block_size;
     int br = r / block_size;
-    WATCH(bl);
-    WATCH(br);
     if (bl == br)
         return euler_tour[lca_in_block(bl, l % block_size, r % block_size)];
     int ans1 = lca_in_block(bl, l % block_size, block_size - 1);
@@ -345,6 +342,125 @@ int lca(int v, int u) {
     }
     return euler_tour[ans];
 }
+
+/*
+vector<vector<int> > adj;
+
+int block_size, block_cnt;
+vector<int> first_visit;
+vector<int> euler_tour;
+vector<int> height;
+vector<int> log_2;
+vector<vector<int>> st;
+vector<vector<vector<int> > > blocks;
+vector<int> block_mask;
+
+void dfs_lca(int v, int p, int h) {
+    first_visit[v] = euler_tour.size();
+    euler_tour.push_back(v);
+    height[v] = h;
+
+    for(int u : adj[v]) {
+        if(u == p) continue;
+        dfs_lca(u, v, h + 1);
+        euler_tour.push_back(v);
+    }
+}
+
+int min_by_h(int i, int j) {
+    return height[euler_tour[i]] < height[euler_tour[j]];
+}
+
+void precompute_lca(int root) {
+    // get euler tour & indices of first occurences
+    first_visit.assign(N, -1);
+    height.assign(N, 0);
+    euler_tour.reserve(2 * N);
+    dfs_lca(root, -1, 0);
+
+    // precompute all log values
+    int m = euler_tour.size();
+    log_2.reserve(m + 1);
+    log_2.push_back(-1);
+    for (int i = 1; i <= m; i++)
+        log_2.push_back(log_2[i / 2] + 1);
+
+    block_size = max(1, log_2[m] / 2);
+    block_cnt = (m + block_size - 1) / block_size;
+
+    // precompute minimum of each block and build sparse table
+    st.assign(block_cnt, vector<int>(log_2[block_cnt] + 1));
+    for (int i = 0, j = 0, b = 0; i < m; i++, j++) {
+        if (j == block_size)
+            j = 0, b++;
+        if (j == 0 || min_by_h(i, st[b][0]) == i)
+            st[b][0] = i;
+    }
+
+    for (int l = 1; l <= log_2[block_cnt]; l++) {
+        for (int i = 0; i < block_cnt; i++) {
+            int ni = i + (1 << (l - 1));
+            if (ni >= block_cnt)
+                st[i][l] = st[i][l-1];
+            else
+                st[i][l] = min_by_h(st[i][l-1], st[ni][l-1]);
+        }
+    }
+
+    // precompute mask for each block
+    block_mask.assign(block_cnt, 0);
+    for (int i = 0, j = 0, b = 0; i < m; i++, j++) {
+        if (j == block_size)
+            j = 0, b++;
+        if (j > 0 && (i >= m || min_by_h(i - 1, i) == i - 1))
+            block_mask[b] += 1 << (j - 1);
+    }
+
+    // precompute RMQ for each unique block
+    int possibilities = 1 << (block_size - 1);
+    blocks.resize(possibilities);
+    for (int b = 0; b < block_cnt; b++) {
+        int mask = block_mask[b];
+        if (!blocks[mask].empty())
+            continue;
+        blocks[mask].assign(block_size, vector<int>(block_size));
+        for (int l = 0; l < block_size; l++) {
+            blocks[mask][l][l] = l;
+            for (int r = l + 1; r < block_size; r++) {
+                blocks[mask][l][r] = blocks[mask][l][r - 1];
+                if (b * block_size + r < m)
+                    blocks[mask][l][r] = min_by_h(b * block_size + blocks[mask][l][r], 
+                            b * block_size + r) - b * block_size;
+            }
+        }
+    }
+}
+
+int lca_in_block(int b, int l, int r) {
+    return blocks[block_mask[b]][l][r] + b * block_size;
+}
+
+int lca(int v, int u) {
+    int l = first_visit[v];
+    int r = first_visit[u];
+    if (l > r)
+        swap(l, r);
+    int bl = l / block_size;
+    int br = r / block_size;
+    if (bl == br)
+        return euler_tour[lca_in_block(bl, l % block_size, r % block_size)];
+    int ans1 = lca_in_block(bl, l % block_size, block_size - 1);
+    int ans2 = lca_in_block(br, 0, r % block_size);
+    int ans = min_by_h(ans1, ans2);
+    if (bl + 1 < br) {
+        int l = log_2[br - bl - 1];
+        int ans3 = st[bl+1][l];
+        int ans4 = st[br - (1 << l)][l];
+        ans = min_by_h(ans, min_by_h(ans3, ans4));
+    }
+    return euler_tour[ans];
+}
+*/
 
 // Instruções de uso
 // vetor edges recebe as arestas todas as arestas do grafo, no formato (origem, destino, custo)
@@ -377,6 +493,8 @@ struct test_graph {
         mst = spanning_tree;
         auto fbt_mst = fbt_reduction(mst, n);
         G = edges;
+        WATCHC(mst);
+        WATCHC(fbt_mst);
         int max_id = n;
         for(const auto& e : fbt_mst) {
             int a, b, c;
@@ -402,7 +520,7 @@ struct test_graph {
             adj_list[b].emplace_back(a, c);
         }
 
-        function<void(int, int)> dfs = [&] (int node, int parent) {
+        function<void(int, int)> dfs_lca = [&] (int node, int parent) {
             vector<int> kids;
             for(const auto& edge : adj_list[node]) {
                 int to = edge.first;
@@ -413,7 +531,7 @@ struct test_graph {
                     // End of preparation
                     kids.push_back(to);
                     weight[to] = cost;
-                    dfs(to, node);
+                    dfs_lca(to, node);
                 }
             }
             if(kids.empty()) return;
@@ -422,19 +540,19 @@ struct test_graph {
                 sibling[kids[i]] = kids[i + 1];
             }
         };
-
-        for(int i = 0; i < max_id; ++i)
-        {
-            cout << "Lista " << i << ": ";
-            for(int j = 0; j < static_cast<int>(adj_list[i].size()); ++j)
-            {
-                cout << "( " << adj_list[i][j].first << ", " << adj_list[i][j].second << ")" << ",,";
-            }
-            cout << endl;
-        }
         // adj_list representa garantidamente o grafo de uma full branching tree, com raiz de índice = |V| - 1
-        dfs(root, -1);
+        dfs_lca(root, -1);
         TRACE(cout << "iniciei o grafo" << endl; )
+        
+        // vamos imprimir ADJ
+        TRACE(
+            cout << "IMPRIMINDO AS ARESTAS DA ARVORE, CONSIDERADAS NO LCA" << '\n';
+            for(int i = 0; i < max_id; ++i)
+            {
+                WATCHC(adj[i]);
+            }
+            cout << "FIM DA IMPRESSAO" << '\n';
+             );
         // aqui estou computando o LCA, supostamente em O(n)
         precompute_lca(root);
         TRACE(cout << "precomputei o LCA" << endl; )
@@ -446,31 +564,61 @@ struct test_graph {
         // LCA Prep
         TRACE( cout << "entrei em verify" << endl; )
         int M = static_cast<int>(G.size());
-
+        int upper_len = 0;
+        vector< pair<int, int> > decomposed_query;
+        
         for(int i = 0; i < M; ++i) {
             int src, to, cost;
-            WATCH(G[i]);
             tie(src, to, cost) = G[i];
             // Agora preciso usar a LCA
             int anc = lca(src, to);
-            WATCH(anc);
+            pair<int, int> qry = {-1, -1};    
             if(anc != src) {
                 upper.emplace_back(anc);
                 lower.emplace_back(src);
                 gabarito.emplace_back(cost);
                 corresponding_edge.emplace_back(i);
+                qry.first = upper_len;
+                upper_len++;
             }
             if(anc != to) {
                 upper.emplace_back(anc);
                 lower.emplace_back(to);
                 gabarito.emplace_back(cost);
                 corresponding_edge.emplace_back(i);
+                qry.second = upper_len;
+                upper_len++;
             }
+
+            if(qry.first == -1 && qry.second == -1) continue;
+            else if(qry.first == -1) qry.first = qry.second;
+            else if(qry.second == -1) qry.second = qry.first;
+            
+            decomposed_query.emplace_back(qry);
         }
 
         tree_path_maxima verifier = tree_path_maxima(root, child, sibling, weight, upper, lower);
         vector<int> sol = verifier.compute_answer();
         int len = static_cast<int>(lower.size());
+        
+        for(const auto& qry : decomposed_query) {
+            int id_fst = qry.first, id_snd = qry.second;
+            int edge_cost = gabarito[id_fst]; // vai ser igual para os dois indices, pois eh relativo a mesma aresta
+            int heavy_combine = max( weight[sol[id_fst]], weight[sol[id_snd]] );
+            if( heavy_combine > edge_cost ) {
+                
+                WATCH(upper[id_fst]);
+                WATCH(lower[id_fst]);
+                WATCH(upper[id_snd]);
+                WATCH(lower[id_snd]);
+                cout << "o peso da maior aresta = " << heavy_combine << '\n'; 
+                cout << "A MST nao é mínima" << '\n';
+                cout << "a aresta " << G[corresponding_edge[id_fst]] << " deveria fazer parte dela..." << '\n';
+                cout << "Na MST, o menor custo entre " << get<0>(G[corresponding_edge[id_fst]]) << " e " << get<1>(G[corresponding_edge[id_fst]]) << " = " << heavy_combine << '\n';
+                return false;
+            }
+        }
+        /* 
         for(int i = 0; i < len; ++i)
         {
             cout << "quero a aresta mais barata entre " << lower[i] << " e " << upper[i] << endl;
@@ -485,14 +633,43 @@ struct test_graph {
             }
             //cout << "quero saber a aresta mais barata entre " << lower[i] << " e " << upper[i] << endl;
             //cout << "tree_path_maxima = " << weight[sol[i]] << " gabarito = " << gabarito[i] << endl << endl;
-        }
+        } */
         return true;
     }
 };
 
+// Should be connected!
+vector< tuple<int, int, int> > build_random_graph(int num_vertices, int num_edges)
+{
+    srand(time(NULL));
+    assert(num_edges >= num_vertices - 1);
+    // vamos garantir que o grafo retornado eh conexo
+    int max_w = 100;
+    vector< tuple<int, int, int> > random_graph; 
+    for(int i = 0; i < num_vertices - 1; ++i)
+    {
+        random_graph.emplace_back(i, i + 1, max_w); 
+    }
+    
+    int remaining_edges = num_edges - (num_vertices - 1);
+    for(int e = 0; e < remaining_edges; ++e)
+    {
+        int a, b;
+        a = (rand() % num_vertices);
+        b = (rand() % num_vertices);
+
+        while(b == a) b = (rand() % num_vertices);
+        random_graph.emplace_back(a, b, ( rand() % max_w) );
+    }
+
+    assert(static_cast<int>(random_graph.size()) == num_edges);
+    return random_graph;
+}
+
 int main()
 {
-    // Testing MST algorithms
+    // Testing MST algorithms + Verification for small graph
+    /* 
     vector< tuple<int, int, int> > graph;
 
     graph.emplace_back(0, 1, 1);
@@ -525,7 +702,63 @@ int main()
         cout << "verifier is broken" << endl;
     }
     else cout << "verifier working as expected" << endl;
+    */
+    ios::sync_with_stdio(false); cin.tie(nullptr);
+    constexpr int vertices = 5;
 
+    vector< tuple<int, int, int> > G;
     
+    // ifstream in("soc-pokec-relationships.txt");
+    // int u, v;
+    // srand(0);
+    auto st = std::chrono::high_resolution_clock::now();
+
+    /*while(in >> u >> v) {
+        --u; --v;
+        // Graph has no weight, so let's randomly attribute one..
+        G.emplace_back(u, v, rand() % 1000);
+    }*/
+    // Agora eu tenho um grafo que quebra a verificacao!!!!
+    G.emplace_back(0, 1, 100);
+    G.emplace_back(1, 2, 100);
+    G.emplace_back(2, 3, 100);
+    G.emplace_back(4, 5, 100);
+
+    G.emplace_back(2, 4, 34);
+    G.emplace_back(1, 2, 40);
+    G.emplace_back(0, 3, 36);
+    G.emplace_back(0, 1, 98);
+    G.emplace_back(1, 2, 47);
+
+    WATCHC(G);
+
+    auto nd = std::chrono::high_resolution_clock::now();
+
+    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(nd - st);
+
+    cout << "A leitura do grafo demorou um total de " << duration.count() << " milisegundos" << endl; 
+    TRACE( cout << "terminei de ler o grafo" << endl; )
+
+    auto MST_PRIM = kruskal(G, vertices);
+    TRACE( cout << "terminei de rodar o Kruskal" << endl);
+    long long MST_COST = 0ll;
+
+    for(const auto& edge : MST_PRIM) {
+        MST_COST += get<2>(edge);
+    }
+
+    TRACE( cout << "CUSTO MST PRIM = " << MST_COST << '\n');
+    
+    auto st2 = std::chrono::high_resolution_clock::now(); 
+    auto verifier = test_graph(G, MST_PRIM, vertices);
+
+    if(verifier.verify() == true) {
+        cout << "verifier is working as expected" << '\n';
+    }
+    else cout << "verifier is broken" << '\n';
+    
+    auto nd2 = std::chrono::high_resolution_clock::now(); 
+    auto duration2 = std::chrono::duration_cast<std::chrono::milliseconds>(nd2 - st2);
+    cout << "A verificacao da MST demorou " << duration2.count() << " milisegundos" << endl; 
     return 0;
 }
