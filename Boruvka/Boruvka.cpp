@@ -1,8 +1,10 @@
 #include "Boruvka.hpp"
-
 #include "../UnionFind/UnionFind.hpp"
-#include <bits/stdc++.h>
+
+#include <vector>
+#include <tuple>
 #include <chrono>
+#include <iostream>
 
 using namespace std;
 // Recebe arestas da forma (src, to, cost) e a quantidade de vertices

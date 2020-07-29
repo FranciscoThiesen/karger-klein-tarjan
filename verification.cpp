@@ -1,4 +1,8 @@
-#include <bits/stdc++.h>
+#include <vector>
+#include <utility>
+#include <unordered_map>
+#include <iostream>
+#include <tuple>
 
 #include "UnionFind/UnionFind.hpp"
 #include "Kruskal/Kruskal.hpp"

@@ -1,7 +1,11 @@
 #include "Prim.hpp"
 
-#include <bits/stdc++.h>
+#include <vector>
+#include <tuple>
 #include <chrono>
+#include <utility>
+#include <iostream>
+#include <set>
 
 using namespace std;
 

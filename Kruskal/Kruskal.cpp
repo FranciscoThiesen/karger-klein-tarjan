@@ -1,8 +1,10 @@
 #include "Kruskal.hpp"
-
 #include "../UnionFind/UnionFind.hpp"
-#include <bits/stdc++.h>
+
+#include <tuple>
+#include <utility>
 #include <chrono>
+#include <iostream>
 
 using namespace std;
 
