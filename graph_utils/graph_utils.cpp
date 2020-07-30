@@ -2,6 +2,32 @@
 
 #include "../union_find/union_find.hpp"
 #include <unordered_map>
+#include <cassert>
+#include <random>
+#include <algorithm>
+
+long long sum_of_costs(const vector< tuple<int, int, int> >& graph)
+{
+    long long answer = 0ll;
+    for(const auto& e : graph) answer += get<2>(e);
+    return answer;
+}
+
+vector< tuple<int, int, int> > get_random_spanning_tree(const vector< tuple<int, int, int> >& graph, int num_vertices) {
+    vector< tuple<int, int, int> > edges = graph;
+    random_shuffle(edges.begin(), edges.end());
+    // Ideia analoga ao kruskal, mas feito com arestas que não estao ordenadas por peso
+    vector< tuple<int, int, int> > spanning_tree;
+    UnionFind UF(num_vertices);
+    for(const auto& e : edges)
+    {
+        int u = get<0>(e), v = get<1>(e);
+        if(UF.unite(u, v)) {
+            spanning_tree.push_back(e);
+        }
+    }
+    return spanning_tree;
+}
 
 vector< tuple<int, int, int> > build_random_connected_graph(int num_vertices, int num_edges)
 {

@@ -1,15 +1,17 @@
+#include "verifier.hpp"
+#include "../union_find/union_find.hpp"
+#include "../kruskal/kruskal.hpp"
+#include "../boruvka/boruvka.hpp"
+#include "../prim/prim.hpp"
+#include "../lca/lca.hpp"
+#include "../graph_utils/graph_utils.hpp"
+
 #include <vector>
 #include <utility>
 #include <unordered_map>
 #include <iostream>
 #include <tuple>
-
-#include "union_find/union_find.hpp"
-#include "kruskal/kruskal.hpp"
-#include "boruvka/boruvka.hpp"
-#include "prim/prim.hpp"
-#include "lca/lca.hpp"
-#include "graph_utils/graph_utils.hpp"
+#include <functional>
 
 using namespace std;
 
@@ -261,7 +263,7 @@ struct test_graph {
     LCA lca;
      
     
-    test_graph(vector<tuple<int, int, int>> edges, vector<tuple<int, int, int> > spanning_tree, int n) {
+    test_graph(const vector<tuple<int, int, int>> edges, const vector<tuple<int, int, int> > spanning_tree, const int n) {
         mst = spanning_tree;
         auto fbt_mst = fbt_reduction(mst, n);
         G = edges;
@@ -393,55 +395,15 @@ struct test_graph {
                 return false;
             }
         }
-        /* 
-        for(int i = 0; i < len; ++i)
-        {
-            cout << "quero a aresta mais barata entre " << lower[i] << " e " << upper[i] << endl;
-            cout << "na arvore = " << weight[sol[i]] << ", a aresta = " << gabarito[i] << endl;
-            if(weight[sol[i]] > gabarito[i]) {
-
-                cout << "a MST nao é mínima" << '\n';
-                int a, b, c;
-                tie(a,b,c) = G[corresponding_edge[i]];
-                cout << "a aresta" << G[corresponding_edge[i]] << " nao faz parte da MST!" << '\n';
-                return false;
-            }
-            //cout << "quero saber a aresta mais barata entre " << lower[i] << " e " << upper[i] << endl;
-            //cout << "tree_path_maxima = " << weight[sol[i]] << " gabarito = " << gabarito[i] << endl << endl;
-        } */
         return true;
     }
 };
 
-/*
-// Should be connected!
-vector< tuple<int, int, int> > build_random_connected_graph(int num_vertices, int num_edges)
+bool verify_mst(const vector< tuple<int, int, int> > graph, const vector< tuple<int, int, int> > spanning_tree, const int n)
 {
-    srand(time(NULL));
-    assert(num_edges >= num_vertices - 1);
-    // vamos garantir que o grafo retornado eh conexo
-    int max_w = 100;
-    vector< tuple<int, int, int> > random_graph; 
-    for(int i = 0; i < num_vertices - 1; ++i)
-    {
-        random_graph.emplace_back(i, i + 1, max_w); 
-    }
-    
-    int remaining_edges = num_edges - (num_vertices - 1);
-    for(int e = 0; e < remaining_edges; ++e)
-    {
-        int a, b;
-        a = (rand() % num_vertices);
-        b = (rand() % num_vertices);
-
-        while(b == a) b = (rand() % num_vertices);
-        random_graph.emplace_back(a, b, ( rand() % max_w) );
-    }
-
-    assert(static_cast<int>(random_graph.size()) == num_edges);
-    return random_graph;
+    auto verifier = test_graph(graph, spanning_tree, n);
+    return verifier.verify();
 }
-*/
 
 int main()
 {
