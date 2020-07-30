@@ -9,5 +9,6 @@ cc_binary(
         "//Kruskal:kruskal",
         "//UnionFind:union_find",
         "//LCA:lca",
+        "//test:hello",
     ],
 )
