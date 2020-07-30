@@ -1,5 +1,5 @@
-#include "Boruvka.hpp"
-#include "../UnionFind/UnionFind.hpp"
+#include "boruvka.hpp"
+#include "../union_find/union_find.hpp"
 
 #include <vector>
 #include <tuple>

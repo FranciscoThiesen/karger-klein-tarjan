@@ -1,4 +1,4 @@
-#include "Prim.hpp"
+#include "prim.hpp"
 
 #include <vector>
 #include <tuple>

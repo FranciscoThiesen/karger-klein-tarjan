@@ -1,4 +1,4 @@
-#include "UnionFind.hpp"
+#include "union_find.hpp"
 
 #include <algorithm>
 #include <numeric>

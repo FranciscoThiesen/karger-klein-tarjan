@@ -1,4 +1,4 @@
-#include "LCA.hpp"
+#include "lca.hpp"
 
 void LCA::dfs(int v, int p, int h) {
 	first_visit[v] = euler_tour.size();

@@ -1,9 +1,9 @@
 load("@rules_cc//cc:defs.bzl", "cc_library")
 
 cc_library(
-    name = "boruvka",
-    srcs = ["boruvka.cpp"],
-    hdrs = ["boruvka.hpp"],
+    name = "graph_utils",
+    srcs = ["graph_utils.cpp"],
+    hdrs = ["graph_utils.hpp"],
     deps = ["//union_find:union_find"],
     visibility = ["//visibility:public"],
 )

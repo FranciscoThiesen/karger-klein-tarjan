@@ -4,11 +4,11 @@ cc_binary(
     name = "verification",
     srcs = ["verification.cpp"],
     deps = [
-        "//Boruvka:boruvka",
-        "//Prim:prim",
-        "//Kruskal:kruskal",
-        "//UnionFind:union_find",
-        "//LCA:lca",
-        "//test:hello",
+        "//boruvka:boruvka",
+        "//prim:prim",
+        "//kruskal:kruskal",
+        "//union_find:union_find",
+        "//lca:lca",
+        "//graph_utils:graph_utils", 
     ],
 )

@@ -4,21 +4,23 @@
 #include <iostream>
 #include <tuple>
 
-#include "UnionFind/UnionFind.hpp"
-#include "Kruskal/Kruskal.hpp"
-#include "Boruvka/Boruvka.hpp"
-#include "Prim/Prim.hpp"
-#include "LCA/LCA.hpp"
+#include "union_find/union_find.hpp"
+#include "kruskal/kruskal.hpp"
+#include "boruvka/boruvka.hpp"
+#include "prim/prim.hpp"
+#include "lca/lca.hpp"
+#include "graph_utils/graph_utils.hpp"
 
 using namespace std;
 
+// Macros para debuggar
 #define TRACE(x)
 #define WATCH(x) TRACE( cout << #x" = " << x << endl)
 #define PRINT(x) TRACE(printf(x))
 #define WATCHR(a, b) TRACE( for(auto c = a; c != b;) cout << *(c++) << " "; cout << endl)
 #define WATCHC(V) TRACE({cout << #V" = "; WATCHR(V.begin(), V.end()); } )
 
-// Logica para imprimir tuplas
+// Logica para imprimir tuplas com o operator <<
 template <size_t n, typename... T>
 typename std::enable_if<(n >= sizeof...(T))>::type
     print_tuple(std::ostream&, const std::tuple<T...>&)
@@ -41,6 +43,7 @@ std::ostream& operator<<(std::ostream& os, const std::tuple<T...>& tup)
     print_tuple<0>(os, tup);
     return os << "]";
 }
+/*
 ////////////////////////////////
 
 // Aqui vou implementar o processo de reducao de uma Spanning Tree T, para
@@ -123,6 +126,7 @@ vector<tuple<int, int, int>> fbt_reduction(
     }
     return new_edges;
 }
+*/
 
 // Aqui esta a alma da verificacao!
 // Vou precisar construir todos os vetores como ele define no paper, a partir do
@@ -409,6 +413,7 @@ struct test_graph {
     }
 };
 
+/*
 // Should be connected!
 vector< tuple<int, int, int> > build_random_connected_graph(int num_vertices, int num_edges)
 {
@@ -436,6 +441,7 @@ vector< tuple<int, int, int> > build_random_connected_graph(int num_vertices, in
     assert(static_cast<int>(random_graph.size()) == num_edges);
     return random_graph;
 }
+*/
 
 int main()
 {

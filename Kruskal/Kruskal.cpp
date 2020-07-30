@@ -1,5 +1,5 @@
-#include "Kruskal.hpp"
-#include "../UnionFind/UnionFind.hpp"
+#include "kruskal.hpp"
+#include "../union_find/union_find.hpp"
 
 #include <tuple>
 #include <utility>
