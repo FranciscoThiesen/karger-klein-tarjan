@@ -45,8 +45,6 @@ std::ostream& operator<<(std::ostream& os, const std::tuple<T...>& tup)
     print_tuple<0>(os, tup);
     return os << "]";
 }
-/*
-////////////////////////////////
 
 // Aqui vou implementar o processo de reducao de uma Spanning Tree T, para
 // uma Full Branching Tree B, como descrito no paper de King.
@@ -128,7 +126,6 @@ vector<tuple<int, int, int>> fbt_reduction(
     }
     return new_edges;
 }
-*/
 
 // Aqui esta a alma da verificacao!
 // Vou precisar construir todos os vetores como ele define no paper, a partir do

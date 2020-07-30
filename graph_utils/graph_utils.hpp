@@ -18,10 +18,4 @@ vector< tuple<int, int, int> > get_random_spanning_tree(const vector< tuple<int,
 // (u, v, cost). Estamos trabalhando com arestas não direcionadas!
 vector< tuple<int, int, int> > build_random_connected_graph(int num_vertices, int num_edges);
 
-// Recebe uma árvore geradora mínima e a transforma em uma Full Branching Tree,
-// de tamanho no máximo 2 * |n|, onde n é a quantidade de vértices da árvore da entrada.
-// O algoritmo de conversão é completamente baseado no Boruvka, uma explicação em mais
-// detalhes pode ser encontrada em (inserir link do king ou hageerup)
-vector< tuple<int, int, int> > fbt_reduction(const vector< tuple<int, int, int> >& edges, int total_nodes);
-
 #endif
