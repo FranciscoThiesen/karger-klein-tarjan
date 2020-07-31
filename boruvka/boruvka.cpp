@@ -3,20 +3,16 @@
 
 #include <vector>
 #include <tuple>
-#include <chrono>
 #include <iostream>
 
 using namespace std;
-// Recebe arestas da forma (src, to, cost) e a quantidade de vertices
-// Funciona para grafos conexos
+
 vector< tuple<int, int, int> > boruvka(const vector<tuple<int, int, int> >&edges, int n)
 {
 	UnionFind graph(n);
 	vector<int> cheapest(n, -1);
 	vector<tuple<int, int, int> > ans;
 
-	auto start_time = std::chrono::high_resolution_clock::now();
-    
     int m = static_cast<int>(edges.size());
 	while(graph.cc > 1)
 	{
@@ -41,17 +37,9 @@ vector< tuple<int, int, int> > boruvka(const vector<tuple<int, int, int> >&edges
 			bool pay = false;
 			if(i == from) pay = graph.unite(i, to);
 			else pay = graph.unite(i, from);
-			if(pay) {
-				ans.emplace_back(from, to, cost);
-			}
+			if(pay) ans.emplace_back(from, to, cost);
 		}
 	}
-
-	auto end_time = std::chrono::high_resolution_clock::now();
-
-	auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end_time - start_time);
-
-    cout << "Boruvka levou " << duration.count() << " milisegundos para retornar uma minimum spanning tree" << '\n';
 
 	return ans;
 }

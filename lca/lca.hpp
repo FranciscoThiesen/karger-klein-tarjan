@@ -1,12 +1,13 @@
 #ifndef LCA_H
 #define LCA_H
 
-// Implementation of Farach-Colton-Bender LCA
-// Source: https://cp-algorithms.com/graph/lca_farachcoltonbender.html
-
 #include <vector>
 
 using namespace std;
+
+// Implementation of Farach-Colton-Bender LCA
+// Source: https://cp-algorithms.com/graph/lca_farachcoltonbender.html
+// Complexity: Preprocessing in O(n), Query in O(1)
 
 class LCA {
 private:
