@@ -9,8 +9,9 @@ using namespace std;
 // Source: https://cp-algorithms.com/graph/lca_farachcoltonbender.html
 // Complexity: Preprocessing in O(n), Query in O(1)
 
-class LCA {
-private:
+class LCA
+{
+  private:
 	int n;
 	vector<vector<int>> adj;
 	int block_size, block_cnt;
@@ -30,10 +31,9 @@ private:
 
 	int lca_in_block(int b, int l, int r);
 
-
-public:
-	LCA(int n, vector< vector<int> >& graph, int root);
-    LCA();
+  public:
+	LCA(int n, vector<vector<int>>& graph, int root);
+	LCA();
 	int query(int v, int u);
 };
 

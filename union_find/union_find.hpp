@@ -9,12 +9,13 @@
 //              unite -> O( ackermann_inverse_function(n) )
 //              find_parent -> O( ackermann_inverse_function(n) )
 
-struct UnionFind {
-    UnionFind(int _n);
-    int find_parent(int node);
-    bool unite(int x, int y);
-    std::vector<int> parent, rank;
-    int n, cc;
+struct UnionFind
+{
+	UnionFind(int _n);
+	int find_parent(int node);
+	bool unite(int x, int y);
+	std::vector<int> parent, rank;
+	int n, cc;
 };
 
 #endif
