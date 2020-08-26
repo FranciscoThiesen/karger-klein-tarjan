@@ -61,7 +61,8 @@ vector<tuple<int, int, int>>
 	fbt_reduction(const vector<tuple<int, int, int>>& edges, int total_nodes)
 {
 	// para cada nó do grafo original, vamos criar uma folha nova em
-	UnionFind components(total_nodes);
+    vector< tuple<int, int, int> > active_edges = edges;	
+    UnionFind components(total_nodes);
 	int graph_cc = total_nodes;
 	int prox_node_id = total_nodes;
 	// [0, current_node_count - 1] -> folhas
@@ -79,16 +80,16 @@ vector<tuple<int, int, int>>
 		for (int i = 0; i < total_edges; ++i)
 		{
 			int from, to, cost;
-			tie(from, to, cost) = edges[i];
+			tie(from, to, cost) = active_edges[i];
 			to = components.find_parent(to);
 			from = components.find_parent(from);
 			// Nesse caso os nós já pertencem a mesma componente conexa
 			if (to == from) continue;
 			if (cheapest_edge.count(from) == 0 ||
-				cost < get<2>(edges[cheapest_edge[from]]))
+				cost < get<2>(active_edges[cheapest_edge[from]]))
 				cheapest_edge[from] = i;
 			if (cheapest_edge.count(to) == 0 ||
-				cost < get<2>(edges[cheapest_edge[to]]))
+				cost < get<2>(active_edges[cheapest_edge[to]]))
 				cheapest_edge[to] = i;
 		}
 
@@ -100,7 +101,7 @@ vector<tuple<int, int, int>>
 		for (const auto& cluster: cheapest_edge)
 		{
 			int from, to, cost;
-			tie(from, to, cost) = edges[cluster.second];
+			tie(from, to, cost) = active_edges[cluster.second];
 			components.unite(from, to);
 		}
 
@@ -124,8 +125,21 @@ vector<tuple<int, int, int>>
 			int parent_cc = components.find_parent(cluster.first);
 			new_edges.emplace_back(f_node[cluster.first],
 								   new_cc_mapping[parent_cc],
-								   get<2>(edges[cluster.second]));
+								   get<2>(active_edges[cluster.second]));
 		}
+        
+        vector< tuple<int, int, int> > relevant_edges;
+        for(const auto& e : active_edges) 
+        {
+            int from, to, cost;
+            tie(from, to, cost) = e;
+            to = components.find_parent(to);
+            from = components.find_parent(from);
+            if(to != from) relevant_edges.emplace_back(e);
+        }
+
+        active_edges = relevant_edges;
+        total_edges = static_cast<int>(active_edges.size());
 
 		// Essa linha atualiza o índice de cada uma das componentes conexas
 		// resultantes para a próxima fase!
