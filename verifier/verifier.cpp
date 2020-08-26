@@ -8,6 +8,7 @@
 
 #include <functional>
 #include <iostream>
+#include <numeric>
 #include <tuple>
 #include <unordered_map>
 #include <utility>
@@ -60,31 +61,31 @@ std::ostream& operator<<(std::ostream& os, const std::tuple<T...>& tup)
 vector<tuple<int, int, int>>
 	fbt_reduction(const vector<tuple<int, int, int>>& edges, int total_nodes)
 {
-	// para cada nó do grafo original, vamos criar uma folha nova em
-    vector< tuple<int, int, int> > active_edges = edges;	
-    UnionFind components(total_nodes);
-	int graph_cc = total_nodes;
-	int prox_node_id = total_nodes;
-	// [0, current_node_count - 1] -> folhas
+	vector<tuple<int, int, int>> active_edges = edges;
+	vector<int> component(total_nodes);
+	iota(component.begin(), component.end(), 0);
+	
+    int graph_cc = total_nodes, prox_node_id = total_nodes;
+
 	int total_edges = static_cast<int>(edges.size());
-	unordered_map<int, int> f_node;
-	for (int i = 0; i < total_nodes; ++i) f_node[i] = i;
 	vector<tuple<int, int, int>> new_edges;
 
 	while (graph_cc > 1)
 	{
+		// encontra a aresta mais barata incidente em cada um dos componentes
+		// existentes na fase atual salva o índice
 		unordered_map<int, int> cheapest_edge;
 
-		// Aqui vamos atualizar a aresta mais barata que chega em cada
-		// componente
+		unordered_map<int, vector<int>> current_graph; 
+        // lista de adjacencia para cada componente ainda ativa nessa etapa
+		// estou usando hash-tables para manter o tempo esperado linear
+
 		for (int i = 0; i < total_edges; ++i)
 		{
 			int from, to, cost;
 			tie(from, to, cost) = active_edges[i];
-			to = components.find_parent(to);
-			from = components.find_parent(from);
-			// Nesse caso os nós já pertencem a mesma componente conexa
-			if (to == from) continue;
+
+			// pensa que não vou precisar mais pegar o pai da componente...
 			if (cheapest_edge.count(from) == 0 ||
 				cost < get<2>(active_edges[cheapest_edge[from]]))
 				cheapest_edge[from] = i;
@@ -93,62 +94,74 @@ vector<tuple<int, int, int>>
 				cheapest_edge[to] = i;
 		}
 
-		// Aqui vamos guardar a lista dos componentes atuais
+		// Aqui vamos guardar a lista de componentes atuais!
 		vector<int> component_list;
-		for (const auto& cluster: cheapest_edge)
-			component_list.push_back(cluster.first);
+		for (const auto& par: cheapest_edge)
+			component_list.push_back(par.first);
 
-		for (const auto& cluster: cheapest_edge)
+		// Aqui, antigamente faziamos a união das componentes, agora vamos
+		// apenas construir o grafo!
+		for (const auto& par: cheapest_edge)
 		{
 			int from, to, cost;
-			tie(from, to, cost) = active_edges[cluster.second];
-			components.unite(from, to);
+			tie(from, to, cost) = active_edges[par.second];
+			current_graph[from].push_back(to);
+			current_graph[to].push_back(from);
 		}
 
-		// Aqui vamos guardar a lista dos componentes resultantes após as uniões
-		// dessa fase do boruvka
 		vector<int> new_component_ids;
-		for (const auto& cluster: cheapest_edge)
+		unordered_map<int, int> super_node_id; // Isso vai marcar quais componentes do
+										 // nível atual já foram marcados!
+
+		// Agora vou marcar as componentes conexas de um indice novo, fazendo
+		// uma dfs
+		function<void(int, int)> explore_cc = [&](int root, int parent) {
+			if (parent == -1)
+			{
+				int new_id = prox_node_id++;
+				new_component_ids.push_back(new_id);
+				super_node_id[root] = new_id;
+			}
+			else
+			{
+				super_node_id[root] = super_node_id[parent];
+			}
+
+			for (const auto& viz: current_graph[root])
+			{
+				if (viz != parent) { explore_cc(viz, root); }
+			}
+		};
+
+		for (const auto& id: component_list)
 		{
-			if (components.find_parent(cluster.first) == cluster.first)
-				new_component_ids.push_back(cluster.first);
+			if (super_node_id.count(id) == 0) explore_cc(id, -1);
 		}
 
-		// Aqui estamos criando nós novos para cada componente conexa resultante
-		unordered_map<int, int> new_cc_mapping;
-		for (const auto& id: new_component_ids)
-			new_cc_mapping[id] = prox_node_id++;
-
-		// Aqui estamos inserindo as arestas no grafo novo!
-		for (const auto& cluster: cheapest_edge)
+		for (const auto& par: cheapest_edge)
 		{
-			int parent_cc = components.find_parent(cluster.first);
-			new_edges.emplace_back(f_node[cluster.first],
-								   new_cc_mapping[parent_cc],
-								   get<2>(active_edges[cluster.second]));
+			int super_node_cc = super_node_id[par.first];
+			new_edges.emplace_back(par.first, super_node_cc,
+								   get<2>(active_edges[par.second]));
 		}
-        
-        vector< tuple<int, int, int> > relevant_edges;
-        for(const auto& e : active_edges) 
-        {
-            int from, to, cost;
-            tie(from, to, cost) = e;
-            to = components.find_parent(to);
-            from = components.find_parent(from);
-            if(to != from) relevant_edges.emplace_back(e);
-        }
 
-        active_edges = relevant_edges;
-        total_edges = static_cast<int>(active_edges.size());
-
-		// Essa linha atualiza o índice de cada uma das componentes conexas
-		// resultantes para a próxima fase!
-		f_node = new_cc_mapping;
-
-		// Aqui atualizamos a quantidade de componentes. Quando tivermos um
-		// único componente, o algoritmo chega ao fim
+		vector<tuple<int, int, int>> relevant_edges;
+		for (const auto& e: active_edges)
+		{
+			int from, to, cost;
+			tie(from, to, cost) = e;
+			if (super_node_id[from] != super_node_id[to])
+			{
+				// Aqui, estou mudando as arestas para refletir os novos
+				// super-vértices obtidos nessa etapa
+				relevant_edges.emplace_back(super_node_id[to], super_node_id[from], cost);
+			}
+		}
+		active_edges = relevant_edges;
+		total_edges = static_cast<int>(active_edges.size());
 		graph_cc = static_cast<int>(new_component_ids.size());
 	}
+    // Retornando a full branching tree resultante
 	return new_edges;
 }
 
