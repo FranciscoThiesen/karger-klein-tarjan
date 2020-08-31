@@ -463,8 +463,8 @@ struct test_graph
 	}
 };
 
-bool verify_mst(const vector<tuple<int, int, int>> graph,
-				const vector<tuple<int, int, int>> spanning_tree, const int n)
+bool verify_mst(const vector<tuple<int, int, int>>& graph,
+				const vector<tuple<int, int, int>>& spanning_tree, const int n)
 {
 	auto verifier = test_graph(graph, spanning_tree, n);
 	return verifier.verify();
