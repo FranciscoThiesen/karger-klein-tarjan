@@ -14,3 +14,18 @@ cc_library(
     ],
     visibility = ["//visibility:public"],
 )
+
+cc_library(
+    name = "verifier_v2",
+    srcs = ["verifier_v2.cpp"],
+    hdrs = ["verifier_v2.hpp"],
+    deps = [
+        "//union_find:union_find",
+        "//boruvka:boruvka",
+        "//kruskal:kruskal",
+        "//prim:prim",
+        "//lca:lca",
+        "//graph_utils:graph_utils",
+    ],
+    visibility = ["//visibility:public"],
+)
