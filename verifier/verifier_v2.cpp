@@ -63,17 +63,17 @@ std::ostream& operator<<(std::ostream& os, const std::tuple<T...>& tup)
 // Dada uma Árvore de tamanho N, vamos produzir uma full branching tree de
 // tamanho no máximo 2*N. Os nós de T serão folhas em B e é garantido que a
 // distância entre as folhas de B é equivalente as distâncias dos nós em B.
-vector<tuple<int, int, int>>
-	fbt_reduction(const vector<tuple<int, int, int>>& edges, int total_nodes)
+vector<tuple<int, int, int, int>>
+	fbt_reduction(const vector<tuple<int, int, int, int>>& edges, int total_nodes)
 {
-	vector<tuple<int, int, int>> active_edges = edges;
+	vector<tuple<int, int, int, int>> active_edges = edges;
 	vector<int> component(total_nodes);
 	iota(component.begin(), component.end(), 0);
 
 	int graph_cc = total_nodes, prox_node_id = total_nodes;
 
 	int total_edges = static_cast<int>(edges.size());
-	vector<tuple<int, int, int>> new_edges;
+	vector<tuple<int, int, int, int>> new_edges;
 
 	while (graph_cc > 1)
 	{
@@ -88,7 +88,7 @@ vector<tuple<int, int, int>>
 		for (int i = 0; i < total_edges; ++i)
 		{
 			int from, to, cost;
-			tie(from, to, cost) = active_edges[i];
+			tie(from, to, cost, ignore) = active_edges[i];
 
 			// pensa que não vou precisar mais pegar o pai da componente...
 			if (cheapest_edge.count(from) == 0 ||
@@ -109,7 +109,7 @@ vector<tuple<int, int, int>>
 		for (const auto& par: cheapest_edge)
 		{
 			int from, to, cost;
-			tie(from, to, cost) = active_edges[par.second];
+			tie(from, to, cost, ignore) = active_edges[par.second];
 			current_graph[from].push_back(to);
 			current_graph[to].push_back(from);
 		}
@@ -151,17 +151,17 @@ vector<tuple<int, int, int>>
 								   get<2>(active_edges[par.second]));
 		}
 
-		vector<tuple<int, int, int>> relevant_edges;
+		vector<tuple<int, int, int, int>> relevant_edges;
 		for (const auto& e: active_edges)
 		{
-			int from, to, cost;
-			tie(from, to, cost) = e;
+			int from, to, cost, id;
+			tie(from, to, cost, id) = e;
 			if (super_node_id[from] != super_node_id[to])
 			{
 				// Aqui, estou mudando as arestas para refletir os novos
 				// super-vértices obtidos nessa etapa
 				relevant_edges.emplace_back(super_node_id[to],
-											super_node_id[from], cost);
+											super_node_id[from], cost, id);
 			}
 		}
 		active_edges = relevant_edges;
@@ -314,12 +314,12 @@ struct test_graph
 	// 6 - Vetor de arestas do grafo original
 	int root, total_nodes;
 	vector<int> child, sibling, weight;
-	vector<tuple<int, int, int>> mst;
-	vector<tuple<int, int, int>> G;
+	vector<tuple<int, int, int, int>> mst;
+	vector<tuple<int, int, int, int>> G;
 	LCA lca;
 
-	test_graph(const vector<tuple<int, int, int>> edges,
-			   const vector<tuple<int, int, int>> spanning_tree, const int n)
+	test_graph(const vector<tuple<int, int, int, int>> edges,
+			   const vector<tuple<int, int, int, int>> spanning_tree, const int n)
 	{
 		mst = spanning_tree;
 		auto fbt_mst = fbt_reduction(mst, n);
@@ -330,7 +330,7 @@ struct test_graph
 		for (const auto& e: fbt_mst)
 		{
 			int a, b, c;
-			tie(a, b, c) = e;
+			tie(a, b, c, ignore) = e;
 			max_id = max(max(a, b) + 1, max_id);
 		}
 		total_nodes = max_id;
@@ -349,7 +349,7 @@ struct test_graph
 		for (const auto& e: fbt_mst)
 		{
 			int a, b, c;
-			tie(a, b, c) = e;
+			tie(a, b, c, ignore) = e;
 			adj_list[a].emplace_back(b, c);
 			adj_list[b].emplace_back(a, c);
 		}
@@ -393,7 +393,8 @@ struct test_graph
 	}
 
 	// Essa funcao efetua a verificacao de fato
-	vector<tuple<int, int, int>> compute_heavy_edges()
+    // IMPORTANTE LEMBRAR, cada aresta precisa ter um peso único!
+	unordered_set<int> compute_heavy_edges()
 	{
 		vector<int> gabarito, upper, lower, corresponding_edge;
 		// LCA Prep
@@ -405,7 +406,7 @@ struct test_graph
 		for (int i = 0; i < M; ++i)
 		{
 			int src, to, cost;
-			tie(src, to, cost) = G[i];
+			tie(src, to, cost, ignore) = G[i];
 			// Agora preciso usar a LCA
 			int anc = lca.query(src, to);
 			pair<int, int> qry = {-1, -1};
@@ -441,7 +442,7 @@ struct test_graph
 			tree_path_maxima(root, child, sibling, weight, upper, lower);
 		vector<int> sol = verifier.compute_answer();
 
-		vector<tuple<int, int, int>> f_heavy_edges;
+		unordered_set<int> f_heavy_edges;
 
 		for (const auto& qry: decomposed_query)
 		{
@@ -472,23 +473,25 @@ struct test_graph
 			// TODA ARESTA DEVE TER CUSTO UNICO! OU PRECISO SOBREESCREVER O
 			// OPERADOR < para os custos...
 			if (heavy_combine < edge_cost)
-			{ f_heavy_edges.emplace_back(G[corresponding_edge[id_fst]]); }
+			{ 
+                int edge_id = get<3>(G[corresponding_edge[id_fst]]);
+                f_heavy_edges.insert(edge_id);
+            }
 		}
 		return f_heavy_edges;
 	}
 };
 
-vector<tuple<int, int, int>>
-	verify_mst(const vector<tuple<int, int, int>>& graph,
-			   const vector<tuple<int, int, int>>& spanning_tree, const int n)
+unordered_set<int>
+	verify_mst(const vector<tuple<int, int, int, int>>& graph,
+			   const vector<tuple<int, int, int, int>>& spanning_tree, const int n)
 {
 	auto verifier = test_graph(graph, spanning_tree, n);
 	return verifier.compute_heavy_edges();
 }
 
-vector<tuple<int, int, int>>
-	verify_general_graph(const vector<tuple<int, int, int>>& graph,
-						 const vector<tuple<int, int, int>>& general_graph,
+unordered_set<int> verify_general_graph(const vector<tuple<int, int, int, int>>& graph,
+						 const vector<tuple<int, int, int, int>>& general_graph,
 						 const int n)
 {
 	int total_number_of_edges = static_cast<int>(general_graph.size());
@@ -507,10 +510,10 @@ vector<tuple<int, int, int>>
 	vector<int> connected_component_id(n, -1);
 
 	vector<vector<int>> gg_adj_list(n);
-	for (const auto& edg: general_graph)
+	for (const auto& edg : general_graph)
 	{
-		int from, to, cost;
-		tie(from, to, cost) = edg;
+		int from, to;
+		tie(from, to, ignore, ignore) = edg;
 		gg_adj_list[from].push_back(to);
 		gg_adj_list[to].push_back(from);
 	}
@@ -533,8 +536,8 @@ vector<tuple<int, int, int>>
 
 	vector<vector<int>> connected_components(next_id);
 	vector<int> next_id_by_component(next_id, 0);
-	vector<vector<tuple<int, int, int>>> spanning_tree(next_id);
-	vector<vector<tuple<int, int, int>>> subgraph(next_id);
+	vector<vector<tuple<int, int, int, int>>> spanning_tree(next_id);
+	vector<vector<tuple<int, int, int, int>>> subgraph(next_id);
 	unordered_map<int, int> node_mapping;
 
 	for (int i = 0; i < n; ++i)
@@ -545,44 +548,41 @@ vector<tuple<int, int, int>>
 	}
 
 	// Estou quebrando a floresta em sub-árvores
-	for (const auto& edg: general_graph)
+	for (const auto& edg : general_graph)
 	{
-		int from, to, cost;
-		tie(from, to, cost) = edg;
+		int from, to, cost, id;
+		tie(from, to, cost, id) = edg;
 		// Só vamos rodar a vericação para arestas entre vértices que estão na
 		// mesma componente. Caso contrário, a aresta nunca vai ser F-heavy,
 		// porque F(from, to) = inf (pertencem a componentes diferentes)
 		if (connected_component_id[from] == connected_component_id[to])
 		{
 			spanning_tree[connected_component_id[from]].emplace_back(
-				node_mapping[from], node_mapping[to], cost);
+				node_mapping[from], node_mapping[to], cost, id);
 		}
 	}
 
-	for (const auto& edg: graph)
+	for (const auto& edg : graph)
 	{
-		int from, to, cost;
-		tie(from, to, cost) = edg;
+		int from, to, cost, id;
+		tie(from, to, cost, id) = edg;
 
 		if (connected_component_id[from] == connected_component_id[to])
 		{
 			subgraph[connected_component_id[from]].emplace_back(
-				node_mapping[from], node_mapping[to], cost);
+				node_mapping[from], node_mapping[to], cost, id);
 		}
 	}
 
-	vector<tuple<int, int, int>> f_heavy_edges;
+    unordered_set<int> f_heavy_edges;
 
 	for (int i = 0; i < next_id; ++i)
 	{
 		auto V =
 			verify_mst(subgraph[i], spanning_tree[i], next_id_by_component[i]);
-		for (const auto& edg: V)
+		for (const auto& edg_id : V)
 		{
-			int from, to, cost;
-			tie(from, to, cost) = edg;
-			f_heavy_edges.emplace_back(connected_components[i][from],
-									   connected_components[i][to], cost);
+            f_heavy_edges.insert(edg_id);
 		}
 	}
 
