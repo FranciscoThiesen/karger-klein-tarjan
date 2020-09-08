@@ -64,7 +64,8 @@ std::ostream& operator<<(std::ostream& os, const std::tuple<T...>& tup)
 // tamanho no máximo 2*N. Os nós de T serão folhas em B e é garantido que a
 // distância entre as folhas de B é equivalente as distâncias dos nós em B.
 vector<tuple<int, int, int, int>>
-	fbt_reduction(const vector<tuple<int, int, int, int>>& edges, int total_nodes)
+	fbt_reduction(const vector<tuple<int, int, int, int>>& edges,
+				  int total_nodes)
 {
 	vector<tuple<int, int, int, int>> active_edges = edges;
 	vector<int> component(total_nodes);
@@ -319,29 +320,31 @@ struct test_graph
 	LCA lca;
 
 	test_graph(const vector<tuple<int, int, int, int>> edges,
-			   const vector<tuple<int, int, int, int>> spanning_tree, const int n)
+			   const vector<tuple<int, int, int, int>> spanning_tree,
+			   const int n)
 	{
-	    cout << "Spanning Tree original" << endl;
-        mst = spanning_tree;
-        for(const auto& e : mst) {
-            int a, b, c, d;
-            tie(a, b, c, d) = e;
-            cout << a << " " << b << " " << c << " " << d << endl;
-        }
-        cout << endl;
-        auto fbt_mst = fbt_reduction(mst, n);
-	    cout << "transformando em FBT" << endl;
-        for(const auto& e : fbt_mst) {
-            int a, b, c, d;
-            tie(a, b, c, d) = e;
-            cout << a << " " << b << " " << c << " " << d << endl;
-        } 
-        cout << endl;
+		cout << "Spanning Tree original" << endl;
+		mst = spanning_tree;
+		for (const auto& e: mst)
+		{
+			int a, b, c, d;
+			tie(a, b, c, d) = e;
+			cout << a << " " << b << " " << c << " " << d << endl;
+		}
+		cout << endl;
+		auto fbt_mst = fbt_reduction(mst, n);
+		cout << "transformando em FBT" << endl;
+		for (const auto& e: fbt_mst)
+		{
+			int a, b, c, d;
+			tie(a, b, c, d) = e;
+			cout << a << " " << b << " " << c << " " << d << endl;
+		}
+		cout << endl;
 
-         
-        G = edges;
-		//WATCHC(mst);
-		//WATCHC(fbt_mst);
+		G = edges;
+		// WATCHC(mst);
+		// WATCHC(fbt_mst);
 		int max_id = n;
 		for (const auto& e: fbt_mst)
 		{
@@ -394,22 +397,22 @@ struct test_graph
 		// adj_list representa garantidamente o grafo de uma full branching
 		// tree, com raiz de índice = |V| - 1
 		dfs_lca(root, -1);
-		//TRACE(cout << "iniciei o grafo" << endl;)
+		// TRACE(cout << "iniciei o grafo" << endl;)
 
 		// vamos imprimir ADJ
-		//TRACE(cout << "IMPRIMINDO AS ARESTAS DA ARVORE, CONSIDERADAS NO LCA"
-	 //			   << '\n';
+		// TRACE(cout << "IMPRIMINDO AS ARESTAS DA ARVORE, CONSIDERADAS NO LCA"
+		//			   << '\n';
 		//	  for (int i = 0; i < max_id; ++i) { WATCHC(adj[i]); } cout
 		//	  << "FIM DA IMPRESSAO" << '\n';);
 		// aqui estou computando o LCA, supostamente em O(n)
 		// precompute_lca(root);
 		lca = LCA(N, adj, root);
-		//TRACE(cout << "precomputei o LCA" << endl;)
+		// TRACE(cout << "precomputei o LCA" << endl;)
 		// Aqui vou criar uma estrutura de LCA
 	}
 
 	// Essa funcao efetua a verificacao de fato
-    // IMPORTANTE LEMBRAR, cada aresta precisa ter um peso único!
+	// IMPORTANTE LEMBRAR, cada aresta precisa ter um peso único!
 	unordered_set<int> compute_heavy_edges()
 	{
 		vector<int> gabarito, upper, lower, corresponding_edge;
@@ -425,7 +428,8 @@ struct test_graph
 			tie(src, to, cost, ignore) = G[i];
 			// Agora preciso usar a LCA
 			int anc = lca.query(src, to);
-            cout << "src = " << src << " to = " << to << "  LCA = " << anc << endl;
+			cout << "src = " << src << " to = " << to << "  LCA = " << anc
+				 << endl;
 			pair<int, int> qry = {-1, -1};
 			if (anc != src)
 			{
@@ -458,10 +462,10 @@ struct test_graph
 		tree_path_maxima verifier =
 			tree_path_maxima(root, child, sibling, weight, upper, lower);
 		vector<int> sol = verifier.compute_answer();
-        WATCHC(upper);
-        WATCHC(lower);
-	    WATCHC(sol);	
-        unordered_set<int> f_heavy_edges;
+		WATCHC(upper);
+		WATCHC(lower);
+		WATCHC(sol);
+		unordered_set<int> f_heavy_edges;
 
 		for (const auto& qry: decomposed_query)
 		{
@@ -472,28 +476,29 @@ struct test_graph
 			int heavy_combine = max(weight[sol[id_fst]], weight[sol[id_snd]]);
 			// Lembrar de conferir se os pesos das arestas são únicos!
 			WATCH(upper[id_fst]);
-            WATCH(lower[id_fst]);
-            WATCH(upper[id_snd]);
-            WATCH(lower[id_snd]);
-            cout << upper[id_fst] << " " << lower[id_fst] << endl;
-            cout << upper[id_snd] << " " << lower[id_snd] << endl;
-            cout << "o peso da maior aresta = " << heavy_combine << endl;
-            cout << "estamos analisando a aresta = " << G[corresponding_edge[id_fst]] << endl;
-            cout << "Na MST, o menor custo entre "
-                 << get<0>(G[corresponding_edge[id_fst]]) << " e "
-                 << get<1>(G[corresponding_edge[id_fst]]) << " = "
-                 << heavy_combine << endl;
+			WATCH(lower[id_fst]);
+			WATCH(upper[id_snd]);
+			WATCH(lower[id_snd]);
+			cout << upper[id_fst] << " " << lower[id_fst] << endl;
+			cout << upper[id_snd] << " " << lower[id_snd] << endl;
+			cout << "o peso da maior aresta = " << heavy_combine << endl;
+			cout << "estamos analisando a aresta = "
+				 << G[corresponding_edge[id_fst]] << endl;
+			cout << "Na MST, o menor custo entre "
+				 << get<0>(G[corresponding_edge[id_fst]]) << " e "
+				 << get<1>(G[corresponding_edge[id_fst]]) << " = "
+				 << heavy_combine << endl;
 
-            /* 
-            if (heavy_combine > edge_cost)
+			/*
+			if (heavy_combine > edge_cost)
 			{
-				
+
 				WATCH(upper[id_fst]);
 				WATCH(lower[id_fst]);
 				WATCH(upper[id_snd]);
 				WATCH(lower[id_snd]);
-                cout << upper[id_fst] << " " << lower[id_fst] << endl;
-                cout << upper[id_snd] << " " << lower[id_snd] << endl;
+				cout << upper[id_fst] << " " << lower[id_fst] << endl;
+				cout << upper[id_snd] << " " << lower[id_snd] << endl;
 				cout << "o peso da maior aresta = " << heavy_combine << '\n';
 				cout << "A Spanning Tree nao é mínima!" << '\n';
 				cout << "a aresta " << G[corresponding_edge[id_fst]]
@@ -503,14 +508,14 @@ struct test_graph
 					 << get<1>(G[corresponding_edge[id_fst]]) << " = "
 					 << heavy_combine << '\n';
 			}
-            */
+			*/
 			// TODA ARESTA DEVE TER CUSTO UNICO! OU PRECISO SOBREESCREVER O
 			// OPERADOR < para os custos...
 			if (heavy_combine < edge_cost)
-			{ 
-                int edge_id = get<3>(G[corresponding_edge[id_fst]]);
-                f_heavy_edges.insert(edge_id);
-            }
+			{
+				int edge_id = get<3>(G[corresponding_edge[id_fst]]);
+				f_heavy_edges.insert(edge_id);
+			}
 		}
 		return f_heavy_edges;
 	}
@@ -518,13 +523,15 @@ struct test_graph
 
 unordered_set<int>
 	verify_mst(const vector<tuple<int, int, int, int>>& graph,
-			   const vector<tuple<int, int, int, int>>& spanning_tree, const int n)
+			   const vector<tuple<int, int, int, int>>& spanning_tree,
+			   const int n)
 {
 	auto verifier = test_graph(graph, spanning_tree, n);
 	return verifier.compute_heavy_edges();
 }
 
-unordered_set<int> verify_general_graph(const vector<tuple<int, int, int, int>>& graph,
+unordered_set<int>
+	verify_general_graph(const vector<tuple<int, int, int, int>>& graph,
 						 const vector<tuple<int, int, int, int>>& general_graph,
 						 const int n)
 {
@@ -535,7 +542,7 @@ unordered_set<int> verify_general_graph(const vector<tuple<int, int, int, int>>&
 
 	if (static_cast<int>(general_graph.size()) == n - 1)
 	{
-        cout << "verify recebeu uma árvore!!!" << endl;
+		cout << "verify recebeu uma árvore!!!" << endl;
 		// Entao o grafo é necessariamente uma árvore!
 		return verify_mst(graph, general_graph, n);
 	}
@@ -545,7 +552,7 @@ unordered_set<int> verify_general_graph(const vector<tuple<int, int, int, int>>&
 	vector<int> connected_component_id(n, -1);
 
 	vector<vector<int>> gg_adj_list(n);
-	for (const auto& edg : general_graph)
+	for (const auto& edg: general_graph)
 	{
 		int from, to;
 		tie(from, to, ignore, ignore) = edg;
@@ -583,7 +590,7 @@ unordered_set<int> verify_general_graph(const vector<tuple<int, int, int, int>>&
 	}
 
 	// Estou quebrando a floresta em sub-árvores
-	for (const auto& edg : general_graph)
+	for (const auto& edg: general_graph)
 	{
 		int from, to, cost, id;
 		tie(from, to, cost, id) = edg;
@@ -597,7 +604,7 @@ unordered_set<int> verify_general_graph(const vector<tuple<int, int, int, int>>&
 		}
 	}
 
-	for (const auto& edg : graph)
+	for (const auto& edg: graph)
 	{
 		int from, to, cost, id;
 		tie(from, to, cost, id) = edg;
@@ -609,16 +616,13 @@ unordered_set<int> verify_general_graph(const vector<tuple<int, int, int, int>>&
 		}
 	}
 
-    unordered_set<int> f_heavy_edges;
+	unordered_set<int> f_heavy_edges;
 
 	for (int i = 0; i < next_id; ++i)
 	{
 		auto V =
 			verify_mst(subgraph[i], spanning_tree[i], next_id_by_component[i]);
-		for (const auto& edg_id : V)
-		{
-            f_heavy_edges.insert(edg_id);
-		}
+		for (const auto& edg_id: V) { f_heavy_edges.insert(edg_id); }
 	}
 
 	return f_heavy_edges;

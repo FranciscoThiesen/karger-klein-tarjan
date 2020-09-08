@@ -64,8 +64,8 @@ vector<tuple<int, int, int>>
 	vector<tuple<int, int, int>> active_edges = edges;
 	vector<int> component(total_nodes);
 	iota(component.begin(), component.end(), 0);
-	
-    int graph_cc = total_nodes, prox_node_id = total_nodes;
+
+	int graph_cc = total_nodes, prox_node_id = total_nodes;
 
 	int total_edges = static_cast<int>(edges.size());
 	vector<tuple<int, int, int>> new_edges;
@@ -76,8 +76,8 @@ vector<tuple<int, int, int>>
 		// existentes na fase atual salva o índice
 		unordered_map<int, int> cheapest_edge;
 
-		unordered_map<int, vector<int>> current_graph; 
-        // lista de adjacencia para cada componente ainda ativa nessa etapa
+		unordered_map<int, vector<int>> current_graph;
+		// lista de adjacencia para cada componente ainda ativa nessa etapa
 		// estou usando hash-tables para manter o tempo esperado linear
 
 		for (int i = 0; i < total_edges; ++i)
@@ -110,8 +110,9 @@ vector<tuple<int, int, int>>
 		}
 
 		vector<int> new_component_ids;
-		unordered_map<int, int> super_node_id; // Isso vai marcar quais componentes do
-										 // nível atual já foram marcados!
+		unordered_map<int, int>
+			super_node_id; // Isso vai marcar quais componentes do
+						   // nível atual já foram marcados!
 
 		// Agora vou marcar as componentes conexas de um indice novo, fazendo
 		// uma dfs
@@ -154,14 +155,15 @@ vector<tuple<int, int, int>>
 			{
 				// Aqui, estou mudando as arestas para refletir os novos
 				// super-vértices obtidos nessa etapa
-				relevant_edges.emplace_back(super_node_id[to], super_node_id[from], cost);
+				relevant_edges.emplace_back(super_node_id[to],
+											super_node_id[from], cost);
 			}
 		}
 		active_edges = relevant_edges;
 		total_edges = static_cast<int>(active_edges.size());
 		graph_cc = static_cast<int>(new_component_ids.size());
 	}
-    // Retornando a full branching tree resultante
+	// Retornando a full branching tree resultante
 	return new_edges;
 }
 

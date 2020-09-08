@@ -22,12 +22,11 @@ TEST(test_forest, hardcoded_graph)
 	graph.emplace_back(2, 4, 6, 5);
 	graph.emplace_back(2, 5, -1, 6);
 	graph.emplace_back(3, 5, 5, 7);
-    unordered_set<int> known_heavy_edges = {5, 7};
+	unordered_set<int> known_heavy_edges = {5, 7};
 
 	auto V = verify_general_graph(graph, spanning_forest, 6);
 	ASSERT_FALSE(V.empty());
 	ASSERT_EQ(static_cast<int>(V.size()), 2);
-    for(const auto& elem : known_heavy_edges) {
-        ASSERT_TRUE(V.find(elem) != V.end());
-    } 
+	for (const auto& elem: known_heavy_edges)
+	{ ASSERT_TRUE(V.find(elem) != V.end()); }
 }

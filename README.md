@@ -26,13 +26,13 @@ The objectives of this projects are the following:
 2. Run the following command at your command line:
 
    ```bash
-   $ bazel test :all
+   $ bazel test :all --cache_test_results=no
    ```
 
    
 
 ### TODO
 
-1. Implement the Karger, Klein & Tarjan algorithm by making use of the already implemented linear-time verifier.
+1. Implement the Karger, Klein & Tarjan algorithm by making use of the already implemented linear-time verifier. (DONE)
 2. Benchmark it against Boruvka, Prim and Kruskal
 3. Improve comments
