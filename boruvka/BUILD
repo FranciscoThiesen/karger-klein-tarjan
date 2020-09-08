@@ -4,6 +4,9 @@ cc_library(
     name = "boruvka",
     srcs = ["boruvka.cpp"],
     hdrs = ["boruvka.hpp"],
+    copts = [
+        "-std=c++17",
+    ], 
     deps = ["//union_find:union_find"],
     visibility = ["//visibility:public"],
 )

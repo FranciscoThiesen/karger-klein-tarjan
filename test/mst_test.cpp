@@ -14,6 +14,10 @@ TEST(stress_test, random_graph)
 		auto prim_mst = prim(random_graph, 100);
 
 		EXPECT_EQ(sum_of_costs(boruvka_mst), sum_of_costs(kruskal_mst));
+        EXPECT_EQ(sum_of_costs(boruvka_mst), sum_of_costs(prim_mst));
+
 		EXPECT_EQ(static_cast<int>(boruvka_mst.size()), 100 - 1);
-	}
+        EXPECT_EQ(static_cast<int>(prim_mst.size()), 100 - 1);
+        EXPECT_EQ(static_cast<int>(kruskal_mst.size()), 100 - 1);
+    }
 }

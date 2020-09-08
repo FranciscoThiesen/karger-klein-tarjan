@@ -59,18 +59,3 @@ Enquanto o grafo não for vazio:
 ​	2 - No grafo contraído, escolha um subgrafo $H$ que contém cada aresta com probabilidade independente de $\frac{1}{2}$. Aplique o algoritmo de forma recursiva em $H$, produzindo uma floresta geradora mínima $F$ de $H$. Encontra todas as arestas _F-heavy _ (Testar as arestas que estão em H e não estão) e delete elas do grafo contraído.
 
 ​	3 - Aplique o algoritmo de forma recursiva no grafo restante para computar a floresta geradora mínima $F'$. Retorne as arestas contraídas no passo 1 juntamente com as arestas de $F'$ 
-
-
-
-
-
-   
-
-
-
-
-
-
-
-
-

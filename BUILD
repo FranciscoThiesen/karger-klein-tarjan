@@ -40,3 +40,17 @@ cc_test(
     ],
     visibility = ["//visibility:public"],
 )
+
+cc_test(
+    name = "kkt_test",
+    srcs = ["test/kkt_test.cpp"],
+    deps = [
+        "@gtest//:gtest_main",
+        "//kruskal:kruskal",
+        "//prim:prim",
+        "//boruvka:boruvka",
+        "//graph_utils:graph_utils",
+        "//kkt:kkt",
+    ],
+    visibility = ["//visibility:public"],
+)

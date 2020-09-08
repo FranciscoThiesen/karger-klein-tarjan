@@ -1,5 +1,13 @@
-#include <bits/stdc++.h>
-#include "../verify/verifier_v2.hpp"
+#include "../verifier/verifier_v2.hpp"
+#include "kkt.hpp"
+#include <unordered_set>
+#include <unordered_map>
+#include <vector>
+#include <utility>
+#include <algorithm>
+#include <iostream>
+#include <cassert>
+#include <functional>
 
 // Isso aqui é apenas uma implementação inicial
 // Nessa versão, não vou me preocupar com encontrar a MST em si, estou satisfeito em encontrar apenas o custo
@@ -36,12 +44,6 @@ struct pair_hash {
 };
 // Fim dos templates de hashing
 
-struct problem {
-    int num_vertices;
-    vector< tuple<int, int, int, int> > graph_edges;
-    problem(int nv = 0, vector<tuple<int,int,int,int>> ge = vector<tuple<int,int,int,int>>()) : num_vertices(nv), graph_edges(ge) {}
-};
-
 // Essa função vai aplicar o passo Boruvka, descrito no paper do KKT. A ideia é diminuir 
 // a quantidade de vértices pela metade, ainda em tempo linear.
 
@@ -49,6 +51,7 @@ struct problem {
 // Mesmo que as extremidades das arestas mudem ao longo do tempo, posso manter um índice que permite que cada aresta
 // da MST seja mapeada para alguma das arestas originais.
 pair< unordered_set<int>, problem> boruvka_step(problem P) {
+    cout << "chamamos o Boruvka!" << endl;
     // Assume-se que o grafo recebido aqui é CONEXO!!!!
     // implementar!
     // Aqui, preciso retornar o grafo resultante e também as arestas que foram utilizadas!
@@ -68,6 +71,10 @@ pair< unordered_set<int>, problem> boruvka_step(problem P) {
             smallest_incident_edge[to] = i;
         }
     }
+
+    for(int i = 0; i < n; ++i) {
+        cout << "custo da menor aresta incidindo em " << i << " => " << get<2>(P.graph_edges[smallest_incident_edge[i]]) << endl;
+    }
     
     vector< bool > used(total_edges, false);
     unordered_set<int> used_edges;
@@ -75,7 +82,7 @@ pair< unordered_set<int>, problem> boruvka_step(problem P) {
     vector< vector<int> > component_graph(n);
     
     int cost_for_used_edges = 0; 
-    
+
     for(int i = 0; i < n; ++i) {
         if(smallest_incident_edge[i] == -1) continue;
         used[ smallest_incident_edge[i] ] = true;
@@ -109,14 +116,14 @@ pair< unordered_set<int>, problem> boruvka_step(problem P) {
     };
 
     for(int i = 0; i < n; ++i) if(super_node_id[i] == -1) dfs(i, -1);
-    
+
     vector<int> super_node_degree(next_component_id, 0);
     vector<int> super_node_new_id(next_component_id, 0);
     
     for(int i = 0; i < total_edges; ++i) {
         int from, to, cost;
         tie(from, to, cost, ignore) = P.graph_edges[i];
-        if(super_node_id[from] != super_node_id[cost]) {
+        if(super_node_id[from] != super_node_id[to]) {
             super_node_degree[ super_node_id[from] ]++;
             super_node_degree[ super_node_id[to] ]++;
         }
@@ -127,7 +134,7 @@ pair< unordered_set<int>, problem> boruvka_step(problem P) {
     for(int i = 0; i < next_component_id; ++i) {
         if(super_node_degree[i] > 0) {
             // Agora, o que vou fazer é mudar o índice desse componente... Nova numeração exclui os isolados!
-            super_node_new_id[i] = next_non_isolated_id++;
+            super_node_new_id[i] = next_non_isolated_id++; 
         }
     }
 
@@ -138,9 +145,9 @@ pair< unordered_set<int>, problem> boruvka_step(problem P) {
     unordered_map< pair<int, int>, int, pair_hash> minimal_edge;
     
     for(int i = 0; i < total_edges; ++i) {
-        if(used_edges.find(i) != used_edges.end()) continue;
         int from, to, cost, id;
         tie(from, to, cost, id) = P.graph_edges[i];
+        if(used_edges.find(id) != used_edges.end()) continue;
         if(super_node_id[from] != super_node_id[to]) {
             // vamos construir essa aresta no grafo novo!
             int f = super_node_new_id[super_node_id[from]];
@@ -206,6 +213,7 @@ problem remove_isolated_vertices(const problem& P) {
 problem random_sampling(problem& P) {
     
     vector< tuple<int, int, int, int> > H;
+    srand(0);
     for(const auto& E : P.graph_edges) {
         int b = (rand() & 1);
         if(b) H.push_back(E);
@@ -215,7 +223,7 @@ problem random_sampling(problem& P) {
     return remove_isolated_vertices(P_H);
 }
 
-inline int get_solution_cost(problem& P, unordered_set<int>& used) {
+int get_solution_cost(const problem& P, const unordered_set<int>& used) {
     int res = 0;
     for(const auto& E : P.graph_edges) {
         int id = get<3>(E);
@@ -225,42 +233,114 @@ inline int get_solution_cost(problem& P, unordered_set<int>& used) {
     }
     return res;
 }
+
+inline void print_problem(const problem& X) {
+    cout << "Impressao do problema: " << endl;
+    cout << "num_vertices = " << X.num_vertices << endl;
+    cout << "arestas do problema = [ " << endl;
+    for(const auto& E : X.graph_edges) {
+        int from, to, cost, id;
+        tie(from, to, cost, id) = E;
+        cout << from << " " << to << " " << cost << " " << id << endl;
+    }
+    cout << "]" << endl << endl;
+}
+
 // Retorna o custo da minimum-spanning-tree, em tempo esperado linear.
 // Seguindo o processo descrito pelo paper KKT.
 unordered_set<int> kkt(problem& P) {
-    
+    cout << "Chamada de KKT" << endl;
+    print_problem(P);
+
     unordered_set<int> result;
-    if(P.graph_edges.empty()) return result;
+    if(P.graph_edges.empty()) {
+        cout << "0 - MST/F cost = 0" << endl; 
+        return result;
+    }
     // Apply Boruvka Step (twice)
     auto boruvka_first = boruvka_step(problem(P.num_vertices, P.graph_edges));
     for(const auto& val : boruvka_first.first) result.insert(val);
     problem& reduced = boruvka_first.second;
-
-    if(reduced.graph_edges.empty()) {
+    
+    int total_cost = 0;
+    cout << "Chamei o boruvka pela primeira vez" << endl;
+    if(reduced.graph_edges.empty() || reduced.num_vertices == 0) {
         // seria legal calcular a soma dos custos antes de retornar.. 
+        for(const auto& v : P.graph_edges) {
+            if(result.find(get<3>(v)) != result.end()) {
+                total_cost += get<2>(v);
+            }
+        }
         return result;
     }
-    
+    cout << "Após o primeiro boruvka, temos " << endl;
+    print_problem(reduced);
+
+    cout << "Chamei o boruvka pela segunda vez" << endl;
     auto boruvka_second = boruvka_step(problem(reduced.num_vertices, reduced.graph_edges));
     for(const auto& val : boruvka_second.first) result.insert(val);
-    
+    if(boruvka_second.second.num_vertices == 0 || boruvka_second.second.graph_edges.empty()) {
+        for(const auto& e : P.graph_edges) {
+            int id = get<3>(e);
+            if(result.find(id) != result.end()) {
+                total_cost += get<2>(e);
+            }
+        } 
+        cout << "2 - MST/F cost = " << total_cost << endl;
+        return result;
+    }
     // Problema reduzido após 2 passos do boruvka
-    problem G = boruvka_second.second;
-    
 
+    problem G = boruvka_second.second;
+    cout << "Problema que sobrou, após aplicar 2 boruvkas!" << endl;
+    print_problem(G);
+
+
+    cout << endl << "Vou gerar H, via random_sampling" << endl;
     // Processo de random sampling
     problem H = random_sampling(G);
     
-    unordered_set<int> KKT_H = kkt(H);
+    print_problem(H);
+    cout << "imprimi H " << endl;
+    assert(P != H);
+
+    unordered_set<int> kkt_h = kkt(H);
     
+    cout << "Vamos imprimir o resultado de KKT(H)" << endl;
     vector< tuple<int, int, int, int> > H_MSF; 
     for(const auto& E : G.graph_edges) {
-        if(KKT_H.find(get<3>(E)) != KKT_H.end()) {
+        if(kkt_h.find(get<3>(E)) != kkt_h.end()) {
+            int a, b, c, d;
+            tie(a, b, c, d) = E;
+            cout << a << " " << b << " " << c << " " << d << endl;
             H_MSF.push_back(E);
         }
     }
+    cout << endl << endl;
     
-    auto G_heavy = verify_general_graph(G, H_MSF, G.num_vertices);
+
+    auto G_heavy = verify_general_graph(G.graph_edges, H_MSF, G.num_vertices);
+    cout << "Arestas de G = " << endl;
+    for(const auto& e : G.graph_edges) {
+        int a, b, c, d;
+        tie(a, b, c, d) = e;
+        cout << a << " " << b << " " << c << " " << d << endl;
+    }
+    cout << endl;
+    cout << "Arestas de H = " << endl;
+    for(const auto& e : H_MSF) {
+        int a, b, c, d;
+        tie(a, b, c, d) = e;
+        cout << a << " " << b << " " << c << " " << d << endl;
+    }
+    cout << endl << endl;
+
+    cout << "imprimindo heavy-edges" << endl; 
+    
+    
+
+    for(const auto& v : G_heavy) cout << v << endl;
+    cout << endl << endl;
     // Agora temos que remover todas essas arestas pesadas de G
 
     vector< tuple<int, int, int, int> > relevant_edges;
@@ -274,35 +354,20 @@ unordered_set<int> kkt(problem& P) {
     problem G_remaining = remove_isolated_vertices(P_G); 
     
     unordered_set<int> g_res = kkt(G_remaining);
-    
-    result.merge(g_res);
-    
+    for(const auto& val : g_res) result.insert(val); 
+   
+
     // Agora vamos imprimir a MST (:
-    int total_cost = 0;
-    cout << "vamos imprimir a MST!" << endl;
     for(const auto& E : P.graph_edges) {
         if(result.find(get<3>(E)) != result.end()) {
             int from, to, cost, id;
-            tie(from, to, cost, id);
-            cout << "usamos a aresta = (" << from << ", " << to << ", " << cost << ")" << endl;
+            tie(from, to, cost, id) = E;
+            //cout << "usamos a aresta = (" << from << ", " << to << ", " << cost << ")" << endl;
             total_cost += cost; 
         }
     }
 
-    cout << endl << endl << " custo total da MST/F = " << total_cost << endl;
+    cout << endl << endl << "3 - custo total da MST/F = " << total_cost << endl;
+     
     return result;
 }
-
-int main() {
-    return 0;
-}
-
-
-
-
-
-
-
-
-
-

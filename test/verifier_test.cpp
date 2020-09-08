@@ -32,7 +32,7 @@ TEST(negative_verification, fixed_graph)
 
 TEST(stress_test, random_small_graph)
 {
-	auto random_graph = build_random_connected_graph(10, 50);
+	auto random_graph = build_random_connected_graph(10, 40);
 	auto kruskal_mst = kruskal(random_graph, 10);
 	long long mst_cost = sum_of_costs(kruskal_mst);
 

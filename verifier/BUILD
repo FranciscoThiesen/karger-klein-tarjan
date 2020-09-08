@@ -4,6 +4,9 @@ cc_library(
     name = "verifier",
     srcs = ["verifier.cpp"],
     hdrs = ["verifier.hpp"],
+    copts = [
+        "-std=c++17",
+    ],
     deps = [
         "//union_find:union_find",
         "//boruvka:boruvka",
@@ -19,6 +22,9 @@ cc_library(
     name = "verifier_v2",
     srcs = ["verifier_v2.cpp"],
     hdrs = ["verifier_v2.hpp"],
+    copts = [
+        "-std=c++17",
+    ],
     deps = [
         "//union_find:union_find",
         "//boruvka:boruvka",
