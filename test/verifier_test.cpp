@@ -53,7 +53,7 @@ TEST(stress_test, random_medium_graph)
 	auto kruskal_mst = kruskal(random_graph, 100);
 	long long mst_cost = sum_of_costs(kruskal_mst);
 
-	for (int i = 0; i < 10; ++i)
+	for (int i = 0; i < 100; ++i)
 	{
 		auto random_spanning_tree = get_random_spanning_tree(random_graph, 100);
 		long long spanning_tree_cost = sum_of_costs(random_spanning_tree);
@@ -70,7 +70,7 @@ TEST(stress_test, random_large_graph)
 	auto kruskal_mst = kruskal(random_graph, 10000);
 	long long mst_cost = sum_of_costs(kruskal_mst);
 
-	for (int i = 0; i < 10; ++i)
+	for (int i = 0; i < 100; ++i)
 	{
 		auto random_spanning_tree =
 			get_random_spanning_tree(random_graph, 10000);

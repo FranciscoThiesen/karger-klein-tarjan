@@ -5,8 +5,6 @@ The objectives of this projects are the following:
 1. Make a C++ implementation of the [Karger, Klein & Tarjan algorithm](http://cs.brown.edu/research/pubs/pdfs/1995/Karger-1995-RLT.pdf) for finding MSTs in expected linear time available.
 2. Benchmark the implementation against standard MST methods (Kruskal, Prim, Boruvka)
 
-
-
 ### How to build the project
 
 1. Install [Bazel](https://bazel.build/)

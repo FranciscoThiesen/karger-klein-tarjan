@@ -15,6 +15,42 @@
 
 using namespace std;
 
+// Macros para debuggar
+#define TRACE(x)
+#define WATCH(x) TRACE(cout << #x " = " << x << endl)
+#define PRINT(x) TRACE(printf(x))
+#define WATCHR(a, b)                                                           \
+	TRACE(for (auto c = a; c != b;) cout << *(c++) << " "; cout << endl)
+#define WATCHC(V)                                                              \
+	TRACE({                                                                    \
+		cout << #V " = ";                                                      \
+		WATCHR(V.begin(), V.end());                                            \
+	})
+
+// Logica para imprimir tuplas com o operator <<
+template <size_t n, typename... T>
+typename std::enable_if<(n >= sizeof...(T))>::type
+	print_tuple(std::ostream&, const std::tuple<T...>&)
+{
+}
+
+template <size_t n, typename... T>
+typename std::enable_if<(n < sizeof...(T))>::type
+	print_tuple(std::ostream& os, const std::tuple<T...>& tup)
+{
+	if (n != 0) os << ", ";
+	os << std::get<n>(tup);
+	print_tuple<n + 1>(os, tup);
+}
+
+template <typename... T>
+std::ostream& operator<<(std::ostream& os, const std::tuple<T...>& tup)
+{
+	os << "[";
+	print_tuple<0>(os, tup);
+	return os << "]";
+}
+
 // Templates úteis para hashing de pares
 template <typename T> inline void hash_combine(std::size_t& seed, const T& val)
 {
@@ -58,7 +94,7 @@ struct pair_hash
 // da MST seja mapeada para alguma das arestas originais.
 pair<unordered_set<int>, problem> boruvka_step(problem P)
 {
-	cout << "chamamos o Boruvka!" << endl;
+	TRACE(cout << "chamamos o Boruvka!" << endl;)
 	// Assume-se que o grafo recebido aqui é CONEXO!!!!
 	// implementar!
 	// Aqui, preciso retornar o grafo resultante e também as arestas que foram
@@ -81,11 +117,11 @@ pair<unordered_set<int>, problem> boruvka_step(problem P)
 		{ smallest_incident_edge[to] = i; }
 	}
 
-	for (int i = 0; i < n; ++i)
+	TRACE(for (int i = 0; i < n; ++i)
 	{
 		cout << "custo da menor aresta incidindo em " << i << " => "
 			 << get<2>(P.graph_edges[smallest_incident_edge[i]]) << endl;
-	}
+	});
 
 	vector<bool> used(total_edges, false);
 	unordered_set<int> used_edges;
@@ -243,9 +279,8 @@ problem remove_isolated_vertices(const problem& P)
 // paper do KKT, onde essa etapa é chamada de Random Sampling.
 problem random_sampling(problem& P)
 {
-
+    srand(0);
 	vector<tuple<int, int, int, int>> H;
-	srand(0);
 	for (const auto& E: P.graph_edges)
 	{
 		int b = (rand() & 1);
@@ -300,7 +335,7 @@ unordered_set<int> kkt(problem& P)
 	problem& reduced = boruvka_first.second;
 
 	int total_cost = 0;
-	cout << "Chamei o boruvka pela primeira vez" << endl;
+	TRACE(cout << "Chamei o boruvka pela primeira vez" << endl;)
 	if (reduced.graph_edges.empty() || reduced.num_vertices == 0)
 	{
 		// seria legal calcular a soma dos custos antes de retornar..
@@ -309,12 +344,13 @@ unordered_set<int> kkt(problem& P)
 			if (result.find(get<3>(v)) != result.end())
 			{ total_cost += get<2>(v); }
 		}
+        cout << "1 - MST/F cost = " << total_cost;
 		return result;
 	}
-	cout << "Após o primeiro boruvka, temos " << endl;
-	print_problem(reduced);
+	TRACE(cout << "Após o primeiro boruvka, temos " << endl;)
+	TRACE(print_problem(reduced);)
 
-	cout << "Chamei o boruvka pela segunda vez" << endl;
+	TRACE(cout << "Chamei o boruvka pela segunda vez" << endl;)
 	auto boruvka_second =
 		boruvka_step(problem(reduced.num_vertices, reduced.graph_edges));
 	for (const auto& val: boruvka_second.first) result.insert(val);
@@ -332,20 +368,21 @@ unordered_set<int> kkt(problem& P)
 	// Problema reduzido após 2 passos do boruvka
 
 	problem G = boruvka_second.second;
-	cout << "Problema que sobrou, após aplicar 2 boruvkas!" << endl;
+	TRACE(cout << "Problema que sobrou, após aplicar 2 boruvkas!" << endl;)
 	print_problem(G);
 
-	cout << endl << "Vou gerar H, via random_sampling" << endl;
+	TRACE(cout << endl << "Vou gerar H, via random_sampling" << endl;)
 	// Processo de random sampling
 	problem H = random_sampling(G);
 
-	print_problem(H);
-	cout << "imprimi H " << endl;
+	TRACE(print_problem(H);)
+	
+	TRACE(cout << "imprimi H " << endl;)
 	assert(P != H);
 
 	unordered_set<int> kkt_h = kkt(H);
 
-	cout << "Vamos imprimir o resultado de KKT(H)" << endl;
+	TRACE(cout << "Vamos imprimir o resultado de KKT(H)" << endl;)
 	vector<tuple<int, int, int, int>> H_MSF;
 	for (const auto& E: G.graph_edges)
 	{
@@ -357,30 +394,31 @@ unordered_set<int> kkt(problem& P)
 			H_MSF.push_back(E);
 		}
 	}
-	cout << endl << endl;
+	TRACE(cout << endl << endl;)
 
 	auto G_heavy = verify_general_graph(G.graph_edges, H_MSF, G.num_vertices);
-	cout << "Arestas de G = " << endl;
+	TRACE(cout << "Arestas de G = " << endl;)
 	for (const auto& e: G.graph_edges)
 	{
 		int a, b, c, d;
 		tie(a, b, c, d) = e;
 		cout << a << " " << b << " " << c << " " << d << endl;
 	}
-	cout << endl;
-	cout << "Arestas de H = " << endl;
+	TRACE(cout << endl;)
+	TRACE(cout << "Arestas de H = " << endl;)
 	for (const auto& e: H_MSF)
 	{
 		int a, b, c, d;
 		tie(a, b, c, d) = e;
 		cout << a << " " << b << " " << c << " " << d << endl;
 	}
-	cout << endl << endl;
+	TRACE(cout << endl << endl;)
 
-	cout << "imprimindo heavy-edges" << endl;
+	TRACE(cout << "imprimindo heavy-edges" << endl;)
 
-	for (const auto& v: G_heavy) cout << v << endl;
-	cout << endl << endl;
+	TRACE(
+		for (const auto& v: G_heavy) cout << v << endl;
+	cout << endl << endl;);
 	// Agora temos que remover todas essas arestas pesadas de G
 
 	vector<tuple<int, int, int, int>> relevant_edges;
