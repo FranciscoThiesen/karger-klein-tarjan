@@ -18,14 +18,14 @@ TEST(positive_verification, random_graph)
 
 TEST(negative_verification, fixed_graph)
 {
-	vector<tuple<int, int, int>> simple_graph;
-	simple_graph.emplace_back(0, 1, 1);
-	simple_graph.emplace_back(1, 2, 1);
-	simple_graph.emplace_back(0, 2, 2);
+	vector<tuple<int, int, int, int>> simple_graph;
+	simple_graph.emplace_back(0, 1, 1, 0);
+	simple_graph.emplace_back(1, 2, 1, 1);
+	simple_graph.emplace_back(0, 2, 2, 2);
 
-	vector<tuple<int, int, int>> non_minimum_spanning_tree;
-	non_minimum_spanning_tree.emplace_back(0, 2, 2);
-	non_minimum_spanning_tree.emplace_back(1, 2, 1);
+	vector<tuple<int, int, int, int>> non_minimum_spanning_tree;
+	non_minimum_spanning_tree.emplace_back(0, 2, 2, 2);
+	non_minimum_spanning_tree.emplace_back(1, 2, 1, 1);
 
 	ASSERT_FALSE(verify_mst(simple_graph, non_minimum_spanning_tree, 3));
 }

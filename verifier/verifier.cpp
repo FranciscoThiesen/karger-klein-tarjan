@@ -58,17 +58,17 @@ std::ostream& operator<<(std::ostream& os, const std::tuple<T...>& tup)
 // Dada uma Árvore de tamanho N, vamos produzir uma full branching tree de
 // tamanho no máximo 2*N. Os nós de T serão folhas em B e é garantido que a
 // distância entre as folhas de B é equivalente as distâncias dos nós em B.
-vector<tuple<int, int, int>>
-	fbt_reduction(const vector<tuple<int, int, int>>& edges, int total_nodes)
+vector<tuple<int, int, int, int>>
+	fbt_reduction(const vector<tuple<int, int, int, int>>& edges, int total_nodes)
 {
-	vector<tuple<int, int, int>> active_edges = edges;
+	vector<tuple<int, int, int, int>> active_edges = edges;
 	vector<int> component(total_nodes);
 	iota(component.begin(), component.end(), 0);
 
 	int graph_cc = total_nodes, prox_node_id = total_nodes;
 
 	int total_edges = static_cast<int>(edges.size());
-	vector<tuple<int, int, int>> new_edges;
+	vector<tuple<int, int, int, int>> new_edges;
 
 	while (graph_cc > 1)
 	{
@@ -83,7 +83,7 @@ vector<tuple<int, int, int>>
 		for (int i = 0; i < total_edges; ++i)
 		{
 			int from, to, cost;
-			tie(from, to, cost) = active_edges[i];
+			tie(from, to, cost, ignore) = active_edges[i];
 
 			// pensa que não vou precisar mais pegar o pai da componente...
 			if (cheapest_edge.count(from) == 0 ||
@@ -104,7 +104,7 @@ vector<tuple<int, int, int>>
 		for (const auto& par: cheapest_edge)
 		{
 			int from, to, cost;
-			tie(from, to, cost) = active_edges[par.second];
+			tie(from, to, cost, ignore) = active_edges[par.second];
 			current_graph[from].push_back(to);
 			current_graph[to].push_back(from);
 		}
@@ -143,20 +143,20 @@ vector<tuple<int, int, int>>
 		{
 			int super_node_cc = super_node_id[par.first];
 			new_edges.emplace_back(par.first, super_node_cc,
-								   get<2>(active_edges[par.second]));
+								   get<2>(active_edges[par.second]), get<3>(active_edges[par.second]));
 		}
 
-		vector<tuple<int, int, int>> relevant_edges;
+		vector<tuple<int, int, int, int>> relevant_edges;
 		for (const auto& e: active_edges)
 		{
-			int from, to, cost;
-			tie(from, to, cost) = e;
+			int from, to, cost, id;
+			tie(from, to, cost, id) = e;
 			if (super_node_id[from] != super_node_id[to])
 			{
 				// Aqui, estou mudando as arestas para refletir os novos
 				// super-vértices obtidos nessa etapa
 				relevant_edges.emplace_back(super_node_id[to],
-											super_node_id[from], cost);
+											super_node_id[from], cost, id);
 			}
 		}
 		active_edges = relevant_edges;
@@ -259,7 +259,7 @@ struct tree_path_maxima
 
 		P[depth[v]] = v;
 		int k = binary_search(weight[v], down(D[v], S));
-		S = down(D[v], S & ((1 << (k + 1)) - 1) | (1 << depth[v]));
+		S = down(D[v], (S & ((1 << (k + 1)) - 1)) | (1 << depth[v]));
 		for (int i = L[v]; i >= 0; i = Lnext[i])
 		{ answer[i] = P[median[down(1 << depth[upper[i]], S)]]; }
 		for (int z = child[v]; z >= 0; z = sibling[z]) visit(z, S);
@@ -309,12 +309,12 @@ struct test_graph
 	// 6 - Vetor de arestas do grafo original
 	int root, total_nodes;
 	vector<int> child, sibling, weight;
-	vector<tuple<int, int, int>> mst;
-	vector<tuple<int, int, int>> G;
+	vector<tuple<int, int, int, int>> mst;
+	vector<tuple<int, int, int, int>> G;
 	LCA lca;
 
-	test_graph(const vector<tuple<int, int, int>> edges,
-			   const vector<tuple<int, int, int>> spanning_tree, const int n)
+	test_graph(const vector<tuple<int, int, int, int>> edges,
+			   const vector<tuple<int, int, int, int>> spanning_tree, const int n)
 	{
 		mst = spanning_tree;
 		auto fbt_mst = fbt_reduction(mst, n);
@@ -325,7 +325,7 @@ struct test_graph
 		for (const auto& e: fbt_mst)
 		{
 			int a, b, c;
-			tie(a, b, c) = e;
+			tie(a, b, c, ignore) = e;
 			max_id = max(max(a, b) + 1, max_id);
 		}
 		total_nodes = max_id;
@@ -344,7 +344,7 @@ struct test_graph
 		for (const auto& e: fbt_mst)
 		{
 			int a, b, c;
-			tie(a, b, c) = e;
+			tie(a, b, c, ignore) = e;
 			adj_list[a].emplace_back(b, c);
 			adj_list[b].emplace_back(a, c);
 		}
@@ -400,7 +400,7 @@ struct test_graph
 		for (int i = 0; i < M; ++i)
 		{
 			int src, to, cost;
-			tie(src, to, cost) = G[i];
+			tie(src, to, cost, ignore) = G[i];
 			// Agora preciso usar a LCA
 			int anc = lca.query(src, to);
 			pair<int, int> qry = {-1, -1};
@@ -465,8 +465,8 @@ struct test_graph
 	}
 };
 
-bool verify_mst(const vector<tuple<int, int, int>>& graph,
-				const vector<tuple<int, int, int>>& spanning_tree, const int n)
+bool verify_mst(const vector<tuple<int, int, int, int>>& graph,
+				const vector<tuple<int, int, int, int>>& spanning_tree, const int n)
 {
 	auto verifier = test_graph(graph, spanning_tree, n);
 	return verifier.verify();

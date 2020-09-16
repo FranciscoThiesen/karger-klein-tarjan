@@ -19,16 +19,7 @@ TEST(stress_test, random_small_graphs)
 		auto random_graph = build_random_connected_graph(N, M);
 		auto kruskal_mst = kruskal(random_graph, N);
 
-		vector<tuple<int, int, int, int>> problem_edges;
-
-		for (int e = 0; e < M; ++e)
-		{
-			int from, to, cost;
-			tie(from, to, cost) = random_graph[e];
-			problem_edges.emplace_back(from, to, cost, e);
-		}
-
-		problem P = problem(N, problem_edges);
+		problem P = problem(N, random_graph);
 		unordered_set<int> res = kkt(P);
 
 		int truth = sum_of_costs(kruskal_mst);
@@ -48,16 +39,7 @@ TEST(stress_test, random_medium_graphs)
 		auto random_graph = build_random_connected_graph(N, M);
 		auto kruskal_mst = kruskal(random_graph, N);
 
-		vector<tuple<int, int, int, int>> problem_edges;
-
-		for (int e = 0; e < M; ++e)
-		{
-			int from, to, cost;
-			tie(from, to, cost) = random_graph[e];
-			problem_edges.emplace_back(from, to, cost, e);
-		}
-
-		problem P = problem(N, problem_edges);
+		problem P = problem(N, random_graph);
 		unordered_set<int> res = kkt(P);
 
 		int truth = sum_of_costs(kruskal_mst);
@@ -77,16 +59,7 @@ TEST(stress_test, random_large_graphs)
 		auto random_graph = build_random_connected_graph(N, M);
 		auto kruskal_mst = kruskal(random_graph, N);
 
-		vector<tuple<int, int, int, int>> problem_edges;
-
-		for (int e = 0; e < M; ++e)
-		{
-			int from, to, cost;
-			tie(from, to, cost) = random_graph[e];
-			problem_edges.emplace_back(from, to, cost, e);
-		}
-
-		problem P = problem(N, problem_edges);
+		problem P = problem(N, random_graph);
 		unordered_set<int> res = kkt(P);
 
 		int truth = sum_of_costs(kruskal_mst);

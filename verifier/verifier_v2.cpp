@@ -265,7 +265,7 @@ struct tree_path_maxima
 
 		P[depth[v]] = v;
 		int k = binary_search(weight[v], down(D[v], S));
-		S = down(D[v], S & ((1 << (k + 1)) - 1) | (1 << depth[v]));
+		S = down(D[v], (S & ((1 << (k + 1)) - 1)) | (1 << depth[v]));
 		for (int i = L[v]; i >= 0; i = Lnext[i])
 		{ answer[i] = P[median[down(1 << depth[upper[i]], S)]]; }
 		for (int z = child[v]; z >= 0; z = sibling[z]) visit(z, S);

@@ -9,25 +9,26 @@
 #include <set>
 #include <unordered_map>
 
-long long sum_of_costs(const vector<tuple<int, int, int>>& graph)
+long long sum_of_costs(const vector<tuple<int, int, int, int>>& graph)
 {
 	long long answer = 0ll;
 	for (const auto& e: graph) answer += get<2>(e);
 	return answer;
 }
 
-vector<tuple<int, int, int>>
-	get_random_spanning_tree(const vector<tuple<int, int, int>>& graph,
+vector<tuple<int, int, int, int>>
+	get_random_spanning_tree(const vector<tuple<int, int, int, int>>& graph,
 							 int num_vertices)
 {
-	vector<tuple<int, int, int>> edges = graph;
+	vector<tuple<int, int, int, int>> edges = graph;
 	random_device rd;
 	mt19937 g(rd());
 	shuffle(edges.begin(), edges.end(), g);
 	// Ideia analoga ao kruskal, mas feito com arestas que não estao ordenadas
 	// por peso
-	vector<tuple<int, int, int>> spanning_tree;
+	vector<tuple<int, int, int, int>> spanning_tree;
 	UnionFind UF(num_vertices);
+
 	for (const auto& e: edges)
 	{
 		int u = get<0>(e), v = get<1>(e);
@@ -39,7 +40,7 @@ vector<tuple<int, int, int>>
 // Para funcionar com o KKT do jeito que está, temos que garantir alguns
 // invariantes sobre o grafo gerado: 1 - Os custos das arestas são únicos 2 -
 // Não existem arestas paralelas 3 - Não existem loops
-vector<tuple<int, int, int>> build_random_connected_graph(int num_vertices,
+vector<tuple<int, int, int, int>> build_random_connected_graph(int num_vertices,
 														  int num_edges)
 {
 	srand(time(NULL));
@@ -53,14 +54,15 @@ vector<tuple<int, int, int>> build_random_connected_graph(int num_vertices,
 	mt19937 g(rd());
 	shuffle(W.begin(), W.end(), g);
 
-	vector<tuple<int, int, int>> random_graph;
+	vector<tuple<int, int, int, int>> random_graph;
 	int nxt = 0;
 	set<pair<int, int>> edges;
-
+    
 	// Primeiro, criamos um grafo de linha, garantidamente conexo
 	for (int i = 0; i < num_vertices - 1; ++i)
 	{
-		random_graph.emplace_back(i, i + 1, W[nxt++]);
+		random_graph.emplace_back(i, i + 1, W[nxt], nxt);
+        ++nxt;
 		edges.emplace(i, i + 1);
 	}
 
@@ -77,7 +79,8 @@ vector<tuple<int, int, int>> build_random_connected_graph(int num_vertices,
 			b = (rand() % num_vertices);
 			if (a > b) swap(a, b);
 		}
-		random_graph.emplace_back(a, b, W[nxt++]);
+		random_graph.emplace_back(a, b, W[nxt], nxt);
+        ++nxt;
 		edges.emplace(a, b);
 	}
 
