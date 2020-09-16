@@ -24,8 +24,6 @@ vector<tuple<int, int, int, int>>
 	random_device rd;
 	mt19937 g(rd());
 	shuffle(edges.begin(), edges.end(), g);
-	// Ideia analoga ao kruskal, mas feito com arestas que não estao ordenadas
-	// por peso
 	vector<tuple<int, int, int, int>> spanning_tree;
 	UnionFind UF(num_vertices);
 
@@ -37,9 +35,6 @@ vector<tuple<int, int, int, int>>
 	return spanning_tree;
 }
 
-// Para funcionar com o KKT do jeito que está, temos que garantir alguns
-// invariantes sobre o grafo gerado: 1 - Os custos das arestas são únicos 2 -
-// Não existem arestas paralelas 3 - Não existem loops
 vector<tuple<int, int, int, int>> build_random_connected_graph(int num_vertices,
 														  int num_edges)
 {
@@ -58,7 +53,6 @@ vector<tuple<int, int, int, int>> build_random_connected_graph(int num_vertices,
 	int nxt = 0;
 	set<pair<int, int>> edges;
     
-	// Primeiro, criamos um grafo de linha, garantidamente conexo
 	for (int i = 0; i < num_vertices - 1; ++i)
 	{
 		random_graph.emplace_back(i, i + 1, W[nxt], nxt);
@@ -83,7 +77,8 @@ vector<tuple<int, int, int, int>> build_random_connected_graph(int num_vertices,
         ++nxt;
 		edges.emplace(a, b);
 	}
-
 	assert(static_cast<int>(random_graph.size()) == num_edges);
 	return random_graph;
 }
+
+

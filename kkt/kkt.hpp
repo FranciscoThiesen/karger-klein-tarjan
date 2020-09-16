@@ -19,7 +19,11 @@ struct problem {
     };
 };
 
+// Accumulate cost of edges
 int get_solution_cost(const problem& P, const unordered_set<int>& used);
+
+// Get MST edges from their respective indices.
+vector< tuple<int, int, int, int> > get_mst_edges_from_problem(const unordered_set<int>& mst_id, const problem& P);
 
 // KKT algorithm implementation. It returns a hash_set with all the MST edges
 // Assumptions: The graph of the problem is connected and undirected.
