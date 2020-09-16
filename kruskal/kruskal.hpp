@@ -6,10 +6,10 @@
 
 using namespace std;
 
-// Implementation of Kruskal algorithm for finding MST
+// Implementation of Kruskal's algorithm for finding MST
+// Assumptions: We receive the edges of a connected graph.
 // Complexity: O(m log n)
-
-vector<tuple<int, int, int, int>> kruskal(const vector<tuple<int, int, int, int>>& X,
+vector<tuple<int, int, int, int>> kruskal(const vector<tuple<int, int, int, int>>& graph_edges,
 									 int n);
 
 #endif

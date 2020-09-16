@@ -16,7 +16,7 @@
 
 using namespace std;
 
-// Macros para debuggar
+// A few macros and functions that are useful for debugging
 #define TRACE(x)
 #define WATCH(x) TRACE(cout << #x " = " << x << endl)
 #define PRINT(x) TRACE(printf(x))
@@ -28,7 +28,6 @@ using namespace std;
 		WATCHR(V.begin(), V.end());                                            \
 	})
 
-// Logica para imprimir tuplas com o operator <<
 template <size_t n, typename... T>
 typename std::enable_if<(n >= sizeof...(T))>::type
 	print_tuple(std::ostream&, const std::tuple<T...>&)
@@ -51,13 +50,14 @@ std::ostream& operator<<(std::ostream& os, const std::tuple<T...>& tup)
 	print_tuple<0>(os, tup);
 	return os << "]";
 }
+// End of debugging macros and functions
 
-// Aqui vou implementar o processo de reducao de uma Spanning Tree T, para
-// uma Full Branching Tree B, como descrito no paper de King.
-//
-// Dada uma Árvore de tamanho N, vamos produzir uma full branching tree de
-// tamanho no máximo 2*N. Os nós de T serão folhas em B e é garantido que a
-// distância entre as folhas de B é equivalente as distâncias dos nós em B.
+// This function reduces any tree graph to a full branching tree version of it.
+// Such reduction is made performing a strategy similar to the Boruvka algorithm.
+// It is guaranteed that the size of the generated full branching tree has at
+// most O(2 * n) vertices. 
+// Assumptions: We receive the edges of a proper Spanning Tree
+// Complexity: O(n)
 vector<tuple<int, int, int, int>>
 	fbt_reduction(const vector<tuple<int, int, int, int>>& edges, int total_nodes)
 {
@@ -72,20 +72,19 @@ vector<tuple<int, int, int, int>>
 
 	while (graph_cc > 1)
 	{
-		// encontra a aresta mais barata incidente em cada um dos componentes
-		// existentes na fase atual salva o índice
-		unordered_map<int, int> cheapest_edge;
+		
+        // Finding the cheapest edge that touches each component
+        unordered_map<int, int> cheapest_edge;
 
-		unordered_map<int, vector<int>> current_graph;
-		// lista de adjacencia para cada componente ainda ativa nessa etapa
-		// estou usando hash-tables para manter o tempo esperado linear
+	    // Adjacency list for each component that is still active by the
+        // current iteration.
+        unordered_map<int, vector<int>> current_graph;
 
 		for (int i = 0; i < total_edges; ++i)
 		{
 			int from, to, cost;
 			tie(from, to, cost, ignore) = active_edges[i];
 
-			// pensa que não vou precisar mais pegar o pai da componente...
 			if (cheapest_edge.count(from) == 0 ||
 				cost < get<2>(active_edges[cheapest_edge[from]]))
 				cheapest_edge[from] = i;
@@ -94,14 +93,14 @@ vector<tuple<int, int, int, int>>
 				cheapest_edge[to] = i;
 		}
 
-		// Aqui vamos guardar a lista de componentes atuais!
-		vector<int> component_list;
+	    // Storing the list of components that are still active by now	
+        vector<int> component_list;
 		for (const auto& par: cheapest_edge)
 			component_list.push_back(par.first);
 
-		// Aqui, antigamente faziamos a união das componentes, agora vamos
-		// apenas construir o grafo!
-		for (const auto& par: cheapest_edge)
+	    // This loops construct the graph that takes into account only the
+        // current active components
+        for (const auto& par: cheapest_edge)
 		{
 			int from, to, cost;
 			tie(from, to, cost, ignore) = active_edges[par.second];
@@ -111,12 +110,12 @@ vector<tuple<int, int, int, int>>
 
 		vector<int> new_component_ids;
 		unordered_map<int, int>
-			super_node_id; // Isso vai marcar quais componentes do
-						   // nível atual já foram marcados!
+			super_node_id; 
 
-		// Agora vou marcar as componentes conexas de um indice novo, fazendo
-		// uma dfs
-		function<void(int, int)> explore_cc = [&](int root, int parent) {
+	    // This lambda functions explores the current graph.
+        // This is required, because next we will merge each
+        // of the connected components into a single new node
+        function<void(int, int)> explore_cc = [&](int root, int parent) {
 			if (parent == -1)
 			{
 				int new_id = prox_node_id++;
@@ -133,19 +132,25 @@ vector<tuple<int, int, int, int>>
 				if (viz != parent) { explore_cc(viz, root); }
 			}
 		};
-
+        
+        // Calling the explore_cc method for each node that is unexplored
 		for (const auto& id: component_list)
 		{
 			if (super_node_id.count(id) == 0) explore_cc(id, -1);
 		}
-
+        
+        // Connecting each of the nodes of the current step to it's
+        // corresponding super_node.
 		for (const auto& par: cheapest_edge)
 		{
 			int super_node_cc = super_node_id[par.first];
 			new_edges.emplace_back(par.first, super_node_cc,
 								   get<2>(active_edges[par.second]), get<3>(active_edges[par.second]));
 		}
-
+        
+        // We are now removing self-loops and changing the 
+        // endpoints edges, so as to reflect that collapse
+        // of several nodes into a single super_node
 		vector<tuple<int, int, int, int>> relevant_edges;
 		for (const auto& e: active_edges)
 		{
@@ -153,23 +158,34 @@ vector<tuple<int, int, int, int>>
 			tie(from, to, cost, id) = e;
 			if (super_node_id[from] != super_node_id[to])
 			{
-				// Aqui, estou mudando as arestas para refletir os novos
-				// super-vértices obtidos nessa etapa
 				relevant_edges.emplace_back(super_node_id[to],
 											super_node_id[from], cost, id);
 			}
 		}
+
+        // Updating the active edges, total number of edges
+        // and the number of connected components
 		active_edges = relevant_edges;
 		total_edges = static_cast<int>(active_edges.size());
 		graph_cc = static_cast<int>(new_component_ids.size());
 	}
-	// Retornando a full branching tree resultante
-	return new_edges;
+    
+    // Returning edges of the generated full-branching tree 
+    return new_edges;
 }
 
-// Aqui esta a alma da verificacao!
-// Vou precisar construir todos os vetores como ele define no paper, a partir do
-// vetor de tuplas que eh a arvore reduzida
+// Implementation of the tree_path_maxima problem solver.
+// It is completely based on the D code that Torben
+// Hagerup made available in his 2009 paper. It answers multiple queries and
+// each query provides two nodes (a,b) and asks for the maximum edge
+// on the path from (a, b) on the tree! (This is why it is called the
+// tree-path-maxima problem)
+//
+// Assumptions: It received a full-branching-tree in the format specified
+// on the paper. And it receives multiple tree_path_maxima queries, where
+// query i is defined by (lower[i], upper[i]).
+// 
+// Complexity: O(n + m)
 struct tree_path_maxima
 {
 	int height, n, m, root;
@@ -195,11 +211,10 @@ struct tree_path_maxima
 		root = _root;
 	}
 
-	// d = depth of u
 	void init(int u, int d)
 	{
 		depth[u] = d;
-		if (d > height) height = d; // height of T = maximum depth
+		if (d > height) height = d;
 		for (int i = L[u]; i >= 0; i = Lnext[i]) D[u] |= 1 << depth[upper[i]];
 		for (int v = child[u]; v >= 0; v = sibling[v])
 		{
@@ -283,14 +298,14 @@ struct tree_path_maxima
 	}
 };
 
-// Instruções de uso
-// vetor edges recebe as arestas todas as arestas do grafo, no formato (origem,
-// destino, custo) vetor spanning tree recebe todas as arestas de sua spanning
-// tree, que voce deseja verificar auto V = test_graph(vector<tuple<int, int,
-// int>> edges, vector<tuple<int, int, int> > spanning_tree, int total_nodes);
-// V.verify(); // <- retorna um booleano, e se for falso diz qual aresta eh
-// contra exemplo
-
+// This test_graph structure makes use of the tree_path_maxima for verifying
+// a minimum spanning tree in linear time.
+//
+// Assumptions: It receives a vector of graph edges in the format
+// (from, to, cost, id) and a spanning tree, using the same edge convention.
+// It returns whether that spanning tree is a minimum spanning tree or not.
+//
+// Complexity: O(n + m)
 struct test_graph
 {
 	// vamos transformar o conjunto de arestas no formato necessario para rodar
@@ -319,9 +334,7 @@ struct test_graph
 		mst = spanning_tree;
 		auto fbt_mst = fbt_reduction(mst, n);
 		G = edges;
-		WATCHC(mst);
-		WATCHC(fbt_mst);
-		int max_id = n;
+        int max_id = n;
 		for (const auto& e: fbt_mst)
 		{
 			int a, b, c;
@@ -329,12 +342,13 @@ struct test_graph
 			max_id = max(max(a, b) + 1, max_id);
 		}
 		total_nodes = max_id;
-		// This N is for LCA
+	    // total_nodes is different than n, because it represents
+        // the total number of nodes on the full-branching tree
+        
 		int N = total_nodes;
-		// End of LCA Prep
-		vector<vector<pair<int, int>>> adj_list(max_id);
+		
+        vector<vector<pair<int, int>>> adj_list(max_id);
 		vector<vector<int>> adj(N);
-		// adj.resize(N);
 
 		child.assign(max_id, -1);
 		sibling.assign(max_id, -1);
@@ -348,7 +362,10 @@ struct test_graph
 			adj_list[a].emplace_back(b, c);
 			adj_list[b].emplace_back(a, c);
 		}
-
+        
+        // This function performs the dfs on the full-branching-tree
+        // graph and also converts the graph to a format that is
+        // compatible with the tree_path_maxima call.
 		function<void(int, int)> dfs_lca = [&](int node, int parent) {
 			vector<int> kids;
 			for (const auto& edge: adj_list[node])
@@ -370,29 +387,18 @@ struct test_graph
 			for (int i = 0; i < static_cast<int>(kids.size()) - 1; ++i)
 			{ sibling[kids[i]] = kids[i + 1]; }
 		};
-		// adj_list representa garantidamente o grafo de uma full branching
-		// tree, com raiz de índice = |V| - 1
-		dfs_lca(root, -1);
-		TRACE(cout << "iniciei o grafo" << endl;)
+		
+        dfs_lca(root, -1);
 
-		// vamos imprimir ADJ
-		TRACE(cout << "IMPRIMINDO AS ARESTAS DA ARVORE, CONSIDERADAS NO LCA"
-				   << '\n';
-			  for (int i = 0; i < max_id; ++i) { WATCHC(adj[i]); } cout
-			  << "FIM DA IMPRESSAO" << '\n';);
-		// aqui estou computando o LCA, supostamente em O(n)
-		// precompute_lca(root);
-		lca = LCA(N, adj, root);
-		TRACE(cout << "precomputei o LCA" << endl;)
-		// Aqui vou criar uma estrutura de LCA
+        // This structure perform the required LCA precomputations in O(n + m),
+        // in order to answer LCA queries in O(1) time
+        lca = LCA(N, adj, root);
 	}
 
-	// Essa funcao efetua a verificacao de fato
-	bool verify()
+    // This function performs the verification per se.	
+    bool verify()
 	{
 		vector<int> gabarito, upper, lower, corresponding_edge;
-		// LCA Prep
-		TRACE(cout << "entrei em verify" << endl;)
 		int M = static_cast<int>(G.size());
 		int upper_len = 0;
 		vector<pair<int, int>> decomposed_query;
@@ -401,8 +407,11 @@ struct test_graph
 		{
 			int src, to, cost;
 			tie(src, to, cost, ignore) = G[i];
-			// Agora preciso usar a LCA
-			int anc = lca.query(src, to);
+			
+            // Every query of the form (u, v) has to be
+            // split into (u, lca(u, v)), (v, lca(u, v)). This is a 
+            // requisite for the tree_path_maxima algorithm.
+            int anc = lca.query(src, to);
 			pair<int, int> qry = {-1, -1};
 			if (anc != src)
 			{
@@ -440,24 +449,13 @@ struct test_graph
 		{
 			int id_fst = qry.first, id_snd = qry.second;
 			int edge_cost =
-				gabarito[id_fst]; // vai ser igual para os dois indices,
-								  // pois eh relativo a mesma aresta
-			int heavy_combine = max(weight[sol[id_fst]], weight[sol[id_snd]]);
+				gabarito[id_fst]; 
+			
+            int heavy_combine = max(weight[sol[id_fst]], weight[sol[id_snd]]);
 			if (heavy_combine > edge_cost)
 			{
-
-				WATCH(upper[id_fst]);
-				WATCH(lower[id_fst]);
-				WATCH(upper[id_snd]);
-				WATCH(lower[id_snd]);
-				cout << "o peso da maior aresta = " << heavy_combine << '\n';
-				cout << "A Spanning Tree nao é mínima!" << '\n';
-				cout << "a aresta " << G[corresponding_edge[id_fst]]
-					 << " deveria fazer parte dela..." << '\n';
-				cout << "Na MST, o menor custo entre "
-					 << get<0>(G[corresponding_edge[id_fst]]) << " e "
-					 << get<1>(G[corresponding_edge[id_fst]]) << " = "
-					 << heavy_combine << '\n';
+                // We have encountered a edge that should be part of the
+                // Spanning Tree. That guarantees that it is not minimal.
 				return false;
 			}
 		}

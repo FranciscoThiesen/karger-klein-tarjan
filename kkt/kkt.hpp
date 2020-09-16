@@ -19,9 +19,11 @@ struct problem {
     };
 };
 
-
 int get_solution_cost(const problem& P, const unordered_set<int>& used);
-// Essa função retorna os índices das arestas que pertencem a MST
+
+// KKT algorithm implementation. It returns a hash_set with all the MST edges
+// Assumptions: The graph of the problem is connected and undirected.
+// Complexity: O(n + m)
 unordered_set<int> kkt(problem& P);
 
 #endif

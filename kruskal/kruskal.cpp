@@ -8,14 +8,14 @@
 
 using namespace std;
 
-vector<tuple<int, int, int, int>> kruskal(const vector<tuple<int, int, int, int>>& X,
+vector<tuple<int, int, int, int>> kruskal(const vector<tuple<int, int, int, int>>& graph_edges,
 									 int n)
 {
 	UnionFind graph(n);
 	vector<tuple<int, int, int, int>> edges;
 	vector<tuple<int, int, int, int>> spanning_tree;
 
-	edges = X;
+	edges = graph_edges;
 
 	sort(edges.begin(), edges.end(),
 		 [&](const tuple<int, int, int, int>& a, const tuple<int, int, int, int>& b) {

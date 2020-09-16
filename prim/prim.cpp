@@ -38,12 +38,6 @@ vector<tuple<int, int, int, int>> _prim(const vector<vector<Edge>>& adj, int n)
 	vector<bool> selected(n, false);
 	for (int i = 0; i < n; ++i)
 	{
-		if (q.empty())
-		{
-			cout << "No MST!" << endl;
-			exit(0);
-		}
-
 		int v = q.begin()->to;
 		selected[v] = true;
 		q.erase(q.begin());
@@ -67,7 +61,6 @@ vector<tuple<int, int, int, int>> _prim(const vector<vector<Edge>>& adj, int n)
 vector<tuple<int, int, int, int>> prim(const vector<tuple<int, int, int, int>>& edges,
 								  int n)
 {
-	// First, let's convert edge list into and adjacency list
 	vector<vector<Edge>> adj(n);
 	for (const auto& e: edges)
 	{
