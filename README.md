@@ -16,9 +16,7 @@ The objectives of this projects are the following:
    ```
 
 
-
-### How to run the tests
-
+### How to run tests
 1. Build the project in the way described above
 
 2. Run the following command at your command line:
@@ -27,10 +25,12 @@ The objectives of this projects are the following:
    $ bazel test :all --cache_test_results=no
    ```
 
-   
+### Assumptions regarding graph:
+1. Karger-Klein-Tarjan is implemented assuming that all edge weights are unique.
+2. We assume to be always dealing with __undirected__ graphs.
 
 ### TODO
 
 1. Implement the Karger, Klein & Tarjan algorithm by making use of the already implemented linear-time verifier. (DONE)
 2. Benchmark it against Boruvka, Prim and Kruskal
-3. Improve comments
+3. Improve comments (partially done)
