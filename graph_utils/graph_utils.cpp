@@ -36,17 +36,17 @@ vector<tuple<int, int, int, int>>
 }
 
 vector<tuple<int, int, int, int>> build_random_connected_graph(int num_vertices,
-														  int num_edges)
+														  int num_edges, unsigned int seed)
 {
-	srand(time(NULL));
-	assert(num_edges >= num_vertices - 1);
-	assert(num_edges <= (num_vertices * (num_vertices - 1)) / 2);
+	srand(seed);
+	assert(num_edges >= (num_vertices - 1));
+	assert(1ll * num_edges <= (1ll * num_vertices * (num_vertices - 1)) / 2);
 
 	vector<int> W(num_edges, 0);
 	iota(W.begin(), W.end(), 0);
 
 	random_device rd;
-	mt19937 g(rd());
+	mt19937 g(seed);
 	shuffle(W.begin(), W.end(), g);
 
 	vector<tuple<int, int, int, int>> random_graph;

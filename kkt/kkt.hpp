@@ -28,6 +28,6 @@ vector< tuple<int, int, int, int> > get_mst_edges_from_problem(const unordered_s
 // KKT algorithm implementation. It returns a hash_set with all the MST edges
 // Assumptions: The graph of the problem is connected and undirected.
 // Complexity: O(n + m)
-unordered_set<int> kkt(problem& P);
+unordered_set<int> kkt(problem& P, unsigned int seed = 0);
 
 #endif

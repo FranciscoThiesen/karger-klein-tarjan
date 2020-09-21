@@ -19,6 +19,6 @@ vector<tuple<int, int, int, int>>
 // O grafo é retornado como uma lista de arestas, onde cada elemento é da forma
 // (u, v, cost). Estamos trabalhando com arestas não direcionadas!
 vector<tuple<int, int, int, int>> build_random_connected_graph(int num_vertices,
-														  int num_edges);
+														  int num_edges, unsigned int seed = 0);
 
 #endif

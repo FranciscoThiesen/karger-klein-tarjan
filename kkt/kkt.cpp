@@ -259,9 +259,9 @@ problem remove_isolated_vertices(const problem& P)
 
 // This function selects edges of P.graph_edges with probability 1/2.
 // It is a key part of the KKT algorithm and it is described on the paper.
-problem random_sampling(problem& P)
+problem random_sampling(problem& P, unsigned int seed = 0)
 {
-    srand(0);
+    srand(seed);
 	vector<tuple<int, int, int, int>> H;
 	for (const auto& E: P.graph_edges)
 	{
@@ -310,7 +310,7 @@ vector< tuple<int, int, int, int> > get_mst_edges_from_problem(const unordered_s
 
 
 // Performs the KKT algorithm, using the Hagerup verification proposal.
-unordered_set<int> kkt(problem& P)
+unordered_set<int> kkt(problem& P, unsigned int seed)
 {
 	unordered_set<int> result;
 	if (P.graph_edges.empty())
@@ -340,9 +340,9 @@ unordered_set<int> kkt(problem& P)
 	problem G = boruvka_second.second;
 	
     // H selects edge from G with edge probability = 1/2	
-    problem H = random_sampling(G);
+    problem H = random_sampling(G, seed);
 
-	unordered_set<int> kkt_h = kkt(H);
+	unordered_set<int> kkt_h = kkt(H, seed);
     
     // KKT_H will return the indices of the minimum spanning forest edges.
 	vector<tuple<int, int, int, int>> H_MSF;
@@ -371,7 +371,7 @@ unordered_set<int> kkt(problem& P)
 	problem G_remaining = remove_isolated_vertices(P_G);
     
     // And now we apply kkt to the remaining graph in a recursive manner.
-	unordered_set<int> g_res = kkt(G_remaining);
+	unordered_set<int> g_res = kkt(G_remaining, seed);
 	for (const auto& val: g_res) result.insert(val);
 
 	return result;

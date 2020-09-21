@@ -33,15 +33,18 @@ vector<tuple<int, int, int, int>> boruvka(const vector<tuple<int, int, int, int>
 
 		for (int i = 0; i < n; ++i)
 		{
-			if (graph.parent[i] != i) continue;
-			int from, to, cost, id;
+		    if(cheapest[i] == -1) continue;
+ 
+            int from, to, cost, id;
 			tie(from, to, cost, id) = edges[cheapest[i]];
-
-			bool pay = false;
-			if (i == from) pay = graph.unite(i, to);
-			else
-				pay = graph.unite(i, from);
-			if (pay) ans.emplace_back(from, to, cost, id);
+            
+            int X = graph.find_parent(from);
+            int Y = graph.find_parent(to);
+            
+            if(X != Y) {
+                graph.unite(X, Y);
+                ans.emplace_back(from, to, cost, id);
+            }
 		}
 	}
 
