@@ -8,7 +8,7 @@
 
 using namespace std;
 
-// Correctenss tests
+// Correctness tests
 TEST(stress_test, random_small_graphs)
 {
 	constexpr int N = 10;
