@@ -7,8 +7,8 @@
 
 using namespace std;
 
-vector<tuple<int, int, int, int>> boruvka(const vector<tuple<int, int, int, int>>& edges,
-									 int n)
+vector<tuple<int, int, int, int>>
+	boruvka(const vector<tuple<int, int, int, int>>& edges, int n)
 {
 	UnionFind graph(n);
 	vector<int> cheapest(n, -1);
@@ -33,18 +33,19 @@ vector<tuple<int, int, int, int>> boruvka(const vector<tuple<int, int, int, int>
 
 		for (int i = 0; i < n; ++i)
 		{
-		    if(cheapest[i] == -1) continue;
- 
-            int from, to, cost, id;
+			if (cheapest[i] == -1) continue;
+
+			int from, to, cost, id;
 			tie(from, to, cost, id) = edges[cheapest[i]];
-            
-            int X = graph.find_parent(from);
-            int Y = graph.find_parent(to);
-            
-            if(X != Y) {
-                graph.unite(X, Y);
-                ans.emplace_back(from, to, cost, id);
-            }
+
+			int X = graph.find_parent(from);
+			int Y = graph.find_parent(to);
+
+			if (X != Y)
+			{
+				graph.unite(X, Y);
+				ans.emplace_back(from, to, cost, id);
+			}
 		}
 	}
 

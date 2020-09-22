@@ -87,8 +87,8 @@ struct pair_hash
 // End of hashing related templates
 
 // This function applies the Boruvka Step described by the Karger-Klein-Tarjan
-// paper. The idea of this step is to reduce the number of vertices of the graph.
-// It guarantees that the number of vertices after the step is <= N / 2.
+// paper. The idea of this step is to reduce the number of vertices of the
+// graph. It guarantees that the number of vertices after the step is <= N / 2.
 // It returns the reduced problem and the id's of the edges that were contracted
 // in the current step.
 // Assumptions: The graph P.graph_edges is connected.
@@ -118,9 +118,9 @@ pair<unordered_set<int>, problem> boruvka_step(problem P)
 	vector<vector<int>> component_graph(n);
 
 	int cost_for_used_edges = 0;
-    
-    // Building the component graph, a graph formed by each node and the
-    // edge incident to it that has the smallest cost
+
+	// Building the component graph, a graph formed by each node and the
+	// edge incident to it that has the smallest cost
 	for (int i = 0; i < n; ++i)
 	{
 		if (smallest_incident_edge[i] == -1) continue;
@@ -130,15 +130,15 @@ pair<unordered_set<int>, problem> boruvka_step(problem P)
 		component_graph[from].push_back(to);
 		component_graph[to].push_back(from);
 
-	    // watch out for overflow	
-        cost_for_used_edges += cost;
+		// watch out for overflow
+		cost_for_used_edges += cost;
 		used_edges.insert(get<3>(P.graph_edges[smallest_incident_edge[i]]));
 	}
-    
-    // Here a few important things are performed
-    // 1 - Removal of isolated super-nodes. As described by the KKT paper.
-    // 2 - If there are multiple edges between two supernodes, we will 
-    //     only store the cheapest one.
+
+	// Here a few important things are performed
+	// 1 - Removal of isolated super-nodes. As described by the KKT paper.
+	// 2 - If there are multiple edges between two supernodes, we will
+	//     only store the cheapest one.
 
 	int next_component_id = 0;
 	vector<int> super_node_id(n, -1);
@@ -175,9 +175,7 @@ pair<unordered_set<int>, problem> boruvka_step(problem P)
 	for (int i = 0; i < next_component_id; ++i)
 	{
 		if (super_node_degree[i] > 0)
-		{
-			super_node_new_id[i] = next_non_isolated_id++;
-		}
+		{ super_node_new_id[i] = next_non_isolated_id++; }
 	}
 
 	vector<tuple<int, int, int, int>> remaining_problem_edges;
@@ -238,7 +236,7 @@ problem remove_isolated_vertices(const problem& P)
 	}
 
 	int min_degree = *(min_element(degree.begin(), degree.end()));
-	if (min_degree > 0) return P; 
+	if (min_degree > 0) return P;
 
 	int next_id = 0;
 	vector<int> new_node_id(prev_size, -1);
@@ -261,7 +259,7 @@ problem remove_isolated_vertices(const problem& P)
 // It is a key part of the KKT algorithm and it is described on the paper.
 problem random_sampling(problem& P, unsigned int seed = 0)
 {
-    srand(seed);
+	srand(seed);
 	vector<tuple<int, int, int, int>> H;
 	for (const auto& E: P.graph_edges)
 	{
@@ -300,80 +298,68 @@ inline void print_problem(const problem& X)
 	cout << "]" << endl << endl;
 }
 
-vector< tuple<int, int, int, int> > get_mst_edges_from_problem(const unordered_set<int>& mst_id, const problem& P) {
-    vector< tuple<int, int, int, int> > MST;
-    for(const auto& idx : mst_id) {
-        MST.push_back(P.graph_edges[idx]);
-    }
-    return MST;
+vector<tuple<int, int, int, int>>
+	get_mst_edges_from_problem(const unordered_set<int>& mst_id,
+							   const problem& P)
+{
+	vector<tuple<int, int, int, int>> MST;
+	for (const auto& idx: mst_id) { MST.push_back(P.graph_edges[idx]); }
+	return MST;
 }
-
 
 // Performs the KKT algorithm, using the Hagerup verification proposal.
 unordered_set<int> kkt(problem& P, unsigned int seed)
 {
 	unordered_set<int> result;
-	if (P.graph_edges.empty())
-	{
-		return result;
-	}
+	if (P.graph_edges.empty()) { return result; }
 	// Apply Boruvka Step (twice)
 	auto boruvka_first = boruvka_step(problem(P.num_vertices, P.graph_edges));
 	for (const auto& val: boruvka_first.first) result.insert(val);
 	problem& reduced = boruvka_first.second;
 
 	if (reduced.graph_edges.empty() || reduced.num_vertices == 0)
-	{
-		return result;
-	}
-	
-    auto boruvka_second =
+	{ return result; }
+
+	auto boruvka_second =
 		boruvka_step(problem(reduced.num_vertices, reduced.graph_edges));
 	for (const auto& val: boruvka_second.first) result.insert(val);
 	if (boruvka_second.second.num_vertices == 0 ||
 		boruvka_second.second.graph_edges.empty())
-	{
-		return result;
-	}
-    
-    // G corresponds to the initial graph, after applying the boruvka_step twice
+	{ return result; }
+
+	// G corresponds to the initial graph, after applying the boruvka_step twice
 	problem G = boruvka_second.second;
-	
-    // H selects edge from G with edge probability = 1/2	
-    problem H = random_sampling(G, seed);
+
+	// H selects edge from G with edge probability = 1/2
+	problem H = random_sampling(G, seed);
 
 	unordered_set<int> kkt_h = kkt(H, seed);
-    
-    // KKT_H will return the indices of the minimum spanning forest edges.
+
+	// KKT_H will return the indices of the minimum spanning forest edges.
 	vector<tuple<int, int, int, int>> H_MSF;
 	for (const auto& E: G.graph_edges)
 	{
-		if (kkt_h.find(get<3>(E)) != kkt_h.end())
-		{
-			H_MSF.push_back(E);
-		}
+		if (kkt_h.find(get<3>(E)) != kkt_h.end()) { H_MSF.push_back(E); }
 	}
-    
-    // Given H_MST, we will now find all the edges from G that are H_MST-heavy.
-    // As described on the KKT paper.
+
+	// Given H_MST, we will now find all the edges from G that are H_MST-heavy.
+	// As described on the KKT paper.
 	auto G_heavy = verify_general_graph(G.graph_edges, H_MSF, G.num_vertices);
-    
-    // Now we are filtering only the edges from G that are not H_MST-heavy. 
+
+	// Now we are filtering only the edges from G that are not H_MST-heavy.
 	vector<tuple<int, int, int, int>> relevant_edges;
 	for (const auto& E: G.graph_edges)
 	{
 		if (G_heavy.find(get<3>(E)) == G_heavy.end())
 		{ relevant_edges.emplace_back(E); }
 	}
-    
 
 	problem P_G = problem(G.num_vertices, relevant_edges);
 	problem G_remaining = remove_isolated_vertices(P_G);
-    
-    // And now we apply kkt to the remaining graph in a recursive manner.
+
+	// And now we apply kkt to the remaining graph in a recursive manner.
 	unordered_set<int> g_res = kkt(G_remaining, seed);
 	for (const auto& val: g_res) result.insert(val);
 
 	return result;
 }
-

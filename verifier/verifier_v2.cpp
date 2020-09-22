@@ -58,13 +58,11 @@ std::ostream& operator<<(std::ostream& os, const std::tuple<T...>& tup)
 }
 // End of debugging macros and functions
 
-
 // This function reduces any tree graph to a full branching tree version of it.
-// Such reduction is made performing a strategy similar to the Boruvka algorithm.
-// It is guaranteed that the size of the generated full branching tree has at
-// most O(2 * n) vertices. 
-// Assumptions: We receive the edges of a proper Spanning Tree
-// Complexity: O(n)
+// Such reduction is made performing a strategy similar to the Boruvka
+// algorithm. It is guaranteed that the size of the generated full branching
+// tree has at most O(2 * n) vertices. Assumptions: We receive the edges of a
+// proper Spanning Tree Complexity: O(n)
 vector<tuple<int, int, int, int>>
 	fbt_reduction(const vector<tuple<int, int, int, int>>& edges,
 				  int total_nodes)
@@ -84,7 +82,7 @@ vector<tuple<int, int, int, int>>
 		unordered_map<int, int> cheapest_edge;
 
 		// Adjacency list for each component that is still active by the
-        // current iteration.
+		// current iteration.
 		unordered_map<int, vector<int>> current_graph;
 
 		for (int i = 0; i < total_edges; ++i)
@@ -100,13 +98,13 @@ vector<tuple<int, int, int, int>>
 				cheapest_edge[to] = i;
 		}
 
-	    // Storing the list of components that are still active by now	
+		// Storing the list of components that are still active by now
 		vector<int> component_list;
 		for (const auto& par: cheapest_edge)
 			component_list.push_back(par.first);
 
-	    // This loops construct the graph that takes into account only the
-        // current active components
+		// This loops construct the graph that takes into account only the
+		// current active components
 		for (const auto& par: cheapest_edge)
 		{
 			int from, to, cost;
@@ -116,12 +114,11 @@ vector<tuple<int, int, int, int>>
 		}
 
 		vector<int> new_component_ids;
-		unordered_map<int, int>
-			super_node_id;
+		unordered_map<int, int> super_node_id;
 
 		// This lambda functions explores the current graph.
-        // This is required, because next we will merge each
-        // of the connected components into a single new node
+		// This is required, because next we will merge each
+		// of the connected components into a single new node
 		function<void(int, int)> explore_cc = [&](int root, int parent) {
 			if (parent == -1)
 			{
@@ -140,25 +137,25 @@ vector<tuple<int, int, int, int>>
 			}
 		};
 
-        // Calling the explore_cc method for each node that is unexplored
+		// Calling the explore_cc method for each node that is unexplored
 		for (const auto& id: component_list)
 		{
 			if (super_node_id.count(id) == 0) explore_cc(id, -1);
 		}
 
-        // Connecting each of the nodes of the current step to it's
-        // corresponding super_node.
+		// Connecting each of the nodes of the current step to it's
+		// corresponding super_node.
 		for (const auto& par: cheapest_edge)
 		{
 			int super_node_cc = super_node_id[par.first];
 			new_edges.emplace_back(par.first, super_node_cc,
 								   get<2>(active_edges[par.second]));
-		}	
+		}
 
 		vector<tuple<int, int, int, int>> relevant_edges;
-		// We are now removing self-loops and changing the 
-        // endpoints edges, so as to reflect that collapse
-        // of several nodes into a single super_node
+		// We are now removing self-loops and changing the
+		// endpoints edges, so as to reflect that collapse
+		// of several nodes into a single super_node
 		for (const auto& e: active_edges)
 		{
 			int from, to, cost, id;
@@ -170,13 +167,13 @@ vector<tuple<int, int, int, int>>
 			}
 		}
 		// Updating the active edges, total number of edges
-        // and the number of connected components
+		// and the number of connected components
 		active_edges = relevant_edges;
 		total_edges = static_cast<int>(active_edges.size());
 		graph_cc = static_cast<int>(new_component_ids.size());
 	}
 
-	// Returning edges of the generated full-branching tree 
+	// Returning edges of the generated full-branching tree
 	return new_edges;
 }
 
@@ -190,7 +187,7 @@ vector<tuple<int, int, int, int>>
 // Assumptions: It received a full-branching-tree in the format specified
 // on the paper. And it receives multiple tree_path_maxima queries, where
 // query i is defined by (lower[i], upper[i]).
-// 
+//
 // Complexity: O(n + m)
 struct tree_path_maxima
 {
@@ -350,9 +347,9 @@ struct test_graph
 			max_id = max(max(a, b) + 1, max_id);
 		}
 		// total_nodes is different than n, because it represents
-        // the total number of nodes on the full-branching tree
+		// the total number of nodes on the full-branching tree
 		total_nodes = max_id;
-		
+
 		int N = total_nodes;
 
 		vector<vector<pair<int, int>>> adj_list(max_id);
@@ -372,8 +369,8 @@ struct test_graph
 		}
 
 		// This function performs the dfs on the full-branching-tree
-        // graph and also converts the graph to a format that is
-        // compatible with the tree_path_maxima call.
+		// graph and also converts the graph to a format that is
+		// compatible with the tree_path_maxima call.
 		function<void(int, int)> dfs_lca = [&](int node, int parent) {
 			vector<int> kids;
 			for (const auto& edge: adj_list[node])
@@ -395,18 +392,17 @@ struct test_graph
 			for (int i = 0; i < static_cast<int>(kids.size()) - 1; ++i)
 			{ sibling[kids[i]] = kids[i + 1]; }
 		};
-		
+
 		dfs_lca(root, -1);
-		
+
 		// This structure perform the required LCA precomputations in O(n + m),
-        // in order to answer LCA queries in O(1) time
+		// in order to answer LCA queries in O(1) time
 		lca = LCA(N, adj, root);
-		
 	}
 
 	// This functions return all the F-heavy edges of a graph taking into
 	// account the weights of some spanning tree, this is precisely
-	// explained on the Karger-Klein-Tarjan' 1995 paper. 
+	// explained on the Karger-Klein-Tarjan' 1995 paper.
 	unordered_set<int> compute_heavy_edges()
 	{
 		vector<int> gabarito, upper, lower, corresponding_edge;
@@ -418,10 +414,10 @@ struct test_graph
 		{
 			int src, to, cost;
 			tie(src, to, cost, ignore) = G[i];
-			
+
 			// Every query of the form (u, v) has to be
-            // split into (u, lca(u, v)), (v, lca(u, v)). This is a 
-            // requisite for the tree_path_maxima algorithm.
+			// split into (u, lca(u, v)), (v, lca(u, v)). This is a
+			// requisite for the tree_path_maxima algorithm.
 			int anc = lca.query(src, to);
 			pair<int, int> qry = {-1, -1};
 			if (anc != src)
@@ -460,10 +456,9 @@ struct test_graph
 		for (const auto& qry: decomposed_query)
 		{
 			int id_fst = qry.first, id_snd = qry.second;
-			int edge_cost =
-				gabarito[id_fst];
+			int edge_cost = gabarito[id_fst];
 			int heavy_combine = max(weight[sol[id_fst]], weight[sol[id_snd]]);
-			
+
 			// Inserting new edge id into the heavy-edge set
 			if (heavy_combine < edge_cost)
 			{
@@ -496,9 +491,7 @@ unordered_set<int>
 
 	// This is the case in which the forest that we receive is actually a tree.
 	if (static_cast<int>(general_graph.size()) == n - 1)
-	{
-		return verify_mst(graph, general_graph, n);
-	}
+	{ return verify_mst(graph, general_graph, n); }
 
 	// Given that the general graph is a forest of the graph, we will break it
 	// into several trees and perform the verification in each one of them.
@@ -547,7 +540,7 @@ unordered_set<int>
 	{
 		int from, to, cost, id;
 		tie(from, to, cost, id) = edg;
-		
+
 		if (connected_component_id[from] == connected_component_id[to])
 		{
 			spanning_tree[connected_component_id[from]].emplace_back(

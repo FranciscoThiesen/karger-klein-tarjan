@@ -43,9 +43,11 @@ vector<tuple<int, int, int, int>> _prim(const vector<vector<Edge>>& adj, int n)
 		q.erase(q.begin());
 
 		if (min_e[v].to != -1)
-		{ spanning_tree.emplace_back(min_e[v].to, v, min_e[v].w, min_e[v].id); }
+		{
+			spanning_tree.emplace_back(min_e[v].to, v, min_e[v].w, min_e[v].id);
+		}
 
-		for (Edge e : adj[v])
+		for (Edge e: adj[v])
 		{
 			if (!selected[e.to] && e.w < min_e[e.to].w)
 			{
@@ -58,8 +60,8 @@ vector<tuple<int, int, int, int>> _prim(const vector<vector<Edge>>& adj, int n)
 	return spanning_tree;
 }
 
-vector<tuple<int, int, int, int>> prim(const vector<tuple<int, int, int, int>>& edges,
-								  int n)
+vector<tuple<int, int, int, int>>
+	prim(const vector<tuple<int, int, int, int>>& edges, int n)
 {
 	vector<vector<Edge>> adj(n);
 	for (const auto& e: edges)

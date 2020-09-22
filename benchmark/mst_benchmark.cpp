@@ -7,45 +7,44 @@
 #include "../prim/prim.hpp"
 #include <cmath>
 
-static void bm_boruvka(benchmark::State& state) {
-    auto G = build_random_connected_graph(state.range(0), state.range(1));
-    for(auto _ : state) {
-        benchmark::DoNotOptimize(boruvka(G, state.range(0)));
-    }
-    state.SetComplexityN(state.range(0) + state.range(1));
+static void bm_boruvka(benchmark::State& state)
+{
+	auto G = build_random_connected_graph(state.range(0), state.range(1));
+	for (auto _: state)
+	{ benchmark::DoNotOptimize(boruvka(G, state.range(0))); }
+	state.SetComplexityN(state.range(0) + state.range(1));
 }
 
-static void bm_kkt(benchmark::State& state) {
-    auto G = build_random_connected_graph(state.range(0), state.range(1));
-    auto P = problem(state.range(0), G);
-    for(auto _ : state) {
-        benchmark::DoNotOptimize(kkt(P));
-    }
-    state.SetComplexityN(state.range(0) + state.range(1));
+static void bm_kkt(benchmark::State& state)
+{
+	auto G = build_random_connected_graph(state.range(0), state.range(1));
+	auto P = problem(state.range(0), G);
+	for (auto _: state) { benchmark::DoNotOptimize(kkt(P)); }
+	state.SetComplexityN(state.range(0) + state.range(1));
 }
 
-static void bm_kruskal(benchmark::State& state) {
-    auto G = build_random_connected_graph(state.range(0), state.range(1));
-    for(auto _ : state) {
-        benchmark::DoNotOptimize(kruskal(G, state.range(0)));
-    }
-    state.SetComplexityN(state.range(0) + state.range(1));
+static void bm_kruskal(benchmark::State& state)
+{
+	auto G = build_random_connected_graph(state.range(0), state.range(1));
+	for (auto _: state)
+	{ benchmark::DoNotOptimize(kruskal(G, state.range(0))); }
+	state.SetComplexityN(state.range(0) + state.range(1));
 }
 
-static void bm_prim(benchmark::State& state) {
-    auto G = build_random_connected_graph(state.range(0), state.range(1));
-    for(auto _ : state) {
-        benchmark::DoNotOptimize(prim(G, state.range(0)));
-    }
-    state.SetComplexityN(state.range(0) + state.range(1));
+static void bm_prim(benchmark::State& state)
+{
+	auto G = build_random_connected_graph(state.range(0), state.range(1));
+	for (auto _: state) { benchmark::DoNotOptimize(prim(G, state.range(0))); }
+	state.SetComplexityN(state.range(0) + state.range(1));
 }
 
-static void CustomArguments(benchmark::internal::Benchmark* b) {
-    b->Args({10000, 1250000});
-    b->Args({10000, 2500000});
-    b->Args({10000, 5000000});
-    b->Args({10000, 10000000});
-    b->Args({10000, 20000000});
+static void CustomArguments(benchmark::internal::Benchmark* b)
+{
+	b->Args({10000, 1250000});
+	b->Args({10000, 2500000});
+	b->Args({10000, 5000000});
+	b->Args({10000, 10000000});
+	b->Args({10000, 20000000});
 }
 
 BENCHMARK(bm_boruvka)->Apply(CustomArguments)->Complexity();

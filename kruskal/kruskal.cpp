@@ -8,8 +8,8 @@
 
 using namespace std;
 
-vector<tuple<int, int, int, int>> kruskal(const vector<tuple<int, int, int, int>>& graph_edges,
-									 int n)
+vector<tuple<int, int, int, int>>
+	kruskal(const vector<tuple<int, int, int, int>>& graph_edges, int n)
 {
 	UnionFind graph(n);
 	vector<tuple<int, int, int, int>> edges;
@@ -18,7 +18,8 @@ vector<tuple<int, int, int, int>> kruskal(const vector<tuple<int, int, int, int>
 	edges = graph_edges;
 
 	sort(edges.begin(), edges.end(),
-		 [&](const tuple<int, int, int, int>& a, const tuple<int, int, int, int>& b) {
+		 [&](const tuple<int, int, int, int>& a,
+			 const tuple<int, int, int, int>& b) {
 			 return get<2>(a) < get<2>(b);
 		 });
 

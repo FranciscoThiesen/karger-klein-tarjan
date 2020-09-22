@@ -35,8 +35,9 @@ vector<tuple<int, int, int, int>>
 	return spanning_tree;
 }
 
-vector<tuple<int, int, int, int>> build_random_connected_graph(int num_vertices,
-														  int num_edges, unsigned int seed)
+vector<tuple<int, int, int, int>>
+	build_random_connected_graph(int num_vertices, int num_edges,
+								 unsigned int seed)
 {
 	srand(seed);
 	assert(num_edges >= (num_vertices - 1));
@@ -52,11 +53,11 @@ vector<tuple<int, int, int, int>> build_random_connected_graph(int num_vertices,
 	vector<tuple<int, int, int, int>> random_graph;
 	int nxt = 0;
 	set<pair<int, int>> edges;
-    
+
 	for (int i = 0; i < num_vertices - 1; ++i)
 	{
 		random_graph.emplace_back(i, i + 1, W[nxt], nxt);
-        ++nxt;
+		++nxt;
 		edges.emplace(i, i + 1);
 	}
 
@@ -74,11 +75,9 @@ vector<tuple<int, int, int, int>> build_random_connected_graph(int num_vertices,
 			if (a > b) swap(a, b);
 		}
 		random_graph.emplace_back(a, b, W[nxt], nxt);
-        ++nxt;
+		++nxt;
 		edges.emplace(a, b);
 	}
 	assert(static_cast<int>(random_graph.size()) == num_edges);
 	return random_graph;
 }
-
-
