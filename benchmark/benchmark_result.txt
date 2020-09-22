@@ -1,0 +1,38 @@
+Run on (4 X 1800 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x2)
+  L1 Instruction 32 KiB (x2)
+  L2 Unified 256 KiB (x2)
+  L3 Unified 3072 KiB (x1)
+Load Average: 2.67, 3.04, 3.43
+--------------------------------------------------------------------
+Benchmark                          Time             CPU   Iterations
+--------------------------------------------------------------------
+bm_boruvka/10000/1250000   112812997 ns    107026667 ns            6
+bm_boruvka/10000/2500000   476104841 ns    335252500 ns            2
+bm_boruvka/10000/5000000   386507383 ns    385897500 ns            2
+bm_boruvka/10000/10000000 1093499487 ns   1065545000 ns            1
+bm_boruvka/10000/20000000 2267219934 ns   2205997000 ns            1
+bm_boruvka_BigO                 4.67 NlgN       4.52 NlgN
+bm_boruvka_RMS                    14 %             8 %
+bm_kkt/10000/1250000      2390859693 ns   2349635000 ns            1
+bm_kkt/10000/2500000      6121601931 ns   5402627000 ns            1
+bm_kkt/10000/5000000      14439639388 ns   11672843000 ns            1
+bm_kkt/10000/10000000     24511124937 ns   22823183000 ns            1
+bm_kkt/10000/20000000     46079279988 ns   45423793000 ns            1
+bm_kkt_BigO                  2357.85 N       2272.15 N
+bm_kkt_RMS                         7 %             2 %
+bm_kruskal/10000/1250000   148066775 ns    145902800 ns            5
+bm_kruskal/10000/2500000   311809275 ns    305691000 ns            2
+bm_kruskal/10000/5000000   625207382 ns    621930000 ns            1
+bm_kruskal/10000/10000000 1369298067 ns   1364027000 ns            1
+bm_kruskal/10000/20000000 2895922720 ns   2878812000 ns            1
+bm_kruskal_BigO                 5.94 NlgN       5.90 NlgN
+bm_kruskal_RMS                     2 %             2 %
+bm_prim/10000/1250000      172899655 ns    170785750 ns            4
+bm_prim/10000/2500000      285907010 ns    284413000 ns            3
+bm_prim/10000/5000000      548358336 ns    541855000 ns            1
+bm_prim/10000/10000000    1143797262 ns   1117153000 ns            1
+bm_prim/10000/20000000    3112637341 ns   2813013000 ns            1
+bm_prim_BigO                    6.08 NlgN       5.58 NlgN
+bm_prim_RMS                       15 %            10 %

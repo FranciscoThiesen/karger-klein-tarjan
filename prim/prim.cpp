@@ -45,7 +45,7 @@ vector<tuple<int, int, int, int>> _prim(const vector<vector<Edge>>& adj, int n)
 		if (min_e[v].to != -1)
 		{ spanning_tree.emplace_back(min_e[v].to, v, min_e[v].w, min_e[v].id); }
 
-		for (Edge e: adj[v])
+		for (Edge e : adj[v])
 		{
 			if (!selected[e.to] && e.w < min_e[e.to].w)
 			{
