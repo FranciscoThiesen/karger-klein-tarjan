@@ -3,12 +3,12 @@
 // ÚNICOS!!!!!
 
 #include "verifier_v2.hpp"
-#include "../boruvka/boruvka.hpp"
-#include "../graph_utils/graph_utils.hpp"
-#include "../kruskal/kruskal.hpp"
+// #include "../boruvka/boruvka.hpp"
+// #include "../graph_utils/graph_utils.hpp"
+// #include "../kruskal/kruskal.hpp"
 #include "../lca/lca.hpp"
-#include "../prim/prim.hpp"
-#include "../union_find/union_find.hpp"
+// #include "../prim/prim.hpp"
+// #include "../union_find/union_find.hpp"
 
 #include <cassert>
 #include <functional>

@@ -26,12 +26,7 @@ cc_library(
         "-std=c++17",
     ],
     deps = [
-        "//union_find:union_find",
-        "//boruvka:boruvka",
-        "//kruskal:kruskal",
-        "//prim:prim",
         "//lca:lca",
-        "//graph_utils:graph_utils",
     ],
     visibility = ["//visibility:public"],
 )
