@@ -44,6 +44,6 @@ All MST algorithms have been tested with random undirected connected graphs with
 The runtime complexity has been estimated automatically by using [google/benchmark](https://github.com/google/benchmark#asymptotic-complexity)
 
 ### Results
-1. The KKT implementation provided here is also linear in practice, please see the result file under the benchmark dir.
+1. The KKT implementation provided here is also linear in practive (in the datasets tested). This is corroborated by Google Benchmark results.
 2. All the other tested algorithms don't have linear complexity in theory and this is also true for the benchmark graph instances.
 3. The KKT algorithm still performed poorly compared to the other algorithms, because of it's huge constant factor.
