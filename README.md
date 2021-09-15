@@ -1,4 +1,7 @@
-## A C++ implementation of Karger-Klein-Tarjan Algorithm, using T. Hagerup mst verification algorithm as sub-routine.
+## A C++ implementation for an Expected Linear-Time Minimum Spanning Tree Algorithm(Karger-Klein-Tarjan + Hagerup Minimum Spanning Tree Verification as a sub-routine)
+
+This was the product of my CS undergraduate thesis. I was studying randomized algorithms and I couldn't find any reasonable implementation of Karger-Klein-Tarjan algorithm (at least a public one), so I decided to implement it myself and make it public.
+
 
 The objectives of this projects are the following:
 
