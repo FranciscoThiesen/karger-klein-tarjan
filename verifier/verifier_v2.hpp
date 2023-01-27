@@ -16,7 +16,7 @@ using namespace std;
 // (from, to, cost, id) and a spanning tree for that graph.
 // Complexity: O(m + n)
 unordered_set<int>
-	verify_mst(const vector<tuple<int, int, int, int>>& graph,
+	verify_mst2(const vector<tuple<int, int, int, int>>& graph,
 			   const vector<tuple<int, int, int, int>>& spanning_tree, const int n);
 
 // Implementation of the minimum spanning forest verification. It computes all
@@ -26,7 +26,7 @@ unordered_set<int>
 // Assumptions: It receives a graph and a spanning forest of that graph,
 // following the edge convention of (from, to, cost, id).
 unordered_set<int>
-	verify_general_graph(const vector<tuple<int, int, int, int>>& graph,
+	verify2_general_graph(const vector<tuple<int, int, int, int>>& graph,
 						 const vector<tuple<int, int, int, int>>& general_graph,
 						 const int n);
 

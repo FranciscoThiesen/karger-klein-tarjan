@@ -344,7 +344,7 @@ unordered_set<int> kkt(problem& P, unsigned int seed)
 
 	// Given H_MST, we will now find all the edges from G that are H_MST-heavy.
 	// As described on the KKT paper.
-	auto G_heavy = verify_general_graph(G.graph_edges, H_MSF, G.num_vertices);
+	auto G_heavy = verify2_general_graph(G.graph_edges, H_MSF, G.num_vertices);
 
 	// Now we are filtering only the edges from G that are not H_MST-heavy.
 	vector<tuple<int, int, int, int>> relevant_edges;

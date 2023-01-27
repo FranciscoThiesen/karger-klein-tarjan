@@ -64,7 +64,7 @@ std::ostream& operator<<(std::ostream& os, const std::tuple<T...>& tup)
 // tree has at most O(2 * n) vertices. Assumptions: We receive the edges of a
 // proper Spanning Tree Complexity: O(n)
 vector<tuple<int, int, int, int>>
-	fbt_reduction(const vector<tuple<int, int, int, int>>& edges,
+	fbt_reduction2(const vector<tuple<int, int, int, int>>& edges,
 				  int total_nodes)
 {
 	vector<tuple<int, int, int, int>> active_edges = edges;
@@ -336,7 +336,7 @@ struct test_graph
 			   const int n)
 	{
 		mst = spanning_tree;
-		auto fbt_mst = fbt_reduction(mst, n);
+		auto fbt_mst = fbt_reduction2(mst, n);
 
 		G = edges;
 		int max_id = n;
@@ -471,7 +471,7 @@ struct test_graph
 };
 
 unordered_set<int>
-	verify_mst(const vector<tuple<int, int, int, int>>& graph,
+	verify2_mst(const vector<tuple<int, int, int, int>>& graph,
 			   const vector<tuple<int, int, int, int>>& spanning_tree,
 			   const int n)
 {
@@ -480,7 +480,7 @@ unordered_set<int>
 }
 
 unordered_set<int>
-	verify_general_graph(const vector<tuple<int, int, int, int>>& graph,
+	verify2_general_graph(const vector<tuple<int, int, int, int>>& graph,
 						 const vector<tuple<int, int, int, int>>& general_graph,
 						 const int n)
 {
@@ -491,7 +491,7 @@ unordered_set<int>
 
 	// This is the case in which the forest that we receive is actually a tree.
 	if (static_cast<int>(general_graph.size()) == n - 1)
-	{ return verify_mst(graph, general_graph, n); }
+	{ return verify2_mst(graph, general_graph, n); }
 
 	// Given that the general graph is a forest of the graph, we will break it
 	// into several trees and perform the verification in each one of them.
@@ -565,7 +565,7 @@ unordered_set<int>
 	for (int i = 0; i < next_id; ++i)
 	{
 		auto V =
-			verify_mst(subgraph[i], spanning_tree[i], next_id_by_component[i]);
+			verify2_mst(subgraph[i], spanning_tree[i], next_id_by_component[i]);
 		for (const auto& edg_id: V) { f_heavy_edges.insert(edg_id); }
 	}
 
