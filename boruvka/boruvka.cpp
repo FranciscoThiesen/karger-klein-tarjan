@@ -4,6 +4,7 @@
 #include <tuple>
 #include <unordered_set>
 #include <vector>
+#include <functional>
 
 using namespace std;
 
