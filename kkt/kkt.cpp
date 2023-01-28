@@ -93,7 +93,7 @@ struct pair_hash
 // in the current step.
 // Assumptions: The graph P.graph_edges is connected.
 // Complexity: O(n + m)
-pair<unordered_set<int>, problem> boruvka_step(problem P)
+pair<unordered_set<int>, problem> boruvka_step(const problem& P)
 {
 	int n = P.num_vertices;
 
