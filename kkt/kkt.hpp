@@ -10,17 +10,29 @@ using namespace std;
 
 struct problem {
     int num_vertices;
+    int max_edge_id;  // Maximum edge ID + 1, for vector<bool> sizing
     vector<Edge> graph_edges;
 
     problem(int nv = 0, vector<Edge> ge = vector<Edge>())
-        : num_vertices(nv), graph_edges(std::move(ge)) {}
+        : num_vertices(nv), max_edge_id(0), graph_edges(std::move(ge)) {
+        // Compute max_edge_id from edges
+        for (const Edge& e : graph_edges) {
+            if (e.id >= max_edge_id) max_edge_id = e.id + 1;
+        }
+    }
+
+    // Constructor with explicit max_edge_id (for internal use after contraction)
+    problem(int nv, vector<Edge> ge, int max_id)
+        : num_vertices(nv), max_edge_id(max_id), graph_edges(std::move(ge)) {}
 
     // Constructor from tuple vector for backwards compatibility
     problem(int nv, const vector<tuple<int, int, int, int>>& ge)
-        : num_vertices(nv) {
+        : num_vertices(nv), max_edge_id(0) {
         graph_edges.reserve(ge.size());
         for (const auto& e : ge) {
             graph_edges.emplace_back(e);
+            int id = std::get<3>(e);
+            if (id >= max_edge_id) max_edge_id = id + 1;
         }
     }
 

@@ -21,11 +21,12 @@ struct pair_hash {
 };
 
 // Boruvka Step: reduces the number of vertices by at least half
-// Returns: (edges selected for MST, reduced problem)
+// Returns: (edges selected for MST as bitvector, reduced problem)
 // Complexity: O(n + m)
-pair<unordered_set<int>, problem> boruvka_step(problem P)
+pair<vector<bool>, problem> boruvka_step(problem P)
 {
     int n = P.num_vertices;
+    int max_edge_id = P.max_edge_id;
     vector<int> smallest_incident_edge(n, -1);
     int total_edges = static_cast<int>(P.graph_edges.size());
 
@@ -42,7 +43,7 @@ pair<unordered_set<int>, problem> boruvka_step(problem P)
         }
     }
 
-    unordered_set<int> used_edges;
+    vector<bool> used_edges(max_edge_id, false);  // Bitvector indexed by edge ID
     vector<vector<int>> component_graph(n);
 
     // Build component graph from selected edges
@@ -51,7 +52,7 @@ pair<unordered_set<int>, problem> boruvka_step(problem P)
         const Edge& e = P.graph_edges[smallest_incident_edge[i]];
         component_graph[e.from].push_back(e.to);
         component_graph[e.to].push_back(e.from);
-        used_edges.insert(e.id);
+        used_edges[e.id] = true;
     }
 
     // Find connected components using iterative DFS (avoids std::function overhead)
@@ -109,7 +110,7 @@ pair<unordered_set<int>, problem> boruvka_step(problem P)
     unordered_map<pair<int, int>, int, pair_hash> minimal_edge;
     for (int i = 0; i < total_edges; ++i) {
         const Edge& e = P.graph_edges[i];
-        if (used_edges.count(e.id)) continue;
+        if (used_edges[e.id]) continue;  // Use bitvector lookup
         if (super_node_id[e.from] != super_node_id[e.to]) {
             int f = super_node_new_id[super_node_id[e.from]];
             int t = super_node_new_id[super_node_id[e.to]];
@@ -130,7 +131,7 @@ pair<unordered_set<int>, problem> boruvka_step(problem P)
         remaining_edges.emplace_back(key.first, key.second, e.cost, e.id);
     }
 
-    return {used_edges, problem(next_non_isolated_id, std::move(remaining_edges))};
+    return {used_edges, problem(next_non_isolated_id, std::move(remaining_edges), max_edge_id)};
 }
 
 // Remove isolated vertices from the graph
@@ -163,7 +164,7 @@ problem remove_isolated_vertices(const problem& P)
         new_edges.emplace_back(new_node_id[e.from], new_node_id[e.to], e.cost, e.id);
     }
 
-    return problem(next_id, std::move(new_edges));
+    return problem(next_id, std::move(new_edges), P.max_edge_id);
 }
 
 // Random sampling: select edges with probability 1/2
@@ -179,7 +180,7 @@ problem random_sampling(problem& P, unsigned int seed)
         }
     }
 
-    return remove_isolated_vertices(problem(P.num_vertices, std::move(H)));
+    return remove_isolated_vertices(problem(P.num_vertices, std::move(H), P.max_edge_id));
 }
 
 // Accumulate cost of edges in solution
@@ -207,31 +208,31 @@ vector<Edge> get_mst_edges_from_problem(const unordered_set<int>& mst_id, const 
     return MST;
 }
 
-// KKT algorithm using Hagerup verification
-unordered_set<int> kkt(problem& P, unsigned int seed)
+// Internal KKT implementation using bitvector for result tracking
+static void kkt_internal(problem& P, unsigned int seed, vector<bool>& result)
 {
-    unordered_set<int> result;
     if (P.graph_edges.empty()) {
-        return result;
+        return;
     }
 
     // Apply Boruvka Step twice
-    auto [edges1, reduced1] = boruvka_step(problem(P.num_vertices, P.graph_edges));
-    for (int id : edges1) {
-        result.insert(id);
+    auto [edges1, reduced1] = boruvka_step(problem(P.num_vertices, P.graph_edges, P.max_edge_id));
+    // Merge bitvector results using OR
+    for (int i = 0; i < P.max_edge_id; ++i) {
+        if (edges1[i]) result[i] = true;
     }
 
     if (reduced1.graph_edges.empty() || reduced1.num_vertices == 0) {
-        return result;
+        return;
     }
 
     auto [edges2, reduced2] = boruvka_step(std::move(reduced1));
-    for (int id : edges2) {
-        result.insert(id);
+    for (int i = 0; i < P.max_edge_id; ++i) {
+        if (edges2[i]) result[i] = true;
     }
 
     if (reduced2.num_vertices == 0 || reduced2.graph_edges.empty()) {
-        return result;
+        return;
     }
 
     problem G = std::move(reduced2);
@@ -240,13 +241,13 @@ unordered_set<int> kkt(problem& P, unsigned int seed)
     problem H = random_sampling(G, seed);
 
     // Recursive KKT on sampled graph
-    unordered_set<int> kkt_h = kkt(H, seed);
+    vector<bool> kkt_h_result(P.max_edge_id, false);
+    kkt_internal(H, seed, kkt_h_result);
 
     // Convert selected edges to tuple format for verifier
     vector<tuple<int, int, int, int>> H_MSF;
-    H_MSF.reserve(kkt_h.size());
     for (const Edge& e : G.graph_edges) {
-        if (kkt_h.count(e.id)) {
+        if (kkt_h_result[e.id]) {
             H_MSF.emplace_back(e.from, e.to, e.cost, e.id);
         }
     }
@@ -270,13 +271,29 @@ unordered_set<int> kkt(problem& P, unsigned int seed)
     }
 
     problem G_remaining = remove_isolated_vertices(
-        problem(G.num_vertices, std::move(relevant_edges)));
+        problem(G.num_vertices, std::move(relevant_edges), P.max_edge_id));
 
     // Recursive KKT on remaining graph
-    unordered_set<int> g_res = kkt(G_remaining, seed);
-    for (int id : g_res) {
-        result.insert(id);
+    kkt_internal(G_remaining, seed, result);
+}
+
+// KKT algorithm using Hagerup verification
+unordered_set<int> kkt(problem& P, unsigned int seed)
+{
+    if (P.graph_edges.empty()) {
+        return unordered_set<int>();
     }
 
+    // Use bitvector internally for efficient tracking
+    vector<bool> result_bitvec(P.max_edge_id, false);
+    kkt_internal(P, seed, result_bitvec);
+
+    // Convert to unordered_set for API compatibility
+    unordered_set<int> result;
+    for (int i = 0; i < P.max_edge_id; ++i) {
+        if (result_bitvec[i]) {
+            result.insert(i);
+        }
+    }
     return result;
 }
