@@ -2,8 +2,6 @@
 #include "../verifier/verifier_v2.hpp"
 #include <algorithm>
 #include <cassert>
-#include <functional>
-#include <iostream>
 #include <unordered_map>
 #include <unordered_set>
 #include <utility>
@@ -56,26 +54,35 @@ pair<unordered_set<int>, problem> boruvka_step(problem P)
         used_edges.insert(e.id);
     }
 
-    // Find connected components using DFS
+    // Find connected components using iterative DFS (avoids std::function overhead)
     int next_component_id = 0;
     vector<int> super_node_id(n, -1);
+    vector<pair<int, size_t>> dfs_stack;  // (node, neighbor_index)
+    dfs_stack.reserve(n);
 
-    function<void(int, int)> dfs = [&](int root, int parent) {
-        if (parent == -1) {
-            super_node_id[root] = next_component_id++;
-        } else {
-            super_node_id[root] = super_node_id[parent];
-        }
-        for (int viz : component_graph[root]) {
-            if (super_node_id[viz] == -1) {
-                dfs(viz, root);
+    for (int start = 0; start < n; ++start) {
+        if (super_node_id[start] != -1) continue;
+
+        super_node_id[start] = next_component_id++;
+        dfs_stack.emplace_back(start, 0);
+
+        while (!dfs_stack.empty()) {
+            auto& [node, idx] = dfs_stack.back();
+            const auto& neighbors = component_graph[node];
+
+            // Find next unvisited neighbor
+            while (idx < neighbors.size() && super_node_id[neighbors[idx]] != -1) {
+                ++idx;
             }
-        }
-    };
 
-    for (int i = 0; i < n; ++i) {
-        if (super_node_id[i] == -1) {
-            dfs(i, -1);
+            if (idx < neighbors.size()) {
+                int next = neighbors[idx];
+                ++idx;
+                super_node_id[next] = super_node_id[node];
+                dfs_stack.emplace_back(next, 0);
+            } else {
+                dfs_stack.pop_back();
+            }
         }
     }
 
