@@ -116,31 +116,41 @@ vector<tuple<int, int, int, int>>
 		vector<int> new_component_ids;
 		unordered_map<int, int> super_node_id;
 
-		// This lambda functions explores the current graph.
-		// This is required, because next we will merge each
-		// of the connected components into a single new node
-		function<void(int, int)> explore_cc = [&](int root, int parent) {
-			if (parent == -1)
-			{
-				int new_id = prox_node_id++;
-				new_component_ids.push_back(new_id);
-				super_node_id[root] = new_id;
-			}
-			else
-			{
-				super_node_id[root] = super_node_id[parent];
-			}
+		// Iterative DFS for connected components (avoids std::function overhead)
+		vector<pair<int, size_t>> dfs_stack;  // (node, neighbor_index)
 
-			for (const auto& viz: current_graph[root])
-			{
-				if (viz != parent) { explore_cc(viz, root); }
-			}
-		};
-
-		// Calling the explore_cc method for each node that is unexplored
-		for (const auto& id: component_list)
+		for (const auto& start_id: component_list)
 		{
-			if (super_node_id.count(id) == 0) explore_cc(id, -1);
+			if (super_node_id.count(start_id) != 0) continue;
+
+			int new_id = prox_node_id++;
+			new_component_ids.push_back(new_id);
+			super_node_id[start_id] = new_id;
+			dfs_stack.emplace_back(start_id, 0);
+
+			while (!dfs_stack.empty())
+			{
+				auto& [node, idx] = dfs_stack.back();
+				const auto& neighbors = current_graph[node];
+
+				// Find next unvisited neighbor
+				while (idx < neighbors.size() && super_node_id.count(neighbors[idx]) != 0)
+				{
+					++idx;
+				}
+
+				if (idx < neighbors.size())
+				{
+					int next = neighbors[idx];
+					++idx;
+					super_node_id[next] = super_node_id[node];
+					dfs_stack.emplace_back(next, 0);
+				}
+				else
+				{
+					dfs_stack.pop_back();
+				}
+			}
 		}
 
 		// Connecting each of the nodes of the current step to it's
@@ -369,32 +379,58 @@ struct test_graph
 			adj_list[b].emplace_back(a, c);
 		}
 
-		// This function performs the dfs on the full-branching-tree
-		// graph and also converts the graph to a format that is
-		// compatible with the tree_path_maxima call.
-		function<void(int, int)> dfs_lca = [&](int node, int parent) {
+		// Iterative DFS to convert graph to child/sibling format for tree_path_maxima
+		// (avoids std::function overhead)
+		struct DfsFrame {
+			int node;
+			int parent;
+			size_t edge_idx;
 			vector<int> kids;
-			for (const auto& edge: adj_list[node])
+		};
+		vector<DfsFrame> dfs_stack;
+		dfs_stack.push_back({root, -1, 0, {}});
+
+		while (!dfs_stack.empty())
+		{
+			DfsFrame& frame = dfs_stack.back();
+			const auto& edges = adj_list[frame.node];
+
+			// Find next unvisited child
+			bool found_child = false;
+			while (frame.edge_idx < edges.size())
 			{
-				int to = edge.first;
-				int cost = edge.second;
-				if (to != parent)
+				int to = edges[frame.edge_idx].first;
+				int cost = edges[frame.edge_idx].second;
+				++frame.edge_idx;
+
+				if (to != frame.parent)
 				{
 					// Preparing the tree for the LCA
-					adj[node].push_back(to);
-					// End of preparation
-					kids.push_back(to);
+					adj[frame.node].push_back(to);
+					frame.kids.push_back(to);
 					weight[to] = cost;
-					dfs_lca(to, node);
+					// Push child onto stack for processing
+					dfs_stack.push_back({to, frame.node, 0, {}});
+					found_child = true;
+					break;
 				}
 			}
-			if (kids.empty()) return;
-			child[node] = kids[0];
-			for (int i = 0; i < static_cast<int>(kids.size()) - 1; ++i)
-			{ sibling[kids[i]] = kids[i + 1]; }
-		};
 
-		dfs_lca(root, -1);
+			// If no more children, do post-order work and pop
+			if (!found_child)
+			{
+				// Post-order: set up child/sibling relationships
+				if (!frame.kids.empty())
+				{
+					child[frame.node] = frame.kids[0];
+					for (size_t i = 0; i + 1 < frame.kids.size(); ++i)
+					{
+						sibling[frame.kids[i]] = frame.kids[i + 1];
+					}
+				}
+				dfs_stack.pop_back();
+			}
+		}
 
 		// This structure perform the required LCA precomputations in O(n + m),
 		// in order to answer LCA queries in O(1) time
@@ -508,20 +544,39 @@ unordered_set<int>
 		gg_adj_list[to].push_back(from);
 	}
 
-	function<void(int, int)> compute_cc = [&](int root, int parent) {
-		if (parent == -1) connected_component_id[root] = next_id++;
-		else
-			connected_component_id[root] = connected_component_id[parent];
+	// Iterative DFS for connected components (avoids std::function overhead)
+	vector<pair<int, size_t>> dfs_stack;  // (node, neighbor_index)
 
-		for (const auto& viz: gg_adj_list[root])
-		{
-			if (connected_component_id[viz] == -1) { compute_cc(viz, root); }
-		}
-	};
-
-	for (int i = 0; i < n; ++i)
+	for (int start = 0; start < n; ++start)
 	{
-		if (connected_component_id[i] == -1) { compute_cc(i, -1); }
+		if (connected_component_id[start] != -1) continue;
+
+		connected_component_id[start] = next_id++;
+		dfs_stack.emplace_back(start, 0);
+
+		while (!dfs_stack.empty())
+		{
+			auto& [node, idx] = dfs_stack.back();
+			const auto& neighbors = gg_adj_list[node];
+
+			// Find next unvisited neighbor
+			while (idx < neighbors.size() && connected_component_id[neighbors[idx]] != -1)
+			{
+				++idx;
+			}
+
+			if (idx < neighbors.size())
+			{
+				int next = neighbors[idx];
+				++idx;
+				connected_component_id[next] = connected_component_id[node];
+				dfs_stack.emplace_back(next, 0);
+			}
+			else
+			{
+				dfs_stack.pop_back();
+			}
+		}
 	}
 
 	vector<vector<int>> connected_components(next_id);
