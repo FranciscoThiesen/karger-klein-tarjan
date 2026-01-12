@@ -149,7 +149,8 @@ vector<tuple<int, int, int, int>>
 		{
 			int super_node_cc = super_node_id[par.first];
 			new_edges.emplace_back(par.first, super_node_cc,
-								   get<2>(active_edges[par.second]));
+								   get<2>(active_edges[par.second]),
+								   get<3>(active_edges[par.second]));
 		}
 
 		vector<tuple<int, int, int, int>> relevant_edges;
