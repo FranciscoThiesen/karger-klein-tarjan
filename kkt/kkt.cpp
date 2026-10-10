@@ -3,7 +3,6 @@
 #include "../verifier/verifier_v2.hpp"
 #include <algorithm>
 #include <cassert>
-#include <unordered_map>
 #include <unordered_set>
 #include <utility>
 #include <vector>
@@ -13,13 +12,6 @@ using namespace std;
 // Debugging macros
 #define TRACE(x)
 #define WATCH(x) TRACE(cout << #x " = " << x << endl)
-
-// Hash function for pair<int, int>
-struct pair_hash {
-    size_t operator()(const pair<int, int>& p) const {
-        return hash<long long>()(static_cast<long long>(p.first) << 32 | p.second);
-    }
-};
 
 // Boruvka Step: reduces the number of vertices by at least half
 // Returns: (selected edge IDs, reduced problem)
@@ -45,8 +37,15 @@ pair<vector<int>, problem> boruvka_step(const problem& P)
 
     vector<bool> used_edges(total_edges, false);  // Indexed within this subproblem
     vector<int> selected_edges;
-    selected_edges.reserve(n);
-    vector<vector<int>> component_graph(n);
+    selected_edges.reserve(min(n, total_edges));
+    vector<int> adjacency_head(n, -1), adjacency_to, adjacency_next;
+    adjacency_to.reserve(2 * selected_edges.capacity());
+    adjacency_next.reserve(2 * selected_edges.capacity());
+    auto add_arc = [&](int from, int to) {
+        adjacency_next.push_back(adjacency_head[from]);
+        adjacency_head[from] = static_cast<int>(adjacency_to.size());
+        adjacency_to.push_back(to);
+    };
 
     // Build component graph from selected edges
     for (int i = 0; i < n; ++i) {
@@ -56,38 +55,26 @@ pair<vector<int>, problem> boruvka_step(const problem& P)
         used_edges[edge_index] = true;
         const Edge& e = P.graph_edges[edge_index];
         selected_edges.push_back(e.id);
-        component_graph[e.from].push_back(e.to);
-        component_graph[e.to].push_back(e.from);
+        add_arc(e.from, e.to);
+        add_arc(e.to, e.from);
     }
 
-    // Find connected components using iterative DFS (avoids std::function overhead)
+    // Label components using a flat adjacency list and an iterative traversal.
     int next_component_id = 0;
-    vector<int> super_node_id(n, -1);
-    vector<pair<int, size_t>> dfs_stack;  // (node, neighbor_index)
+    vector<int> super_node_id(n, -1), dfs_stack;
     dfs_stack.reserve(n);
-
     for (int start = 0; start < n; ++start) {
         if (super_node_id[start] != -1) continue;
-
         super_node_id[start] = next_component_id++;
-        dfs_stack.emplace_back(start, 0);
-
+        dfs_stack.push_back(start);
         while (!dfs_stack.empty()) {
-            auto& [node, idx] = dfs_stack.back();
-            const auto& neighbors = component_graph[node];
-
-            // Find next unvisited neighbor
-            while (idx < neighbors.size() && super_node_id[neighbors[idx]] != -1) {
-                ++idx;
-            }
-
-            if (idx < neighbors.size()) {
-                int next = neighbors[idx];
-                ++idx;
+            const int node = dfs_stack.back();
+            dfs_stack.pop_back();
+            for (int arc = adjacency_head[node]; arc != -1; arc = adjacency_next[arc]) {
+                const int next = adjacency_to[arc];
+                if (super_node_id[next] != -1) continue;
                 super_node_id[next] = super_node_id[node];
-                dfs_stack.emplace_back(next, 0);
-            } else {
-                dfs_stack.pop_back();
+                dfs_stack.push_back(next);
             }
         }
     }
@@ -111,28 +98,38 @@ pair<vector<int>, problem> boruvka_step(const problem& P)
         }
     }
 
-    // Keep only cheapest edge between each pair of super-nodes
-    unordered_map<pair<int, int>, int, pair_hash> minimal_edge;
+    // Bucket crossing edges by their smaller endpoint. Stamping destinations
+    // within each bucket keeps only its cheapest edge in deterministic O(n+m)
+    // work, without hashing or clearing an n-sized array for every bucket.
+    vector<int> bucket_head(next_non_isolated_id, -1);
+    vector<int> bucket_next(total_edges, -1);
     for (int i = 0; i < total_edges; ++i) {
         const Edge& e = P.graph_edges[i];
-        if (super_node_id[e.from] != super_node_id[e.to]) {
-            int f = super_node_new_id[super_node_id[e.from]];
-            int t = super_node_new_id[super_node_id[e.to]];
-            if (f > t) swap(f, t);
-            auto key = make_pair(f, t);
-            if (minimal_edge.count(key) == 0 ||
-                e.cost < P.graph_edges[minimal_edge[key]].cost) {
-                minimal_edge[key] = i;
-            }
-        }
+        if (super_node_id[e.from] == super_node_id[e.to]) continue;
+        const int from = min(super_node_new_id[super_node_id[e.from]],
+                             super_node_new_id[super_node_id[e.to]]);
+        bucket_next[i] = bucket_head[from];
+        bucket_head[from] = i;
     }
 
-    // Build remaining problem edges
+    vector<int> seen_from(next_non_isolated_id, -1);
+    vector<int> output_index(next_non_isolated_id, -1);
     vector<Edge> remaining_edges;
-    remaining_edges.reserve(minimal_edge.size());
-    for (const auto& [key, idx] : minimal_edge) {
-        const Edge& e = P.graph_edges[idx];
-        remaining_edges.emplace_back(key.first, key.second, e.cost, e.id);
+    const long long max_pairs = 1LL * next_non_isolated_id * (next_non_isolated_id - 1) / 2;
+    remaining_edges.reserve(static_cast<size_t>(min<long long>(total_edges, max_pairs)));
+    for (int from = 0; from < next_non_isolated_id; ++from) {
+        for (int i = bucket_head[from]; i != -1; i = bucket_next[i]) {
+            const Edge& e = P.graph_edges[i];
+            const int to = max(super_node_new_id[super_node_id[e.from]],
+                               super_node_new_id[super_node_id[e.to]]);
+            if (seen_from[to] != from) {
+                seen_from[to] = from;
+                output_index[to] = static_cast<int>(remaining_edges.size());
+                remaining_edges.emplace_back(from, to, e.cost, e.id);
+            } else if (e.cost < remaining_edges[output_index[to]].cost) {
+                remaining_edges[output_index[to]] = Edge(from, to, e.cost, e.id);
+            }
+        }
     }
 
     return {std::move(selected_edges),

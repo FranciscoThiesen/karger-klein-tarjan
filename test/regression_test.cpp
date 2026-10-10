@@ -196,6 +196,56 @@ void test_disconnected_graphs() {
     check_id_layouts(graph, 103, "disconnected graph with isolated vertices");
 }
 
+void test_parallel_edges_after_contraction() {
+    Graph graph;
+    // Leave isolated vertices between groups, exercising supernode renumbering.
+    const auto vertex = [](int raw) { return raw + raw / 8; };
+    for (int pair = 0; pair < 16; ++pair) {
+        graph.emplace_back(vertex(pair * 2), vertex(pair * 2 + 1), pair + 1, 0);
+    }
+
+    const auto add_parallel = [&](int from_pair, int to_pair, int base, int offset) {
+        for (int i = 0; i < 8; ++i) {
+            int from = vertex(from_pair * 2 + (i & 1));
+            int to = vertex(to_pair * 2 + ((i >> 1) & 1));
+            if (i >= 4) std::swap(from, to);
+            // The minimum occurs at different positions in different buckets.
+            graph.emplace_back(from, to, base + (i + offset) % 8, 0);
+        }
+    };
+
+    // Cheap pair edges force the first contraction. This supernode tree has
+    // both many destinations for source 0 and a shared destination 15 across
+    // many sources, so deduplication must reset its per-source state correctly.
+    int tree_edge = 0;
+    for (int leaf = 1; leaf <= 7; ++leaf) {
+        add_parallel(0, leaf, 1000 + tree_edge * 100, tree_edge);
+        ++tree_edge;
+    }
+    for (int leaf = 8; leaf <= 14; ++leaf) {
+        add_parallel(leaf, 15, 1000 + tree_edge * 100, tree_edge);
+        ++tree_edge;
+    }
+    add_parallel(0, 15, 1000 + tree_edge * 100, tree_edge);
+
+    // Heavy chords fill every supernode pair. For tree pairs, the survivor's
+    // cost and original ID must both be replaced when a cheaper edge is found.
+    int chord = 0;
+    for (int from = 0; from < 16; ++from) {
+        for (int to = from + 1; to < 16; ++to) {
+            add_parallel(from, to, 100000 + chord * 100, chord);
+            ++chord;
+        }
+    }
+
+    check_id_layouts(graph, 36, "forced contraction parallel edges, ordered");
+    std::reverse(graph.begin(), graph.end());
+    check_id_layouts(graph, 36, "forced contraction parallel edges, reversed");
+    std::mt19937 rng(271828);
+    std::shuffle(graph.begin(), graph.end(), rng);
+    check_id_layouts(graph, 36, "forced contraction parallel edges, shuffled");
+}
+
 void test_median_tables() {
     for (int height = 0; height <= 20; ++height) {
         const auto table = verifier_detail::median_table(height);
@@ -359,6 +409,7 @@ int main() {
     run("recursive hierarchical paths", test_recursive_paths);
     run("deterministic random graphs", test_random_graphs);
     run("disconnected minimum spanning forests", test_disconnected_graphs);
+    run("parallel edges after forced contractions", test_parallel_edges_after_contraction);
     run("exhaustive upper-median tables through height 20", test_median_tables);
     run("forest heavy edges against direct path searches", test_forest_heavy_edges);
     run("sampling consumes a continuing reproducible stream", test_sampling_stream);
