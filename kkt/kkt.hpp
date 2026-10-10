@@ -52,7 +52,8 @@ vector<Edge> get_mst_edges_from_problem(const unordered_set<int>& mst_id, const 
 
 // KKT algorithm implementation. It returns a hash_set with all the MST edges
 // Assumptions: The graph of the problem is connected and undirected.
-// Complexity: O(n + m)
+// The seed initializes one private random stream for the entire invocation.
+// Expected complexity: O(n + m), assuming constant-time hash table operations.
 unordered_set<int> kkt(problem& P, unsigned int seed = 0);
 
 #endif

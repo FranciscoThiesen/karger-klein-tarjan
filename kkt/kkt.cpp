@@ -1,4 +1,5 @@
 #include "kkt.hpp"
+#include "random_sampling.hpp"
 #include "../verifier/verifier_v2.hpp"
 #include <algorithm>
 #include <cassert>
@@ -172,14 +173,13 @@ problem remove_isolated_vertices(const problem& P)
 }
 
 // Random sampling: select edges with probability 1/2
-problem random_sampling(problem& P, unsigned int seed)
+problem kkt_detail::random_sampling(const problem& P, std::mt19937& rng)
 {
-    srand(seed);
     vector<Edge> H;
     H.reserve(P.graph_edges.size() / 2);
 
     for (const Edge& e : P.graph_edges) {
-        if (rand() & 1) {
+        if (rng() & 1u) {
             H.push_back(e);
         }
     }
@@ -213,7 +213,7 @@ vector<Edge> get_mst_edges_from_problem(const unordered_set<int>& mst_id, const 
 }
 
 // Append only selected IDs; recursive work must scale with the current graph.
-static void kkt_internal(problem& P, unsigned int seed, vector<int>& result)
+static void kkt_internal(problem& P, std::mt19937& rng, vector<int>& result)
 {
     if (P.graph_edges.empty()) {
         return;
@@ -237,11 +237,11 @@ static void kkt_internal(problem& P, unsigned int seed, vector<int>& result)
     problem G = std::move(reduced2);
 
     // Random sampling
-    problem H = random_sampling(G, seed);
+    problem H = kkt_detail::random_sampling(G, rng);
 
     // Recursive KKT on sampled graph
     vector<int> kkt_h_result;
-    kkt_internal(H, seed, kkt_h_result);
+    kkt_internal(H, rng, kkt_h_result);
 
     // Membership storage is proportional to this sampled forest, not the ID range.
     unordered_set<int> sampled_ids(kkt_h_result.begin(), kkt_h_result.end());
@@ -278,7 +278,7 @@ static void kkt_internal(problem& P, unsigned int seed, vector<int>& result)
         problem(G.num_vertices, std::move(relevant_edges), P.max_edge_id));
 
     // Recursive KKT on remaining graph
-    kkt_internal(G_remaining, seed, result);
+    kkt_internal(G_remaining, rng, result);
 }
 
 // KKT algorithm using Hagerup verification
@@ -289,6 +289,7 @@ unordered_set<int> kkt(problem& P, unsigned int seed)
     }
 
     vector<int> selected_ids;
-    kkt_internal(P, seed, selected_ids);
+    std::mt19937 rng(seed);
+    kkt_internal(P, rng, selected_ids);
     return unordered_set<int>(selected_ids.begin(), selected_ids.end());
 }

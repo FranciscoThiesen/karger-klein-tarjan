@@ -1,11 +1,13 @@
 // Deterministic correctness regressions; no external test framework or timings.
 #include "../kkt/kkt.hpp"
+#include "../kkt/random_sampling.hpp"
 #include "../kruskal/kruskal.hpp"
 #include "../verifier/median_table.hpp"
 #include "../verifier/verifier_v2.hpp"
 
 #include <algorithm>
 #include <cstdint>
+#include <cstdlib>
 #include <iostream>
 #include <limits>
 #include <numeric>
@@ -288,6 +290,55 @@ void test_forest_heavy_edges() {
     check_forest_probes(forest, 58, "verifier disconnected forest and isolated vertices");
 }
 
+void test_sampling_stream() {
+    const problem input(256, with_ids(hierarchical_path(256), IdLayout::signed_extremes));
+    for (unsigned int seed : {0u, 42u, std::numeric_limits<unsigned int>::max()}) {
+        std::mt19937 actual_rng(seed);
+        std::mt19937 expected_rng(seed);
+        std::mt19937 replay_rng(seed);
+        for (int round = 0; round < 2; ++round) {
+            // Advance an independent engine exactly once per input edge.
+            // The second round deliberately continues from the first state.
+            EdgeIds expected;
+            for (const auto& edge : input.graph_edges) {
+                if ((expected_rng() & 1u) != 0) expected.insert(edge.id);
+            }
+            const auto sample = kkt_detail::random_sampling(input, actual_rng);
+            EdgeIds actual;
+            for (const auto& edge : sample.graph_edges) actual.insert(edge.id);
+            const std::string context = "sampling seed " + std::to_string(seed) +
+                                        ", round " + std::to_string(round);
+            require_same_ids(actual, expected, context);
+            require(actual_rng == expected_rng, context + ": wrong generator state");
+
+            const auto replay = kkt_detail::random_sampling(input, replay_rng);
+            require(sample.graph_edges == replay.graph_edges &&
+                        sample.num_vertices == replay.num_vertices &&
+                        sample.max_edge_id == replay.max_edge_id,
+                    context + ": seed replay changed the sample");
+        }
+    }
+}
+
+void test_global_random_state() {
+    const Graph graph = hierarchical_path(256);
+    const auto expected_ids = kruskal_ids(graph, 256);
+    problem input(256, graph);
+    std::vector<int> expected_random;
+    std::srand(918273);
+    for (int i = 0; i < 16; ++i) expected_random.push_back(std::rand());
+
+    for (unsigned int seed : {0u, 42u}) {
+        std::srand(918273);
+        require(std::rand() == expected_random[0], "C random replay failed");
+        // The hierarchical path survives two contractions, reaching sampling.
+        require_same_ids(kkt(input, seed), expected_ids, "KKT with independent RNG");
+        for (std::size_t i = 1; i < expected_random.size(); ++i) {
+            require(std::rand() == expected_random[i], "KKT changed global C random state");
+        }
+    }
+}
+
 }  // namespace
 
 int main() {
@@ -310,6 +361,8 @@ int main() {
     run("disconnected minimum spanning forests", test_disconnected_graphs);
     run("exhaustive upper-median tables through height 20", test_median_tables);
     run("forest heavy edges against direct path searches", test_forest_heavy_edges);
+    run("sampling consumes a continuing reproducible stream", test_sampling_stream);
+    run("KKT preserves global C random state", test_global_random_state);
     std::cout << passed << " passed, " << failed << " failed\n";
     return failed == 0 ? 0 : 1;
 }
