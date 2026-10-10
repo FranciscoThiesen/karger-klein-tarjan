@@ -7,6 +7,17 @@
 
 using namespace std;
 
+namespace verifier_detail {
+
+// Internal KKT exchange: one byte per edge of this graph, in input order.
+// A nonzero byte marks an F-heavy edge. Original edge IDs are opaque and
+// never used as array indices; edges between forest components stay light.
+vector<unsigned char> heavy_edge_marks(
+    const vector<tuple<int, int, int, int>>& graph,
+    const vector<tuple<int, int, int, int>>& forest, int n);
+
+}  // namespace verifier_detail
+
 // Implementation of the linear MST verification algorithm. It returns the indices
 // of all the edges from the graph that are F-heavy, following the concept of the
 // Karger-Klein-Tarjan paper. All the edges that are F-heavy can be discarded 

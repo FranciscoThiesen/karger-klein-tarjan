@@ -312,16 +312,15 @@ static void kkt_internal(problem& P, std::mt19937& rng, vector<int>& result)
         G_tuples.emplace_back(e.from, e.to, e.cost, e.id);
     }
 
-    auto G_heavy = verify_general_graph(G_tuples, H_MSF, G.num_vertices);
+    const auto heavy_marks = verifier_detail::heavy_edge_marks(G_tuples, H_MSF, G.num_vertices);
 
     // Filter out heavy edges
     vector<Edge> relevant_edges;
     relevant_edges.reserve(G.graph_edges.size());
     KKT_WORK_ADD(kkt_edge_visits, G.graph_edges.size());
-    KKT_WORK_ADD(hash_lookup_calls, G.graph_edges.size());
-    for (const Edge& e : G.graph_edges) {
-        if (G_heavy.count(e.id) == 0) {
-            relevant_edges.push_back(e);
+    for (size_t i = 0; i < G.graph_edges.size(); ++i) {
+        if (!heavy_marks[i]) {
+            relevant_edges.push_back(G.graph_edges[i]);
         }
     }
     KKT_WORK_ADD(filtered_edges, relevant_edges.size());

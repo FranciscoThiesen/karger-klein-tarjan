@@ -1,0 +1,74 @@
+{
+  "baseline_revision": "082043507ec58548aedb088f24a76ca27664a3cf",
+  "baseline_binary_sha256": "7dc0c628ad993dea1c64e656def1def889dc554386845dc032121beb0a32baf7",
+  "cpu": "Apple M3 Max",
+  "architecture": "arm64",
+  "ram_bytes": 137438953472,
+  "os": "ProductName:\t\tmacOS\nProductVersion:\t\t26.6.2\nBuildVersion:\t\t25G83",
+  "compiler": "Apple clang version 15.0.0 (clang-1500.3.9.4)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin",
+  "flags": "Make: -std=c++17 -O3 -Wall -Wextra -march=native, Apple SDK via xcrun; assertions enabled",
+  "timing_boundary": "Unchanged diverse_benchmark.cpp; tuple input conversion and temporary input destruction included, result validation and destruction excluded. All outputs match independently certified MST IDs.",
+  "execution": "Only one benchmark at a time, no concurrent builds/tests/plots. Ordinary desktop; no affinity or controlled power state.",
+  "harness_sha256": {
+    "benchmark/diverse_benchmark.cpp": "7704262a45cc5cd55af35333be9bbc3e4d71d0789664d0e7192928e7e5156654",
+    "benchmark/graph_fixtures.hpp": "6d94c080b66b6f2538cbaa1758e82d87de4af25ca1d496ec8b8fed50c41dc98d",
+    "benchmark/mst_certificate.hpp": "5e9c37e73c6a1bb78f1bfe5dca361abe9a4ddc4ea2e155a323989b6b34838495"
+  },
+  "runs": {
+    "baseline": {
+      "command": [
+        "/tmp/kkt-practical/base-bin/diverse_benchmark",
+        "--scale",
+        "--repetitions",
+        "4",
+        "--warmups",
+        "1"
+      ],
+      "binary_sha256": "7dc0c628ad993dea1c64e656def1def889dc554386845dc032121beb0a32baf7",
+      "started_utc": "2026-10-10T22:31:34.536123+00:00",
+      "exit_status": 0,
+      "wall_seconds_including_setup": 104.67950325,
+      "finished_utc": "2026-10-10T22:33:19.215456+00:00",
+      "peak_resident_set_bytes": 791576576
+    },
+    "mask": {
+      "command": [
+        "/tmp/kkt-practical/mask-bin/diverse_benchmark",
+        "--scale",
+        "--repetitions",
+        "4",
+        "--warmups",
+        "1"
+      ],
+      "binary_sha256": "bb6cc747a31b3a15634f0001fde93197e22d718a854de4ec9c8dac0f75360a35",
+      "started_utc": "2026-10-10T22:35:22.935069+00:00",
+      "exit_status": 0,
+      "wall_seconds_including_setup": 87.984110583,
+      "finished_utc": "2026-10-10T22:36:50.919224+00:00",
+      "peak_resident_set_bytes": 770277376
+    }
+  },
+  "stages": {
+    "mask": {
+      "description": "Graph-position heavy-edge marks replace internal hash-set exchange; public APIs unchanged.",
+      "source_sha256": {
+        "kkt/kkt.cpp": "29d93f7b99f593100ed93eb6a509ea4add469a8d4ea6473fc5c52f0c69b14a1a",
+        "kkt/kkt.hpp": "db6d56d7741a2edaea19b535bcb6a969ba29964aaefb7da21d8935c746771cc2",
+        "kkt/random_sampling.hpp": "96aef2e4c275d711ce77ee503ae7f88ba8a8baf07adcc547e19302001a96000e",
+        "verifier/verifier.cpp": "579e9f2c44373bbf0728b9781947169329c05a96b0f52e7c05e1f7ef2bd82735",
+        "verifier/verifier_v2.cpp": "30132cf362ddcde70ca70282b918fb48ddc9f377d0b680fb03841b5d44a7d95a",
+        "verifier/verifier_v2.hpp": "26596a1890e526bd909209717ce86d327229387280f4773c52655861e82ffe20",
+        "verifier/verifier.hpp": "f6d7778152bea28a94fcf306e31b9d075d17995011b4c963845dfb7be3af2e8f",
+        "verifier/median_table.hpp": "9aeb79481afe0e949347eb29045ad9f5dc6017d114fa7ce813e348adadfb382a",
+        "lca/lca.cpp": "d21ea8d45c76eb2b782c08afbe25394b7da25b862dea28ddd1499c14877a46ca",
+        "lca/lca.hpp": "69aac6fadf9f8310c7b8914de2d044cd2466b17464787a699919b987c1ee88f2",
+        "test/regression_test.cpp": "5e86854cc49efd373d1869b4268580f1c68f1d5f9cf4a894ba3f66dac417c5b7"
+      },
+      "validation": "All7 Bazeltesttargets pass; Make8simple13regression andcertificate pass."
+    }
+  },
+  "analysis_sha256": {
+    "benchmark/analyze_optimization.py": "08a3dfd0895536992f55b1c9dcf965a1e60a6488713567143283b4de34ecd45b"
+  },
+  "analysis_validation": "39/18-case identity, synthetic speedup/regression and8 malformedcampaignchecks passed; figuresvisuallyreviewed."
+}

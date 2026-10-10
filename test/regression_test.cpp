@@ -303,6 +303,26 @@ EdgeIds slow_heavy_edges(const Graph& graph, const Graph& forest, int n) {
     return heavy;
 }
 
+void check_heavy_marks(const Graph& graph, const Graph& forest, int n,
+                       const std::string& context) {
+    const Graph original_graph = graph, original_forest = forest;
+    const auto expected = slow_heavy_edges(graph, forest, n);
+    const auto marks = verifier_detail::heavy_edge_marks(graph, forest, n);
+    require(marks.size() == graph.size(), context + ": wrong mark count");
+    for (std::size_t i = 0; i < graph.size(); ++i) {
+        require(marks[i] <= 1, context + ": mark is not a boolean byte");
+        require((marks[i] != 0) == (expected.count(std::get<3>(graph[i])) != 0),
+                context + ": wrong mark at graph position " + std::to_string(i));
+    }
+    require_same_ids(verify_general_graph(graph, forest, n), expected,
+                     context + ": public forest ID adapter");
+    if (n > 0 && forest.size() == static_cast<std::size_t>(n - 1))
+        require_same_ids(verify_mst(graph, forest, n), expected,
+                         context + ": public tree ID adapter");
+    require(graph == original_graph && forest == original_forest,
+            context + ": verifier modified an input");
+}
+
 void check_forest_probes(Graph forest, int n, const std::string& context) {
     Graph graph = forest;
     // Probe the strict comparison immediately below, at, and above every
@@ -321,8 +341,32 @@ void check_forest_probes(Graph forest, int n, const std::string& context) {
     }
     graph = with_ids(std::move(graph), IdLayout::signed_extremes);
     std::copy_n(graph.begin(), forest.size(), forest.begin());
-    const auto expected = slow_heavy_edges(graph, forest, n);
-    require_same_ids(verify_general_graph(graph, forest, n), expected, context);
+    check_heavy_marks(graph, forest, n, context);
+}
+
+void test_heavy_edge_positions() {
+    const Graph forest{{0, 1, 4, 100}, {1, 2, 9, 101},
+                       {3, 4, 7, 102}, {6, 7, 11, 103}};
+    // Interleave component queries with edges that have no forest path.
+    // The last tree has no query; vertices 5 and 8 are isolated in the forest.
+    const Graph probes{{0, 2, 12, 0}, {0, 3, 1000, 0}, {3, 4, 8, 0},
+                       {1, 2, 9, 0}, {0, 1, 3, 0}, {3, 4, 7, 0},
+                       {0, 2, 8, 0}, {5, 8, 999, 0}, {2, 0, 10, 0}};
+    for (IdLayout layout : {IdLayout::dense, IdLayout::sparse, IdLayout::signed_extremes}) {
+        Graph graph = with_ids(probes, layout);
+        for (int order = 0; order < 3; ++order) {
+            const auto context = "position marks, layout " +
+                                 std::to_string(static_cast<int>(layout)) +
+                                 ", order " + std::to_string(order);
+            check_heavy_marks(graph, forest, 9, context);
+            check_heavy_marks(graph, {}, 9, context + ", empty forest");
+            std::reverse(graph.begin(), graph.end());
+            for (auto& edge : graph) std::swap(std::get<0>(edge), std::get<1>(edge));
+            if (order == 1) std::rotate(graph.begin(), graph.begin() + 3, graph.end());
+        }
+    }
+    check_heavy_marks({}, {}, 0, "empty graph position marks");
+    check_heavy_marks({}, forest, 9, "forest without query position marks");
 }
 
 void test_forest_heavy_edges() {
@@ -468,6 +512,7 @@ int main() {
     run("parallel edges after forced contractions", test_parallel_edges_after_contraction);
     run("exhaustive upper-median tables through height 20", test_median_tables);
     run("forest heavy edges against direct path searches", test_forest_heavy_edges);
+    run("heavy-edge positions preserve IDs and component mappings", test_heavy_edge_positions);
     run("verifier empty inputs and components without queries", test_verifier_empty_components);
     run("LCA queries outlive input adjacency", test_lca_adjacency_lifetime);
     run("sampling consumes a continuing reproducible stream", test_sampling_stream);

@@ -332,7 +332,7 @@ struct test_graph
 	// This functions return all the F-heavy edges of a graph taking into
 	// account the weights of some spanning tree, this is precisely
 	// explained on the Karger-Klein-Tarjan' 1995 paper.
-	unordered_set<int> compute_heavy_edges()
+	vector<unsigned char> compute_heavy_marks()
 	{
 		vector<int> gabarito, upper, lower, corresponding_edge;
 		int M = static_cast<int>(G.size());
@@ -382,7 +382,8 @@ struct test_graph
 		tree_path_maxima verifier =
 			tree_path_maxima(root, child, sibling, weight, upper, lower);
 		const vector<int>& sol = verifier.compute_answer();
-		unordered_set<int> f_heavy_edges;
+		vector<unsigned char> heavy_marks(G.size(), 0);
+		KKT_WORK_ADD(initialized_slots, heavy_marks.size());
 
 		KKT_WORK_ADD(verifier_edge_visits, decomposed_query.size());
 		for (const auto& qry: decomposed_query)
@@ -391,41 +392,71 @@ struct test_graph
 			int edge_cost = gabarito[id_fst];
 			int heavy_combine = max(weight[sol[id_fst]], weight[sol[id_snd]]);
 
-			// Inserting new edge id into the heavy-edge set
+			// Classification depends on endpoints and weights, never edge IDs.
 			if (heavy_combine < edge_cost)
 			{
-				int edge_id = get<3>(G[corresponding_edge[id_fst]]);
-				f_heavy_edges.insert(edge_id);
-				KKT_WORK_ADD(hash_insert_items, 1);
+				heavy_marks[corresponding_edge[id_fst]] = 1;
 			}
 		}
-		return f_heavy_edges;
+		return heavy_marks;
 	}
 };
+
+namespace {
+
+vector<unsigned char>
+	verify_tree_marks(const vector<tuple<int, int, int, int>>& graph,
+					  const vector<tuple<int, int, int, int>>& spanning_tree,
+					  const int n)
+{
+	if (n == 0 || graph.empty() || spanning_tree.empty()) {
+		KKT_WORK_ADD(initialized_slots, graph.size());
+		return vector<unsigned char>(graph.size(), 0);
+	}
+	KKT_WORK_ADD(verifier_tree_calls, 1);
+	KKT_WORK_ADD(verifier_tree_vertices, n);
+	KKT_WORK_ADD(verifier_tree_edges, graph.size());
+	auto verifier = test_graph(graph, spanning_tree, n);
+	return verifier.compute_heavy_marks();
+}
+
+unordered_set<int>
+	heavy_edge_ids(const vector<tuple<int, int, int, int>>& graph,
+				   const vector<unsigned char>& marks)
+{
+	unordered_set<int> result;
+	KKT_WORK_ADD(verifier_edge_visits, graph.size());
+	for (size_t i = 0; i < graph.size(); ++i) {
+		if (!marks[i]) continue;
+		result.insert(get<3>(graph[i]));
+		KKT_WORK_ADD(hash_insert_items, 1);
+	}
+	return result;
+}
+
+}  // namespace
 
 unordered_set<int>
 	verify_mst(const vector<tuple<int, int, int, int>>& graph,
 			   const vector<tuple<int, int, int, int>>& spanning_tree,
 			   const int n)
 {
-	if (n == 0 || graph.empty() || spanning_tree.empty()) return {};
-	KKT_WORK_ADD(verifier_tree_calls, 1);
-	KKT_WORK_ADD(verifier_tree_vertices, n);
-	KKT_WORK_ADD(verifier_tree_edges, graph.size());
-	auto verifier = test_graph(graph, spanning_tree, n);
-	return verifier.compute_heavy_edges();
+	return heavy_edge_ids(graph, verify_tree_marks(graph, spanning_tree, n));
 }
 
-unordered_set<int>
-	verify_general_graph(const vector<tuple<int, int, int, int>>& graph,
-						 const vector<tuple<int, int, int, int>>& general_graph,
-						 const int n)
+vector<unsigned char>
+	verifier_detail::heavy_edge_marks(const vector<tuple<int, int, int, int>>& graph,
+									 const vector<tuple<int, int, int, int>>& general_graph,
+									 const int n)
 {
 	KKT_WORK_ADD(verifier_calls, 1);
 	KKT_WORK_ADD(verifier_vertices, n);
 	KKT_WORK_ADD(verifier_edges, graph.size());
 	KKT_WORK_ADD(verifier_forest_edges, general_graph.size());
-	if (n == 0 || graph.empty() || general_graph.empty()) return {};
+	if (n == 0 || graph.empty() || general_graph.empty()) {
+		KKT_WORK_ADD(initialized_slots, graph.size());
+		return vector<unsigned char>(graph.size(), 0);
+	}
 	int total_number_of_edges = static_cast<int>(general_graph.size());
 
 	// Checking that the general_graph does not have too many edges.
@@ -435,7 +466,7 @@ unordered_set<int>
 	if (static_cast<int>(general_graph.size()) == n - 1)
 	{
 		KKT_WORK_ADD(verifier_components, 1);
-		return verify_mst(graph, general_graph, n);
+		return verify_tree_marks(graph, general_graph, n);
 	}
 
 	// Given that the general graph is a forest of the graph, we will break it
@@ -521,30 +552,44 @@ unordered_set<int>
 	}
 
 	KKT_WORK_ADD(verifier_edge_visits, graph.size());
-	for (const auto& edg: graph)
+	for (size_t position = 0; position < graph.size(); ++position)
 	{
-		int from, to, cost, id;
-		tie(from, to, cost, id) = edg;
+		int from, to, cost;
+		tie(from, to, cost, ignore) = graph[position];
 
 		if (connected_component_id[from] == connected_component_id[to])
 		{
+			// Component queries carry their parent graph position in the ID
+			// slot. The tree verifier only reads endpoints/weights when
+			// classifying an edge; the caller's original IDs remain in graph.
 			subgraph[connected_component_id[from]].emplace_back(
-				node_mapping[from], node_mapping[to], cost, id);
+				node_mapping[from], node_mapping[to], cost, static_cast<int>(position));
 			KKT_WORK_ADD(edge_materializations, 1);
 		}
 	}
 
-	unordered_set<int> f_heavy_edges;
+	vector<unsigned char> heavy_marks(graph.size(), 0);
+	KKT_WORK_ADD(initialized_slots, heavy_marks.size());
 
 	KKT_WORK_ADD(verifier_vertex_visits, next_id);
 	for (int i = 0; i < next_id; ++i)
 	{
 		if (subgraph[i].empty() || spanning_tree[i].empty()) continue;
-		auto V =
-			verify_mst(subgraph[i], spanning_tree[i], next_id_by_component[i]);
-		KKT_WORK_ADD(hash_insert_items, V.size());
-		for (const auto& edg_id: V) { f_heavy_edges.insert(edg_id); }
+		const auto component_marks =
+			verify_tree_marks(subgraph[i], spanning_tree[i], next_id_by_component[i]);
+		KKT_WORK_ADD(verifier_edge_visits, component_marks.size());
+		for (size_t j = 0; j < component_marks.size(); ++j) {
+			if (component_marks[j]) heavy_marks[get<3>(subgraph[i][j])] = 1;
+		}
 	}
 
-	return f_heavy_edges;
+	return heavy_marks;
+}
+
+unordered_set<int>
+	verify_general_graph(const vector<tuple<int, int, int, int>>& graph,
+						 const vector<tuple<int, int, int, int>>& general_graph,
+						 const int n)
+{
+	return heavy_edge_ids(graph, verifier_detail::heavy_edge_marks(graph, general_graph, n));
 }
