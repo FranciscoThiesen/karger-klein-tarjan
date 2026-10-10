@@ -110,6 +110,22 @@
       "wall_seconds_including_setup": 80.816593667,
       "finished_utc": "2026-10-10T22:54:26.416207+00:00",
       "peak_resident_set_bytes": 645496832
+    },
+    "minimum": {
+      "command": [
+        "/tmp/kkt-practical/minimum-bin/diverse_benchmark",
+        "--scale",
+        "--repetitions",
+        "4",
+        "--warmups",
+        "1"
+      ],
+      "binary_sha256": "a337cc7a8ab102013717377c6254a1d16b655097825e76442879b75dd8cf6b0d",
+      "started_utc": "2026-10-10T22:55:31.602362+00:00",
+      "exit_status": 0,
+      "wall_seconds_including_setup": 81.885883291,
+      "finished_utc": "2026-10-10T22:56:53.489269+00:00",
+      "peak_resident_set_bytes": 641581056
     }
   },
   "stages": {
@@ -178,7 +194,19 @@
         "kkt/kkt.cpp": "c5e073193c63881327af0da7cbf9ff2b2f3342d924c39be9baaa43ecbdb61277",
         "test/regression_test.cpp": "dda424d498b064e9bc3da4fcf7a723997b3d7da1be41ab7818afa5f0a3cc970b"
       },
-      "validation": "Make8simple15regression,210 contraction cases andcertificate pass. Three affected Bazel targets pass; compaction regressions check signed IDs, exact order, immutable inputs, zero vertices and empty sampling RNG."
+      "validation": "Make8simple15regression,210 contraction cases andcertificate pass. Three affected Bazel targets pass; compaction regressions check signed IDs, exact order, immutable inputs, zero vertices and empty sampling RNG.",
+      "commit": "ba39977"
+    },
+    "minimum": {
+      "description": "Cache minimum edge costs beside their indices to avoid dependent reads of earlier graph edges. Minimum state grows from4n to8n bytes; both scalar initialized fields counted.",
+      "source_sha256": {
+        "kkt/kkt.cpp": "5f509ba05fd9f252d818b20b45d926a3c89ccbf42335aef82b62f2e366dd41e9",
+        "test/contraction_test.cpp": "52dbb67d82e81fbde5f776b7cc4a81313d5a23591652d552b9db7067ea721bf8"
+      },
+      "validation": "Make8simple15regression,214 independent contraction cases andcertificate pass. Four affected Bazel targets pass; oracle includes INT_MIN/INT_MAX weights and preserves all edge/arc/vertex pass bounds.",
+      "status": "rejected",
+      "candidate_patch": "minimum_candidate.patch against ba39977",
+      "decision": "Insufficient consistent benefit to retain the doubled minimum-state storage; largest random32 case regressed6% with between-run drift. Retain all evidence, restore prior implementation. Keep new extreme-weight correctness cases using original initialization bound."
     }
   },
   "analysis_sha256": {

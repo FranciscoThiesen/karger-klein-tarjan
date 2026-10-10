@@ -130,6 +130,17 @@ int main() {
         check("empty", problem(0, Graph{}));
         check("isolated vertices", problem(9, Graph{}));
         check("mutual endpoint choice", problem(2, Graph{{0, 1, 7, std::numeric_limits<int>::max()}}));
+        const int lowest = std::numeric_limits<int>::min();
+        const int highest = std::numeric_limits<int>::max();
+        check("only INT_MAX-weight edge", problem(2, Graph{{0, 1, highest, -500}}));
+        check("only INT_MIN-weight edge", problem(2, Graph{{0, 1, lowest, 500}}));
+        check("INT_MAX minima and remaining edges", problem(6, Graph{
+            {0, 1, highest, 400}, {2, 3, highest, 401}, {4, 5, highest, 402},
+            {0, 2, highest, 403}, {2, 4, highest, 404}}));
+        check("replace extreme minima and preserve parallel ties", problem(6, Graph{
+            {0, 1, highest, 410}, {1, 0, lowest, 411}, {2, 3, -1, 412},
+            {4, 5, lowest + 1, 413}, {1, 2, highest, 414},
+            {0, 3, highest, 415}, {3, 4, highest - 1, 416}}));
         Graph star;
         for (int vertex = 0; vertex < 9; ++vertex)
             if (vertex != 5) star.emplace_back(5, vertex, 100 - 3 * vertex, -1000000000 + vertex);
@@ -161,7 +172,7 @@ int main() {
             if (trial % 3 == 0) input.max_edge_id = 0; // Legacy metadata is irrelevant.
             check("deterministic multigraph " + std::to_string(trial), input);
         }
-        std::cout << "PASS 210 contraction cases against independent partition/order oracle\n";
+        std::cout << "PASS 214 contraction cases against independent partition/order oracle\n";
     } catch (const std::exception& error) {
         std::cerr << "FAIL " << error.what() << '\n';
         return 1;

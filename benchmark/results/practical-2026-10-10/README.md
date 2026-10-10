@@ -144,6 +144,64 @@ reinforcing the need to treat close leads cautiously. The
 [competitor plot](sample_analysis/diverse_final_competition.png) retain the
 full comparison and descriptive graph ranges.
 
+## Stage 5: reuse temporary edge storage
+
+Vertex compaction now relabels sampled and filtered edges in their existing
+vectors. The non-consuming API preserves its input, and zero-vertex inputs
+return before a minimum-degree lookup. Exact compaction and empty-sampling
+regressions pass, alongside the Make suites and three affected Bazel targets.
+
+The [stage 5 report](owned_analysis/report.md) compares [stage 4](sample.csv)
+with [stage 5](owned.csv) under the same 39-case protocol: 5,616 validated timed
+outputs and 1,404 checked warmups per phase. KKT improves in **29/39 cases**;
+the 65,536-vertex `m=32n` case takes **89.0%** of stage 4 runtime. The largest
+observed gain is the small grid at 83.4%, but all three unchanged competitors
+also improve substantially there, so the run does not isolate a code-only
+benefit. All ten observed regressions are retained:
+
+| Case | Stage 5 / stage 4 runtime |
+| --- | ---: |
+| random_4_n1024 | 1.027x |
+| random_4_n4096 | 1.013x |
+| random_4_n16384 | 1.001x |
+| random_128_n1024 | 1.006x |
+| random_128_n4096 | 1.003x |
+| random_128_n16384 | 1.011x |
+| geometric_grid_n1024 | 1.016x |
+| hub_n1024 | 1.022x |
+| clustered_n1024 | 1.028x |
+| planted_tree_n1024 | 1.033x |
+
+The two larger hubs and the largest star remain below all competitors on every
+graph-level paired median. The small hub again leads by case-level paired
+ratios, but not on every graph; its earlier reversals remain a reason for
+caution. The largest `m=32n` case still takes **3.22x** Borůvka's runtime.
+The [before/after plot](owned_analysis/diverse_before_after.png) and
+[competitor plot](owned_analysis/diverse_final_competition.png) retain every
+case and descriptive graph range.
+
+## Rejected experiment: cached contraction minima
+
+Caching each vertex's minimum edge cost adds an integer array, about `4n` bytes
+per contraction on this build. The [complete experiment](minimum_analysis/report.md)
+compares [stage 5](owned.csv) with [the candidate](minimum.csv), retaining the
+same 5,616 timed observations and 1,404 checked warmups per phase. It improves
+27/39 paired case medians, mostly modestly, and regresses in 12. The largest
+`m=32n` case takes **1.060x** stage 5 runtime. The small grid takes 1.213x,
+but unchanged Kruskal takes 1.520x there; these observations do not establish
+that the cache caused either slowdown. The
+[before/after figure](minimum_analysis/diverse_before_after.png) and
+[competitor figure](minimum_analysis/diverse_final_competition.png) preserve
+every loss and the movement in unchanged controls.
+
+The extra storage does not show a compelling practical benefit in this run,
+so the candidate is **rejected** and archived as
+[minimum_candidate.patch](minimum_candidate.patch). Subsequent experiments
+start from stage 5, not this candidate. Four new contraction-oracle cases for
+`INT_MIN` and `INT_MAX` weights are retained, with the original `m+7n`
+initialized-slot bound; rejecting the optimization does not discard its useful
+boundary checks.
+
 The final large-instance campaign retains the complete 18-case matrix. It uses
 the earlier full 648-observation baseline after a source/protocol equivalence
 review, with a fresh final run of all four algorithms. The

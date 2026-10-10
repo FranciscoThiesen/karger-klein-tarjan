@@ -1,0 +1,116 @@
+diff --git a/kkt/kkt.cpp b/kkt/kkt.cpp
+index 0f0f76f..923fb24 100644
+--- a/kkt/kkt.cpp
++++ b/kkt/kkt.cpp
+@@ -20,25 +20,28 @@ using namespace std;
+ pair<vector<int>, problem> boruvka_step(const problem& P)
+ {
+     int n = P.num_vertices;
+-    vector<int> smallest_incident_edge(n, -1);
++    // Cache each minimum's weight beside its position, avoiding the
++    // dependent read of an earlier graph edge during every comparison.
++    struct MinimumIncidentEdge { int index, cost; };
++    vector<MinimumIncidentEdge> minimum(n, MinimumIncidentEdge{-1, 0});
+     int total_edges = static_cast<int>(P.graph_edges.size());
+     KKT_WORK_ADD(contraction_calls, 1);
+     KKT_WORK_ADD(contraction_vertices, n);
+     KKT_WORK_ADD(contraction_edges, total_edges);
+-    KKT_WORK_ADD(initialized_slots, n);
++    // Each initialized record contains two scalar fields. Count both so
++    // the work proxy exposes the extra initialization, not just n records.
++    KKT_WORK_ADD(initialized_slots, 2ULL * n);
+ 
+     // Find minimum incident edge for each vertex
+     KKT_WORK_ADD(contraction_edge_visits, total_edges);
+     for (int i = 0; i < total_edges; ++i) {
+         const Edge& e = P.graph_edges[i];
+-        if (smallest_incident_edge[e.from] == -1 ||
+-            e.cost < P.graph_edges[smallest_incident_edge[e.from]].cost) {
+-            smallest_incident_edge[e.from] = i;
+-        }
+-        if (smallest_incident_edge[e.to] == -1 ||
+-            e.cost < P.graph_edges[smallest_incident_edge[e.to]].cost) {
+-            smallest_incident_edge[e.to] = i;
+-        }
++        auto& from = minimum[e.from];
++        auto& to = minimum[e.to];
++        // The index sentinel admits a first edge even at cost INT_MAX.
++        // Strict comparison keeps the original first-in-input tie order.
++        if (from.index == -1 || e.cost < from.cost) from = {i, e.cost};
++        if (to.index == -1 || e.cost < to.cost) to = {i, e.cost};
+     }
+ 
+     vector<int> selected_edges;
+@@ -49,11 +52,11 @@ pair<vector<int>, problem> boruvka_step(const problem& P)
+     // This preserves selected-ID order without an m-sized duplicate bitmap.
+     KKT_WORK_ADD(contraction_vertex_visits, n);
+     for (int vertex = 0; vertex < n; ++vertex) {
+-        const int edge_index = smallest_incident_edge[vertex];
++        const int edge_index = minimum[vertex].index;
+         if (edge_index == -1) continue;
+         const Edge& edge = P.graph_edges[edge_index];
+         const int other = edge.from == vertex ? edge.to : edge.from;
+-        if (vertex <= other || smallest_incident_edge[other] != edge_index) {
++        if (vertex <= other || minimum[other].index != edge_index) {
+             selected_edges.push_back(edge.id);
+         }
+     }
+@@ -70,14 +73,14 @@ pair<vector<int>, problem> boruvka_step(const problem& P)
+     vector<int> super_node_id(n, unassigned);
+     KKT_WORK_ADD(initialized_slots, n);
+     const auto successor = [&](int vertex) {
+-        const Edge& edge = P.graph_edges[smallest_incident_edge[vertex]];
++        const Edge& edge = P.graph_edges[minimum[vertex].index];
+         return edge.from == vertex ? edge.to : edge.from;
+     };
+     int next_component_id = 0;
+     KKT_WORK_ADD(contraction_vertex_visits, n);
+     for (int start = 0; start < n; ++start) {
+         if (super_node_id[start] != unassigned) continue;
+-        if (smallest_incident_edge[start] == -1) {
++        if (minimum[start].index == -1) {
+             super_node_id[start] = next_component_id++;
+             continue;
+         }
+diff --git a/test/contraction_test.cpp b/test/contraction_test.cpp
+index 20b7ff4..0849ac7 100644
+--- a/test/contraction_test.cpp
++++ b/test/contraction_test.cpp
+@@ -111,7 +111,9 @@ void check(const std::string& name, const problem& input) {
+     require(stats.contraction_edge_visits <= 4 * m, name + ": too many edge visits");
+     require(stats.contraction_arc_visits <= 2 * n, name + ": successor walks revisit vertices");
+     require(stats.contraction_vertex_visits <= 6 * n, name + ": too many vertex visits");
+-    require(stats.initialized_slots <= m + 7 * n, name + ": redundant contraction storage");
++    // The cached minimum initializes index and cost separately in the
++    // counter: its extra n scalar fields raise the prior m+7n bound to m+8n.
++    require(stats.initialized_slots <= m + 8 * n, name + ": redundant contraction storage");
+ #else
+     actual = boruvka_step(input);
+ #endif
+@@ -130,6 +132,17 @@ int main() {
+         check("empty", problem(0, Graph{}));
+         check("isolated vertices", problem(9, Graph{}));
+         check("mutual endpoint choice", problem(2, Graph{{0, 1, 7, std::numeric_limits<int>::max()}}));
++        const int lowest = std::numeric_limits<int>::min();
++        const int highest = std::numeric_limits<int>::max();
++        check("only INT_MAX-weight edge", problem(2, Graph{{0, 1, highest, -500}}));
++        check("only INT_MIN-weight edge", problem(2, Graph{{0, 1, lowest, 500}}));
++        check("INT_MAX minima and remaining edges", problem(6, Graph{
++            {0, 1, highest, 400}, {2, 3, highest, 401}, {4, 5, highest, 402},
++            {0, 2, highest, 403}, {2, 4, highest, 404}}));
++        check("replace extreme minima and preserve parallel ties", problem(6, Graph{
++            {0, 1, highest, 410}, {1, 0, lowest, 411}, {2, 3, -1, 412},
++            {4, 5, lowest + 1, 413}, {1, 2, highest, 414},
++            {0, 3, highest, 415}, {3, 4, highest - 1, 416}}));
+         Graph star;
+         for (int vertex = 0; vertex < 9; ++vertex)
+             if (vertex != 5) star.emplace_back(5, vertex, 100 - 3 * vertex, -1000000000 + vertex);
+@@ -161,7 +174,7 @@ int main() {
+             if (trial % 3 == 0) input.max_edge_id = 0; // Legacy metadata is irrelevant.
+             check("deterministic multigraph " + std::to_string(trial), input);
+         }
+-        std::cout << "PASS 210 contraction cases against independent partition/order oracle\n";
++        std::cout << "PASS 214 contraction cases against independent partition/order oracle\n";
+     } catch (const std::exception& error) {
+         std::cerr << "FAIL " << error.what() << '\n';
+         return 1;
