@@ -136,6 +136,20 @@ TEST(complete_graph_4) {
     ASSERT_EQ(kkt_cost, kruskal_cost);
 }
 
+TEST(prim_and_kkt_in_same_binary) {
+    const vector<tuple<int, int, int, int>> edges = {
+        {0, 1, 7, 10}, {0, 2, 2, 11}, {0, 3, 9, 12},
+        {1, 2, 4, 13}, {1, 3, 1, 14}, {2, 3, 6, 15}
+    };
+    unordered_set<int> expected;
+    for (const auto& edge : kruskal(edges, 4)) expected.insert(get<3>(edge));
+    unordered_set<int> actual;
+    for (const auto& edge : prim(edges, 4)) actual.insert(get<3>(edge));
+    ASSERT_EQ(actual, expected);
+    problem input(4, edges);
+    ASSERT_EQ(kkt(input), expected);
+}
+
 TEST(random_small) {
     mt19937 rng(42);
     for (int trial = 0; trial < 10; ++trial) {
@@ -239,6 +253,7 @@ int main() {
     RUN_TEST(small_triangle);
     RUN_TEST(small_path);
     RUN_TEST(complete_graph_4);
+    RUN_TEST(prim_and_kkt_in_same_binary);
     RUN_TEST(random_small);
     RUN_TEST(random_medium);
     RUN_TEST(random_large);

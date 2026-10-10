@@ -9,6 +9,8 @@
 
 using namespace std;
 
+namespace {
+
 constexpr int INF = 0x3f3f3f3f;
 
 struct Edge
@@ -59,6 +61,8 @@ vector<tuple<int, int, int, int>> _prim(const vector<vector<Edge>>& adj, int n)
 	}
 	return spanning_tree;
 }
+
+}  // namespace
 
 vector<tuple<int, int, int, int>>
 	prim(const vector<tuple<int, int, int, int>>& edges, int n)
