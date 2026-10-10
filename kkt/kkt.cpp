@@ -41,54 +41,72 @@ pair<vector<int>, problem> boruvka_step(const problem& P)
         }
     }
 
-    vector<bool> used_edges(total_edges, false);  // Indexed within this subproblem
     vector<int> selected_edges;
     selected_edges.reserve(min(n, total_edges));
-    vector<int> adjacency_head(n, -1), adjacency_to, adjacency_next;
-    KKT_WORK_ADD(initialized_slots, static_cast<std::uint64_t>(total_edges) + n);
-    adjacency_to.reserve(2 * selected_edges.capacity());
-    adjacency_next.reserve(2 * selected_edges.capacity());
-    auto add_arc = [&](int from, int to) {
-        adjacency_next.push_back(adjacency_head[from]);
-        adjacency_head[from] = static_cast<int>(adjacency_to.size());
-        adjacency_to.push_back(to);
-    };
 
-    // Build component graph from selected edges
+    // Only an edge's endpoints can select it. If both do, the first endpoint
+    // in vertex order emits it; otherwise its sole selecting endpoint does.
+    // This preserves selected-ID order without an m-sized duplicate bitmap.
     KKT_WORK_ADD(contraction_vertex_visits, n);
-    for (int i = 0; i < n; ++i) {
-        if (smallest_incident_edge[i] == -1) continue;
-        int edge_index = smallest_incident_edge[i];
-        if (used_edges[edge_index]) continue;
-        used_edges[edge_index] = true;
-        const Edge& e = P.graph_edges[edge_index];
-        selected_edges.push_back(e.id);
-        add_arc(e.from, e.to);
-        add_arc(e.to, e.from);
+    for (int vertex = 0; vertex < n; ++vertex) {
+        const int edge_index = smallest_incident_edge[vertex];
+        if (edge_index == -1) continue;
+        const Edge& edge = P.graph_edges[edge_index];
+        const int other = edge.from == vertex ? edge.to : edge.from;
+        if (vertex <= other || smallest_incident_edge[other] != edge_index) {
+            selected_edges.push_back(edge.id);
+        }
     }
 
-    // Label components using a flat adjacency list and an iterative traversal.
-    int next_component_id = 0;
-    vector<int> super_node_id(n, -1), dfs_stack;
+    // Each non-isolated vertex points to its cheapest-edge neighbor. The
+    // weak components of this functional graph are exactly the components
+    // of the selected undirected edges; no adjacency lists are necessary.
+    // Mark a successor walk, then finalize the same walk with either an
+    // existing component ID or a new ID when it reaches its own cycle.
+    // Every vertex is marked and finalized once. Isolated vertices are
+    // singleton components. Ascending start vertices retain the previous
+    // numbering by each component's smallest original vertex.
+    const int unassigned = -n - 1;
+    vector<int> super_node_id(n, unassigned);
     KKT_WORK_ADD(initialized_slots, n);
-    dfs_stack.reserve(n);
+    const auto successor = [&](int vertex) {
+        const Edge& edge = P.graph_edges[smallest_incident_edge[vertex]];
+        return edge.from == vertex ? edge.to : edge.from;
+    };
+    int next_component_id = 0;
     KKT_WORK_ADD(contraction_vertex_visits, n);
     for (int start = 0; start < n; ++start) {
-        if (super_node_id[start] != -1) continue;
-        super_node_id[start] = next_component_id++;
-        dfs_stack.push_back(start);
-        while (!dfs_stack.empty()) {
-            const int node = dfs_stack.back();
-            dfs_stack.pop_back();
-            KKT_WORK_ADD(contraction_vertex_visits, 1);
-            for (int arc = adjacency_head[node]; arc != -1; arc = adjacency_next[arc]) {
-                KKT_WORK_ADD(contraction_arc_visits, 1);
-                const int next = adjacency_to[arc];
-                if (super_node_id[next] != -1) continue;
-                super_node_id[next] = super_node_id[node];
-                dfs_stack.push_back(next);
-            }
+        if (super_node_id[start] != unassigned) continue;
+        if (smallest_incident_edge[start] == -1) {
+            super_node_id[start] = next_component_id++;
+            continue;
         }
+        // Valid vertex indices are at most n-1, so this negative marker
+        // cannot equal -n-1 or any finalized nonnegative component ID.
+        const int marker = -start - 1;
+        int vertex = start;
+        while (super_node_id[vertex] == unassigned) {
+            KKT_WORK_ADD(contraction_vertex_visits, 1);
+            KKT_WORK_ADD(contraction_arc_visits, 1);
+            super_node_id[vertex] = marker;
+            vertex = successor(vertex);
+        }
+        assert(super_node_id[vertex] >= 0 || super_node_id[vertex] == marker);
+        const int component = super_node_id[vertex] >= 0
+            ? super_node_id[vertex] : next_component_id++;
+        vertex = start;
+        while (super_node_id[vertex] == marker) {
+            KKT_WORK_ADD(contraction_vertex_visits, 1);
+            KKT_WORK_ADD(contraction_arc_visits, 1);
+            super_node_id[vertex] = component;
+            vertex = successor(vertex);
+        }
+    }
+
+    // With at most one component every input edge is internal, including
+    // the empty-graph case. No edge bucketing or degree scan is needed.
+    if (next_component_id <= 1) {
+        return {std::move(selected_edges), problem(0, vector<Edge>{}, P.max_edge_id)};
     }
 
     // Count degrees of super-nodes to remove isolated ones

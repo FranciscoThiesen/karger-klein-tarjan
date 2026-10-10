@@ -69,6 +69,10 @@ $(BIN_DIR)/regression_runner: test/regression_test.cpp $(filter-out $(BUILD_DIR)
 	@mkdir -p $(BIN_DIR)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -I. $^ $(LDFLAGS) -o $@
 
+$(BIN_DIR)/contraction_runner: test/contraction_test.cpp $(filter-out $(BUILD_DIR)/prim/prim.o,$(OBJS))
+	@mkdir -p $(BIN_DIR)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -I. $^ $(LDFLAGS) -o $@
+
 $(BIN_DIR)/scaling_benchmark: benchmark/scaling_benchmark.cpp $(filter-out $(BUILD_DIR)/prim/prim.o,$(OBJS))
 	@mkdir -p $(BIN_DIR)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -I. $^ $(LDFLAGS) -o $@
@@ -90,9 +94,10 @@ $(BIN_DIR)/benchmark: benchmark/mst_benchmark.cpp $(OBJS)
 debug:
 	$(MAKE) CXXFLAGS="$(DEBUG_FLAGS)" BUILD_DIR="$(BUILD_DIR)/debug" BIN_DIR="$(BIN_DIR)/debug" all
 
-test: $(BIN_DIR)/test_runner $(BIN_DIR)/regression_runner $(BIN_DIR)/certificate_test
+test: $(BIN_DIR)/test_runner $(BIN_DIR)/regression_runner $(BIN_DIR)/contraction_runner $(BIN_DIR)/certificate_test
 	$(BIN_DIR)/test_runner
 	$(BIN_DIR)/regression_runner
+	$(BIN_DIR)/contraction_runner
 	$(BIN_DIR)/certificate_test
 
 clean:

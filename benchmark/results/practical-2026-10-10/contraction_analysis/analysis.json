@@ -1,0 +1,113 @@
+{
+  "aggregation": "Match by case, graph seed, KKT seed, repetition, and algorithm; divide final elapsed time by baseline elapsed time for each matched trial. Take the median over repetitions, then sampling seeds within each graph, then graph seeds. Final-run KKT/competitor ratios use the same hierarchy on contemporaneous four-algorithm trial blocks. Values below one favor final KKT for its before/after comparison or KKT versus its competitor. Graph ranges span three graph-level medians and are not confidence intervals.",
+  "suites": {
+    "diverse": {
+      "baseline_csv": {
+        "path": "../csr.csv",
+        "sha256": "52f2b44cb61576d8958d17b32331f616ee313ef27ef0996035b441848cfe2c83"
+      },
+      "final_csv": {
+        "path": "../contraction.csv",
+        "sha256": "94cef3daacb6a1b802c8ae178c91faf186ee85b7c23e949ec8f1bb11fbaf7cf9"
+      },
+      "case_count": 39,
+      "observations_per_phase": 5616,
+      "repetitions": 4,
+      "warmups": 1,
+      "kkt_faster_cases": [
+        "random_4_n4096",
+        "random_4_n16384",
+        "random_4_n65536",
+        "random_32_n4096",
+        "random_32_n16384",
+        "random_32_n65536",
+        "random_128_n1024",
+        "random_128_n4096",
+        "random_128_n16384",
+        "random_dense_anchor_n1000",
+        "grid_n1024",
+        "grid_n16384",
+        "geometric_grid_n1024",
+        "geometric_grid_n4096",
+        "geometric_grid_n16384",
+        "hub_n16384",
+        "clustered_n1024",
+        "planted_tree_n1024",
+        "planted_tree_n4096",
+        "planted_tree_n16384",
+        "random_tree_n1024",
+        "random_tree_n4096",
+        "random_tree_n16384",
+        "star_n1024",
+        "star_n4096",
+        "star_n16384",
+        "hierarchical_path_n1024",
+        "hierarchical_path_n16384",
+        "complete_n256"
+      ],
+      "kkt_regression_cases": [
+        "random_4_n1024",
+        "random_32_n1024",
+        "grid_n4096",
+        "hub_n1024",
+        "hub_n4096",
+        "clustered_n4096",
+        "clustered_n16384",
+        "hierarchical_path_n4096",
+        "complete_n512",
+        "complete_n1024"
+      ],
+      "kkt_equal_cases": [],
+      "kkt_change_ratio_range": [
+        0.7916213582363998,
+        1.0857784070876562
+      ],
+      "final_kkt_below_all_by_paired_medians": [
+        "hub_n1024",
+        "hub_n4096",
+        "hub_n16384",
+        "star_n16384"
+      ],
+      "final_kkt_below_all_on_every_graph": [
+        "hub_n1024",
+        "hub_n4096",
+        "hub_n16384",
+        "star_n16384"
+      ],
+      "final_fastest_by_runtime_median_counts": {
+        "kruskal": 21,
+        "boruvka": 13,
+        "kkt": 5
+      },
+      "control_timing_changes": {
+        "kruskal": {
+          "minimum_case_ratio": 0.8928554168497548,
+          "maximum_case_ratio": 1.1859457677117224,
+          "cases_outside_0_95_to_1_05": [
+            "random_4_n1024",
+            "hub_n1024",
+            "planted_tree_n1024"
+          ]
+        },
+        "prim": {
+          "minimum_case_ratio": 0.9547123246933092,
+          "maximum_case_ratio": 1.108191093882632,
+          "cases_outside_0_95_to_1_05": [
+            "random_4_n1024",
+            "hub_n1024",
+            "hierarchical_path_n1024"
+          ]
+        },
+        "boruvka": {
+          "minimum_case_ratio": 0.9594634507729347,
+          "maximum_case_ratio": 1.1190382906075325,
+          "cases_outside_0_95_to_1_05": [
+            "random_4_n1024",
+            "grid_n4096",
+            "hub_n1024"
+          ]
+        }
+      }
+    }
+  }
+}

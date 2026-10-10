@@ -62,6 +62,22 @@
       "wall_seconds_including_setup": 82.692661375,
       "finished_utc": "2026-10-10T22:42:46.098271+00:00",
       "peak_resident_set_bytes": 641236992
+    },
+    "contraction": {
+      "command": [
+        "/tmp/kkt-practical/contraction-bin/diverse_benchmark",
+        "--scale",
+        "--repetitions",
+        "4",
+        "--warmups",
+        "1"
+      ],
+      "binary_sha256": "f296249e4439921df0a5715fb925bc193181fff4eae90a9c539b82eab254dff0",
+      "started_utc": "2026-10-10T22:47:27.619454+00:00",
+      "exit_status": 0,
+      "wall_seconds_including_setup": 82.329627417,
+      "finished_utc": "2026-10-10T22:48:49.950080+00:00",
+      "peak_resident_set_bytes": 643989504
     }
   },
   "stages": {
@@ -100,7 +116,18 @@
         "test/complexity_test.cpp": "2a70e162c22dab2dd78a16ae80dbdf422f4bd9ad93d02b698b552a6ed0c31ed6"
       },
       "validation": "4 affected Bazel targets pass; Make8simple14regression groups andcertificate pass; independentancestor/zeroqueryoracle passes UBSan.",
-      "asan_limit": "AddressSanitizer runtime fails before main with sanitizer_malloc_mac.inc:189, also on empty-main control; no ASan validation claimed."
+      "asan_limit": "AddressSanitizer runtime fails before main with sanitizer_malloc_mac.inc:189, also on empty-main control; no ASan validation claimed.",
+      "commit": "2749ced"
+    },
+    "contraction": {
+      "description": "Cheapest-neighbor successor walks replace contraction adjacency lists and duplicate bitmap; skip edge scans after complete contraction.",
+      "source_sha256": {
+        "kkt/kkt.cpp": "cdb1d37322056b87412d4fb37205fac86f080b14606480f4b8fe79489f8b4920",
+        "test/contraction_test.cpp": "244bce760a39af6132fe259b813dbf133e180c92347e69123d459a6d69e8d43b",
+        "BUILD": "505864b04216a23625c032c7c7a1ca28b3400670a34bb26770140c5f40387987",
+        "Makefile": "c53d2c7745e74fc839fb92f6eb5612e357a8874983c65e599a95a22655e8ecd5"
+      },
+      "validation": "Make8simple14regression,210 independent contraction oracle cases andcertificate pass. Four affected Bazel targets pass, including instrumented linear-work contraction bounds."
     }
   },
   "analysis_sha256": {
