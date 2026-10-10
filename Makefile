@@ -26,7 +26,7 @@ HDRS = $(wildcard */*.hpp)
 
 .PHONY: all clean test benchmark debug
 
-all: $(BIN_DIR)/test_runner
+all: $(BIN_DIR)/test_runner $(BIN_DIR)/regression_runner
 
 # Benchmark (requires google benchmark library)
 benchmark: $(BIN_DIR)/benchmark
@@ -41,6 +41,10 @@ $(BIN_DIR)/test_runner: test/simple_test.cpp $(OBJS)
 	@mkdir -p $(BIN_DIR)
 	$(CXX) $(CXXFLAGS) -I. $^ -o $@
 
+$(BIN_DIR)/regression_runner: test/regression_test.cpp $(filter-out $(BUILD_DIR)/prim/prim.o,$(OBJS))
+	@mkdir -p $(BIN_DIR)
+	$(CXX) $(CXXFLAGS) -I. $^ -o $@
+
 # Benchmark
 $(BIN_DIR)/benchmark: benchmark/mst_benchmark.cpp $(OBJS)
 	@mkdir -p $(BIN_DIR)
@@ -50,8 +54,9 @@ $(BIN_DIR)/benchmark: benchmark/mst_benchmark.cpp $(OBJS)
 debug: CXXFLAGS = $(DEBUG_FLAGS)
 debug: clean $(BIN_DIR)/test_runner
 
-test: $(BIN_DIR)/test_runner
+test: $(BIN_DIR)/test_runner $(BIN_DIR)/regression_runner
 	./$(BIN_DIR)/test_runner
+	$(BIN_DIR)/regression_runner
 
 clean:
 	rm -rf $(BUILD_DIR) $(BIN_DIR)

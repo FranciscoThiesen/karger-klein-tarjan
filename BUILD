@@ -1,6 +1,16 @@
 load("@rules_cc//cc:defs.bzl", "cc_test")
 
 cc_test(
+    name = "regression_test",
+    srcs = ["test/regression_test.cpp"],
+    copts = ["-std=c++17"],
+    deps = [
+        "//kkt:kkt",
+        "//kruskal:kruskal",
+    ],
+)
+
+cc_test(
     name = "verifier_test",
     srcs = ["test/verifier_test.cpp"],
     deps = [
