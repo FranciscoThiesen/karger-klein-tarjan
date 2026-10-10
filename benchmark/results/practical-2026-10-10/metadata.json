@@ -46,6 +46,22 @@
       "wall_seconds_including_setup": 87.984110583,
       "finished_utc": "2026-10-10T22:36:50.919224+00:00",
       "peak_resident_set_bytes": 770277376
+    },
+    "csr": {
+      "command": [
+        "/tmp/kkt-practical/csr-bin/diverse_benchmark",
+        "--scale",
+        "--repetitions",
+        "4",
+        "--warmups",
+        "1"
+      ],
+      "binary_sha256": "44c3f8fc099803f4eda710facdc1cd13b0451ffb3c826e2f3564cae72adb4777",
+      "started_utc": "2026-10-10T22:41:23.356931+00:00",
+      "exit_status": 0,
+      "wall_seconds_including_setup": 82.692661375,
+      "finished_utc": "2026-10-10T22:42:46.098271+00:00",
+      "peak_resident_set_bytes": 641236992
     }
   },
   "stages": {
@@ -64,7 +80,27 @@
         "lca/lca.hpp": "69aac6fadf9f8310c7b8914de2d044cd2466b17464787a699919b987c1ee88f2",
         "test/regression_test.cpp": "5e86854cc49efd373d1869b4268580f1c68f1d5f9cf4a894ba3f66dac417c5b7"
       },
-      "validation": "All7 Bazeltesttargets pass; Make8simple13regression andcertificate pass."
+      "validation": "All7 Bazeltesttargets pass; Make8simple13regression andcertificate pass.",
+      "commit": "4eb3ca1"
+    },
+    "csr": {
+      "description": "Contiguous endpoint query ranges and direct graph-edge maxima replace linked query lists and duplicate metadata.",
+      "source_sha256": {
+        "kkt/kkt.cpp": "29d93f7b99f593100ed93eb6a509ea4add469a8d4ea6473fc5c52f0c69b14a1a",
+        "kkt/kkt.hpp": "db6d56d7741a2edaea19b535bcb6a969ba29964aaefb7da21d8935c746771cc2",
+        "kkt/random_sampling.hpp": "96aef2e4c275d711ce77ee503ae7f88ba8a8baf07adcc547e19302001a96000e",
+        "verifier/verifier.cpp": "579e9f2c44373bbf0728b9781947169329c05a96b0f52e7c05e1f7ef2bd82735",
+        "verifier/verifier_v2.cpp": "650b83b0ab1c29673bfcbcf5ac5c2fa3f386e4d349c715310418d2df68809a29",
+        "verifier/verifier_v2.hpp": "26596a1890e526bd909209717ce86d327229387280f4773c52655861e82ffe20",
+        "verifier/verifier.hpp": "f6d7778152bea28a94fcf306e31b9d075d17995011b4c963845dfb7be3af2e8f",
+        "verifier/median_table.hpp": "9aeb79481afe0e949347eb29045ad9f5dc6017d114fa7ce813e348adadfb382a",
+        "lca/lca.cpp": "d21ea8d45c76eb2b782c08afbe25394b7da25b862dea28ddd1499c14877a46ca",
+        "lca/lca.hpp": "69aac6fadf9f8310c7b8914de2d044cd2466b17464787a699919b987c1ee88f2",
+        "test/regression_test.cpp": "3765815aa05c949c93d85b657304c9c2e8d4c4b978aa2ed5c2f42393c623b61d",
+        "test/complexity_test.cpp": "2a70e162c22dab2dd78a16ae80dbdf422f4bd9ad93d02b698b552a6ed0c31ed6"
+      },
+      "validation": "4 affected Bazel targets pass; Make8simple14regression groups andcertificate pass; independentancestor/zeroqueryoracle passes UBSan.",
+      "asan_limit": "AddressSanitizer runtime fails before main with sanitizer_malloc_mac.inc:189, also on empty-main control; no ASan validation claimed."
     }
   },
   "analysis_sha256": {

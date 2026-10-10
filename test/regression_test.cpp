@@ -385,6 +385,55 @@ void test_forest_heavy_edges() {
     check_forest_probes(forest, 58, "verifier disconnected forest and isolated vertices");
 }
 
+void test_verifier_query_layout() {
+    const int lowest = std::numeric_limits<int>::lowest();
+    const Graph forest{{0, 1, lowest, 100}, {1, 2, -20, 101},
+                       {2, 3, -10, 102}, {4, 5, -30, 103}};
+    // Probe negative maxima, including an exact INT_MIN result, and retain
+    // equal-cost queries to check that only strictly heavier edges are marked.
+    Graph queries{{0, 1, lowest, 0}, {1, 0, lowest + 1, 1},
+                  {0, 2, -20, 2}, {2, 0, -21, 3},
+                  {3, 0, -9, 4}, {0, 3, -10, 5},
+                  {4, 5, -29, 6}, {5, 4, -30, 7},
+                  {2, 4, std::numeric_limits<int>::max(), 8}};
+    for (int order = 0; order < 3; ++order) {
+        check_heavy_marks(queries, forest, 8,
+                          "contiguous queries with negative costs, order " +
+                              std::to_string(order));
+        std::rotate(queries.begin(), queries.begin() + 2, queries.end());
+        for (auto& edge : queries) std::swap(std::get<0>(edge), std::get<1>(edge));
+    }
+
+    // Self-loops previously created no ancestor query and remained unmarked.
+    // Preserve that API behavior separately from the nonempty-path oracle.
+    const Graph loops{{0, 0, lowest, 20}, {1, 1, -11, 21},
+                      {3, 3, 0, 22}, {4, 4, 7, 23},
+                      {7, 7, std::numeric_limits<int>::max(), 24}};
+    const auto loop_marks = verifier_detail::heavy_edge_marks(loops, forest, 8);
+    require(loop_marks == std::vector<unsigned char>(loops.size(), 0),
+            "self-loop-only queries should remain unmarked");
+    require(verify_general_graph(loops, forest, 8).empty(),
+            "self-loop-only public forest adapter");
+    Graph mixed = queries;
+    mixed.insert(mixed.end(), loops.begin(), loops.end());
+    const auto mixed_marks = verifier_detail::heavy_edge_marks(mixed, forest, 8);
+    const auto query_marks = verifier_detail::heavy_edge_marks(queries, forest, 8);
+    require(mixed_marks.size() == mixed.size(), "mixed self-loop mark count");
+    require(std::equal(query_marks.begin(), query_marks.end(), mixed_marks.begin()),
+            "self-loop queries changed nonempty-path answers");
+    require(std::all_of(mixed_marks.begin() + queries.size(), mixed_marks.end(),
+                        [](unsigned char mark) { return mark == 0; }),
+            "mixed self-loop queries should remain unmarked");
+    require_same_ids(verify_general_graph(mixed, forest, 8),
+                     slow_heavy_edges(queries, forest, 8),
+                     "mixed self-loop public forest adapter");
+
+    const Graph tree(forest.begin(), forest.begin() + 3);
+    const Graph tree_loops(loops.begin(), loops.begin() + 3);
+    require(verify_mst(tree_loops, tree, 4).empty(),
+            "self-loop-only public tree adapter");
+}
+
 void test_verifier_empty_components() {
     for (int n : {0, 1}) {
         require(verify_mst({}, {}, n).empty(), "empty or singleton tree verification");
@@ -513,6 +562,7 @@ int main() {
     run("exhaustive upper-median tables through height 20", test_median_tables);
     run("forest heavy edges against direct path searches", test_forest_heavy_edges);
     run("heavy-edge positions preserve IDs and component mappings", test_heavy_edge_positions);
+    run("contiguous queries preserve negative, equal, and empty paths", test_verifier_query_layout);
     run("verifier empty inputs and components without queries", test_verifier_empty_components);
     run("LCA queries outlive input adjacency", test_lca_adjacency_lifetime);
     run("sampling consumes a continuing reproducible stream", test_sampling_stream);

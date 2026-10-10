@@ -58,7 +58,9 @@ void expect_local_bounds(const WorkStats& stats) {
     EXPECT_LE(stats.contraction_arc_visits, 2 * stats.contraction_vertices);
     EXPECT_LE(stats.sampled_edges, stats.sampling_edge_visits);
     EXPECT_LE(stats.verifier_queries, 2 * stats.verifier_tree_edges);
-    EXPECT_EQ(stats.path_query_visits, 3 * stats.verifier_queries);
+    // Count endpoints, scatter into their contiguous ranges, then traverse
+    // each query once during tree initialization and once while answering.
+    EXPECT_EQ(stats.path_query_visits, 4 * stats.verifier_queries);
     // Each full-branching round at least halves the active vertex count.
     EXPECT_LE(stats.fbt_round_vertices, 2 * stats.fbt_input_vertices);
     EXPECT_LE(stats.fbt_output_vertices, 2 * stats.fbt_input_vertices);

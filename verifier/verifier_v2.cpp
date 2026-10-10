@@ -14,6 +14,7 @@
 
 #include <cassert>
 #include <iostream>
+#include <limits>
 #include <numeric>
 #include <tuple>
 #include <utility>
@@ -177,31 +178,38 @@ vector<tuple<int, int, int, int>>
 // on the path from (a, b) on the tree! (This is why it is called the
 // tree-path-maxima problem)
 //
-// Assumptions: It received a full-branching-tree in the format specified
-// on the paper. And it receives multiple tree_path_maxima queries, where
-// query i is defined by (lower[i], upper[i]).
+// Queries are grouped by their lower endpoint in contiguous ranges. Each
+// record stores its upper endpoint and the graph edge whose path it probes.
+// Combining its one or two ancestor paths writes one maximum per graph edge.
+// As before, the tree is full-branching and every query upper endpoint is a
+// proper ancestor of the node whose range contains it.
 //
 // Complexity: O(n + m)
+struct path_query {
+	int upper, edge;
+};
+
 struct tree_path_maxima
 {
-	int height, n, m, root;
-	vector<int> depth, D, L, Lnext, answer, median, P;
-	const vector<int>& upper;
-	const vector<int>& lower;
+	int height, n, root;
+	vector<int> depth, D, maximum, median, P;
+	const vector<size_t>& query_offsets;
+	const vector<path_query>& queries;
 	const vector<int>& child;
 	const vector<int>& sibling;
 	const vector<int>& weight;
 
 	tree_path_maxima(int _root, const vector<int>& _child,
 					 const vector<int>& _sibling, const vector<int>& _weight,
-					 const vector<int>& _upper, const vector<int>& _lower)
+					 const vector<size_t>& _query_offsets,
+					 const vector<path_query>& _queries, size_t graph_edges)
 		: height(0), n(static_cast<int>(_child.size())),
-		  m(static_cast<int>(_upper.size())), root(_root),
-		  depth(n, 0), D(n, 0), L(n, 0), Lnext(m, 0), answer(m, 0),
-		  upper(_upper), lower(_lower), child(_child), sibling(_sibling),
-		  weight(_weight)
+		  root(_root), depth(n, 0), D(n, 0),
+		  maximum(graph_edges, numeric_limits<int>::lowest()),
+		  query_offsets(_query_offsets), queries(_queries), child(_child),
+		  sibling(_sibling), weight(_weight)
 	{
-		KKT_WORK_ADD(initialized_slots, 3ULL * n + 2ULL * m);
+		KKT_WORK_ADD(initialized_slots, 2ULL * n + graph_edges);
 	}
 
 	void init(int u, int d)
@@ -209,9 +217,9 @@ struct tree_path_maxima
 		KKT_WORK_ADD(path_init_vertices, 1);
 		depth[u] = d;
 		if (d > height) height = d;
-		for (int i = L[u]; i >= 0; i = Lnext[i]) {
+		for (size_t i = query_offsets[u]; i < query_offsets[u + 1]; ++i) {
 			KKT_WORK_ADD(path_query_visits, 1);
-			D[u] |= 1 << depth[upper[i]];
+			D[u] |= 1 << depth[queries[i].upper];
 		}
 		for (int v = child[u]; v >= 0; v = sibling[v])
 		{
@@ -241,33 +249,25 @@ struct tree_path_maxima
 		P[depth[v]] = v;
 		int k = binary_search(weight[v], down(D[v], S));
 		S = down(D[v], (S & ((1 << (k + 1)) - 1)) | (1 << depth[v]));
-		for (int i = L[v]; i >= 0; i = Lnext[i])
+		for (size_t i = query_offsets[v]; i < query_offsets[v + 1]; ++i)
 		{
 			KKT_WORK_ADD(path_query_visits, 1);
-			answer[i] = P[median[down(1 << depth[upper[i]], S)]];
+			const auto& query = queries[i];
+			const int node = P[median[down(1 << depth[query.upper], S)]];
+			maximum[query.edge] = max(maximum[query.edge], weight[node]);
 		}
 		for (int z = child[v]; z >= 0; z = sibling[z]) visit(z, S);
 	}
 
 	const vector<int>& compute_answer()
 	{
-		KKT_WORK_ADD(initialized_slots, 2ULL * n + m);
-		fill(L.begin(), L.end(), -1);
-		fill(Lnext.begin(), Lnext.end(), -1);
-		for (int i = 0; i < m; ++i)
-		{
-			KKT_WORK_ADD(path_query_visits, 1);
-			Lnext[i] = L[lower[i]];
-			L[lower[i]] = i;
-		}
-		fill(D.begin(), D.end(), 0);
 		init(root, 0);
 		P = vector<int>(height + 1, 0);
 		KKT_WORK_ADD(initialized_slots, height + 1);
 		KKT_WORK_MAX(path_max_height, height);
 		median = verifier_detail::median_table(height);
 		visit(root, 0);
-		return answer;
+		return maximum;
 	}
 };
 
@@ -334,69 +334,64 @@ struct test_graph
 	// explained on the Karger-Klein-Tarjan' 1995 paper.
 	vector<unsigned char> compute_heavy_marks()
 	{
-		vector<int> gabarito, upper, lower, corresponding_edge;
 		int M = static_cast<int>(G.size());
-		int upper_len = 0;
-		vector<pair<int, int>> decomposed_query;
-		KKT_WORK_ADD(verifier_edge_visits, M);
-
-		for (int i = 0; i < M; ++i)
+		vector<size_t> query_offsets(static_cast<size_t>(total_nodes) + 1, 0);
+		vector<path_query> queries;
+		KKT_WORK_ADD(initialized_slots, query_offsets.size());
 		{
-			int src, to, cost;
-			tie(src, to, cost, ignore) = G[i];
-
-			// Every query of the form (u, v) has to be
-			// split into (u, lca(u, v)), (v, lca(u, v)). This is a
-			// requisite for the tree_path_maxima algorithm.
-			int anc = lca.query(src, to);
-			pair<int, int> qry = {-1, -1};
-			if (anc != src)
-			{
-				upper.emplace_back(anc);
-				lower.emplace_back(src);
-				gabarito.emplace_back(cost);
-				corresponding_edge.emplace_back(i);
-				qry.first = upper_len;
-				upper_len++;
+			// Retain one LCA per graph edge while building its endpoint ranges.
+			// This temporary is released before either tree traversal starts.
+			vector<int> ancestors(G.size());
+			KKT_WORK_ADD(initialized_slots, ancestors.size());
+			KKT_WORK_ADD(verifier_edge_visits, G.size());
+			for (int i = 0; i < M; ++i) {
+				const int from = get<0>(G[i]), to = get<1>(G[i]);
+				const int ancestor = ancestors[i] = lca.query(from, to);
+				if (ancestor != from) {
+					++query_offsets[from + 1];
+					KKT_WORK_ADD(path_query_visits, 1);
+				}
+				if (ancestor != to) {
+					++query_offsets[to + 1];
+					KKT_WORK_ADD(path_query_visits, 1);
+				}
 			}
-			if (anc != to)
-			{
-				upper.emplace_back(anc);
-				lower.emplace_back(to);
-				gabarito.emplace_back(cost);
-				corresponding_edge.emplace_back(i);
-				qry.second = upper_len;
-				upper_len++;
+			KKT_WORK_ADD(verifier_vertex_visits, total_nodes);
+			for (int i = 1; i <= total_nodes; ++i)
+				query_offsets[i] += query_offsets[i - 1];
+			queries.resize(query_offsets.back());
+			KKT_WORK_ADD(initialized_slots, queries.size());
+			vector<size_t> next_query = query_offsets;
+			KKT_WORK_ADD(initialized_slots, next_query.size());
+			KKT_WORK_ADD(verifier_edge_visits, G.size());
+			for (int i = 0; i < M; ++i) {
+				const int from = get<0>(G[i]), to = get<1>(G[i]);
+				const int ancestor = ancestors[i];
+				if (ancestor != from) {
+					queries[next_query[from]++] = {ancestor, i};
+					KKT_WORK_ADD(path_query_visits, 1);
+				}
+				if (ancestor != to) {
+					queries[next_query[to]++] = {ancestor, i};
+					KKT_WORK_ADD(path_query_visits, 1);
+				}
 			}
-
-			if (qry.first == -1 && qry.second == -1) continue;
-			else if (qry.first == -1)
-				qry.first = qry.second;
-			else if (qry.second == -1)
-				qry.second = qry.first;
-
-			decomposed_query.emplace_back(qry);
 		}
 
-		KKT_WORK_ADD(verifier_queries, upper.size());
-		tree_path_maxima verifier =
-			tree_path_maxima(root, child, sibling, weight, upper, lower);
+		KKT_WORK_ADD(verifier_queries, queries.size());
+		tree_path_maxima verifier(root, child, sibling, weight,
+							  query_offsets, queries, G.size());
 		const vector<int>& sol = verifier.compute_answer();
 		vector<unsigned char> heavy_marks(G.size(), 0);
 		KKT_WORK_ADD(initialized_slots, heavy_marks.size());
 
-		KKT_WORK_ADD(verifier_edge_visits, decomposed_query.size());
-		for (const auto& qry: decomposed_query)
+		KKT_WORK_ADD(verifier_edge_visits, G.size());
+		for (int i = 0; i < M; ++i)
 		{
-			int id_fst = qry.first, id_snd = qry.second;
-			int edge_cost = gabarito[id_fst];
-			int heavy_combine = max(weight[sol[id_fst]], weight[sol[id_snd]]);
-
-			// Classification depends on endpoints and weights, never edge IDs.
-			if (heavy_combine < edge_cost)
-			{
-				heavy_marks[corresponding_edge[id_fst]] = 1;
-			}
+			// A self-loop produced no ancestor query in the previous layout;
+			// preserve its unmarked result instead of reading an empty path.
+			if (get<0>(G[i]) != get<1>(G[i]) && sol[i] < get<2>(G[i]))
+				heavy_marks[i] = 1;
 		}
 		return heavy_marks;
 	}
