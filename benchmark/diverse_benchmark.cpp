@@ -31,9 +31,12 @@ constexpr std::array<unsigned int, 3> sampling_seeds = {0, 1, 7};
 struct Case { std::string family; int n; };
 struct Options {
     bool smoke = false;
+    bool large = false;
     int repetitions = 4;
     int warmups = 1;
     std::string case_filter;
+    int graph_seed_filter = -1;
+    int kkt_seed_filter = -1;
 };
 
 int count(const std::string& value, bool allow_zero) {
@@ -48,11 +51,21 @@ Options options(int argc, char** argv) {
     Options result;
     for (int i = 1; i < argc; ++i) {
         const std::string arg = argv[i];
-        if (arg == "--smoke") result.smoke = true;
-        else if (arg == "--scale") result.smoke = false;
+        if (arg == "--smoke") { result.smoke = true; result.large = false; }
+        else if (arg == "--scale") { result.smoke = false; result.large = false; }
+        else if (arg == "--large") { result.smoke = false; result.large = true; }
         else if (arg == "--case") {
             if (++i == argc) throw std::runtime_error(arg + " requires a case ID");
             result.case_filter = argv[i];
+        }
+        else if (arg == "--graph-seed" || arg == "--kkt-seed") {
+            if (++i == argc) throw std::runtime_error(arg + " requires a seed");
+            const int seed = count(argv[i], true);
+            const auto& supported = arg == "--graph-seed" ? graph_seeds : sampling_seeds;
+            if (std::find(supported.begin(), supported.end(), static_cast<unsigned int>(seed)) == supported.end())
+                throw std::runtime_error("unsupported seed for " + arg + ": " + argv[i]);
+            if (arg == "--graph-seed") result.graph_seed_filter = seed;
+            else result.kkt_seed_filter = seed;
         }
         else if (arg == "--repetitions" || arg == "--warmups") {
             if (++i == argc) throw std::runtime_error(arg + " requires a count");
@@ -82,6 +95,23 @@ std::vector<Case> cases(bool smoke) {
     result.push_back({"random_dense_anchor", smoke ? 64 : 1000});
     // Reproducible mixed case order reduces systematic family/size drift.
     std::mt19937 rng(20261010);
+    for (std::size_t i = result.size(); i > 1; --i)
+        std::swap(result[i - 1], result[rng() % i]);
+    return result;
+}
+
+std::vector<Case> large_cases() {
+    std::vector<Case> result;
+    for (const char* family : {"random_4", "random_32", "random_128"})
+        for (int n : {65536, 262144}) result.push_back({family, n});
+    for (const char* family : {"random_4", "random_32"})
+        result.push_back({family, 1048576});
+    result.push_back({"random_512", 65536});
+    for (const char* family : {"hub", "star"})
+        for (int n : {65536, 262144, 1048576}) result.push_back({family, n});
+    for (int n : {2048, 4096, 8192}) result.push_back({"complete", n});
+    // Keep the original scale/smoke matrix and its order unchanged.
+    std::mt19937 rng(20261011);
     for (std::size_t i = result.size(); i > 1; --i)
         std::swap(result[i - 1], result[rng() % i]);
     return result;
@@ -184,15 +214,19 @@ Graph make_graph(const Case& item, unsigned int seed, bool smoke) {
             const int parent = star ? 0 : static_cast<int>(rng() % v);
             builder.add(parent, v);
         }
-        int target = n - 1;
-        if (family == "random_4" || family == "hub" || family == "planted_tree") target = 4 * n;
-        else if (family == "random_32") target = 32 * n;
-        else if (family == "random_128") target = 128 * n;
+        std::int64_t target = n - 1;
+        if (family == "random_4" || family == "hub" || family == "planted_tree") target = 4LL * n;
+        else if (family == "random_32") target = 32LL * n;
+        else if (family == "random_128") target = 128LL * n;
+        else if (family == "random_512") target = 512LL * n;
         else if (family == "random_dense_anchor") target = smoke ? 1500 : 400000;
         else if (family != "random_tree" && family != "star")
             throw std::runtime_error("unknown graph family: " + family);
-        if (smoke) target = std::min(target, static_cast<int>(3LL * n * (n - 1) / 8));
-        while (static_cast<int>(graph.size()) < target) {
+        if (smoke) target = std::min<std::int64_t>(target, 3LL * n * (n - 1) / 8);
+        const std::int64_t capacity = 1LL * n * (n - 1) / 2;
+        if (target < n - 1 || target > capacity || target >= 0x3f3f3f3f)
+            throw std::runtime_error("edge target exceeds the simple-graph or shared weight domain");
+        while (static_cast<std::int64_t>(graph.size()) < target) {
             const int u = static_cast<int>(rng() % n), v = static_cast<int>(rng() % n);
             builder.add(u, v, family == "planted_tree" ? 1 : 0);
         }
@@ -270,19 +304,33 @@ std::int64_t measure(int algorithm, const Graph& graph, int n, unsigned int seed
 void run(const Options& config) {
     std::cout << "case_id,family,n,m,graph_seed,kkt_seed,repetition,order,warmups,algorithm,elapsed_ns,validation\n";
     bool found_case = false;
-    for (const auto& item : cases(config.smoke)) {
+    for (const auto& item : (config.large ? large_cases() : cases(config.smoke))) {
         const std::string case_id = item.family + "_n" + std::to_string(item.n);
         if (!config.case_filter.empty() && config.case_filter != case_id) continue;
         found_case = true;
         std::cerr << "Running " << case_id << '\n';
         for (std::size_t g = 0; g < graph_seeds.size(); ++g) {
+            if (config.graph_seed_filter >= 0 &&
+                graph_seeds[g] != static_cast<unsigned int>(config.graph_seed_filter)) continue;
+            std::cerr << "  graph_seed=" << graph_seeds[g] << " generating fixture\n";
+            const auto generation_start = Clock::now();
             const auto graph = make_graph(item, graph_seeds[g], config.smoke);
+            const auto generation_finish = Clock::now();
             const auto oracle = kruskal(graph, item.n);
             benchmark_validation::certify_mst(graph, oracle, item.n);
+            const auto certificate_finish = Clock::now();
+            std::cerr << "  graph_seed=" << graph_seeds[g]
+                      << " generation_seconds="
+                      << std::chrono::duration<double>(generation_finish - generation_start).count()
+                      << " reference_certificate_seconds="
+                      << std::chrono::duration<double>(certificate_finish - generation_finish).count()
+                      << '\n';
             const auto expected = ids(oracle);
             std::vector<const Graph::value_type*> by_id(graph.size());
             for (const auto& edge : graph) by_id[std::get<3>(edge)] = &edge;
             for (std::size_t s = 0; s < sampling_seeds.size(); ++s) {
+                if (config.kkt_seed_filter >= 0 &&
+                    sampling_seeds[s] != static_cast<unsigned int>(config.kkt_seed_filter)) continue;
                 for (int w = 0; w < config.warmups; ++w)
                     for (int a = 0; a < 4; ++a)
                         measure(a, graph, item.n, sampling_seeds[s], expected, by_id);
@@ -295,11 +343,11 @@ void run(const Options& config) {
                                   << ',' << order << ',' << config.warmups << ',' << algorithms[algorithm]
                                   << ',' << elapsed << ",pass\n";
                     }
+                    std::cout.flush();
+                    if (!std::cout) throw std::runtime_error("failed to write CSV");
                 }
             }
         }
-        std::cout.flush();
-        if (!std::cout) throw std::runtime_error("failed to write CSV");
     }
     if (!found_case) throw std::runtime_error("unknown case ID: " + config.case_filter);
 }
@@ -307,9 +355,11 @@ void run(const Options& config) {
 
 int main(int argc, char** argv) {
     if (argc == 2 && std::string(argv[1]) == "--help") {
-        std::cout << "Usage: " << argv[0] << " [--scale|--smoke] [--repetitions N] [--warmups N] [--case ID]\n"
+        std::cout << "Usage: " << argv[0] << " [--scale|--smoke|--large] [--repetitions N] [--warmups N] [--case ID]\n"
+                  << "       [--graph-seed 17|42|999] [--kkt-seed 0|1|7]\n"
                   << "Defaults: --scale --repetitions 4 --warmups 1; CSV on stdout, progress on stderr.\n"
-                  << "Both modes use three graph seeds and three KKT seeds.\n";
+                  << "All presets use all three graph seeds and KKT seeds unless selected explicitly.\n"
+                  << "--large selects 18 cases, up to 1,048,576 vertices and 33,554,432 edges.\n";
         return 0;
     }
     try { run(options(argc, argv)); }

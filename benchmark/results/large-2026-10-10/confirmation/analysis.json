@@ -1,0 +1,62 @@
+{
+  "input_csv": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/large-2026-10-10/confirmation/raw.csv",
+  "measurement_type": "repeated measurement",
+  "case_count": 5,
+  "observation_count": 720,
+  "graph_seeds": [
+    17,
+    42,
+    999
+  ],
+  "kkt_seeds": [
+    0,
+    1,
+    7
+  ],
+  "repetitions_per_seed_pair": 4,
+  "warmups": 1,
+  "aggregation": "Median of repetitions for each graph/sampling-seed pair; median of the three sampling-seed values per graph; median of the three graph values. Paired ratios apply the same hierarchy to matched algorithm/reference elapsed-time ratios. Error bars span graph-level medians and are not confidence intervals.",
+  "kkt_cases_faster_by_paired_hierarchical_median": {
+    "kruskal": 3,
+    "prim": 5,
+    "boruvka": 5
+  },
+  "kkt_cases_slower": {
+    "kruskal": [
+      "hub_n262144",
+      "star_n1048576"
+    ],
+    "prim": [],
+    "boruvka": []
+  },
+  "kkt_runtime_ratio_ranges": {
+    "kruskal": [
+      0.861758267085625,
+      1.4504486796886367
+    ],
+    "prim": [
+      0.15195090790251511,
+      0.23055625733681528
+    ],
+    "boruvka": [
+      0.5104627004652166,
+      0.6950917830936103
+    ]
+  },
+  "fastest_by_hierarchical_runtime_median": {
+    "hub_n65536": "kkt",
+    "hub_n262144": "kruskal",
+    "star_n65536": "kkt",
+    "star_n262144": "kkt",
+    "star_n1048576": "kruskal"
+  },
+  "fastest_case_counts": {
+    "kkt": 3,
+    "kruskal": 2
+  },
+  "kkt_faster_than_all_three_by_paired_medians": [
+    "hub_n65536",
+    "star_n65536",
+    "star_n262144"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "started_utc": "2026-10-10T20:54:24.765691+00:00",
+  "algorithm_revision": "93406577df5653572c1d795fcf471202145071f1",
+  "algorithm_sources_modified": false,
+  "source_sha256": {
+    "benchmark/diverse_benchmark.cpp": "8d12902f3deeebc9a63af50b7bbf603b08389c3e10b90b8abe630636707e36f0",
+    "benchmark/mst_certificate.hpp": "5e9c37e73c6a1bb78f1bfe5dca361abe9a4ddc4ea2e155a323989b6b34838495",
+    "Makefile": "89fbdec724ffaca89ce85161696915e252c450bb9001200d9bfe5c390b16682b"
+  },
+  "cpu": "Apple M3 Max",
+  "architecture": "arm64",
+  "ram_bytes": 137438953472,
+  "os": "ProductName:\t\tmacOS\nProductVersion:\t\t26.6.2\nBuildVersion:\t\t25G83",
+  "compiler": "Apple clang version 15.0.0 (clang-1500.3.9.4)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin",
+  "sdk": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+  "flags": "-std=c++17 -O3 -Wall -Wextra -march=native; -isysroot SDK; -LSDK/usr/lib",
+  "command": [
+    "./bin/diverse_benchmark",
+    "--large",
+    "--repetitions",
+    "1",
+    "--warmups",
+    "0"
+  ],
+  "case_count": 18,
+  "graph_seeds": [
+    17,
+    42,
+    999
+  ],
+  "kkt_seeds": [
+    0,
+    1,
+    7
+  ],
+  "repetitions": 1,
+  "warmups": 0,
+  "expected_timed_observations": 648,
+  "timing_boundary": "Common tuple edge list: KKT conversion and temporary input destruction included; output validation and result destruction excluded for all algorithms.",
+  "execution": "Serial benchmark process, no concurrent builds/tests/plots; ordinary desktop session without affinity or power control.",
+  "exit_status": 0,
+  "wall_seconds_including_setup": 1393.6615282500002,
+  "finished_utc": "2026-10-10T21:17:38.502805+00:00",
+  "analysis_sha256": {
+    "benchmark/analyze_large.py": "dbe0e04a6f4dfba1013380cb19ae2005ee3c24e8792fa02f4c03e8f52b49136e",
+    "benchmark/analyze_diverse.py": "aa6a59f52f26d7951d8683e97c75b475b105094e410096568a110b1766de61cf"
+  },
+  "raw_csv_sha256": "1624a9daa2cd7d9d392121f0fd488915a7b5521fff81708a8330eaeec8e838f6",
+  "peak_resident_set_bytes": 14064959488,
+  "validation_checks": [
+    "Make: 8 simple tests, 12 regression groups, independent MST certificate tests passed",
+    "Make native optimized benchmark build passed",
+    "Bazel optimized benchmark build and cached certificate test passed",
+    "Analyzer accepted 648 complete observations and rejected nine corrupted/incomplete datasets",
+    "Native seed-filter schedule, smoke correctness, invalid-seed/case checks passed"
+  ]
+}

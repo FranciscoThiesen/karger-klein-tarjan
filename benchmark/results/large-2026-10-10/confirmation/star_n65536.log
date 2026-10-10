@@ -1,0 +1,25 @@
+Running star_n65536
+  graph_seed=17 generating fixture
+  graph_seed=17 generation_seconds=0.00281762 reference_certificate_seconds=0.00931658
+  graph_seed=42 generating fixture
+  graph_seed=42 generation_seconds=0.00243433 reference_certificate_seconds=0.00854942
+  graph_seed=999 generating fixture
+  graph_seed=999 generation_seconds=0.00258604 reference_certificate_seconds=0.00809408
+        1.32 real         1.31 user         0.00 sys
+            42123264  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                2742  page reclaims
+                   1  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   0  voluntary context switches
+                 297  involuntary context switches
+         14224384170  instructions retired
+          4826487493  cycles elapsed
+            41632104  peak memory footprint

@@ -1,0 +1,5 @@
+case_id,family,n,m,graph_seed,kkt_seed,repetition,order,warmups,algorithm,elapsed_ns,validation
+random_32_n262144,random_32,262144,8388608,17,0,0,0,0,kkt,5496964708,pass
+random_32_n262144,random_32,262144,8388608,17,0,0,1,0,kruskal,545071833,pass
+random_32_n262144,random_32,262144,8388608,17,0,0,2,0,prim,1092106541,pass
+random_32_n262144,random_32,262144,8388608,17,0,0,3,0,boruvka,352713625,pass

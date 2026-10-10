@@ -1,0 +1,111 @@
+{
+  "input_csv": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/large-2026-10-10/raw.csv",
+  "measurement_type": "exploratory sweep",
+  "case_count": 18,
+  "observation_count": 648,
+  "graph_seeds": [
+    17,
+    42,
+    999
+  ],
+  "kkt_seeds": [
+    0,
+    1,
+    7
+  ],
+  "repetitions_per_seed_pair": 1,
+  "warmups": 0,
+  "aggregation": "Median of repetitions for each graph/sampling-seed pair; median of the three sampling-seed values per graph; median of the three graph values. Paired ratios apply the same hierarchy to matched algorithm/reference elapsed-time ratios. Error bars span graph-level medians and are not confidence intervals.",
+  "kkt_cases_faster_by_paired_hierarchical_median": {
+    "kruskal": 4,
+    "prim": 9,
+    "boruvka": 6
+  },
+  "kkt_cases_slower": {
+    "kruskal": [
+      "random_4_n65536",
+      "random_4_n262144",
+      "random_4_n1048576",
+      "random_32_n65536",
+      "random_32_n262144",
+      "random_32_n1048576",
+      "random_128_n65536",
+      "random_128_n262144",
+      "random_512_n65536",
+      "hub_n262144",
+      "hub_n1048576",
+      "star_n1048576",
+      "complete_n4096",
+      "complete_n8192"
+    ],
+    "prim": [
+      "random_32_n65536",
+      "random_32_n262144",
+      "random_32_n1048576",
+      "random_128_n65536",
+      "random_128_n262144",
+      "random_512_n65536",
+      "complete_n2048",
+      "complete_n4096",
+      "complete_n8192"
+    ],
+    "boruvka": [
+      "random_4_n65536",
+      "random_4_n262144",
+      "random_4_n1048576",
+      "random_32_n65536",
+      "random_32_n262144",
+      "random_32_n1048576",
+      "random_128_n65536",
+      "random_128_n262144",
+      "random_512_n65536",
+      "complete_n2048",
+      "complete_n4096",
+      "complete_n8192"
+    ]
+  },
+  "kkt_runtime_ratio_ranges": {
+    "kruskal": [
+      0.7687112383790343,
+      11.423651218021707
+    ],
+    "prim": [
+      0.14804528236377038,
+      10.767024446038176
+    ],
+    "boruvka": [
+      0.4841512446863655,
+      20.613766760234842
+    ]
+  },
+  "fastest_by_hierarchical_runtime_median": {
+    "random_4_n65536": "kruskal",
+    "random_4_n262144": "kruskal",
+    "random_4_n1048576": "kruskal",
+    "random_32_n65536": "boruvka",
+    "random_32_n262144": "boruvka",
+    "random_32_n1048576": "kruskal",
+    "random_128_n65536": "boruvka",
+    "random_128_n262144": "boruvka",
+    "random_512_n65536": "boruvka",
+    "hub_n65536": "kkt",
+    "hub_n262144": "kruskal",
+    "hub_n1048576": "kruskal",
+    "star_n65536": "kkt",
+    "star_n262144": "kkt",
+    "star_n1048576": "kruskal",
+    "complete_n2048": "boruvka",
+    "complete_n4096": "boruvka",
+    "complete_n8192": "boruvka"
+  },
+  "fastest_case_counts": {
+    "kruskal": 7,
+    "boruvka": 8,
+    "kkt": 3
+  },
+  "kkt_faster_than_all_three_by_paired_medians": [
+    "hub_n65536",
+    "star_n65536",
+    "star_n262144"
+  ]
+}

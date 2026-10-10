@@ -1,0 +1,114 @@
+{
+  "started_utc": "2026-10-10T21:18:19.459811+00:00",
+  "algorithm_revision": "93406577df5653572c1d795fcf471202145071f1",
+  "harness_sha256": "8d12902f3deeebc9a63af50b7bbf603b08389c3e10b90b8abe630636707e36f0",
+  "case_order": [
+    "star_n262144",
+    "hub_n65536",
+    "star_n1048576",
+    "hub_n262144",
+    "star_n65536"
+  ],
+  "graph_seeds": [
+    17,
+    42,
+    999
+  ],
+  "kkt_seeds": [
+    0,
+    1,
+    7
+  ],
+  "repetitions": 4,
+  "warmups": 1,
+  "expected_timed_observations": 720,
+  "selection": "Close hub/star races plus the adjacent million-vertex star; selection made from main sweep before confirmation.",
+  "execution": "Each case in a fresh process; all serial; no concurrent builds/tests/plots. Machine/compiler/timing boundary match parent metadata.json.",
+  "runs": [
+    {
+      "case_id": "star_n262144",
+      "command": [
+        "./bin/diverse_benchmark",
+        "--large",
+        "--case",
+        "star_n262144",
+        "--repetitions",
+        "4",
+        "--warmups",
+        "1"
+      ],
+      "started_utc": "2026-10-10T21:18:19.460315+00:00",
+      "exit_status": 0,
+      "wall_seconds_including_setup": 6.880565083
+    },
+    {
+      "case_id": "hub_n65536",
+      "command": [
+        "./bin/diverse_benchmark",
+        "--large",
+        "--case",
+        "hub_n65536",
+        "--repetitions",
+        "4",
+        "--warmups",
+        "1"
+      ],
+      "started_utc": "2026-10-10T21:18:26.341244+00:00",
+      "exit_status": 0,
+      "wall_seconds_including_setup": 5.587139791999999
+    },
+    {
+      "case_id": "star_n1048576",
+      "command": [
+        "./bin/diverse_benchmark",
+        "--large",
+        "--case",
+        "star_n1048576",
+        "--repetitions",
+        "4",
+        "--warmups",
+        "1"
+      ],
+      "started_utc": "2026-10-10T21:18:31.928743+00:00",
+      "exit_status": 0,
+      "wall_seconds_including_setup": 49.712302416
+    },
+    {
+      "case_id": "hub_n262144",
+      "command": [
+        "./bin/diverse_benchmark",
+        "--large",
+        "--case",
+        "hub_n262144",
+        "--repetitions",
+        "4",
+        "--warmups",
+        "1"
+      ],
+      "started_utc": "2026-10-10T21:19:21.641549+00:00",
+      "exit_status": 0,
+      "wall_seconds_including_setup": 32.75418058299999
+    },
+    {
+      "case_id": "star_n65536",
+      "command": [
+        "./bin/diverse_benchmark",
+        "--large",
+        "--case",
+        "star_n65536",
+        "--repetitions",
+        "4",
+        "--warmups",
+        "1"
+      ],
+      "started_utc": "2026-10-10T21:19:54.396167+00:00",
+      "exit_status": 0,
+      "wall_seconds_including_setup": 1.3272836670000032
+    }
+  ],
+  "exit_status": 0,
+  "wall_seconds_including_setup": 96.26348175000001,
+  "finished_utc": "2026-10-10T21:19:55.723906+00:00",
+  "raw_csv_sha256": "72bf73c9af4c7cbd7f680b95ffcd8cb5253ee3f747f3ac0ff7bd3da09a5cc13e",
+  "validation": "All 720 measured outputs and 180 warmups checked; analyzer accepted complete 3x3x4 matrix for five cases."
+}

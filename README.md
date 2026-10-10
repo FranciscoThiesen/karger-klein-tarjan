@@ -61,6 +61,18 @@ python3 benchmark/analyze_diverse.py diverse.csv --output-dir diverse-plots
 Plotting requires NumPy and Matplotlib. These timings include KKT's conversion
 from the common edge-list input; see the comparison's methods for details.
 
+The [larger-instance follow-up](benchmark/results/large-2026-10-10/README.md)
+extends seven profiles to 1,048,576 vertices and 33,554,432 edges, with a
+separate density sweep at fixed vertex count:
+
+```bash
+./bin/diverse_benchmark --large --repetitions 1 --warmups 0 > large.csv
+python3 benchmark/analyze_large.py large.csv --output-dir large-plots --expected-cases 18
+```
+
+This exploratory sweep varies graph and sampling seeds. Close results need
+additional repetitions; its timing protocol differs from the smaller sweep.
+
 The dependency-free scaling benchmark varies vertex count at fixed densities,
 varies density at fixed vertex count, and includes hierarchical paths:
 

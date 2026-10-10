@@ -1,0 +1,21 @@
+{
+  "command": [
+    "./bin/diverse_benchmark",
+    "--large",
+    "--case",
+    "random_32_n262144",
+    "--graph-seed",
+    "17",
+    "--kkt-seed",
+    "0",
+    "--repetitions",
+    "1",
+    "--warmups",
+    "0"
+  ],
+  "purpose": "single-fixture pilot, excluded from main aggregates",
+  "started_utc": "2026-10-10T20:53:48.653777+00:00",
+  "exit_status": 0,
+  "wall_seconds_including_setup": 13.838030458,
+  "finished_utc": "2026-10-10T20:54:02.492010+00:00"
+}
