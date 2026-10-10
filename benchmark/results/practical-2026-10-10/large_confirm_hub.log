@@ -1,0 +1,25 @@
+Running hub_n262144
+  graph_seed=17 generating fixture
+  graph_seed=17 generation_seconds=0.190029 reference_certificate_seconds=0.230344
+  graph_seed=42 generating fixture
+  graph_seed=42 generation_seconds=0.172678 reference_certificate_seconds=0.222243
+  graph_seed=999 generating fixture
+  graph_seed=999 generation_seconds=0.184029 reference_certificate_seconds=0.222388
+       32.97 real        32.79 user         0.10 sys
+           291487744  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               24788  page reclaims
+                   1  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   1  voluntary context switches
+                6994  involuntary context switches
+        131608299883  instructions retired
+        120386248547  cycles elapsed
+           219398720  peak memory footprint

@@ -1,0 +1,24 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:complexity_test
+-----------------------------------------------------------------------------
+Running main() from gmock_main.cc
+[==========] Running 6 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 6 tests from Complexity
+[ RUN      ] Complexity.StarFinishesInOneContractionWithoutSamplingOrVerifier
+[       OK ] Complexity.StarFinishesInOneContractionWithoutSamplingOrVerifier (0 ms)
+[ RUN      ] Complexity.CounterScopesRestoreTheirPreviousCollector
+[       OK ] Complexity.CounterScopesRestoreTheirPreviousCollector (0 ms)
+[ RUN      ] Complexity.BillionScaleSparseEdgeIdsDoNotIncreaseAnyWorkCounter
+[       OK ] Complexity.BillionScaleSparseEdgeIdsDoNotIncreaseAnyWorkCounter (1 ms)
+[ RUN      ] Complexity.HierarchicalPathsHaveGeometricallyBoundedRecursiveEdgeVolume
+[       OK ] Complexity.HierarchicalPathsHaveGeometricallyBoundedRecursiveEdgeVolume (16 ms)
+[ RUN      ] Complexity.MedianTableWorkIsBoundedByFullBranchingTreeLeaves
+[       OK ] Complexity.MedianTableWorkIsBoundedByFullBranchingTreeLeaves (2 ms)
+[ RUN      ] Complexity.InstrumentedRandomRunsMatchIndependentlyCertifiedMsts
+[       OK ] Complexity.InstrumentedRandomRunsMatchIndependentlyCertifiedMsts (28 ms)
+[----------] 6 tests from Complexity (47 ms total)
+
+[----------] Global test environment tear-down
+[==========] 6 tests from 1 test suite ran. (47 ms total)
+[  PASSED  ] 6 tests.

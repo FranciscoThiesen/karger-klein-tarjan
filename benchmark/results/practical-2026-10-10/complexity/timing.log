@@ -1,0 +1,27 @@
+Unable to determine clock rate from sysctl: hw.cpufrequency: No such file or directory
+2026-10-10T16:02:56-07:00
+Running /private/tmp/kkt-repairs/bazel/7eb4d49b1018447212ffd8d7c5980792/execroot/__main__/bazel-out/darwin_arm64-opt/bin/benchmark/complexity_benchmark
+Run on (16 X 24.1058 MHz CPU s)
+CPU Caches:
+  L1 Data 64 KiB (x16)
+  L1 Instruction 128 KiB (x16)
+  L2 Unified 4096 KiB (x4)
+Load Average: 6.56, 8.78, 8.69
+       52.73 real        51.10 user         0.16 sys
+           406323200  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               44818  page reclaims
+                   0  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   0  voluntary context switches
+                7378  involuntary context switches
+        258939656568  instructions retired
+        188547097821  cycles elapsed
+           299483880  peak memory footprint

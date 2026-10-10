@@ -1,0 +1,212 @@
+{
+  "aggregation": "Match by case, graph seed, KKT seed, repetition, and algorithm; divide final elapsed time by baseline elapsed time for each matched trial. Take the median over repetitions, then sampling seeds within each graph, then graph seeds. Final-run KKT/competitor ratios use the same hierarchy on contemporaneous four-algorithm trial blocks. Values below one favor final KKT for its before/after comparison or KKT versus its competitor. Graph ranges span three graph-level medians and are not confidence intervals.",
+  "suites": {
+    "diverse": {
+      "baseline_csv": {
+        "path": "../baseline.csv",
+        "sha256": "e6ff56c17a72de225848840d9dadee7d9659005fcf7087843a8566f230845caf"
+      },
+      "final_csv": {
+        "path": "../reserve.csv",
+        "sha256": "61f33cd01aadeee0ff215c1aa00ffa0c6e73f7f822d5e516ff2288e217e29bb8"
+      },
+      "case_count": 39,
+      "observations_per_phase": 5616,
+      "repetitions": 4,
+      "warmups": 1,
+      "kkt_faster_cases": [
+        "random_4_n1024",
+        "random_4_n4096",
+        "random_4_n16384",
+        "random_4_n65536",
+        "random_32_n1024",
+        "random_32_n4096",
+        "random_32_n16384",
+        "random_32_n65536",
+        "random_128_n1024",
+        "random_128_n4096",
+        "random_128_n16384",
+        "random_dense_anchor_n1000",
+        "grid_n1024",
+        "grid_n4096",
+        "grid_n16384",
+        "geometric_grid_n1024",
+        "geometric_grid_n4096",
+        "geometric_grid_n16384",
+        "hub_n1024",
+        "hub_n4096",
+        "hub_n16384",
+        "clustered_n1024",
+        "clustered_n4096",
+        "clustered_n16384",
+        "planted_tree_n1024",
+        "planted_tree_n4096",
+        "planted_tree_n16384",
+        "random_tree_n1024",
+        "random_tree_n4096",
+        "random_tree_n16384",
+        "star_n1024",
+        "star_n4096",
+        "star_n16384",
+        "hierarchical_path_n1024",
+        "hierarchical_path_n4096",
+        "hierarchical_path_n16384",
+        "complete_n256",
+        "complete_n512",
+        "complete_n1024"
+      ],
+      "kkt_regression_cases": [],
+      "kkt_equal_cases": [],
+      "kkt_change_ratio_range": [
+        0.3928142168474086,
+        0.9693028052646975
+      ],
+      "final_kkt_below_all_by_paired_medians": [
+        "geometric_grid_n16384",
+        "hub_n1024",
+        "hub_n4096",
+        "hub_n16384",
+        "star_n4096",
+        "star_n16384"
+      ],
+      "final_kkt_below_all_on_every_graph": [
+        "geometric_grid_n16384",
+        "hub_n1024",
+        "hub_n4096",
+        "hub_n16384",
+        "star_n4096",
+        "star_n16384"
+      ],
+      "final_fastest_by_runtime_median_counts": {
+        "kruskal": 19,
+        "boruvka": 13,
+        "kkt": 7
+      },
+      "control_timing_changes": {
+        "kruskal": {
+          "minimum_case_ratio": 0.742178748614964,
+          "maximum_case_ratio": 1.0529329169229467,
+          "cases_outside_0_95_to_1_05": [
+            "random_4_n1024",
+            "grid_n1024",
+            "planted_tree_n1024",
+            "random_tree_n1024",
+            "random_tree_n4096",
+            "star_n1024",
+            "star_n4096",
+            "hierarchical_path_n4096"
+          ]
+        },
+        "prim": {
+          "minimum_case_ratio": 0.8223497764539637,
+          "maximum_case_ratio": 1.0230007923117819,
+          "cases_outside_0_95_to_1_05": [
+            "random_4_n1024",
+            "grid_n1024",
+            "grid_n4096",
+            "hub_n1024",
+            "planted_tree_n1024",
+            "random_tree_n1024"
+          ]
+        },
+        "boruvka": {
+          "minimum_case_ratio": 0.9499359742216171,
+          "maximum_case_ratio": 1.05285947302907,
+          "cases_outside_0_95_to_1_05": [
+            "grid_n4096",
+            "geometric_grid_n1024",
+            "hierarchical_path_n1024"
+          ]
+        }
+      }
+    },
+    "large": {
+      "baseline_csv": {
+        "path": "../../large-2026-10-10/raw.csv",
+        "sha256": "1624a9daa2cd7d9d392121f0fd488915a7b5521fff81708a8330eaeec8e838f6"
+      },
+      "final_csv": {
+        "path": "../large_final.csv",
+        "sha256": "f4aa9610f5dfb1f195a0e75fe08fe3f68cbe5e32e7102622a98fcae5c799106c"
+      },
+      "case_count": 18,
+      "observations_per_phase": 648,
+      "repetitions": 1,
+      "warmups": 0,
+      "kkt_faster_cases": [
+        "random_4_n65536",
+        "random_4_n262144",
+        "random_4_n1048576",
+        "random_32_n65536",
+        "random_32_n262144",
+        "random_32_n1048576",
+        "random_128_n65536",
+        "random_128_n262144",
+        "random_512_n65536",
+        "hub_n65536",
+        "hub_n262144",
+        "hub_n1048576",
+        "star_n65536",
+        "star_n262144",
+        "star_n1048576"
+      ],
+      "kkt_regression_cases": [
+        "complete_n2048",
+        "complete_n4096",
+        "complete_n8192"
+      ],
+      "kkt_equal_cases": [],
+      "kkt_change_ratio_range": [
+        0.31116988725614003,
+        1.090103005008764
+      ],
+      "final_kkt_below_all_by_paired_medians": [
+        "hub_n65536",
+        "hub_n262144",
+        "star_n65536",
+        "star_n262144",
+        "star_n1048576"
+      ],
+      "final_kkt_below_all_on_every_graph": [
+        "hub_n65536",
+        "hub_n262144",
+        "star_n65536",
+        "star_n262144",
+        "star_n1048576"
+      ],
+      "final_fastest_by_runtime_median_counts": {
+        "kruskal": 5,
+        "boruvka": 8,
+        "kkt": 5
+      },
+      "control_timing_changes": {
+        "kruskal": {
+          "minimum_case_ratio": 0.9797285331580097,
+          "maximum_case_ratio": 1.0040837644768077,
+          "cases_outside_0_95_to_1_05": []
+        },
+        "prim": {
+          "minimum_case_ratio": 0.9735947531621567,
+          "maximum_case_ratio": 1.089334597557448,
+          "cases_outside_0_95_to_1_05": [
+            "random_4_n262144",
+            "random_32_n262144",
+            "random_32_n1048576",
+            "random_128_n262144",
+            "hub_n262144"
+          ]
+        },
+        "boruvka": {
+          "minimum_case_ratio": 0.9661406430056797,
+          "maximum_case_ratio": 1.0867052635816281,
+          "cases_outside_0_95_to_1_05": [
+            "random_4_n65536",
+            "random_4_n262144",
+            "random_32_n1048576",
+            "hub_n262144"
+          ]
+        }
+      }
+    }
+  }
+}

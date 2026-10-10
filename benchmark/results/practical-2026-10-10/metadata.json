@@ -29,7 +29,14 @@
       "exit_status": 0,
       "wall_seconds_including_setup": 104.67950325,
       "finished_utc": "2026-10-10T22:33:19.215456+00:00",
-      "peak_resident_set_bytes": 791576576
+      "peak_resident_set_bytes": 791576576,
+      "output_sha256": {
+        ".csv": "e6ff56c17a72de225848840d9dadee7d9659005fcf7087843a8566f230845caf",
+        ".log": "aaddfb377cc44e8d37d1818c9124c4da05a69ea13a4b83c887e5bc3947cabc0a"
+      },
+      "validated_timed_observations": 5616,
+      "cases": 39,
+      "checked_warmup_calls": 1404
     },
     "mask": {
       "command": [
@@ -45,7 +52,14 @@
       "exit_status": 0,
       "wall_seconds_including_setup": 87.984110583,
       "finished_utc": "2026-10-10T22:36:50.919224+00:00",
-      "peak_resident_set_bytes": 770277376
+      "peak_resident_set_bytes": 770277376,
+      "output_sha256": {
+        ".csv": "314649af9dd4610ad341a4c2786eb6eb0847ac884cf4f09e37a6519cd4c144e6",
+        ".log": "62654482df45df34b6b0eb91d1166e0b99953a1f13f8e184962bbb8846f9fa67"
+      },
+      "validated_timed_observations": 5616,
+      "cases": 39,
+      "checked_warmup_calls": 1404
     },
     "csr": {
       "command": [
@@ -61,7 +75,14 @@
       "exit_status": 0,
       "wall_seconds_including_setup": 82.692661375,
       "finished_utc": "2026-10-10T22:42:46.098271+00:00",
-      "peak_resident_set_bytes": 641236992
+      "peak_resident_set_bytes": 641236992,
+      "output_sha256": {
+        ".csv": "52f2b44cb61576d8958d17b32331f616ee313ef27ef0996035b441848cfe2c83",
+        ".log": "a30ecef6601c3824e05c9819a3aa4f21209312bb6e151f0d10f63c0284bc029e"
+      },
+      "validated_timed_observations": 5616,
+      "cases": 39,
+      "checked_warmup_calls": 1404
     },
     "contraction": {
       "command": [
@@ -77,7 +98,14 @@
       "exit_status": 0,
       "wall_seconds_including_setup": 82.329627417,
       "finished_utc": "2026-10-10T22:48:49.950080+00:00",
-      "peak_resident_set_bytes": 643989504
+      "peak_resident_set_bytes": 643989504,
+      "output_sha256": {
+        ".csv": "94cef3daacb6a1b802c8ae178c91faf186ee85b7c23e949ec8f1bb11fbaf7cf9",
+        ".log": "698cc76fe6bbd55a86801d9afa79c0fb1b3e973a7a845f0bdfc3bdbe6e82ac78"
+      },
+      "validated_timed_observations": 5616,
+      "cases": 39,
+      "checked_warmup_calls": 1404
     },
     "sample": {
       "command": [
@@ -93,7 +121,14 @@
       "exit_status": 0,
       "wall_seconds_including_setup": 82.095080458,
       "finished_utc": "2026-10-10T22:51:24.179378+00:00",
-      "peak_resident_set_bytes": 637435904
+      "peak_resident_set_bytes": 637435904,
+      "output_sha256": {
+        ".csv": "cff42e3e533a8fa0ad90474bc1a5ff40f6baf1c8d21788ae2f0ee22cbcaf3bff",
+        ".log": "a75a05f9959f8eecf63763d4b8dcb94a8a818e2695c63c458d7e7fcf314261e8"
+      },
+      "validated_timed_observations": 5616,
+      "cases": 39,
+      "checked_warmup_calls": 1404
     },
     "owned": {
       "command": [
@@ -109,7 +144,14 @@
       "exit_status": 0,
       "wall_seconds_including_setup": 80.816593667,
       "finished_utc": "2026-10-10T22:54:26.416207+00:00",
-      "peak_resident_set_bytes": 645496832
+      "peak_resident_set_bytes": 645496832,
+      "output_sha256": {
+        ".csv": "92207b8c859d36f3c634f140b0fb60741af032f7674685cbc6f4d9ef60ec9ce6",
+        ".log": "541d3f09b6c0fc08c31f37b1242a2dac71ad177c3e9371d661fd8cf7754d181d"
+      },
+      "validated_timed_observations": 5616,
+      "cases": 39,
+      "checked_warmup_calls": 1404
     },
     "minimum": {
       "command": [
@@ -125,7 +167,14 @@
       "exit_status": 0,
       "wall_seconds_including_setup": 81.885883291,
       "finished_utc": "2026-10-10T22:56:53.489269+00:00",
-      "peak_resident_set_bytes": 641581056
+      "peak_resident_set_bytes": 641581056,
+      "output_sha256": {
+        ".csv": "6d8b30f30f2e5a636d97645394b0da4627345e6250d7fedcdde2ae96cc244a07",
+        ".log": "dd11a2a61b8108ccff63baa1845cf3227d01f2005dfec358452fdb7aa93eb7b8"
+      },
+      "validated_timed_observations": 5616,
+      "cases": 39,
+      "checked_warmup_calls": 1404
     },
     "reserve": {
       "command": [
@@ -141,7 +190,110 @@
       "exit_status": 0,
       "wall_seconds_including_setup": 83.525669209,
       "finished_utc": "2026-10-10T23:00:16.314666+00:00",
-      "peak_resident_set_bytes": 653656064
+      "peak_resident_set_bytes": 653656064,
+      "output_sha256": {
+        ".csv": "61f33cd01aadeee0ff215c1aa00ffa0c6e73f7f822d5e516ff2288e217e29bb8",
+        ".log": "88dcc8812822cfb34f2dd5b3210c89ad9b81c3233784ccd1c13de5aab58071ee"
+      },
+      "validated_timed_observations": 5616,
+      "cases": 39,
+      "checked_warmup_calls": 1404
+    },
+    "confirmation": {
+      "command": [
+        "/tmp/kkt-practical/reserve-bin/diverse_benchmark",
+        "--scale",
+        "--repetitions",
+        "4",
+        "--warmups",
+        "1"
+      ],
+      "binary_sha256": "076dafabc87c84886eaeec49d72681667ddf83720012dac96a59e4e1cce9b8c9",
+      "started_utc": "2026-10-10T23:05:48.301278+00:00",
+      "exit_status": 0,
+      "wall_seconds_including_setup": 82.539592958,
+      "finished_utc": "2026-10-10T23:07:10.841817+00:00",
+      "peak_resident_set_bytes": 624705536,
+      "output_sha256": {
+        ".csv": "fb0b7a192926869352255068c9c9045e5907ab0e93db2f9e1bbd274547504b38",
+        ".log": "bbc1e45e3033b7ed9144319f99071c05c5f58be7da2e5071b59c2fb3a16af8a9"
+      },
+      "validated_timed_observations": 5616,
+      "cases": 39,
+      "checked_warmup_calls": 1404
+    },
+    "large_final": {
+      "command": [
+        "/tmp/kkt-practical/reserve-bin/diverse_benchmark",
+        "--large",
+        "--repetitions",
+        "1",
+        "--warmups",
+        "0"
+      ],
+      "binary_sha256": "076dafabc87c84886eaeec49d72681667ddf83720012dac96a59e4e1cce9b8c9",
+      "started_utc": "2026-10-10T23:07:41.507348+00:00",
+      "exit_status": 0,
+      "wall_seconds_including_setup": 1100.193324167,
+      "finished_utc": "2026-10-10T23:26:01.682608+00:00",
+      "peak_resident_set_bytes": 11943493632,
+      "output_sha256": {
+        ".csv": "f4aa9610f5dfb1f195a0e75fe08fe3f68cbe5e32e7102622a98fcae5c799106c",
+        ".log": "7c8bd0ed6df426e1babf8d0cb1f487bc82e12dba27b08092f7e3b9b18204ad08"
+      },
+      "validated_timed_observations": 648,
+      "cases": 18,
+      "checked_warmup_calls": 0
+    },
+    "large_confirm_hub": {
+      "command": [
+        "/tmp/kkt-practical/reserve-bin/diverse_benchmark",
+        "--large",
+        "--case",
+        "hub_n262144",
+        "--repetitions",
+        "4",
+        "--warmups",
+        "1"
+      ],
+      "binary_sha256": "076dafabc87c84886eaeec49d72681667ddf83720012dac96a59e4e1cce9b8c9",
+      "started_utc": "2026-10-10T23:26:29.338883+00:00",
+      "exit_status": 0,
+      "wall_seconds_including_setup": 32.976951375,
+      "finished_utc": "2026-10-10T23:27:02.316429+00:00",
+      "peak_resident_set_bytes": 291487744,
+      "output_sha256": {
+        ".csv": "516d794f0629f5c750b57ebb417cc6e77ed7cbedf598dd112eb74094e0864f69",
+        ".log": "fef1dbfa01e159ecf2b0722fce6a7dc43e128df11fbe43443d5148b7f3e172a2"
+      },
+      "validated_timed_observations": 144,
+      "cases": 1,
+      "checked_warmup_calls": 36
+    },
+    "large_confirm_star": {
+      "command": [
+        "/tmp/kkt-practical/reserve-bin/diverse_benchmark",
+        "--large",
+        "--case",
+        "star_n1048576",
+        "--repetitions",
+        "4",
+        "--warmups",
+        "1"
+      ],
+      "binary_sha256": "076dafabc87c84886eaeec49d72681667ddf83720012dac96a59e4e1cce9b8c9",
+      "started_utc": "2026-10-10T23:27:02.347327+00:00",
+      "exit_status": 0,
+      "wall_seconds_including_setup": 53.836054958999995,
+      "finished_utc": "2026-10-10T23:27:56.184509+00:00",
+      "peak_resident_set_bytes": 564903936,
+      "output_sha256": {
+        ".csv": "fbc19b69a97c49105fc585b027b2a908cb08c1f04705fb2f0da8b53ef14eafaa",
+        ".log": "d138099857aa5478501824a7c72f3aecc5e0e527b3882276647dc02c6991c5d5"
+      },
+      "validated_timed_observations": 144,
+      "cases": 1,
+      "checked_warmup_calls": 36
     }
   },
   "stages": {
@@ -231,11 +383,79 @@
         "kkt/kkt.cpp": "c51daf98bfd2fc37d82b401ca79d5cdc8b74d9350e072161cafd35b4a10cfdf1",
         "test/contraction_test.cpp": "80a6f727e661eb1c5c654c1e82149e2750289d43253648ddaeb7d9f2b23195d9"
       },
-      "validation": "Make8simple15regression,214 independent contraction cases andcertificate pass. Three affected Bazel targets pass; hash API counters unchanged because rehash internals are outside their scope."
+      "validation": "Make8simple15regression,214 independent contraction cases andcertificate pass. Three affected Bazel targets pass; hash API counters unchanged because rehash internals are outside their scope.",
+      "commit": "2d4fbf1"
     }
   },
   "analysis_sha256": {
-    "benchmark/analyze_optimization.py": "08a3dfd0895536992f55b1c9dcf965a1e60a6488713567143283b4de34ecd45b"
+    "benchmark/analyze_optimization.py": "08a3dfd0895536992f55b1c9dcf965a1e60a6488713567143283b4de34ecd45b",
+    "benchmark/analyze_large.py": "dbe0e04a6f4dfba1013380cb19ae2005ee3c24e8792fa02f4c03e8f52b49136e",
+    "benchmark/analyze_complexity.py": "f73a88fab014a243b379b00091e7f9d74ffec46b8e24964bc9e9249fe354b275",
+    "benchmark/analyze_diverse.py": "aa6a59f52f26d7951d8683e97c75b475b105094e410096568a110b1766de61cf"
   },
-  "analysis_validation": "39/18-case identity, synthetic speedup/regression and8 malformedcampaignchecks passed; figuresvisuallyreviewed."
+  "analysis_validation": "39/18-case identity, synthetic speedup/regression and8 malformedcampaignchecks passed; figuresvisuallyreviewed.",
+  "final_revision": "2d4fbf17c8d01be9d7d416ea611014a51ba8e46a",
+  "final_validation": {
+    "bazel": "8 targets pass (cache-valid at final source); Google Benchmark executable rebuilt.",
+    "native": "8 simple,15 regression groups,214 contraction cases,independent certificate pass.",
+    "ubsan": "All native correctness suites pass -O1 -g -fsanitize=undefined; no runtime errors.",
+    "asan": "Unavailable: runtime startup failure reproduced with empty-main control, already archived.",
+    "uninstrumented_timing": "nm contains no kkt_work or WorkStats symbols; both timing binaries are arm64.",
+    "unchanged_sources": {
+      "benchmark/diverse_benchmark.cpp": "7704262a45cc5cd55af35333be9bbc3e4d71d0789664d0e7192928e7e5156654",
+      "benchmark/graph_fixtures.hpp": "6d94c080b66b6f2538cbaa1758e82d87de4af25ca1d496ec8b8fed50c41dc98d",
+      "benchmark/mst_certificate.hpp": "5e9c37e73c6a1bb78f1bfe5dca361abe9a4ddc4ea2e155a323989b6b34838495",
+      "kruskal/kruskal.cpp": "fbb245d0a2f9b2f69c59c996bd966f1f76a8cd95c560ae26622f165f6c392d8c",
+      "prim/prim.cpp": "c4b8c2c6bc1c2f02a1b5101ad9f364fd14b943db9b74b04e50a22359f1a2e2ba",
+      "boruvka/boruvka.cpp": "0c22c1ce04861597d6bb039f6827c5d622da02260e6134911b03de943e32fa3d"
+    }
+  },
+  "confirmation_plan": "A second complete39-case4rep1warmup sweep uses the identical reserve binary; primary results remain reserve.csv, with confirmation reported separately for narrow leads.",
+  "large_confirmation_plan": {
+    "cases": [
+      "hub_n262144",
+      "star_n1048576"
+    ],
+    "repetitions": 4,
+    "warmups": 1,
+    "graph_seeds": [
+      17,
+      42,
+      999
+    ],
+    "kkt_seeds": [
+      0,
+      1,
+      7
+    ],
+    "binary": "/tmp/kkt-practical/reserve-bin/diverse_benchmark",
+    "selection": "Targeted follow-up to observed leads in the primary large campaign; chosen before running these confirmations, not a preregistered family search. Full 18-case campaign and all losses remain primary evidence.",
+    "timing": "Run serially after the complete large campaign; retain both cases regardless of result."
+  },
+  "large_baseline": {
+    "raw_csv": "../large-2026-10-10/raw.csv",
+    "sha256": "1624a9daa2cd7d9d392121f0fd488915a7b5521fff81708a8330eaeec8e838f6",
+    "provenance": "LARGE_BASELINE_PROVENANCE.md",
+    "limitation": "Historical run reused after source/protocol review; old binary hash unavailable. Fresh contemporaneous competitor timings determine final-run leads."
+  },
+  "large_confirmation": {
+    "csv": "large_confirmation.csv",
+    "sha256": "c36b0e38c6d858aca80c6e87cde58ffbc0e6dbb9b021715d39d4f0af8df0b0e9",
+    "parts": [
+      "large_confirm_hub.csv",
+      "large_confirm_star.csv"
+    ],
+    "validated_timed_observations": 288,
+    "checked_warmup_calls": 72,
+    "status": "Both exact planned cases pass the complete seed/order/correctness matrix; analyzed separately from full large sweep.",
+    "case_selection": "Post hoc follow-up to observed practical leads; both results retained."
+  },
+  "final_analysis": {
+    "overall_analysis": "39 diverse matched cases (5616 timings per phase), 18 large matched cases (648 per phase), strict validation passed.",
+    "confirmation_analysis": "Complete second 39-case run, 5616 timings, identical final binary, analyzed separately.",
+    "large_analysis": "All 18 fresh final cases and 648 timings pass strict validation.",
+    "large_confirmation_analysis": "Both planned cases and 288 timings pass strict validation (4 repetitions, 1 warmup).",
+    "complexity": "378 timing records covering 1134 calls plus 180 work observations pass strict validation; separate build and arithmetic-mean protocol.",
+    "family_work": "162 observations from 54 certified graphs; exact matrix, fingerprints, counters, and dimensions validated."
+  }
 }

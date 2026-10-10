@@ -1,5 +1,65 @@
 # Improving KKT without changing the benchmark
 
+Six accepted performance commits, from `4eb3ca1` through `2d4fbf1`, reduce
+internal hashing, query indirection, contraction storage, repeated edge copies,
+and public-result rehashing. The minimum-cost cache experiment was rejected;
+its patch, raw results, and useful boundary tests are retained below.
+
+The [cumulative report](overall_analysis/report.md) compares the fresh
+`0820435` [baseline](baseline.csv) with the primary final
+[reserve run](reserve.csv), using the same compiler, fixtures, timing boundary,
+39 cases, and all four algorithms. Each phase has 5,616 certified timed results
+and 1,404 checked warmups. KKT's matched case medians improve in **39/39 cases**,
+with final/baseline ratios from **0.393x to 0.969x**. These are medians of
+matched ratios, aggregated over repetitions, sampling seeds, then graph seeds.
+
+| Example | Final / initial KKT runtime | Final KKT / Kruskal | Final KKT / Borůvka |
+| --- | ---: | ---: | ---: |
+| random_4_n65536 | 0.491x | 1.321x | 0.709x |
+| random_32_n65536 | 0.393x | 1.795x | 3.409x |
+| star_n16384 | 0.421x | 0.395x | 0.228x |
+| geometric_grid_n16384 | 0.815x | 0.966x | 0.521x |
+
+The primary and separate full-matrix confirmation runs both place KKT below
+all three competitors by case-level paired medians in six cases: all three
+hubs, the two larger stars, and the largest geometric grid. **All three hubs
+and the 16,384-vertex star** lead on every graph-level paired median in both
+runs. The geometric grid is a near-tie with Kruskal, and the 4,096-vertex
+star's case-median lead does not hold on every confirmation graph; see the
+[confirmation evidence](confirmation_analysis/report.md).
+Substantial gaps remain elsewhere: dense random graphs still favor Borůvka,
+and the hierarchical paths still favor Kruskal and Prim. The
+[cumulative change plot](overall_analysis/diverse_before_after.png) and
+[full competitor plot](overall_analysis/diverse_final_competition.png) show
+every case rather than only the wins.
+
+The [large-instance sweep](large_analysis/report.md) extends the comparison to
+1,048,576 vertices and 33,554,432 edges. Separate repeated checks support useful
+leads on a 262,144-vertex hub and a million-vertex star: paired KKT/Kruskal
+ratios are **0.816x** and **0.442x**. This does not extend to general large graphs:
+the million-vertex hub loses to Kruskal, all large random cases lose to Kruskal,
+and the three complete cases regress against the historical KKT baseline.
+The full matrix and the two post hoc confirmations remain separate below.
+
+Case counts do not measure expected performance on an application workload.
+Only three graph seeds are independent graph samples; graph ranges are not
+confidence intervals. Unchanged competitor timings also moved between phases.
+The smallest clustered case even has one graph-level before/after ratio above
+one despite its improving case median. Incremental regressions and the
+rejected experiment remain in the stage history below. These finite
+measurements establish practical improvements on this matrix, not an
+asymptotic crossover or universal KKT dominance.
+
+At final source revision `2d4fbf1`, all eight [Bazel test targets](final-bazel.log)
+pass with valid cached results. The native correctness suites also
+[pass under UBSan](final-ubsan.log), including eight simple tests, 15 regression
+groups, 214 independent contraction cases, and the certificate checks.
+Every measured MST must match an independently certified reference. The
+unchanged harness, fixtures, certificate, and competitor sources are recorded
+by hash in [metadata.json](metadata.json).
+
+## Stage 1: local heavy-edge marks
+
 The first accepted change replaces KKT's internal heavy-edge hash sets with
 byte marks indexed by the current graph's edge positions. Public verifier APIs
 still return the caller's original edge IDs; no storage depends on their range.
@@ -202,13 +262,173 @@ start from stage 5, not this candidate. Four new contraction-oracle cases for
 initialized-slot bound; rejecting the optimization does not discard its useful
 boundary checks.
 
-The final large-instance campaign retains the complete 18-case matrix. It uses
-the earlier full 648-observation baseline after a source/protocol equivalence
-review, with a fresh final run of all four algorithms. The
-[baseline provenance note](LARGE_BASELINE_PROVENANCE.md) records exact hashes,
-the unchanged fixture and timing bodies, and the limits of historical
-before/after comparisons. Fresh final-run competitor timings determine its
-winner claims.
+## Stage 7: reserve public result storage
+
+KKT now reserves the public result set's buckets once, using the known number
+of selected edges. The [stage 7 report](reserve_analysis/report.md) compares
+[stage 5](owned.csv) with [this candidate](reserve.csv); the rejected minimum
+cache is absent. The same full protocol retains 5,616 validated timed outputs
+and 1,404 checked warmups per phase. KKT improves in **22/39 cases**. The three
+stars take **70.6%, 62.7%, and 53.7%** of stage 5 runtime as their size grows;
+the largest random tree takes 84.1%.
+
+This is an accepted tradeoff, not a universal improvement. All **17 observed
+regressions** remain in the report and
+[before/after figure](reserve_analysis/diverse_before_after.png). In particular,
+`random_32_n65536` takes **1.128x**, `random_128_n16384` takes 1.076x, and
+`random_128_n4096` takes 1.053x stage 5 runtime. Unchanged competitors also move
+between runs, so these measured changes do not isolate code effects from
+machine state. The dense cases still lose to Borůvka.
+
+The [competitor figure](reserve_analysis/diverse_final_competition.png) shows
+six cases below all competitors on every graph-level paired median: all three
+hubs, the two larger stars, and the 16,384-vertex geometric grid. The geometric
+grid's primary-run lead over Kruskal is only **3.4%**. The separate full-matrix
+confirmation below qualifies that result; this primary campaign remains intact.
+
+## Full-matrix confirmation
+
+The same final binary ran all 39 cases again with the original three graph
+seeds, three sampling seeds, four repetitions, and one warmup. All **5,616 timed
+outputs and 1,404 warmups** passed correctness checks. The
+[confirmation CSV](confirmation.csv) and [report](confirmation_analysis/report.md)
+remain separate from the primary [reserve CSV](reserve.csv); neither run is
+replaced or selected according to its outcome.
+
+The same six cases lead over all competitors by paired case medians. Only
+the three hubs and the 16,384-vertex star also lead on every graph-level median
+in both full runs. The geometric grid's confirmation KKT/Kruskal ratio is
+**0.9869x**, with a graph range of **0.9780–1.0013x**: a near-tie, not a robust
+new dominance claim. The 4,096-vertex star has a stronger case-median ratio of
+**0.6999x**, but its graph range reaches **1.0377x**. Its lead is therefore
+qualified by a retained graph-level loss.
+
+Despite unchanged code, confirmation/primary KKT ratios span **0.909–1.026x**,
+with nine cases slower. The [repeat-run plot](confirmation_analysis/diverse_before_after.png)
+shows this variation and the unchanged controls; it is not an additional
+optimization result. The [confirmation competitor plot](confirmation_analysis/diverse_final_competition.png)
+retains the many cases that still favor another implementation.
+
+The [family diagnosis](FAMILY_DIAGNOSIS.md) adds 162 separately checked,
+untimed observations. Every tested hub, clustered, random, and geometric-grid
+observation uses sampling and heavy-edge filtering; the hub leads are therefore
+not all one-contraction shortcuts. Stars finish in their first contraction and
+provide no evidence of sampling's benefit. These counters establish which
+paths execute, not that sampling caused the observed timing advantage.
+
+## Final complexity diagnostics
+
+The [final diagnostic report](complexity/report.md) validates **378 raw Google
+Benchmark records covering 1,134 timed calls**, plus **180 separate logical-work
+observations**. GoogleTest checks structural work bounds, including contraction
+visits, path-query visits, median-table size, and the hierarchical path's
+recursive edge volume; it does not assert noisy wall-clock thresholds.
+
+The benchmark uses `Complexity(benchmark::oAuto)` and `SetComplexityN(n + m)`,
+the fitting feature described in the
+[official Google Benchmark guide](https://google.github.io/benchmark/user_guide.html#calculating-asymptotic-complexity-big-o).
+The [version 1.5.2 implementation](https://github.com/google/benchmark/blob/v1.5.2/src/complexity.cc)
+selects its automatic model from CPU time, then fits manual time to that model.
+Its [18 retained fitted models](complexity/builtin_complexity.json)
+are 12 `N log N`, three `N²` for dense-random KKT, and three `N` for star KKT.
+Those finite-window labels are not proofs of asymptotic complexity. Independent
+fits to manual time give KKT full-window power exponents **1.175** for `m=4n`,
+**1.379** for `m=32n`, and **1.001** for stars over 1,024–65,536 vertices.
+
+Over 1,024–262,144 vertices, counted work per `N=n+m` grows **1.77x** for
+`m=4n` and **3.06x** for `m=32n`, while the star and hierarchical-path controls
+stay nearly flat. The [work components](complexity/work_per_input.png),
+[normalized costs](complexity/normalized_costs.png), and
+[local slopes](complexity/effective_exponents.png) show why lower constants
+have not established general linear wall-clock scaling or eventual dominance.
+The counters exclude allocator internals, hash probes, cache misses, and CPU
+instructions; they are a diagnostic proxy, not a complete operation count.
+
+This diagnostic uses arithmetic means across balanced seeds, a separate Bazel
+`-O3` build, and registration-order timing. It is not pooled with the Make-based
+paired medians above. The [metadata](complexity/metadata.json) retains exact
+build profiles, binary hashes, and output provenance.
+
+The [original KKT paper](https://people.csail.mit.edu/karger/Papers/mst.pdf)
+proves expected linear time in a unit-cost random-access model with edge-weight
+comparisons and linear-time verification; expectation is over the algorithm's
+random choices for an input. That bound hides constants and does not model
+allocator or cache costs. Comparing Big-O upper bounds alone does not guarantee
+an actual crossover against another implementation. Finite fits and passing
+work-bound tests neither prove the full theorem for this implementation nor
+predict an eventual practical win.
+
+## Large-instance campaign
+
+The [complete fresh sweep](large_analysis/report.md) retains all **18 cases**,
+three graph seeds, three sampling seeds, **one repetition and zero dedicated
+warmups**, for **648 validated timed observations** across four algorithms.
+[large_final.csv](large_final.csv) is the primary evidence. It includes up to
+1,048,576 vertices and 33,554,432 edges. With only one timing per seed pair,
+the sweep is exploratory: it does not measure within-pair repeatability, and
+the nine trial blocks do not give exactly balanced algorithm positions.
+
+KKT leads all competitors by both case and every graph-level paired median in
+five cases: hubs at 65,536 and 262,144 vertices and all three stars. The hub
+fixture is a star backbone plus random edges up to `m=4n`; weights are randomized
+together, without planted light spokes. The separate [family diagnosis](FAMILY_DIAGNOSIS.md)
+checks hubs through 65,536 vertices and shows sampling and filtering, while
+stars finish through one contraction. These wins are useful measured cases, not evidence
+that larger inputs generally favor KKT.
+
+The losses remain substantial. The 1,048,576-vertex hub takes **1.269x**
+Kruskal's runtime. All nine large random cases lose to Kruskal; the million-vertex
+`m=4n` and `m=32n` cases take **3.143x** and **4.206x**, respectively. At
+65,536 vertices and `m=512n`, KKT takes **9.935x** Borůvka's runtime.
+Every complete case loses to Prim and Borůvka, with the 4,096-vertex complete
+case taking **12.135x** Borůvka's runtime. The
+[runtime curves](large_analysis/large_scaling.png),
+[paired ratios](large_analysis/large_ratios.png),
+[fixed-vertex density comparison](large_analysis/density.png), and
+[all-case competitor plot](overall_analysis/large_final_competition.png)
+retain those losses. Curves connect measured points; they do not establish
+an unmeasured crossover.
+
+The [historical before/after comparison](overall_analysis/report.md#large-suite)
+reuses every observation from the earlier 648-result baseline. KKT's matched
+case medians improve in **15/18 cases**, with final/baseline ratios down to
+**0.311x**. All three complete cases regress: **1.090x** at 2,048 vertices,
+**1.034x** at 4,096, and **1.037x** at 8,192. The
+[change plot](overall_analysis/large_before_after.png) retains these regressions
+and unchanged-competitor movement. This is historical evidence, not a freshly
+rerun baseline: the [provenance review](LARGE_BASELINE_PROVENANCE.md) establishes
+matching fixture bodies, timing protocol, compiler configuration, and core
+behavior at source level, but the old executable hash is unavailable and
+machine state cannot be reproduced. Winner claims above use only the fresh
+run's contemporaneous competitor timings.
+
+### Separate targeted confirmation
+
+After observing the large sweep, exactly two cases were selected **post hoc**:
+`hub_n262144` and `star_n1048576`. The same binary reran both with all four
+algorithms, all three graph and sampling seeds, **four repetitions and one
+warmup** per seed pair. All **288 timed outputs and 72 warmups** passed; the
+four timed positions are balanced within every seed pair. The
+[raw confirmation](large_confirmation.csv) and
+[confirmation report](large_confirmation_analysis/report.md) remain separate
+from the 18-case sweep and are not a representative recheck of the full matrix.
+
+| Confirmation case | KKT (ms) | Kruskal (ms) | Prim (ms) | Borůvka (ms) | Paired KKT / Kruskal |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Hub, n=262,144 | 52.950 | 65.195 | 398.962 | 126.993 | 0.816x |
+| Star, n=1,048,576 | 27.418 | 62.368 | 638.316 | 190.682 | 0.442x |
+
+Displayed times are hierarchical medians; paired ratios are aggregated from
+matched timings and need not equal the ratios of displayed times. Both cases
+lead all competitors on every graph-level paired median. The KKT/Kruskal graph
+ranges are **0.811–0.829x** for the hub and **0.426–0.478x** for the star.
+One of the star's 36 individual KKT/Kruskal pairs is a loss and remains in
+the data. The [confirmation runtimes](large_confirmation_analysis/large_scaling.png)
+and [ratios](large_confirmation_analysis/large_ratios.png) show the two cases
+without adding them to the primary curves. Three graph seeds and post hoc case
+selection limit generalization; these ranges are not confidence intervals.
+Exact primary and confirmation commands, executable hashes, output hashes,
+and checked record counts are retained in the [campaign metadata](metadata.json).
 
 ## Reproduction
 

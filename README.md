@@ -48,6 +48,12 @@ Alternatively, use Bazel:
 
 ### How to run benchmarks
 
+The [latest implementation investigation](benchmark/results/practical-2026-10-10/README.md)
+records six accepted optimizations, a rejected experiment, fresh complexity
+diagnostics, and repeated comparisons with Kruskal, Prim, and Borůvka.
+It retains the original fixtures, correctness gates, and all measured losses;
+the reports below also preserve the earlier implementations' results.
+
 The [four-algorithm comparison](benchmark/results/diverse-2026-10-10/README.md)
 covers 39 configurations across random graphs, grids, hubs, clusters, trees,
 paths, and complete graphs, with correctness checks and downloadable plots:
