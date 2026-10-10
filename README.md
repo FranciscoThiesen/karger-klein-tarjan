@@ -70,6 +70,11 @@ For example, `make -B -n scaling-benchmark` prints the build commands without
 executing them. Measurements describe those workloads and do not prove an
 asymptotic bound.
 
+The [2026-10-09 repair measurements](benchmark/results/repair-2026-10-09/README.md)
+retain raw timings, exact revisions, and remaining losses. On the measured
+Apple M3 Max workloads, repaired KKT is 2.2–4.5x faster than the starting
+implementation; Kruskal still wins several sparse and hierarchical-path cases.
+
 The older Google Benchmark comparison remains available:
 
 ```bash
