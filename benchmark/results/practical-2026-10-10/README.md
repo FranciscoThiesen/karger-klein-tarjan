@@ -47,13 +47,14 @@ observed regressions are retained:
 | grid_n1024 | 1.065x | 1.049–1.217x |
 
 The small grid also shows substantial movement in unchanged competitors:
-Kruskal and Prim's paired ratios rise by about 19%. This run does not isolate how much
-of that case's KKT regression comes from the code change. All control movement
+Kruskal and Prim's paired ratios rise by about 19%. This run does not isolate
+how much of that case's KKT regression comes from the code change. All control movement
 and graph ranges remain in the [before/after plot](csr_analysis/diverse_before_after.png)
 and raw comparisons; the ranges are not confidence intervals.
 
-By paired runtime ratios, KKT still has three case-level leads over all competitors: hubs with 4,096
-and 16,384 vertices and the 16,384-vertex star. Only the two hubs lead on
+By paired runtime ratios, KKT still has three case-level leads over all
+competitors: hubs with 4,096 and 16,384 vertices and the 16,384-vertex star.
+Only the two hubs lead on
 every graph-level median. Ranking the separately aggregated runtime medians
 adds the 1,024-vertex hub, but its paired KKT/Kruskal ratio is 1.013x; this close
 case is not a confirmed new win. The larger random cases remain losses: for
@@ -70,6 +71,52 @@ both for the [oracle](csr_query_oracle.log) and an
 [empty-program control](asan_empty_control.log). This startup failure is not
 counted as a passing sanitizer check. Exact source and binary hashes, validation
 results, and commands are in [metadata.json](metadata.json).
+
+## Stage 3: cheaper contraction traversal
+
+The third change labels contraction components by following each vertex's
+cheapest neighbor, removing the selected-edge adjacency lists and duplicate
+bitmap. Once contraction leaves no inter-component edges, it also skips the
+remaining edge scans. Independent oracle checks cover 210 contraction cases;
+the Make suites and four affected Bazel targets pass, including instrumented
+linear-work bounds.
+
+The [stage 3 report](contraction_analysis/report.md) compares
+[stage 2](csr.csv) with [stage 3](contraction.csv), again retaining all 39 cases,
+5,616 timed outputs, and 1,404 checked warmups per phase. KKT improves in
+**29/39 cases**. The clearest gains are the three stars, whose paired runtimes
+fall to **79.2–81.3%** of stage 2. The 65,536-vertex random cases improve by
+only about 1–2% in this stage. All ten observed regressions remain visible:
+
+| Case | Stage 3 / stage 2 runtime | Graph-level ratio range |
+| --- | ---: | ---: |
+| random_4_n1024 | 1.0858x | 0.9897–1.1089x |
+| random_32_n1024 | 1.0204x | 0.9679–1.0357x |
+| grid_n4096 | 1.0081x | 0.9202–1.0516x |
+| hub_n1024 | 1.0712x | 0.9686–1.0833x |
+| hub_n4096 | 1.0012x | 0.9756–1.0506x |
+| clustered_n4096 | 1.0167x | 0.9893–1.0323x |
+| clustered_n16384 | 1.0068x | 0.9777–1.0167x |
+| hierarchical_path_n4096 | 1.0066x | 0.9579–1.0382x |
+| complete_n512 | 1.0002x | 0.9558–1.0488x |
+| complete_n1024 | 1.0306x | 0.9910–1.0629x |
+
+In this run, all three hubs and the 16,384-vertex star beat all competitors
+by paired ratios, including every graph-level median. The additional small-hub
+lead needs caution: KKT itself takes 7.1% longer than stage 2 while the unchanged
+Kruskal control takes 18.6% longer by paired medians. This is an observed lead,
+not evidence that the contraction change created a reliable new crossover.
+See the [before/after plot](contraction_analysis/diverse_before_after.png) and
+[all-competitor plot](contraction_analysis/diverse_final_competition.png) for
+the retained gains, losses, and timing movement.
+
+The final large-instance campaign retains the complete 18-case matrix. It uses
+the earlier full 648-observation baseline after a source/protocol equivalence
+review, with a fresh final run of all four algorithms. The
+[baseline provenance note](LARGE_BASELINE_PROVENANCE.md) records exact hashes,
+the unchanged fixture and timing bodies, and the limits of historical
+before/after comparisons. Fresh final-run competitor timings determine its
+winner claims.
 
 ## Reproduction
 

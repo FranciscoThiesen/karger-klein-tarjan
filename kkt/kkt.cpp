@@ -223,23 +223,35 @@ problem remove_isolated_vertices(const problem& P)
     return problem(next_id, std::move(new_edges), P.max_edge_id);
 }
 
-// Random sampling: select edges with probability 1/2
-problem kkt_detail::random_sampling(const problem& P, std::mt19937& rng)
+// Random sampling consumes one draw per edge, preserving input order.
+// Only a temporary recursive sample substitutes parent-graph positions for IDs;
+// the public sampling wrapper retains its caller's IDs and legacy metadata.
+template <bool use_parent_positions>
+static problem sample_edges(const problem& P, std::mt19937& rng)
 {
     vector<Edge> H;
     H.reserve(P.graph_edges.size() / 2);
     KKT_WORK_ADD(sampling_calls, 1);
     KKT_WORK_ADD(sampling_edge_visits, P.graph_edges.size());
 
-    for (const Edge& e : P.graph_edges) {
+    for (size_t position = 0; position < P.graph_edges.size(); ++position) {
         if (rng() & 1u) {
-            H.push_back(e);
+            const Edge& e = P.graph_edges[position];
+            const int id = use_parent_positions ? static_cast<int>(position) : e.id;
+            H.emplace_back(e.from, e.to, e.cost, id);
         }
     }
 
     KKT_WORK_ADD(sampled_edges, H.size());
     KKT_WORK_ADD(edge_materializations, H.size());
-    return remove_isolated_vertices(problem(P.num_vertices, std::move(H), P.max_edge_id));
+    const std::int64_t max_id = use_parent_positions
+        ? static_cast<std::int64_t>(P.graph_edges.size()) : P.max_edge_id;
+    return remove_isolated_vertices(problem(P.num_vertices, std::move(H), max_id));
+}
+
+problem kkt_detail::random_sampling(const problem& P, std::mt19937& rng)
+{
+    return sample_edges<false>(P, rng);
 }
 
 // Accumulate cost of edges in solution
@@ -297,27 +309,24 @@ static void kkt_internal(problem& P, std::mt19937& rng, vector<int>& result)
 
     problem G = std::move(reduced2);
 
-    // Random sampling
-    problem H = kkt_detail::random_sampling(G, rng);
+    // Temporary sample IDs are positions in this unchanged parent graph.
+    // Recursive contraction/filtering preserves its input ID namespace.
+    problem H = sample_edges<true>(G, rng);
 
     // Recursive KKT on sampled graph
     vector<int> kkt_h_result;
     kkt_internal(H, rng, kkt_h_result);
 
-    // Membership storage is proportional to this sampled forest, not the ID range.
-    unordered_set<int> sampled_ids(kkt_h_result.begin(), kkt_h_result.end());
-    KKT_WORK_ADD(hash_insert_items, kkt_h_result.size());
-
-    // Recover endpoints in G: sampling renumbers vertices in H.
-    // Convert selected edges to tuple format for verifier
+    // Recover the sampled forest directly in G's vertex/ID namespace.
+    // H may renumber vertices, but its returned IDs still index G. Nested
+    // samples use their own positions only to construct their own verifiers.
     vector<tuple<int, int, int, int>> H_MSF;
     H_MSF.reserve(kkt_h_result.size());
-    KKT_WORK_ADD(kkt_edge_visits, G.graph_edges.size());
-    KKT_WORK_ADD(hash_lookup_calls, G.graph_edges.size());
-    for (const Edge& e : G.graph_edges) {
-        if (sampled_ids.count(e.id)) {
-            H_MSF.emplace_back(e.from, e.to, e.cost, e.id);
-        }
+    KKT_WORK_ADD(kkt_edge_visits, kkt_h_result.size());
+    for (int position : kkt_h_result) {
+        assert(position >= 0 && static_cast<size_t>(position) < G.graph_edges.size());
+        const Edge& e = G.graph_edges[static_cast<size_t>(position)];
+        H_MSF.emplace_back(e.from, e.to, e.cost, e.id);
     }
     KKT_WORK_ADD(edge_materializations, H_MSF.size());
 

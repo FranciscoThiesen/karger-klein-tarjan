@@ -198,6 +198,9 @@ TEST(Complexity, InstrumentedRandomRunsMatchIndependentlyCertifiedMsts) {
                 const auto run = collect(graph, item.n, seed);
                 EXPECT_EQ(run.result, expected);
                 expect_local_bounds(run.stats);
+                // Only the public result set still inserts hashed edge IDs.
+                EXPECT_EQ(run.stats.hash_lookup_calls, 0u);
+                EXPECT_EQ(run.stats.hash_insert_items, run.result.size());
             }
         }
     }

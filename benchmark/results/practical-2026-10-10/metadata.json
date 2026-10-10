@@ -78,6 +78,22 @@
       "wall_seconds_including_setup": 82.329627417,
       "finished_utc": "2026-10-10T22:48:49.950080+00:00",
       "peak_resident_set_bytes": 643989504
+    },
+    "sample": {
+      "command": [
+        "/tmp/kkt-practical/sample-bin/diverse_benchmark",
+        "--scale",
+        "--repetitions",
+        "4",
+        "--warmups",
+        "1"
+      ],
+      "binary_sha256": "c99d5de472ca6f19625466d55ceab39d493ad9e6508afa153a253eb683e67af6",
+      "started_utc": "2026-10-10T22:50:02.083161+00:00",
+      "exit_status": 0,
+      "wall_seconds_including_setup": 82.095080458,
+      "finished_utc": "2026-10-10T22:51:24.179378+00:00",
+      "peak_resident_set_bytes": 637435904
     }
   },
   "stages": {
@@ -127,7 +143,17 @@
         "BUILD": "505864b04216a23625c032c7c7a1ca28b3400670a34bb26770140c5f40387987",
         "Makefile": "c53d2c7745e74fc839fb92f6eb5612e357a8874983c65e599a95a22655e8ecd5"
       },
-      "validation": "Make8simple14regression,210 independent contraction oracle cases andcertificate pass. Four affected Bazel targets pass, including instrumented linear-work contraction bounds."
+      "validation": "Make8simple14regression,210 independent contraction oracle cases andcertificate pass. Four affected Bazel targets pass, including instrumented linear-work contraction bounds.",
+      "commit": "2e37b4e"
+    },
+    "sample": {
+      "description": "Temporary sampled branches use parent edge positions, eliminating hash-based forest recovery and its full-parent scan. Public IDs and RNG draws preserved; forest tuple order changes without changing classification.",
+      "source_sha256": {
+        "kkt/kkt.cpp": "353a5adaac84b402e2442225322036e70274c4bcf11b73f96580c028f23e0e41",
+        "test/regression_test.cpp": "0ce5d3f8e6e41557d25d5921d9f311e7779bb90396c56578d3a80307c4aa4b68",
+        "test/complexity_test.cpp": "f5184befed4ff1b3692a7e83948648ac54c895698cddddbfb19d461006e3d41e"
+      },
+      "validation": "Make8simple14regression,210 contraction cases andcertificate pass. Four affected Bazel targets pass; GTest confirms zero internal hash lookups and only public-output hash insertions."
     }
   },
   "analysis_sha256": {

@@ -491,24 +491,46 @@ void test_lca_adjacency_lifetime() {
 
 void test_sampling_stream() {
     const problem input(256, with_ids(hierarchical_path(256), IdLayout::signed_extremes));
+    const auto original_edges = input.graph_edges;
     for (unsigned int seed : {0u, 42u, std::numeric_limits<unsigned int>::max()}) {
         std::mt19937 actual_rng(seed);
         std::mt19937 expected_rng(seed);
         std::mt19937 replay_rng(seed);
         for (int round = 0; round < 2; ++round) {
             // Advance an independent engine exactly once per input edge.
-            // The second round deliberately continues from the first state.
-            EdgeIds expected;
+            // Keep the complete sequence so a public sample cannot expose its
+            // internal recursive position IDs or reorder retained edges.
+            std::vector<Edge> expected_edges;
+            std::vector<bool> present(input.num_vertices, false);
             for (const auto& edge : input.graph_edges) {
-                if ((expected_rng() & 1u) != 0) expected.insert(edge.id);
+                if ((expected_rng() & 1u) != 0) {
+                    expected_edges.push_back(edge);
+                    present[edge.from] = present[edge.to] = true;
+                }
             }
+            // Independently reconstruct the documented removal of isolates:
+            // retained vertices are compacted in ascending original order.
+            std::vector<int> compact(input.num_vertices, -1);
+            int expected_vertices = 0;
+            for (int vertex = 0; vertex < input.num_vertices; ++vertex)
+                if (present[vertex]) compact[vertex] = expected_vertices++;
+            for (auto& edge : expected_edges) {
+                edge.from = compact[edge.from];
+                edge.to = compact[edge.to];
+            }
+
             const auto sample = kkt_detail::random_sampling(input, actual_rng);
-            EdgeIds actual;
-            for (const auto& edge : sample.graph_edges) actual.insert(edge.id);
             const std::string context = "sampling seed " + std::to_string(seed) +
                                         ", round " + std::to_string(round);
-            require_same_ids(actual, expected, context);
+            require(sample.graph_edges == expected_edges,
+                    context + ": public IDs, order, costs, or compact endpoints changed");
+            require(sample.num_vertices == expected_vertices,
+                    context + ": wrong compact vertex count");
+            require(sample.max_edge_id == input.max_edge_id,
+                    context + ": public sampling changed legacy ID metadata");
             require(actual_rng == expected_rng, context + ": wrong generator state");
+            require(input.graph_edges == original_edges,
+                    context + ": sampling modified its input");
 
             const auto replay = kkt_detail::random_sampling(input, replay_rng);
             require(sample.graph_edges == replay.graph_edges &&
