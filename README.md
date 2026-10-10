@@ -15,6 +15,19 @@ and it simplifies the design/analysis of the algorithm.
 
 ### How to build the project
 
+For a dependency-free C++17 build and correctness tests, run:
+
+```bash
+make -j4 test
+```
+
+Objects are written to `.build/` so they do not collide with Bazel's `BUILD`
+file on case-insensitive filesystems. On macOS, Make uses the system Clang
+and its SDK; `CXX`, `CPPFLAGS`, `CXXFLAGS`, and `LDFLAGS` can be overridden.
+`make debug` builds separate sanitizer binaries in `bin/debug/`.
+
+Alternatively, use Bazel:
+
 1. Install [Bazel](https://bazel.build/)
 
 2. Run the following command on your command line:

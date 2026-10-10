@@ -7,6 +7,9 @@ cc_library(
     copts = [
         "-std=c++17",
     ],
-    deps = ["//verifier:verifier_v2"],
+    deps = [
+        "//common:edge",
+        "//verifier:verifier_v2",
+    ],
     visibility = ["//visibility:public"],
 )
