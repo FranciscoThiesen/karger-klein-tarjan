@@ -384,5 +384,10 @@ unordered_set<int> kkt(problem& P, unsigned int seed)
     std::mt19937 rng(seed);
     kkt_internal(P, rng, selected_ids);
     KKT_WORK_ADD(hash_insert_items, selected_ids.size());
-    return unordered_set<int>(selected_ids.begin(), selected_ids.end());
+    // The result size is known. Reserve buckets once instead of repeatedly
+    // growing and relinking the public set while inserting selected edges.
+    unordered_set<int> result;
+    result.reserve(selected_ids.size());
+    result.insert(selected_ids.begin(), selected_ids.end());
+    return result;
 }

@@ -126,6 +126,22 @@
       "wall_seconds_including_setup": 81.885883291,
       "finished_utc": "2026-10-10T22:56:53.489269+00:00",
       "peak_resident_set_bytes": 641581056
+    },
+    "reserve": {
+      "command": [
+        "/tmp/kkt-practical/reserve-bin/diverse_benchmark",
+        "--scale",
+        "--repetitions",
+        "4",
+        "--warmups",
+        "1"
+      ],
+      "binary_sha256": "076dafabc87c84886eaeec49d72681667ddf83720012dac96a59e4e1cce9b8c9",
+      "started_utc": "2026-10-10T22:58:52.787919+00:00",
+      "exit_status": 0,
+      "wall_seconds_including_setup": 83.525669209,
+      "finished_utc": "2026-10-10T23:00:16.314666+00:00",
+      "peak_resident_set_bytes": 653656064
     }
   },
   "stages": {
@@ -206,7 +222,16 @@
       "validation": "Make8simple15regression,214 independent contraction cases andcertificate pass. Four affected Bazel targets pass; oracle includes INT_MIN/INT_MAX weights and preserves all edge/arc/vertex pass bounds.",
       "status": "rejected",
       "candidate_patch": "minimum_candidate.patch against ba39977",
-      "decision": "Insufficient consistent benefit to retain the doubled minimum-state storage; largest random32 case regressed6% with between-run drift. Retain all evidence, restore prior implementation. Keep new extreme-weight correctness cases using original initialization bound."
+      "decision": "Insufficient consistent benefit to retain the doubled minimum-state storage; largest random32 case regressed6% with between-run drift. Retain all evidence, restore prior implementation. Keep new extreme-weight correctness cases using original initialization bound.",
+      "evidence_commit": "db0717e"
+    },
+    "reserve": {
+      "description": "Reserve final public hash-set bucket count from selected forest size before inserting. Eliminate growth rehashes on this libc++ implementation; node allocations remain. Baseline is owned, since minimum caching was rejected.",
+      "source_sha256": {
+        "kkt/kkt.cpp": "c51daf98bfd2fc37d82b401ca79d5cdc8b74d9350e072161cafd35b4a10cfdf1",
+        "test/contraction_test.cpp": "80a6f727e661eb1c5c654c1e82149e2750289d43253648ddaeb7d9f2b23195d9"
+      },
+      "validation": "Make8simple15regression,214 independent contraction cases andcertificate pass. Three affected Bazel targets pass; hash API counters unchanged because rehash internals are outside their scope."
     }
   },
   "analysis_sha256": {
