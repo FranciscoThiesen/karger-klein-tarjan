@@ -110,6 +110,40 @@ See the [before/after plot](contraction_analysis/diverse_before_after.png) and
 [all-competitor plot](contraction_analysis/diverse_final_competition.png) for
 the retained gains, losses, and timing movement.
 
+## Stage 4: direct sampled-forest recovery
+
+Temporary sampled branches now carry parent-edge positions, so KKT recovers
+the sampled forest directly without a hash lookup for every parent edge.
+Public IDs and RNG draws are preserved. Forest tuple order changes, while
+exact MST validation remains required. The Make suites and four affected
+Bazel targets pass; instrumented checks confirm that internal hash lookups
+are gone and hash insertions remain only at the public output boundary.
+
+The [stage 4 report](sample_analysis/report.md) compares
+[stage 3](contraction.csv) with [stage 4](sample.csv), preserving all 39 cases,
+5,616 validated timed outputs, and 1,404 checked warmups per phase. KKT's paired
+runtime improves in **33/39 cases**. The 65,536-vertex `m=4n` random case takes
+**92.8%** of stage 3 runtime; the 16,384-vertex planted-tree case takes **92.0%**.
+The largest `m=32n` case changes little at 99.2%. All six regressions remain:
+
+| Case | Stage 4 / stage 3 runtime |
+| --- | ---: |
+| random_32_n1024 | 1.002x |
+| random_128_n16384 | 1.066x |
+| random_dense_anchor_n1000 | 1.040x |
+| clustered_n1024 | 1.052x |
+| planted_tree_n1024 | 1.017x |
+| star_n4096 | 1.034x |
+
+The two hubs at 4,096 and 16,384 vertices and the 16,384-vertex star remain
+below all competitors on every graph-level paired median. The small hub's
+earlier lead disappears: its paired KKT/Kruskal ratio is 1.053x despite KKT's
+own improvement. Unchanged competitor timings also move between phases,
+reinforcing the need to treat close leads cautiously. The
+[before/after plot](sample_analysis/diverse_before_after.png) and
+[competitor plot](sample_analysis/diverse_final_competition.png) retain the
+full comparison and descriptive graph ranges.
+
 The final large-instance campaign retains the complete 18-case matrix. It uses
 the earlier full 648-observation baseline after a source/protocol equivalence
 review, with a fresh final run of all four algorithms. The

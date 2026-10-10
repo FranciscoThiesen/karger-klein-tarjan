@@ -179,9 +179,10 @@ pair<vector<int>, problem> boruvka_step(const problem& P)
             problem(next_non_isolated_id, std::move(remaining_edges), P.max_edge_id)};
 }
 
-// Remove isolated vertices from the graph
+// Remove isolates while consuming the existing edge vector. Only endpoints
+// change: edge order, weights, IDs, and legacy metadata are preserved.
 // Complexity: O(n + m)
-problem remove_isolated_vertices(const problem& P)
+static problem remove_isolated_vertices_owned(problem P)
 {
     int prev_size = P.num_vertices;
     vector<int> degree(prev_size, 0);
@@ -194,12 +195,11 @@ problem remove_isolated_vertices(const problem& P)
         degree[e.to]++;
     }
 
+    // An empty vertex set has no minimum degree. It needs no compaction.
+    if (prev_size == 0) return P;
     KKT_WORK_ADD(isolation_vertex_visits, prev_size);
     int min_degree = *min_element(degree.begin(), degree.end());
-    if (min_degree > 0) {
-        KKT_WORK_ADD(edge_materializations, P.graph_edges.size());
-        return P;
-    }
+    if (min_degree > 0) return P;
 
     // Renumber non-isolated vertices
     int next_id = 0;
@@ -212,15 +212,28 @@ problem remove_isolated_vertices(const problem& P)
         }
     }
 
-    vector<Edge> new_edges;
-    new_edges.reserve(P.graph_edges.size());
+    // Relabel the already-owned records instead of allocating/copying them.
     KKT_WORK_ADD(isolation_edge_visits, P.graph_edges.size());
-    KKT_WORK_ADD(edge_materializations, P.graph_edges.size());
-    for (const Edge& e : P.graph_edges) {
-        new_edges.emplace_back(new_node_id[e.from], new_node_id[e.to], e.cost, e.id);
+    for (Edge& e : P.graph_edges) {
+        e.from = new_node_id[e.from];
+        e.to = new_node_id[e.to];
     }
+    P.num_vertices = next_id;
+    return P;
+}
 
-    return problem(next_id, std::move(new_edges), P.max_edge_id);
+// Preserve the existing non-consuming entry point for callers with an lvalue.
+problem remove_isolated_vertices(const problem& P)
+{
+    KKT_WORK_ADD(edge_materializations, P.graph_edges.size());
+    return remove_isolated_vertices_owned(P);
+}
+
+// Sampling and filtering already construct temporary problems; transfer their
+// vectors into the owned helper without a second allocation or edge copy.
+static problem remove_isolated_vertices(problem&& P)
+{
+    return remove_isolated_vertices_owned(std::move(P));
 }
 
 // Random sampling consumes one draw per edge, preserving input order.

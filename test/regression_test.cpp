@@ -20,6 +20,9 @@
 #include <utility>
 #include <vector>
 
+// Existing non-consuming isolation entry point.
+problem remove_isolated_vertices(const problem& input);
+
 namespace {
 
 using GraphEdge = std::tuple<int, int, int, int>;
@@ -489,6 +492,46 @@ void test_lca_adjacency_lifetime() {
     check(from_cleared, "cleared adjacency");
 }
 
+void test_isolated_vertex_compaction() {
+    const auto check = [](const problem& input, int expected_vertices,
+                          const Graph& expected_edges, const std::string& context) {
+        const auto original_edges = input.graph_edges;
+        const int original_vertices = input.num_vertices;
+        const auto original_max_id = input.max_edge_id;
+        const auto compacted = remove_isolated_vertices(input);
+        require(compacted.num_vertices == expected_vertices &&
+                    compacted.graph_edges == as_edges(expected_edges) &&
+                    compacted.max_edge_id == original_max_id,
+                context + ": wrong compacted graph, edge order, IDs, or metadata");
+        require(input.graph_edges == original_edges &&
+                    input.num_vertices == original_vertices &&
+                    input.max_edge_id == original_max_id,
+                context + ": isolation modified its const input");
+    };
+
+    const Graph graph{{1, 4, 7, std::numeric_limits<int>::min()},
+                      {4, 6, -3, std::numeric_limits<int>::max()},
+                      {1, 6, 9, -1}, {6, 4, 12, 0}};
+    const Graph compacted{{0, 1, 7, std::numeric_limits<int>::min()},
+                          {1, 2, -3, std::numeric_limits<int>::max()},
+                          {0, 2, 9, -1}, {2, 1, 12, 0}};
+    check(problem(8, as_edges(graph), 0), 3, compacted, "isolate compaction");
+    check(problem(3, as_edges(compacted), -7), 3, compacted, "no isolates");
+    for (int n : {0, 9}) {
+        const problem empty(n, std::vector<Edge>{}, 123456789);
+        check(empty, 0, {}, "empty isolation n=" + std::to_string(n));
+        std::mt19937 rng(918273);
+        const auto before = rng;
+        const auto sample = kkt_detail::random_sampling(empty, rng);
+        require(sample.num_vertices == 0 && sample.graph_edges.empty() &&
+                    sample.max_edge_id == empty.max_edge_id,
+                "empty public sampling changed vertices or metadata");
+        require(rng == before, "empty public sampling consumed random draws");
+        require(empty.num_vertices == n && empty.graph_edges.empty(),
+                "empty public sampling modified its input");
+    }
+}
+
 void test_sampling_stream() {
     const problem input(256, with_ids(hierarchical_path(256), IdLayout::signed_extremes));
     const auto original_edges = input.graph_edges;
@@ -587,6 +630,7 @@ int main() {
     run("contiguous queries preserve negative, equal, and empty paths", test_verifier_query_layout);
     run("verifier empty inputs and components without queries", test_verifier_empty_components);
     run("LCA queries outlive input adjacency", test_lca_adjacency_lifetime);
+    run("isolate compaction preserves inputs and handles empty samples", test_isolated_vertex_compaction);
     run("sampling consumes a continuing reproducible stream", test_sampling_stream);
     run("KKT preserves global C random state", test_global_random_state);
     std::cout << passed << " passed, " << failed << " failed\n";

@@ -94,6 +94,22 @@
       "wall_seconds_including_setup": 82.095080458,
       "finished_utc": "2026-10-10T22:51:24.179378+00:00",
       "peak_resident_set_bytes": 637435904
+    },
+    "owned": {
+      "command": [
+        "/tmp/kkt-practical/owned-bin/diverse_benchmark",
+        "--scale",
+        "--repetitions",
+        "4",
+        "--warmups",
+        "1"
+      ],
+      "binary_sha256": "b31b65fcc29506cfd54d62bcb23c768f3e3f5ff209c0e39116f65ff7feea700f",
+      "started_utc": "2026-10-10T22:53:05.598624+00:00",
+      "exit_status": 0,
+      "wall_seconds_including_setup": 80.816593667,
+      "finished_utc": "2026-10-10T22:54:26.416207+00:00",
+      "peak_resident_set_bytes": 645496832
     }
   },
   "stages": {
@@ -153,7 +169,16 @@
         "test/regression_test.cpp": "0ce5d3f8e6e41557d25d5921d9f311e7779bb90396c56578d3a80307c4aa4b68",
         "test/complexity_test.cpp": "f5184befed4ff1b3692a7e83948648ac54c895698cddddbfb19d461006e3d41e"
       },
-      "validation": "Make8simple14regression,210 contraction cases andcertificate pass. Four affected Bazel targets pass; GTest confirms zero internal hash lookups and only public-output hash insertions."
+      "validation": "Make8simple14regression,210 contraction cases andcertificate pass. Four affected Bazel targets pass; GTest confirms zero internal hash lookups and only public-output hash insertions.",
+      "commit": "af12309"
+    },
+    "owned": {
+      "description": "Consume temporary isolation inputs and compact endpoints in their existing vectors; keep non-consuming API and fix empty minimum lookup.",
+      "source_sha256": {
+        "kkt/kkt.cpp": "c5e073193c63881327af0da7cbf9ff2b2f3342d924c39be9baaa43ecbdb61277",
+        "test/regression_test.cpp": "dda424d498b064e9bc3da4fcf7a723997b3d7da1be41ab7818afa5f0a3cc970b"
+      },
+      "validation": "Make8simple15regression,210 contraction cases andcertificate pass. Three affected Bazel targets pass; compaction regressions check signed IDs, exact order, immutable inputs, zero vertices and empty sampling RNG."
     }
   },
   "analysis_sha256": {
