@@ -21,7 +21,7 @@ cc_library(
 cc_library(
     name = "verifier_v2",
     srcs = ["verifier_v2.cpp"],
-    hdrs = ["verifier_v2.hpp"],
+    hdrs = ["verifier_v2.hpp", "median_table.hpp"],
     copts = [
         "-std=c++17",
     ],

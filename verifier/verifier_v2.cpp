@@ -3,6 +3,7 @@
 // ÚNICOS!!!!!
 
 #include "verifier_v2.hpp"
+#include "median_table.hpp"
 // #include "../boruvka/boruvka.hpp"
 // #include "../graph_utils/graph_utils.hpp"
 // #include "../kruskal/kruskal.hpp"
@@ -11,7 +12,6 @@
 // #include "../union_find/union_find.hpp"
 
 #include <cassert>
-#include <functional>
 #include <iostream>
 #include <numeric>
 #include <tuple>
@@ -237,40 +237,6 @@ struct tree_path_maxima
 		}
 	}
 
-	vector<int> median_table(int h)
-	{
-		vector<int> T((1 << h) + 1, 0);
-		vector<int> median_T(1 << (h + 1), 0);
-
-		std::function<int(int, int, int)> subsets = [&](int x, int y, int z) {
-			if (x < y) return z;
-			if (y == 0)
-			{
-				T[z] = 0;
-				return z + 1;
-			}
-			int q = subsets(x - 1, y - 1, z);
-			for (int i = z; i < q; ++i) T[i] |= 1 << (x - 1);
-			return subsets(x - 1, y, q);
-		};
-
-		for (int s = 0; s <= h; ++s)
-		{
-			for (int k = 0; k <= s; ++k)
-			{
-				int p = subsets(h - s, k, 0);
-				int q = subsets(s, k, p);
-				q = subsets(s, k + 1, q);
-				for (int i = 0; i < p; ++i)
-				{
-					int b = (1 << (s + 1)) * T[i] + (1 << s);
-					for (int j = p; j < q; ++j) { median_T[b + T[j]] = s; }
-				}
-			}
-		}
-		return median_T;
-	}
-
 	int down(int A, int B) { return B & (~(A | B) ^ (A + (A | ~B))); }
 
 	void visit(int v, int S)
@@ -306,7 +272,7 @@ struct tree_path_maxima
 		fill(D.begin(), D.end(), 0);
 		init(root, 0);
 		P = vector<int>(height + 1, 0);
-		median = median_table(height);
+		median = verifier_detail::median_table(height);
 		visit(root, 0);
 		return answer;
 	}

@@ -1,6 +1,8 @@
 // Deterministic correctness regressions; no external test framework or timings.
 #include "../kkt/kkt.hpp"
 #include "../kruskal/kruskal.hpp"
+#include "../verifier/median_table.hpp"
+#include "../verifier/verifier_v2.hpp"
 
 #include <algorithm>
 #include <cstdint>
@@ -12,6 +14,7 @@
 #include <string>
 #include <tuple>
 #include <unordered_set>
+#include <utility>
 #include <vector>
 
 namespace {
@@ -191,6 +194,100 @@ void test_disconnected_graphs() {
     check_id_layouts(graph, 103, "disconnected graph with isolated vertices");
 }
 
+void test_median_tables() {
+    for (int height = 0; height <= 20; ++height) {
+        const auto table = verifier_detail::median_table(height);
+        const unsigned int size = 1u << (height + 1);
+        require(table.size() == size, "median table size at height " +
+                                         std::to_string(height));
+        require(table[0] == 0, "empty mask must have median zero");
+        for (unsigned int mask = 1; mask < size; ++mask) {
+            // Independent rank oracle: enumerate set-bit positions in order,
+            // then select the upper median directly, without a recurrence.
+            int positions[21];
+            int count = 0;
+            for (int bit = 0; bit <= height; ++bit) {
+                if ((mask & (1u << bit)) != 0) positions[count++] = bit;
+            }
+            if (table[mask] != positions[count / 2]) {
+                throw std::runtime_error("median mismatch at height " +
+                                         std::to_string(height) + ", mask " +
+                                         std::to_string(mask));
+            }
+        }
+    }
+}
+
+EdgeIds slow_heavy_edges(const Graph& graph, const Graph& forest, int n) {
+    std::vector<std::vector<std::pair<int, int>>> adjacency(n);
+    for (const auto& edge : forest) {
+        const auto [from, to, weight, id] = edge;
+        (void)id;
+        adjacency[from].emplace_back(to, weight);
+        adjacency[to].emplace_back(from, weight);
+    }
+
+    EdgeIds heavy;
+    for (const auto& edge : graph) {
+        const auto [from, to, weight, id] = edge;
+        std::vector<bool> visited(n, false);
+        std::vector<int> maximum(n, std::numeric_limits<int>::min());
+        std::vector<int> pending{from};
+        visited[from] = true;
+        while (!pending.empty() && !visited[to]) {
+            const int vertex = pending.back();
+            pending.pop_back();
+            for (const auto& [next, cost] : adjacency[vertex]) {
+                if (visited[next]) continue;
+                visited[next] = true;
+                maximum[next] = std::max(maximum[vertex], cost);
+                pending.push_back(next);
+            }
+        }
+        // A missing forest path makes the edge F-light regardless of its cost.
+        if (visited[to] && weight > maximum[to]) heavy.insert(id);
+    }
+    return heavy;
+}
+
+void check_forest_probes(Graph forest, int n, const std::string& context) {
+    Graph graph = forest;
+    // Probe the strict comparison immediately below, at, and above every
+    // forest-edge weight, including parallel edges with equal weights.
+    for (const auto& edge : forest) {
+        const auto [from, to, weight, id] = edge;
+        (void)id;
+        for (int delta : {-1, 0, 1}) graph.emplace_back(from, to, weight + delta, 0);
+    }
+    std::mt19937 rng(12345);
+    for (int i = 0; i < n * 8 && n > 1; ++i) {
+        const int from = static_cast<int>(rng() % n);
+        int to = static_cast<int>(rng() % (n - 1));
+        if (to >= from) ++to;
+        graph.emplace_back(from, to, static_cast<int>(rng() % (n * 4 + 1)), 0);
+    }
+    graph = with_ids(std::move(graph), IdLayout::signed_extremes);
+    std::copy_n(graph.begin(), forest.size(), forest.begin());
+    const auto expected = slow_heavy_edges(graph, forest, n);
+    require_same_ids(verify_general_graph(graph, forest, n), expected, context);
+}
+
+void test_forest_heavy_edges() {
+    check_forest_probes({}, 7, "verifier isolated vertices and cross-component edges");
+    for (int n : {2, 9, 32, 65, 256}) {
+        check_forest_probes(hierarchical_path(n), n,
+                           "verifier hierarchical path n=" + std::to_string(n));
+    }
+
+    std::mt19937 rng(98123);
+    Graph forest;
+    append_component(forest, 0, 25, 24, rng);
+    append_component(forest, 25, 17, 16, rng);
+    append_component(forest, 42, 9, 8, rng);
+    assign_unique_weights(forest, rng);
+    check_forest_probes(forest, 58, "verifier disconnected forest and isolated vertices");
+}
+
 }  // namespace
 
 int main() {
@@ -211,6 +308,8 @@ int main() {
     run("recursive hierarchical paths", test_recursive_paths);
     run("deterministic random graphs", test_random_graphs);
     run("disconnected minimum spanning forests", test_disconnected_graphs);
+    run("exhaustive upper-median tables through height 20", test_median_tables);
+    run("forest heavy edges against direct path searches", test_forest_heavy_edges);
     std::cout << passed << " passed, " << failed << " failed\n";
     return failed == 0 ? 0 : 1;
 }
