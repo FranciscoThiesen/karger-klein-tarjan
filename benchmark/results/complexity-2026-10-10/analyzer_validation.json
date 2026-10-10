@@ -1,0 +1,140 @@
+[
+  {
+    "kind": "timing",
+    "case": "missing_raw_repetition",
+    "rejected": true,
+    "message": "timing instance ('KKT', 'random_4', 1024, 17): expected exactly 3 raw repetitions, got 2"
+  },
+  {
+    "kind": "timing",
+    "case": "duplicate_raw_repetition",
+    "rejected": true,
+    "message": "timing instance ('KKT', 'random_4', 1024, 17): expected exactly 3 raw repetitions, got 4"
+  },
+  {
+    "kind": "timing",
+    "case": "benchmark_error",
+    "rejected": true,
+    "message": "timing record 0: benchmark error: injected"
+  },
+  {
+    "kind": "timing",
+    "case": "missing_seed_counter",
+    "rejected": true,
+    "message": "timing record 0, graph_seed: expected an integer"
+  },
+  {
+    "kind": "timing",
+    "case": "missing_edge_counter",
+    "rejected": true,
+    "message": "timing record 0, edges: expected an integer"
+  },
+  {
+    "kind": "timing",
+    "case": "wrong_sampling_seed_count",
+    "rejected": true,
+    "message": "timing record 0: unexpected sampling_seeds"
+  },
+  {
+    "kind": "timing",
+    "case": "duplicate_repetition_index",
+    "rejected": true,
+    "message": "timing instance ('KKT', 'random_4', 1024, 17): duplicate or missing repetition indices"
+  },
+  {
+    "kind": "timing",
+    "case": "mixed_explicit_indices",
+    "rejected": true,
+    "message": "timing instance ('KKT', 'random_4', 1024, 17): mixed explicit/implicit repetition indices"
+  },
+  {
+    "kind": "timing",
+    "case": "nonfinite_time",
+    "rejected": true,
+    "message": "timing record 0, real_time: expected a positive finite number"
+  },
+  {
+    "kind": "timing",
+    "case": "zero_time",
+    "rejected": true,
+    "message": "timing record 0, real_time: expected a positive finite number"
+  },
+  {
+    "kind": "timing",
+    "case": "unknown_unit",
+    "rejected": true,
+    "message": "timing record 0: unknown time unit"
+  },
+  {
+    "kind": "timing",
+    "case": "bool_time",
+    "rejected": true,
+    "message": "timing record 0, real_time: expected a positive finite number"
+  },
+  {
+    "kind": "timing",
+    "case": "converted_time_overflow",
+    "rejected": true,
+    "message": "timing record 0, converted real_time: expected a positive finite number"
+  },
+  {
+    "kind": "work",
+    "case": "missing_seed",
+    "rejected": true,
+    "message": "work CSV incomplete: 179/180 observations; first missing ('hierarchical_path', 262144, 999, 7)"
+  },
+  {
+    "kind": "work",
+    "case": "duplicate_seed",
+    "rejected": true,
+    "message": "work line 182: unexpected or duplicate sample ('random_4', 1024, 17, 0)"
+  },
+  {
+    "kind": "work",
+    "case": "failed_validation",
+    "rejected": true,
+    "message": "work line 2: failed MST validation"
+  },
+  {
+    "kind": "work",
+    "case": "missing_counter",
+    "rejected": true,
+    "message": "work line 2, kkt_calls: expected an integer"
+  },
+  {
+    "kind": "work",
+    "case": "negative_counter",
+    "rejected": true,
+    "message": "work line 2: negative kkt_calls"
+  },
+  {
+    "kind": "work",
+    "case": "fractional_counter",
+    "rejected": true,
+    "message": "work line 2, kkt_calls: expected an integer"
+  },
+  {
+    "kind": "work",
+    "case": "bad_proxy_sum",
+    "rejected": true,
+    "message": "work line 2: proxy disagrees with its registered components"
+  },
+  {
+    "kind": "work",
+    "case": "unbalanced_depth",
+    "rejected": true,
+    "message": "work line 2: missing or unbalanced instrumentation"
+  },
+  {
+    "kind": "work",
+    "case": "unknown_graph_seed",
+    "rejected": true,
+    "message": "work line 2: unexpected or duplicate sample ('random_4', 1024, 123, 0)"
+  },
+  {
+    "kind": "work",
+    "case": "wrong_edge_count",
+    "rejected": true,
+    "message": "work line 2: inconsistent graph metadata"
+  }
+]

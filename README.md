@@ -73,6 +73,21 @@ python3 benchmark/analyze_large.py large.csv --output-dir large-plots --expected
 This exploratory sweep varies graph and sampling seeds. Close results need
 additional repetitions; its timing protocol differs from the smaller sweep.
 
+The [complexity diagnostics](benchmark/results/complexity-2026-10-10/README.md)
+separate logical work from elapsed time. GoogleTest checks deterministic work
+bounds and correctness; Google Benchmark fits finite timing ranges:
+
+```bash
+bazel test //:complexity_test -c opt --enable_bzlmod=false
+bazel run //benchmark:work_sweep -c opt --enable_bzlmod=false -- --large > work.csv
+bazel run //benchmark:complexity_benchmark -c opt --enable_bzlmod=false -- --benchmark_out=timing.json --benchmark_out_format=json
+python3 benchmark/analyze_complexity.py --work-csv work.csv --timing-json timing.json --output-dir complexity-plots
+```
+
+The work sweep also builds with `make work-sweep`. Instrumentation is enabled
+only in dedicated libraries; normal builds have no counter collection. Neither
+passing tests nor a fitted complexity label proves an asymptotic bound.
+
 The dependency-free scaling benchmark varies vertex count at fixed densities,
 varies density at fixed vertex count, and includes hierarchical paths:
 

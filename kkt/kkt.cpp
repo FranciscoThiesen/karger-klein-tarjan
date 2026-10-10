@@ -1,5 +1,6 @@
 #include "kkt.hpp"
 #include "random_sampling.hpp"
+#include "../common/work_stats.hpp"
 #include "../verifier/verifier_v2.hpp"
 #include <algorithm>
 #include <cassert>
@@ -21,8 +22,13 @@ pair<vector<int>, problem> boruvka_step(const problem& P)
     int n = P.num_vertices;
     vector<int> smallest_incident_edge(n, -1);
     int total_edges = static_cast<int>(P.graph_edges.size());
+    KKT_WORK_ADD(contraction_calls, 1);
+    KKT_WORK_ADD(contraction_vertices, n);
+    KKT_WORK_ADD(contraction_edges, total_edges);
+    KKT_WORK_ADD(initialized_slots, n);
 
     // Find minimum incident edge for each vertex
+    KKT_WORK_ADD(contraction_edge_visits, total_edges);
     for (int i = 0; i < total_edges; ++i) {
         const Edge& e = P.graph_edges[i];
         if (smallest_incident_edge[e.from] == -1 ||
@@ -39,6 +45,7 @@ pair<vector<int>, problem> boruvka_step(const problem& P)
     vector<int> selected_edges;
     selected_edges.reserve(min(n, total_edges));
     vector<int> adjacency_head(n, -1), adjacency_to, adjacency_next;
+    KKT_WORK_ADD(initialized_slots, static_cast<std::uint64_t>(total_edges) + n);
     adjacency_to.reserve(2 * selected_edges.capacity());
     adjacency_next.reserve(2 * selected_edges.capacity());
     auto add_arc = [&](int from, int to) {
@@ -48,6 +55,7 @@ pair<vector<int>, problem> boruvka_step(const problem& P)
     };
 
     // Build component graph from selected edges
+    KKT_WORK_ADD(contraction_vertex_visits, n);
     for (int i = 0; i < n; ++i) {
         if (smallest_incident_edge[i] == -1) continue;
         int edge_index = smallest_incident_edge[i];
@@ -62,7 +70,9 @@ pair<vector<int>, problem> boruvka_step(const problem& P)
     // Label components using a flat adjacency list and an iterative traversal.
     int next_component_id = 0;
     vector<int> super_node_id(n, -1), dfs_stack;
+    KKT_WORK_ADD(initialized_slots, n);
     dfs_stack.reserve(n);
+    KKT_WORK_ADD(contraction_vertex_visits, n);
     for (int start = 0; start < n; ++start) {
         if (super_node_id[start] != -1) continue;
         super_node_id[start] = next_component_id++;
@@ -70,7 +80,9 @@ pair<vector<int>, problem> boruvka_step(const problem& P)
         while (!dfs_stack.empty()) {
             const int node = dfs_stack.back();
             dfs_stack.pop_back();
+            KKT_WORK_ADD(contraction_vertex_visits, 1);
             for (int arc = adjacency_head[node]; arc != -1; arc = adjacency_next[arc]) {
+                KKT_WORK_ADD(contraction_arc_visits, 1);
                 const int next = adjacency_to[arc];
                 if (super_node_id[next] != -1) continue;
                 super_node_id[next] = super_node_id[node];
@@ -81,6 +93,8 @@ pair<vector<int>, problem> boruvka_step(const problem& P)
 
     // Count degrees of super-nodes to remove isolated ones
     vector<int> super_node_degree(next_component_id, 0);
+    KKT_WORK_ADD(initialized_slots, next_component_id);
+    KKT_WORK_ADD(contraction_edge_visits, total_edges);
     for (int i = 0; i < total_edges; ++i) {
         const Edge& e = P.graph_edges[i];
         if (super_node_id[e.from] != super_node_id[e.to]) {
@@ -91,7 +105,9 @@ pair<vector<int>, problem> boruvka_step(const problem& P)
 
     // Renumber non-isolated super-nodes
     vector<int> super_node_new_id(next_component_id, 0);
+    KKT_WORK_ADD(initialized_slots, next_component_id);
     int next_non_isolated_id = 0;
+    KKT_WORK_ADD(contraction_vertex_visits, next_component_id);
     for (int i = 0; i < next_component_id; ++i) {
         if (super_node_degree[i] > 0) {
             super_node_new_id[i] = next_non_isolated_id++;
@@ -103,6 +119,8 @@ pair<vector<int>, problem> boruvka_step(const problem& P)
     // work, without hashing or clearing an n-sized array for every bucket.
     vector<int> bucket_head(next_non_isolated_id, -1);
     vector<int> bucket_next(total_edges, -1);
+    KKT_WORK_ADD(initialized_slots, static_cast<std::uint64_t>(next_non_isolated_id) + total_edges);
+    KKT_WORK_ADD(contraction_edge_visits, total_edges);
     for (int i = 0; i < total_edges; ++i) {
         const Edge& e = P.graph_edges[i];
         if (super_node_id[e.from] == super_node_id[e.to]) continue;
@@ -114,11 +132,14 @@ pair<vector<int>, problem> boruvka_step(const problem& P)
 
     vector<int> seen_from(next_non_isolated_id, -1);
     vector<int> output_index(next_non_isolated_id, -1);
+    KKT_WORK_ADD(initialized_slots, 2ULL * next_non_isolated_id);
     vector<Edge> remaining_edges;
     const long long max_pairs = 1LL * next_non_isolated_id * (next_non_isolated_id - 1) / 2;
     remaining_edges.reserve(static_cast<size_t>(min<long long>(total_edges, max_pairs)));
+    KKT_WORK_ADD(contraction_vertex_visits, next_non_isolated_id);
     for (int from = 0; from < next_non_isolated_id; ++from) {
         for (int i = bucket_head[from]; i != -1; i = bucket_next[i]) {
+            KKT_WORK_ADD(contraction_edge_visits, 1);
             const Edge& e = P.graph_edges[i];
             const int to = max(super_node_new_id[super_node_id[e.from]],
                                super_node_new_id[super_node_id[e.to]]);
@@ -126,12 +147,16 @@ pair<vector<int>, problem> boruvka_step(const problem& P)
                 seen_from[to] = from;
                 output_index[to] = static_cast<int>(remaining_edges.size());
                 remaining_edges.emplace_back(from, to, e.cost, e.id);
+                KKT_WORK_ADD(edge_materializations, 1);
             } else if (e.cost < remaining_edges[output_index[to]].cost) {
                 remaining_edges[output_index[to]] = Edge(from, to, e.cost, e.id);
+                KKT_WORK_ADD(edge_materializations, 1);
             }
         }
     }
 
+    KKT_WORK_ADD(contraction_output_vertices, next_non_isolated_id);
+    KKT_WORK_ADD(contraction_output_edges, remaining_edges.size());
     return {std::move(selected_edges),
             problem(next_non_isolated_id, std::move(remaining_edges), P.max_edge_id)};
 }
@@ -142,18 +167,27 @@ problem remove_isolated_vertices(const problem& P)
 {
     int prev_size = P.num_vertices;
     vector<int> degree(prev_size, 0);
+    KKT_WORK_ADD(isolation_calls, 1);
+    KKT_WORK_ADD(initialized_slots, prev_size);
+    KKT_WORK_ADD(isolation_edge_visits, P.graph_edges.size());
 
     for (const Edge& e : P.graph_edges) {
         degree[e.from]++;
         degree[e.to]++;
     }
 
+    KKT_WORK_ADD(isolation_vertex_visits, prev_size);
     int min_degree = *min_element(degree.begin(), degree.end());
-    if (min_degree > 0) return P;
+    if (min_degree > 0) {
+        KKT_WORK_ADD(edge_materializations, P.graph_edges.size());
+        return P;
+    }
 
     // Renumber non-isolated vertices
     int next_id = 0;
     vector<int> new_node_id(prev_size, -1);
+    KKT_WORK_ADD(initialized_slots, prev_size);
+    KKT_WORK_ADD(isolation_vertex_visits, prev_size);
     for (int i = 0; i < prev_size; ++i) {
         if (degree[i] > 0) {
             new_node_id[i] = next_id++;
@@ -162,6 +196,8 @@ problem remove_isolated_vertices(const problem& P)
 
     vector<Edge> new_edges;
     new_edges.reserve(P.graph_edges.size());
+    KKT_WORK_ADD(isolation_edge_visits, P.graph_edges.size());
+    KKT_WORK_ADD(edge_materializations, P.graph_edges.size());
     for (const Edge& e : P.graph_edges) {
         new_edges.emplace_back(new_node_id[e.from], new_node_id[e.to], e.cost, e.id);
     }
@@ -174,6 +210,8 @@ problem kkt_detail::random_sampling(const problem& P, std::mt19937& rng)
 {
     vector<Edge> H;
     H.reserve(P.graph_edges.size() / 2);
+    KKT_WORK_ADD(sampling_calls, 1);
+    KKT_WORK_ADD(sampling_edge_visits, P.graph_edges.size());
 
     for (const Edge& e : P.graph_edges) {
         if (rng() & 1u) {
@@ -181,6 +219,8 @@ problem kkt_detail::random_sampling(const problem& P, std::mt19937& rng)
         }
     }
 
+    KKT_WORK_ADD(sampled_edges, H.size());
+    KKT_WORK_ADD(edge_materializations, H.size());
     return remove_isolated_vertices(problem(P.num_vertices, std::move(H), P.max_edge_id));
 }
 
@@ -212,6 +252,10 @@ vector<Edge> get_mst_edges_from_problem(const unordered_set<int>& mst_id, const 
 // Append only selected IDs; recursive work must scale with the current graph.
 static void kkt_internal(problem& P, std::mt19937& rng, vector<int>& result)
 {
+    KKT_WORK_RECURSION();
+    KKT_WORK_ADD(kkt_calls, 1);
+    KKT_WORK_ADD(kkt_vertices, P.num_vertices);
+    KKT_WORK_ADD(kkt_edges, P.graph_edges.size());
     if (P.graph_edges.empty()) {
         return;
     }
@@ -226,6 +270,8 @@ static void kkt_internal(problem& P, std::mt19937& rng, vector<int>& result)
 
     auto [edges2, reduced2] = boruvka_step(reduced1);
     result.insert(result.end(), edges2.begin(), edges2.end());
+    KKT_WORK_ROOT_SET(root_after_two_vertices, reduced2.num_vertices);
+    KKT_WORK_ROOT_SET(root_after_two_edges, reduced2.graph_edges.size());
 
     if (reduced2.num_vertices == 0 || reduced2.graph_edges.empty()) {
         return;
@@ -242,20 +288,26 @@ static void kkt_internal(problem& P, std::mt19937& rng, vector<int>& result)
 
     // Membership storage is proportional to this sampled forest, not the ID range.
     unordered_set<int> sampled_ids(kkt_h_result.begin(), kkt_h_result.end());
+    KKT_WORK_ADD(hash_insert_items, kkt_h_result.size());
 
     // Recover endpoints in G: sampling renumbers vertices in H.
     // Convert selected edges to tuple format for verifier
     vector<tuple<int, int, int, int>> H_MSF;
     H_MSF.reserve(kkt_h_result.size());
+    KKT_WORK_ADD(kkt_edge_visits, G.graph_edges.size());
+    KKT_WORK_ADD(hash_lookup_calls, G.graph_edges.size());
     for (const Edge& e : G.graph_edges) {
         if (sampled_ids.count(e.id)) {
             H_MSF.emplace_back(e.from, e.to, e.cost, e.id);
         }
     }
+    KKT_WORK_ADD(edge_materializations, H_MSF.size());
 
     // Find F-heavy edges
     vector<tuple<int, int, int, int>> G_tuples;
     G_tuples.reserve(G.graph_edges.size());
+    KKT_WORK_ADD(kkt_edge_visits, G.graph_edges.size());
+    KKT_WORK_ADD(edge_materializations, G.graph_edges.size());
     for (const Edge& e : G.graph_edges) {
         G_tuples.emplace_back(e.from, e.to, e.cost, e.id);
     }
@@ -265,11 +317,15 @@ static void kkt_internal(problem& P, std::mt19937& rng, vector<int>& result)
     // Filter out heavy edges
     vector<Edge> relevant_edges;
     relevant_edges.reserve(G.graph_edges.size());
+    KKT_WORK_ADD(kkt_edge_visits, G.graph_edges.size());
+    KKT_WORK_ADD(hash_lookup_calls, G.graph_edges.size());
     for (const Edge& e : G.graph_edges) {
         if (G_heavy.count(e.id) == 0) {
             relevant_edges.push_back(e);
         }
     }
+    KKT_WORK_ADD(filtered_edges, relevant_edges.size());
+    KKT_WORK_ADD(edge_materializations, relevant_edges.size());
 
     problem G_remaining = remove_isolated_vertices(
         problem(G.num_vertices, std::move(relevant_edges), P.max_edge_id));
@@ -288,5 +344,6 @@ unordered_set<int> kkt(problem& P, unsigned int seed)
     vector<int> selected_ids;
     std::mt19937 rng(seed);
     kkt_internal(P, rng, selected_ids);
+    KKT_WORK_ADD(hash_insert_items, selected_ids.size());
     return unordered_set<int>(selected_ids.begin(), selected_ids.end());
 }

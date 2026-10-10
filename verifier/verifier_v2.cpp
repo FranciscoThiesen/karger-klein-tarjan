@@ -4,6 +4,7 @@
 
 #include "verifier_v2.hpp"
 #include "median_table.hpp"
+#include "../common/work_stats.hpp"
 // #include "../boruvka/boruvka.hpp"
 // #include "../graph_utils/graph_utils.hpp"
 // #include "../kruskal/kruskal.hpp"
@@ -66,8 +67,13 @@ vector<tuple<int, int, int, int>>
 	fbt_reduction(const vector<tuple<int, int, int, int>>& edges,
 				  int total_nodes)
 {
+	KKT_WORK_ADD(fbt_calls, 1);
+	KKT_WORK_ADD(fbt_input_vertices, total_nodes);
+	KKT_WORK_ADD(edge_materializations, edges.size());
 	vector<tuple<int, int, int, int>> active_edges = edges;
 	vector<int> component_list(total_nodes);
+	KKT_WORK_ADD(initialized_slots, total_nodes);
+	KKT_WORK_ADD(fbt_vertex_visits, total_nodes);
 	iota(component_list.begin(), component_list.end(), 0);
 
 	// Every contraction creates fresh IDs, and a full branching tree has
@@ -77,6 +83,7 @@ vector<tuple<int, int, int, int>>
 	vector<int> cheapest_edge(capacity, -1);
 	vector<int> super_node_id(capacity, -1);
 	vector<vector<int>> current_graph(capacity);
+	KKT_WORK_ADD(initialized_slots, 3 * capacity);
 	vector<int> dfs_stack;
 	vector<tuple<int, int, int, int>> new_edges;
 	new_edges.reserve(capacity);
@@ -84,6 +91,11 @@ vector<tuple<int, int, int, int>>
 
 	while (component_list.size() > 1)
 	{
+		KKT_WORK_ADD(fbt_rounds, 1);
+		KKT_WORK_ADD(fbt_round_vertices, component_list.size());
+		KKT_WORK_ADD(fbt_round_edges, active_edges.size());
+		KKT_WORK_ADD(fbt_edge_visits, 2 * active_edges.size());
+		KKT_WORK_ADD(fbt_vertex_visits, 3 * component_list.size());
 		for (int i = 0; i < static_cast<int>(active_edges.size()); ++i)
 		{
 			int from, to, cost;
@@ -117,8 +129,10 @@ vector<tuple<int, int, int, int>>
 			{
 				int node = dfs_stack.back();
 				dfs_stack.pop_back();
+				KKT_WORK_ADD(fbt_vertex_visits, 1);
 				for (int next: current_graph[node])
 				{
+					KKT_WORK_ADD(fbt_arc_visits, 1);
 					if (super_node_id[next] != -1) continue;
 					super_node_id[next] = new_id;
 					dfs_stack.push_back(next);
@@ -131,6 +145,7 @@ vector<tuple<int, int, int, int>>
 			const auto& edge = active_edges[cheapest_edge[node]];
 			new_edges.emplace_back(node, super_node_id[node],
 								   get<2>(edge), get<3>(edge));
+			KKT_WORK_ADD(edge_materializations, 1);
 		}
 
 		vector<tuple<int, int, int, int>> relevant_edges;
@@ -143,6 +158,7 @@ vector<tuple<int, int, int, int>>
 			{
 				relevant_edges.emplace_back(super_node_id[to],
 											 super_node_id[from], cost, id);
+				KKT_WORK_ADD(edge_materializations, 1);
 			}
 		}
 		active_edges = std::move(relevant_edges);
@@ -150,6 +166,7 @@ vector<tuple<int, int, int, int>>
 	}
 
 	// Returning edges of the generated full-branching tree
+	KKT_WORK_ADD(fbt_output_vertices, prox_node_id);
 	return new_edges;
 }
 
@@ -184,13 +201,18 @@ struct tree_path_maxima
 		  upper(_upper), lower(_lower), child(_child), sibling(_sibling),
 		  weight(_weight)
 	{
+		KKT_WORK_ADD(initialized_slots, 3ULL * n + 2ULL * m);
 	}
 
 	void init(int u, int d)
 	{
+		KKT_WORK_ADD(path_init_vertices, 1);
 		depth[u] = d;
 		if (d > height) height = d;
-		for (int i = L[u]; i >= 0; i = Lnext[i]) D[u] |= 1 << depth[upper[i]];
+		for (int i = L[u]; i >= 0; i = Lnext[i]) {
+			KKT_WORK_ADD(path_query_visits, 1);
+			D[u] |= 1 << depth[upper[i]];
+		}
 		for (int v = child[u]; v >= 0; v = sibling[v])
 		{
 			init(v, d + 1);
@@ -202,11 +224,14 @@ struct tree_path_maxima
 
 	void visit(int v, int S)
 	{
+		KKT_WORK_ADD(path_visit_vertices, 1);
 		auto binary_search = [&](int w, int S) {
+			KKT_WORK_ADD(path_binary_search_calls, 1);
 			if (S == 0) return 0;
 			int j = median[S];
 			while (S != 1 << j)
 			{
+				KKT_WORK_ADD(path_binary_search_steps, 1);
 				S &= (weight[P[j]] > w) ? ~((1 << j) - 1) : (1 << j) - 1;
 				j = median[S];
 			}
@@ -217,22 +242,29 @@ struct tree_path_maxima
 		int k = binary_search(weight[v], down(D[v], S));
 		S = down(D[v], (S & ((1 << (k + 1)) - 1)) | (1 << depth[v]));
 		for (int i = L[v]; i >= 0; i = Lnext[i])
-		{ answer[i] = P[median[down(1 << depth[upper[i]], S)]]; }
+		{
+			KKT_WORK_ADD(path_query_visits, 1);
+			answer[i] = P[median[down(1 << depth[upper[i]], S)]];
+		}
 		for (int z = child[v]; z >= 0; z = sibling[z]) visit(z, S);
 	}
 
 	const vector<int>& compute_answer()
 	{
+		KKT_WORK_ADD(initialized_slots, 2ULL * n + m);
 		fill(L.begin(), L.end(), -1);
 		fill(Lnext.begin(), Lnext.end(), -1);
 		for (int i = 0; i < m; ++i)
 		{
+			KKT_WORK_ADD(path_query_visits, 1);
 			Lnext[i] = L[lower[i]];
 			L[lower[i]] = i;
 		}
 		fill(D.begin(), D.end(), 0);
 		init(root, 0);
 		P = vector<int>(height + 1, 0);
+		KKT_WORK_ADD(initialized_slots, height + 1);
+		KKT_WORK_MAX(path_max_height, height);
 		median = verifier_detail::median_table(height);
 		visit(root, 0);
 		return answer;
@@ -273,6 +305,7 @@ struct test_graph
 			   const int n) : G(edges)
 	{
 		auto fbt_mst = fbt_reduction(spanning_tree, n);
+		KKT_WORK_ADD(verifier_edge_visits, 2 * fbt_mst.size());
 		// Each tuple already records child -> parent, and fresh parent IDs
 		// increase monotonically. The last parent is therefore the root.
 		total_nodes = n;
@@ -283,6 +316,7 @@ struct test_graph
 		sibling.assign(total_nodes, -1);
 		weight.assign(total_nodes, -1);
 		vector<vector<int>> adj(total_nodes);
+		KKT_WORK_ADD(initialized_slots, 4ULL * total_nodes);
 		for (const auto& e: fbt_mst)
 		{
 			int node, parent, cost;
@@ -304,6 +338,7 @@ struct test_graph
 		int M = static_cast<int>(G.size());
 		int upper_len = 0;
 		vector<pair<int, int>> decomposed_query;
+		KKT_WORK_ADD(verifier_edge_visits, M);
 
 		for (int i = 0; i < M; ++i)
 		{
@@ -343,11 +378,13 @@ struct test_graph
 			decomposed_query.emplace_back(qry);
 		}
 
+		KKT_WORK_ADD(verifier_queries, upper.size());
 		tree_path_maxima verifier =
 			tree_path_maxima(root, child, sibling, weight, upper, lower);
 		const vector<int>& sol = verifier.compute_answer();
 		unordered_set<int> f_heavy_edges;
 
+		KKT_WORK_ADD(verifier_edge_visits, decomposed_query.size());
 		for (const auto& qry: decomposed_query)
 		{
 			int id_fst = qry.first, id_snd = qry.second;
@@ -359,6 +396,7 @@ struct test_graph
 			{
 				int edge_id = get<3>(G[corresponding_edge[id_fst]]);
 				f_heavy_edges.insert(edge_id);
+				KKT_WORK_ADD(hash_insert_items, 1);
 			}
 		}
 		return f_heavy_edges;
@@ -371,6 +409,9 @@ unordered_set<int>
 			   const int n)
 {
 	if (n == 0 || graph.empty() || spanning_tree.empty()) return {};
+	KKT_WORK_ADD(verifier_tree_calls, 1);
+	KKT_WORK_ADD(verifier_tree_vertices, n);
+	KKT_WORK_ADD(verifier_tree_edges, graph.size());
 	auto verifier = test_graph(graph, spanning_tree, n);
 	return verifier.compute_heavy_edges();
 }
@@ -380,6 +421,10 @@ unordered_set<int>
 						 const vector<tuple<int, int, int, int>>& general_graph,
 						 const int n)
 {
+	KKT_WORK_ADD(verifier_calls, 1);
+	KKT_WORK_ADD(verifier_vertices, n);
+	KKT_WORK_ADD(verifier_edges, graph.size());
+	KKT_WORK_ADD(verifier_forest_edges, general_graph.size());
 	if (n == 0 || graph.empty() || general_graph.empty()) return {};
 	int total_number_of_edges = static_cast<int>(general_graph.size());
 
@@ -388,7 +433,10 @@ unordered_set<int>
 
 	// This is the case in which the forest that we receive is actually a tree.
 	if (static_cast<int>(general_graph.size()) == n - 1)
-	{ return verify_mst(graph, general_graph, n); }
+	{
+		KKT_WORK_ADD(verifier_components, 1);
+		return verify_mst(graph, general_graph, n);
+	}
 
 	// Given that the general graph is a forest of the graph, we will break it
 	// into several trees and perform the verification in each one of them.
@@ -396,6 +444,8 @@ unordered_set<int>
 	vector<int> connected_component_id(n, -1);
 
 	vector<vector<int>> gg_adj_list(n);
+	KKT_WORK_ADD(initialized_slots, 2ULL * n);
+	KKT_WORK_ADD(verifier_edge_visits, general_graph.size());
 	for (const auto& edg: general_graph)
 	{
 		int from, to;
@@ -407,6 +457,7 @@ unordered_set<int>
 	// Iterative DFS for connected components (avoids std::function overhead)
 	vector<pair<int, size_t>> dfs_stack;  // (node, neighbor_index)
 
+	KKT_WORK_ADD(verifier_vertex_visits, n);
 	for (int start = 0; start < n; ++start)
 	{
 		if (connected_component_id[start] != -1) continue;
@@ -422,11 +473,13 @@ unordered_set<int>
 			// Find next unvisited neighbor
 			while (idx < neighbors.size() && connected_component_id[neighbors[idx]] != -1)
 			{
+				KKT_WORK_ADD(verifier_arc_visits, 1);
 				++idx;
 			}
 
 			if (idx < neighbors.size())
 			{
+				KKT_WORK_ADD(verifier_arc_visits, 1);
 				int next = neighbors[idx];
 				++idx;
 				connected_component_id[next] = connected_component_id[node];
@@ -443,13 +496,17 @@ unordered_set<int>
 	vector<vector<tuple<int, int, int, int>>> spanning_tree(next_id);
 	vector<vector<tuple<int, int, int, int>>> subgraph(next_id);
 	vector<int> node_mapping(n);
+	KKT_WORK_ADD(initialized_slots, 3ULL * next_id + n);
+	KKT_WORK_ADD(verifier_components, next_id);
 
+	KKT_WORK_ADD(verifier_vertex_visits, n);
 	for (int i = 0; i < n; ++i)
 	{
 		int new_id = next_id_by_component[connected_component_id[i]]++;
 		node_mapping[i] = new_id;
 	}
 
+	KKT_WORK_ADD(verifier_edge_visits, general_graph.size());
 	for (const auto& edg: general_graph)
 	{
 		int from, to, cost, id;
@@ -459,9 +516,11 @@ unordered_set<int>
 		{
 			spanning_tree[connected_component_id[from]].emplace_back(
 				node_mapping[from], node_mapping[to], cost, id);
+			KKT_WORK_ADD(edge_materializations, 1);
 		}
 	}
 
+	KKT_WORK_ADD(verifier_edge_visits, graph.size());
 	for (const auto& edg: graph)
 	{
 		int from, to, cost, id;
@@ -471,16 +530,19 @@ unordered_set<int>
 		{
 			subgraph[connected_component_id[from]].emplace_back(
 				node_mapping[from], node_mapping[to], cost, id);
+			KKT_WORK_ADD(edge_materializations, 1);
 		}
 	}
 
 	unordered_set<int> f_heavy_edges;
 
+	KKT_WORK_ADD(verifier_vertex_visits, next_id);
 	for (int i = 0; i < next_id; ++i)
 	{
 		if (subgraph[i].empty() || spanning_tree[i].empty()) continue;
 		auto V =
 			verify_mst(subgraph[i], spanning_tree[i], next_id_by_component[i]);
+		KKT_WORK_ADD(hash_insert_items, V.size());
 		for (const auto& edg_id: V) { f_heavy_edges.insert(edg_id); }
 	}
 

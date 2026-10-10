@@ -1,0 +1,27 @@
+Unable to determine clock rate from sysctl: hw.cpufrequency: No such file or directory
+2026-10-10T14:47:27-07:00
+Running /tmp/kkt-repairs/bazel-links/bin/benchmark/complexity_benchmark
+Run on (16 X 24.013 MHz CPU s)
+CPU Caches:
+  L1 Data 64 KiB (x16)
+  L1 Instruction 128 KiB (x16)
+  L2 Unified 4096 KiB (x4)
+Load Average: 17.13, 11.71, 9.32
+       67.68 real        65.69 user         0.25 sys
+           590528512  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               75691  page reclaims
+                   0  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   5  voluntary context switches
+               17354  involuntary context switches
+        303630653887  instructions retired
+        239469594404  cycles elapsed
+           454378384  peak memory footprint

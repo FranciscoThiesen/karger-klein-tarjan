@@ -1,4 +1,33 @@
-load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_test")
+load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library", "cc_test")
+
+cc_library(
+    name = "fixtures",
+    hdrs = ["graph_fixtures.hpp", "mst_certificate.hpp"],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "work_metrics",
+    hdrs = ["work_metrics.hpp"],
+    deps = ["//common:work_stats"],
+    visibility = ["//visibility:public"],
+)
+
+cc_binary(
+    name = "work_sweep",
+    srcs = ["work_sweep.cpp"],
+    copts = ["-std=c++17"],
+    deps = [":fixtures", ":work_metrics", "//kkt:kkt_work_stats", "//kruskal:kruskal"],
+    visibility = ["//visibility:public"],
+)
+
+cc_binary(
+    name = "complexity_benchmark",
+    srcs = ["complexity_benchmark.cpp"],
+    copts = ["-std=c++17"],
+    deps = [":fixtures", "@com_google_benchmark//:benchmark", "//kkt:kkt", "//kruskal:kruskal"],
+    visibility = ["//visibility:public"],
+)
 
 cc_test(
     name = "certificate_test",
@@ -8,9 +37,9 @@ cc_test(
 
 cc_binary(
     name = "diverse_benchmark",
-    srcs = ["diverse_benchmark.cpp", "mst_certificate.hpp"],
+    srcs = ["diverse_benchmark.cpp"],
     copts = ["-std=c++17"],
-    deps = ["//kkt:kkt", "//kruskal:kruskal", "//prim:prim", "//boruvka:boruvka"],
+    deps = [":fixtures", "//kkt:kkt", "//kruskal:kruskal", "//prim:prim", "//boruvka:boruvka"],
     visibility = ["//visibility:public"],
 )
 

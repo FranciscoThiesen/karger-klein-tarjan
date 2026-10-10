@@ -1,4 +1,5 @@
 #include "lca.hpp"
+#include "../common/work_stats.hpp"
 
 void LCA::dfs(const vector<vector<int>>& graph, int v, int p, int h)
 {
@@ -21,23 +22,32 @@ int LCA::min_by_h(int i, int j)
 
 void LCA::precompute_lca(const vector<vector<int>>& graph, int root)
 {
+	KKT_WORK_ADD(lca_calls, 1);
+	KKT_WORK_ADD(lca_vertices, n);
 	// get euler tour & indices of first occurences
 	first_visit.assign(n, -1);
 	height.assign(n, 0);
+	KKT_WORK_ADD(initialized_slots, 2ULL * n);
 	euler_tour.reserve(2 * n);
 	dfs(graph, root, -1, 0);
 
 	// precompute all log values
 	int m = euler_tour.size();
+	KKT_WORK_ADD(lca_euler_entries, m);
 	log_2.reserve(m + 1);
 	log_2.push_back(-1);
 	for (int i = 1; i <= m; i++) log_2.push_back(log_2[i / 2] + 1);
+	KKT_WORK_ADD(lca_log_entries, static_cast<std::uint64_t>(m) + 1);
 
 	block_size = max(1, log_2[m] / 2);
 	block_cnt = (m + block_size - 1) / block_size;
 
 	// precompute minimum of each block and build sparse table
 	st.assign(block_cnt, vector<int>(log_2[block_cnt] + 1));
+	KKT_WORK_ADD(initialized_slots, static_cast<std::uint64_t>(block_cnt) * (log_2[block_cnt] + 2));
+	KKT_WORK_ADD(initialized_slots, log_2[block_cnt] + 1);
+	KKT_WORK_ADD(lca_sparse_cells, static_cast<std::uint64_t>(block_cnt) * (log_2[block_cnt] + 1));
+	KKT_WORK_ADD(lca_block_scan_visits, m);
 	for (int i = 0, j = 0, b = 0; i < m; i++, j++)
 	{
 		if (j == block_size) j = 0, b++;
@@ -56,6 +66,8 @@ void LCA::precompute_lca(const vector<vector<int>>& graph, int root)
 
 	// precompute mask for each block
 	block_mask.assign(block_cnt, 0);
+	KKT_WORK_ADD(initialized_slots, block_cnt);
+	KKT_WORK_ADD(lca_block_scan_visits, m);
 	for (int i = 0, j = 0, b = 0; i < m; i++, j++)
 	{
 		if (j == block_size) j = 0, b++;
@@ -66,11 +78,18 @@ void LCA::precompute_lca(const vector<vector<int>>& graph, int root)
 	// precompute RMQ for each unique block
 	int possibilities = 1 << (block_size - 1);
 	blocks.resize(possibilities);
+	KKT_WORK_ADD(initialized_slots, possibilities);
+	KKT_WORK_ADD(lca_mask_slots, possibilities);
+	KKT_WORK_ADD(lca_block_scan_visits, block_cnt);
 	for (int b = 0; b < block_cnt; b++)
 	{
 		int mask = block_mask[b];
 		if (!blocks[mask].empty()) continue;
 		blocks[mask].assign(block_size, vector<int>(block_size));
+		KKT_WORK_ADD(lca_micro_tables, 1);
+		KKT_WORK_ADD(initialized_slots, static_cast<std::uint64_t>(block_size) * (block_size + 1));
+		KKT_WORK_ADD(initialized_slots, block_size);
+		KKT_WORK_ADD(lca_micro_cells, static_cast<std::uint64_t>(block_size) * (block_size + 1) / 2);
 		for (int l = 0; l < block_size; l++)
 		{
 			blocks[mask][l][l] = l;
@@ -101,6 +120,7 @@ LCA::LCA() {}
 
 int LCA::query(int v, int u)
 {
+	KKT_WORK_ADD(lca_queries, 1);
 	int l = first_visit[v];
 	int r = first_visit[u];
 	if (l > r) swap(l, r);

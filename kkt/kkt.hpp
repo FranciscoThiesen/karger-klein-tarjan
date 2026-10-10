@@ -6,6 +6,7 @@
 #include <vector>
 #include <tuple>
 #include "../common/edge.hpp"
+#include "../common/work_stats.hpp"
 
 using namespace std;
 
@@ -29,6 +30,8 @@ struct problem {
     // Constructor from tuple vector for backwards compatibility
     problem(int nv, const vector<tuple<int, int, int, int>>& ge)
         : num_vertices(nv), max_edge_id(0) {
+        KKT_WORK_ADD(edge_materializations, ge.size());
+        KKT_WORK_ADD(kkt_edge_visits, ge.size());
         graph_edges.reserve(ge.size());
         for (const auto& e : ge) {
             graph_edges.emplace_back(e);

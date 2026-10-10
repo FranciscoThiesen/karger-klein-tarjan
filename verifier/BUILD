@@ -27,6 +27,17 @@ cc_library(
     ],
     deps = [
         "//lca:lca",
+        "//common:work_stats",
     ],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "verifier_v2_work_stats",
+    srcs = ["verifier_v2.cpp"],
+    hdrs = ["verifier_v2.hpp", "median_table.hpp"],
+    copts = ["-std=c++17"],
+    defines = ["KKT_ENABLE_WORK_STATS"],
+    deps = ["//lca:lca_work_stats", "//common:work_stats"],
     visibility = ["//visibility:public"],
 )

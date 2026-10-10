@@ -5,6 +5,7 @@
 #include <cstddef>
 #include <limits>
 #include <vector>
+#include "../common/work_stats.hpp"
 
 namespace verifier_detail {
 
@@ -14,6 +15,8 @@ namespace verifier_detail {
 inline std::vector<int> median_table(int height) {
     assert(height >= 0 && height < std::numeric_limits<int>::digits);
     std::vector<int> median(std::size_t{1} << (height + 1), 0);
+    KKT_WORK_ADD(initialized_slots, median.size());
+    KKT_WORK_ADD(median_entries, median.size() - 1);
     std::size_t highest_bit = 1;
     int highest_index = 0;
     for (std::size_t mask = 1; mask < median.size(); ++mask) {

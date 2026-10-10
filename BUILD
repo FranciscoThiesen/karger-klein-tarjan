@@ -1,6 +1,19 @@
 load("@rules_cc//cc:defs.bzl", "cc_test")
 
 cc_test(
+    name = "complexity_test",
+    srcs = ["test/complexity_test.cpp"],
+    copts = ["-std=c++17"],
+    deps = [
+        "@gtest//:gtest_main",
+        "//benchmark:fixtures",
+        "//benchmark:work_metrics",
+        "//kkt:kkt_work_stats",
+        "//kruskal:kruskal",
+    ],
+)
+
+cc_test(
     name = "regression_test",
     srcs = ["test/regression_test.cpp"],
     copts = ["-std=c++17"],

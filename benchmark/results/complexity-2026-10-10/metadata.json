@@ -1,0 +1,96 @@
+{
+  "base_revision": "5d57f8322041ddcaed49a6cfd5ac3dff7d820667",
+  "algorithm_changes": "Logical-work instrumentation only; macros compile away in normal libraries. Shared fixtures extracted without changing generation.",
+  "source_sha256": {
+    "common/work_stats.hpp": "85f6aca4f517cccef93a01c22005808834e66dbbc6b9dba448bb6b7b4574c1d0",
+    "kkt/kkt.cpp": "d473c0942d504072ae785741a2e3c9d07c5c7ac2ae79b9afa1a6c347b245077a",
+    "kkt/kkt.hpp": "db6d56d7741a2edaea19b535bcb6a969ba29964aaefb7da21d8935c746771cc2",
+    "kkt/random_sampling.hpp": "96aef2e4c275d711ce77ee503ae7f88ba8a8baf07adcc547e19302001a96000e",
+    "verifier/verifier_v2.cpp": "422394ad539d2d02735515c71ab74246d0d9e5000fbd6e47c97389bcd1ceebf4",
+    "verifier/median_table.hpp": "9aeb79481afe0e949347eb29045ad9f5dc6017d114fa7ce813e348adadfb382a",
+    "lca/lca.cpp": "d21ea8d45c76eb2b782c08afbe25394b7da25b862dea28ddd1499c14877a46ca",
+    "kruskal/kruskal.cpp": "fbb245d0a2f9b2f69c59c996bd966f1f76a8cd95c560ae26622f165f6c392d8c",
+    "union_find/union_find.cpp": "5ad5a4b4cb57cd66fa1a3a8003d33a95e84c2814f772eba27e0bcb771e317b37",
+    "benchmark/complexity_benchmark.cpp": "bd7dbf3f80460fae7265ed40519f2dfe48314a8c6063d112f01c5c1a713bd1b5",
+    "benchmark/work_sweep.cpp": "9a5b901d093a8d40e875bcc28e663961f5b7bd7ea1c252fa32982d9a0d733591",
+    "benchmark/work_metrics.hpp": "fc3e8b9e2afba1e12c1e2c47b9c79a7ef4772c3a0185d36ca80f85f25085d9ef",
+    "benchmark/graph_fixtures.hpp": "6d94c080b66b6f2538cbaa1758e82d87de4af25ca1d496ec8b8fed50c41dc98d",
+    "benchmark/mst_certificate.hpp": "5e9c37e73c6a1bb78f1bfe5dca361abe9a4ddc4ea2e155a323989b6b34838495",
+    "test/complexity_test.cpp": "40579522d8fae7642f427415c6c5ca0ebc43410f5052e73ef5fb7c58a93f4a32",
+    "BUILD": "06295969375d7e81fc3c5ae2cc36fcfa2f38341cf00bf9bfe1db422f571cf5dd",
+    "benchmark/BUILD": "86cd0cd709c2be18455fae51017fbf6d36e095ef4c15876777a6a0e4dff4ca05",
+    "kkt/BUILD": "545198d828aed022f33b525544a22f8efb693a2931102d4fb6297f556fc6a765",
+    "verifier/BUILD": "67cd580ab5e6f556eb72233d4b36e50f6ab583705df1585aca279c628ac7e84e",
+    "lca/BUILD": "dc87400d17d3d56b623ea0c5598962e6d0e44dcc08c95c9d70a9a4cf64954899",
+    "common/BUILD": "394af53433f43a7f3260c8d7f199493aff7322bb0bb59bd7dcc69a2ba6424dd2"
+  },
+  "cpu": "Apple M3 Max",
+  "architecture": "arm64",
+  "ram_bytes": 137438953472,
+  "os": "ProductName:\t\tmacOS\nProductVersion:\t\t26.6.2\nBuildVersion:\t\t25G83",
+  "compiler": "Apple clang version 15.0.0 (clang-1500.3.9.4)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin",
+  "sdk": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+  "build_profile": "Bazel 7.3.1 -c opt --copt=-O3; explicit -arch arm64 and macOS SDK; no -march=native; NDEBUG enabled",
+  "google_benchmark": "v1.5.2 (73d4d5e8d6d449fc8663765a42aa8aeeee844489)",
+  "gtest_commit": "703bd9caab50b139428cea1aaff9974ebee5742e",
+  "clock_metadata_caveat": "Google Benchmark 1.5.2 cannot query hw.cpufrequency on this machine and reports a bogus 24 MHz value. Do not use its frequency/scaling metadata. Measurements use steady_clock.",
+  "execution": "Serial timing process; no concurrent builds, tests, work-counter sweep or plots. Ordinary desktop session; no affinity or power controls. Registration order, no explicit warmups; fixture certification precedes each repetition.",
+  "timing_boundary": "Tuple graph input. KKT conversion and temporary input destruction included; result destruction and correctness validation excluded. Each timing record averages three calls using sampling seeds 0,1,7.",
+  "expected_timing_iteration_records": 378,
+  "expected_timed_mst_calls": 1134,
+  "expected_work_records": 180,
+  "graph_seeds": [
+    17,
+    42,
+    999
+  ],
+  "sampling_seeds": [
+    0,
+    1,
+    7
+  ],
+  "runs": {
+    "timing": {
+      "command": [
+        "/tmp/kkt-repairs/bazel-links/bin/benchmark/complexity_benchmark",
+        "--benchmark_out=benchmark/results/complexity-2026-10-10/timing.json",
+        "--benchmark_out_format=json",
+        "--benchmark_color=false"
+      ],
+      "started_utc": "2026-10-10T21:47:26.097409+00:00",
+      "exit_status": 0,
+      "wall_seconds_including_setup": 67.68723808300001,
+      "finished_utc": "2026-10-10T21:48:33.785503+00:00",
+      "peak_resident_set_bytes": 590528512,
+      "swaps": 0
+    },
+    "work": {
+      "command": [
+        "/tmp/kkt-repairs/bazel-links/bin/benchmark/work_sweep",
+        "--large"
+      ],
+      "started_utc": "2026-10-10T21:48:33.785978+00:00",
+      "exit_status": 0,
+      "wall_seconds_including_setup": 81.90125849999998,
+      "finished_utc": "2026-10-10T21:49:55.687589+00:00",
+      "peak_resident_set_bytes": 2459516928,
+      "swaps": 0
+    }
+  },
+  "analysis_sha256": {
+    "benchmark/analyze_complexity.py": "f73a88fab014a243b379b00091e7f9d74ffec46b8e24964bc9e9249fe354b275"
+  },
+  "raw_sha256": {
+    "work.csv": "26245a8b1cbd23aa8f90d2b8519f933e3c4a420a775043e9de2e1303f68e7543",
+    "timing.json": "15466e21268553b56790b6fcdedb3cf08567a7075a4899c62ddced7656e73c40"
+  },
+  "validation_checks": [
+    "Bazel optimized build passed; all 7 test targets passed: complexity_test (6 new tests), kkt_test, mst_test, regression_test, verifier_test, verifier_v2_test, certificate_test.",
+    "Make: 8 simple tests, 12 regression groups and independent certificate tests passed; diverse smoke and work-sweep build passed.",
+    "Shared graph-generator function body byte-identical to prior version.",
+    "Normal timing executable is Mach-O arm64; nm contains no kkt_work or WorkStats symbols.",
+    "All 180 work observations and 378 timing records passed complete-matrix validation; all 1314 measured MST calls matched independently certified reference IDs.",
+    "Analyzer rejected 23 malformed datasets; exact synthetic linear, N^1.25 and quadratic fits recovered expected parameters; balanced means and component partition checked.",
+    "PNG figures visually inspected; SVG/PDF variants retained; git diff --check passed."
+  ]
+}
