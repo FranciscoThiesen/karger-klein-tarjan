@@ -7,6 +7,7 @@
 #include <tuple>
 #include <unordered_set>
 #include <algorithm>
+#include <numeric>
 
 #include "kkt/kkt.hpp"
 #include "boruvka/boruvka.hpp"
@@ -47,11 +48,14 @@ int tests_failed = 0;
 // Generate a random connected graph
 vector<tuple<int, int, int, int>> generate_random_graph(int n, int m, mt19937& rng) {
     vector<tuple<int, int, int, int>> edges;
+    vector<int> weights(m);
+    iota(weights.begin(), weights.end(), 1);
+    shuffle(weights.begin(), weights.end(), rng);
 
     // First create a spanning tree to ensure connectivity
     for (int i = 1; i < n; ++i) {
         int parent = rng() % i;
-        int cost = rng() % 1000000 + 1;
+        int cost = weights[edges.size()];
         edges.emplace_back(parent, i, cost, static_cast<int>(edges.size()));
     }
 
@@ -60,7 +64,7 @@ vector<tuple<int, int, int, int>> generate_random_graph(int n, int m, mt19937& r
         int u = rng() % n;
         int v = rng() % n;
         if (u != v) {
-            int cost = rng() % 1000000 + 1;
+            int cost = weights[edges.size()];
             edges.emplace_back(u, v, cost, static_cast<int>(edges.size()));
         }
     }

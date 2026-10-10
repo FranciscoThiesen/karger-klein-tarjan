@@ -8,7 +8,9 @@ TEST(stress_test, random_graph)
 {
 	for (int i = 0; i < 100; ++i)
 	{
-		auto random_graph = build_random_connected_graph(100, 500);
+		SCOPED_TRACE(i);
+		auto random_graph =
+			build_random_connected_graph(100, 500, static_cast<unsigned int>(i));
 		auto boruvka_mst = boruvka(random_graph, 100);
 		auto kruskal_mst = kruskal(random_graph, 100);
 		auto prim_mst = prim(random_graph, 100);
