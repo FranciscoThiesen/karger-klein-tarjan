@@ -1,0 +1,259 @@
+Analysis of sampling profile_driver (pid 96407) every 1 millisecond
+Process:         profile_driver [96407]
+Path:            /private/tmp/*/profile_driver
+Load Address:    0x100864000
+Identifier:      profile_driver
+Version:         0
+Code Type:       ARM64
+Platform:        macOS
+Parent Process:  codex [18218]
+Target Type:     live task
+
+Date/Time:       2026-10-10 12:34:39.567 -0700
+Launch Time:     2026-10-10 12:34:36.284 -0700
+OS Version:      macOS 26.6.2 (25G83)
+Report Version:  7
+Analysis Tool:   /usr/bin/sample
+
+Physical footprint:         426.0M
+Physical footprint (peak):  426.0M
+Idle exit:                  untracked
+----
+
+Call graph:
+    3824 Thread_90167115   DispatchQueue_1: com.apple.main-thread  (serial)
+      3824 start  (in dyld) + 6992  [0x181e644e4]
+        3787 main  (in profile_driver) + 384  [0x100869b00]
+        + 3771 kkt(problem&, unsigned int)  (in profile_driver) + 104  [0x100874f4c]
+        + ! 1912 kkt_internal(problem&, std::mersenne_twister_engine<unsigned int, 32ul, 624ul, 397ul, 31ul, 2567483615u, 11ul, 4294967295u, 7ul, 2636928640u, 15ul, 4022730752u, 18ul, 1812433253u>&, std::vector<int>&)  (in profile_driver) + 760  [0x10087532c]
+        + ! : 1909 verify_mst(std::vector<std::tuple<int, int, int, int>> const&, std::vector<std::tuple<int, int, int, int>> const&, int)  (in profile_driver) + 88  [0x10087b1ac]
+        + ! : | 905 test_graph::compute_heavy_edges()  (in profile_driver) + 3272  [0x10087bef8]
+        + ! : | + 485 tree_path_maxima::compute_answer()  (in profile_driver) + 552  [0x10087da84]
+        + ! : | + ! 485 tree_path_maxima::visit(int, int)  (in profile_driver) + 360  [0x10087dff0]
+        + ! : | + !   485 tree_path_maxima::visit(int, int)  (in profile_driver) + 360  [0x10087dff0]
+        + ! : | + !     485 tree_path_maxima::visit(int, int)  (in profile_driver) + 360  [0x10087dff0]
+        + ! : | + !       484 tree_path_maxima::visit(int, int)  (in profile_driver) + 360  [0x10087dff0]
+        + ! : | + !       : 306 tree_path_maxima::visit(int, int)  (in profile_driver) + 360  [0x10087dff0]
+        + ! : | + !       : | 306 tree_path_maxima::visit(int, int)  (in profile_driver) + 320,308,...  [0x10087dfc8,0x10087dfbc,...]
+        + ! : | + !       : 178 tree_path_maxima::visit(int, int)  (in profile_driver) + 320,276,...  [0x10087dfc8,0x10087df9c,...]
+        + ! : | + !       1 tree_path_maxima::visit(int, int)  (in profile_driver) + 112  [0x10087def8]
+        + ! : | + 408 tree_path_maxima::compute_answer()  (in profile_driver) + 252  [0x10087d958]
+        + ! : | + ! 408 tree_path_maxima::init(int, int)  (in profile_driver) + 172  [0x10087de48]
+        + ! : | + !   408 tree_path_maxima::init(int, int)  (in profile_driver) + 172  [0x10087de48]
+        + ! : | + !     408 tree_path_maxima::init(int, int)  (in profile_driver) + 172  [0x10087de48]
+        + ! : | + !       408 tree_path_maxima::init(int, int)  (in profile_driver) + 172  [0x10087de48]
+        + ! : | + !         260 tree_path_maxima::init(int, int)  (in profile_driver) + 172  [0x10087de48]
+        + ! : | + !         : 260 tree_path_maxima::init(int, int)  (in profile_driver) + 112,120,...  [0x10087de0c,0x10087de14,...]
+        + ! : | + !         148 tree_path_maxima::init(int, int)  (in profile_driver) + 112,120,...  [0x10087de0c,0x10087de14,...]
+        + ! : | + 12 tree_path_maxima::compute_answer()  (in profile_driver) + 180,160  [0x10087d910,0x10087d8fc]
+        + ! : | 852 test_graph::compute_heavy_edges()  (in profile_driver) + 3428  [0x10087bf94]
+        + ! : | + 473 std::__hash_table<int>::__emplace_unique_key_args<int, int const&>(int const&, int const&)  (in profile_driver) + 112,188,...  [0x10086eed0,0x10086ef1c,...]
+        + ! : | + 302 std::__hash_table<int>::__emplace_unique_key_args<int, int const&>(int const&, int const&)  (in profile_driver) + 440  [0x10086f018]
+        + ! : | + ! 302 std::__hash_table<int>::__do_rehash<true>(unsigned long)  (in profile_driver) + 372,300,...  [0x10086ee28,0x10086ede0,...]
+        + ! : | + 72 std::__hash_table<int>::__emplace_unique_key_args<int, int const&>(int const&, int const&)  (in profile_driver) + 280  [0x10086ef78]
+        + ! : | + ! 50 operator new(unsigned long)  (in libc++abi.dylib) + 52  [0x1821e67e8]
+        + ! : | + ! : 20 _xzm_xzone_malloc  (in libsystem_malloc.dylib) + 8,64,...  [0x18204b958,0x18204b990,...]
+        + ! : | + ! : 17 xzm_malloc  (in libsystem_malloc.dylib) + 112,212,...  [0x18204b1cc,0x18204b230,...]
+        + ! : | + ! : 7 _xzm_xzone_thread_cache_fill_and_malloc  (in libsystem_malloc.dylib) + 116  [0x182052634]
+        + ! : | + ! : | 7 _xzm_xzone_find_and_malloc_from_freelist_chunk  (in libsystem_malloc.dylib) + 860  [0x1820532d8]
+        + ! : | + ! : |   7 xzm_chunk_mark_used  (in libsystem_malloc.dylib) + 188  [0x182033efc]
+        + ! : | + ! : |     7 _xzm_reclaim_mark_used  (in libsystem_malloc.dylib) + 124  [0x182033fac]
+        + ! : | + ! : |       7 _xzm_reclaim_mark_used_locked  (in libsystem_malloc.dylib) + 60  [0x182036a9c]
+        + ! : | + ! : |         6 mach_vm_reclaim_try_cancel  (in libsystem_kernel.dylib) + 260  [0x1821ff2f8]
+        + ! : | + ! : |         + 6 mach_absolute_time  (in libsystem_kernel.dylib) + 108,16  [0x1821ec10c,0x1821ec0b0]
+        + ! : | + ! : |         1 mach_vm_reclaim_try_cancel  (in libsystem_kernel.dylib) + 56  [0x1821ff22c]
+        + ! : | + ! : 3 malloc_type_malloc  (in libsystem_malloc.dylib) + 16,32  [0x18203f040,0x18203f050]
+        + ! : | + ! : 2 DYLD-STUB$$malloc_type_malloc  (in libc++abi.dylib) + 8  [0x1821e6c18]
+        + ! : | + ! : 1 _xzm_xzone_thread_cache_fill_and_malloc  (in libsystem_malloc.dylib) + 84  [0x182052614]
+        + ! : | + ! :   1 _xzm_xzone_malloc_from_freelist_chunk  (in libsystem_malloc.dylib) + 128  [0x182052c00]
+        + ! : | + ! 17 operator new(unsigned long)  (in libc++abi.dylib) + 72,36,...  [0x1821e67fc,0x1821e67d8,...]
+        + ! : | + ! 5 DYLD-STUB$$operator new(unsigned long)  (in profile_driver) + 4,0  [0x10087e4a0,0x10087e49c]
+        + ! : | + 5 operator new(unsigned long)  (in libc++abi.dylib) + 76  [0x1821e6800]
+        + ! : | 65 test_graph::compute_heavy_edges()  (in profile_driver) + 2440,3332,...  [0x10087bbb8,0x10087bf34,...]
+        + ! : | 56 test_graph::compute_heavy_edges()  (in profile_driver) + 192  [0x10087b2f0]
+        + ! : | + 56 LCA::query(int, int)  (in profile_driver) + 196,56,...  [0x1008787a4,0x100878718,...]
+        + ! : | 29 std::__hash_table<int>::__emplace_unique_key_args<int, int const&>(int const&, int const&)  (in profile_driver) + 756,752,...  [0x10086f154,0x10086f150,...]
+        + ! : | 2 test_graph::compute_heavy_edges()  (in profile_driver) + 3264  [0x10087bef0]
+        + ! : |   2 tree_path_maxima::tree_path_maxima(int, std::vector<int> const&, std::vector<int> const&, std::vector<int> const&, std::vector<int> const&, std::vector<int> const&)  (in profile_driver) + 404  [0x10087dc5c]
+        + ! : |     2 __bzero  (in libsystem_platform.dylib) + 68  [0x182239074]
+        + ! : 3 verify_mst(std::vector<std::tuple<int, int, int, int>> const&, std::vector<std::tuple<int, int, int, int>> const&, int)  (in profile_driver) + 76  [0x10087b1a0]
+        + ! :   2 test_graph::test_graph(std::vector<std::tuple<int, int, int, int>> const&, std::vector<std::tuple<int, int, int, int>> const&, int)  (in profile_driver) + 116  [0x10087d0e8]
+        + ! :   + 1 fbt_reduction(std::vector<std::tuple<int, int, int, int>> const&, int)  (in profile_driver) + 1200  [0x10087a444]
+        + ! :   + ! 1 operator new(unsigned long)  (in libc++abi.dylib) + 52  [0x1821e67e8]
+        + ! :   + !   1 _xzm_xzone_malloc  (in libsystem_malloc.dylib) + 64  [0x18204b990]
+        + ! :   + 1 fbt_reduction(std::vector<std::tuple<int, int, int, int>> const&, int)  (in profile_driver) + 680  [0x10087a23c]
+        + ! :   1 test_graph::test_graph(std::vector<std::tuple<int, int, int, int>> const&, std::vector<std::tuple<int, int, int, int>> const&, int)  (in profile_driver) + 676  [0x10087d318]
+        + ! :     1 LCA::LCA(int, std::vector<std::vector<int>> const&, int)  (in profile_driver) + 88  [0x10087852c]
+        + ! :       1 LCA::precompute_lca(std::vector<std::vector<int>> const&, int)  (in profile_driver) + 364  [0x100877640]
+        + ! :         1 LCA::dfs(std::vector<std::vector<int>> const&, int, int, int)  (in profile_driver) + 444  [0x1008772d4]
+        + ! :           1 LCA::dfs(std::vector<std::vector<int>> const&, int, int, int)  (in profile_driver) + 444  [0x1008772d4]
+        + ! :             1 LCA::dfs(std::vector<std::vector<int>> const&, int, int, int)  (in profile_driver) + 444  [0x1008772d4]
+        + ! :               1 LCA::dfs(std::vector<std::vector<int>> const&, int, int, int)  (in profile_driver) + 444  [0x1008772d4]
+        + ! :                 1 LCA::dfs(std::vector<std::vector<int>> const&, int, int, int)  (in profile_driver) + 444  [0x1008772d4]
+        + ! :                   1 LCA::dfs(std::vector<std::vector<int>> const&, int, int, int)  (in profile_driver) + 76  [0x100877164]
+        + ! 719 kkt_internal(problem&, std::mersenne_twister_engine<unsigned int, 32ul, 624ul, 397ul, 31ul, 2567483615u, 11ul, 4294967295u, 7ul, 2636928640u, 15ul, 4022730752u, 18ul, 1812433253u>&, std::vector<int>&)  (in profile_driver) + 68  [0x100875078]
+        + ! : 712 boruvka_step(problem const&)  (in profile_driver) + 3400,3320,...  [0x100873b34,0x100873ae4,...]
+        + ! : 4 boruvka_step(problem const&)::$_0::operator()(int, int) const  (in profile_driver) + 424  [0x10087422c]
+        + ! : 1 boruvka_step(problem const&)  (in profile_driver) + 1012  [0x1008731e0]
+        + ! : | 1 boruvka_step(problem const&)::$_0::operator()(int, int) const  (in profile_driver) + 52  [0x1008740b8]
+        + ! : 1 boruvka_step(problem const&)  (in profile_driver) + 2804  [0x1008738e0]
+        + ! : | 1 operator new(unsigned long)  (in libc++abi.dylib) + 52  [0x1821e67e8]
+        + ! : |   1 _xzm_malloc_large_huge  (in libsystem_malloc.dylib) + 464  [0x18204b458]
+        + ! : |     1 xzm_segment_group_alloc_chunk  (in libsystem_malloc.dylib) + 216  [0x1820344d4]
+        + ! : 1 boruvka_step(problem const&)  (in profile_driver) + 2832  [0x1008738fc]
+        + ! :   1 _platform_memset  (in libsystem_platform.dylib) + 72  [0x1822390d8]
+        + ! 366 kkt_internal(problem&, std::mersenne_twister_engine<unsigned int, 32ul, 624ul, 397ul, 31ul, 2567483615u, 11ul, 4294967295u, 7ul, 2636928640u, 15ul, 4022730752u, 18ul, 1812433253u>&, std::vector<int>&)  (in profile_driver) + 1368  [0x10087558c]
+        + ! : 206 _xzm_free  (in libsystem_malloc.dylib) + 352  [0x18204c278]
+        + ! : | 203 _platform_memset  (in libsystem_platform.dylib) + 176,180,...  [0x182239140,0x182239144,...]
+        + ! : | 3 DYLD-STUB$$_platform_bzero  (in libsystem_malloc.dylib) + 12,8  [0x18206387c,0x182063878]
+        + ! : 138 _xzm_free  (in libsystem_malloc.dylib) + 320,996,...  [0x18204c258,0x18204c4fc,...]
+        + ! : 12 _free  (in libsystem_malloc.dylib) + 0,44,...  [0x18205bcd0,0x18205bcfc,...]
+        + ! : 5 DYLD-STUB$$free  (in libc++abi.dylib) + 8  [0x1821e6bd8]
+        + ! : 4 DYLD-STUB$$operator delete(void*)  (in profile_driver) + 4  [0x10087e494]
+        + ! : 1 _xzm_xzone_madvise_batch  (in libsystem_malloc.dylib) + 456  [0x182054098]
+        + ! :   1 xzm_reclaim_mark_free_locked  (in libsystem_malloc.dylib) + 116  [0x182033968]
+        + ! :     1 mach_vm_reclaim_try_enter  (in libsystem_kernel.dylib) + 296  [0x1821ff17c]
+        + ! :       1 mach_absolute_time  (in libsystem_kernel.dylib) + 0  [0x1821ec0a0]
+        + ! 340 kkt_internal(problem&, std::mersenne_twister_engine<unsigned int, 32ul, 624ul, 397ul, 31ul, 2567483615u, 11ul, 4294967295u, 7ul, 2636928640u, 15ul, 4022730752u, 18ul, 1812433253u>&, std::vector<int>&)  (in profile_driver) + 128  [0x1008750b4]
+        + ! : 339 boruvka_step(problem const&)  (in profile_driver) + 3332,3252,...  [0x100873af0,0x100873aa0,...]
+        + ! : 1 boruvka_step(problem const&)  (in profile_driver) + 1012  [0x1008731e0]
+        + ! :   1 boruvka_step(problem const&)::$_0::operator()(int, int) const  (in profile_driver) + 364  [0x1008741f0]
+        + ! 228 kkt_internal(problem&, std::mersenne_twister_engine<unsigned int, 32ul, 624ul, 397ul, 31ul, 2567483615u, 11ul, 4294967295u, 7ul, 2636928640u, 15ul, 4022730752u, 18ul, 1812433253u>&, std::vector<int>&)  (in profile_driver) + 1120,492,...  [0x100875494,0x100875220,...]
+        + ! 92 kkt_internal(problem&, std::mersenne_twister_engine<unsigned int, 32ul, 624ul, 397ul, 31ul, 2567483615u, 11ul, 4294967295u, 7ul, 2636928640u, 15ul, 4022730752u, 18ul, 1812433253u>&, std::vector<int>&)  (in profile_driver) + 228  [0x100875118]
+        + ! : 82 kkt_detail::random_sampling(problem const&, std::mersenne_twister_engine<unsigned int, 32ul, 624ul, 397ul, 31ul, 2567483615u, 11ul, 4294967295u, 7ul, 2636928640u, 15ul, 4022730752u, 18ul, 1812433253u>&)  (in profile_driver) + 160,300,...  [0x1008748a0,0x10087492c,...]
+        + ! : 10 kkt_detail::random_sampling(problem const&, std::mersenne_twister_engine<unsigned int, 32ul, 624ul, 397ul, 31ul, 2567483615u, 11ul, 4294967295u, 7ul, 2636928640u, 15ul, 4022730752u, 18ul, 1812433253u>&)  (in profile_driver) + 580  [0x100874a44]
+        + ! :   9 remove_isolated_vertices(problem const&)  (in profile_driver) + 164,172  [0x100874410,0x100874418]
+        + ! :   1 remove_isolated_vertices(problem const&)  (in profile_driver) + 328  [0x1008744b4]
+        + ! :     1 _platform_memmove  (in libsystem_platform.dylib) + 88  [0x1822393b8]
+        + ! 78 kkt_internal(problem&, std::mersenne_twister_engine<unsigned int, 32ul, 624ul, 397ul, 31ul, 2567483615u, 11ul, 4294967295u, 7ul, 2636928640u, 15ul, 4022730752u, 18ul, 1812433253u>&, std::vector<int>&)  (in profile_driver) + 252  [0x100875130]
+        + ! : 66 kkt_internal(problem&, std::mersenne_twister_engine<unsigned int, 32ul, 624ul, 397ul, 31ul, 2567483615u, 11ul, 4294967295u, 7ul, 2636928640u, 15ul, 4022730752u, 18ul, 1812433253u>&, std::vector<int>&)  (in profile_driver) + 68  [0x100875078]
+        + ! : | 66 boruvka_step(problem const&)  (in profile_driver) + 3360,3376,...  [0x100873b0c,0x100873b1c,...]
+        + ! : 9 kkt_internal(problem&, std::mersenne_twister_engine<unsigned int, 32ul, 624ul, 397ul, 31ul, 2567483615u, 11ul, 4294967295u, 7ul, 2636928640u, 15ul, 4022730752u, 18ul, 1812433253u>&, std::vector<int>&)  (in profile_driver) + 128  [0x1008750b4]
+        + ! : | 9 boruvka_step(problem const&)  (in profile_driver) + 3360,2876,...  [0x100873b0c,0x100873928,...]
+        + ! : 2 kkt_internal(problem&, std::mersenne_twister_engine<unsigned int, 32ul, 624ul, 397ul, 31ul, 2567483615u, 11ul, 4294967295u, 7ul, 2636928640u, 15ul, 4022730752u, 18ul, 1812433253u>&, std::vector<int>&)  (in profile_driver) + 492,644  [0x100875220,0x1008752b8]
+        + ! : 1 kkt_internal(problem&, std::mersenne_twister_engine<unsigned int, 32ul, 624ul, 397ul, 31ul, 2567483615u, 11ul, 4294967295u, 7ul, 2636928640u, 15ul, 4022730752u, 18ul, 1812433253u>&, std::vector<int>&)  (in profile_driver) + 760  [0x10087532c]
+        + ! :   1 verify_mst(std::vector<std::tuple<int, int, int, int>> const&, std::vector<std::tuple<int, int, int, int>> const&, int)  (in profile_driver) + 88  [0x10087b1ac]
+        + ! :     1 test_graph::compute_heavy_edges()  (in profile_driver) + 3428  [0x10087bf94]
+        + ! :       1 std::__hash_table<int>::__emplace_unique_key_args<int, int const&>(int const&, int const&)  (in profile_driver) + 272  [0x10086ef70]
+        + ! 12 kkt_internal(problem&, std::mersenne_twister_engine<unsigned int, 32ul, 624ul, 397ul, 31ul, 2567483615u, 11ul, 4294967295u, 7ul, 2636928640u, 15ul, 4022730752u, 18ul, 1812433253u>&, std::vector<int>&)  (in profile_driver) + 728  [0x10087530c]
+        + ! : 12 std::vector<std::tuple<int, int, int, int>>::emplace_back<int const&, int const&, int const&, int const&>(int const&, int const&, int const&, int const&)  (in profile_driver) + 48,44,...  [0x100875828,0x100875824,...]
+        + ! 9 std::vector<std::tuple<int, int, int, int>>::emplace_back<int const&, int const&, int const&, int const&>(int const&, int const&, int const&, int const&)  (in profile_driver) + 312,304,...  [0x100875930,0x100875928,...]
+        + ! 7 _xzm_free  (in libsystem_malloc.dylib) + 1560,1544  [0x18204c730,0x18204c720]
+        + ! 6 kkt_internal(problem&, std::mersenne_twister_engine<unsigned int, 32ul, 624ul, 397ul, 31ul, 2567483615u, 11ul, 4294967295u, 7ul, 2636928640u, 15ul, 4022730752u, 18ul, 1812433253u>&, std::vector<int>&)  (in profile_driver) + 1336  [0x10087556c]
+        + ! : 4 kkt_internal(problem&, std::mersenne_twister_engine<unsigned int, 32ul, 624ul, 397ul, 31ul, 2567483615u, 11ul, 4294967295u, 7ul, 2636928640u, 15ul, 4022730752u, 18ul, 1812433253u>&, std::vector<int>&)  (in profile_driver) + 68  [0x100875078]
+        + ! : | 3 boruvka_step(problem const&)  (in profile_driver) + 1252,1580,...  [0x1008732d0,0x100873418,...]
+        + ! : | 1 boruvka_step(problem const&)::$_0::operator()(int, int) const  (in profile_driver) + 424  [0x10087422c]
+        + ! : 2 kkt_internal(problem&, std::mersenne_twister_engine<unsigned int, 32ul, 624ul, 397ul, 31ul, 2567483615u, 11ul, 4294967295u, 7ul, 2636928640u, 15ul, 4022730752u, 18ul, 1812433253u>&, std::vector<int>&)  (in profile_driver) + 760  [0x10087532c]
+        + ! :   2 verify_mst(std::vector<std::tuple<int, int, int, int>> const&, std::vector<std::tuple<int, int, int, int>> const&, int)  (in profile_driver) + 88  [0x10087b1ac]
+        + ! :     1 test_graph::compute_heavy_edges()  (in profile_driver) + 3428  [0x10087bf94]
+        + ! :     + 1 std::__hash_table<int>::__emplace_unique_key_args<int, int const&>(int const&, int const&)  (in profile_driver) + 280  [0x10086ef78]
+        + ! :     +   1 operator new(unsigned long)  (in libc++abi.dylib) + 52  [0x1821e67e8]
+        + ! :     +     1 xzm_malloc  (in libsystem_malloc.dylib) + 212  [0x18204b230]
+        + ! :     1 test_graph::compute_heavy_edges()  (in profile_driver) + 1812  [0x10087b944]
+        + ! 2 kkt_internal(problem&, std::mersenne_twister_engine<unsigned int, 32ul, 624ul, 397ul, 31ul, 2567483615u, 11ul, 4294967295u, 7ul, 2636928640u, 15ul, 4022730752u, 18ul, 1812433253u>&, std::vector<int>&)  (in profile_driver) + 296  [0x10087515c]
+        + !   1 std::__hash_table<int>::__emplace_unique_key_args<int, int const&>(int const&, int const&)  (in profile_driver) + 280  [0x10086ef78]
+        + !   | 1 operator new(unsigned long)  (in libc++abi.dylib) + 52  [0x1821e67e8]
+        + !   |   1 xzm_malloc  (in libsystem_malloc.dylib) + 80  [0x18204b1ac]
+        + !   1 std::__hash_table<int>::__emplace_unique_key_args<int, int const&>(int const&, int const&)  (in profile_driver) + 112  [0x10086eed0]
+        + 16 kkt(problem&, unsigned int)  (in profile_driver) + 148  [0x100874f78]
+        +   8 std::__hash_table<int>::__emplace_unique_key_args<int, int const&>(int const&, int const&)  (in profile_driver) + 112,272,...  [0x10086eed0,0x10086ef70,...]
+        +   5 std::__hash_table<int>::__emplace_unique_key_args<int, int const&>(int const&, int const&)  (in profile_driver) + 280  [0x10086ef78]
+        +   : 5 operator new(unsigned long)  (in libc++abi.dylib) + 52  [0x1821e67e8]
+        +   :   3 _xzm_xzone_malloc  (in libsystem_malloc.dylib) + 8,64,...  [0x18204b958,0x18204b990,...]
+        +   :   1 malloc_type_malloc  (in libsystem_malloc.dylib) + 84  [0x18203f084]
+        +   :   1 xzm_malloc  (in libsystem_malloc.dylib) + 136  [0x18204b1e4]
+        +   3 std::__hash_table<int>::__emplace_unique_key_args<int, int const&>(int const&, int const&)  (in profile_driver) + 440  [0x10086f018]
+        +     3 std::__hash_table<int>::__do_rehash<true>(unsigned long)  (in profile_driver) + 300,400,...  [0x10086ede0,0x10086ee44,...]
+        32 main  (in profile_driver) + 352  [0x100869ae0]
+        + 14 std::vector<Edge>::emplace_back<std::tuple<int, int, int, int> const&>(std::tuple<int, int, int, int> const&)  (in profile_driver) + 96  [0x10086f3c0]
+        + 11 problem::problem(int, std::vector<std::tuple<int, int, int, int>> const&)  (in profile_driver) + 128  [0x10086f2fc]
+        + ! 11 std::vector<Edge>::emplace_back<std::tuple<int, int, int, int> const&>(std::tuple<int, int, int, int> const&)  (in profile_driver) + 28,76  [0x10086f37c,0x10086f3ac]
+        + 7 problem::problem(int, std::vector<std::tuple<int, int, int, int>> const&)  (in profile_driver) + 104,132  [0x10086f2e4,0x10086f300]
+        4 main  (in profile_driver) + 416  [0x100869b20]
+        + 2 _xzm_free  (in libsystem_malloc.dylib) + 164,264  [0x18204c1bc,0x18204c220]
+        + 1 _free  (in libsystem_malloc.dylib) + 96  [0x18205bd30]
+        + 1 _xzm_free  (in libsystem_malloc.dylib) + 352  [0x18204c278]
+        +   1 _platform_memset  (in libsystem_platform.dylib) + 208  [0x182239160]
+        1 _xzm_free  (in libsystem_malloc.dylib) + 1556  [0x18204c72c]
+
+Total number in stack (recursive counted multiple, when >=5):
+        6       operator new(unsigned long)  (in libc++abi.dylib) + 52  [0x1821e67e8]
+        5       LCA::dfs(std::vector<std::vector<int>> const&, int, int, int)  (in profile_driver) + 444  [0x1008772d4]
+        5       boruvka_step(problem const&)  (in profile_driver) + 0  [0x100872dec]
+        5       std::__hash_table<int>::__emplace_unique_key_args<int, int const&>(int const&, int const&)  (in profile_driver) + 0  [0x10086ee60]
+        5       tree_path_maxima::init(int, int)  (in profile_driver) + 172  [0x10087de48]
+        5       tree_path_maxima::visit(int, int)  (in profile_driver) + 360  [0x10087dff0]
+
+Sort by top of stack, same collapsed (when >= 5):
+        boruvka_step(problem const&)  (in profile_driver)        1129
+        std::__hash_table<int>::__emplace_unique_key_args<int, int const&>(int const&, int const&)  (in profile_driver)        512
+        tree_path_maxima::visit(int, int)  (in profile_driver)        485
+        tree_path_maxima::init(int, int)  (in profile_driver)        408
+        std::__hash_table<int>::__do_rehash<true>(unsigned long)  (in profile_driver)        305
+        kkt_internal(problem&, std::mersenne_twister_engine<unsigned int, 32ul, 624ul, 397ul, 31ul, 2567483615u, 11ul, 4294967295u, 7ul, 2636928640u, 15ul, 4022730752u, 18ul, 1812433253u>&, std::vector<int>&)  (in profile_driver)        230
+        _platform_memset  (in libsystem_platform.dylib)        205
+        _xzm_free  (in libsystem_malloc.dylib)        148
+        kkt_detail::random_sampling(problem const&, std::mersenne_twister_engine<unsigned int, 32ul, 624ul, 397ul, 31ul, 2567483615u, 11ul, 4294967295u, 7ul, 2636928640u, 15ul, 4022730752u, 18ul, 1812433253u>&)  (in profile_driver)        82
+        test_graph::compute_heavy_edges()  (in profile_driver)        66
+        LCA::query(int, int)  (in profile_driver)        56
+        std::vector<Edge>::emplace_back<std::tuple<int, int, int, int> const&>(std::tuple<int, int, int, int> const&)  (in profile_driver)        25
+        _xzm_xzone_malloc  (in libsystem_malloc.dylib)        24
+        operator new(unsigned long)  (in libc++abi.dylib)        22
+        std::vector<std::tuple<int, int, int, int>>::emplace_back<int const&, int const&, int const&, int const&>(int const&, int const&, int const&, int const&)  (in profile_driver)        21
+        xzm_malloc  (in libsystem_malloc.dylib)        20
+        _free  (in libsystem_malloc.dylib)        13
+        tree_path_maxima::compute_answer()  (in profile_driver)        12
+        remove_isolated_vertices(problem const&)  (in profile_driver)        9
+        boruvka_step(problem const&)::$_0::operator()(int, int) const  (in profile_driver)        7
+        mach_absolute_time  (in libsystem_kernel.dylib)        7
+        problem::problem(int, std::vector<std::tuple<int, int, int, int>> const&)  (in profile_driver)        7
+        DYLD-STUB$$free  (in libc++abi.dylib)        5
+        DYLD-STUB$$operator new(unsigned long)  (in profile_driver)        5
+
+Binary Images:
+       0x100864000 -        0x10087fff7 +profile_driver (0) <32084D62-B9B3-35D4-8DC0-BBE5AB0FFC6A> /tmp/*/profile_driver
+       0x181dbc000 -        0x181e0eb4b  libobjc.A.dylib (951.7) <03BD9E32-CF0A-37B0-898A-3CE8DE06D842> /usr/lib/libobjc.A.dylib
+       0x181e0f000 -        0x181e43d58  libdyld.dylib (1387) <957F93B3-8805-39C7-9C51-EDD1715F550E> /usr/lib/system/libdyld.dylib
+       0x181e44000 -        0x181ef74ff  dyld (1.0.0 - 1387) <74E52480-C2BD-3C8D-812D-95FE2B74A096> /usr/lib/dyld
+       0x181ef8000 -        0x181efb228  libsystem_blocks.dylib (96) <E0AC1231-27AA-3A13-8FAC-41D5802B1F3C> /usr/lib/system/libsystem_blocks.dylib
+       0x181efc000 -        0x181f5055f  libxpc.dylib (3102.160.5) <33E44C2D-D65E-37A6-B85F-1A4CF524A050> /usr/lib/system/libxpc.dylib
+       0x181f51000 -        0x181f719ff  libsystem_trace.dylib (1861.160.4) <93F1DD8C-6CD9-32B9-B222-D23DA5D161B4> /usr/lib/system/libsystem_trace.dylib
+       0x181f72000 -        0x1820205f7  libcorecrypto.dylib (1922.160.10) <0642DDAD-4771-3C82-805C-E7C6701C1461> /usr/lib/system/libcorecrypto.dylib
+       0x182021000 -        0x182071257  libsystem_malloc.dylib (812.160.5) <D969A907-3E43-3951-9365-8C2DB3812E9D> /usr/lib/system/libsystem_malloc.dylib
+       0x182072000 -        0x1820b923f  libdispatch.dylib (1542.160.2) <B2000CD5-F580-314A-A141-E036719D854E> /usr/lib/system/libdispatch.dylib
+       0x1820ba000 -        0x1820bcffb  libsystem_featureflags.dylib (103) <FEE12F9C-344B-33B3-8EDD-283580EF1C67> /usr/lib/system/libsystem_featureflags.dylib
+       0x1820bd000 -        0x18213e1e7  libsystem_c.dylib (1752.160.4) <D77CEB62-AFF6-3CEC-BA9B-4F057FBE2EB5> /usr/lib/system/libsystem_c.dylib
+       0x18213f000 -        0x1821cfae7  libc++.1.dylib (2100.43) <F0FD393C-15BC-3C75-A19D-897F7B225C78> /usr/lib/libc++.1.dylib
+       0x1821d0000 -        0x1821ea75f  libc++abi.dylib (2100.43) <F38A9C58-22AB-3798-BBAE-8DCD9CC0CE27> /usr/lib/libc++abi.dylib
+       0x1821eb000 -        0x1822282e7  libsystem_kernel.dylib (12377.161.14) <C6A4A4CB-92E6-3BAF-AAE0-E8306259209A> /usr/lib/system/libsystem_kernel.dylib
+       0x182229000 -        0x182235b3b  libsystem_pthread.dylib (539.100.4) <A373F0B0-9880-326A-88B4-DD8BE4E33072> /usr/lib/system/libsystem_pthread.dylib
+       0x182236000 -        0x18223e963  libsystem_platform.dylib (375.120.2) <EDB83A19-EC17-32DE-9350-6145970A85D6> /usr/lib/system/libsystem_platform.dylib
+       0x18223f000 -        0x18226e6eb  libsystem_info.dylib (600) <9B5FB84B-31AD-3EA7-8F89-8C700D369DC8> /usr/lib/system/libsystem_info.dylib
+       0x18620c000 -        0x186215e5f  libsystem_darwin.dylib (1752.160.4) <8E07D22E-CE5A-38A0-B091-5B0338C326F5> /usr/lib/system/libsystem_darwin.dylib
+       0x186677000 -        0x1866891b6  libsystem_notify.dylib (348.160.3) <15799128-6CBD-30D6-A2BB-B9D02B4470C0> /usr/lib/system/libsystem_notify.dylib
+       0x188948000 -        0x188962f7b  libsystem_networkextension.dylib (2226.161.1) <9C7B1EEB-47BE-3791-93A9-CFC693CB9417> /usr/lib/system/libsystem_networkextension.dylib
+       0x1889e5000 -        0x1889fcfdf  libsystem_asl.dylib (406) <54439739-33EE-3273-839F-CBA67D7F5CB1> /usr/lib/system/libsystem_asl.dylib
+       0x18a59e000 -        0x18a5a6387  libsystem_symptoms.dylib (2169.160.3) <229122B9-B8B1-3F2F-870E-8650AE3C4FB5> /usr/lib/system/libsystem_symptoms.dylib
+       0x18e843000 -        0x18e87b5b7  libsystem_containermanager.dylib (725.160.3) <14B2A47F-19C8-392F-8FDB-FE8AE375DD41> /usr/lib/system/libsystem_containermanager.dylib
+       0x18fc55000 -        0x18fc595d7  libsystem_configuration.dylib (1405.160.3) <D8D6280B-783D-3550-BDBA-2861AE40604F> /usr/lib/system/libsystem_configuration.dylib
+       0x18fc5a000 -        0x18fc6099f  libsystem_sandbox.dylib (2680.160.6) <54688162-B50D-3D31-A1E8-7B9766D3530D> /usr/lib/system/libsystem_sandbox.dylib
+       0x1912b5000 -        0x1912b81fb  libquarantine.dylib (196.160.2) <EEE5AADB-52E1-3C4C-881A-70405770B1F1> /usr/lib/system/libquarantine.dylib
+       0x191a54000 -        0x191a5ad03  libsystem_coreservices.dylib (191.5.1) <D4ACD2AC-5702-3C45-85A0-300B2C2D19E1> /usr/lib/system/libsystem_coreservices.dylib
+       0x191fe3000 -        0x192020a77  libsystem_m.dylib (3312.100.1) <B54FBE99-DB0B-32C7-ABDD-C2206DF606A4> /usr/lib/system/libsystem_m.dylib
+       0x192022000 -        0x192025527  libmacho.dylib (1387) <949131E5-BDA2-39BA-AA50-62651BB51802> /usr/lib/system/libmacho.dylib
+       0x19203f000 -        0x19204c3a7  libcommonCrypto.dylib (600035) <3B110564-5278-3CB0-85F1-2CE8431FF935> /usr/lib/system/libcommonCrypto.dylib
+       0x19204d000 -        0x192056ca3  libunwind.dylib (2100.2) <05FD0014-55B1-3B8A-A6BA-6C7A389C4123> /usr/lib/system/libunwind.dylib
+       0x19205f000 -        0x192069bef  libcopyfile.dylib (240.160.2.0.1) <D0009B8A-8ECC-3D56-9206-7E1839707F93> /usr/lib/system/libcopyfile.dylib
+       0x19206a000 -        0x19206d987  libcompiler_rt.dylib (103.3) <6FB345CA-7F5C-3263-A23F-143F7539FD8A> /usr/lib/system/libcompiler_rt.dylib
+       0x19206e000 -        0x19207278b  libsystem_collections.dylib (1752.160.4) <C8160BD2-5941-3DC0-BB40-F8C2B8156EC4> /usr/lib/system/libsystem_collections.dylib
+       0x192073000 -        0x1920764cf  libsystem_secinit.dylib (168.100.7) <ECABC024-8F02-374A-BB7E-29437CEA2ABD> /usr/lib/system/libsystem_secinit.dylib
+       0x192077000 -        0x192079bf7  libremovefile.dylib (85.100.6) <7460B5AE-469A-36A0-A7EC-6C7D69628E86> /usr/lib/system/libremovefile.dylib
+       0x19207a000 -        0x19207af27  libkeymgr.dylib (31) <7E863FCA-F3FF-32C7-8A8C-F983E946AFC3> /usr/lib/system/libkeymgr.dylib
+       0x19207b000 -        0x192083e37  libsystem_dnssd.dylib (2881.160.4) <305F4398-E688-3384-B351-02D865EC8A04> /usr/lib/system/libsystem_dnssd.dylib
+       0x192084000 -        0x19208909b  libcache.dylib (95) <9CD7B1E1-3E47-339C-A193-2392E3E0ED23> /usr/lib/system/libcache.dylib
+       0x19208a000 -        0x19208bce3  libSystem.B.dylib (1356) <4FED5EE2-5D3E-35B1-A170-9859C4B683BB> /usr/lib/libSystem.B.dylib
+       0x28604d000 -        0x286054349  libRosetta.dylib (367.9) <0C7397C6-D747-31F2-8BC1-4096213BDE5C> /usr/lib/libRosetta.dylib
+       0x287c60000 -        0x287c63a4b  libsystem_darwindirectory.dylib (122) <971A4F65-493D-39F3-846D-0D33FA2769FD> /usr/lib/system/libsystem_darwindirectory.dylib
+       0x287c64000 -        0x287c6e39b  libsystem_eligibility.dylib (319.160.17) <750CA446-92EA-3A56-9A7B-CC0841686C50> /usr/lib/system/libsystem_eligibility.dylib
+       0x287c6f000 -        0x287c7688b  libsystem_sanitizers.dylib (26.1) <D88EC709-9AA8-3083-B22B-D3CB39678D71> /usr/lib/system/libsystem_sanitizers.dylib
+       0x287c77000 -        0x287c77bb7  libsystem_trial.dylib (474.2.18.2) <7194FF5B-A6C5-3D67-B00A-90209F10D603> /usr/lib/system/libsystem_trial.dylib

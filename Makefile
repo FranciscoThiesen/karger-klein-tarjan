@@ -32,7 +32,7 @@ OBJS = $(SRCS:%.cpp=$(BUILD_DIR)/%.o)
 # Headers
 HDRS = $(wildcard */*.hpp)
 
-.PHONY: all clean test benchmark scaling-benchmark debug
+.PHONY: all clean test benchmark scaling-benchmark diverse-benchmark debug
 
 all: $(BIN_DIR)/test_runner $(BIN_DIR)/regression_runner
 
@@ -40,6 +40,8 @@ all: $(BIN_DIR)/test_runner $(BIN_DIR)/regression_runner
 benchmark: $(BIN_DIR)/benchmark
 
 scaling-benchmark: $(BIN_DIR)/scaling_benchmark
+
+diverse-benchmark: $(BIN_DIR)/diverse_benchmark
 
 # Build object files
 $(BUILD_DIR)/%.o: %.cpp $(HDRS)
@@ -59,6 +61,14 @@ $(BIN_DIR)/scaling_benchmark: benchmark/scaling_benchmark.cpp $(filter-out $(BUI
 	@mkdir -p $(BIN_DIR)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -I. $^ $(LDFLAGS) -o $@
 
+$(BIN_DIR)/diverse_benchmark: benchmark/diverse_benchmark.cpp benchmark/mst_certificate.hpp $(OBJS)
+	@mkdir -p $(BIN_DIR)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -I. $(filter %.cpp %.o,$^) $(LDFLAGS) -o $@
+
+$(BIN_DIR)/certificate_test: benchmark/certificate_test.cpp benchmark/mst_certificate.hpp
+	@mkdir -p $(BIN_DIR)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -I. $< $(LDFLAGS) -o $@
+
 # Benchmark
 $(BIN_DIR)/benchmark: benchmark/mst_benchmark.cpp $(OBJS)
 	@mkdir -p $(BIN_DIR)
@@ -68,9 +78,10 @@ $(BIN_DIR)/benchmark: benchmark/mst_benchmark.cpp $(OBJS)
 debug:
 	$(MAKE) CXXFLAGS="$(DEBUG_FLAGS)" BUILD_DIR="$(BUILD_DIR)/debug" BIN_DIR="$(BIN_DIR)/debug" all
 
-test: $(BIN_DIR)/test_runner $(BIN_DIR)/regression_runner
+test: $(BIN_DIR)/test_runner $(BIN_DIR)/regression_runner $(BIN_DIR)/certificate_test
 	$(BIN_DIR)/test_runner
 	$(BIN_DIR)/regression_runner
+	$(BIN_DIR)/certificate_test
 
 clean:
 	rm -rf $(BUILD_DIR) $(BIN_DIR)

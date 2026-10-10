@@ -1,0 +1,101 @@
+{
+  "input_csv": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/diverse-2026-10-10/raw.csv",
+  "case_count": 39,
+  "observation_count": 5616,
+  "graph_seeds": [
+    17,
+    42,
+    999
+  ],
+  "kkt_seeds": [
+    0,
+    1,
+    7
+  ],
+  "repetitions_per_seed_pair": 4,
+  "warmups": 1,
+  "aggregation": "Median of repetitions for each graph/sampling-seed pair; median of the three sampling-seed values per graph; median of the three graph values. Paired ratios apply the same hierarchy to matched algorithm/reference elapsed-time ratios. Error bars span graph-level medians and are not confidence intervals.",
+  "kkt_cases_faster_by_paired_hierarchical_median": {
+    "kruskal": 14,
+    "prim": 31,
+    "boruvka": 16
+  },
+  "kkt_cases_slower": {
+    "kruskal": [
+      "random_4_n1024",
+      "random_4_n4096",
+      "random_4_n16384",
+      "random_4_n65536",
+      "random_32_n16384",
+      "random_32_n65536",
+      "random_128_n16384",
+      "grid_n1024",
+      "grid_n4096",
+      "grid_n16384",
+      "geometric_grid_n1024",
+      "geometric_grid_n4096",
+      "geometric_grid_n16384",
+      "hub_n1024",
+      "planted_tree_n1024",
+      "planted_tree_n4096",
+      "planted_tree_n16384",
+      "random_tree_n1024",
+      "random_tree_n4096",
+      "random_tree_n16384",
+      "star_n1024",
+      "star_n4096",
+      "hierarchical_path_n1024",
+      "hierarchical_path_n4096",
+      "hierarchical_path_n16384"
+    ],
+    "prim": [
+      "random_32_n16384",
+      "random_32_n65536",
+      "random_128_n4096",
+      "random_128_n16384",
+      "hierarchical_path_n1024",
+      "hierarchical_path_n4096",
+      "hierarchical_path_n16384",
+      "complete_n1024"
+    ],
+    "boruvka": [
+      "random_4_n1024",
+      "random_4_n4096",
+      "random_4_n16384",
+      "random_4_n65536",
+      "random_32_n1024",
+      "random_32_n4096",
+      "random_32_n16384",
+      "random_32_n65536",
+      "random_128_n1024",
+      "random_128_n4096",
+      "random_128_n16384",
+      "random_dense_anchor_n1000",
+      "geometric_grid_n1024",
+      "clustered_n1024",
+      "clustered_n4096",
+      "clustered_n16384",
+      "planted_tree_n1024",
+      "planted_tree_n4096",
+      "planted_tree_n16384",
+      "hierarchical_path_n1024",
+      "complete_n256",
+      "complete_n512",
+      "complete_n1024"
+    ]
+  },
+  "kkt_runtime_ratio_ranges": {
+    "kruskal": [
+      0.26424037632647407,
+      14.780285379205022
+    ],
+    "prim": [
+      0.25597170975154093,
+      3.108443790069731
+    ],
+    "boruvka": [
+      0.42586962080416446,
+      7.8433020158288755
+    ]
+  }
+}

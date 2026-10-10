@@ -48,6 +48,19 @@ Alternatively, use Bazel:
 
 ### How to run benchmarks
 
+The [four-algorithm comparison](benchmark/results/diverse-2026-10-10/README.md)
+covers 39 configurations across random graphs, grids, hubs, clusters, trees,
+paths, and complete graphs, with correctness checks and downloadable plots:
+
+```bash
+make -j4 diverse-benchmark
+./bin/diverse_benchmark --scale > diverse.csv
+python3 benchmark/analyze_diverse.py diverse.csv --output-dir diverse-plots
+```
+
+Plotting requires NumPy and Matplotlib. These timings include KKT's conversion
+from the common edge-list input; see the comparison's methods for details.
+
 The dependency-free scaling benchmark varies vertex count at fixed densities,
 varies density at fixed vertex count, and includes hierarchical paths:
 

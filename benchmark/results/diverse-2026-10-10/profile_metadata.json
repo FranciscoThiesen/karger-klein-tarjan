@@ -1,0 +1,56 @@
+{
+  "purpose": "Sampling diagnosis only; timings are not benchmark evidence",
+  "source_revision": "bed1842dfdd6b25d173bee16b83706b39b0e6e04",
+  "fixture": {
+    "family": "random_32",
+    "n": 65536,
+    "m": 2097152,
+    "graph_seed": 17
+  },
+  "sampling_seeds": [
+    0,
+    1,
+    7
+  ],
+  "compiler": "/usr/bin/clang++ -std=c++17 -O3 -march=native; linked existing .build objects",
+  "sampling_command": "/usr/bin/sample 96407 5 1 -file /tmp/kkt-diverse/kkt_random32_n65536.sample.txt",
+  "sample_count": 3824,
+  "sample_window_seconds": 5,
+  "nominal_interval_ms": 1,
+  "output_size_checksum": 2359260,
+  "leaf_samples": {
+    "boruvka_step": 1129,
+    "hash_insert": 512,
+    "tree_path_maxima_visit": 485,
+    "tree_path_maxima_init": 408,
+    "hash_rehash": 305,
+    "kkt_internal": 230,
+    "platform_memset": 205,
+    "xzm_free": 148,
+    "random_sampling": 82,
+    "compute_heavy_edges": 66,
+    "lca_query": 56
+  },
+  "approximate_inclusive_groups": {
+    "verifier": 1915,
+    "boruvka_contraction": 1138
+  },
+  "limits": [
+    "One graph seed and one 5-second window; optimized symbols lack line debug info",
+    "Driver reuses the fixture and includes conversion/result cleanup; no MST certificate is run inside the loop",
+    "No cache-miss or memory-bandwidth counters; memory-locality explanation remains inference",
+    "Heavy-edge hash-table attribution comes from caller stacks; leaf totals are not inclusive totals"
+  ],
+  "process_footprint_reported": "426.0M",
+  "linked_object_sha256": {
+    ".build/boruvka/boruvka.o": "1c58b8cb7c1a54989938eb3c2ec2a786ed2ef0ab2b4f257e99faf9107bfca674",
+    ".build/graph_utils/graph_utils.o": "1e9aa75afc36902bf470d5fbe94964233b03df5f490d0e115feeaf9307744fe1",
+    ".build/kkt/kkt.o": "4d6c20ef1a6763efa9a2dbc07079bf1641f3b84e6ab3df548ec8ec89d67634fb",
+    ".build/kruskal/kruskal.o": "d0d23eadc6eb81a4285a69077e56d07d32f3b32673e0a53ee6cb8537c659c942",
+    ".build/lca/lca.o": "c7d6f8f4c332846ccfe17ccd1435fbfb2780de00f477a060655fb3af309b406c",
+    ".build/prim/prim.o": "4954cd12ab635f0eb57fc95e269f2f77dd4f7b98a7b6012667ca38fb5e0b2f8a",
+    ".build/union_find/union_find.o": "fcc799fa111afbfdc0afe4e36f2a2db3acf37a061bd7b9d0022bd206046cb1ca",
+    ".build/verifier/verifier_v2.o": "6ccf3a058f6d730cfb8fe765b851562df5fb03158c65dd2b0f18964a6305c38c"
+  },
+  "completed_iterations_total": 36
+}

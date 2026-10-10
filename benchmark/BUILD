@@ -1,4 +1,18 @@
-load("@rules_cc//cc:defs.bzl", "cc_binary")
+load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_test")
+
+cc_test(
+    name = "certificate_test",
+    srcs = ["certificate_test.cpp", "mst_certificate.hpp"],
+    copts = ["-std=c++17"],
+)
+
+cc_binary(
+    name = "diverse_benchmark",
+    srcs = ["diverse_benchmark.cpp", "mst_certificate.hpp"],
+    copts = ["-std=c++17"],
+    deps = ["//kkt:kkt", "//kruskal:kruskal", "//prim:prim", "//boruvka:boruvka"],
+    visibility = ["//visibility:public"],
+)
 
 cc_binary(
     name = "scaling_benchmark",
