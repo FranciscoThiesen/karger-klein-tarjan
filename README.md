@@ -47,19 +47,36 @@ Alternatively, use Bazel:
    ```
 
 ### How to run benchmarks
-1. Build the project as described above
 
-2. Run the following command at your command line:
-    
-    ```bash
-    $ bazel run benchmark:mst_benchmark -c opt
-    ```
+The dependency-free scaling benchmark varies vertex count at fixed densities,
+varies density at fixed vertex count, and includes hierarchical paths:
 
-### Benchmark Comments
-All MST algorithms have been tested with random undirected connected graphs with unique discrete edge weights.
-The runtime complexity has been estimated automatically by using [google/benchmark](https://github.com/google/benchmark#asymptotic-complexity)
+```bash
+make -j4 scaling-benchmark
+./bin/scaling_benchmark --smoke > smoke.csv
+./bin/scaling_benchmark --scale > scaling.csv
+```
 
-### Results
-1. The KKT implementation provided has a linear behavior in practice (in the datasets tested). See results in the benchmark.txt file for the repo.
-2. All the other tested algorithms don't have linear complexity in theory and this is also true for the benchmark graph instances.
-3. The KKT algorithm still performed poorly compared to the other algorithms, because of a huge constant factor.
+The default scale preset uses three graph seeds, three KKT sampling seeds,
+one warmup, and three repetitions per seed pair. Use `--repetitions N` and
+`--warmups N` to change those counts. Every timed result is checked against
+Kruskal's exact edge-ID set on distinct-weight inputs; failures return a nonzero
+exit status. Keep the complete CSV, including slow cases.
+
+Both algorithms time their public call with input construction, validation,
+and result destruction excluded. Algorithm order alternates. Record the source
+revision, compiler version, build flags, CPU/OS, and command with each run.
+For example, `make -B -n scaling-benchmark` prints the build commands without
+executing them. Measurements describe those workloads and do not prove an
+asymptotic bound.
+
+The older Google Benchmark comparison remains available:
+
+```bash
+bazel run benchmark:mst_benchmark -c opt
+```
+
+`benchmark/benchmark_result.txt` contains historical results predating the
+current repairs. Its fixed vertex count and automatic complexity fits do not
+establish linear scaling when both vertices and edges grow. The current legacy
+harness no longer reports those fitted complexity labels.

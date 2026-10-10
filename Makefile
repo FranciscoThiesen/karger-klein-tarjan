@@ -32,12 +32,14 @@ OBJS = $(SRCS:%.cpp=$(BUILD_DIR)/%.o)
 # Headers
 HDRS = $(wildcard */*.hpp)
 
-.PHONY: all clean test benchmark debug
+.PHONY: all clean test benchmark scaling-benchmark debug
 
 all: $(BIN_DIR)/test_runner $(BIN_DIR)/regression_runner
 
 # Benchmark (requires google benchmark library)
 benchmark: $(BIN_DIR)/benchmark
+
+scaling-benchmark: $(BIN_DIR)/scaling_benchmark
 
 # Build object files
 $(BUILD_DIR)/%.o: %.cpp $(HDRS)
@@ -50,6 +52,10 @@ $(BIN_DIR)/test_runner: test/simple_test.cpp $(OBJS)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -I. $^ $(LDFLAGS) -o $@
 
 $(BIN_DIR)/regression_runner: test/regression_test.cpp $(filter-out $(BUILD_DIR)/prim/prim.o,$(OBJS))
+	@mkdir -p $(BIN_DIR)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -I. $^ $(LDFLAGS) -o $@
+
+$(BIN_DIR)/scaling_benchmark: benchmark/scaling_benchmark.cpp $(filter-out $(BUILD_DIR)/prim/prim.o,$(OBJS))
 	@mkdir -p $(BIN_DIR)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -I. $^ $(LDFLAGS) -o $@
 

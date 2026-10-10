@@ -2,7 +2,6 @@
 #include <cassert>
 #include <iostream>
 #include <random>
-#include <chrono>
 #include <vector>
 #include <tuple>
 #include <unordered_set>
@@ -217,40 +216,6 @@ TEST(boruvka_comparison) {
     }
 }
 
-// Performance test
-void benchmark_comparison() {
-    cout << "\n=== Performance Comparison ===" << endl;
-
-    mt19937 rng(999);
-
-    for (int n : {1000, 5000, 10000}) {
-        int m = n * 4;
-        auto edges = generate_random_graph(n, m, rng);
-
-        // Kruskal timing
-        auto start = chrono::high_resolution_clock::now();
-        for (int i = 0; i < 10; ++i) {
-            auto mst = kruskal(edges, n);
-        }
-        auto end = chrono::high_resolution_clock::now();
-        auto kruskal_time = chrono::duration_cast<chrono::microseconds>(end - start).count() / 10.0;
-
-        // KKT timing
-        start = chrono::high_resolution_clock::now();
-        for (int i = 0; i < 10; ++i) {
-            problem P(n, edges);
-            auto result = kkt(P, i);
-        }
-        end = chrono::high_resolution_clock::now();
-        auto kkt_time = chrono::duration_cast<chrono::microseconds>(end - start).count() / 10.0;
-
-        cout << "n=" << n << ", m=" << m << ": "
-             << "Kruskal=" << kruskal_time/1000 << "ms, "
-             << "KKT=" << kkt_time/1000 << "ms, "
-             << "Ratio=" << kkt_time/kruskal_time << "x" << endl;
-    }
-}
-
 int main() {
     cout << "=== KKT MST Algorithm Tests ===" << endl << endl;
 
@@ -266,10 +231,6 @@ int main() {
     cout << endl << "=== Results ===" << endl;
     cout << "Passed: " << tests_passed << endl;
     cout << "Failed: " << tests_failed << endl;
-
-    if (tests_failed == 0) {
-        benchmark_comparison();
-    }
 
     return tests_failed > 0 ? 1 : 0;
 }
