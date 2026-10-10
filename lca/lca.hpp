@@ -13,7 +13,6 @@ class LCA
 {
   private:
 	int n;
-	vector<vector<int>> adj;
 	int block_size, block_cnt;
 	vector<int> first_visit;
 	vector<int> euler_tour;
@@ -23,16 +22,16 @@ class LCA
 	vector<vector<vector<int>>> blocks;
 	vector<int> block_mask;
 
-	void dfs(int v, int p, int h);
+	void dfs(const vector<vector<int>>& graph, int v, int p, int h);
 
 	int min_by_h(int i, int j);
 
-	void precompute_lca(int root);
+	void precompute_lca(const vector<vector<int>>& graph, int root);
 
 	int lca_in_block(int b, int l, int r);
 
   public:
-	LCA(int n, vector<vector<int>>& graph, int root);
+	LCA(int n, const vector<vector<int>>& graph, int root);
 	LCA();
 	int query(int v, int u);
 };

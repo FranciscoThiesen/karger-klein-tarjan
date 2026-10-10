@@ -1,15 +1,15 @@
 #include "lca.hpp"
 
-void LCA::dfs(int v, int p, int h)
+void LCA::dfs(const vector<vector<int>>& graph, int v, int p, int h)
 {
 	first_visit[v] = euler_tour.size();
 	euler_tour.push_back(v);
 	height[v] = h;
 
-	for (int u: adj[v])
+	for (int u: graph[v])
 	{
 		if (u == p) continue;
-		dfs(u, v, h + 1);
+		dfs(graph, u, v, h + 1);
 		euler_tour.push_back(v);
 	}
 }
@@ -19,13 +19,13 @@ int LCA::min_by_h(int i, int j)
 	return height[euler_tour[i]] < height[euler_tour[j]] ? i : j;
 }
 
-void LCA::precompute_lca(int root)
+void LCA::precompute_lca(const vector<vector<int>>& graph, int root)
 {
 	// get euler tour & indices of first occurences
 	first_visit.assign(n, -1);
 	height.assign(n, 0);
 	euler_tour.reserve(2 * n);
-	dfs(root, -1, 0);
+	dfs(graph, root, -1, 0);
 
 	// precompute all log values
 	int m = euler_tour.size();
@@ -92,9 +92,9 @@ int LCA::lca_in_block(int b, int l, int r)
 	return blocks[block_mask[b]][l][r] + b * block_size;
 }
 
-LCA::LCA(int n, vector<vector<int>>& graph, int root) : n(n), adj(graph)
+LCA::LCA(int n, const vector<vector<int>>& graph, int root) : n(n)
 {
-	precompute_lca(root);
+	precompute_lca(graph, root);
 }
 
 LCA::LCA() {}

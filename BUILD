@@ -7,6 +7,7 @@ cc_test(
     deps = [
         "//kkt:kkt",
         "//kruskal:kruskal",
+        "//lca:lca",
         "//verifier:verifier_v2",
     ],
 )

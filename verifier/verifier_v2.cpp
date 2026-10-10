@@ -15,7 +15,6 @@
 #include <iostream>
 #include <numeric>
 #include <tuple>
-#include <unordered_map>
 #include <utility>
 #include <vector>
 
@@ -68,105 +67,74 @@ vector<tuple<int, int, int, int>>
 				  int total_nodes)
 {
 	vector<tuple<int, int, int, int>> active_edges = edges;
-	vector<int> component(total_nodes);
-	iota(component.begin(), component.end(), 0);
+	vector<int> component_list(total_nodes);
+	iota(component_list.begin(), component_list.end(), 0);
 
-	int graph_cc = total_nodes, prox_node_id = total_nodes;
-
-	int total_edges = static_cast<int>(edges.size());
+	// Every contraction creates fresh IDs, and a full branching tree has
+	// fewer than 2n nodes. An ID is active in just one round, so these dense
+	// arrays need no per-round clearing or hashing.
+	const size_t capacity = 2 * static_cast<size_t>(total_nodes);
+	vector<int> cheapest_edge(capacity, -1);
+	vector<int> super_node_id(capacity, -1);
+	vector<vector<int>> current_graph(capacity);
+	vector<int> dfs_stack;
 	vector<tuple<int, int, int, int>> new_edges;
+	new_edges.reserve(capacity);
+	int prox_node_id = total_nodes;
 
-	while (graph_cc > 1)
+	while (component_list.size() > 1)
 	{
-		// Finding the cheapest edge that touches each component
-		unordered_map<int, int> cheapest_edge;
-
-		// Adjacency list for each component that is still active by the
-		// current iteration.
-		unordered_map<int, vector<int>> current_graph;
-
-		for (int i = 0; i < total_edges; ++i)
+		for (int i = 0; i < static_cast<int>(active_edges.size()); ++i)
 		{
 			int from, to, cost;
 			tie(from, to, cost, ignore) = active_edges[i];
-
-			if (cheapest_edge.count(from) == 0 ||
+			if (cheapest_edge[from] == -1 ||
 				cost < get<2>(active_edges[cheapest_edge[from]]))
 				cheapest_edge[from] = i;
-			if (cheapest_edge.count(to) == 0 ||
+			if (cheapest_edge[to] == -1 ||
 				cost < get<2>(active_edges[cheapest_edge[to]]))
 				cheapest_edge[to] = i;
 		}
 
-		// Storing the list of components that are still active by now
-		vector<int> component_list;
-		for (const auto& par: cheapest_edge)
-			component_list.push_back(par.first);
-
-		// This loops construct the graph that takes into account only the
-		// current active components
-		for (const auto& par: cheapest_edge)
+		for (int node: component_list)
 		{
-			int from, to, cost;
-			tie(from, to, cost, ignore) = active_edges[par.second];
+			const auto& edge = active_edges[cheapest_edge[node]];
+			int from = get<0>(edge), to = get<1>(edge);
 			current_graph[from].push_back(to);
 			current_graph[to].push_back(from);
 		}
 
 		vector<int> new_component_ids;
-		unordered_map<int, int> super_node_id;
-
-		// Iterative DFS for connected components (avoids std::function overhead)
-		vector<pair<int, size_t>> dfs_stack;  // (node, neighbor_index)
-
-		for (const auto& start_id: component_list)
+		new_component_ids.reserve(component_list.size() / 2);
+		for (int start_id: component_list)
 		{
-			if (super_node_id.count(start_id) != 0) continue;
-
+			if (super_node_id[start_id] != -1) continue;
 			int new_id = prox_node_id++;
 			new_component_ids.push_back(new_id);
 			super_node_id[start_id] = new_id;
-			dfs_stack.emplace_back(start_id, 0);
-
+			dfs_stack.push_back(start_id);
 			while (!dfs_stack.empty())
 			{
-				auto& [node, idx] = dfs_stack.back();
-				const auto& neighbors = current_graph[node];
-
-				// Find next unvisited neighbor
-				while (idx < neighbors.size() && super_node_id.count(neighbors[idx]) != 0)
+				int node = dfs_stack.back();
+				dfs_stack.pop_back();
+				for (int next: current_graph[node])
 				{
-					++idx;
-				}
-
-				if (idx < neighbors.size())
-				{
-					int next = neighbors[idx];
-					++idx;
-					super_node_id[next] = super_node_id[node];
-					dfs_stack.emplace_back(next, 0);
-				}
-				else
-				{
-					dfs_stack.pop_back();
+					if (super_node_id[next] != -1) continue;
+					super_node_id[next] = new_id;
+					dfs_stack.push_back(next);
 				}
 			}
 		}
 
-		// Connecting each of the nodes of the current step to it's
-		// corresponding super_node.
-		for (const auto& par: cheapest_edge)
+		for (int node: component_list)
 		{
-			int super_node_cc = super_node_id[par.first];
-			new_edges.emplace_back(par.first, super_node_cc,
-								   get<2>(active_edges[par.second]),
-								   get<3>(active_edges[par.second]));
+			const auto& edge = active_edges[cheapest_edge[node]];
+			new_edges.emplace_back(node, super_node_id[node],
+								   get<2>(edge), get<3>(edge));
 		}
 
 		vector<tuple<int, int, int, int>> relevant_edges;
-		// We are now removing self-loops and changing the
-		// endpoints edges, so as to reflect that collapse
-		// of several nodes into a single super_node
+		relevant_edges.reserve(new_component_ids.size() - 1);
 		for (const auto& e: active_edges)
 		{
 			int from, to, cost, id;
@@ -174,14 +142,11 @@ vector<tuple<int, int, int, int>>
 			if (super_node_id[from] != super_node_id[to])
 			{
 				relevant_edges.emplace_back(super_node_id[to],
-											super_node_id[from], cost, id);
+											 super_node_id[from], cost, id);
 			}
 		}
-		// Updating the active edges, total number of edges
-		// and the number of connected components
-		active_edges = relevant_edges;
-		total_edges = static_cast<int>(active_edges.size());
-		graph_cc = static_cast<int>(new_component_ids.size());
+		active_edges = std::move(relevant_edges);
+		component_list = std::move(new_component_ids);
 	}
 
 	// Returning edges of the generated full-branching tree
@@ -203,26 +168,22 @@ vector<tuple<int, int, int, int>>
 struct tree_path_maxima
 {
 	int height, n, m, root;
-	vector<int> depth, D, L, Lnext, answer, median, P, upper, lower, child,
-		sibling, weight;
+	vector<int> depth, D, L, Lnext, answer, median, P;
+	const vector<int>& upper;
+	const vector<int>& lower;
+	const vector<int>& child;
+	const vector<int>& sibling;
+	const vector<int>& weight;
 
-	tree_path_maxima(int _root, vector<int> _child, vector<int> _sibling,
-					 vector<int> _weight, vector<int> _upper,
-					 vector<int> _lower)
+	tree_path_maxima(int _root, const vector<int>& _child,
+					 const vector<int>& _sibling, const vector<int>& _weight,
+					 const vector<int>& _upper, const vector<int>& _lower)
+		: height(0), n(static_cast<int>(_child.size())),
+		  m(static_cast<int>(_upper.size())), root(_root),
+		  depth(n, 0), D(n, 0), L(n, 0), Lnext(m, 0), answer(m, 0),
+		  upper(_upper), lower(_lower), child(_child), sibling(_sibling),
+		  weight(_weight)
 	{
-		height = 0, n = static_cast<int>(_child.size()),
-		m = static_cast<int>(_upper.size());
-		depth.assign(n, 0);
-		D.assign(n, 0);
-		L.assign(n, 0);
-		Lnext.assign(m, 0);
-		answer.assign(m, 0);
-		upper = _upper;
-		lower = _lower;
-		child = _child;
-		sibling = _sibling;
-		weight = _weight;
-		root = _root;
 	}
 
 	void init(int u, int d)
@@ -260,7 +221,7 @@ struct tree_path_maxima
 		for (int z = child[v]; z >= 0; z = sibling[z]) visit(z, S);
 	}
 
-	vector<int> compute_answer()
+	const vector<int>& compute_answer()
 	{
 		fill(L.begin(), L.end(), -1);
 		fill(Lnext.begin(), Lnext.end(), -1);
@@ -304,103 +265,34 @@ struct test_graph
 	// 6 - Vetor de arestas do grafo original
 	int root, total_nodes;
 	vector<int> child, sibling, weight;
-	vector<tuple<int, int, int, int>> mst;
-	vector<tuple<int, int, int, int>> G;
+	const vector<tuple<int, int, int, int>>& G;
 	LCA lca;
 
-	test_graph(const vector<tuple<int, int, int, int>> edges,
-			   const vector<tuple<int, int, int, int>> spanning_tree,
-			   const int n)
+	test_graph(const vector<tuple<int, int, int, int>>& edges,
+			   const vector<tuple<int, int, int, int>>& spanning_tree,
+			   const int n) : G(edges)
 	{
-		mst = spanning_tree;
-		auto fbt_mst = fbt_reduction(mst, n);
-
-		G = edges;
-		int max_id = n;
+		auto fbt_mst = fbt_reduction(spanning_tree, n);
+		// Each tuple already records child -> parent, and fresh parent IDs
+		// increase monotonically. The last parent is therefore the root.
+		total_nodes = n;
+		for (const auto& e: fbt_mst)
+			total_nodes = max(total_nodes, get<1>(e) + 1);
+		root = total_nodes - 1;
+		child.assign(total_nodes, -1);
+		sibling.assign(total_nodes, -1);
+		weight.assign(total_nodes, -1);
+		vector<vector<int>> adj(total_nodes);
 		for (const auto& e: fbt_mst)
 		{
-			int a, b, c;
-			tie(a, b, c, ignore) = e;
-			max_id = max(max(a, b) + 1, max_id);
+			int node, parent, cost;
+			tie(node, parent, cost, ignore) = e;
+			sibling[node] = child[parent];
+			child[parent] = node;
+			weight[node] = cost;
+			adj[parent].push_back(node);
 		}
-		// total_nodes is different than n, because it represents
-		// the total number of nodes on the full-branching tree
-		total_nodes = max_id;
-
-		int N = total_nodes;
-
-		vector<vector<pair<int, int>>> adj_list(max_id);
-		vector<vector<int>> adj(N);
-
-		child.assign(max_id, -1);
-		sibling.assign(max_id, -1);
-		weight.assign(max_id, -1);
-		root = max_id - 1;
-
-		for (const auto& e: fbt_mst)
-		{
-			int a, b, c;
-			tie(a, b, c, ignore) = e;
-			adj_list[a].emplace_back(b, c);
-			adj_list[b].emplace_back(a, c);
-		}
-
-		// Iterative DFS to convert graph to child/sibling format for tree_path_maxima
-		// (avoids std::function overhead)
-		struct DfsFrame {
-			int node;
-			int parent;
-			size_t edge_idx;
-			vector<int> kids;
-		};
-		vector<DfsFrame> dfs_stack;
-		dfs_stack.push_back({root, -1, 0, {}});
-
-		while (!dfs_stack.empty())
-		{
-			DfsFrame& frame = dfs_stack.back();
-			const auto& edges = adj_list[frame.node];
-
-			// Find next unvisited child
-			bool found_child = false;
-			while (frame.edge_idx < edges.size())
-			{
-				int to = edges[frame.edge_idx].first;
-				int cost = edges[frame.edge_idx].second;
-				++frame.edge_idx;
-
-				if (to != frame.parent)
-				{
-					// Preparing the tree for the LCA
-					adj[frame.node].push_back(to);
-					frame.kids.push_back(to);
-					weight[to] = cost;
-					// Push child onto stack for processing
-					dfs_stack.push_back({to, frame.node, 0, {}});
-					found_child = true;
-					break;
-				}
-			}
-
-			// If no more children, do post-order work and pop
-			if (!found_child)
-			{
-				// Post-order: set up child/sibling relationships
-				if (!frame.kids.empty())
-				{
-					child[frame.node] = frame.kids[0];
-					for (size_t i = 0; i + 1 < frame.kids.size(); ++i)
-					{
-						sibling[frame.kids[i]] = frame.kids[i + 1];
-					}
-				}
-				dfs_stack.pop_back();
-			}
-		}
-
-		// This structure perform the required LCA precomputations in O(n + m),
-		// in order to answer LCA queries in O(1) time
-		lca = LCA(N, adj, root);
+		lca = LCA(total_nodes, adj, root);
 	}
 
 	// This functions return all the F-heavy edges of a graph taking into
@@ -453,7 +345,7 @@ struct test_graph
 
 		tree_path_maxima verifier =
 			tree_path_maxima(root, child, sibling, weight, upper, lower);
-		vector<int> sol = verifier.compute_answer();
+		const vector<int>& sol = verifier.compute_answer();
 		unordered_set<int> f_heavy_edges;
 
 		for (const auto& qry: decomposed_query)
@@ -478,6 +370,7 @@ unordered_set<int>
 			   const vector<tuple<int, int, int, int>>& spanning_tree,
 			   const int n)
 {
+	if (n == 0 || graph.empty() || spanning_tree.empty()) return {};
 	auto verifier = test_graph(graph, spanning_tree, n);
 	return verifier.compute_heavy_edges();
 }
@@ -487,6 +380,7 @@ unordered_set<int>
 						 const vector<tuple<int, int, int, int>>& general_graph,
 						 const int n)
 {
+	if (n == 0 || graph.empty() || general_graph.empty()) return {};
 	int total_number_of_edges = static_cast<int>(general_graph.size());
 
 	// Checking that the general_graph does not have too many edges.
@@ -545,15 +439,13 @@ unordered_set<int>
 		}
 	}
 
-	vector<vector<int>> connected_components(next_id);
 	vector<int> next_id_by_component(next_id, 0);
 	vector<vector<tuple<int, int, int, int>>> spanning_tree(next_id);
 	vector<vector<tuple<int, int, int, int>>> subgraph(next_id);
-	unordered_map<int, int> node_mapping;
+	vector<int> node_mapping(n);
 
 	for (int i = 0; i < n; ++i)
 	{
-		connected_components[connected_component_id[i]].push_back(i);
 		int new_id = next_id_by_component[connected_component_id[i]]++;
 		node_mapping[i] = new_id;
 	}
@@ -586,6 +478,7 @@ unordered_set<int>
 
 	for (int i = 0; i < next_id; ++i)
 	{
+		if (subgraph[i].empty() || spanning_tree[i].empty()) continue;
 		auto V =
 			verify_mst(subgraph[i], spanning_tree[i], next_id_by_component[i]);
 		for (const auto& edg_id: V) { f_heavy_edges.insert(edg_id); }

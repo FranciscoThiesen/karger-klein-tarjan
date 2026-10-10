@@ -2,6 +2,7 @@
 #include "../kkt/kkt.hpp"
 #include "../kkt/random_sampling.hpp"
 #include "../kruskal/kruskal.hpp"
+#include "../lca/lca.hpp"
 #include "../verifier/median_table.hpp"
 #include "../verifier/verifier_v2.hpp"
 
@@ -340,6 +341,61 @@ void test_forest_heavy_edges() {
     check_forest_probes(forest, 58, "verifier disconnected forest and isolated vertices");
 }
 
+void test_verifier_empty_components() {
+    for (int n : {0, 1}) {
+        require(verify_mst({}, {}, n).empty(), "empty or singleton tree verification");
+        require(verify_general_graph({}, {}, n).empty(),
+                "empty or singleton forest verification");
+    }
+
+    const Graph tree{{0, 1, 3, 10}};
+    require(verify_mst({}, tree, 2).empty(), "tree without edge queries");
+    require(verify_general_graph({}, tree, 4).empty(), "forest without edge queries");
+    require(verify_general_graph(tree, {}, 4).empty(), "empty forest makes edges light");
+
+    const Graph forest{{0, 1, 3, 10}, {2, 3, 5, 11}};
+    const Graph queries{{0, 1, 4, 20}, {0, 2, 100, 21}, {0, 4, 101, 22}};
+    // The second tree has no internal query; vertex 4 is isolated. Only edge
+    // 20 has a forest path, so the other two edges remain light at any cost.
+    require_same_ids(verify_general_graph(queries, forest, 5), EdgeIds{20},
+                     "forest component without queries and isolated vertex");
+}
+
+LCA lca_from_local_adjacency() {
+    const std::vector<std::vector<int>> adjacency{{1, 2}, {0, 3, 4}, {0}, {1}, {1}};
+    return LCA(5, adjacency, 0);
+}
+
+void test_lca_adjacency_lifetime() {
+    const auto check = [](LCA& index, const std::string& context) {
+        const int expected[5][5] = {
+            {0, 0, 0, 0, 0},
+            {0, 1, 0, 1, 1},
+            {0, 0, 2, 0, 0},
+            {0, 1, 0, 3, 1},
+            {0, 1, 0, 1, 4},
+        };
+        for (int from = 0; from < 5; ++from) {
+            for (int to = 0; to < 5; ++to) {
+                require(index.query(from, to) == expected[from][to],
+                        context + ": wrong LCA for " + std::to_string(from) +
+                            ", " + std::to_string(to));
+            }
+        }
+    };
+
+    auto from_local = lca_from_local_adjacency();
+    check(from_local, "destroyed local adjacency");
+    LCA from_temporary(5, {{1, 2}, {3, 4}, {}, {}, {}}, 0);
+    check(from_temporary, "temporary directed adjacency");
+
+    std::vector<std::vector<int>> adjacency{{1, 2}, {0, 3, 4}, {0}, {1}, {1}};
+    LCA from_cleared(5, adjacency, 0);
+    adjacency.clear();
+    adjacency.shrink_to_fit();
+    check(from_cleared, "cleared adjacency");
+}
+
 void test_sampling_stream() {
     const problem input(256, with_ids(hierarchical_path(256), IdLayout::signed_extremes));
     for (unsigned int seed : {0u, 42u, std::numeric_limits<unsigned int>::max()}) {
@@ -412,6 +468,8 @@ int main() {
     run("parallel edges after forced contractions", test_parallel_edges_after_contraction);
     run("exhaustive upper-median tables through height 20", test_median_tables);
     run("forest heavy edges against direct path searches", test_forest_heavy_edges);
+    run("verifier empty inputs and components without queries", test_verifier_empty_components);
+    run("LCA queries outlive input adjacency", test_lca_adjacency_lifetime);
     run("sampling consumes a continuing reproducible stream", test_sampling_stream);
     run("KKT preserves global C random state", test_global_random_state);
     std::cout << passed << " passed, " << failed << " failed\n";
