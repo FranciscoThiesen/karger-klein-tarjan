@@ -54,6 +54,12 @@ diagnostics, and repeated comparisons with Kruskal, Prim, and Borůvka.
 It retains the original fixtures, correctness gates, and all measured losses;
 the reports below also preserve the earlier implementations' results.
 
+The [graph-shape follow-up](benchmark/results/shapes-2026-10-11/README.md)
+adds preferential attachment, small-world, multiple-hub, sparse-community,
+bipartite, and balanced-tree fixtures. Run `./bin/diverse_benchmark --shapes`
+for the complete new matrix, or `--smoke-shapes` for its correctness smoke run.
+The report includes repeated comparisons and separate contraction counters.
+
 The [four-algorithm comparison](benchmark/results/diverse-2026-10-10/README.md)
 covers 39 configurations across random graphs, grids, hubs, clusters, trees,
 paths, and complete graphs, with correctness checks and downloadable plots:

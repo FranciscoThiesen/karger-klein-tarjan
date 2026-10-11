@@ -2,7 +2,7 @@ load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library", "cc_test")
 
 cc_library(
     name = "fixtures",
-    hdrs = ["graph_fixtures.hpp", "mst_certificate.hpp"],
+    hdrs = ["graph_fixtures.hpp", "extended_graph_fixtures.hpp", "mst_certificate.hpp"],
     visibility = ["//visibility:public"],
 )
 
@@ -19,6 +19,21 @@ cc_binary(
     copts = ["-std=c++17"],
     deps = [":fixtures", ":work_metrics", "//kkt:kkt_work_stats", "//kruskal:kruskal"],
     visibility = ["//visibility:public"],
+)
+
+cc_binary(
+    name = "shape_work",
+    srcs = ["shape_work.cpp"],
+    copts = ["-std=c++17"],
+    deps = [":fixtures", ":work_metrics", "//kkt:kkt_work_stats", "//kruskal:kruskal"],
+    visibility = ["//visibility:public"],
+)
+
+cc_test(
+    name = "shapes_test",
+    srcs = ["shapes_test.cpp"],
+    copts = ["-std=c++17"],
+    deps = [":fixtures"],
 )
 
 cc_binary(

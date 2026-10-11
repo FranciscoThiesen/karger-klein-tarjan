@@ -1,0 +1,5 @@
+{
+  "timing_instrumentation": "nm -C has no kkt_work or WorkStats symbols",
+  "binaries": "/tmp/kkt-shapes/bin/diverse_benchmark: Mach-O 64-bit executable arm64\n/tmp/kkt-shapes/bin/shape_work:        Mach-O 64-bit executable arm64\n",
+  "tests": "9/9 Bazel targets,96 native fixtures,96 UBSan fixtures; old and shape smoke full seed matrices pass"
+}

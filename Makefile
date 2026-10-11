@@ -32,7 +32,7 @@ OBJS = $(SRCS:%.cpp=$(BUILD_DIR)/%.o)
 # Headers
 HDRS = $(wildcard */*.hpp)
 
-.PHONY: all clean test benchmark scaling-benchmark diverse-benchmark work-sweep debug
+.PHONY: all clean test benchmark scaling-benchmark diverse-benchmark work-sweep shape-work debug
 
 all: $(BIN_DIR)/test_runner $(BIN_DIR)/regression_runner
 
@@ -45,6 +45,8 @@ diverse-benchmark: $(BIN_DIR)/diverse_benchmark
 
 work-sweep: $(BIN_DIR)/work_sweep
 
+shape-work: $(BIN_DIR)/shape_work
+
 WORK_OBJS = $(SRCS:%.cpp=$(BUILD_DIR)/workstats/%.o)
 
 $(BUILD_DIR)/workstats/%.o: %.cpp $(HDRS)
@@ -54,6 +56,14 @@ $(BUILD_DIR)/workstats/%.o: %.cpp $(HDRS)
 $(BIN_DIR)/work_sweep: benchmark/work_sweep.cpp benchmark/work_metrics.hpp benchmark/graph_fixtures.hpp benchmark/mst_certificate.hpp $(WORK_OBJS)
 	@mkdir -p $(BIN_DIR)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -DKKT_ENABLE_WORK_STATS -I. $(filter %.cpp %.o,$^) $(LDFLAGS) -o $@
+
+$(BIN_DIR)/shape_work: benchmark/shape_work.cpp benchmark/work_metrics.hpp benchmark/extended_graph_fixtures.hpp benchmark/graph_fixtures.hpp benchmark/mst_certificate.hpp $(WORK_OBJS)
+	@mkdir -p $(BIN_DIR)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -DKKT_ENABLE_WORK_STATS -I. $(filter %.cpp %.o,$^) $(LDFLAGS) -o $@
+
+$(BIN_DIR)/shapes_test: benchmark/shapes_test.cpp benchmark/extended_graph_fixtures.hpp benchmark/graph_fixtures.hpp
+	@mkdir -p $(BIN_DIR)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -I. $< $(LDFLAGS) -o $@
 
 # Build object files
 $(BUILD_DIR)/%.o: %.cpp $(HDRS)
@@ -77,7 +87,7 @@ $(BIN_DIR)/scaling_benchmark: benchmark/scaling_benchmark.cpp $(filter-out $(BUI
 	@mkdir -p $(BIN_DIR)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -I. $^ $(LDFLAGS) -o $@
 
-$(BIN_DIR)/diverse_benchmark: benchmark/diverse_benchmark.cpp benchmark/mst_certificate.hpp benchmark/graph_fixtures.hpp $(OBJS)
+$(BIN_DIR)/diverse_benchmark: benchmark/diverse_benchmark.cpp benchmark/mst_certificate.hpp benchmark/graph_fixtures.hpp benchmark/extended_graph_fixtures.hpp $(OBJS)
 	@mkdir -p $(BIN_DIR)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -I. $(filter %.cpp %.o,$^) $(LDFLAGS) -o $@
 

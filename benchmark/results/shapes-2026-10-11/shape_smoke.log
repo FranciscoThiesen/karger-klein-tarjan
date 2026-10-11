@@ -1,0 +1,56 @@
+Running balanced_bipartite_n256
+  graph_seed=17 generating fixture
+  graph_seed=17 generation_seconds=7.1042e-05 reference_certificate_seconds=0.000140708
+  graph_seed=42 generating fixture
+  graph_seed=42 generation_seconds=6.2333e-05 reference_certificate_seconds=0.000118042
+  graph_seed=999 generating fixture
+  graph_seed=999 generation_seconds=5.7792e-05 reference_certificate_seconds=0.000109583
+Running balanced_binary_tree_n256
+  graph_seed=17 generating fixture
+  graph_seed=17 generation_seconds=1.7583e-05 reference_certificate_seconds=4.6833e-05
+  graph_seed=42 generating fixture
+  graph_seed=42 generation_seconds=1.6625e-05 reference_certificate_seconds=4.5459e-05
+  graph_seed=999 generating fixture
+  graph_seed=999 generation_seconds=1.5833e-05 reference_certificate_seconds=3.3167e-05
+Running hub_n256
+  graph_seed=17 generating fixture
+  graph_seed=17 generation_seconds=8.625e-05 reference_certificate_seconds=0.000111875
+  graph_seed=42 generating fixture
+  graph_seed=42 generation_seconds=7.1125e-05 reference_certificate_seconds=9.9e-05
+  graph_seed=999 generating fixture
+  graph_seed=999 generation_seconds=9.625e-05 reference_certificate_seconds=0.00011425
+Running random_4_n256
+  graph_seed=17 generating fixture
+  graph_seed=17 generation_seconds=7.0541e-05 reference_certificate_seconds=0.00011275
+  graph_seed=42 generating fixture
+  graph_seed=42 generation_seconds=7.4459e-05 reference_certificate_seconds=0.000114291
+  graph_seed=999 generating fixture
+  graph_seed=999 generation_seconds=6.9042e-05 reference_certificate_seconds=0.000109667
+Running multi_hub_n256
+  graph_seed=17 generating fixture
+  graph_seed=17 generation_seconds=6.6709e-05 reference_certificate_seconds=0.000110708
+  graph_seed=42 generating fixture
+  graph_seed=42 generation_seconds=5.1083e-05 reference_certificate_seconds=9.3542e-05
+  graph_seed=999 generating fixture
+  graph_seed=999 generation_seconds=5.0458e-05 reference_certificate_seconds=8.9959e-05
+Running community_sparse_n256
+  graph_seed=17 generating fixture
+  graph_seed=17 generation_seconds=7.5333e-05 reference_certificate_seconds=9.8333e-05
+  graph_seed=42 generating fixture
+  graph_seed=42 generation_seconds=7.4167e-05 reference_certificate_seconds=9.675e-05
+  graph_seed=999 generating fixture
+  graph_seed=999 generation_seconds=7.2833e-05 reference_certificate_seconds=0.000101875
+Running small_world_n256
+  graph_seed=17 generating fixture
+  graph_seed=17 generation_seconds=4.7e-05 reference_certificate_seconds=9.3625e-05
+  graph_seed=42 generating fixture
+  graph_seed=42 generation_seconds=4.2583e-05 reference_certificate_seconds=0.000105583
+  graph_seed=999 generating fixture
+  graph_seed=999 generation_seconds=3.8625e-05 reference_certificate_seconds=9.9584e-05
+Running preferential_attachment_n256
+  graph_seed=17 generating fixture
+  graph_seed=17 generation_seconds=4.6e-05 reference_certificate_seconds=0.000101333
+  graph_seed=42 generating fixture
+  graph_seed=42 generation_seconds=4.65e-05 reference_certificate_seconds=0.000101583
+  graph_seed=999 generating fixture
+  graph_seed=999 generation_seconds=4.5667e-05 reference_certificate_seconds=0.000100792

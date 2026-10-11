@@ -1,0 +1,17 @@
+{
+  "unchanged_body_sha256": {
+    "measure": "4fdc4248a404117a78535f1e30bdf2484365f289be4295c8684cb17b7f873501",
+    "certificate_and_schedule": "6efc8f36dd883993901cc999c654e9a446f3f99135464370c0ec3358db04abcb",
+    "old_presets": "e9752f79992cf3dde2e936d49c6017e7a2e63af49fd2d4169820e8adbcf9cfa6"
+  },
+  "unchanged_sources": [
+    "benchmark/graph_fixtures.hpp",
+    "benchmark/mst_certificate.hpp",
+    "kkt/kkt.cpp",
+    "verifier/verifier_v2.cpp",
+    "kruskal/kruskal.cpp",
+    "prim/prim.cpp",
+    "boruvka/boruvka.cpp"
+  ],
+  "baseline": "c6c8bbd"
+}

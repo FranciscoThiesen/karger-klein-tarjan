@@ -1,0 +1,118 @@
+{
+  "checks": [
+    {
+      "case": "complete synthetic smoke and exact ratios",
+      "status": "pass"
+    },
+    {
+      "case": "missing row",
+      "status": "rejected",
+      "message": "incomplete timing matrix: expected 1152 rows, got 1151; missing 1"
+    },
+    {
+      "case": "duplicate row",
+      "status": "rejected",
+      "message": "timing line 1154: duplicate observation ('preferential_attachment_n256', 17, 0, 0, 'kkt')"
+    },
+    {
+      "case": "invalid dimension",
+      "status": "rejected",
+      "message": "timing line 2: unexpected case, family, or graph dimensions"
+    },
+    {
+      "case": "failed result",
+      "status": "rejected",
+      "message": "timing line 2: failed validation or nonpositive elapsed time"
+    },
+    {
+      "case": "zero duration",
+      "status": "rejected",
+      "message": "timing line 2: failed validation or nonpositive elapsed time"
+    },
+    {
+      "case": "wrong order",
+      "status": "rejected",
+      "message": "timing line 2: execution order differs from the rotating harness schedule"
+    },
+    {
+      "case": "wrong warmups",
+      "status": "rejected",
+      "message": "timing line 2: the shapes protocol requires exactly one warmup"
+    },
+    {
+      "case": "unexpected seed",
+      "status": "rejected",
+      "message": "timing line 2: unexpected graph or sampling seed"
+    },
+    {
+      "case": "missing family",
+      "status": "rejected",
+      "message": "incomplete timing matrix: expected 1152 rows, got 1008; missing 144"
+    },
+    {
+      "case": "mismatched family",
+      "status": "rejected",
+      "message": "timing line 2: unexpected case, family, or graph dimensions"
+    },
+    {
+      "case": "complete 24-case 3456-row matrix",
+      "status": "pass",
+      "rows": 3456,
+      "cases": 24
+    },
+    {
+      "case": "complete 216-row work matrix and graph aggregation",
+      "status": "pass"
+    },
+    {
+      "case": "work missing row",
+      "status": "rejected",
+      "message": "incomplete work matrix: expected 216 rows, got 215"
+    },
+    {
+      "case": "work duplicate",
+      "status": "rejected",
+      "message": "work line 218: duplicate observation ('preferential_attachment_n4096', 17, 0)"
+    },
+    {
+      "case": "work dimensions",
+      "status": "rejected",
+      "message": "work line 2: unexpected case, family, or graph dimensions"
+    },
+    {
+      "case": "work fingerprint",
+      "status": "rejected",
+      "message": "work fixture preferential_attachment_n4096/17: inconsistent input_fingerprint"
+    },
+    {
+      "case": "work degree",
+      "status": "rejected",
+      "message": "work line 2: invalid degree or leaf count"
+    },
+    {
+      "case": "work leaf consistency",
+      "status": "rejected",
+      "message": "work fixture preferential_attachment_n4096/17: inconsistent leaf_vertices"
+    },
+    {
+      "case": "work counter identity",
+      "status": "rejected",
+      "message": "work line 2: inconsistent counter or derived volume"
+    },
+    {
+      "case": "work proxy",
+      "status": "rejected",
+      "message": "work line 2: inconsistent counter or derived volume"
+    },
+    {
+      "case": "work NaN ratio",
+      "status": "rejected",
+      "message": "work line 2: nonfinite or negative heavy_fraction"
+    },
+    {
+      "case": "work wrong regime",
+      "status": "rejected",
+      "message": "work line 2: inconsistent execution regime"
+    }
+  ]
+}

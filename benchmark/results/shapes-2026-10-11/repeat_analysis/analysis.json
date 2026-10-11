@@ -1,0 +1,62 @@
+{
+  "input_csv": "benchmark/results/shapes-2026-10-11/repeat.csv",
+  "case_count": 24,
+  "observation_count": 3456,
+  "sizes": [
+    4096,
+    16384,
+    65536
+  ],
+  "families": [
+    "preferential_attachment",
+    "small_world",
+    "multi_hub",
+    "community_sparse",
+    "balanced_bipartite",
+    "balanced_binary_tree",
+    "hub",
+    "random_4"
+  ],
+  "graph_seeds": [
+    17,
+    42,
+    999
+  ],
+  "kkt_seeds": [
+    0,
+    1,
+    7
+  ],
+  "repetitions": 4,
+  "warmups": 1,
+  "aggregation": "Median of repetitions for each graph/sampling-seed pair; median of the three sampling-seed values per graph; median of the three graph values. Paired ratios apply the same hierarchy to matched algorithm/reference elapsed-time ratios. Error bars span graph-level medians and are not confidence intervals.",
+  "kkt_below_all_competitors_by_paired_medians": [
+    "preferential_attachment_n4096",
+    "small_world_n16384",
+    "small_world_n65536",
+    "multi_hub_n4096",
+    "multi_hub_n16384",
+    "multi_hub_n65536",
+    "community_sparse_n4096",
+    "hub_n4096",
+    "hub_n16384",
+    "hub_n65536"
+  ],
+  "kkt_below_all_competitors_on_every_graph": [
+    "preferential_attachment_n4096",
+    "small_world_n16384",
+    "small_world_n65536",
+    "multi_hub_n4096",
+    "multi_hub_n16384",
+    "multi_hub_n65536",
+    "community_sparse_n4096",
+    "hub_n4096",
+    "hub_n16384",
+    "hub_n65536"
+  ],
+  "input_sha256": "bf9a1e5b64f1698d96c95018ac94fbc338baed012f9a223c2a13b9959da3926c",
+  "work_csv": "benchmark/results/shapes-2026-10-11/work.csv",
+  "work_sha256": "86821557b5098927e6d8cc7e7c194cbe99362cfc5749c7f7b2bc4ef3296efca9",
+  "work_observation_count": 216,
+  "work_aggregation": "Arithmetic sampling-seed means within each graph, then arithmetic graph-seed means."
+}
