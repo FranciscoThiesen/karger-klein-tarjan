@@ -6,6 +6,7 @@
 #include "mst_certificate.hpp"
 #include "graph_fixtures.hpp"
 #include "extended_graph_fixtures.hpp"
+#include "common_graph_fixtures.hpp"
 
 #include <algorithm>
 #include <array>
@@ -36,6 +37,7 @@ struct Options {
     bool smoke = false;
     bool large = false;
     bool shapes = false;
+    bool common = false;
     int repetitions = 4;
     int warmups = 1;
     std::string case_filter;
@@ -55,13 +57,20 @@ Options options(int argc, char** argv) {
     Options result;
     for (int i = 1; i < argc; ++i) {
         const std::string arg = argv[i];
-        if (arg == "--smoke") { result.smoke = true; result.large = false; result.shapes = false; }
-        else if (arg == "--scale") { result.smoke = false; result.large = false; result.shapes = false; }
-        else if (arg == "--large") { result.smoke = false; result.large = true; result.shapes = false; }
+        if (arg == "--smoke") { result.smoke = true; result.large = false; result.shapes = false; result.common = false; }
+        else if (arg == "--scale") { result.smoke = false; result.large = false; result.shapes = false; result.common = false; }
+        else if (arg == "--large") { result.smoke = false; result.large = true; result.shapes = false; result.common = false; }
         else if (arg == "--shapes" || arg == "--smoke-shapes") {
             result.smoke = arg == "--smoke-shapes";
             result.large = false;
             result.shapes = true;
+            result.common = false;
+        }
+        else if (arg == "--common" || arg == "--smoke-common") {
+            result.smoke = arg == "--smoke-common";
+            result.large = false;
+            result.shapes = false;
+            result.common = true;
         }
         else if (arg == "--case") {
             if (++i == argc) throw std::runtime_error(arg + " requires a case ID");
@@ -179,7 +188,8 @@ std::int64_t measure(int algorithm, const Graph& graph, int n, unsigned int seed
 void run(const Options& config) {
     std::cout << "case_id,family,n,m,graph_seed,kkt_seed,repetition,order,warmups,algorithm,elapsed_ns,validation\n";
     bool found_case = false;
-    const auto selected_cases = config.shapes ? benchmark_extended::cases(config.smoke)
+    const auto selected_cases = config.common ? benchmark_common::cases(config.smoke)
+                                             : config.shapes ? benchmark_extended::cases(config.smoke)
                                              : (config.large ? large_cases() : cases(config.smoke));
     for (const auto& item : selected_cases) {
         const std::string case_id = item.family + "_n" + std::to_string(item.n);
@@ -191,7 +201,8 @@ void run(const Options& config) {
                 graph_seeds[g] != static_cast<unsigned int>(config.graph_seed_filter)) continue;
             std::cerr << "  graph_seed=" << graph_seeds[g] << " generating fixture\n";
             const auto generation_start = Clock::now();
-            const auto graph = config.shapes ? benchmark_extended::make_graph(item, graph_seeds[g])
+            const auto graph = config.common ? benchmark_common::make_graph(item, graph_seeds[g])
+                                             : config.shapes ? benchmark_extended::make_graph(item, graph_seeds[g])
                                              : make_graph(item, graph_seeds[g], config.smoke);
             const auto generation_finish = Clock::now();
             const auto oracle = kruskal(graph, item.n);
@@ -233,12 +244,13 @@ void run(const Options& config) {
 
 int main(int argc, char** argv) {
     if (argc == 2 && std::string(argv[1]) == "--help") {
-        std::cout << "Usage: " << argv[0] << " [--scale|--smoke|--large|--shapes|--smoke-shapes] [--repetitions N] [--warmups N] [--case ID]\n"
+        std::cout << "Usage: " << argv[0] << " [--scale|--smoke|--large|--shapes|--smoke-shapes|--common|--smoke-common] [--repetitions N] [--warmups N] [--case ID]\n"
                   << "       [--graph-seed 17|42|999] [--kkt-seed 0|1|7]\n"
                   << "Defaults: --scale --repetitions 4 --warmups 1; CSV on stdout, progress on stderr.\n"
                   << "All presets use all three graph seeds and KKT seeds unless selected explicitly.\n"
                   << "--large selects 18 cases, up to 1,048,576 vertices and 33,554,432 edges.\n"
-                  << "--shapes selects six new topology families and two unchanged controls at three sizes.\n";
+                  << "--shapes selects six new topology families and two unchanged controls at three sizes.\n"
+                  << "--common selects eleven new model variants and two unchanged controls at four sizes.\n";
         return 0;
     }
     try { run(options(argc, argv)); }

@@ -2,7 +2,7 @@ load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library", "cc_test")
 
 cc_library(
     name = "fixtures",
-    hdrs = ["graph_fixtures.hpp", "extended_graph_fixtures.hpp", "mst_certificate.hpp"],
+    hdrs = ["graph_fixtures.hpp", "extended_graph_fixtures.hpp", "common_graph_fixtures.hpp", "mst_certificate.hpp"],
     visibility = ["//visibility:public"],
 )
 
@@ -32,6 +32,21 @@ cc_binary(
 cc_test(
     name = "shapes_test",
     srcs = ["shapes_test.cpp"],
+    copts = ["-std=c++17"],
+    deps = [":fixtures"],
+)
+
+cc_binary(
+    name = "common_work",
+    srcs = ["common_work.cpp"],
+    copts = ["-std=c++17"],
+    deps = [":fixtures", ":work_metrics", "//kkt:kkt_work_stats", "//kruskal:kruskal"],
+    visibility = ["//visibility:public"],
+)
+
+cc_test(
+    name = "common_test",
+    srcs = ["common_test.cpp"],
     copts = ["-std=c++17"],
     deps = [":fixtures"],
 )
@@ -78,4 +93,20 @@ cc_binary(
         "//prim:prim",
     ],
     visibility = ["//visibility:public"]
+)
+
+cc_binary(
+    name = "contraction_ablation",
+    srcs = ["contraction_ablation.cpp"],
+    copts = ["-std=c++17"],
+    deps = [":fixtures", "//kkt:kkt", "//kruskal:kruskal"],
+    visibility = ["//visibility:public"],
+)
+
+cc_binary(
+    name = "export_graph_views",
+    srcs = ["export_graph_views.cpp"],
+    copts = ["-std=c++17"],
+    deps = [":fixtures", "//kkt:kkt", "//kruskal:kruskal", "//verifier:verifier_v2"],
+    visibility = ["//visibility:public"],
 )

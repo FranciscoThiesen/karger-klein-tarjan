@@ -2,6 +2,7 @@
 #include "benchmark/benchmark.h"
 
 #include "graph_fixtures.hpp"
+#include "common_graph_fixtures.hpp"
 #include "mst_certificate.hpp"
 #include "../kkt/kkt.hpp"
 #include "../kruskal/kruskal.hpp"
@@ -56,10 +57,12 @@ void fail(benchmark::State& state, const char* message) {
 }
 
 void measure(benchmark::State& state, Algorithm algorithm,
-             const std::string& family, unsigned int graph_seed) {
+             const std::string& family, unsigned int graph_seed, bool common_families) {
     try {
         const int n = static_cast<int>(state.range(0));
-        const auto graph = benchmark_fixtures::make_graph({family, n}, graph_seed);
+        const auto graph = common_families
+            ? benchmark_common::make_graph({family, n}, graph_seed)
+            : benchmark_fixtures::make_graph({family, n}, graph_seed);
         const auto oracle = kruskal(graph, n);
         benchmark_validation::certify_mst(graph, oracle, n);
         const auto expected = edge_ids(oracle);
@@ -116,18 +119,22 @@ void measure(benchmark::State& state, Algorithm algorithm,
     }
 }
 
-void register_benchmarks() {
-    for (const char* family : {"random_4", "random_32", "star"}) {
+void register_benchmarks(bool common_families) {
+    const std::vector<const char*> families = common_families
+        ? std::vector<const char*>{"unbalanced_bipartite_16", "ring_cliques_16",
+              "grid3d_distance", "leaf_core_90", "regular_8"}
+        : std::vector<const char*>{"random_4", "random_32", "star"};
+    for (const char* family : families) {
         for (unsigned int graph_seed : graph_seeds) {
             for (Algorithm algorithm : {Algorithm::kkt, Algorithm::kruskal}) {
                 const std::string algorithm_name = algorithm == Algorithm::kkt ? "KKT" : "Kruskal";
                 const std::string name = algorithm_name + "/" + family + "/graph_" + std::to_string(graph_seed);
                 const std::string family_name = family;
                 auto* registration = benchmark::RegisterBenchmark(
-                    name.c_str(), [algorithm, family_name, graph_seed](benchmark::State& state) {
-                        measure(state, algorithm, family_name, graph_seed);
+                    name.c_str(), [algorithm, family_name, graph_seed, common_families](benchmark::State& state) {
+                        measure(state, algorithm, family_name, graph_seed, common_families);
                     });
-                for (int n = 1024; n <= 65536; n *= 2) registration->Arg(n);
+                for (int n = 1024; n <= (common_families ? 262144 : 65536); n *= 2) registration->Arg(n);
                 registration->Iterations(sampling_seeds.size())
                     ->Repetitions(3)
                     ->UseManualTime()
@@ -146,7 +153,16 @@ int main(int argc, char** argv) {
     // fits manual/real time to that model. The validation/destruction pauses
     // keep the CPU interval comparable, but these labels are only finite-range
     // fits. Analyze exported real_time values separately for timing conclusions.
-    register_benchmarks();
+    bool common_families = false;
+    for (int i = 1; i < argc; ++i) {
+        if (std::string(argv[i]) == "--common") {
+            common_families = true;
+            for (int j = i; j + 1 < argc; ++j) argv[j] = argv[j + 1];
+            argv[--argc] = nullptr;
+            --i;
+        }
+    }
+    register_benchmarks(common_families);
     benchmark::Initialize(&argc, argv);
     if (benchmark::ReportUnrecognizedArguments(argc, argv)) return 1;
     const auto matched = benchmark::RunSpecifiedBenchmarks();
