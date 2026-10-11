@@ -1,0 +1,510 @@
+{
+  "result": "pass",
+  "explorer_stage_checks": 70,
+  "offline_network_requests": 0,
+  "javascript_errors": 0,
+  "desktop_and_mobile_widths": [
+    1280,
+    390
+  ],
+  "keyboard_rotation_and_zoom": "pass",
+  "pointer_drag_and_wheel_zoom": "pass",
+  "markdown_local_links": "pass",
+  "edition_sha256": {
+    "REPORT.md": "392bc9458ef25099a4eb626dae44cee25f6a10635050e9be8226a33e16486870",
+    "report.html": "085880a2b460d6df5d3a4b819861be35ac3b791b5c86dfbdb14af7ca07c35358",
+    "graph-explorer.html": "53fe03393223e84f2749ff7b5da7737e353829e4455c685ba7874a07ee3d2048"
+  },
+  "stage_checks": [
+    {
+      "edition": "report.html",
+      "family": "unbalanced_bipartite_16",
+      "stage": 0,
+      "vertices": 256,
+      "label": "256 vertices \u00b7 960 edges \u00b7 241 safe selected edges"
+    },
+    {
+      "edition": "report.html",
+      "family": "unbalanced_bipartite_16",
+      "stage": 1,
+      "vertices": 15,
+      "label": "15 vertices \u00b7 104 edges \u00b7 10 safe selected edges"
+    },
+    {
+      "edition": "report.html",
+      "family": "unbalanced_bipartite_16",
+      "stage": 2,
+      "vertices": 5,
+      "label": "5 vertices \u00b7 10 edges"
+    },
+    {
+      "edition": "report.html",
+      "family": "unbalanced_bipartite_16",
+      "stage": 3,
+      "vertices": 5,
+      "label": "5 residual vertices \u00b7 8 sampled edges of 10 residual edges \u00b7 4 sample-forest edges"
+    },
+    {
+      "edition": "report.html",
+      "family": "unbalanced_bipartite_16",
+      "stage": 4,
+      "vertices": 5,
+      "label": "5 residual vertices \u00b7 10 residual edges \u00b7 5 F-heavy edges removable \u00b7 5 retained edges"
+    },
+    {
+      "edition": "report.html",
+      "family": "leaf_core_90",
+      "stage": 0,
+      "vertices": 256,
+      "label": "256 vertices \u00b7 331 edges \u00b7 240 safe selected edges"
+    },
+    {
+      "edition": "report.html",
+      "family": "leaf_core_90",
+      "stage": 1,
+      "vertices": 16,
+      "label": "16 vertices \u00b7 70 edges \u00b7 13 safe selected edges"
+    },
+    {
+      "edition": "report.html",
+      "family": "leaf_core_90",
+      "stage": 2,
+      "vertices": 3,
+      "label": "3 vertices \u00b7 3 edges"
+    },
+    {
+      "edition": "report.html",
+      "family": "leaf_core_90",
+      "stage": 3,
+      "vertices": 3,
+      "label": "3 residual vertices \u00b7 2 sampled edges of 3 residual edges \u00b7 2 sample-forest edges"
+    },
+    {
+      "edition": "report.html",
+      "family": "leaf_core_90",
+      "stage": 4,
+      "vertices": 3,
+      "label": "3 residual vertices \u00b7 3 residual edges \u00b7 0 F-heavy edges removable \u00b7 3 retained edges"
+    },
+    {
+      "edition": "report.html",
+      "family": "ring_cliques_16",
+      "stage": 0,
+      "vertices": 256,
+      "label": "256 vertices \u00b7 1,936 edges \u00b7 186 safe selected edges"
+    },
+    {
+      "edition": "report.html",
+      "family": "ring_cliques_16",
+      "stage": 1,
+      "vertices": 70,
+      "label": "70 vertices \u00b7 153 edges \u00b7 49 safe selected edges"
+    },
+    {
+      "edition": "report.html",
+      "family": "ring_cliques_16",
+      "stage": 2,
+      "vertices": 21,
+      "label": "21 vertices \u00b7 22 edges"
+    },
+    {
+      "edition": "report.html",
+      "family": "ring_cliques_16",
+      "stage": 3,
+      "vertices": 21,
+      "label": "21 residual vertices \u00b7 12 sampled edges of 22 residual edges \u00b7 12 sample-forest edges"
+    },
+    {
+      "edition": "report.html",
+      "family": "ring_cliques_16",
+      "stage": 4,
+      "vertices": 21,
+      "label": "21 residual vertices \u00b7 22 residual edges \u00b7 0 F-heavy edges removable \u00b7 22 retained edges"
+    },
+    {
+      "edition": "report.html",
+      "family": "grid3d_distance",
+      "stage": 0,
+      "vertices": 256,
+      "label": "256 vertices \u00b7 640 edges \u00b7 176 safe selected edges"
+    },
+    {
+      "edition": "report.html",
+      "family": "grid3d_distance",
+      "stage": 1,
+      "vertices": 80,
+      "label": "80 vertices \u00b7 309 edges \u00b7 61 safe selected edges"
+    },
+    {
+      "edition": "report.html",
+      "family": "grid3d_distance",
+      "stage": 2,
+      "vertices": 19,
+      "label": "19 vertices \u00b7 68 edges"
+    },
+    {
+      "edition": "report.html",
+      "family": "grid3d_distance",
+      "stage": 3,
+      "vertices": 19,
+      "label": "19 residual vertices \u00b7 39 sampled edges of 68 residual edges \u00b7 18 sample-forest edges"
+    },
+    {
+      "edition": "report.html",
+      "family": "grid3d_distance",
+      "stage": 4,
+      "vertices": 19,
+      "label": "19 residual vertices \u00b7 68 residual edges \u00b7 40 F-heavy edges removable \u00b7 28 retained edges"
+    },
+    {
+      "edition": "report.html",
+      "family": "grid3d_random",
+      "stage": 0,
+      "vertices": 256,
+      "label": "256 vertices \u00b7 640 edges \u00b7 189 safe selected edges"
+    },
+    {
+      "edition": "report.html",
+      "family": "grid3d_random",
+      "stage": 1,
+      "vertices": 67,
+      "label": "67 vertices \u00b7 266 edges \u00b7 51 safe selected edges"
+    },
+    {
+      "edition": "report.html",
+      "family": "grid3d_random",
+      "stage": 2,
+      "vertices": 16,
+      "label": "16 vertices \u00b7 52 edges"
+    },
+    {
+      "edition": "report.html",
+      "family": "grid3d_random",
+      "stage": 3,
+      "vertices": 16,
+      "label": "16 residual vertices \u00b7 31 sampled edges of 52 residual edges \u00b7 15 sample-forest edges"
+    },
+    {
+      "edition": "report.html",
+      "family": "grid3d_random",
+      "stage": 4,
+      "vertices": 16,
+      "label": "16 residual vertices \u00b7 52 residual edges \u00b7 31 F-heavy edges removable \u00b7 21 retained edges"
+    },
+    {
+      "edition": "report.html",
+      "family": "regular_8",
+      "stage": 0,
+      "vertices": 256,
+      "label": "256 vertices \u00b7 1,024 edges \u00b7 184 safe selected edges"
+    },
+    {
+      "edition": "report.html",
+      "family": "regular_8",
+      "stage": 1,
+      "vertices": 72,
+      "label": "72 vertices \u00b7 663 edges \u00b7 55 safe selected edges"
+    },
+    {
+      "edition": "report.html",
+      "family": "regular_8",
+      "stage": 2,
+      "vertices": 17,
+      "label": "17 vertices \u00b7 123 edges"
+    },
+    {
+      "edition": "report.html",
+      "family": "regular_8",
+      "stage": 3,
+      "vertices": 17,
+      "label": "17 residual vertices \u00b7 66 sampled edges of 123 residual edges \u00b7 16 sample-forest edges"
+    },
+    {
+      "edition": "report.html",
+      "family": "regular_8",
+      "stage": 4,
+      "vertices": 17,
+      "label": "17 residual vertices \u00b7 123 residual edges \u00b7 87 F-heavy edges removable \u00b7 36 retained edges"
+    },
+    {
+      "edition": "report.html",
+      "family": "small_world",
+      "stage": 0,
+      "vertices": 256,
+      "label": "256 vertices \u00b7 1,024 edges \u00b7 182 safe selected edges"
+    },
+    {
+      "edition": "report.html",
+      "family": "small_world",
+      "stage": 1,
+      "vertices": 74,
+      "label": "74 vertices \u00b7 262 edges \u00b7 54 safe selected edges"
+    },
+    {
+      "edition": "report.html",
+      "family": "small_world",
+      "stage": 2,
+      "vertices": 20,
+      "label": "20 vertices \u00b7 83 edges"
+    },
+    {
+      "edition": "report.html",
+      "family": "small_world",
+      "stage": 3,
+      "vertices": 20,
+      "label": "20 residual vertices \u00b7 45 sampled edges of 83 residual edges \u00b7 19 sample-forest edges"
+    },
+    {
+      "edition": "report.html",
+      "family": "small_world",
+      "stage": 4,
+      "vertices": 20,
+      "label": "20 residual vertices \u00b7 83 residual edges \u00b7 46 F-heavy edges removable \u00b7 37 retained edges"
+    },
+    {
+      "edition": "graph-explorer.html",
+      "family": "unbalanced_bipartite_16",
+      "stage": 0,
+      "vertices": 256,
+      "label": "256 vertices \u00b7 960 edges \u00b7 241 safe selected edges"
+    },
+    {
+      "edition": "graph-explorer.html",
+      "family": "unbalanced_bipartite_16",
+      "stage": 1,
+      "vertices": 15,
+      "label": "15 vertices \u00b7 104 edges \u00b7 10 safe selected edges"
+    },
+    {
+      "edition": "graph-explorer.html",
+      "family": "unbalanced_bipartite_16",
+      "stage": 2,
+      "vertices": 5,
+      "label": "5 vertices \u00b7 10 edges"
+    },
+    {
+      "edition": "graph-explorer.html",
+      "family": "unbalanced_bipartite_16",
+      "stage": 3,
+      "vertices": 5,
+      "label": "5 residual vertices \u00b7 8 sampled edges of 10 residual edges \u00b7 4 sample-forest edges"
+    },
+    {
+      "edition": "graph-explorer.html",
+      "family": "unbalanced_bipartite_16",
+      "stage": 4,
+      "vertices": 5,
+      "label": "5 residual vertices \u00b7 10 residual edges \u00b7 5 F-heavy edges removable \u00b7 5 retained edges"
+    },
+    {
+      "edition": "graph-explorer.html",
+      "family": "leaf_core_90",
+      "stage": 0,
+      "vertices": 256,
+      "label": "256 vertices \u00b7 331 edges \u00b7 240 safe selected edges"
+    },
+    {
+      "edition": "graph-explorer.html",
+      "family": "leaf_core_90",
+      "stage": 1,
+      "vertices": 16,
+      "label": "16 vertices \u00b7 70 edges \u00b7 13 safe selected edges"
+    },
+    {
+      "edition": "graph-explorer.html",
+      "family": "leaf_core_90",
+      "stage": 2,
+      "vertices": 3,
+      "label": "3 vertices \u00b7 3 edges"
+    },
+    {
+      "edition": "graph-explorer.html",
+      "family": "leaf_core_90",
+      "stage": 3,
+      "vertices": 3,
+      "label": "3 residual vertices \u00b7 2 sampled edges of 3 residual edges \u00b7 2 sample-forest edges"
+    },
+    {
+      "edition": "graph-explorer.html",
+      "family": "leaf_core_90",
+      "stage": 4,
+      "vertices": 3,
+      "label": "3 residual vertices \u00b7 3 residual edges \u00b7 0 F-heavy edges removable \u00b7 3 retained edges"
+    },
+    {
+      "edition": "graph-explorer.html",
+      "family": "ring_cliques_16",
+      "stage": 0,
+      "vertices": 256,
+      "label": "256 vertices \u00b7 1,936 edges \u00b7 186 safe selected edges"
+    },
+    {
+      "edition": "graph-explorer.html",
+      "family": "ring_cliques_16",
+      "stage": 1,
+      "vertices": 70,
+      "label": "70 vertices \u00b7 153 edges \u00b7 49 safe selected edges"
+    },
+    {
+      "edition": "graph-explorer.html",
+      "family": "ring_cliques_16",
+      "stage": 2,
+      "vertices": 21,
+      "label": "21 vertices \u00b7 22 edges"
+    },
+    {
+      "edition": "graph-explorer.html",
+      "family": "ring_cliques_16",
+      "stage": 3,
+      "vertices": 21,
+      "label": "21 residual vertices \u00b7 12 sampled edges of 22 residual edges \u00b7 12 sample-forest edges"
+    },
+    {
+      "edition": "graph-explorer.html",
+      "family": "ring_cliques_16",
+      "stage": 4,
+      "vertices": 21,
+      "label": "21 residual vertices \u00b7 22 residual edges \u00b7 0 F-heavy edges removable \u00b7 22 retained edges"
+    },
+    {
+      "edition": "graph-explorer.html",
+      "family": "grid3d_distance",
+      "stage": 0,
+      "vertices": 256,
+      "label": "256 vertices \u00b7 640 edges \u00b7 176 safe selected edges"
+    },
+    {
+      "edition": "graph-explorer.html",
+      "family": "grid3d_distance",
+      "stage": 1,
+      "vertices": 80,
+      "label": "80 vertices \u00b7 309 edges \u00b7 61 safe selected edges"
+    },
+    {
+      "edition": "graph-explorer.html",
+      "family": "grid3d_distance",
+      "stage": 2,
+      "vertices": 19,
+      "label": "19 vertices \u00b7 68 edges"
+    },
+    {
+      "edition": "graph-explorer.html",
+      "family": "grid3d_distance",
+      "stage": 3,
+      "vertices": 19,
+      "label": "19 residual vertices \u00b7 39 sampled edges of 68 residual edges \u00b7 18 sample-forest edges"
+    },
+    {
+      "edition": "graph-explorer.html",
+      "family": "grid3d_distance",
+      "stage": 4,
+      "vertices": 19,
+      "label": "19 residual vertices \u00b7 68 residual edges \u00b7 40 F-heavy edges removable \u00b7 28 retained edges"
+    },
+    {
+      "edition": "graph-explorer.html",
+      "family": "grid3d_random",
+      "stage": 0,
+      "vertices": 256,
+      "label": "256 vertices \u00b7 640 edges \u00b7 189 safe selected edges"
+    },
+    {
+      "edition": "graph-explorer.html",
+      "family": "grid3d_random",
+      "stage": 1,
+      "vertices": 67,
+      "label": "67 vertices \u00b7 266 edges \u00b7 51 safe selected edges"
+    },
+    {
+      "edition": "graph-explorer.html",
+      "family": "grid3d_random",
+      "stage": 2,
+      "vertices": 16,
+      "label": "16 vertices \u00b7 52 edges"
+    },
+    {
+      "edition": "graph-explorer.html",
+      "family": "grid3d_random",
+      "stage": 3,
+      "vertices": 16,
+      "label": "16 residual vertices \u00b7 31 sampled edges of 52 residual edges \u00b7 15 sample-forest edges"
+    },
+    {
+      "edition": "graph-explorer.html",
+      "family": "grid3d_random",
+      "stage": 4,
+      "vertices": 16,
+      "label": "16 residual vertices \u00b7 52 residual edges \u00b7 31 F-heavy edges removable \u00b7 21 retained edges"
+    },
+    {
+      "edition": "graph-explorer.html",
+      "family": "regular_8",
+      "stage": 0,
+      "vertices": 256,
+      "label": "256 vertices \u00b7 1,024 edges \u00b7 184 safe selected edges"
+    },
+    {
+      "edition": "graph-explorer.html",
+      "family": "regular_8",
+      "stage": 1,
+      "vertices": 72,
+      "label": "72 vertices \u00b7 663 edges \u00b7 55 safe selected edges"
+    },
+    {
+      "edition": "graph-explorer.html",
+      "family": "regular_8",
+      "stage": 2,
+      "vertices": 17,
+      "label": "17 vertices \u00b7 123 edges"
+    },
+    {
+      "edition": "graph-explorer.html",
+      "family": "regular_8",
+      "stage": 3,
+      "vertices": 17,
+      "label": "17 residual vertices \u00b7 66 sampled edges of 123 residual edges \u00b7 16 sample-forest edges"
+    },
+    {
+      "edition": "graph-explorer.html",
+      "family": "regular_8",
+      "stage": 4,
+      "vertices": 17,
+      "label": "17 residual vertices \u00b7 123 residual edges \u00b7 87 F-heavy edges removable \u00b7 36 retained edges"
+    },
+    {
+      "edition": "graph-explorer.html",
+      "family": "small_world",
+      "stage": 0,
+      "vertices": 256,
+      "label": "256 vertices \u00b7 1,024 edges \u00b7 182 safe selected edges"
+    },
+    {
+      "edition": "graph-explorer.html",
+      "family": "small_world",
+      "stage": 1,
+      "vertices": 74,
+      "label": "74 vertices \u00b7 262 edges \u00b7 54 safe selected edges"
+    },
+    {
+      "edition": "graph-explorer.html",
+      "family": "small_world",
+      "stage": 2,
+      "vertices": 20,
+      "label": "20 vertices \u00b7 83 edges"
+    },
+    {
+      "edition": "graph-explorer.html",
+      "family": "small_world",
+      "stage": 3,
+      "vertices": 20,
+      "label": "20 residual vertices \u00b7 45 sampled edges of 83 residual edges \u00b7 19 sample-forest edges"
+    },
+    {
+      "edition": "graph-explorer.html",
+      "family": "small_world",
+      "stage": 4,
+      "vertices": 20,
+      "label": "20 residual vertices \u00b7 83 residual edges \u00b7 46 F-heavy edges removable \u00b7 37 retained edges"
+    }
+  ]
+}

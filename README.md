@@ -48,6 +48,14 @@ Alternatively, use Bazel:
 
 ### How to run benchmarks
 
+The [in-depth KKT report](docs/kkt-report/REPORT.md) explains the original
+complexity defects, current Google Benchmark fits, and repeated comparisons
+across 11 new graph variants and two unchanged controls. Its [offline HTML edition](docs/kkt-report/report.html)
+includes an interactive 3D explorer of certified contraction and filtering
+results. The [raw evidence and protocol](benchmark/results/common-2026-10-11/README.md)
+retain every measured case, including a compacting-Borůvka ablation that
+separates contraction benefits from randomized continuation.
+
 The [latest implementation investigation](benchmark/results/practical-2026-10-10/README.md)
 records six accepted optimizations, a rejected experiment, fresh complexity
 diagnostics, and repeated comparisons with Kruskal, Prim, and Borůvka.
