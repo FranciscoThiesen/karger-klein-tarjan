@@ -1,0 +1,73 @@
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+WARNING: Build option --copt has changed, discarding analysis cache (this can be expensive, see https://bazel.build/advanced/performance/iteration-speed).
+Analyzing: 33 targets (1 packages loaded, 0 targets configured)
+Analyzing: 33 targets (1 packages loaded, 0 targets configured)
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+Analyzing: 33 targets (1 packages loaded, 402 targets configured)
+[1 / 2] checking cached actions
+INFO: Analyzed 33 targets (1 packages loaded, 427 targets configured).
+[54 / 121] Compiling boruvka/boruvka.cpp; 0s darwin-sandbox ... (16 actions, 15 running)
+[61 / 129] Compiling boruvka/boruvka.cpp; 1s darwin-sandbox ... (17 actions, 16 running)
+[62 / 129] Compiling boruvka/boruvka.cpp; 3s darwin-sandbox ... (16 actions, 15 running)
+[63 / 129] Compiling boruvka/boruvka.cpp; 5s darwin-sandbox ... (16 actions, 15 running)
+[103 / 178] Compiling verifier/verifier_v2.cpp; 6s darwin-sandbox ... (16 actions, 15 running)
+[105 / 178] Compiling verifier/verifier_v2.cpp; 7s darwin-sandbox ... (16 actions, 15 running)
+INFO: From Compiling verifier/verifier_v2.cpp:
+verifier/verifier_v2.cpp:455:6: warning: unused variable 'total_number_of_edges' [-Wunused-variable]
+        int total_number_of_edges = static_cast<int>(general_graph.size());
+            ^
+1 warning generated.
+INFO: From Compiling verifier/verifier_v2.cpp:
+verifier/verifier_v2.cpp:455:6: warning: unused variable 'total_number_of_edges' [-Wunused-variable]
+        int total_number_of_edges = static_cast<int>(general_graph.size());
+            ^
+1 warning generated.
+[123 / 193] Compiling test/regression_test.cpp; 7s darwin-sandbox ... (16 actions, 15 running)
+[134 / 200] Compiling test/regression_test.cpp; 9s darwin-sandbox ... (17 actions, 16 running)
+[135 / 200] Compiling test/regression_test.cpp; 10s darwin-sandbox ... (17 actions, 16 running)
+[137 / 200] Compiling test/regression_test.cpp; 11s darwin-sandbox ... (17 actions, 16 running)
+[145 / 207] Compiling googletest/src/gtest.cc; 12s darwin-sandbox ... (16 actions running)
+[151 / 208] Compiling googletest/src/gtest.cc; 13s darwin-sandbox ... (17 actions, 16 running)
+[159 / 214] Compiling googletest/src/gtest.cc; 14s darwin-sandbox ... (16 actions running)
+[166 / 220] 1 / 10 tests; Compiling googletest/src/gtest.cc; 15s darwin-sandbox ... (16 actions running)
+[171 / 221] 1 / 10 tests; Compiling benchmark/shape_work.cpp; 11s darwin-sandbox ... (16 actions running)
+[176 / 221] 2 / 10 tests; Compiling benchmark/shape_work.cpp; 12s darwin-sandbox ... (17 actions, 16 running)
+[180 / 221] 2 / 10 tests; Compiling benchmark/diverse_benchmark.cpp; 11s darwin-sandbox ... (17 actions, 16 running)
+[181 / 221] 2 / 10 tests; Compiling benchmark/diverse_benchmark.cpp; 13s darwin-sandbox ... (16 actions, 15 running)
+[185 / 221] 2 / 10 tests; Compiling benchmark/diverse_benchmark.cpp; 14s darwin-sandbox ... (16 actions, 15 running)
+[191 / 221] 2 / 10 tests; Compiling benchmark/common_test.cpp; 12s darwin-sandbox ... (16 actions, 15 running)
+[192 / 221] 2 / 10 tests; Compiling benchmark/complexity_benchmark.cpp; 11s darwin-sandbox ... (16 actions, 15 running)
+INFO: From Compiling src/complexity.cc:
+external/com_google_benchmark/src/complexity.cc:85:10: warning: variable 'sigma_gn' set but not used [-Wunused-but-set-variable]
+  double sigma_gn = 0.0;
+         ^
+1 warning generated.
+[200 / 222] 4 / 10 tests; Compiling benchmark/complexity_benchmark.cpp; 12s darwin-sandbox ... (12 actions running)
+[204 / 222] 4 / 10 tests; Compiling test/complexity_test.cpp; 11s darwin-sandbox ... (8 actions running)
+[216 / 226] 4 / 10 tests; Compiling benchmark/common_work.cpp; 9s darwin-sandbox ... (9 actions running)
+[222 / 227] 6 / 10 tests; Testing //benchmark:common_test; 3s darwin-sandbox ... (5 actions running)
+[224 / 227] 7 / 10 tests; Testing //benchmark:common_test; 4s darwin-sandbox ... (3 actions running)
+[224 / 227] 8 / 10 tests; Testing //benchmark:common_test; 7s darwin-sandbox ... (3 actions running)
+[226 / 227] 9 / 10 tests; Testing //benchmark:common_test; 9s darwin-sandbox
+[226 / 227] 9 / 10 tests; Testing //benchmark:common_test; 19s darwin-sandbox
+[226 / 227] 9 / 10 tests; Testing //benchmark:common_test; 49s darwin-sandbox
+[226 / 227] 9 / 10 tests; Testing //benchmark:common_test; 58s darwin-sandbox
+INFO: Found 23 targets and 10 test targets...
+INFO: Elapsed time: 86.130s, Critical Path: 73.23s
+INFO: 114 processes: 7 internal, 107 darwin-sandbox.
+INFO: Build completed successfully, 114 total actions
+//:complexity_test                                                       PASSED in 1.3s
+//:contraction_test                                                      PASSED in 0.6s
+//:kkt_test                                                              PASSED in 5.1s
+//:mst_test                                                              PASSED in 0.8s
+//:regression_test                                                       PASSED in 0.7s
+//:verifier_test                                                         PASSED in 5.5s
+//:verifier_v2_test                                                      PASSED in 1.0s
+//benchmark:certificate_test                                             PASSED in 0.5s
+//benchmark:common_test                                                  PASSED in 58.2s
+//benchmark:shapes_test                                                  PASSED in 7.6s
+
+Executed 10 out of 10 tests: 10 tests pass.
+There were tests whose specified size is too big. Use the --test_verbose_timeout_warnings command line option to see which ones these are.

@@ -25,7 +25,7 @@ from pathlib import Path
 import analyze_diverse as common
 from analyze_complexity import read_registry
 import matplotlib.pyplot as plt
-from matplotlib.ticker import FuncFormatter
+from matplotlib.ticker import FuncFormatter, MaxNLocator
 import numpy as np
 
 
@@ -484,13 +484,16 @@ def plot_spatial(summaries, output):
             axis.axhline(1, linestyle="--", color="#52616D", linewidth=1)
             axis.set_xscale("log", base=2); axis.set_yscale("log", base=2)
             axis.set_ylim(lower, upper); axis.set_xticks(x, [f"{n:,}" for n in x])
+            ticks = [value for value in MaxNLocator(nbins=5).tick_values(lower, upper)
+                     if lower <= value <= upper and value > 0]
+            axis.set_yticks(sorted(set([1.0, *ticks])))
             axis.yaxis.set_major_formatter(FuncFormatter(lambda value, _: common.ratio_label(value)))
             axis.set_title(f"{grid[4]}D grid · KKT / {common.ALGORITHM_NAMES[reference]}", loc="left", fontweight="bold")
             axis.set_xlabel("Vertices"); axis.set_ylabel("Relative runtime: distance / random weights")
             common.style_axis(axis)
     figure.suptitle("Paired spatial weighting: change in KKT's relative runtime", x=0.025, ha="left", fontsize=18, fontweight="bold")
     figure.text(0.025, 0.012, "(KKT/competitor with distance weights) / (KKT/competitor with random weights), paired before aggregation.\n"
-                "Below 1×: distance weights improve KKT's relative runtime. Same topology per graph seed; graph ranges are not confidence intervals.", fontsize=9)
+                "Below 1×: distance weights improve KKT's relative runtime. Shared log scale; graph ranges are not confidence intervals.", fontsize=9)
     figure.tight_layout(rect=(0.01, 0.07, 1, 0.94), h_pad=2, w_pad=2)
     common.save_figure(figure, output, "spatial_weighting")
 

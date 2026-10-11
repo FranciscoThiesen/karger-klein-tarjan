@@ -1,0 +1,331 @@
+{
+  "audited_utc": "2026-10-11T07:04:27.862520+00:00",
+  "scope": "Read/hash archived evidence and existing binaries; rerun Python data validators only. No new timing or C++ tests.",
+  "measured_revision": "c9ed4cae8ee3bfce913cceb5298cbb961280baac",
+  "provenance": [
+    {
+      "metadata": "benchmark/results/common-2026-10-11/metadata.json",
+      "metadata_sha256": "e91b2e1901f9071c1ae9a57362fdc63a186efca34f6a1454fabd34212141f85a",
+      "source_files": 47,
+      "all_sources_match_worktree_and_measured_revision": true,
+      "runner_matches_recorded": true,
+      "artifacts": [
+        {
+          "path": "benchmark/results/common-2026-10-11/work.csv",
+          "sha256": "3cdfd8f7e0221eed87d94b1cd75a8f75e788bb7d7d050ef5cb719409ec22cc0a",
+          "matches_recorded": true
+        },
+        {
+          "path": "benchmark/results/common-2026-10-11/work.log",
+          "sha256": "a9fdbda561e6fd87358df0aa8cee196bd11513a2f8865d393e9f7bc28056debc",
+          "matches_recorded": true
+        },
+        {
+          "path": "benchmark/results/common-2026-10-11/primary.csv",
+          "sha256": "3a5bfe244bcea7ddf28258a20fc0df418e361571e6c479bf00750b099baeeba0",
+          "matches_recorded": true
+        },
+        {
+          "path": "benchmark/results/common-2026-10-11/primary.log",
+          "sha256": "94f5b526c68a21c6f00fad592a2f180103136e0d52d54fe7f131578e13365ca0",
+          "matches_recorded": true
+        },
+        {
+          "path": "benchmark/results/common-2026-10-11/repeat.csv",
+          "sha256": "e8a37c1e777c436f6e04165eed5b39710f230b266483e8023ee87c22f31cc93d",
+          "matches_recorded": true
+        },
+        {
+          "path": "benchmark/results/common-2026-10-11/repeat.log",
+          "sha256": "5c8bfb88047c144c6d98c9f0aff6ca1c05d9b21205d3f1dda0c5a425b2d48e3b",
+          "matches_recorded": true
+        }
+      ]
+    },
+    {
+      "metadata": "benchmark/results/common-2026-10-11/diagnostics/metadata.json",
+      "metadata_sha256": "e72bde0aebf16df2b760c71f4ca966c49fa3e91fb87eb6dfe8471c39d8dbdd5d",
+      "source_files": 47,
+      "all_sources_match_worktree_and_measured_revision": true,
+      "runner_matches_recorded": true,
+      "artifacts": [
+        {
+          "path": "benchmark/results/common-2026-10-11/diagnostics/trace.csv",
+          "sha256": "f85fafed042d309e53939368d2ab04626cb6e965897ba376e6e9f4c2d312eef8",
+          "matches_recorded": true
+        },
+        {
+          "path": "benchmark/results/common-2026-10-11/diagnostics/trace.log",
+          "sha256": "e4049c3bff7f7fb8f0bf7c72d1ec58ee35e7cb231006af2d22f68aec4472427a",
+          "matches_recorded": true
+        },
+        {
+          "path": "benchmark/results/common-2026-10-11/diagnostics/primary.csv",
+          "sha256": "7efd0aa29ef1c959a0fb087487dcb732570ccfcab4f3639bfb952cb329754be7",
+          "matches_recorded": true
+        },
+        {
+          "path": "benchmark/results/common-2026-10-11/diagnostics/primary.log",
+          "sha256": "78dfe7d7c325b17a577cac27d8cb4cf78ad18e42851f3dacbb8af84036089ae1",
+          "matches_recorded": true
+        },
+        {
+          "path": "benchmark/results/common-2026-10-11/diagnostics/repeat.csv",
+          "sha256": "02a4c16f12179f38a70b1d1101320c89e699dac0e961d24ce1b7c71841b17e22",
+          "matches_recorded": true
+        },
+        {
+          "path": "benchmark/results/common-2026-10-11/diagnostics/repeat.log",
+          "sha256": "5b9de3ac0aa61ec6359164f156f3ca78dd52d7f2f9f5e273fdf3ab3bccf0b2cc",
+          "matches_recorded": true
+        },
+        {
+          "path": "benchmark/results/common-2026-10-11/diagnostics/complexity.stdout.txt",
+          "sha256": "71ba7c34bd8b1406087e568cee6c67bbd70a4661cc2e367cbea9e0253e9f6d1b",
+          "matches_recorded": true
+        },
+        {
+          "path": "benchmark/results/common-2026-10-11/diagnostics/complexity.log",
+          "sha256": "2e283448bcc638262efc3f15ad4f481967b8c995457c589f7803f4b6b04e0a60",
+          "matches_recorded": true
+        },
+        {
+          "path": "benchmark/results/common-2026-10-11/diagnostics/timing.json",
+          "sha256": "dda043b090168861ef3eefe3ae06c4049ba704ce117347f5a3052cef85e6d003",
+          "matches_recorded": true
+        }
+      ]
+    }
+  ],
+  "campaigns": {
+    "smoke": {
+      "cases": 13,
+      "case_graph_seed_realizations": 39,
+      "timed_calls": 1872,
+      "checked_warmup_calls": 468,
+      "validation": "pass; complete strict matrix validator"
+    },
+    "primary": {
+      "cases": 52,
+      "case_graph_seed_realizations": 156,
+      "timed_calls": 7488,
+      "checked_warmup_calls": 1872,
+      "validation": "pass; complete strict matrix validator"
+    },
+    "repeat": {
+      "cases": 52,
+      "case_graph_seed_realizations": 156,
+      "timed_calls": 7488,
+      "checked_warmup_calls": 1872,
+      "validation": "pass; complete strict matrix validator"
+    },
+    "work": {
+      "cases": 52,
+      "case_graph_seed_realizations": 156,
+      "distinct_input_fingerprints": 153,
+      "untimed_kkt_calls": 468,
+      "validation": "pass; complete counter, identity, and derived-data validator"
+    },
+    "ablation_primary": {
+      "cases": 20,
+      "case_graph_seed_realizations": 60,
+      "timed_calls": 1440,
+      "checked_warmup_calls": 360,
+      "validation": "pass; complete strict matrix validator"
+    },
+    "ablation_repeat": {
+      "cases": 20,
+      "case_graph_seed_realizations": 60,
+      "timed_calls": 1440,
+      "checked_warmup_calls": 360,
+      "validation": "pass; complete strict matrix validator"
+    },
+    "ablation_trace": {
+      "cases": 20,
+      "untimed_complete_mst_calls": 60,
+      "per_round_rows": 386,
+      "validation": "pass; connected round chains, progress, accounting, completion, and work crosscheck"
+    },
+    "ablation_smoke": {
+      "cases": 12,
+      "case_graph_seed_realizations": 36,
+      "timed_calls": 864,
+      "checked_warmup_calls": 216,
+      "validation": "pass; exact case/seed/repetition/algorithm matrix and balanced order"
+    },
+    "ablation_smoke_trace": {
+      "cases": 12,
+      "untimed_complete_mst_calls": 36,
+      "per_round_rows": 132,
+      "validation": "pass; matrix, round coverage, selected-edge accounting and termination"
+    },
+    "google_benchmark": {
+      "family_size_cases": 45,
+      "case_graph_seed_realizations": 135,
+      "raw_batch_records": 810,
+      "timed_calls": 2430,
+      "explicit_checked_warmup_calls": 0,
+      "aggregate_mean_median_stddev_rows": 810,
+      "builtin_BigO_RMS_rows": 60,
+      "total_json_rows": 1680,
+      "validation": "pass; complete strict timing matrix and 60 builtin fits; no new malformed-input selftest for the common adapter"
+    }
+  },
+  "checks": {
+    "historical_controls": {
+      "path": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/shapes-2026-10-11/work.csv",
+      "sha256": "86821557b5098927e6d8cc7e7c194cbe99362cfc5749c7f7b2bc4ef3296efca9",
+      "matched_observations": 54,
+      "matched_graphs": 18,
+      "matched_cases": [
+        "hub_n16384",
+        "hub_n4096",
+        "hub_n65536",
+        "random_4_n16384",
+        "random_4_n4096",
+        "random_4_n65536"
+      ],
+      "all_common_fields_match": true
+    },
+    "ablation_work_matches": {
+      "graphs": 60,
+      "sampling_seed_observations": 180,
+      "checked": "original fingerprint and graph dimensions after two contractions or earlier termination; no intermediate edge-content comparison"
+    },
+    "graph_exports": {
+      "graphs": 7,
+      "n": 256,
+      "graph_seed": 42,
+      "sampling_seed": 0,
+      "production_export_status": "all seven pass certified MST, DSU contraction, and direct-path oracles",
+      "independent_archived_data_recheck": "all seven exact MST ID sets, 14 component maps/minimum-parallel-edge reductions, seven sample MSFs, and seven heavy-ID sets agree with fresh Python DSU/path reconstructions",
+      "limitation": "Does not regenerate fixtures or independently reproduce the mt19937 sample stream; these are illustrative graphs outside timing."
+    },
+    "common_analyzer_selftest": {
+      "pass": 6,
+      "rejected": 25
+    },
+    "ablation_analyzer_selftest": {
+      "malformed_cases_rejected": 43,
+      "positive_checks": "complete synthetic matrices and known hierarchical/paired-median arithmetic; see archived script/log"
+    },
+    "complexity_adapter_selftest": {
+      "new_malformed_input_suite_run": false,
+      "evidence": "Strict existing timing validator plus complete raw/builtin matrix checks; independent arithmetic review reported separately, not a new selftest count."
+    },
+    "bazel": {
+      "passed_targets": 10,
+      "executed_targets": 10,
+      "targets": [
+        "//:complexity_test",
+        "//:contraction_test",
+        "//:kkt_test",
+        "//:mst_test",
+        "//:regression_test",
+        "//:verifier_test",
+        "//:verifier_v2_test",
+        "//benchmark:certificate_test",
+        "//benchmark:common_test",
+        "//benchmark:shapes_test"
+      ],
+      "standalone_details": {
+        "regression_cases": 15,
+        "contraction_oracle_cases": 214,
+        "common_fixture_realizations": 222,
+        "shape_fixture_realizations": 96,
+        "certificate": "positive and negative cases; no numeric subcase count reported"
+      },
+      "gtest_registered_testcases_in_five_gtest_targets": 16,
+      "note": "The five other targets are standalone executables, not one-case GTest suites. Nested cases, repeated native fixture passes, and benchmark output validations must not be added as independent tests."
+    },
+    "native_common_fixtures": {
+      "fixture_realizations_per_run": 222,
+      "archived_success_logs": 2,
+      "note": "Same fixture suite run twice, also in Bazel; not 444 distinct fixtures."
+    },
+    "production_sources_unchanged_from": "2d4fbf1"
+  },
+  "binaries_verified_now_against_collection_hashes": {
+    "/private/tmp/kkt-common/bin/common_work": "f79dfe19cd0dac74b88517d0d3d204dd3a708c8537995dad3199dc82a3f171fb",
+    "/private/tmp/kkt-common/bin/diverse_benchmark": "7e1dce7a455937ba00b0808a72e3a728adb2f31cb89299aa6b1ff4673ceb7e3c",
+    "/private/tmp/kkt-common/bin/contraction_ablation": "4d761d884c3f8e2b4de53581e357ea097b2bb486a6a891558c7bd8d0f61312b4",
+    "/private/tmp/kkt-repairs/bazel/7eb4d49b1018447212ffd8d7c5980792/execroot/__main__/bazel-out/darwin_arm64-opt/bin/benchmark/complexity_benchmark": "05d70b1cdaf4c143b04075e4b2185ffbe92381f1937a2b40f61afe818c08eada"
+  },
+  "analysis_source_sha256_at_audit": {
+    "analyze_common.py": "cc44bac5ad6ec78a7bf4643557866b6517d313d57e7f8ab7290a4d45e46a15c8",
+    "analyze_ablation.py": "3bf8f9b34ba3d867faa4fb27a25e30515e993119635b487efa14b23af71d28f5",
+    "analyze_common_complexity.py": "c99b5a4c63144dff614b1f82dae6eb0dc0d9ace3280bce73c2a88b7b5ac47687",
+    "analyze_complexity.py": "f73a88fab014a243b379b00091e7f9d74ffec46b8e24964bc9e9249fe354b275",
+    "analyze_diverse.py": "aa6a59f52f26d7951d8683e97c75b475b105094e410096568a110b1766de61cf",
+    "analyze_shapes.py": "07fb258ba2c5f7939112d9d0be258142f4aae099db925d3f06b83fc5b8567f8e"
+  },
+  "collection_time_common_analyzer_sha256": "64bd26b2de5b7fb525cb3316c0ebb96d3fa4e1f948f1750053bf7cf75be55f2f",
+  "analysis_provenance_note": "The common analyzer changed after collection only to improve spatial-plot ticks/caption; both final analysis manifests match the current final analyzer hash. Raw evidence and measured C++ sources did not change.",
+  "archived_support_sha256_at_audit": {
+    "PROTOCOL.md": "dbd5c8370c1e0b7c069fd5fcc3cb92975e16aa3022cc238651a43450ebd759c9",
+    "ablation_build.log": "a55c8f18e17729098c91907c3467f340f62263cdfab1045779bc8f5fa55f3f54",
+    "ablation_smoke.log": "18ca3083b7ee9e2cddba39d8815b901d623d3b3e384cfb006eaeaa0057e094d6",
+    "ablation_smoke_work.log": "cf6d88b8838090ceb35569950c6f5111a9f4c1afe0fb7c12dad36645c9736823",
+    "agent_fixture_tests.log": "bbb035683504dd8ca2408836029d0ff1c0d6a4c37705bdfdc324ec4c596c333d",
+    "analyzer_selftest.json": "f885342850850cf8fce6ca0d8d078c7d00e0ea1332dbb41807ab8ef94db66ad3",
+    "bazel.log": "1023f0b3f6e37717982a1e76951d184b953e10860591105873e3a5585dfce64f",
+    "bazel_diagnostics_build.log": "a4441654e2f68e7a62bbcc51b6ee35d8548a1a880a8fa4f1807cf504a3110153",
+    "boundary_audit.json": "55c529ec516aef8eca2bb95bd8ddf00e40cb75c56d58a86d260744d892ad7d23",
+    "build.log": "489bfe118aaa03e644a1448fc13c8c84f3c6407f1142b84f4ae8084baec5218d",
+    "diagnostics/ablation_analysis.log": "0497a2a2ad12af1540620e1d1bd53958f383425e80844bf957dfcaad217bc3d4",
+    "diagnostics/ablation_validation.log": "217e4bfb072e30a583406a03440b35c24ea0e306373220cc0da0a5b2fdb03dd2",
+    "diagnostics/ablation_validation.py": "9b7190c1aa925bc6dadaf97760a1b930616a4f2d3858327c5be2f3ab92c895b6",
+    "diagnostics/complexity.log": "2e283448bcc638262efc3f15ad4f481967b8c995457c589f7803f4b6b04e0a60",
+    "diagnostics/complexity_analysis.log": "ecc6defd0da7a31a1e63a706dd24d48edf57874ca7780b0b5de22bf92cf6285f",
+    "diagnostics/primary.log": "78dfe7d7c325b17a577cac27d8cb4cf78ad18e42851f3dacbb8af84036089ae1",
+    "diagnostics/repeat.log": "5b9de3ac0aa61ec6359164f156f3ca78dd52d7f2f9f5e273fdf3ab3bccf0b2cc",
+    "diagnostics/trace.log": "e4049c3bff7f7fb8f0bf7c72d1ec58ee35e7cb231006af2d22f68aec4472427a",
+    "final_work_build.log": "dd748f07657a3ade1b4c559e7558e2b49e50a91b709d63a1970a0357e1c2a8d8",
+    "fixture_build.log": "ec4bacc48c4ab27e77916137d6590acf81185f06fa7aa83fd8c787ac95cdfc63",
+    "fixture_tests.log": "bbb035683504dd8ca2408836029d0ff1c0d6a4c37705bdfdc324ec4c596c333d",
+    "graph_views.json": "033716bb4887989d038623e4d67393935d31d4030f7f1ec93203c048f298eec1",
+    "primary.log": "94f5b526c68a21c6f00fad592a2f180103136e0d52d54fe7f131578e13365ca0",
+    "repeat.log": "5c8bfb88047c144c6d98c9f0aff6ca1c05d9b21205d3f1dda0c5a425b2d48e3b",
+    "smoke.log": "3a26784168d021e8f502e32f08668f2b28fb0cfef38dec52f08e4deed75b4161",
+    "smoke_validation.json": "ea8582f898fb674c577dc0007a22e8f0abb0be9a32c58011d95b07977846c88b",
+    "work.log": "a9fdbda561e6fd87358df0aa8cee196bd11513a2f8865d393e9f7bc28056debc"
+  },
+  "limitations": [
+    "Native Make and Bazel Google Benchmark are separate build profiles and are not pooled.",
+    "Repeat campaigns reuse the same graphs; graph-seed ranges are descriptive, not confidence intervals.",
+    "Main timing CSVs have no per-call input fingerprint; identity is supported by frozen source/binary hashes and independent work/trace fingerprints.",
+    "Three labeled main graph realizations intentionally duplicate inputs at the fixed-256/sqrt intersection: 156 labels, 153 distinct fingerprints.",
+    "Collection-time metadata does not individually hash smoke outputs, fixture-test logs, or graph_views.json; audit-time hashes preserve these now.",
+    "The 47-file source manifest covers one-directory-deep C++ sources and headers, not build files, SDK contents, or external dependency trees. Build logs/profile and binary hashes complement it.",
+    "No sanitizer or controlled-affinity/power run was performed in this campaign; prior campaigns are separate evidence.",
+    "Graph exports are explanatory 256-vertex fixtures, not performance samples.",
+    "Ablation compares whole continuation strategies including RNG/recursion/storage, not isolated sampling or verifier instructions."
+  ],
+  "bazel_standalone_log_evidence": {
+    "regression_test": {
+      "path": "/private/tmp/kkt-repairs/bazel/7eb4d49b1018447212ffd8d7c5980792/execroot/__main__/bazel-out/darwin_arm64-opt/testlogs/regression_test/test.log",
+      "sha256": "36d2f043eab7560c50dc0d358bab540a8518d6f56b38aaa282661a8c7ff134c9",
+      "result_text": "PASS edge ID metadata and duplicate endpoint selection\nPASS empty graphs and isolated vertices\nPASS recursive hierarchical paths\nPASS deterministic random graphs\nPASS disconnected minimum spanning forests\nPASS parallel edges after forced contractions\nPASS exhaustive upper-median tables through height 20\nPASS forest heavy edges against direct path searches\nPASS heavy-edge positions preserve IDs and component mappings\nPASS contiguous queries preserve negative, equal, and empty paths\nPASS verifier empty inputs and components without queries\nPASS LCA queries outlive input adjacency\nPASS isolate compaction preserves inputs and handles empty samples\nPASS sampling consumes a continuing reproducible stream\nPASS KKT preserves global C random state\n15 passed, 0 failed\n"
+    },
+    "contraction_test": {
+      "path": "/private/tmp/kkt-repairs/bazel/7eb4d49b1018447212ffd8d7c5980792/execroot/__main__/bazel-out/darwin_arm64-opt/testlogs/contraction_test/test.log",
+      "sha256": "9a33c63fc4f44c2c4ac0663e20272a471440392f1b9e36ef1ebcd73306e59367",
+      "result_text": "PASS 214 contraction cases against independent partition/order oracle\n"
+    },
+    "benchmark/certificate_test": {
+      "path": "/private/tmp/kkt-repairs/bazel/7eb4d49b1018447212ffd8d7c5980792/execroot/__main__/bazel-out/darwin_arm64-opt/testlogs/benchmark/certificate_test/test.log",
+      "sha256": "eb0995afac3312e569be370f95695aa35db4a36ed9397a4e74993b394679b523",
+      "result_text": "PASS independent MST certificate positive and negative cases\n"
+    },
+    "benchmark/common_test": {
+      "path": "/private/tmp/kkt-repairs/bazel/7eb4d49b1018447212ffd8d7c5980792/execroot/__main__/bazel-out/darwin_arm64-opt/testlogs/benchmark/common_test/test.log",
+      "sha256": "a9d4923c8c683fb6a1b927ec191513820d34a487b6668dac3cf800d97e7417a6",
+      "result_text": "Validated 222 common fixtures, paired spatial weights, controls, and invalid inputs.\n"
+    },
+    "benchmark/shapes_test": {
+      "path": "/private/tmp/kkt-repairs/bazel/7eb4d49b1018447212ffd8d7c5980792/execroot/__main__/bazel-out/darwin_arm64-opt/testlogs/benchmark/shapes_test/test.log",
+      "sha256": "70c338ac807727ccde7db3c53bf6a3f552098e34fd520016f509f39192f98442",
+      "result_text": "Validated 96 seeded fixtures, unchanged controls, and invalid inputs.\n"
+    }
+  }
+}

@@ -24,7 +24,7 @@ def main():
     ablation, complexity = (Path(s).resolve(strict=True) for s in sys.argv[1:3])
     out = Path(sys.argv[3]).resolve()
     out.mkdir(parents=True, exist_ok=True)
-    protected = [out/'metadata.json', out/'timing.json'] + [out/(tag+suffix)
+    protected = [out/'metadata.json', out/'timing.json', out/'complexity.stdout.txt'] + [out/(tag+suffix)
         for tag in ('trace', 'primary', 'repeat', 'complexity') for suffix in ('.csv','.log')]
     if any(p.exists() for p in protected):
         raise ValueError('refusing to overwrite evidence')
@@ -49,11 +49,12 @@ def main():
                 'started_utc':datetime.datetime.now(datetime.timezone.utc).isoformat()}
         meta['runs'][tag]=info;save()
         start=time.monotonic()
-        with (out/(tag+'.csv')).open('w') as stdout, (out/(tag+'.log')).open('w') as stderr:
+        stdout_suffix = '.stdout.txt' if tag == 'complexity' else '.csv'
+        with (out/(tag+stdout_suffix)).open('w') as stdout, (out/(tag+'.log')).open('w') as stderr:
             run=subprocess.run(['/usr/bin/time','-l',*command],stdout=stdout,stderr=stderr)
         info.update(exit_status=run.returncode,wall_seconds_including_setup=time.monotonic()-start,
                     finished_utc=datetime.datetime.now(datetime.timezone.utc).isoformat())
-        info['output_sha256']={suffix:digest(out/(tag+suffix)) for suffix in ('.csv','.log')}
+        info['output_sha256']={suffix:digest(out/(tag+suffix)) for suffix in (stdout_suffix,'.log')}
         save()
         if run.returncode: raise RuntimeError(f'{tag} failed')
         if tag=='complexity':

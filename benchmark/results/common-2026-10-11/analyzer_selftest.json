@@ -1,0 +1,155 @@
+{
+  "checks": [
+    {
+      "case": "complete synthetic smoke and exact ratios",
+      "status": "pass"
+    },
+    {
+      "case": "paired spatial ratios and ratios of matched ratios",
+      "status": "pass"
+    },
+    {
+      "case": "nonconstant spatial pair distinguishes median of ratios",
+      "status": "pass"
+    },
+    {
+      "case": "missing row",
+      "status": "rejected",
+      "message": "incomplete timing matrix: expected 1872 rows, got 1871; missing 1"
+    },
+    {
+      "case": "duplicate row",
+      "status": "rejected",
+      "message": "timing line 1874: duplicate observation ('unbalanced_bipartite_16_n1024', 17, 0, 0, 'kkt')"
+    },
+    {
+      "case": "invalid dimension",
+      "status": "rejected",
+      "message": "timing line 2: unexpected case, family, or graph dimensions"
+    },
+    {
+      "case": "failed result",
+      "status": "rejected",
+      "message": "timing line 2: failed validation or nonpositive elapsed time"
+    },
+    {
+      "case": "zero duration",
+      "status": "rejected",
+      "message": "timing line 2: failed validation or nonpositive elapsed time"
+    },
+    {
+      "case": "wrong order",
+      "status": "rejected",
+      "message": "timing line 2: execution order differs from the rotating harness schedule"
+    },
+    {
+      "case": "wrong warmups",
+      "status": "rejected",
+      "message": "timing line 2: the common-graph protocol requires exactly one warmup"
+    },
+    {
+      "case": "unexpected seed",
+      "status": "rejected",
+      "message": "timing line 2: unexpected graph or sampling seed"
+    },
+    {
+      "case": "missing family",
+      "status": "rejected",
+      "message": "incomplete timing matrix: expected 1872 rows, got 1728; missing 144"
+    },
+    {
+      "case": "mismatched family",
+      "status": "rejected",
+      "message": "timing line 2: unexpected case, family, or graph dimensions"
+    },
+    {
+      "case": "complete 52-case 7488-row matrix",
+      "status": "pass",
+      "rows": 7488,
+      "cases": 52
+    },
+    {
+      "case": "complete 468-row work matrix and graph aggregation",
+      "status": "pass"
+    },
+    {
+      "case": "all historical control fingerprints and common fields",
+      "status": "pass"
+    },
+    {
+      "case": "work missing row",
+      "status": "rejected",
+      "message": "incomplete work matrix: expected 468 rows, got 467"
+    },
+    {
+      "case": "work duplicate",
+      "status": "rejected",
+      "message": "work line 470: duplicate observation ('unbalanced_bipartite_16_n4096', 17, 0)"
+    },
+    {
+      "case": "work dimensions",
+      "status": "rejected",
+      "message": "work line 2: unexpected case, family, or graph dimensions"
+    },
+    {
+      "case": "work fingerprint",
+      "status": "rejected",
+      "message": "work fixture unbalanced_bipartite_16_n4096/17: inconsistent input_fingerprint"
+    },
+    {
+      "case": "work degree",
+      "status": "rejected",
+      "message": "work line 2: invalid degree or leaf count"
+    },
+    {
+      "case": "work leaf consistency",
+      "status": "rejected",
+      "message": "work line 2: bipartite degree metrics differ from the fixture"
+    },
+    {
+      "case": "work counter identity",
+      "status": "rejected",
+      "message": "work line 2: inconsistent counter or derived volume"
+    },
+    {
+      "case": "work proxy",
+      "status": "rejected",
+      "message": "work line 2: inconsistent counter or derived volume"
+    },
+    {
+      "case": "work NaN ratio",
+      "status": "rejected",
+      "message": "work line 2: nonfinite or negative heavy_fraction"
+    },
+    {
+      "case": "work wrong regime",
+      "status": "rejected",
+      "message": "work line 2: inconsistent execution regime"
+    },
+    {
+      "case": "work unrecorded query volume",
+      "status": "rejected",
+      "message": "work line 2: inconsistent counter or derived volume"
+    },
+    {
+      "case": "work identical-input alias mismatch",
+      "status": "rejected",
+      "message": "bipartite alias 65536/17/0: identical input/work fields differ"
+    },
+    {
+      "case": "historical control missing row",
+      "status": "rejected",
+      "message": "historical control matrix is incomplete"
+    },
+    {
+      "case": "historical control fingerprint mismatch",
+      "status": "rejected",
+      "message": "historical control differs at ('hub_n4096', 17, 0)/input_fingerprint"
+    },
+    {
+      "case": "historical control duplicate",
+      "status": "rejected",
+      "message": "duplicate historical control row"
+    }
+  ]
+}

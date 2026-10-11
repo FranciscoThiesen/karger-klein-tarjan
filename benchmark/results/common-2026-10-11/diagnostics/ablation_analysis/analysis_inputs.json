@@ -1,0 +1,29 @@
+{
+  "inputs": {
+    "timing_csv": {
+      "path": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/common-2026-10-11/diagnostics/primary.csv",
+      "sha256": "7efd0aa29ef1c959a0fb087487dcb732570ccfcab4f3639bfb952cb329754be7"
+    },
+    "confirmation_csv": {
+      "path": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/common-2026-10-11/diagnostics/repeat.csv",
+      "sha256": "02a4c16f12179f38a70b1d1101320c89e699dac0e961d24ce1b7c71841b17e22"
+    },
+    "trace_csv": {
+      "path": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/common-2026-10-11/diagnostics/trace.csv",
+      "sha256": "f85fafed042d309e53939368d2ab04626cb6e965897ba376e6e9f4c2d312eef8"
+    },
+    "common_work_csv": {
+      "path": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/common-2026-10-11/work.csv",
+      "sha256": "3cdfd8f7e0221eed87d94b1cd75a8f75e788bb7d7d050ef5cb719409ec22cc0a"
+    },
+    "shapes_work_csv": {
+      "path": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/shapes-2026-10-11/work.csv",
+      "sha256": "86821557b5098927e6d8cc7e7c194cbe99362cfc5749c7f7b2bc4ef3296efca9"
+    }
+  },
+  "cases": 20,
+  "timing_rows_per_run": 1440,
+  "trace_graphs": 60,
+  "trace_rows": 386,
+  "build_machine_provenance": "Use the accompanying experiment metadata; it is not inferable from this CSV."
+}
