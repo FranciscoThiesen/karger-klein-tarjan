@@ -2,7 +2,7 @@ load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library", "cc_test")
 
 cc_library(
     name = "fixtures",
-    hdrs = ["graph_fixtures.hpp", "extended_graph_fixtures.hpp", "common_graph_fixtures.hpp", "mst_certificate.hpp"],
+    hdrs = ["graph_fixtures.hpp", "extended_graph_fixtures.hpp", "common_graph_fixtures.hpp", "continuation_fixtures.hpp", "mst_certificate.hpp"],
     visibility = ["//visibility:public"],
 )
 
@@ -109,4 +109,27 @@ cc_binary(
     copts = ["-std=c++17"],
     deps = [":fixtures", "//kkt:kkt", "//kruskal:kruskal", "//verifier:verifier_v2"],
     visibility = ["//visibility:public"],
+)
+
+cc_binary(
+    name = "continuation_search",
+    srcs = ["continuation_search.cpp"],
+    copts = ["-std=c++17"],
+    deps = [":fixtures", ":work_metrics", "//kkt:kkt", "//kruskal:kruskal"],
+    visibility = ["//visibility:public"],
+)
+
+cc_binary(
+    name = "continuation_search_work",
+    srcs = ["continuation_search.cpp"],
+    copts = ["-std=c++17", "-DKKT_ENABLE_WORK_STATS"],
+    deps = [":fixtures", ":work_metrics", "//kkt:kkt_work_stats", "//kruskal:kruskal"],
+    visibility = ["//visibility:public"],
+)
+
+cc_test(
+    name = "continuation_test",
+    srcs = ["continuation_test.cpp"],
+    copts = ["-std=c++17"],
+    deps = [":fixtures", "//kkt:kkt", "//kruskal:kruskal"],
 )
