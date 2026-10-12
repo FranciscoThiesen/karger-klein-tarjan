@@ -155,7 +155,29 @@ void check_paired_topology(const Fixture& a, const Fixture& b) {
     }
 }
 
-void check_fixture(const Spec& spec, unsigned seed) {
+// When every lower dyadic level precedes every higher level, both children
+// already have their MSTs before this cut is considered. Select its unique
+// minimum directly, independently of Kruskal or production contraction.
+Graph dyadic_cut_mst(const Graph& graph, const std::vector<int>& original, int n) {
+    Graph result;
+    for (int width = 2; width <= n; width *= 2) {
+        for (int base = 0; base < n; base += width) {
+            const int middle = base + width / 2, end = base + width;
+            const Graph::value_type* best = nullptr;
+            for (const auto& edge : graph) {
+                int u = original[std::get<0>(edge)], v = original[std::get<1>(edge)];
+                if (u > v) std::swap(u, v);
+                if (u >= base && u < middle && v >= middle && v < end &&
+                    (!best || std::get<2>(edge) < std::get<2>(*best))) best = &edge;
+            }
+            require(best != nullptr, "dyadic children lack a joining edge");
+            result.push_back(*best);
+        }
+    }
+    return result;
+}
+
+int check_fixture(const Spec& spec, unsigned seed) {
     const int n = spec.n;
     const std::int64_t expected_m = static_cast<std::int64_t>(n) * spec.density;
     const auto fixture = benchmark_continuation::make_fixture(spec, seed);
@@ -188,6 +210,8 @@ void check_fixture(const Spec& spec, unsigned seed) {
     const bool path = spec.family.find("path") != std::string::npos;
     const bool random_weights = spec.family.find("random_") == 0;
     const bool hierarchy = spec.family.find("hierarchical_") == 0;
+    const bool distance = spec.family.find("distance_") == 0;
+    const bool cheap_backbone = !random_weights && !distance;
     const int q = static_cast<int>(static_cast<std::int64_t>(n) * spec.intrusion_per_mille / 1000);
     int cheap_chords = 0;
     for (const auto& edge : graph) {
@@ -208,8 +232,8 @@ void check_fixture(const Spec& spec, unsigned seed) {
             for (int differing = a ^ b; differing > 1; differing >>= 1) ++level;
             actual_levels[id] = level;
             ++dyadic_bridges[{level, a >> (level + 1)}];
-            if (!random_weights) require(weight <= n - 1 + q, "backbone outside cheap-rank prefix");
-        } else if (!random_weights && weight <= n - 1 + q) {
+            if (cheap_backbone) require(weight <= n - 1 + q, "backbone outside cheap-rank prefix");
+        } else if (cheap_backbone && weight <= n - 1 + q) {
             ++cheap_chords;
         }
         require(fixture.hierarchy_levels[id] == actual_levels[id], "hierarchy metadata differs from dyadic endpoints");
@@ -222,11 +246,24 @@ void check_fixture(const Spec& spec, unsigned seed) {
     for (int level = 0, block_size = 2; block_size <= n; ++level, block_size *= 2)
         for (int block = 0; block < n / block_size; ++block)
             require(dyadic_bridges[{level, block}] == 1, "missing or repeated dyadic backbone bridge");
-    if (!random_weights) require(cheap_chords == q, "wrong number of promoted chords");
+    if (cheap_backbone) require(cheap_chords == q, "wrong number of promoted chords");
     if (hierarchy) {
         const auto order = backbone_order(fixture, n);
         for (std::size_t i = 1; i < order.size(); ++i)
             require(actual_levels[order[i - 1]] <= actual_levels[order[i]], "hierarchy weight order is broken");
+    }
+    if (distance) {
+        // Recover every edge's level from unshuffled endpoints. Metadata marks
+        // chords as -1 and is deliberately insufficient for this check.
+        std::vector<int> ranked_levels(m, -1);
+        for (const auto& [u, v, weight, id] : graph) {
+            (void)id;
+            int width = 2, level = 0;
+            while (original[u] / width != original[v] / width) { width *= 2; ++level; }
+            ranked_levels[weight - 1] = level;
+        }
+        require(std::is_sorted(ranked_levels.begin(), ranked_levels.end()),
+                "distance ranks do not globally order all edges by dyadic level");
     }
 
     const auto random_partner = benchmark_continuation::make_fixture(
@@ -244,22 +281,32 @@ void check_fixture(const Spec& spec, unsigned seed) {
     const auto oracle = kruskal(graph, n);
     benchmark_validation::certify_mst(graph, oracle, n);
     const auto expected_ids = edge_ids(oracle);
-    if (!random_weights && q == 0) {
+    if (cheap_backbone && q == 0) {
         // A separate certificate checks the intentionally planted MST rather
         // than assuming the reference algorithm returns the backbone.
         benchmark_validation::certify_mst(graph, backbone, n);
         require(expected_ids == edge_ids(backbone), "cheap-backbone fixture has a different MST");
     }
+    if (distance) {
+        const auto dyadic_oracle = dyadic_cut_mst(graph, original, n);
+        benchmark_validation::certify_mst(graph, dyadic_oracle, n);
+        require(expected_ids == edge_ids(dyadic_oracle),
+                "MST differs from independent minimum-edge-per-dyadic-cut oracle");
+    }
     for (unsigned sampling_seed : {0u, 1u, 7u}) {
         problem input(n, graph);
         require(kkt(input, sampling_seed) == expected_ids, "KKT differs from independently certified MST IDs");
     }
-    const int rounds = check_contractions(graph, n, hierarchy && q == 0);
-    if (hierarchy && q == 0) {
+    const bool exact_halving = distance || (hierarchy && q == 0);
+    const int rounds = check_contractions(graph, n, exact_halving);
+    if (exact_halving) {
         int expected_rounds = 0;
         for (int remaining = n; remaining > 1; remaining /= 2) ++expected_rounds;
         require(rounds == expected_rounds, "hierarchical graph finished in an unexpected number of rounds");
     }
+    int backbone_overlap = 0;
+    for (int id : expected_ids) backbone_overlap += id < n - 1;
+    return backbone_overlap;
 }
 
 } // namespace
@@ -268,9 +315,11 @@ int main() {
     try {
         int checked = 0;
         std::set<std::string> names;
-        for (const char* family : {"hierarchical_path", "hierarchical_tree", "low_path", "random_path", "random_tree"}) {
+        for (const char* family : {"hierarchical_path", "hierarchical_tree", "low_path", "random_path", "random_tree",
+                                   "distance_path", "distance_tree"}) {
             for (int n : {32, 64, 128, 256}) for (int density : {1, 4}) {
-                const bool structured = std::string(family).find("random_") != 0;
+                const bool structured = std::string(family).find("hierarchical_") == 0 ||
+                                        std::string(family) == "low_path";
                 const std::vector<int> intrusions = structured && density == 4
                     ? std::vector<int>{0, 125, 1000} : std::vector<int>{0};
                 for (int intrusion : intrusions) {
@@ -289,6 +338,18 @@ int main() {
                                  Spec{"low_path", 64, 4, 17}}) {
             check_fixture(spec, 42); ++checked;
         }
+        // Check that the hierarchy-distance model does not simply plant the
+        // original backbone as its MST. This is a selected dense-fixture
+        // regression, not an assumed overlap fraction for arbitrary inputs.
+        for (const char* family : {"distance_path", "distance_tree"}) {
+            for (unsigned seed : {17u, 42u, 999u}) {
+                const Spec spec{family, 64, 16, 0};
+                const int overlap = check_fixture(spec, seed); ++checked;
+                require(overlap < spec.n - 1, "dense distance fixture's MST never uses a chord");
+                std::cout << benchmark_continuation::case_id(spec) << " graph_seed=" << seed
+                          << " backbone_overlap=" << overlap << '/' << spec.n - 1 << '\n';
+            }
+        }
         for (const Spec& bad : {Spec{"unknown", 32, 1, 0},
                                 Spec{"hierarchical_path", 16, 1, 0},
                                 Spec{"hierarchical_tree", 48, 1, 0},
@@ -301,6 +362,8 @@ int main() {
                                 Spec{"low_path", 32, 1, 1000},
                                 Spec{"random_path", 32, 4, 1},
                                 Spec{"random_tree", 32, 4, 1},
+                                Spec{"distance_path", 32, 4, 1},
+                                Spec{"distance_tree", 32, 4, 1},
                                 Spec{"hierarchical_path", 1 << 22, 512, 0},
                                 Spec{"hierarchical_path", 1 << 30, 4, 0}}) {
             bool rejected = false;

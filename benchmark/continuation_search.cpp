@@ -228,6 +228,12 @@ void run(const Options& config) {
             const auto oracle = kruskal(graph, spec.n);
             benchmark_validation::certify_mst(graph, oracle, spec.n);
             const auto expected = ids(oracle);
+            if (spec.family != "legacy_random") {
+                const auto backbone_edges = std::count_if(expected.begin(), expected.end(),
+                    [&](int id) { return id < spec.n - 1; });
+                std::cerr << "certified_mst_backbone_edges=" << backbone_edges
+                          << " total=" << expected.size() << '\n';
+            }
             const auto hash = fingerprint(graph, spec.n, true);
             const auto topology_hash = fingerprint(graph, spec.n, false);
 #ifndef KKT_ENABLE_WORK_STATS

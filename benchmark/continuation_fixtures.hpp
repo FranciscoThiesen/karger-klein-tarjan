@@ -37,11 +37,15 @@ struct Fixture {
 namespace detail {
 
 inline bool tree_topology(const std::string& family) {
-    return family == "hierarchical_tree" || family == "random_tree";
+    return family == "hierarchical_tree" || family == "random_tree" || family == "distance_tree";
 }
 
 inline bool global_random_weights(const std::string& family) {
     return family == "random_path" || family == "random_tree";
+}
+
+inline bool distance_weights(const std::string& family) {
+    return family == "distance_path" || family == "distance_tree";
 }
 
 // Rejection removes modulo bias. Explicit Fisher-Yates and RNG streams avoid
@@ -65,7 +69,7 @@ inline void shuffle(std::vector<T>& values, std::mt19937& rng) {
 inline int edge_count(const Spec& spec) {
     const bool known = detail::tree_topology(spec.family) ||
                        spec.family == "hierarchical_path" || spec.family == "low_path" ||
-                       spec.family == "random_path";
+                       spec.family == "random_path" || spec.family == "distance_path";
     if (!known) throw std::runtime_error("unknown continuation family: " + spec.family);
     if (spec.n < 32 || spec.n > (1 << 22) || (spec.n & (spec.n - 1)) != 0)
         throw std::runtime_error("continuation fixtures require a power-of-two n in [32, 2^22]");
@@ -75,6 +79,8 @@ inline int edge_count(const Spec& spec) {
         throw std::runtime_error("intrusion_per_mille must be in [0, 1000]");
     if (detail::global_random_weights(spec.family) && spec.intrusion_per_mille != 0)
         throw std::runtime_error("global-random controls do not accept intrusions");
+    if (detail::distance_weights(spec.family) && spec.intrusion_per_mille != 0)
+        throw std::runtime_error("distance-order controls do not accept intrusions");
     const std::int64_t m = static_cast<std::int64_t>(spec.n) * spec.density;
     const std::int64_t capacity = static_cast<std::int64_t>(spec.n) * (spec.n - 1) / 2;
     // Match the finite sentinel used by the shared algorithm weight domain.
@@ -149,7 +155,26 @@ inline Fixture make_fixture(const Spec& spec, unsigned int seed) {
         if (builder.add(u, v)) result.hierarchy_levels.push_back(-1);
     }
 
-    if (detail::global_random_weights(spec.family)) {
+    if (detail::distance_weights(spec.family)) {
+        // Engineered dyadic distance ordering on EVERY edge, including chords.
+        // Rank weights are order-equivalent to 2^level plus distinct positive
+        // perturbations smaller than 1/4. Those realizing costs form a metric;
+        // the integer ranks need not, and tie-breaking removes ultrametricity.
+        // Levels use original labels, before the independent label permutation.
+        // Keep hierarchy_levels as backbone metadata, unchanged across controls.
+        std::vector<std::vector<int>> level_ids(22); // n <= 2^22
+        for (const auto& [u, v, weight, id] : builder.edges) {
+            (void)weight;
+            int level = 0;
+            for (int differing = u ^ v; differing > 1; differing >>= 1) ++level;
+            level_ids[level].push_back(id);
+        }
+        int next_rank = 1;
+        for (auto& ids : level_ids) {
+            detail::shuffle(ids, weight_rng);
+            for (int id : ids) std::get<2>(builder.edges[id]) = next_rank++;
+        }
+    } else if (detail::global_random_weights(spec.family)) {
         std::vector<int> order(static_cast<std::size_t>(m));
         std::iota(order.begin(), order.end(), 0);
         detail::shuffle(order, weight_rng);

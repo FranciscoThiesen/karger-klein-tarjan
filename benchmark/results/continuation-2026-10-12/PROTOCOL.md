@@ -88,3 +88,27 @@ compiler/profile and platform. This remains an ordinary Apple M3 Max desktop
 experiment without controlled affinity/power state. The stronger baseline is
 the whole compacting continuation strategy; it differs from KKT in storage
 lifetimes, RNG, recursion and filtering, not only verifier instructions.
+
+## Labeled exploration extension after the initial screen
+
+The complete initial 24-case screen found no ratio at or below 0.90. The best
+hierarchies were density64 at n65,536 (ratios0.929 and0.935), improving from
+losses at n16,384. Before any fresh-seed confirmation, `extension.csv` screens
+n131,072 and262,144 at density64 for both original hierarchy shapes and new
+`distance_path`/`distance_tree` variants. It includes distance variants at65,536
+and original hierarchy density16 at262,144 as a lower-density control.
+It retains discovery seeds17,42, sampling0,1 and two repetitions; these are
+additional selection data, never holdout evidence. Order uses seed20261013.
+
+Distance variants keep the exact corresponding path/tree topology but rank
+**all** edges by floor(log2(u xor v)) before vertex relabeling, randomizing
+within each level. Shortcut edges may now enter the MST. This remains an
+engineered hierarchical model. Integer rank weights are order-equivalent to a
+tie-broken dyadic distance; they are not themselves claimed to obey the triangle
+inequality. The fraction of backbone edges in the certified MST is logged.
+
+Based on the observed size trend and the cost of 67-million-edge million-vertex
+density64 fixtures, the confirmation size menu now includes131,072 between the
+previously specified65,536 and262,144. Its exact manifest remains to be frozen
+before holdout. The same win threshold and fresh seed banks remain unchanged;
+all lower-size results and controls remain visible. No solver has changed.
