@@ -126,3 +126,11 @@ must match the previous generator exactly. It changes no measured solver code.
 A fresh complete run will use `extension_fast_timing.*`. Setup-stage durations
 are now logged separately to distinguish generation from reference certification;
 these diagnostics are not solver performance measurements.
+
+### Larger unchanged random controls
+
+Before holdout, `large_random_screen.csv` extends the unchanged legacy random
+fixtures to262,144 vertices at densities32 and128, with the same discovery
+seed banks and repetitions. This explicitly tests whether high-density ordinary
+random weights show a crossover too; it is additional exploration, never a
+confirmation run. The legacy generator is unchanged, including its setup cost.
