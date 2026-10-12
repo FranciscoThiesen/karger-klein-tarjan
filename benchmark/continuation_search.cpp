@@ -223,11 +223,19 @@ void run(const Options& config) {
         for (std::size_t g=0; g<config.graph_seeds.size(); ++g) {
             const auto graph_seed = config.graph_seeds[g];
             std::cerr << config.mode << ' ' << case_id(spec) << " graph_seed=" << graph_seed << '\n';
+            const auto setup_start = std::chrono::steady_clock::now();
             const auto graph = fixture(spec, graph_seed);
+            const auto generated = std::chrono::steady_clock::now();
             require(graph.size() == static_cast<std::size_t>(spec.density)*spec.n, "unexpected edge count");
             const auto oracle = kruskal(graph, spec.n);
             benchmark_validation::certify_mst(graph, oracle, spec.n);
             const auto expected = ids(oracle);
+            const auto certified = std::chrono::steady_clock::now();
+            std::cerr << "setup_generation_ms="
+                      << std::chrono::duration_cast<std::chrono::milliseconds>(generated-setup_start).count()
+                      << " setup_reference_and_certificate_ms="
+                      << std::chrono::duration_cast<std::chrono::milliseconds>(certified-generated).count()
+                      << '\n';
             if (spec.family != "legacy_random") {
                 const auto backbone_edges = std::count_if(expected.begin(), expected.end(),
                     [&](int id) { return id < spec.n - 1; });

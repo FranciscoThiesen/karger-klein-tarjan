@@ -9,6 +9,7 @@
 #include <random>
 #include <stdexcept>
 #include <string>
+#include <unordered_set>
 #include <vector>
 
 // Engineered continuation stress tests, not representative application graphs.
@@ -35,6 +36,31 @@ struct Fixture {
 };
 
 namespace detail {
+
+struct PairHash {
+    std::size_t operator()(std::uint64_t value) const noexcept {
+        // Mix both endpoints before a library selects the hash bucket. With an
+        // identity integer hash, power-of-two bucket counts can ignore the high
+        // endpoint bits and make untimed dense-graph generation very expensive.
+        value += UINT64_C(0x9e3779b97f4a7c15);
+        value = (value ^ (value >> 30)) * UINT64_C(0xbf58476d1ce4e5b9);
+        value = (value ^ (value >> 27)) * UINT64_C(0x94d049bb133111eb);
+        return static_cast<std::size_t>(value ^ (value >> 31));
+    }
+};
+
+struct Builder {
+    Graph edges;
+    std::unordered_set<std::uint64_t, PairHash> pairs;
+    bool add(int u, int v, int group = 0) {
+        if (u == v) return false;
+        if (u > v) std::swap(u, v);
+        const auto key = (static_cast<std::uint64_t>(u) << 32) | static_cast<unsigned int>(v);
+        if (!pairs.insert(key).second) return false;
+        edges.emplace_back(u, v, group, static_cast<int>(edges.size()));
+        return true;
+    }
+};
 
 inline bool tree_topology(const std::string& family) {
     return family == "hierarchical_tree" || family == "random_tree" || family == "distance_tree";
@@ -114,7 +140,7 @@ inline Fixture make_fixture(const Spec& spec, unsigned int seed) {
     std::mt19937 label_rng(seed ^ 0x9b05688cu);
     std::mt19937 order_rng(seed ^ 0x1f83d9abu);
 
-    benchmark_fixtures::Builder builder;
+    detail::Builder builder;
     builder.edges.reserve(static_cast<std::size_t>(m));
     builder.pairs.reserve(static_cast<std::size_t>(m));
     Fixture result;

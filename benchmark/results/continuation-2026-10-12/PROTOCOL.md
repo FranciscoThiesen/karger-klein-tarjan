@@ -112,3 +112,17 @@ density64 fixtures, the confirmation size menu now includes131,072 between the
 previously specified65,536 and262,144. Its exact manifest remains to be frozen
 before holdout. The same win threshold and fresh seed banks remain unchanged;
 all lower-size results and controls remain visible. No solver has changed.
+
+### Interrupted setup and equivalent generator repair
+
+The first extension attempt (`extension_timing.*`) was intentionally stopped
+with SIGTERM after unusually slow setup on its first large graph. It contains
+no complete timing rows and is excluded from all performance summaries; the
+failure metadata is retained. The continuation fixture used the older Builder's
+identity hash of packed endpoints with a power-of-two-sized table, which can
+cluster keys by their lower endpoint bits. The replacement mixes both endpoints
+in a fixture-local hash table; membership decisions, RNG draws and output order
+must match the previous generator exactly. It changes no measured solver code.
+A fresh complete run will use `extension_fast_timing.*`. Setup-stage durations
+are now logged separately to distinguish generation from reference certification;
+these diagnostics are not solver performance measurements.
