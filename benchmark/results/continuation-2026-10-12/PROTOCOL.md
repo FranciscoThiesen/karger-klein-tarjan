@@ -134,3 +134,15 @@ fixtures to262,144 vertices at densities32 and128, with the same discovery
 seed banks and repetitions. This explicitly tests whether high-density ordinary
 random weights show a crossover too; it is additional exploration, never a
 confirmation run. The legacy generator is unchanged, including its setup cost.
+
+### Million-vertex exploration at a fixed edge budget
+
+The density16 hierarchy is faster at262,144 than in the initial smaller screen,
+but its lead remains modest. Before any holdout, `million_screen.csv` tests both
+hierarchy backbones at524,288 and1,048,576 vertices with m=16n, plus the shuffled
+cheap-path control at1,048,576. This tests longer-lived residuals while keeping
+the maximum edge count at16,777,216, already reached by the density64 extension.
+Seeds and repetitions stay exploratory (graphs17,42; sampling0,1;2 repetitions,
+1 warmup); order uses seed20261014. This is adaptive discovery, with all outcomes
+retained. The confirmation size menu now includes524,288; exact sizes/density
+will be frozen before fresh seeds and cannot be selected from holdout outcomes.
