@@ -1,0 +1,39 @@
+work line_metric_n128_d4_p0 graph_seed=3037
+crossover_topology_attempts=1
+setup_generation_ms=0 setup_reference_and_certificate_ms=0
+work line_random_n128_d4_p0 graph_seed=3037
+crossover_topology_attempts=1
+setup_generation_ms=0 setup_reference_and_certificate_ms=0
+work grid2d_metric_n128_d4_p0 graph_seed=3037
+crossover_topology_attempts=1
+setup_generation_ms=0 setup_reference_and_certificate_ms=0
+work grid2d_random_n128_d4_p0 graph_seed=3037
+crossover_topology_attempts=1
+setup_generation_ms=0 setup_reference_and_certificate_ms=0
+work random_tree_n128_d4_p0 graph_seed=3037
+setup_generation_ms=0 setup_reference_and_certificate_ms=0
+certified_mst_backbone_edges=27 total=127
+work hierarchical_path_n128_d4_p0 graph_seed=3037
+setup_generation_ms=0 setup_reference_and_certificate_ms=0
+certified_mst_backbone_edges=127 total=127
+work gnm_random_n128_d16_p0 graph_seed=3037
+crossover_topology_attempts=1
+setup_generation_ms=0 setup_reference_and_certificate_ms=0
+        0.26 real         0.00 user         0.00 sys
+             2588672  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                 328  page reclaims
+                   1  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   0  voluntary context switches
+                  13  involuntary context switches
+            34935872  instructions retired
+            18467520  cycles elapsed
+             1966392  peak memory footprint

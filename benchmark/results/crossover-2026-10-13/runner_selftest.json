@@ -1,0 +1,64 @@
+{
+  "validation": "pass",
+  "scope": "fake processes only; no MST or performance runs",
+  "positive_checks": 1,
+  "negative_checks": 13,
+  "checks": [
+    {
+      "case": "complete fake capture and strict clock audit",
+      "status": "pass"
+    },
+    {
+      "case": "existing companion .csv",
+      "status": "rejected"
+    },
+    {
+      "case": "existing companion .log",
+      "status": "rejected"
+    },
+    {
+      "case": "existing companion .json",
+      "status": "rejected"
+    },
+    {
+      "case": "existing companion _clocks.json",
+      "status": "rejected"
+    },
+    {
+      "case": "non-CSV output .json",
+      "status": "rejected"
+    },
+    {
+      "case": "non-CSV output .log",
+      "status": "rejected"
+    },
+    {
+      "case": "non-CSV output .txt",
+      "status": "rejected"
+    },
+    {
+      "case": "nonzero child retains partial output/log/exit status",
+      "status": "rejected"
+    },
+    {
+      "case": "missing per-call clocks",
+      "status": "rejected"
+    },
+    {
+      "case": "source_changed",
+      "status": "rejected"
+    },
+    {
+      "case": "source_added",
+      "status": "rejected"
+    },
+    {
+      "case": "source_deleted",
+      "status": "rejected"
+    },
+    {
+      "case": "SIGTERM retains metadata and terminates child process group",
+      "status": "rejected"
+    }
+  ]
+}

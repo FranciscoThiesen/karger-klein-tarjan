@@ -1,0 +1,69 @@
+trace line_metric_n128_d4_p0 graph_seed=3037
+crossover_topology_attempts=1
+setup_generation_ms=0 setup_reference_and_certificate_ms=0
+component_moments_v1 {"case_id":"line_metric_n128_d4_p0","graph_seed":3037,"round":1,"n":128,"component_count":41,"sum_squared_sizes":446,"largest_component":6,"validation":"pass"}
+component_moments_v1 {"case_id":"line_metric_n128_d4_p0","graph_seed":3037,"round":2,"n":128,"component_count":12,"sum_squared_sizes":1538,"largest_component":17,"validation":"pass"}
+component_moments_v1 {"case_id":"line_metric_n128_d4_p0","graph_seed":3037,"round":3,"n":128,"component_count":3,"sum_squared_sizes":8174,"largest_component":85,"validation":"pass"}
+component_moments_v1 {"case_id":"line_metric_n128_d4_p0","graph_seed":3037,"round":4,"n":128,"component_count":1,"sum_squared_sizes":16384,"largest_component":128,"validation":"pass"}
+trace line_random_n128_d4_p0 graph_seed=3037
+crossover_topology_attempts=1
+setup_generation_ms=0 setup_reference_and_certificate_ms=0
+component_moments_v1 {"case_id":"line_random_n128_d4_p0","graph_seed":3037,"round":1,"n":128,"component_count":31,"sum_squared_sizes":662,"largest_component":9,"validation":"pass"}
+component_moments_v1 {"case_id":"line_random_n128_d4_p0","graph_seed":3037,"round":2,"n":128,"component_count":6,"sum_squared_sizes":3324,"largest_component":39,"validation":"pass"}
+component_moments_v1 {"case_id":"line_random_n128_d4_p0","graph_seed":3037,"round":3,"n":128,"component_count":3,"sum_squared_sizes":5878,"largest_component":51,"validation":"pass"}
+component_moments_v1 {"case_id":"line_random_n128_d4_p0","graph_seed":3037,"round":4,"n":128,"component_count":1,"sum_squared_sizes":16384,"largest_component":128,"validation":"pass"}
+trace grid2d_metric_n128_d4_p0 graph_seed=3037
+crossover_topology_attempts=1
+setup_generation_ms=0 setup_reference_and_certificate_ms=0
+component_moments_v1 {"case_id":"grid2d_metric_n128_d4_p0","graph_seed":3037,"round":1,"n":128,"component_count":40,"sum_squared_sizes":448,"largest_component":5,"validation":"pass"}
+component_moments_v1 {"case_id":"grid2d_metric_n128_d4_p0","graph_seed":3037,"round":2,"n":128,"component_count":12,"sum_squared_sizes":1580,"largest_component":19,"validation":"pass"}
+component_moments_v1 {"case_id":"grid2d_metric_n128_d4_p0","graph_seed":3037,"round":3,"n":128,"component_count":5,"sum_squared_sizes":3548,"largest_component":35,"validation":"pass"}
+component_moments_v1 {"case_id":"grid2d_metric_n128_d4_p0","graph_seed":3037,"round":4,"n":128,"component_count":2,"sum_squared_sizes":9992,"largest_component":94,"validation":"pass"}
+component_moments_v1 {"case_id":"grid2d_metric_n128_d4_p0","graph_seed":3037,"round":5,"n":128,"component_count":1,"sum_squared_sizes":16384,"largest_component":128,"validation":"pass"}
+trace grid2d_random_n128_d4_p0 graph_seed=3037
+crossover_topology_attempts=1
+setup_generation_ms=0 setup_reference_and_certificate_ms=0
+component_moments_v1 {"case_id":"grid2d_random_n128_d4_p0","graph_seed":3037,"round":1,"n":128,"component_count":39,"sum_squared_sizes":512,"largest_component":9,"validation":"pass"}
+component_moments_v1 {"case_id":"grid2d_random_n128_d4_p0","graph_seed":3037,"round":2,"n":128,"component_count":10,"sum_squared_sizes":2492,"largest_component":35,"validation":"pass"}
+component_moments_v1 {"case_id":"grid2d_random_n128_d4_p0","graph_seed":3037,"round":3,"n":128,"component_count":1,"sum_squared_sizes":16384,"largest_component":128,"validation":"pass"}
+trace random_tree_n128_d4_p0 graph_seed=3037
+setup_generation_ms=0 setup_reference_and_certificate_ms=0
+certified_mst_backbone_edges=27 total=127
+component_moments_v1 {"case_id":"random_tree_n128_d4_p0","graph_seed":3037,"round":1,"n":128,"component_count":30,"sum_squared_sizes":760,"largest_component":14,"validation":"pass"}
+component_moments_v1 {"case_id":"random_tree_n128_d4_p0","graph_seed":3037,"round":2,"n":128,"component_count":8,"sum_squared_sizes":2738,"largest_component":39,"validation":"pass"}
+component_moments_v1 {"case_id":"random_tree_n128_d4_p0","graph_seed":3037,"round":3,"n":128,"component_count":1,"sum_squared_sizes":16384,"largest_component":128,"validation":"pass"}
+trace hierarchical_path_n128_d4_p0 graph_seed=3037
+setup_generation_ms=0 setup_reference_and_certificate_ms=0
+certified_mst_backbone_edges=127 total=127
+component_moments_v1 {"case_id":"hierarchical_path_n128_d4_p0","graph_seed":3037,"round":1,"n":128,"component_count":64,"sum_squared_sizes":256,"largest_component":2,"validation":"pass"}
+component_moments_v1 {"case_id":"hierarchical_path_n128_d4_p0","graph_seed":3037,"round":2,"n":128,"component_count":32,"sum_squared_sizes":512,"largest_component":4,"validation":"pass"}
+component_moments_v1 {"case_id":"hierarchical_path_n128_d4_p0","graph_seed":3037,"round":3,"n":128,"component_count":16,"sum_squared_sizes":1024,"largest_component":8,"validation":"pass"}
+component_moments_v1 {"case_id":"hierarchical_path_n128_d4_p0","graph_seed":3037,"round":4,"n":128,"component_count":8,"sum_squared_sizes":2048,"largest_component":16,"validation":"pass"}
+component_moments_v1 {"case_id":"hierarchical_path_n128_d4_p0","graph_seed":3037,"round":5,"n":128,"component_count":4,"sum_squared_sizes":4096,"largest_component":32,"validation":"pass"}
+component_moments_v1 {"case_id":"hierarchical_path_n128_d4_p0","graph_seed":3037,"round":6,"n":128,"component_count":2,"sum_squared_sizes":8192,"largest_component":64,"validation":"pass"}
+component_moments_v1 {"case_id":"hierarchical_path_n128_d4_p0","graph_seed":3037,"round":7,"n":128,"component_count":1,"sum_squared_sizes":16384,"largest_component":128,"validation":"pass"}
+trace gnm_random_n128_d16_p0 graph_seed=3037
+crossover_topology_attempts=1
+setup_generation_ms=0 setup_reference_and_certificate_ms=0
+component_moments_v1 {"case_id":"gnm_random_n128_d16_p0","graph_seed":3037,"round":1,"n":128,"component_count":33,"sum_squared_sizes":680,"largest_component":12,"validation":"pass"}
+component_moments_v1 {"case_id":"gnm_random_n128_d16_p0","graph_seed":3037,"round":2,"n":128,"component_count":9,"sum_squared_sizes":2334,"largest_component":30,"validation":"pass"}
+component_moments_v1 {"case_id":"gnm_random_n128_d16_p0","graph_seed":3037,"round":3,"n":128,"component_count":3,"sum_squared_sizes":7942,"largest_component":83,"validation":"pass"}
+component_moments_v1 {"case_id":"gnm_random_n128_d16_p0","graph_seed":3037,"round":4,"n":128,"component_count":1,"sum_squared_sizes":16384,"largest_component":128,"validation":"pass"}
+        0.00 real         0.00 user         0.00 sys
+             2326528  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                 308  page reclaims
+                   1  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   0  voluntary context switches
+                   6  involuntary context switches
+            43581578  instructions retired
+            14153011  cycles elapsed
+             1720656  peak memory footprint

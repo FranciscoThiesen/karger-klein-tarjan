@@ -1,0 +1,73 @@
+{
+  "status": "pass",
+  "scope": "Small correctness/schedule/CLI smoke checks only, no performance claims",
+  "checks": [
+    {
+      "family": "line_metric",
+      "checked_rows": 20,
+      "validation": "pass"
+    },
+    {
+      "family": "grid2d_metric",
+      "checked_rows": 20,
+      "validation": "pass"
+    },
+    {
+      "family": "gnm_random",
+      "checked_rows": 20,
+      "validation": "pass"
+    },
+    {
+      "family": "hierarchical_path",
+      "checked_rows": 20,
+      "validation": "pass"
+    },
+    {
+      "invalid_arguments": [
+        "--repetitions",
+        "2"
+      ],
+      "exit_status": 1,
+      "stderr": "crossover baselines: repetitions must be a multiple of four in [4,100]"
+    },
+    {
+      "invalid_arguments": [
+        "--warmups",
+        "0"
+      ],
+      "exit_status": 1,
+      "stderr": "crossover baselines: warmups must be in [1,100]"
+    },
+    {
+      "invalid_arguments": [
+        "--n",
+        "127"
+      ],
+      "exit_status": 1,
+      "stderr": "crossover baselines: duplicate option: --n"
+    },
+    {
+      "invalid_arguments": [
+        "--unknown",
+        "1"
+      ],
+      "exit_status": 1,
+      "stderr": "crossover baselines: unknown option: --unknown"
+    },
+    {
+      "invalid_arguments": [
+        "--n"
+      ],
+      "exit_status": 1,
+      "stderr": "crossover baselines: duplicate option: --n"
+    },
+    {
+      "invalid_arguments": [
+        "--graph-seed",
+        "-1"
+      ],
+      "exit_status": 1,
+      "stderr": "crossover baselines: invalid unsigned integer: -1"
+    }
+  ]
+}

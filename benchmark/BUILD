@@ -2,7 +2,7 @@ load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library", "cc_test")
 
 cc_library(
     name = "fixtures",
-    hdrs = ["graph_fixtures.hpp", "extended_graph_fixtures.hpp", "common_graph_fixtures.hpp", "continuation_fixtures.hpp", "mst_certificate.hpp"],
+    hdrs = ["graph_fixtures.hpp", "extended_graph_fixtures.hpp", "common_graph_fixtures.hpp", "continuation_fixtures.hpp", "crossover_fixtures.hpp", "component_moments.hpp", "mst_certificate.hpp"],
     visibility = ["//visibility:public"],
 )
 
@@ -132,4 +132,19 @@ cc_test(
     srcs = ["continuation_test.cpp"],
     copts = ["-std=c++17"],
     deps = [":fixtures", "//kkt:kkt", "//kruskal:kruskal"],
+)
+
+cc_test(
+    name = "crossover_test",
+    srcs = ["crossover_test.cpp"],
+    copts = ["-std=c++17"],
+    deps = [":fixtures", "//kkt:kkt", "//kruskal:kruskal"],
+)
+
+cc_binary(
+    name = "crossover_baselines",
+    srcs = ["crossover_baselines.cpp"],
+    copts = ["-std=c++17"],
+    deps = [":fixtures", "//kkt:kkt", "//kruskal:kruskal", "//prim:prim", "//boruvka:boruvka"],
+    visibility = ["//visibility:public"],
 )

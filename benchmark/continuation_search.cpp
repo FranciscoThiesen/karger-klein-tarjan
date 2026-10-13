@@ -1,6 +1,8 @@
 // Paired discovery/confirmation of unchanged KKT versus its own production
 // contraction continued to completion. No solver dispatch uses fixture shape.
 #include "continuation_fixtures.hpp"
+#include "crossover_fixtures.hpp"
+#include "component_moments.hpp"
 #include "graph_fixtures.hpp"
 #include "mst_certificate.hpp"
 #include "work_metrics.hpp"
@@ -8,14 +10,18 @@
 #include "../kruskal/kruskal.hpp"
 
 #include <algorithm>
+#include <cerrno>
 #include <chrono>
 #include <cstdint>
 #include <fstream>
+#include <iomanip>
 #include <iostream>
 #include <limits>
 #include <sstream>
 #include <stdexcept>
 #include <string>
+#include <system_error>
+#include <time.h>
 #include <unordered_set>
 #include <utility>
 #include <vector>
@@ -102,6 +108,13 @@ Options options(int argc, char** argv) {
 using benchmark_continuation::case_id;
 
 Graph fixture(const Spec& spec, unsigned int seed) {
+    if (spec.family == "line_metric" || spec.family == "line_random" ||
+        spec.family == "grid2d_metric" || spec.family == "grid2d_random" || spec.family == "gnm_random") {
+        require(spec.intrusion_per_mille == 0, "geometric crossover fixtures require p=0");
+        auto generated = benchmark_crossover::make_fixture({spec.family, spec.n, spec.density}, seed);
+        std::cerr << "crossover_topology_attempts=" << generated.topology_attempts << '\n';
+        return std::move(generated.graph);
+    }
     if (spec.family == "legacy_random") {
         require(spec.intrusion_per_mille == 0 &&
                 (spec.density == 4 || spec.density == 32 || spec.density == 128),
@@ -163,6 +176,9 @@ struct Round {
     std::size_t selected_edges;
     int output_vertices;
     std::size_t output_edges;
+    // Kept only in the untimed trace instantiation, for an independent ledger
+    // over original vertices after the production contraction has completed.
+    std::vector<int> selected_ids;
 };
 
 // Identical continuation/output operations to contraction_ablation.cpp.
@@ -174,7 +190,7 @@ Ids compacting_boruvka(problem& input, std::vector<Round>* trace = nullptr) {
         selected_ids.insert(selected_ids.end(), selected.begin(), selected.end());
         if constexpr (record_trace) {
             trace->push_back({input.num_vertices, input.graph_edges.size(), selected.size(),
-                              reduced.num_vertices, reduced.graph_edges.size()});
+                              reduced.num_vertices, reduced.graph_edges.size(), std::move(selected)});
         }
         input = std::move(reduced);
     }
@@ -186,17 +202,49 @@ Ids compacting_boruvka(problem& input, std::vector<Round>* trace = nullptr) {
 }
 
 #ifndef KKT_ENABLE_WORK_STATS
+std::int64_t clock_nanoseconds(clockid_t clock, const char* name) {
+    timespec value{};
+    if (clock_gettime(clock, &value) != 0)
+        throw std::system_error(errno, std::generic_category(), name);
+    constexpr std::int64_t billion = 1000000000;
+    require(value.tv_sec >= 0 && value.tv_nsec >= 0 && value.tv_nsec < billion &&
+            value.tv_sec <= (std::numeric_limits<std::int64_t>::max() - value.tv_nsec) / billion,
+            std::string(name) + ": clock value outside nanosecond range");
+    return static_cast<std::int64_t>(value.tv_sec) * billion + value.tv_nsec;
+}
+
 std::int64_t measure(int algorithm, const Graph& graph, int n, unsigned int seed,
-                     const Ids& expected) {
+                     const Ids& expected, const std::string& case_name,
+                     unsigned int graph_seed, const char* phase, int repetition, int order) {
+    // These diagnostic clocks enclose the original steady-clock interval.
+    // Keep their reads and all logging outside the solver timing boundary.
+    const auto utc_start = clock_nanoseconds(CLOCK_REALTIME, "CLOCK_REALTIME");
+    const auto cpu_start = clock_nanoseconds(CLOCK_PROCESS_CPUTIME_ID, "CLOCK_PROCESS_CPUTIME_ID");
     const auto start = std::chrono::steady_clock::now();
     const auto result = [&] {
         problem input(n, graph);
         return algorithm == 0 ? kkt(input, seed) : compacting_boruvka<false>(input);
     }();
     const auto finish = std::chrono::steady_clock::now();
+    const auto cpu_finish = clock_nanoseconds(CLOCK_PROCESS_CPUTIME_ID, "CLOCK_PROCESS_CPUTIME_ID");
+    const auto utc_finish = clock_nanoseconds(CLOCK_REALTIME, "CLOCK_REALTIME");
     const auto elapsed = std::chrono::duration_cast<std::chrono::nanoseconds>(finish-start).count();
     require(result == expected, std::string(algorithms[algorithm]) + ": incorrect MST IDs");
     require(elapsed > 0, "nonpositive elapsed time");
+    require(cpu_finish >= cpu_start, "process CPU clock moved backward");
+    // Realtime may move backward after a wall-clock correction. Retain both
+    // values; the capture analyzer must report that rather than reject a row.
+    std::ostringstream clock_record;
+    clock_record << "call_clock_v1 {\"case_id\":" << std::quoted(case_name)
+              << ",\"graph_seed\":" << graph_seed << ",\"sampling_seed\":" << seed
+              << ",\"phase\":" << std::quoted(phase) << ",\"repetition\":" << repetition
+              << ",\"order\":" << order << ",\"algorithm\":" << std::quoted(algorithms[algorithm])
+              << ",\"utc_start_ns\":" << utc_start << ",\"utc_end_ns\":" << utc_finish
+              << ",\"process_cpu_start_ns\":" << cpu_start << ",\"process_cpu_end_ns\":" << cpu_finish
+              << ",\"process_cpu_elapsed_ns\":" << cpu_finish-cpu_start
+              << ",\"steady_elapsed_ns\":" << elapsed << ",\"validation\":\"pass\"}\n";
+    std::cerr << clock_record.str();
+    require(static_cast<bool>(std::cerr), "failed writing call clock record");
     return elapsed;
 }
 #endif
@@ -236,7 +284,9 @@ void run(const Options& config) {
                       << " setup_reference_and_certificate_ms="
                       << std::chrono::duration_cast<std::chrono::milliseconds>(certified-generated).count()
                       << '\n';
-            if (spec.family != "legacy_random") {
+            if (spec.family != "legacy_random" && spec.family != "line_metric" &&
+                spec.family != "line_random" && spec.family != "grid2d_metric" &&
+                spec.family != "grid2d_random" && spec.family != "gnm_random") {
                 const auto backbone_edges = std::count_if(expected.begin(), expected.end(),
                     [&](int id) { return id < spec.n - 1; });
                 std::cerr << "certified_mst_backbone_edges=" << backbone_edges
@@ -257,8 +307,18 @@ void run(const Options& config) {
                             r.output_edges < r.input_edges, "invalid contraction progress");
                 }
                 require(selected_total == expected.size(), "trace selected count mismatch");
+                benchmark_diagnostics::ComponentMoments moments(graph, spec.n);
                 for (std::size_t i=0; i<trace.size(); ++i) {
                     const auto& r = trace[i];
+                    moments.accept_selected(r.selected_ids);
+                    require(moments.count() == (r.output_vertices ? r.output_vertices : 1),
+                            "original-component ledger disagrees with contraction");
+                    std::cerr << "component_moments_v1 {\"case_id\":" << std::quoted(case_id(spec))
+                              << ",\"graph_seed\":" << graph_seed << ",\"round\":" << i+1
+                              << ",\"n\":" << spec.n << ",\"component_count\":" << moments.count()
+                              << ",\"sum_squared_sizes\":" << moments.sum_squares()
+                              << ",\"largest_component\":" << moments.max_size()
+                              << ",\"validation\":\"pass\"}\n";
                     prefix(spec, graph.size(), graph_seed, hash, topology_hash);
                     std::cout << ',' << i+1 << ',' << r.input_vertices << ',' << r.input_edges
                               << ',' << r.selected_edges << ',' << r.output_vertices << ',' << r.output_edges
@@ -297,11 +357,13 @@ void run(const Options& config) {
 #else
                     for (int w=0; w<config.warmups; ++w)
                         for (int order=0; order<2; ++order)
-                            measure((order+w+static_cast<int>(g+s))%2, graph, spec.n, seed, expected);
+                            measure((order+w+static_cast<int>(g+s))%2, graph, spec.n, seed, expected,
+                                    case_id(spec), graph_seed, "warmup", w, order);
                     for (int rep=0; rep<config.repetitions; ++rep) {
                         for (int order=0; order<2; ++order) {
                             const int a = (order+rep+static_cast<int>(g+s))%2;
-                            const auto elapsed = measure(a, graph, spec.n, seed, expected);
+                            const auto elapsed = measure(a, graph, spec.n, seed, expected,
+                                                         case_id(spec), graph_seed, "timed", rep, order);
                             prefix(spec, graph.size(), graph_seed, hash, topology_hash);
                             std::cout << ',' << seed << ',' << rep << ',' << order << ',' << config.warmups
                                       << ',' << algorithms[a] << ',' << elapsed << ",pass\n";

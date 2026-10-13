@@ -19,7 +19,8 @@ import sys
 
 ALGORITHMS = ("kkt", "compacting_boruvka")
 FAMILIES = ("hierarchical_path", "hierarchical_tree", "low_path", "random_path",
-            "random_tree", "distance_path", "distance_tree", "legacy_random")
+            "random_tree", "distance_path", "distance_tree", "legacy_random",
+            "line_metric", "line_random", "grid2d_metric", "grid2d_random", "gnm_random")
 MANIFEST_FIELDS = ("family", "n", "density", "intrusion_per_mille")
 PREFIX = ("case_id", "family", "n", "m", "density", "intrusion_per_mille",
           "graph_seed", "input_fingerprint", "topology_fingerprint")
@@ -81,6 +82,12 @@ def load_manifest(path):
             require(p == 0, f"{context}: random/distance weight modes require p=0")
         if family == "legacy_random":
             require(p == 0 and d in (4, 32, 128), f"{context}: invalid legacy control")
+        if family in ("line_metric", "line_random", "grid2d_metric", "grid2d_random"):
+            require(p == 0, f"{context}: crossover geometric models require p=0")
+        if family in ("grid2d_metric", "grid2d_random"):
+            require(d >= 2, f"{context}: grid backbone requires density at least two")
+        if family == "gnm_random":
+            require(p == 0 and d >= 16, f"{context}: connected G(n,m) requires d>=16,p=0")
         spec.update(m=m, case_id=case_id(spec))
         require(spec["case_id"] not in cases, f"{context}: duplicate manifest case")
         cases[spec["case_id"]] = spec
@@ -118,8 +125,13 @@ def check_fingerprints(records):
         weighted[key] = value
         # Different weight modes/noise levels share a topology. Legacy fixtures
         # use a different generator and must not be folded into these controls.
-        if row["family"] != "legacy_random":
-            kind = "tree" if row["family"] in ("hierarchical_tree", "random_tree", "distance_tree") else "path"
+        if row["family"] not in ("legacy_random", "gnm_random"):
+            if row["family"] in ("line_metric", "line_random"):
+                kind = "crossover_line"
+            elif row["family"] in ("grid2d_metric", "grid2d_random"):
+                kind = "crossover_grid2d"
+            else:
+                kind = "tree" if row["family"] in ("hierarchical_tree", "random_tree", "distance_tree") else "path"
             pair = kind, row["n"], row["density"], row["graph_seed"]
             require(pair not in topology or topology[pair] == row["topology_fingerprint"],
                     f"{pair}: paired weight controls have different topology/order fingerprints")

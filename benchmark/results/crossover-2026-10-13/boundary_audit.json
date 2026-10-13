@@ -1,0 +1,8 @@
+{
+  "baseline_revision": "6042d70",
+  "production_diff": "empty",
+  "original_steady_solver_body_identical": true,
+  "steady_solver_body_sha256": "b6afd4e8e93c676f8cf906ecf6518b31687106f77c5a5a550fba4b42017def31",
+  "compactor_timed_instantiation_unchanged": "Only change in compactor template is selected-ID capture inside if constexpr(record_trace); false timing instantiation retains previous logic.",
+  "new_diagnostics": "Outer UTC/process CPU envelopes log outside original timing; moments helper runs only after untimed production trace."
+}

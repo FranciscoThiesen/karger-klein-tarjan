@@ -83,15 +83,23 @@ $(BIN_DIR)/contraction_ablation: benchmark/contraction_ablation.cpp benchmark/co
 	@mkdir -p $(BIN_DIR)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -I. $(filter %.cpp %.o,$^) $(LDFLAGS) -o $@
 
-$(BIN_DIR)/continuation_search: benchmark/continuation_search.cpp benchmark/continuation_fixtures.hpp benchmark/graph_fixtures.hpp benchmark/mst_certificate.hpp benchmark/work_metrics.hpp $(OBJS)
+$(BIN_DIR)/continuation_search: benchmark/continuation_search.cpp benchmark/continuation_fixtures.hpp benchmark/crossover_fixtures.hpp benchmark/component_moments.hpp benchmark/graph_fixtures.hpp benchmark/mst_certificate.hpp benchmark/work_metrics.hpp $(OBJS)
 	@mkdir -p $(BIN_DIR)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -I. $(filter %.cpp %.o,$^) $(LDFLAGS) -o $@
 
-$(BIN_DIR)/continuation_search_work: benchmark/continuation_search.cpp benchmark/continuation_fixtures.hpp benchmark/graph_fixtures.hpp benchmark/mst_certificate.hpp benchmark/work_metrics.hpp $(WORK_OBJS)
+$(BIN_DIR)/continuation_search_work: benchmark/continuation_search.cpp benchmark/continuation_fixtures.hpp benchmark/crossover_fixtures.hpp benchmark/component_moments.hpp benchmark/graph_fixtures.hpp benchmark/mst_certificate.hpp benchmark/work_metrics.hpp $(WORK_OBJS)
 	@mkdir -p $(BIN_DIR)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -DKKT_ENABLE_WORK_STATS -I. $(filter %.cpp %.o,$^) $(LDFLAGS) -o $@
 
 $(BIN_DIR)/continuation_test: benchmark/continuation_test.cpp benchmark/continuation_fixtures.hpp benchmark/mst_certificate.hpp $(OBJS)
+	@mkdir -p $(BIN_DIR)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -I. $(filter %.cpp %.o,$^) $(LDFLAGS) -o $@
+
+$(BIN_DIR)/crossover_test: benchmark/crossover_test.cpp benchmark/crossover_fixtures.hpp benchmark/component_moments.hpp benchmark/continuation_fixtures.hpp benchmark/mst_certificate.hpp $(OBJS)
+	@mkdir -p $(BIN_DIR)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -I. $(filter %.cpp %.o,$^) $(LDFLAGS) -o $@
+
+$(BIN_DIR)/crossover_baselines: benchmark/crossover_baselines.cpp benchmark/crossover_fixtures.hpp benchmark/continuation_fixtures.hpp benchmark/mst_certificate.hpp $(OBJS)
 	@mkdir -p $(BIN_DIR)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -I. $(filter %.cpp %.o,$^) $(LDFLAGS) -o $@
 
