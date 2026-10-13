@@ -1,0 +1,99 @@
+"""Bounded malformed-capture checks; only temporary copies are modified."""
+import copy
+import csv
+import json
+from pathlib import Path
+import shutil
+import sys
+import tempfile
+
+ROOT = Path('/Users/random_person/Desktop/karger-klein-tarjan')
+sys.path.insert(0, str(ROOT / 'benchmark'))
+import analyze_crossover_baselines as analysis
+
+EVIDENCE = ROOT / 'benchmark/results/crossover-2026-10-13'
+SOURCE = EVIDENCE / 'classical_large_stack_timing.csv'
+STACK = EVIDENCE / 'large-stack-validation-512m/provenance.json'
+OUTPUT = EVIDENCE / 'classical-analysis'
+
+
+def csv_rows(path):
+    with path.open(newline='') as stream:
+        return list(csv.DictReader(stream))
+
+
+def write_rows(path, rows):
+    with path.open('w', newline='') as stream:
+        writer = csv.DictWriter(stream, fieldnames=analysis.capture.FIELDS)
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def check(name, mutate=None):
+    with tempfile.TemporaryDirectory(prefix='kkt-classical-check-') as temporary:
+        directory = Path(temporary)
+        target = directory / SOURCE.name
+        manifest = directory / 'classical.csv'
+        shutil.copyfile(SOURCE, target)
+        shutil.copyfile(EVIDENCE / 'classical.csv', manifest)
+        metadata = json.loads(SOURCE.with_suffix('.json').read_text())
+        metadata['manifest'] = str(manifest)
+        metadata['manifest_sha256'] = analysis.capture.sha(manifest)
+        folder = directory / (SOURCE.stem + '_cases')
+        folder.mkdir()
+        for item in metadata['captures']:
+            for field in ('csv', 'log'):
+                source = Path(item[field])
+                copied = folder / source.name
+                shutil.copyfile(source, copied)
+                item[field] = str(copied)
+        if mutate is not None:
+            mutate(target, metadata)
+        metadata['output_sha256'] = analysis.capture.sha(target)
+        target.with_suffix('.json').write_text(json.dumps(metadata))
+        try:
+            analysis.load(target, manifest, STACK)
+        except (ValueError, OSError, KeyError, TypeError) as error:
+            if mutate is None:
+                raise
+            return {'case': name, 'expected': 'reject', 'outcome': 'rejected', 'reason': str(error)}
+        if mutate is not None:
+            raise AssertionError(name + ' was accepted')
+        return {'case': name, 'expected': 'pass', 'outcome': 'pass'}
+
+
+def raw_mutation(callback):
+    def mutate(target, metadata):
+        item = metadata['captures'][0]
+        path = Path(item['csv'])
+        rows = csv_rows(path)
+        callback(rows)
+        write_rows(path, rows)
+        item['output_sha256'] = analysis.capture.sha(path)
+        write_rows(target, [row for capture in metadata['captures'] for row in csv_rows(Path(capture['csv']))])
+    return mutate
+
+
+checks = [check('complete temporary copy')]
+for name, mutate in (
+    ('boolean repetition count', lambda p,m: m.update(repetitions=True)),
+    ('wrong completed count', lambda p,m: m.update(checked_timed_rows=47)),
+    ('binary differs from stack validation', lambda p,m: m.update(binary_sha256='0'*64)),
+    ('altered log digest', lambda p,m: m['captures'][0].update(log_sha256='0'*64)),
+    ('combined CSV missing one call', lambda p,m: write_rows(p, csv_rows(p)[:-1])),
+    ('enclosing UTC ends before cases', lambda p,m: m.update(finished_utc=m['started_utc'])),
+    ('recorded median differs', lambda p,m: m['captures'][0]['timed_medians']['kkt'].update(elapsed_ns=1)),
+    ('recorded diagnostics differ', lambda p,m: m['call_diagnostics'][0].update(excluded=True)),
+    ('missing warmup', raw_mutation(lambda rows: rows.pop(0))),
+    ('incorrect algorithm order', raw_mutation(lambda rows: rows[4].update(algorithm='prim'))),
+    ('inconsistent CPU duration', raw_mutation(lambda rows: rows[4].update(process_cpu_elapsed_ns=str(int(rows[4]['process_cpu_elapsed_ns'])+1)))),
+    ('different graph fingerprint', raw_mutation(lambda rows: [r.update(input_fingerprint=str(int(r['input_fingerprint'])+1)) for r in rows])),
+):
+    checks.append(check(name, mutate))
+record = {'schema': 'classical_analysis_validation_checks_v1', 'validation': 'pass',
+          'positive_checks': 1, 'negative_checks': 12, 'native_processes': 0,
+          'raw_evidence_modified': False, 'analysis_script_sha256': analysis.capture.sha(analysis.__file__),
+          'check_script_sha256': analysis.capture.sha(__file__), 'checks': checks}
+(OUTPUT / 'validation_checks.json').write_text(json.dumps(record, indent=2) + '\n')
+shutil.copyfile(__file__, OUTPUT / 'validation_checks.py.txt')
+print('Passed 1 complete-copy and 12 malformed-capture checks; raw evidence untouched')

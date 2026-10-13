@@ -1,0 +1,113 @@
+{
+  "schema": "crossover_figures_v1",
+  "validation": "pass",
+  "aggregation": "Ratios pair algorithm times within each trial, then take medians over repetitions, sampling seeds, and graph seeds. Algorithm costs use the same hierarchy separately, divided by the original input edge count m. A ratio of the displayed algorithm medians need not equal the paired-ratio median. Thick capped ranges span graph-level medians; thin ranges span all individual paired trials. Neither range is a confidence interval. Repeated timing and sampling seeds are not additional graph draws. Campaigns remain separate.",
+  "inputs": {
+    "comparison_metadata": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/crossover-2026-10-13/all-screens-comparison/comparison_inputs.json",
+    "comparison_metadata_sha256": "d18b491dd4e71bb892d802bfbe2e0b8e59a698e2ebac537e768fa8b90960560e",
+    "config": {
+      "path": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/crossover-2026-10-13/all_screens_comparison.json",
+      "sha256": "735fc6538e2a786baa25e5fc397a1a67a6d977965e40ec294cdaa1c5c78f6969"
+    },
+    "selection": null,
+    "verified_table_sha256": {
+      "wall_case_summary.csv": "918b8cb811616a2383d4df231857f2d914af0d45306c06006ccbaf8350d7af22",
+      "wall_graph_summary.csv": "3a66f0b475b4173cba774df541b5da18b8c84a606cc0ad22532e93f12ff4b957",
+      "wall_paired_pairs.csv": "b41a7c8e96ad7b1f4c07236164672e6cdea4fb6481cf4bbb7f60387a184528c7",
+      "cpu_case_summary.csv": "c9a7036af731fb0ece4c9a9bacba66ac752b46736eb848162acf087b41d2212b",
+      "cpu_graph_summary.csv": "1345e3876297da77967d9044577b1bc56b4cbd06ed1a237ba186ad548c9b8a60",
+      "cpu_paired_pairs.csv": "08b1beb6b54175efcbbb1bd357e99255259ee23f8002bdc8c0f872d5e7018abc",
+      "call_clocks.csv": "4cab8512ddcb376d8222d9df1533b12e1a39d78881de85114bd43fe98b103472"
+    },
+    "recorded_comparison_source_sha256": "4344aace383cea81bdd6e18caa8db39057fac2ce942a479c4892f4fcf1bc0bdc",
+    "current_validator_source_sha256": {
+      "compare_crossover.py": "4344aace383cea81bdd6e18caa8db39057fac2ce942a479c4892f4fcf1bc0bdc",
+      "analyze_continuation.py": "7a0afa5fe802516cb5ec27a7d567a0875c66807aa4a04ce0ff752f0bc31b9168",
+      "compare_continuation.py": "a3e4d5fa2d92c9c08819bc9d82f3d5c8cab083fa54e73ec3f5157f8fcaa2bb07",
+      "crossover_clocks.py": "725d469933eaf5ead32a38bf52b9f32e46a7ee3d4e386777c257c1ab3929fc0b"
+    }
+  },
+  "figure_script_sha256": "87316e886b3cd6d0f1108efc50011120c6c1890a983e75a675f896f577ecfdf2",
+  "rows_removed": 0,
+  "rows_adjusted": 0,
+  "plotted_case_campaigns_per_metric": 27,
+  "point_rows": 54,
+  "main_definition": "Five initial families and the separately labeled wide-gap line precision ablation at m/n16,p0; every other case appears in controls/anchors. All cases also appear in the appendix.",
+  "precision_ablation": "The wide-gap line is a precision ablation: its gaps are uniform integers from 1 to 2\u00b3\u00b2, versus 1 to 1,024 for the original line. At matched size, density and graph seed, topology, edge IDs, labels and input order agree, but coordinates and distance ranks differ. The random-rank line uses the original narrow-gap geometry. Both gap alphabets are fixed and finite; these finite-size curves do not establish an asymptotic crossover.",
+  "campaigns": [
+    {
+      "name": "discovery",
+      "role": "screen",
+      "case_count": 19,
+      "graph_seeds": [
+        3037
+      ],
+      "sampling_seeds": [
+        101
+      ],
+      "repetitions": 2,
+      "warmups": 1,
+      "flagged_calls": 0
+    },
+    {
+      "name": "extension",
+      "role": "screen",
+      "case_count": 3,
+      "graph_seeds": [
+        3037
+      ],
+      "sampling_seeds": [
+        101
+      ],
+      "repetitions": 2,
+      "warmups": 1,
+      "flagged_calls": 0
+    },
+    {
+      "name": "precision",
+      "role": "screen",
+      "case_count": 5,
+      "graph_seeds": [
+        3037
+      ],
+      "sampling_seeds": [
+        101
+      ],
+      "repetitions": 2,
+      "warmups": 1,
+      "flagged_calls": 0
+    }
+  ],
+  "figures": [
+    "crossover_ratios_wall.png",
+    "crossover_ratios_wall.svg",
+    "crossover_ratios_wall.pdf",
+    "crossover_cost_per_edge_wall.png",
+    "crossover_cost_per_edge_wall.svg",
+    "crossover_cost_per_edge_wall.pdf",
+    "crossover_controls_wall.png",
+    "crossover_controls_wall.svg",
+    "crossover_controls_wall.pdf",
+    "crossover_all_cases_wall_1.png",
+    "crossover_all_cases_wall_1.svg",
+    "crossover_all_cases_wall_1.pdf",
+    "crossover_all_cases_wall_2.png",
+    "crossover_all_cases_wall_2.svg",
+    "crossover_all_cases_wall_2.pdf",
+    "crossover_ratios_cpu.png",
+    "crossover_ratios_cpu.svg",
+    "crossover_ratios_cpu.pdf",
+    "crossover_cost_per_edge_cpu.png",
+    "crossover_cost_per_edge_cpu.svg",
+    "crossover_cost_per_edge_cpu.pdf",
+    "crossover_controls_cpu.png",
+    "crossover_controls_cpu.svg",
+    "crossover_controls_cpu.pdf",
+    "crossover_all_cases_cpu_1.png",
+    "crossover_all_cases_cpu_1.svg",
+    "crossover_all_cases_cpu_1.pdf",
+    "crossover_all_cases_cpu_2.png",
+    "crossover_all_cases_cpu_2.svg",
+    "crossover_all_cases_cpu_2.pdf"
+  ]
+}

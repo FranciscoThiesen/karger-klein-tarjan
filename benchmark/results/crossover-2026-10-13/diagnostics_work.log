@@ -1,0 +1,48 @@
+work line_metric_n1048576_d16_p0 graph_seed=3037
+crossover_topology_attempts=1
+setup_generation_ms=5619 setup_reference_and_certificate_ms=13726
+work line_wide_metric_n1048576_d16_p0 graph_seed=3037
+crossover_topology_attempts=1
+setup_generation_ms=5543 setup_reference_and_certificate_ms=13808
+work line_random_n1048576_d16_p0 graph_seed=3037
+crossover_topology_attempts=1
+setup_generation_ms=3969 setup_reference_and_certificate_ms=9844
+work grid2d_metric_n1048576_d16_p0 graph_seed=3037
+crossover_topology_attempts=1
+setup_generation_ms=5359 setup_reference_and_certificate_ms=13245
+work grid2d_random_n1048576_d16_p0 graph_seed=3037
+crossover_topology_attempts=1
+setup_generation_ms=3996 setup_reference_and_certificate_ms=9836
+work gnm_random_n1048576_d16_p0 graph_seed=3037
+crossover_topology_attempts=1
+setup_generation_ms=4039 setup_reference_and_certificate_ms=9773
+work hierarchical_path_n1048576_d16_p0 graph_seed=3037
+setup_generation_ms=4130 setup_reference_and_certificate_ms=13856
+certified_mst_backbone_edges=1048575 total=1048575
+work line_metric_n8388608_d16_p0 graph_seed=3037
+crossover_topology_attempts=1
+setup_generation_ms=51985 setup_reference_and_certificate_ms=191284
+work line_wide_metric_n8388608_d16_p0 graph_seed=3037
+crossover_topology_attempts=1
+setup_generation_ms=50816 setup_reference_and_certificate_ms=190742
+work hierarchical_path_n4194304_d16_p0 graph_seed=3037
+setup_generation_ms=16570 setup_reference_and_certificate_ms=63402
+certified_mst_backbone_edges=4194303 total=4194303
+     1082.10 real      1070.40 user        10.03 sys
+         24679497728  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+             4975862  page reclaims
+                   1  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   1  voluntary context switches
+               76310  involuntary context switches
+       1846917571478  instructions retired
+       3976709024072  cycles elapsed
+         20147603360  peak memory footprint

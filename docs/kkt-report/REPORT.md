@@ -3,6 +3,14 @@
 **Implementation archaeology, measured scaling, and graph structure**  
 Francisco Thiesen's Karger–Klein–Tarjan repository · 10–11 October 2026
 
+**Follow-up, 13 October:** the [held-out hierarchy study](../../benchmark/results/continuation-2026-10-12/README.md)
+subsequently found repeatable KKT gains over compacting Borůvka. The
+[larger-instance study](../../benchmark/results/crossover-2026-10-13/README.md)
+extends the search to 134 million edges, explains the favorable merge structure,
+and retains the classical-baseline losses. The measurements and conclusions
+below describe the earlier experiment; its HTML/PDF companions remain that
+historical edition.
+
 This report asks three distinct questions: whether the original implementation faithfully realized KKT's local complexity bounds; whether the current implementation *measures* like linear time; and which graph structures make it competitive in practice. The answers come from source inspection, certified benchmark outputs, separate work counters, two complete new timing campaigns, and a controlled comparison with repeated compacting Borůvka steps.
 
 The main document is this Markdown file. The [HTML edition](report.html) adds a fully offline, interactive 3D graph explorer. The [standalone explorer](graph-explorer.html) exposes actual contraction and filtering results for seven complete small graphs. A paginated companion checks the requested 40-page limit.

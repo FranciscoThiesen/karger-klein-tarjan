@@ -1,0 +1,89 @@
+{
+  "schema": "classical_analysis_validation_checks_v1",
+  "validation": "pass",
+  "positive_checks": 1,
+  "negative_checks": 12,
+  "native_processes": 0,
+  "raw_evidence_modified": false,
+  "analysis_script_sha256": "7c550715b1c3aef9d3732695c0491bf98c9cfe792dd3911fc6fd08f5d69f6801",
+  "check_script_sha256": "ac4de38f0c3be55aebd5422024026e3d429fad139794679848a74578428a2349",
+  "checks": [
+    {
+      "case": "complete temporary copy",
+      "expected": "pass",
+      "outcome": "pass"
+    },
+    {
+      "case": "boolean repetition count",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "classical capture: incorrect repetitions"
+    },
+    {
+      "case": "wrong completed count",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "classical capture: incorrect checked_timed_rows"
+    },
+    {
+      "case": "binary differs from stack validation",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "capture binary/source differs from the validated large-stack profile"
+    },
+    {
+      "case": "altered log digest",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "hierarchical_path_n1048576_d16_p0: file hash mismatch: /var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/kkt-classical-check-iz94t913/classical_large_stack_timing_cases/01_hierarchical_path_n1048576_d16_p0.log"
+    },
+    {
+      "case": "combined CSV missing one call",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "combined CSV differs from complete ordered per-case captures"
+    },
+    {
+      "case": "enclosing UTC ends before cases",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "capture: invalid enclosing UTC interval"
+    },
+    {
+      "case": "recorded median differs",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "wrapper medians differ from raw observations"
+    },
+    {
+      "case": "recorded diagnostics differ",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "wrapper diagnostic records differ from raw clocks"
+    },
+    {
+      "case": "missing warmup",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "incomplete selected-case warmup/timing matrix"
+    },
+    {
+      "case": "incorrect algorithm order",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "duplicate, missing or incorrectly ordered classical measurement"
+    },
+    {
+      "case": "inconsistent CPU duration",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/kkt-classical-check-3phuwtle/classical_large_stack_timing_cases/01_hierarchical_path_n1048576_d16_p0.csv:6: invalid steady/process-CPU duration or clock endpoint"
+    },
+    {
+      "case": "different graph fingerprint",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "selected-case input differs from the reference pilot"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "validation": "pass",
+  "independent_path_cases": 3297,
+  "independent_transition_checks": 6360,
+  "small_graphs": 2,
+  "small_stages": 8,
+  "compilation": {
+    "compile_command": [
+      "/usr/bin/clang++",
+      "-std=c++17",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-pedantic",
+      "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/kkt-gap-test-gr7oo7i0/line_gap_diagnostic.cpp",
+      "-o",
+      "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/kkt-gap-test-gr7oo7i0/line_gap_diagnostic",
+      "-isysroot",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk"
+    ],
+    "compile_stderr": "",
+    "embedded_cpp_sha256": "716fabf3db100770aec054429988db8760e8eb0abf2a1f318dd93973561ff1b8",
+    "binary_sha256": "5b24c300f9693ec9f811c81613a5a382294b77d2fd06d3299fdfe254662d7a0c",
+    "compiler_version": "Apple clang version 15.0.0 (clang-1500.3.9.4)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n"
+  },
+  "scope": "Independent per-vertex minimum-edge/DSU oracle versus local-maximum path transitions."
+}

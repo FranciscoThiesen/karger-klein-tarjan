@@ -54,10 +54,25 @@ It preserves random-control losses and the desktop power-state limitations.
 It does not show that KKT is faster than every practical MST implementation,
 or that all large graph families eventually favor this implementation.
 
-Nor did KKT's reputation begin with this repository. The primary
-[Bazlamaçcı–Hindi empirical study](https://doi.org/10.1016/S0305-0548(00)00007-1)
-predates the blog and reports practical concerns about more complex MST
-algorithms in its own implementation/hardware setting. The later
+The completed [classical adjunct](classical-analysis/report.md) gives a direct
+negative result: KKT loses to both Kruskal and the original public Borůvka
+implementation in all four trials of each of three selected inputs (a
+million-vertex hierarchy, four-million-vertex geometric line and million-vertex
+geometric grid). The ordering holds for elapsed and process-CPU time. This is
+a separate campaign with preserved public API boundaries and a shared
+[512 MiB stack profile](CLASSICAL_STACK_EXTENSION.md), needed by original
+Borůvka's recursive traversal; the solver sources and executable code bytes
+are unchanged. Wins over the compactor therefore must not be described as
+wins over this original Borůvka implementation or the classical alternatives.
+
+Published KKT implementation experiments predate this repository.
+[Bazlamaçcı and Hindi (2001)](https://doi.org/10.1016/S0305-0548(00)00007-1)
+compared a Pascal KKT implementation with classical MST algorithms on an HP735
+UNIX workstation and found it impractical for their tested instances. Their
+[documented test range](https://open.metu.edu.tr/handle/11511/54393) reached
+16,384 vertices and 524,288 edges. This concerns their implementation and
+workloads, not a universal crossover threshold or a literature-wide consensus.
+The later
 [Filter-Kruskal paper](https://ae.iti.kit.edu/documents/teaching/algorithm-engineering/ss22/fkruskal.pdf)
 develops a different practical filtering strategy. A successful filtering
 algorithm is not automatically evidence about the constants of this KKT code.

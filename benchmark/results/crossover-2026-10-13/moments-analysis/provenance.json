@@ -1,0 +1,66 @@
+{
+  "validation": "pass",
+  "case_count": 10,
+  "graph_count": 10,
+  "graph_seeds": [
+    3037
+  ],
+  "trace_stages": 124,
+  "derived_stages_including_zero": 134,
+  "description": "Untimed original-vertex component moments reconstructed independently from selected original edge IDs. Curves retain each graph draw. Summary means weight graph seeds equally; ranges are observed ranges, not confidence intervals. Stage zero is the original graph; stage r follows r contractions. The final original component has size n although the production quotient is empty. These counters do not predict elapsed time.",
+  "clock_validation": "Not performed; use crossover_clocks.py for timing logs.",
+  "inputs": {
+    "trace_csv": {
+      "path": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/crossover-2026-10-13/diagnostics_trace.csv",
+      "sha256": "43b2b979ccef5efa97da286c08acbc8ee5cee3d52d0e9fa8c77ddf35fd064ae1"
+    },
+    "log": {
+      "path": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/crossover-2026-10-13/diagnostics_trace.log",
+      "sha256": "e1376f2fa69723816ee890d8f7d502c3681f54a765eeff6f8aa951d012cfc103"
+    },
+    "manifest": {
+      "path": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/crossover-2026-10-13/diagnostics.csv",
+      "sha256": "2bbc7dd0cadfc6cc43ca8d18fd55cf9729b2a18003618c515ee7bafc924107b5"
+    }
+  },
+  "source_sha256": "e02b913e417f1ba276d4ef31afc35b2853f8a78ce5d80998543ee63e6574bb19",
+  "trace_loader_sha256": "7a0afa5fe802516cb5ec27a7d567a0875c66807aa4a04ce0ff752f0bc31b9168",
+  "figures": [
+    "edge_retention_n1048576_d16_p0.png",
+    "edge_retention_n1048576_d16_p0.svg",
+    "edge_retention_n1048576_d16_p0.pdf",
+    "effective_components_n1048576_d16_p0.png",
+    "effective_components_n1048576_d16_p0.svg",
+    "effective_components_n1048576_d16_p0.pdf",
+    "component_balance_n1048576_d16_p0.png",
+    "component_balance_n1048576_d16_p0.svg",
+    "component_balance_n1048576_d16_p0.pdf",
+    "edge_volume_n1048576_d16_p0.png",
+    "edge_volume_n1048576_d16_p0.svg",
+    "edge_volume_n1048576_d16_p0.pdf",
+    "edge_retention_n4194304_d16_p0.png",
+    "edge_retention_n4194304_d16_p0.svg",
+    "edge_retention_n4194304_d16_p0.pdf",
+    "effective_components_n4194304_d16_p0.png",
+    "effective_components_n4194304_d16_p0.svg",
+    "effective_components_n4194304_d16_p0.pdf",
+    "component_balance_n4194304_d16_p0.png",
+    "component_balance_n4194304_d16_p0.svg",
+    "component_balance_n4194304_d16_p0.pdf",
+    "edge_volume_n4194304_d16_p0.png",
+    "edge_volume_n4194304_d16_p0.svg",
+    "edge_volume_n4194304_d16_p0.pdf",
+    "edge_retention_n8388608_d16_p0.png",
+    "edge_retention_n8388608_d16_p0.svg",
+    "edge_retention_n8388608_d16_p0.pdf",
+    "effective_components_n8388608_d16_p0.png",
+    "effective_components_n8388608_d16_p0.svg",
+    "effective_components_n8388608_d16_p0.pdf",
+    "component_balance_n8388608_d16_p0.png",
+    "component_balance_n8388608_d16_p0.svg",
+    "component_balance_n8388608_d16_p0.pdf",
+    "edge_volume_n8388608_d16_p0.png",
+    "edge_volume_n8388608_d16_p0.svg",
+    "edge_volume_n8388608_d16_p0.pdf"
+  ]
+}

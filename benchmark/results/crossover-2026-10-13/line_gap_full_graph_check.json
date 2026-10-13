@@ -1,0 +1,51 @@
+{
+  "schema": "line_gap_full_graph_check_v1",
+  "validation": "pass",
+  "scope": "Exact agreement of counts, second moments, maxima and per-round selected counts; no runtime claim.",
+  "matched_graphs": [
+    {
+      "case_id": "line_metric_n1048576_d16_p0",
+      "graph_seed": 3037,
+      "stages": 9,
+      "input_fingerprint": 11678730453686034690,
+      "topology_fingerprint": 846266750802760537
+    },
+    {
+      "case_id": "line_wide_metric_n1048576_d16_p0",
+      "graph_seed": 3037,
+      "stages": 13,
+      "input_fingerprint": 122867285728357046,
+      "topology_fingerprint": 846266750802760537
+    },
+    {
+      "case_id": "line_metric_n8388608_d16_p0",
+      "graph_seed": 3037,
+      "stages": 10,
+      "input_fingerprint": 5880005698563722059,
+      "topology_fingerprint": 9274295983217888771
+    },
+    {
+      "case_id": "line_wide_metric_n8388608_d16_p0",
+      "graph_seed": 3037,
+      "stages": 15,
+      "input_fingerprint": 5109506227380166615,
+      "topology_fingerprint": 9274295983217888771
+    }
+  ],
+  "unmatched_full_graph_controls": 6,
+  "simulation_metadata": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/crossover-2026-10-13/line_gap_stages.json",
+  "simulation_metadata_sha256": "edc687874b4539c2b61a699265fc34bd206a5ade2a95f06243fd710928febe65",
+  "simulation_log": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/crossover-2026-10-13/line_gap_stages.log",
+  "simulation_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "diagnostics_provenance": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/crossover-2026-10-13/diagnostics-analysis/provenance.json",
+  "diagnostics_provenance_sha256": "d2113e7f044adbac4f3f07fe3632cd3b48ebf1b325de24aa53b1f7fd232055d6",
+  "script_sha256": "70a64811313b1a79fc7f3194b99894dea259941c24327cc69040b33daac85a30",
+  "simulation_csv": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/crossover-2026-10-13/line_gap_stages.csv",
+  "simulation_csv_sha256": "3df5cd1be4c568b60ecf78d84c4629ff0d3d73f5755d33f3c6a7360501524284",
+  "trace_csv": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/crossover-2026-10-13/diagnostics_trace.csv",
+  "trace_csv_sha256": "43b2b979ccef5efa97da286c08acbc8ee5cee3d52d0e9fa8c77ddf35fd064ae1",
+  "trace_log": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/crossover-2026-10-13/diagnostics_trace.log",
+  "trace_log_sha256": "e1376f2fa69723816ee890d8f7d502c3681f54a765eeff6f8aa951d012cfc103",
+  "manifest": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/crossover-2026-10-13/diagnostics.csv",
+  "manifest_sha256": "2bbc7dd0cadfc6cc43ca8d18fd55cf9729b2a18003618c515ee7bafc924107b5"
+}

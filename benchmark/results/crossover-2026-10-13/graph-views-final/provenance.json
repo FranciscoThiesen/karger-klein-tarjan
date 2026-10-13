@@ -1,0 +1,45 @@
+{
+  "reused_export": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/crossover-2026-10-13/graph-views/graph_data.json",
+  "reused_provenance_sha256": "58230abcda36c9bdeddc1847fd811e48e240c25b2e6e911ff9d851628c66bb4d",
+  "native_checks": "Reused archived certified export; native producer was not rerun",
+  "schema": "crossover_graph_views_provenance_v1",
+  "validation": "pass",
+  "script_sha256": "a4f64fc3a9a99c333b9a94e9f0dc14a74da43851b5d563fe349b772cdcd5c71a",
+  "data_sha256": "c0b8ecb2b86bcfbe7b52f4f1e947ad7368f93d87b959498b84b31ecfdd10428a",
+  "python": "3.9.6",
+  "families": [
+    "line_metric",
+    "line_wide_metric",
+    "line_random",
+    "grid2d_metric",
+    "grid2d_random"
+  ],
+  "n": 128,
+  "density": 4,
+  "graph_seed": 3037,
+  "kkt_seed": 101,
+  "edge_columns": [
+    "labeled_u",
+    "labeled_v",
+    "weight_rank",
+    "original_edge_id",
+    "original_u",
+    "original_v"
+  ],
+  "residual_edge_columns": [
+    "quotient_u",
+    "quotient_v",
+    "weight_rank",
+    "original_edge_id"
+  ],
+  "validation_scope": "Native independent MST certificate plus production KKT exact IDs; independent C++ and Python selected-ID ledgers, Python quotient minimum-edge and geometry/rank checks. No performance measurements.",
+  "figures": [
+    "graph_views.png",
+    "graph_views.svg"
+  ],
+  "matplotlib_version": "3.9.4",
+  "figure_sha256": {
+    "graph_views.png": "3f56c574b33a19e92c26d6830567e4ee4e710e06c5fce9668b8e795f415d2b28",
+    "graph_views.svg": "4bbad52ad2ecae3bd416ed8667e67317599c9f5b5dc22211d1c2618d920aff33"
+  }
+}

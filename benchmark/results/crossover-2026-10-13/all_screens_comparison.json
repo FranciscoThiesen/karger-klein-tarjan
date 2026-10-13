@@ -1,0 +1,50 @@
+{
+  "schema": "crossover_comparison_v1",
+  "campaigns": [
+    {
+      "name": "discovery",
+      "role": "screen",
+      "manifest": "discovery.csv",
+      "timing_csv": "discovery_timing.csv",
+      "timing_metadata": "discovery_timing.json",
+      "graph_seeds": [
+        3037
+      ],
+      "sampling_seeds": [
+        101
+      ],
+      "repetitions": 2,
+      "warmups": 1
+    },
+    {
+      "name": "extension",
+      "role": "screen",
+      "manifest": "extension.csv",
+      "timing_csv": "extension_timing.csv",
+      "timing_metadata": "extension_timing.json",
+      "graph_seeds": [
+        3037
+      ],
+      "sampling_seeds": [
+        101
+      ],
+      "repetitions": 2,
+      "warmups": 1
+    },
+    {
+      "name": "precision",
+      "role": "screen",
+      "manifest": "precision.csv",
+      "timing_csv": "precision_timing.csv",
+      "timing_metadata": "precision_timing.json",
+      "graph_seeds": [
+        3037
+      ],
+      "sampling_seeds": [
+        101
+      ],
+      "repetitions": 2,
+      "warmups": 1
+    }
+  ]
+}

@@ -63,6 +63,13 @@ unchanged. The report retains ordinary random-graph losses, shows how cheap
 shortcut perturbations remove the advantage, and documents desktop power-state
 interruptions in the timing campaigns.
 
+The [larger-instance and mechanism study](benchmark/results/crossover-2026-10-13/README.md)
+extends the search to 8.4 million vertices and 134 million edges. The hierarchy
+still favors KKT over compaction at four million vertices; geometric and random
+families show smaller, inconsistent gains. The report explains the hierarchy's
+repeated edge scans, retains the failed baseline stack run, and shows that
+Kruskal and original Borůvka win the three selected classical comparisons.
+
 The [latest implementation investigation](benchmark/results/practical-2026-10-10/README.md)
 records six accepted optimizations, a rejected experiment, fresh complexity
 diagnostics, and repeated comparisons with Kruskal, Prim, and Borůvka.

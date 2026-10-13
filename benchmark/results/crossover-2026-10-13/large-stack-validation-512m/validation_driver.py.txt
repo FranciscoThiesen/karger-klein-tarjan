@@ -1,0 +1,169 @@
+import datetime
+import hashlib
+import json
+from pathlib import Path
+import struct
+import subprocess
+import sys
+import time
+
+root = Path('/Users/random_person/Desktop/karger-klein-tarjan')
+out = root/'benchmark/results/crossover-2026-10-13/large-stack-validation-512m'
+out.mkdir(parents=True, exist_ok=False)
+scratch = Path(__file__).parent
+original = root/'bin/crossover_baselines'
+large = root/'bin/large_stack/crossover_baselines'
+large.parent.mkdir(parents=True, exist_ok=True)
+assert not large.exists(), 'Refusing to overwrite an existing large-stack binary'
+
+def sha(path):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+def inventory():
+    return {str(p.relative_to(root)):sha(p) for pattern in ('*/*.cpp','*/*.hpp')
+            for p in sorted(root.glob(pattern))}
+
+info = {'schema':'classical_large_stack_validation_v1', 'validation':'running',
+        'started_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),
+        'scope':'Correctness and executable-code identity only; no performance observations.',
+        'requested_stack_bytes':1<<29,'initial_1GiB_attempt':'../large-stack-validation/provenance.json','adjustment':'Apple arm64 linker rejected1GiB; using its512MiB maximum, twice the64-byte*n worst-depth product','original_binary':str(original),
+        'original_binary_sha256':sha(original),'source_sha256':inventory(),
+        'validation_driver_sha256':sha(__file__),'commands':[]}
+
+def save():
+    (out/'provenance.json').write_text(json.dumps(info,indent=2)+'\n')
+
+def run(command, name, timeout=180):
+    start=time.monotonic()
+    result=subprocess.run(command,cwd=root,text=True,capture_output=True,timeout=timeout)
+    (out/(name+'.stdout')).write_text(result.stdout)
+    (out/(name+'.stderr')).write_text(result.stderr)
+    info['commands'].append({'command':command,'working_directory':str(root),
+        'exit_status':result.returncode,'operational_elapsed_seconds':time.monotonic()-start,
+        'stdout':name+'.stdout','stdout_sha256':sha(out/(name+'.stdout')),
+        'stderr':name+'.stderr','stderr_sha256':sha(out/(name+'.stderr'))})
+    save()
+    assert result.returncode==0, f'{name} exited {result.returncode}'
+    return result.stdout
+
+def macho(path):
+    data=path.read_bytes()
+    magic,_,_,_,count,_,_,_=struct.unpack_from('<IiiIIIII',data)
+    assert magic==0xfeedfacf, 'expected native thin little-endian Mach-O64'
+    offset=32
+    result={}
+    for _ in range(count):
+        command,length=struct.unpack_from('<II',data,offset)
+        assert length>=8 and offset+length<=len(data)
+        if command==0x80000028:
+            _,_,entry,stack=struct.unpack_from('<IIQQ',data,offset)
+            result['entry_file_offset']=entry
+            result['main_stack_size']=stack
+        elif command==0x19:
+            segment=struct.unpack_from('<II16sQQQQiiII',data,offset)
+            for index in range(segment[-2]):
+                section=struct.unpack_from('<16s16sQQIIIIIIII',data,offset+72+index*80)
+                name,seg=section[0].rstrip(b'\0'),section[1].rstrip(b'\0')
+                if (seg,name)==(b'__TEXT',b'__text'):
+                    address,size,file_offset=section[2:5]
+                    body=data[file_offset:file_offset+size]
+                    assert len(body)==size
+                    result.update(text_address=address,text_size=size,text_file_offset=file_offset,
+                                  text_sha256=hashlib.sha256(body).hexdigest())
+        offset+=length
+    assert 'main_stack_size' in result and 'text_sha256' in result
+    return result
+
+save()
+try:
+    disassembly=run(['/usr/bin/otool','-tvV',str(root/'.build/boruvka/boruvka.o')],'boruvka_object_disassembly')
+    signature='__ZNSt3__110__function6__funcIZ7boruvkaRKNS_6vectorINS_5tupleIJiiiiEEENS_9allocatorIS4_EEEEiE3$_0NS5_ISA_EEFviiEEclEOiSE_:'
+    body=disassembly.split(signature,1)[1].split('\n__',1)[0]
+    assert '\tsub\tsp, sp, #0x40' in body and '\tadd\tsp, sp, #0x40' in body
+    assert '\tblr\tx8' in body
+    (out/'recursive_frame.txt').write_text(signature+body+'\n')
+    info['recursive_frame']={'bytes_per_active_level':64,'maximum_test_depth':4194304,
+        'depth_product_bytes':64*4194304,'fixed_boruvka_frame_bytes':320,
+        'interpretation':'The recursive callable has a fixed64-byte frame and directly indirect-calls itself; 4M active levels need256MiB plus bounded outer caller frames. No dynamic stack allocation occurs in that callable.'}
+    sdk=run(['/usr/bin/xcrun','--show-sdk-path'],'sdk').strip()
+    compiler='/usr/bin/clang++'
+    run([compiler,'--version'],'compiler_version')
+    flags=['-isysroot',sdk,'-std=c++17','-O3','-Wall','-Wextra','-march=native','-I.']
+    obj_names=('boruvka/boruvka','kruskal/kruskal','prim/prim','lca/lca','union_find/union_find',
+               'graph_utils/graph_utils','verifier/verifier_v2','kkt/kkt')
+    objects=[str(root/'.build'/(name+'.o')) for name in obj_names]
+    info['object_sha256']={str(Path(p).relative_to(root)):sha(p) for p in objects}
+    run([compiler,*flags,'benchmark/crossover_baselines.cpp',*objects,'-L'+sdk+'/usr/lib',
+         '-Wl,-stack_size,0x20000000','-o',str(large)],'large_stack_build')
+    info['large_binary']=str(large)
+    info['large_binary_sha256']=sha(large)
+    info['original_macho']=macho(original)
+    info['large_macho']=macho(large)
+    assert info['original_macho']['main_stack_size']==0
+    assert info['large_macho']['main_stack_size']==1<<29
+    assert info['original_macho']['text_sha256']==info['large_macho']['text_sha256']
+    assert info['original_macho']['text_size']==info['large_macho']['text_size']
+    info['entire_text_byte_identical']=True
+    run(['/usr/bin/otool','-l',str(large)],'large_stack_load_commands')
+    source=scratch/'worst_depth_path.cpp'
+    source.write_text(r'''#include "boruvka/boruvka.hpp"
+#include <cstdint>
+#include <iostream>
+#include <stdexcept>
+#include <tuple>
+#include <vector>
+int main() {
+    try {
+        constexpr int n=4194304;
+        std::vector<std::tuple<int,int,int,int>> graph;
+        graph.reserve(n-1);
+        // Increasing weights force every path edge into the first selected
+        // forest. Vertex0 is an endpoint, so the next explore(0) visits all n
+        // vertices before unwinding. A connected input tree is its unique MST.
+        for(int v=1;v<n;++v) graph.emplace_back(v-1,v,v,v-1);
+        const auto result=boruvka(graph,n);
+        if(result.size()!=graph.size()) throw std::runtime_error("wrong output size");
+        std::vector<unsigned char> seen(n-1,0);
+        std::uint64_t sum=0;
+        for(const auto& edge:result) {
+            const auto [u,v,w,id]=edge;
+            if(id<0 || id>=n-1 || seen[id]++ || w!=id+1 ||
+               !((u==id && v==id+1)||(v==id && u==id+1)))
+                throw std::runtime_error("wrong/duplicate original path tuple");
+            sum+=static_cast<std::uint64_t>(w);
+        }
+        const auto expected=static_cast<std::uint64_t>(n)*(n-1)/2;
+        if(sum!=expected) throw std::runtime_error("wrong64-bit total weight");
+        std::cout << "{\"validation\":\"pass\",\"vertices\":" << n
+                  << ",\"edges\":" << n-1 << ",\"validated_output_tuples\":" << result.size()
+                  << ",\"weight_sum\":" << sum
+                  << ",\"oracle\":\"connected input tree, every original tuple exactly once\","
+                     "\"forced_maximum_dfs_depth\":" << n << "}\n";
+    } catch(const std::exception& e) { std::cerr<<e.what()<<'\n';return 1; }
+}
+''')
+    (out/'worst_depth_path.cpp.txt').write_text(source.read_text())
+    test=scratch/'worst_depth_path'
+    run([compiler,*flags,str(source),objects[0],'-L'+sdk+'/usr/lib',
+         '-Wl,-stack_size,0x20000000','-o',str(test)],'worst_path_build')
+    info['test_source_sha256']=sha(source)
+    info['test_binary_sha256']=sha(test)
+    info['test_macho']=macho(test)
+    assert info['test_macho']['main_stack_size']==1<<29
+    validation=run(['/usr/bin/time','-l',str(test)],'worst_path_run',timeout=180)
+    info['worst_path_result']=json.loads(validation)
+    assert info['worst_path_result']['validation']=='pass'
+    assert inventory()==info['source_sha256'],'source inventory changed'
+    assert sha(original)==info['original_binary_sha256'],'original binary changed'
+    assert all(sha(root/p)==h for p,h in info['object_sha256'].items()),'original objects changed'
+    info['original_sources_binary_objects_preserved']=True
+    info['validation']='pass'
+except BaseException as error:
+    info['validation']='failed'
+    info['error']=repr(error)
+    raise
+finally:
+    info['finished_utc']=datetime.datetime.now(datetime.timezone.utc).isoformat()
+    save()
+print(json.dumps({'validation':info['validation'],'text_identical':info.get('entire_text_byte_identical'),
+                 'stack_bytes':info.get('large_macho',{}).get('main_stack_size'),'archive':str(out)},indent=2))

@@ -1,0 +1,49 @@
+{
+  "schema": "crossover_work_figures_v1",
+  "validation": "pass",
+  "cases": 10,
+  "algorithm_rows": 20,
+  "figure_points": 70,
+  "inputs": {
+    "provenance": {
+      "path": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/crossover-2026-10-13/diagnostics-analysis/provenance.json",
+      "sha256": "d2113e7f044adbac4f3f07fe3632cd3b48ebf1b325de24aa53b1f7fd232055d6"
+    },
+    "work_graphs": {
+      "path": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/crossover-2026-10-13/diagnostics-analysis/work_graphs.csv",
+      "sha256": "beceb1c72d100c351c57af0c6382fcc62eb3baf9d68dc37def47a0558c3c58bb"
+    },
+    "work_summary": {
+      "path": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/crossover-2026-10-13/diagnostics-analysis/work_summary.csv",
+      "sha256": "b0a924d55a7b509fe8950f90397ad742d6f601d94b6abbd90f447e44de91a716"
+    }
+  },
+  "source_sha256": "c372b6651d5aff2cb28f50f2640707c710343e6b96bbb21a9aaab5a42b4f27f3",
+  "rows_removed": 0,
+  "rows_adjusted": 0,
+  "timing_observations": 0,
+  "scope": "Untimed logical counters, one graph seed and one KKT sampling seed; all ten declared cases retained.",
+  "figures": [
+    "contraction_volume.png",
+    "contraction_volume.svg",
+    "contraction_volume.pdf",
+    "edge_materializations.png",
+    "edge_materializations.svg",
+    "edge_materializations.pdf",
+    "verifier_incidences.png",
+    "verifier_incidences.svg",
+    "verifier_incidences.pdf"
+  ],
+  "artifact_sha256": {
+    "figure_points.csv": "25e7a7e1ed5589cdcacf063724203c99942280471092f08707b6731ea6b0b5b6",
+    "contraction_volume.png": "b0d760abee990f057a35ec99606df6163b465296fd4d1842585d732900cd07a9",
+    "contraction_volume.svg": "2f94c4a22f663f2d2fa0735658a0ed0b3e206aac647f511a5a81c2aef889d5bd",
+    "contraction_volume.pdf": "b89cc4ee099bd88e743bbb92925df90330eb0599dcaf4eb7d6d8f1da144ca35a",
+    "edge_materializations.png": "2335504054c89dc73da1dd4361e5510d7e103ce6d4e937aeb38f8edcbe2e5144",
+    "edge_materializations.svg": "e37864387c658ed5822eff2a8ec3a51b7cd554a1b9868b8a2c2be8816c794b1b",
+    "edge_materializations.pdf": "ebcf95608a6e71bfc0dcf3f70f2fa640016a623fe23541c9103d460d60f5780d",
+    "verifier_incidences.png": "ab00bbcf479d9f0a63304006c2070d9f35e74a6c30ff68b5675d89e6509c252b",
+    "verifier_incidences.svg": "d9972906320486b4dc874650569f786145c70744458c117f756f326f19edca58",
+    "verifier_incidences.pdf": "ae7bcc976751dfb74fd2ea7fdc0ee025a5bbed7f143830ec0313935e8f8bb0a7"
+  }
+}

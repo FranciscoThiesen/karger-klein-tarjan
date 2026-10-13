@@ -6,10 +6,10 @@ holdout seed has been consumed. This is a bounded exploratory stopping decision,
 not a failed confirmation or a claim that another family cannot win.
 
 None of the screened new families has paired ratios at most 0.90 at both of its
-two largest screened sizes. Narrow line: 0.9078 at 4M and0.9969 at 8M; wide line:
-0.9339 at 4M and0.9642 at 8M; metric grid:0.9552 at 1M and0.9457 at 4M.
+two largest screened sizes. Narrow line: 0.9078 at 4M and 0.9969 at 8M; wide line:
+0.9339 at 4M and 0.9642 at 8M; metric grid: 0.9552 at 1M and 0.9457 at 4M.
 The random-weight families are nearer parity. Isolated leads of 0.8880 (narrow
-line 2M) and0.8955 (wide line 1M) do not establish the required large-size pattern.
+line 2M) and 0.8955 (wide line 1M) do not establish the required large-size pattern.
 All observations, losses and precision ablations remain in the full comparison.
 
 The original protocol allowed at most two candidates, not a required positive

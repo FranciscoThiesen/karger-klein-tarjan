@@ -1,0 +1,20 @@
+(lldb) target create "bin/crossover_baselines"
+Current executable set to '/Users/random_person/Desktop/karger-klein-tarjan/bin/crossover_baselines' (arm64).
+(lldb) settings set -- target.run-args  "--family" "hierarchical_path" "--n" "1048576" "--density" "16" "--graph-seed" "3037" "--kkt-seed" "101" "--repetitions" "4" "--warmups" "1"
+(lldb) run
+Running selected classical check hierarchical_path_n1048576_d16_p0 graph_seed=3037 kkt_seed=101
+generation_seconds=4.30409 reference_certificate_seconds=13.5333
+case_id,family,n,m,density,intrusion_per_mille,graph_seed,kkt_seed,input_fingerprint,topology_fingerprint,phase,repetition,order,warmups,algorithm,elapsed_ns,utc_start_ns,utc_end_ns,process_cpu_start_ns,process_cpu_end_ns,process_cpu_elapsed_ns,validation
+hierarchical_path_n1048576_d16_p0,hierarchical_path,1048576,16777216,16,0,3037,101,9022211500893892526,846266750802760537,warmup,0,0,1,kkt,5782181250,1791872527543410000,1791872533325633000,18456663000,24233513000,5776850000,pass
+hierarchical_path_n1048576_d16_p0,hierarchical_path,1048576,16777216,16,0,3037,101,9022211500893892526,846266750802760537,warmup,0,1,1,kruskal,1157254917,1791872533347253000,1791872534504522000,24255137000,25411451000,1156314000,pass
+hierarchical_path_n1048576_d16_p0,hierarchical_path,1048576,16777216,16,0,3037,101,9022211500893892526,846266750802760537,warmup,0,2,1,prim,6353557666,1791872534544274000,1791872540897878000,25451190000,31797566000,6346376000,pass
+Process 6834 stopped
+* thread #1, queue = 'com.apple.main-thread', stop reason = EXC_BAD_ACCESS (code=2, address=0x16f603ff8)
+    frame #0: 0x0000000100012120 crossover_baselines`std::__1::__function::__func<boruvka(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int)::$_0, std::__1::allocator<boruvka(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int)::$_0>, void (int, int)>::operator()(int&&, int&&) + 112
+crossover_baselines`std::__1::__function::__func<boruvka(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int)::$_0, std::__1::allocator<boruvka(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int)::$_0>, void (int, int)>::operator():
+->  0x100012120 <+112>: stp    w20, w8, [sp, #0x8]
+    0x100012124 <+116>: ldr    x0, [x9, #0x18]
+    0x100012128 <+120>: cbz    x0, 0x100012158           ; <+168>
+    0x10001212c <+124>: ldr    x8, [x0]
+Target 0: (crossover_baselines) stopped.
+Process 6834 launched: '/Users/random_person/Desktop/karger-klein-tarjan/bin/crossover_baselines' (arm64)

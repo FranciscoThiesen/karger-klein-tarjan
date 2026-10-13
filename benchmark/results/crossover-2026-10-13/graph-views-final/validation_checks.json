@@ -1,0 +1,61 @@
+{
+  "validation": "pass",
+  "positive_cases": 2,
+  "rejected_cases": 9,
+  "checks": [
+    {
+      "case": "certified five-fixture export",
+      "status": "pass"
+    },
+    {
+      "case": "consistent quotient label permutations preserve all summaries",
+      "status": "pass"
+    },
+    {
+      "case": "duplicate original ID",
+      "status": "rejected"
+    },
+    {
+      "case": "invalid metric weight rank",
+      "status": "rejected"
+    },
+    {
+      "case": "non-permutation vertex labels",
+      "status": "rejected"
+    },
+    {
+      "case": "invalid narrow coordinate",
+      "status": "rejected"
+    },
+    {
+      "case": "missing certified MST edge",
+      "status": "rejected"
+    },
+    {
+      "case": "duplicate selected edge",
+      "status": "rejected"
+    },
+    {
+      "case": "incorrect original membership",
+      "status": "rejected"
+    },
+    {
+      "case": "incorrect quotient cost",
+      "status": "rejected"
+    },
+    {
+      "case": "missing quotient representative",
+      "status": "rejected"
+    }
+  ],
+  "svg_xml": "pass",
+  "script_sha256": "67d1b96bc695e022bdf75cbd2c838bed1f1c6287631b6a39c1367c7bff942298",
+  "data_sha256": "c0b8ecb2b86bcfbe7b52f4f1e947ad7368f93d87b959498b84b31ecfdd10428a",
+  "png_sha256": "3f56c574b33a19e92c26d6830567e4ee4e710e06c5fce9668b8e795f415d2b28",
+  "svg_sha256": "4bbad52ad2ecae3bd416ed8667e67317599c9f5b5dc22211d1c2618d920aff33",
+  "scope": "Small exported-data validation only; no native execution or performance measurements.",
+  "figure_only_refresh": {
+    "operation": "Whitespace-normalized SVG from same geometry; plot rerender only",
+    "script_sha256": "a4f64fc3a9a99c333b9a94e9f0dc14a74da43851b5d563fe349b772cdcd5c71a"
+  }
+}

@@ -1,0 +1,131 @@
+"""Bounded diagnostic/renderer checks using real baselines and temporary mutations."""
+import copy
+import csv
+import json
+from pathlib import Path
+import shutil
+import sys
+import tempfile
+
+ROOT = Path('/Users/random_person/Desktop/karger-klein-tarjan')
+sys.path.insert(0, str(ROOT / 'benchmark'))
+import analyze_crossover_diagnostics as diag
+import build_crossover_work_figures as figure
+base, moments = diag.base, diag.moments
+EVIDENCE = ROOT / 'benchmark/results/crossover-2026-10-13'
+ANALYSIS = EVIDENCE / 'diagnostics-analysis'
+checks = []
+
+
+def reject(name, function):
+    try:
+        function()
+    except (ValueError, KeyError, TypeError, OSError) as error:
+        checks.append({'case': name, 'expected': 'reject', 'outcome': 'rejected', 'reason': str(error)})
+        return
+    raise AssertionError('accepted malformed case: ' + name)
+
+
+def read_rows(path):
+    with path.open(newline='') as stream:
+        reader = csv.DictReader(stream)
+        return reader.fieldnames, list(reader)
+
+
+def write_rows(path, fields, rows):
+    with path.open('w', newline='') as stream:
+        writer = csv.DictWriter(stream, fieldnames=fields)
+        writer.writeheader(); writer.writerows(rows)
+
+
+cases = diag.load_plan(EVIDENCE / 'diagnostics.csv')
+work = base.load_work(EVIDENCE / 'diagnostics_work.csv', cases, (3037,), (101,))
+traces = base.load_traces(EVIDENCE / 'diagnostics_trace.csv', cases, (3037,))
+base.crosscheck({}, work, traces, (101,))
+loaded_moments = moments.load_moments(EVIDENCE / 'diagnostics_trace.log', traces)
+stages, graphs, _ = moments.derive(cases, (3037,), traces, loaded_moments)
+summary, work_graphs, _, _ = base.aggregate_work(work, traces, cases, (3037,), (101,))
+diag.normalize_verifier_fractions(summary, work_graphs)
+work_meta, _ = diag.load_capture_metadata(EVIDENCE / 'diagnostics_work.csv', EVIDENCE / 'diagnostics_work.log', EVIDENCE / 'diagnostics.csv', 'work', len(work))
+trace_meta, _ = diag.load_capture_metadata(EVIDENCE / 'diagnostics_trace.csv', EVIDENCE / 'diagnostics_trace.log', EVIDENCE / 'diagnostics.csv', 'trace', len(loaded_moments))
+references = diag.load_references(EVIDENCE / 'all_screens_comparison.json')
+identities = diag.check_identity(cases, work, traces, references, work_meta, trace_meta)
+case_summary, normalized = diag.summarize(cases, work, summary, graphs)
+assert (len(work),len(traces),len(loaded_moments),len(stages),len(identities),len(normalized)) == (20,10,124,134,10,20)
+assert all(r['mean_heavy_fraction'] is None for r in [*summary,*work_graphs] if r['mean_verifier_edges']==0)
+checks.append({'case':'complete strict diagnostic baseline','expected':'pass','outcome':'pass'})
+figure_cases, figure_summary, _ = figure.load(ANALYSIS)
+assert len(figure.values(figure_cases,figure_summary)) == 70
+checks.append({'case':'complete renderer baseline and70points','expected':'pass','outcome':'pass'})
+
+with tempfile.TemporaryDirectory(prefix='kkt-diagnostic-check-') as temp:
+    folder = Path(temp)
+    def altered_csv(name, source, mutation, validate):
+        fields, rows = read_rows(source)
+        mutation(rows)
+        path=folder/(name+'.csv');write_rows(path,fields,rows)
+        reject(name,lambda:validate(path))
+    check_work=lambda p:base.load_work(p,cases,(3037,),(101,))
+    altered_csv('missing work row',EVIDENCE/'diagnostics_work.csv',lambda rows:rows.pop(),check_work)
+    altered_csv('duplicate work row',EVIDENCE/'diagnostics_work.csv',lambda rows:rows.append(dict(rows[0])),check_work)
+    altered_csv('invalid logical work proxy',EVIDENCE/'diagnostics_work.csv',lambda rows:rows[0].update(total_work_proxy=str(int(rows[0]['total_work_proxy'])+1)),check_work)
+    altered_csv('broken trace chain',EVIDENCE/'diagnostics_trace.csv',lambda rows:rows[1].update(input_edges=str(int(rows[1]['input_edges'])+1)),lambda p:base.load_traces(p,cases,(3037,)))
+    changed=copy.deepcopy(work);changed[next(k for k in changed if k[-1]=='kkt')]['root_after_two_edges']+=1
+    reject('KKT root differs from trace',lambda:base.crosscheck({},changed,traces,(101,)))
+    changed=copy.deepcopy(work);changed[next(k for k in changed if k[-1]=='compacting_boruvka')]['contraction_edges']+=1
+    reject('compactor work volume differs from trace',lambda:base.crosscheck({},changed,traces,(101,)))
+    original_log=(EVIDENCE/'diagnostics_trace.log').read_text().splitlines()
+    first=next(i for i,line in enumerate(original_log) if line.startswith(moments.PREFIX))
+    for name,mutation in [('moment parity',lambda r:r.update(sum_squared_sizes=r['sum_squared_sizes']+1)),('moment component count',lambda r:r.update(component_count=r['component_count']+1))]:
+        lines=list(original_log);row=json.loads(lines[first][len(moments.PREFIX):]);mutation(row)
+        lines[first]=moments.PREFIX+json.dumps(row);path=folder/(name+'.log');path.write_text('\n'.join(lines)+'\n')
+        reject(name,lambda:moments.load_moments(path,traces))
+    path=folder/'duplicate.log';path.write_text('\n'.join([*original_log,original_log[first]])+'\n')
+    reject('duplicate moment record',lambda:moments.load_moments(path,traces))
+    wm,tm=copy.deepcopy(work_meta),copy.deepcopy(trace_meta)
+    name='benchmark/certificate_test.cpp';wm['source_sha256'][name]=tm['source_sha256'][name]='0'*64
+    reject('nonproduction source differs from frozen inventory',lambda:diag.check_identity(cases,work,traces,references,wm,tm))
+    tm=copy.deepcopy(trace_meta);tm['binary_sha256']='0'*64
+    reject('native trace binary differs from frozen timing',lambda:diag.check_identity(cases,work,traces,references,work_meta,tm))
+    refs=copy.deepcopy(references)
+    case=next(iter(cases))
+    for row in refs['discovery']['timing'].values():
+        if row['case_id']==case:row['input_fingerprint']+=1
+    reject('diagnostic graph differs from screen',lambda:diag.check_identity(cases,work,traces,refs,work_meta,trace_meta))
+
+    renderer=folder/'render';renderer.mkdir()
+    def renderer_mutation(name,table,mutation):
+        for filename in ['provenance.json','work_graphs.csv','work_summary.csv']:
+            shutil.copyfile(ANALYSIS/filename,renderer/filename)
+        metadata=json.loads((renderer/'provenance.json').read_text())
+        if table:
+            path=renderer/(table+'.csv');fields,rows=read_rows(path);mutation(rows)
+            write_rows(path,fields,rows)
+            metadata['derived_csv_sha256'][path.name]=figure.sha(path)
+        else:mutation(metadata)
+        (renderer/'provenance.json').write_text(json.dumps(metadata))
+        reject(name,lambda:figure.load(renderer))
+    for name,table,mutation in [
+        ('renderer missing row after rehash','work_graphs',lambda rows:rows.pop()),
+        ('renderer duplicate row after rehash','work_graphs',lambda rows:rows.append(dict(rows[0]))),
+        ('renderer reordered rows after rehash','work_graphs',lambda rows:rows.reverse()),
+        ('renderer graph seed after rehash','work_graphs',lambda rows:rows[0].update(graph_seed='17')),
+        ('renderer incorrect denominator after rehash','work_graphs',lambda rows:rows[0].update(m='1')),
+        ('renderer normalization after rehash','work_graphs',lambda rows:rows[0].update(contraction_edges_over_m='1')),
+        ('renderer nonfinite count after rehash','work_graphs',lambda rows:rows[0].update(mean_initialized_slots='NaN')),
+        ('renderer zero-verifier fraction after rehash','work_graphs',lambda rows:rows[1].update(mean_heavy_fraction='0')),
+        ('renderer excessive retained incidence after rehash','work_graphs',lambda rows:rows[0].update(mean_filtered_edges=str(float(rows[0]['mean_verifier_edges'])+1))),
+        ('renderer singleton summary mismatch after rehash','work_summary',lambda rows:rows[0].update(mean_edge_materializations=str(float(rows[0]['mean_edge_materializations'])+1))),
+        ('renderer incomplete trace accounting',None,lambda m:m.update(derived_stages_including_zero=133)),
+        ('renderer boolean work-row count',None,lambda m:m.update(work_rows=True)),
+    ]:renderer_mutation(name,table,mutation)
+
+record={'schema':'crossover_diagnostic_validation_checks_v1','validation':'pass',
+        'positive_checks':sum(r['expected']=='pass' for r in checks),'negative_checks':sum(r['expected']=='reject' for r in checks),
+        'native_processes':0,'raw_evidence_modified':False,'renderer_csv_mutations_rehashed':True,
+        'scope':'Complete real diagnostic and renderer baselines; targeted semantic/provenance validator mutations. Renderer CSV changes had matching new hashes.',
+        'diagnostic_script_sha256':diag.sha(Path(diag.__file__)),'renderer_script_sha256':figure.sha(Path(figure.__file__)),
+        'check_script_sha256':diag.sha(Path(__file__)),'checks':checks}
+(ANALYSIS/'validation_checks.json').write_text(json.dumps(record,indent=2)+'\n')
+shutil.copyfile(__file__,ANALYSIS/'validation_checks.py.txt')
+print('Passed',record['positive_checks'],'positive baselines and',record['negative_checks'],'semantic/provenance rejections; raw unchanged')

@@ -1,0 +1,35 @@
+#include "boruvka/boruvka.hpp"
+#include <cstdint>
+#include <iostream>
+#include <stdexcept>
+#include <tuple>
+#include <vector>
+int main() {
+    try {
+        constexpr int n=4194304;
+        std::vector<std::tuple<int,int,int,int>> graph;
+        graph.reserve(n-1);
+        // Increasing weights force every path edge into the first selected
+        // forest. Vertex0 is an endpoint, so the next explore(0) visits all n
+        // vertices before unwinding. A connected input tree is its unique MST.
+        for(int v=1;v<n;++v) graph.emplace_back(v-1,v,v,v-1);
+        const auto result=boruvka(graph,n);
+        if(result.size()!=graph.size()) throw std::runtime_error("wrong output size");
+        std::vector<unsigned char> seen(n-1,0);
+        std::uint64_t sum=0;
+        for(const auto& edge:result) {
+            const auto [u,v,w,id]=edge;
+            if(id<0 || id>=n-1 || seen[id]++ || w!=id+1 ||
+               !((u==id && v==id+1)||(v==id && u==id+1)))
+                throw std::runtime_error("wrong/duplicate original path tuple");
+            sum+=static_cast<std::uint64_t>(w);
+        }
+        const auto expected=static_cast<std::uint64_t>(n)*(n-1)/2;
+        if(sum!=expected) throw std::runtime_error("wrong64-bit total weight");
+        std::cout << "{\"validation\":\"pass\",\"vertices\":" << n
+                  << ",\"edges\":" << n-1 << ",\"validated_output_tuples\":" << result.size()
+                  << ",\"weight_sum\":" << sum
+                  << ",\"oracle\":\"connected input tree, every original tuple exactly once\","
+                     "\"forced_maximum_dfs_depth\":" << n << "}\n";
+    } catch(const std::exception& e) { std::cerr<<e.what()<<'\n';return 1; }
+}

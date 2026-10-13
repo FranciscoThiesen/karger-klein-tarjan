@@ -1,0 +1,169 @@
+{
+  "schema": "crossover_diagnostic_validation_checks_v1",
+  "validation": "pass",
+  "positive_checks": 2,
+  "negative_checks": 24,
+  "native_processes": 0,
+  "raw_evidence_modified": false,
+  "renderer_csv_mutations_rehashed": true,
+  "scope": "Complete real diagnostic and renderer baselines; targeted semantic/provenance validator mutations. Renderer CSV changes had matching new hashes.",
+  "diagnostic_script_sha256": "d1bbd1cf7bef586fbfcf59a6adf1a23df079bf3c7c62e7842ae13528979d2c0c",
+  "renderer_script_sha256": "c372b6651d5aff2cb28f50f2640707c710343e6b96bbb21a9aaab5a42b4f27f3",
+  "check_script_sha256": "f28bc50c2ba80d3bf60241effda1c1ce6e1e3f4be28c22ffd5283f2ed64ee2ca",
+  "checks": [
+    {
+      "case": "complete strict diagnostic baseline",
+      "expected": "pass",
+      "outcome": "pass"
+    },
+    {
+      "case": "complete renderer baseline and70points",
+      "expected": "pass",
+      "outcome": "pass"
+    },
+    {
+      "case": "missing work row",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "incomplete work matrix: 19/20 rows"
+    },
+    {
+      "case": "duplicate work row",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/kkt-diagnostic-check-f_20v656/duplicate work row.csv:22: duplicate work row"
+    },
+    {
+      "case": "invalid logical work proxy",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/kkt-diagnostic-check-f_20v656/invalid logical work proxy.csv:2: proxy mismatch"
+    },
+    {
+      "case": "broken trace chain",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "('line_metric_n1048576_d16_p0', 3037): broken trace chain or invalid connected input"
+    },
+    {
+      "case": "KKT root differs from trace",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "line_metric_n1048576_d16_p0/3037/101: KKT root/trace mismatch"
+    },
+    {
+      "case": "compactor work volume differs from trace",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "line_metric_n1048576_d16_p0/3037: work/trace contraction volume mismatch"
+    },
+    {
+      "case": "moment parity",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "line_metric_n1048576_d16_p0/3037/round1: square-sum parity mismatch"
+    },
+    {
+      "case": "moment component count",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "line_metric_n1048576_d16_p0/3037/round1: count differs from trace"
+    },
+    {
+      "case": "duplicate moment record",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/kkt-diagnostic-check-f_20v656/duplicate.log:173: duplicate moment stage"
+    },
+    {
+      "case": "nonproduction source differs from frozen inventory",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "diagnostic C++ source inventory differs from the frozen precision capture"
+    },
+    {
+      "case": "native trace binary differs from frozen timing",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "native trace binary differs from the frozen precision timing binary"
+    },
+    {
+      "case": "diagnostic graph differs from screen",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "('line_metric_n1048576_d16_p0', 3037): inconsistent fingerprints"
+    },
+    {
+      "case": "renderer missing row after rehash",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/kkt-diagnostic-check-f_20v656/render/work_graphs.csv: missing, extra or reordered diagnostic cases"
+    },
+    {
+      "case": "renderer duplicate row after rehash",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/kkt-diagnostic-check-f_20v656/render/work_graphs.csv:22: duplicate case/algorithm"
+    },
+    {
+      "case": "renderer reordered rows after rehash",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/kkt-diagnostic-check-f_20v656/render/work_graphs.csv: missing, extra or reordered diagnostic cases"
+    },
+    {
+      "case": "renderer graph seed after rehash",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/kkt-diagnostic-check-f_20v656/render/work_graphs.csv:2: unexpected algorithm or graph seed"
+    },
+    {
+      "case": "renderer incorrect denominator after rehash",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/kkt-diagnostic-check-f_20v656/render/work_graphs.csv:2: fixture differs from the fixed diagnostic plan"
+    },
+    {
+      "case": "renderer normalization after rehash",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/kkt-diagnostic-check-f_20v656/render/work_graphs.csv:2: contraction/materialization normalization mismatch"
+    },
+    {
+      "case": "renderer nonfinite count after rehash",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/kkt-diagnostic-check-f_20v656/render/work_graphs.csv:2: singleton count must be a finite nonnegative integer: mean_initialized_slots"
+    },
+    {
+      "case": "renderer zero-verifier fraction after rehash",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/kkt-diagnostic-check-f_20v656/render/work_graphs.csv:3: undefined or incorrect heavy-incidence fraction"
+    },
+    {
+      "case": "renderer excessive retained incidence after rehash",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/kkt-diagnostic-check-f_20v656/render/work_graphs.csv:2: retained incidences exceed verifier inputs"
+    },
+    {
+      "case": "renderer singleton summary mismatch after rehash",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "('line_metric_n1048576_d16_p0', 'kkt'): single-graph summary differs from graph-level values"
+    },
+    {
+      "case": "renderer incomplete trace accounting",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "diagnostic provenance: incomplete trace-stage accounting"
+    },
+    {
+      "case": "renderer boolean work-row count",
+      "expected": "reject",
+      "outcome": "rejected",
+      "reason": "diagnostic provenance: incorrect work_rows"
+    }
+  ]
+}

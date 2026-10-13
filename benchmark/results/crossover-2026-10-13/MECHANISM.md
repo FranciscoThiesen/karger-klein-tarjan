@@ -56,11 +56,12 @@ heavy-edge test, so this theorem does not supply a small practical constant.
 
 ## The paired spatial fixtures
 
-The new [fixture header](../../crossover_fixtures.hpp) constructs four spatial
-families and a separate connected random-graph control. Every graph is
+The [fixture header](../../crossover_fixtures.hpp) provides the four original
+spatial families below, the later wide-gap line ablation, and a separate
+connected random-graph control. Every graph is
 connected, simple and undirected, with exactly `m=dn` edges and
 unique integer weight ranks. Topology, geometry, weights, label permutation and
-input order use separate deterministic random streams. Metric/random twins
+input order use separate deterministic random streams. The original metric/random twins
 share every endpoint, edge ID, coordinate, label and input position; only
 weight ranks change.
 
@@ -145,28 +146,62 @@ logarithmic disadvantage for compaction, although the two implementations can
 still cross in practical elapsed time. Once only equal maximum-gap boundaries
 remain, their monotone rank order merges the entire remainder in one round.
 Many such boundaries may already have disappeared in earlier rounds, so this
-does not prove that a large terminal merge happened in any measured graph.
+proof alone does not locate the event or quantify its edge-volume cost.
 
 At 8,388,608 vertices, the ordinary bound is 23 rounds, much smaller than 1024.
 The alphabet bound alone therefore does not explain a measured plateau or a
-particular number of rounds at that size. Per-round component moments and
-retained-edge traces must be examined before attributing a runtime trend to
-this effect.
+particular number of rounds at that size. The completed per-round diagnostics
+below distinguish the observed late merge from the bulk of edge-volume work.
 
-A proposed **new, retained precision ablation**, `line_wide_metric`, would draw
-positive gaps uniformly from `{1,...,2^32}` while preserving the same topology,
-IDs, label permutation and edge order through the separate random streams.
-At the current 8M size limit the largest possible coordinate is
-`(2^23−1)·2^32 < 2^55`, so absolute distances fit safely in signed 64-bit
-arithmetic; there is no need to square line distances. Its path ordering would
-approximate continuous random gaps more closely at the tested sizes, while
-still allowing some equal gaps and retaining the forced-path-MST limitation.
-It would also remain a fixed-alphabet model asymptotically. This is a proposal
-for a separately declared experiment after the current extension, not a
-replacement for any existing fixture or unfavorable result. The existing
-`low_path` control, with a uniform permutation of distinct cheap backbone
-ranks, is another useful path-order sanity check; it is a separate fixture,
-not an assumed byte-identical geometric input.
+The separately declared [precision ablation](PRECISION_ABLATION.md) has now
+completed after the extension screen. Its new, retained `line_wide_metric`
+fixture draws positive gaps uniformly from `{1,...,2^32}` while preserving
+the same topology, IDs, label permutation and edge order through separate
+random streams. At the current 8M size limit the largest possible coordinate
+is `(2^23−1)·2^32 < 2^55`, so absolute distances fit safely in signed 64-bit
+arithmetic; there is no need to square line distances. The wider alphabet
+still permits equal gaps and retains the forced-path-MST limitation. It is
+also a fixed-alphabet model asymptotically. All original narrow-line results,
+including unfavorable observations, remain retained.
+
+The completed wide-line screen uses graph seed 3037, sampling seed 101 and two
+timed repetitions per solver at each size. Its paired KKT/compactor elapsed-time
+ratios are:
+
+| Vertices, `m=16n` | Paired elapsed-time ratio |
+|---|---:|
+| 262,144 | 0.9824 |
+| 1,048,576 | 0.8955 |
+| 4,194,304 | 0.9339 |
+| 8,388,608 | 0.9642 |
+
+The [case summaries](all-screens-comparison/wall_case_summary.csv) and
+[individual pairs](all-screens-comparison/wall_paired_pairs.csv) retain the
+other screens and both repetitions, with campaign identity preserved. The
+wide-line lead is not monotonic, and it is already present at the smallest
+measured size, so these points do not locate a crossover onset. No new family
+was [selected for fresh-seed confirmation](SELECTION_DECISION.md).
+
+The [validated gap diagnostics](GAP_FINDINGS.md) now match all 47 production
+rounds across four narrow/wide line graphs, with 51 states including the initial
+ones. Narrow gaps do cause a late rapid collapse: the one-million graph reaches
+42 components with all 41 boundary gaps equal to 1,024, then finishes. At eight
+million it goes from 300 components, with 298 of 299 gaps equal to 1,024, to two
+components and then one. Yet all edge inputs from stage 8 onward account for
+less than 0.093% of each graph's total compactor volume, including the longer
+wide-gap tails. Total narrow/wide `V/m` is 5.080535/5.085271 at one million and
+5.926172/5.958874 at eight million: wide gaps increase total volume by only
+0.0932% and 0.5518%, respectively. Most of those small differences arise before
+stage 8. The terminal event cannot explain the bulk edge-volume cost.
+
+These findings do not isolate a tie-based runtime mechanism. Widening the gaps
+changes the order of unequal gaps and the geometry as well as tie frequency;
+both alphabets also remain fixed asymptotically. The checks establish component
+statistics and structural work, not the cause of wall-time differences between
+separately captured campaigns.
+The existing `low_path` control, with a uniform permutation of distinct cheap
+backbone ranks, is another useful path-order sanity check; it is a separate
+fixture, not an assumed byte-identical geometric input.
 
 ### The grid MST varies, but nearly all global shortcuts are still heavy
 

@@ -1,0 +1,25 @@
+{
+  "campaign": "classical_large_stack",
+  "validation": "pass",
+  "query": [
+    "pmset",
+    "-g",
+    "log"
+  ],
+  "query_exit": 0,
+  "query_stderr": "",
+  "query_utc": "2026-10-13T06:47:12.416709+00:00",
+  "started_utc": "2026-10-13T06:27:44.271200+00:00",
+  "finished_utc": "2026-10-13T06:46:14.351023+00:00",
+  "utc_seconds": 1110.079823,
+  "monotonic_seconds": 1110.117710167,
+  "difference_seconds": -0.03788716700000805,
+  "timed_calls": 48,
+  "warmup_calls": 12,
+  "flagged_calls": 0,
+  "rows_removed": 0,
+  "power_events": [],
+  "power_event_rows_parsed": 79,
+  "preceding_power_event": "2026-10-12 21:31:56 -0700 Wake                \tWake from Deep Idle [CDNVA] : due to smc.sysState.Wake(0x70070000) lid SMC.OutboxNotEmpty RTP.multi-touch/UserActivity Assertion Using AC (Charge:100%)           ",
+  "scope": "Timestamped Sleep/Wake/DarkWake events within capture, plus last preceding event if Sleep; absence is not proof of fixed power or scheduling. All clock observations retained."
+}
