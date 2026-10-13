@@ -1,0 +1,50 @@
+{
+  "frozen_utc": "2026-10-13T00:43:35.969082+00:00",
+  "revision_before_freeze_commit": "49f4d032e108335f49f5e350cb1a64188ec7d457",
+  "selected_groups": [
+    {
+      "family": "hierarchical_path",
+      "density": 16,
+      "intrusion_per_mille": 0
+    },
+    {
+      "family": "hierarchical_tree",
+      "density": 16,
+      "intrusion_per_mille": 0
+    }
+  ],
+  "selected_sizes": [
+    524288,
+    1048576
+  ],
+  "graph_seeds": [
+    2027,
+    4099,
+    8191,
+    104729,
+    131071
+  ],
+  "sampling_seeds": [
+    11,
+    29,
+    97
+  ],
+  "repetitions": 4,
+  "warmups": 1,
+  "campaigns": 2,
+  "criterion": "In both campaigns at both sizes: paired case ratio <=0.90, every graph median <1.0. Never pool the campaigns.",
+  "selection_evidence_sha256": {
+    "discovery_timing.csv": "b068fa18db1dffd3ecb8f3eba02a44301b360df845fb6f40633d574deb51a5cb",
+    "extension_fast_timing.csv": "4bbf932fadc20497d7c6c87377b49f9a1d8a5e48d0efc6c5f30dd7cc4bfdb4b9",
+    "million_timing.csv": "4a7c0b8df1658c7868397648d078f424ffbc9be938fb7f7a9aa40f93df016d1c",
+    "large_random_timing.csv": "390d5f1b45fe6209a00ffff59425276f88ee76d612ef778a5b0ea13ea2195847"
+  },
+  "manifest_sha256": {
+    "confirmation.csv": "5a9e313cc6c880e8ac39c6573bf59202acc28bc1026753958f13a4df305d259d",
+    "confirmation_reverse.csv": "f9349aa081f8af0466b8bc99eb85509f2711feebb157244183afbbb04400efb8",
+    "sensitivity.csv": "bcfcfbf91eec1ad1310eeb6163acf9ab3a5d7ad36d813b00042dc3cc7d0bb5cb"
+  },
+  "binary_sha256": "d0d33b2516b2a2e8ae3ecaba8786af7656706b88466ad8cd9181235f374d011f",
+  "controls": "Three exact-topology weight controls at the largest candidate size; two inexpensive legacy controls at n65536. Larger legacy negatives remain complete discovery evidence.",
+  "sensitivity": "Separate exploratory study after selection: both candidate shapes at n1048576,d16 with intrusion1,10,100 per1000vertices; graph17,42,sampling0,1,2repetitions,1warmup. Cannot rescue a failed confirmation."
+}

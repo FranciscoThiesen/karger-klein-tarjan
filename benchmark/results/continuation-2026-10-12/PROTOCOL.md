@@ -146,3 +146,33 @@ Seeds and repetitions stay exploratory (graphs17,42; sampling0,1;2 repetitions,
 1 warmup); order uses seed20261014. This is adaptive discovery, with all outcomes
 retained. The confirmation size menu now includes524,288; exact sizes/density
 will be frozen before fresh seeds and cannot be selected from holdout outcomes.
+
+## Frozen confirmation selection (before any fresh-seed timing)
+
+Promote **density16** with both hierarchical_path and hierarchical_tree at
+524,288 and1,048,576 vertices. Discovery ratios are0.8681/0.8122 for the path
+and0.8584/0.8142 for the tree. All32 matched discovery pairs favor KKT, but none
+are used as confirmation. Density64 remains fully reported exploration.
+
+`confirmation.csv` contains nine cases: these four candidate cases; random_path,
+random_tree and low_path at1,048,576,density16; and inexpensive legacy_random
+controls at65,536,densities32 and128. The exact-topology weight controls therefore
+cover the largest candidate size. Larger legacy32/128 negatives remain retained
+discovery evidence; their expensive33.6-million-edge case is not repeated in the
+holdout. The main holdout has at most16,777,216 edges per graph.
+
+The first manifest order is shuffled with seed20261015; the second is its exact
+reverse in `confirmation_reverse.csv`. All nine cases use the same predeclared
+five fresh graph seeds, three fresh sampling seeds, four repetitions and one
+warmup in both campaigns:1,080 timed outputs and270 checked warmups per campaign.
+Only the two named hierarchy/density16 groups are eligible for the predeclared
+clear-win claim. `confirmation_selection.json` freezes seeds, criteria, selected
+sizes, binary and discovery/manifest hashes before holdout. Do not adapt this
+selection after inspecting fresh-seed results.
+
+`sensitivity.csv`, shuffled with seed20261016, separately tests both hierarchy
+shapes at1,048,576,density16 with1,10,100 promoted chords per1,000vertices.
+It uses discovery graph seeds17,42 and sampling0,1, two balanced repetitions and
+one warmup. This exploratory stress test reuses the zero-intrusion topologies
+from the million-vertex screen; it does not add independent confirmation draws.
+Its outcome cannot change the frozen confirmation rule.
