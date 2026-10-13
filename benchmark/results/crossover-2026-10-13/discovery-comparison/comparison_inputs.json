@@ -1,0 +1,92 @@
+{
+  "schema": "crossover_comparison_result_v1",
+  "validation": "pass",
+  "criterion": {
+    "maximum_case_ratio": 0.9,
+    "every_graph_ratio_strictly_below": 1,
+    "metrics": [
+      "wall",
+      "cpu"
+    ],
+    "both_runs_required": true
+  },
+  "config": {
+    "path": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/crossover-2026-10-13/discovery_comparison.json",
+    "sha256": "19f0365b7a8a3037b365726a2e8ab51b934f85edecbde4c99f4e422b598eafba"
+  },
+  "selection": null,
+  "source_sha256": {
+    "analyze_continuation.py": "efee51f5eb57ef7f1b6979b3553854452963ff230064607fd314e029fb1f0037",
+    "compare_continuation.py": "a3e4d5fa2d92c9c08819bc9d82f3d5c8cab083fa54e73ec3f5157f8fcaa2bb07",
+    "crossover_clocks.py": "725d469933eaf5ead32a38bf52b9f32e46a7ee3d4e386777c257c1ab3929fc0b"
+  },
+  "comparison_sha256": "452555edd2b638c4614fae94c828fe9a9f4dac379606c1fa40e45f85f0783be5",
+  "rows_removed": 0,
+  "rows_adjusted": 0,
+  "cross_screen_checked_library_files": [
+    "kkt/kkt.cpp",
+    "kkt/kkt.hpp",
+    "common/edge.hpp",
+    "verifier/verifier_v2.cpp",
+    "verifier/verifier_v2.hpp",
+    "verifier/median_table.hpp",
+    "lca/lca.cpp",
+    "lca/lca.hpp"
+  ],
+  "campaigns": [
+    {
+      "name": "discovery",
+      "role": "screen",
+      "cases": [
+        "line_random_n4194304_d16_p0",
+        "line_metric_n4194304_d16_p0",
+        "grid2d_metric_n4194304_d16_p0",
+        "gnm_random_n1048576_d16_p0",
+        "line_random_n1048576_d16_p0",
+        "grid2d_metric_n1048576_d16_p0",
+        "random_tree_n1048576_d16_p0",
+        "grid2d_random_n262144_d4_p0",
+        "line_random_n262144_d16_p0",
+        "line_metric_n262144_d16_p0",
+        "grid2d_random_n4194304_d16_p0",
+        "gnm_random_n262144_d16_p0",
+        "grid2d_random_n262144_d16_p0",
+        "grid2d_metric_n262144_d4_p0",
+        "line_metric_n1048576_d16_p0",
+        "hierarchical_path_n1048576_d16_p0",
+        "grid2d_random_n1048576_d16_p0",
+        "grid2d_metric_n262144_d16_p0",
+        "gnm_random_n4194304_d16_p0"
+      ],
+      "graph_seeds": [
+        3037
+      ],
+      "sampling_seeds": [
+        101
+      ],
+      "repetitions": 2,
+      "warmups": 1,
+      "timed_calls": 76,
+      "checked_warmups": 38,
+      "flagged_calls": 0,
+      "inputs": {
+        "manifest": {
+          "path": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/crossover-2026-10-13/discovery.csv",
+          "sha256": "d6adb191cd7566faaebd2ad16fb329e4bac0d9fb7f5fb9d32644b3de19c46fb5"
+        },
+        "timing_csv": {
+          "path": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/crossover-2026-10-13/discovery_timing.csv",
+          "sha256": "ebfc87c6d2137849525d7cdd51d4c5d4cf2c182e67937e5bd6dec14f05b46279"
+        },
+        "timing_metadata": {
+          "path": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/crossover-2026-10-13/discovery_timing.json",
+          "sha256": "c9eef3c129dfec7d22ef5a4c523cdf656032916bf20cb9370715afa4fe1f1b33"
+        },
+        "log": {
+          "path": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/crossover-2026-10-13/discovery_timing.log",
+          "sha256": "71f0430df00e51d508afcf0d6874eb849893a27732d61c59e1835f646bb630ca"
+        }
+      }
+    }
+  ]
+}

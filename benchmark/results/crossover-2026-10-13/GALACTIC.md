@@ -1,6 +1,6 @@
 # What the old astronomical crossover does and does not mean
 
-The current [Wikipedia section](https://en.wikipedia.org/w/index.php?oldid=1379699280&title=Galactic_algorithm#Minimum_spanning_trees)
+The linked 11 October 2026 [Wikipedia revision](https://en.wikipedia.org/w/index.php?oldid=1379699280&title=Galactic_algorithm#Minimum_spanning_trees)
 links the implementation and the author's 2022 post for its numerical
 `9 × 10^151` threshold. That estimate is not a property proved about KKT.
 It is a consequence of extending two fitted implementation-time formulas far

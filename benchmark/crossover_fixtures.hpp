@@ -50,7 +50,7 @@ inline constexpr std::array<const char*, 5> families = {
 inline constexpr int gnm_attempt_limit = 32;
 
 inline bool supported_size(int n) {
-    return n >= 32 && n <= (1 << 22) && (n & (n - 1)) == 0;
+    return n >= 32 && n <= (1 << 23) && (n & (n - 1)) == 0;
 }
 
 inline std::array<int, 2> grid_dimensions(int n) {
@@ -64,7 +64,7 @@ inline int edge_count(const Spec& spec) {
     if (std::find(families.begin(), families.end(), spec.family) == families.end())
         throw std::runtime_error("unknown crossover family: " + spec.family);
     if (!supported_size(spec.n) || spec.density < 1 || spec.density > 512)
-        throw std::runtime_error("crossover requires dyadic n in [32,2^22] and density in [1,512]");
+        throw std::runtime_error("crossover requires dyadic n in [32,2^23] and density in [1,512]");
     if (spec.family == "gnm_random" && spec.density < 16)
         throw std::runtime_error("connected G(n,m) crossover requires density >= 16");
     const std::int64_t m = static_cast<std::int64_t>(spec.n) * spec.density;
@@ -107,12 +107,12 @@ inline bool connected(const Graph& edges, int n) {
 inline std::uint64_t distance_key(bool line, const Position& a, const Position& b) {
     const std::int64_t dx = a[0] - b[0];
     if (line) {
-        // At n=2^22 a line coordinate can exceed INT_MAX. Do not square it:
+        // At n=2^23 a line coordinate can exceed UINT_MAX. Do not square it:
         // Euclidean length in one dimension is its exact absolute difference.
         return static_cast<std::uint64_t>(dx < 0 ? -dx : dx);
     }
     const std::int64_t dy = a[1] - b[1];
-    // Grid axes have at most 2048 points, spaced 1024 with jitter +/-200.
+    // Grid axes have at most 4096 points, spaced 1024 with jitter +/-200.
     // Squared lengths therefore fit safely in int64_t throughout this domain.
     return static_cast<std::uint64_t>(dx * dx + dy * dy);
 }

@@ -315,7 +315,7 @@ int main() {
         for (const Spec& bad : {Spec{"unknown", 32, 2}, Spec{"line_metric", 16, 2},
              Spec{"line_random", 96, 2}, Spec{"grid2d_metric", 32, 1},
              Spec{"line_metric", 32, 16}, Spec{"grid2d_random", 128, 0},
-             Spec{"line_metric", 1 << 23, 16}, Spec{"line_metric", 1 << 22, 512},
+             Spec{"line_metric", 1 << 24, 16}, Spec{"line_metric", 1 << 22, 512},
              Spec{"gnm_random", 128, 15}, Spec{"gnm_random", 32, 16}}) {
             bool rejected = false;
             try { benchmark_crossover::edge_count(bad); }
@@ -325,10 +325,38 @@ int main() {
         require(benchmark_crossover::edge_count({"line_metric", 1 << 22, 16}) == 67108864,
                 "maximum planned line dimensions rejected");
         require(benchmark_crossover::grid_dimensions(1 << 22) == std::array<int, 2>{2048, 2048},
-                "maximum grid dimensions invalid");
+                "previous maximum grid dimensions invalid");
         const std::int64_t longest_line = ((std::int64_t{1} << 22) - 1) * 1024;
         require(benchmark_crossover::detail::distance_key(true, {0, 0}, {longest_line, 0}) ==
                 static_cast<std::uint64_t>(longest_line), "line distance truncated above INT_MAX");
+        // Boundary validation is allocation-free: never construct an 8M graph
+        // in this correctness suite, and retain all previous 4M checks above.
+        for (const char* family : benchmark_crossover::families) {
+            require(benchmark_crossover::edge_count({family, 1 << 23, 16}) == 134217728,
+                    "new maximum crossover dimensions rejected");
+            require(benchmark_crossover::edge_count({family, 1 << 23, 126}) == 1056964608,
+                    "valid density below unchanged weight sentinel rejected");
+            require_rejected([&] { benchmark_crossover::edge_count({family, 1 << 23, 127}); },
+                             "density above weight sentinel accepted");
+            require_rejected([&] { benchmark_crossover::edge_count({family, 1 << 24, 16}); },
+                             "crossover dimensions above 8M accepted");
+        }
+        require(benchmark_crossover::grid_dimensions(1 << 23) == std::array<int, 2>{4096, 2048},
+                "new maximum grid dimensions invalid");
+        const std::int64_t longest_extended_line = ((std::int64_t{1} << 23) - 1) * 1024;
+        require(longest_extended_line == 8589933568LL &&
+                benchmark_crossover::detail::distance_key(true, {0, 0}, {longest_extended_line, 0}) ==
+                static_cast<std::uint64_t>(longest_extended_line), "8M line distance truncated above UINT_MAX");
+        const std::int64_t maximum_dx = 4095LL * 1024 + 400;
+        const std::int64_t maximum_dy = 2047LL * 1024 + 400;
+        require(benchmark_crossover::detail::distance_key(false, {-200, -200},
+                {4095LL * 1024 + 200, 2047LL * 1024 + 200}) ==
+                static_cast<std::uint64_t>(maximum_dx * maximum_dx + maximum_dy * maximum_dy),
+                "extended grid squared distance overflowed");
+        for (const char* family : {"hierarchical_path", "hierarchical_tree", "low_path", "random_path",
+                                   "random_tree", "distance_path", "distance_tree"})
+            require_rejected([&] { benchmark_continuation::edge_count({family, 1 << 23, 16, 0}); },
+                             "old continuation family unexpectedly accepts 8M");
         check_component_moments();
         std::cout << "Validated " << fixtures << " crossover fixtures, " << mst_checks
                   << " KKT/certificate checks, geometry/twins, line-MST oracle, component moments, and invalid domains.\n";

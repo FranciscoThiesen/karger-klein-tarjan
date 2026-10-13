@@ -1,0 +1,20 @@
+{
+  "schema": "crossover_comparison_v1",
+  "campaigns": [
+    {
+      "name": "discovery",
+      "role": "screen",
+      "manifest": "discovery.csv",
+      "timing_csv": "discovery_timing.csv",
+      "timing_metadata": "discovery_timing.json",
+      "graph_seeds": [
+        3037
+      ],
+      "sampling_seeds": [
+        101
+      ],
+      "repetitions": 2,
+      "warmups": 1
+    }
+  ]
+}

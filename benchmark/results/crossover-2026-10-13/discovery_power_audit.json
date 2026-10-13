@@ -1,0 +1,23 @@
+{
+  "campaign": "discovery",
+  "validation": "pass",
+  "query": [
+    "pmset",
+    "-g",
+    "log"
+  ],
+  "query_exit": 0,
+  "query_stderr": "",
+  "query_utc": "2026-10-13T05:32:45.100927+00:00",
+  "started_utc": "2026-10-13T05:10:22.311357+00:00",
+  "finished_utc": "2026-10-13T05:31:32.036147+00:00",
+  "utc_seconds": 1269.72479,
+  "monotonic_seconds": 1269.758856791,
+  "difference_seconds": -0.03406679099998655,
+  "timed_calls": 76,
+  "warmup_calls": 38,
+  "flagged_calls": 0,
+  "rows_removed": 0,
+  "power_events": [],
+  "scope": "Timestamped Sleep/Wake/DarkWake events within capture interval or sleep intervals overlapping it; absence is not proof of power control. All clock records and raw times retained."
+}

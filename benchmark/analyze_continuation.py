@@ -72,7 +72,8 @@ def load_manifest(path):
             spec[field] = integer(raw[field], context + " " + field, 2**32 - 1)
         n, d, p, family = spec["n"], spec["density"], spec["intrusion_per_mille"], spec["family"]
         require(family in FAMILIES, f"{context}: unsupported family")
-        require(32 <= n <= 2**22 and n & (n - 1) == 0 and 1 <= d <= 512 and p <= 1000,
+        maximum_n = 2**23 if family in ("line_metric", "line_random", "grid2d_metric", "grid2d_random", "gnm_random") else 2**22
+        require(32 <= n <= maximum_n and n & (n - 1) == 0 and 1 <= d <= 512 and p <= 1000,
                 f"{context}: invalid dimensions or intrusion parameter")
         m = n * d
         require(m <= n * (n - 1) // 2 and m < 0x3f3f3f3f,

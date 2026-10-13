@@ -202,6 +202,22 @@ def main():
             reject(f"manifest {field}={value}",lambda f=field,v=value:mutate(manifest_rows,specs,0,f,v))
         reject("random control with intrusions",lambda:manifest_rows([{"family":"random_path","n":32,"density":2,"intrusion_per_mille":1}]))
         reject("invalid legacy density",lambda:manifest_rows([{"family":"legacy_random","n":32,"density":2,"intrusion_per_mille":0}]))
+        crossover_families=("line_metric","line_random","grid2d_metric","grid2d_random","gnm_random")
+        for family in crossover_families:
+            for n in (2**22,2**23):
+                accepted=manifest_rows([{"family":family,"n":n,"density":16,"intrusion_per_mille":0}])
+                check(next(iter(accepted.values()))["m"]==n*16,"new-family boundary edge count differs")
+            accepted=manifest_rows([{"family":family,"n":2**23,"density":126,"intrusion_per_mille":0}])
+            check(next(iter(accepted.values()))["m"]==1056964608,"valid high-density edge count differs")
+            checks.append({"case":f"{family} accepts old4M/new8M dimensions and unchanged weight boundary","status":"pass"})
+            reject(f"{family} rejects16M",lambda f=family:manifest_rows(
+                [{"family":f,"n":2**24,"density":16,"intrusion_per_mille":0}]))
+            reject(f"{family} rejects8M above weight sentinel",lambda f=family:manifest_rows(
+                [{"family":f,"n":2**23,"density":127,"intrusion_per_mille":0}]))
+        for family in analysis.FAMILIES:
+            if family not in crossover_families:
+                reject(f"old {family} retains4M vertex cap",lambda f=family:manifest_rows(
+                    [{"family":f,"n":2**23,"density":32 if f=="legacy_random" else 16,"intrusion_per_mille":0}]))
         distance_specs=[{"family":f,"n":32,"density":2,"intrusion_per_mille":0}
                         for f in ("distance_path","distance_tree")]
         distance_cases=manifest_rows(distance_specs)

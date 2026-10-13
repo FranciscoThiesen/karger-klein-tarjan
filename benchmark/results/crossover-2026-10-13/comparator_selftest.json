@@ -1,0 +1,26 @@
+{
+  "validation": "pass",
+  "positive_checks": 3,
+  "negative_checks": 16,
+  "checks": [
+    {"case": "full raw pipeline, inclusive .90, both metrics/runs, lower-size and control losses retained", "status": "pass"},
+    {"case": "secondary CPU graph at parity blocks success without excluding campaign", "status": "pass"},
+    {"case": "directional .95 gain and smaller pilot loss stay visible while strong criterion fails", "status": "pass"},
+    {"case": "missing selection", "status": "rejected", "message": "confirmation requires frozen selection"},
+    {"case": "third confirmation replacement", "status": "rejected", "message": "a raw campaign cannot be reused under multiple names"},
+    {"case": "stale binary", "status": "rejected", "message": "confirmation binary differs from the frozen binary"},
+    {"case": "stale pilot hash", "status": "rejected", "message": "frozen screening hashes differ from the complete declared screening set"},
+    {"case": "stale manifest hash", "status": "rejected", "message": "full confirmation manifests differ from their frozen hashes"},
+    {"case": "replacement output file", "status": "rejected", "message": "confirmation file differs from the frozen original output; replacements cannot rescue the rule"},
+    {"case": "freeze after primary", "status": "rejected", "message": "primary: confirmation began before selection freeze"},
+    {"case": "freeze before pilot finished", "status": "rejected", "message": "screen: screen did not finish before selection freeze"},
+    {"case": "nonadjacent selected sizes", "status": "rejected", "message": "selected sizes must be adjacent largest entries of the complete screened group menu"},
+    {"case": "duplicate candidate", "status": "rejected", "message": "duplicate group or invalid two-size selection"},
+    {"case": "three candidates", "status": "rejected", "message": "select one or two candidate family/density groups"},
+    {"case": "missing fresh graph", "status": "rejected", "message": "frozen protocol mismatch: graph_seeds"},
+    {"case": "weakened CPU rule", "status": "rejected", "message": "frozen criterion differs from the fixed wall-and-CPU rule"},
+    {"case": "changed seed protocol", "status": "rejected", "message": "/private/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/crossover-compare-test-9t1m6sd4/repeat.csv:10: unexpected algorithm or sampling seed"},
+    {"case": "same run twice", "status": "rejected", "message": "selection must name two distinct configured confirmation runs"},
+    {"case": "unknown selection field", "status": "rejected", "message": "unexpected frozen selection schema"}
+  ]
+}

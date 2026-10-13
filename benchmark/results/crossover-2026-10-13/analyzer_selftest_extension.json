@@ -1,0 +1,491 @@
+{
+  "checks": [
+    {
+      "case": "complete arbitrary manifest and all timing/work/trace matrices",
+      "status": "pass"
+    },
+    {
+      "case": "paired ratios differ from ratio of independent medians; nested medians and losses exact",
+      "status": "pass"
+    },
+    {
+      "case": "order-stratified paired medians preserve directional order effect",
+      "status": "pass"
+    },
+    {
+      "case": "same contraction_edges metric and trace volumes retained for both algorithms",
+      "status": "pass"
+    },
+    {
+      "case": "timing missing row",
+      "status": "rejected",
+      "message": "incomplete timing matrix: 63/64 rows"
+    },
+    {
+      "case": "timing duplicate row",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/timing.csv:66: duplicate timing row"
+    },
+    {
+      "case": "timing missing sampling seed",
+      "status": "rejected",
+      "message": "incomplete timing matrix: 32/64 rows"
+    },
+    {
+      "case": "timing missing graph seed",
+      "status": "rejected",
+      "message": "incomplete timing matrix: 32/64 rows"
+    },
+    {
+      "case": "timing family=random_tree",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/timing.csv:2: case differs from manifest"
+    },
+    {
+      "case": "timing n=128",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/timing.csv:2: case differs from manifest"
+    },
+    {
+      "case": "timing m=65",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/timing.csv:2: case differs from manifest"
+    },
+    {
+      "case": "timing density=3",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/timing.csv:2: case differs from manifest"
+    },
+    {
+      "case": "timing intrusion_per_mille=1",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/timing.csv:2: case differs from manifest"
+    },
+    {
+      "case": "timing graph_seed=999",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/timing.csv:2: unexpected graph seed"
+    },
+    {
+      "case": "timing kkt_seed=11",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/timing.csv:2: unexpected algorithm or sampling seed"
+    },
+    {
+      "case": "timing algorithm=kruskal",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/timing.csv:2: unexpected algorithm or sampling seed"
+    },
+    {
+      "case": "timing repetition=2",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/timing.csv:2: repetition or warmup protocol differs"
+    },
+    {
+      "case": "timing warmups=0",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/timing.csv:2: repetition or warmup protocol differs"
+    },
+    {
+      "case": "timing order=1",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/timing.csv:2: unbalanced or incorrect execution order"
+    },
+    {
+      "case": "timing elapsed_ns=0",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/timing.csv:2: invalid duration"
+    },
+    {
+      "case": "timing elapsed_ns=-1",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/timing.csv:2 elapsed_ns: expected an unsigned decimal integer"
+    },
+    {
+      "case": "timing elapsed_ns=nan",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/timing.csv:2 elapsed_ns: expected an unsigned decimal integer"
+    },
+    {
+      "case": "timing elapsed_ns=1.5",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/timing.csv:2 elapsed_ns: expected an unsigned decimal integer"
+    },
+    {
+      "case": "timing elapsed_ns=9223372036854775808",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/timing.csv:2: invalid duration"
+    },
+    {
+      "case": "timing validation=fail",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/timing.csv:2: failed exact-MST validation"
+    },
+    {
+      "case": "timing input_fingerprint=18446744073709551616",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/timing.csv:2 input_fingerprint: integer exceeds 18446744073709551615"
+    },
+    {
+      "case": "timing input_fingerprint=123",
+      "status": "rejected",
+      "message": "('hierarchical_path_n32_d2_p0', 42): inconsistent fingerprints"
+    },
+    {
+      "case": "timing topology_fingerprint=123",
+      "status": "rejected",
+      "message": "('hierarchical_path_n32_d2_p0', 42): inconsistent fingerprints"
+    },
+    {
+      "case": "paired weight controls have different topology",
+      "status": "rejected",
+      "message": "('path', 32, 2, 42): paired weight controls have different topology/order fingerprints"
+    },
+    {
+      "case": "odd repetition protocol",
+      "status": "rejected",
+      "message": "repetitions must be even, in [2,100]"
+    },
+    {
+      "case": "wrong ordered seed bank",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/timing.csv:2: unbalanced or incorrect execution order"
+    },
+    {
+      "case": "duplicate seed bank",
+      "status": "rejected",
+      "message": "seed bank must be nonempty and distinct"
+    },
+    {
+      "case": "empty seed bank",
+      "status": "rejected",
+      "message": "seed: expected an unsigned decimal integer"
+    },
+    {
+      "case": "overflow seed",
+      "status": "rejected",
+      "message": "seed: integer exceeds 4294967295"
+    },
+    {
+      "case": "work missing row",
+      "status": "rejected",
+      "message": "incomplete work matrix: 23/24 rows"
+    },
+    {
+      "case": "work duplicate row",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/work.csv:26: duplicate work row"
+    },
+    {
+      "case": "work 1 kkt_seed=999",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/work.csv:3: unexpected sampling seed"
+    },
+    {
+      "case": "work 0 kkt_seed=7",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/work.csv:2: deterministic compactor seed must be na"
+    },
+    {
+      "case": "work 1 initialized_slots=-1",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/work.csv:3 initialized_slots: expected an unsigned decimal integer"
+    },
+    {
+      "case": "work 1 total_work_proxy=1",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/work.csv:3: proxy mismatch"
+    },
+    {
+      "case": "work 1 verifier_calls=2",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/work.csv:3: inconsistent sampling/verifier counters"
+    },
+    {
+      "case": "work 1 path_query_visits=1",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/work.csv:3: inconsistent sampling/verifier counters"
+    },
+    {
+      "case": "work 1 kkt_calls=4",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/work.csv:3: invalid KKT recursion counters"
+    },
+    {
+      "case": "work 1 current_depth=1",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/work.csv:3: missing or unbalanced instrumentation"
+    },
+    {
+      "case": "work 1 hash_insert_items=1",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/work.csv:3: contraction/copy/output counter bounds violated"
+    },
+    {
+      "case": "work 1 root_after_two_vertices=32",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/work.csv:3: impossible root contraction sizes"
+    },
+    {
+      "case": "work 0 verifier_calls=1",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/work.csv:2: compactor has unexpected KKT/sampling/verifier work"
+    },
+    {
+      "case": "work 0 kkt_edge_visits=1",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/work.csv:2: compactor has unexpected KKT/sampling/verifier work"
+    },
+    {
+      "case": "work 0 contraction_edge_visits=1",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/work.csv:2: contraction/copy/output counter bounds violated"
+    },
+    {
+      "case": "trace missing graph",
+      "status": "rejected",
+      "message": "incomplete trace graph matrix"
+    },
+    {
+      "case": "trace missing round",
+      "status": "rejected",
+      "message": "('hierarchical_path_n32_d2_p0', 42): missing trace round"
+    },
+    {
+      "case": "trace duplicate round",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/trace.csv:46: duplicate contraction round"
+    },
+    {
+      "case": "trace input_edges=63",
+      "status": "rejected",
+      "message": "('hierarchical_path_n32_d2_p0', 42): broken trace chain or invalid connected input"
+    },
+    {
+      "case": "trace selected_edges=0",
+      "status": "rejected",
+      "message": "('hierarchical_path_n32_d2_p0', 42): selected-edge accounting mismatch"
+    },
+    {
+      "case": "trace output_vertices=17",
+      "status": "rejected",
+      "message": "('hierarchical_path_n32_d2_p0', 42): invalid contraction progress or output dimensions"
+    },
+    {
+      "case": "trace output_edges=64",
+      "status": "rejected",
+      "message": "('hierarchical_path_n32_d2_p0', 42): invalid contraction progress or output dimensions"
+    },
+    {
+      "case": "trace total_rounds=99",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/trace.csv:2: invalid contraction round"
+    },
+    {
+      "case": "trace total_selected_edges=30",
+      "status": "rejected",
+      "message": "('hierarchical_path_n32_d2_p0', 42): inconsistent total round/selected count"
+    },
+    {
+      "case": "trace validation=fail",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/trace.csv:2: failed exact-MST validation"
+    },
+    {
+      "case": "trace input fingerprint differs from timing/work",
+      "status": "rejected",
+      "message": "('hierarchical_path_n32_d2_p0', 42): inconsistent fingerprints"
+    },
+    {
+      "case": "compactor trace/work volume differs",
+      "status": "rejected",
+      "message": "hierarchical_path_n32_d2_p0/42: work/trace contraction volume mismatch"
+    },
+    {
+      "case": "KKT root/trace residual differs",
+      "status": "rejected",
+      "message": "hierarchical_path_n32_d2_p0/42/7: KKT root/trace mismatch"
+    },
+    {
+      "case": "empty manifest",
+      "status": "rejected",
+      "message": "empty manifest"
+    },
+    {
+      "case": "duplicate manifest case",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/manifest.csv:6: duplicate manifest case"
+    },
+    {
+      "case": "manifest family=unknown",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/manifest.csv:2: unsupported family"
+    },
+    {
+      "case": "manifest n=33",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/manifest.csv:2: invalid dimensions or intrusion parameter"
+    },
+    {
+      "case": "manifest density=512",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/manifest.csv:2: exceeds simple-graph or weight capacity"
+    },
+    {
+      "case": "manifest intrusion_per_mille=1001",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/manifest.csv:2: invalid dimensions or intrusion parameter"
+    },
+    {
+      "case": "random control with intrusions",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/manifest.csv:2: random/distance weight modes require p=0"
+    },
+    {
+      "case": "invalid legacy density",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/manifest.csv:2: invalid legacy control"
+    },
+    {
+      "case": "line_metric accepts old4M/new8M dimensions and unchanged weight boundary",
+      "status": "pass"
+    },
+    {
+      "case": "line_metric rejects16M",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/manifest.csv:2: invalid dimensions or intrusion parameter"
+    },
+    {
+      "case": "line_metric rejects8M above weight sentinel",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/manifest.csv:2: exceeds simple-graph or weight capacity"
+    },
+    {
+      "case": "line_random accepts old4M/new8M dimensions and unchanged weight boundary",
+      "status": "pass"
+    },
+    {
+      "case": "line_random rejects16M",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/manifest.csv:2: invalid dimensions or intrusion parameter"
+    },
+    {
+      "case": "line_random rejects8M above weight sentinel",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/manifest.csv:2: exceeds simple-graph or weight capacity"
+    },
+    {
+      "case": "grid2d_metric accepts old4M/new8M dimensions and unchanged weight boundary",
+      "status": "pass"
+    },
+    {
+      "case": "grid2d_metric rejects16M",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/manifest.csv:2: invalid dimensions or intrusion parameter"
+    },
+    {
+      "case": "grid2d_metric rejects8M above weight sentinel",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/manifest.csv:2: exceeds simple-graph or weight capacity"
+    },
+    {
+      "case": "grid2d_random accepts old4M/new8M dimensions and unchanged weight boundary",
+      "status": "pass"
+    },
+    {
+      "case": "grid2d_random rejects16M",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/manifest.csv:2: invalid dimensions or intrusion parameter"
+    },
+    {
+      "case": "grid2d_random rejects8M above weight sentinel",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/manifest.csv:2: exceeds simple-graph or weight capacity"
+    },
+    {
+      "case": "gnm_random accepts old4M/new8M dimensions and unchanged weight boundary",
+      "status": "pass"
+    },
+    {
+      "case": "gnm_random rejects16M",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/manifest.csv:2: invalid dimensions or intrusion parameter"
+    },
+    {
+      "case": "gnm_random rejects8M above weight sentinel",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/manifest.csv:2: exceeds simple-graph or weight capacity"
+    },
+    {
+      "case": "old hierarchical_path retains4M vertex cap",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/manifest.csv:2: invalid dimensions or intrusion parameter"
+    },
+    {
+      "case": "old hierarchical_tree retains4M vertex cap",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/manifest.csv:2: invalid dimensions or intrusion parameter"
+    },
+    {
+      "case": "old low_path retains4M vertex cap",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/manifest.csv:2: invalid dimensions or intrusion parameter"
+    },
+    {
+      "case": "old random_path retains4M vertex cap",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/manifest.csv:2: invalid dimensions or intrusion parameter"
+    },
+    {
+      "case": "old random_tree retains4M vertex cap",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/manifest.csv:2: invalid dimensions or intrusion parameter"
+    },
+    {
+      "case": "old distance_path retains4M vertex cap",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/manifest.csv:2: invalid dimensions or intrusion parameter"
+    },
+    {
+      "case": "old distance_tree retains4M vertex cap",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/manifest.csv:2: invalid dimensions or intrusion parameter"
+    },
+    {
+      "case": "old legacy_random retains4M vertex cap",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/manifest.csv:2: invalid dimensions or intrusion parameter"
+    },
+    {
+      "case": "both engineered distance families accept complete p=0 data and exact-halving traces",
+      "status": "pass"
+    },
+    {
+      "case": "distance_path rejects intrusions",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/manifest.csv:2: random/distance weight modes require p=0"
+    },
+    {
+      "case": "distance_path requires exact dyadic halving",
+      "status": "rejected",
+      "message": "('distance_path_n32_d2_p0', 42): exact hierarchy did not halve"
+    },
+    {
+      "case": "distance_tree rejects intrusions",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/manifest.csv:2: random/distance weight modes require p=0"
+    },
+    {
+      "case": "distance_tree requires exact dyadic halving",
+      "status": "rejected",
+      "message": "('distance_tree_n32_d2_p0', 42): exact hierarchy did not halve"
+    },
+    {
+      "case": "missing registered counter column",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-analysis-test-f1wfjr8p/work.csv: unexpected CSV header"
+    }
+  ],
+  "accepted": 10,
+  "rejected": 89
+}

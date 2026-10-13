@@ -136,7 +136,10 @@ std::vector<Spec> load_manifest(const std::string& path) {
         const auto fields = split(line);
         require(fields.size() == 4, "manifest must contain four fields per row");
         const auto n = number(fields[1]), density = number(fields[2]), intrusion = number(fields[3]);
-        require(n <= (1u<<22) && density <= 512 && intrusion <= 1000, "manifest range exceeded");
+        const bool crossover = std::find(benchmark_crossover::families.begin(),
+            benchmark_crossover::families.end(), fields[0]) != benchmark_crossover::families.end();
+        require(n <= (crossover ? (1u<<23) : (1u<<22)) && density <= 512 && intrusion <= 1000,
+                "manifest range exceeded");
         Spec spec{fields[0], static_cast<int>(n), static_cast<int>(density), static_cast<int>(intrusion)};
         require(n >= 32 && (n & (n-1)) == 0 && density >= 1, "invalid graph dimensions");
         require(unique.insert(case_id(spec)).second, "duplicate manifest case");
