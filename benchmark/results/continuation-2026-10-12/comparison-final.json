@@ -1,0 +1,152 @@
+{
+  "campaigns": [
+    {
+      "name": "discovery",
+      "role": "screen",
+      "manifest": "discovery.csv",
+      "timing_csv": "discovery_timing.csv",
+      "timing_metadata": "discovery_timing.json",
+      "graph_seeds": [
+        17,
+        42
+      ],
+      "sampling_seeds": [
+        0,
+        1
+      ],
+      "repetitions": 2,
+      "warmups": 1
+    },
+    {
+      "name": "extension",
+      "role": "screen",
+      "manifest": "extension.csv",
+      "timing_csv": "extension_fast_timing.csv",
+      "timing_metadata": "extension_fast_timing.json",
+      "work_csv": "extension_work.csv",
+      "trace_csv": "extension_trace.csv",
+      "graph_seeds": [
+        17,
+        42
+      ],
+      "sampling_seeds": [
+        0,
+        1
+      ],
+      "repetitions": 2,
+      "warmups": 1
+    },
+    {
+      "name": "million",
+      "role": "screen",
+      "manifest": "million_screen.csv",
+      "timing_csv": "million_timing.csv",
+      "timing_metadata": "million_timing.json",
+      "graph_seeds": [
+        17,
+        42
+      ],
+      "sampling_seeds": [
+        0,
+        1
+      ],
+      "repetitions": 2,
+      "warmups": 1,
+      "work_csv": "million_work.csv",
+      "trace_csv": "million_trace.csv"
+    },
+    {
+      "name": "large-random",
+      "role": "screen",
+      "manifest": "large_random_screen.csv",
+      "timing_csv": "large_random_timing.csv",
+      "timing_metadata": "large_random_timing.json",
+      "graph_seeds": [
+        17,
+        42
+      ],
+      "sampling_seeds": [
+        0,
+        1
+      ],
+      "repetitions": 2,
+      "warmups": 1
+    },
+    {
+      "name": "confirmation",
+      "role": "confirmation",
+      "manifest": "confirmation.csv",
+      "timing_csv": "confirmation_timing.csv",
+      "timing_metadata": "confirmation_timing.json",
+      "graph_seeds": [
+        2027,
+        4099,
+        8191,
+        104729,
+        131071
+      ],
+      "sampling_seeds": [
+        11,
+        29,
+        97
+      ],
+      "repetitions": 4,
+      "warmups": 1
+    },
+    {
+      "name": "confirmation-repeat",
+      "role": "confirmation",
+      "manifest": "confirmation_reverse.csv",
+      "timing_csv": "confirmation_repeat_timing.csv",
+      "timing_metadata": "confirmation_repeat_timing.json",
+      "graph_seeds": [
+        2027,
+        4099,
+        8191,
+        104729,
+        131071
+      ],
+      "sampling_seeds": [
+        11,
+        29,
+        97
+      ],
+      "repetitions": 4,
+      "warmups": 1
+    },
+    {
+      "name": "sensitivity",
+      "role": "sensitivity",
+      "manifest": "sensitivity.csv",
+      "timing_csv": "sensitivity_timing.csv",
+      "timing_metadata": "sensitivity_timing.json",
+      "graph_seeds": [
+        17,
+        42
+      ],
+      "sampling_seeds": [
+        0,
+        1
+      ],
+      "repetitions": 2,
+      "warmups": 1
+    }
+  ],
+  "confirmation": {
+    "primary": "confirmation",
+    "repeat": "confirmation-repeat",
+    "candidate_groups": [
+      {
+        "family": "hierarchical_path",
+        "density": 16,
+        "intrusion_per_mille": 0
+      },
+      {
+        "family": "hierarchical_tree",
+        "density": 16,
+        "intrusion_per_mille": 0
+      }
+    ]
+  },
+  "selection_file": "confirmation_selection.json"
+}

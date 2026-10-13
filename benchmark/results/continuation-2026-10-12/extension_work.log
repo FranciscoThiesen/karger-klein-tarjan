@@ -1,0 +1,90 @@
+work hierarchical_path_n262144_d64_p0 graph_seed=17
+setup_generation_ms=3641 setup_reference_and_certificate_ms=6799
+certified_mst_backbone_edges=262143 total=262143
+work hierarchical_path_n262144_d64_p0 graph_seed=42
+setup_generation_ms=3377 setup_reference_and_certificate_ms=5692
+certified_mst_backbone_edges=262143 total=262143
+work distance_path_n65536_d64_p0 graph_seed=17
+setup_generation_ms=591 setup_reference_and_certificate_ms=1009
+certified_mst_backbone_edges=63210 total=65535
+work distance_path_n65536_d64_p0 graph_seed=42
+setup_generation_ms=623 setup_reference_and_certificate_ms=1005
+certified_mst_backbone_edges=63222 total=65535
+work hierarchical_tree_n131072_d64_p0 graph_seed=17
+setup_generation_ms=1473 setup_reference_and_certificate_ms=2206
+certified_mst_backbone_edges=131071 total=131071
+work hierarchical_tree_n131072_d64_p0 graph_seed=42
+setup_generation_ms=1457 setup_reference_and_certificate_ms=2173
+certified_mst_backbone_edges=131071 total=131071
+work distance_tree_n131072_d64_p0 graph_seed=17
+setup_generation_ms=1458 setup_reference_and_certificate_ms=2214
+certified_mst_backbone_edges=127749 total=131071
+work distance_tree_n131072_d64_p0 graph_seed=42
+setup_generation_ms=1496 setup_reference_and_certificate_ms=2214
+certified_mst_backbone_edges=127670 total=131071
+work distance_path_n131072_d64_p0 graph_seed=17
+setup_generation_ms=1473 setup_reference_and_certificate_ms=2324
+certified_mst_backbone_edges=127733 total=131071
+work distance_path_n131072_d64_p0 graph_seed=42
+setup_generation_ms=1474 setup_reference_and_certificate_ms=2310
+certified_mst_backbone_edges=127669 total=131071
+work hierarchical_tree_n262144_d16_p0 graph_seed=17
+setup_generation_ms=585 setup_reference_and_certificate_ms=1336
+certified_mst_backbone_edges=262143 total=262143
+work hierarchical_tree_n262144_d16_p0 graph_seed=42
+setup_generation_ms=582 setup_reference_and_certificate_ms=1334
+certified_mst_backbone_edges=262143 total=262143
+work hierarchical_path_n131072_d64_p0 graph_seed=17
+setup_generation_ms=1490 setup_reference_and_certificate_ms=2498
+certified_mst_backbone_edges=131071 total=131071
+work hierarchical_path_n131072_d64_p0 graph_seed=42
+setup_generation_ms=1457 setup_reference_and_certificate_ms=1944
+certified_mst_backbone_edges=131071 total=131071
+work hierarchical_path_n262144_d16_p0 graph_seed=17
+setup_generation_ms=585 setup_reference_and_certificate_ms=1709
+certified_mst_backbone_edges=262143 total=262143
+work hierarchical_path_n262144_d16_p0 graph_seed=42
+setup_generation_ms=581 setup_reference_and_certificate_ms=1380
+certified_mst_backbone_edges=262143 total=262143
+work distance_path_n262144_d64_p0 graph_seed=17
+setup_generation_ms=3314 setup_reference_and_certificate_ms=6251
+certified_mst_backbone_edges=257388 total=262143
+work distance_path_n262144_d64_p0 graph_seed=42
+setup_generation_ms=3323 setup_reference_and_certificate_ms=6216
+certified_mst_backbone_edges=257396 total=262143
+work hierarchical_tree_n262144_d64_p0 graph_seed=17
+setup_generation_ms=3325 setup_reference_and_certificate_ms=5552
+certified_mst_backbone_edges=262143 total=262143
+work hierarchical_tree_n262144_d64_p0 graph_seed=42
+setup_generation_ms=3327 setup_reference_and_certificate_ms=5641
+certified_mst_backbone_edges=262143 total=262143
+work distance_tree_n262144_d64_p0 graph_seed=17
+setup_generation_ms=3336 setup_reference_and_certificate_ms=5585
+certified_mst_backbone_edges=257399 total=262143
+work distance_tree_n262144_d64_p0 graph_seed=42
+setup_generation_ms=3343 setup_reference_and_certificate_ms=5519
+certified_mst_backbone_edges=257402 total=262143
+work distance_tree_n65536_d64_p0 graph_seed=17
+setup_generation_ms=594 setup_reference_and_certificate_ms=966
+certified_mst_backbone_edges=63170 total=65535
+work distance_tree_n65536_d64_p0 graph_seed=42
+setup_generation_ms=599 setup_reference_and_certificate_ms=973
+certified_mst_backbone_edges=63161 total=65535
+      276.59 real       274.39 user         1.78 sys
+          3926163456  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+             1023145  page reclaims
+                   1  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   0  voluntary context switches
+                 975  involuntary context switches
+       1047337308566  instructions retired
+       1076391117110  cycles elapsed
+          3324398784  peak memory footprint

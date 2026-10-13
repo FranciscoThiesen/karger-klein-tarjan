@@ -1,0 +1,48 @@
+timing hierarchical_tree_n1048576_d16_p0 graph_seed=17
+setup_generation_ms=3408 setup_reference_and_certificate_ms=9871
+certified_mst_backbone_edges=1048575 total=1048575
+timing hierarchical_tree_n1048576_d16_p0 graph_seed=42
+setup_generation_ms=3383 setup_reference_and_certificate_ms=9782
+certified_mst_backbone_edges=1048575 total=1048575
+timing hierarchical_path_n524288_d16_p0 graph_seed=17
+setup_generation_ms=1471 setup_reference_and_certificate_ms=4905
+certified_mst_backbone_edges=524287 total=524287
+timing hierarchical_path_n524288_d16_p0 graph_seed=42
+setup_generation_ms=1462 setup_reference_and_certificate_ms=5040
+certified_mst_backbone_edges=524287 total=524287
+timing hierarchical_tree_n524288_d16_p0 graph_seed=17
+setup_generation_ms=1480 setup_reference_and_certificate_ms=3615
+certified_mst_backbone_edges=524287 total=524287
+timing hierarchical_tree_n524288_d16_p0 graph_seed=42
+setup_generation_ms=1460 setup_reference_and_certificate_ms=3577
+certified_mst_backbone_edges=524287 total=524287
+timing hierarchical_path_n1048576_d16_p0 graph_seed=17
+setup_generation_ms=3363 setup_reference_and_certificate_ms=12807
+certified_mst_backbone_edges=1048575 total=1048575
+timing hierarchical_path_n1048576_d16_p0 graph_seed=42
+setup_generation_ms=3350 setup_reference_and_certificate_ms=8515
+certified_mst_backbone_edges=1048575 total=1048575
+timing low_path_n1048576_d16_p0 graph_seed=17
+setup_generation_ms=3405 setup_reference_and_certificate_ms=12199
+certified_mst_backbone_edges=1048575 total=1048575
+timing low_path_n1048576_d16_p0 graph_seed=42
+setup_generation_ms=3346 setup_reference_and_certificate_ms=8427
+certified_mst_backbone_edges=1048575 total=1048575
+     1581.04 real       541.25 user         9.82 sys
+          3789078528  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+             1741108  page reclaims
+                   1  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  12  voluntary context switches
+                1915  involuntary context switches
+       1616224429190  instructions retired
+       2178330718396  cycles elapsed
+          3055848592  peak memory footprint

@@ -1,0 +1,19 @@
+{
+  "original_harness_revision": "575b86bdd7e00c34735e6d2a71f1f48de76a0d76",
+  "current_revision": "9cd0d43d150d5fbaaf23535c20f705cf5a5d8a58",
+  "comparison": "exact source substring from Identical continuation comment through measure() closing conditional, before prefix()",
+  "measure_and_compactor_identical": true,
+  "boundary_sha256": "0eb9a2b1264a90b93f3707233e3e527dbbbe49614f6eb6ba7d554836f6e48876",
+  "production_diff_from_8b90ec2": "empty",
+  "production_paths": [
+    "kkt",
+    "boruvka",
+    "kruskal",
+    "prim",
+    "verifier",
+    "graph_utils",
+    "union_find",
+    "lca",
+    "common"
+  ]
+}

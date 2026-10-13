@@ -1,0 +1,231 @@
+{
+  "validation": "pass",
+  "positive_checks": 6,
+  "negative_checks": 40,
+  "checks": [
+    {
+      "case": "complete screen and reversed held-out pair; inclusive .90; lower-size losses retained; drift preserved",
+      "status": "pass"
+    },
+    {
+      "case": "every campaign, pair and order stratum retained separately",
+      "status": "pass"
+    },
+    {
+      "case": "one graph exactly at parity blocks confirmation despite .85 case median",
+      "status": "pass"
+    },
+    {
+      "case": "one campaign just above .90 blocks confirmation without rounding into a pass",
+      "status": "pass"
+    },
+    {
+      "case": "a single successful tested size remains insufficient for confirmation",
+      "status": "pass"
+    },
+    {
+      "case": "frozen candidates, sizes, raw hashes, manifests, binary and pre-run timestamp agree",
+      "status": "pass"
+    },
+    {
+      "case": "repeat manifest not reversed",
+      "status": "rejected",
+      "message": "repeat: CSV record order differs from the manifest and balanced execution schedule"
+    },
+    {
+      "case": "duplicate campaign name",
+      "status": "rejected",
+      "message": "duplicate campaign name"
+    },
+    {
+      "case": "confirmation pair uses same run",
+      "status": "rejected",
+      "message": "confirmation requires two distinct configured campaigns"
+    },
+    {
+      "case": "missing declared confirmation",
+      "status": "rejected",
+      "message": "confirmation campaign lacks a declared comparison"
+    },
+    {
+      "case": "unknown campaign option",
+      "status": "rejected",
+      "message": "unexpected campaign configuration fields"
+    },
+    {
+      "case": "missing runner metadata",
+      "status": "rejected",
+      "message": "confirmation requires runner metadata"
+    },
+    {
+      "case": "repeat binary differs",
+      "status": "rejected",
+      "message": "confirmation binary_sha256 differs across runs"
+    },
+    {
+      "case": "repeat compiler profile differs",
+      "status": "rejected",
+      "message": "build or machine profile changed across campaigns"
+    },
+    {
+      "case": "repeat platform differs",
+      "status": "rejected",
+      "message": "build or machine profile changed across campaigns"
+    },
+    {
+      "case": "screen production code differs",
+      "status": "rejected",
+      "message": "listed production-library sources changed across campaigns"
+    },
+    {
+      "case": "runner failed",
+      "status": "rejected",
+      "message": "/private/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-compare-test-hjlabvcd/repeat_metadata.json: runner did not complete a successful timed campaign"
+    },
+    {
+      "case": "runner interrupted",
+      "status": "rejected",
+      "message": "/private/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-compare-test-hjlabvcd/repeat_metadata.json: runner did not complete a successful timed campaign"
+    },
+    {
+      "case": "runner wrong mode",
+      "status": "rejected",
+      "message": "/private/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-compare-test-hjlabvcd/repeat_metadata.json: runner did not complete a successful timed campaign"
+    },
+    {
+      "case": "runner row count differs",
+      "status": "rejected",
+      "message": "/private/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-compare-test-hjlabvcd/repeat_metadata.json: runner row/warmup count differs"
+    },
+    {
+      "case": "runner warmup count differs",
+      "status": "rejected",
+      "message": "/private/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-compare-test-hjlabvcd/repeat_metadata.json: runner row/warmup count differs"
+    },
+    {
+      "case": "boolean runner count",
+      "status": "rejected",
+      "message": "/private/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-compare-test-hjlabvcd/repeat_metadata.json: runner row/warmup count differs"
+    },
+    {
+      "case": "missing source inventory",
+      "status": "rejected",
+      "message": "/private/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-compare-test-hjlabvcd/repeat_metadata.json: missing production source fingerprints"
+    },
+    {
+      "case": "empty candidate group list",
+      "status": "rejected",
+      "message": "confirmation needs preselected candidate groups"
+    },
+    {
+      "case": "candidate not in manifest",
+      "status": "rejected",
+      "message": "candidate must be an unperturbed group in the frozen confirmation manifest"
+    },
+    {
+      "case": "duplicate candidate group",
+      "status": "rejected",
+      "message": "duplicate candidate group"
+    },
+    {
+      "case": "candidate boolean density",
+      "status": "rejected",
+      "message": "invalid candidate group types"
+    },
+    {
+      "case": "boolean protocol count",
+      "status": "rejected",
+      "message": "protocol counts must be integers"
+    },
+    {
+      "case": "duplicate seed bank",
+      "status": "rejected",
+      "message": "seed bank must be nonempty and distinct"
+    },
+    {
+      "case": "missing holdout sampling seed",
+      "status": "rejected",
+      "message": "/private/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-compare-test-hjlabvcd/repeat_timing.csv:18: unexpected algorithm or sampling seed"
+    },
+    {
+      "case": "unbalanced seed bank order",
+      "status": "rejected",
+      "message": "repeat: CSV record order differs from the manifest and balanced execution schedule"
+    },
+    {
+      "case": "missing timing row",
+      "status": "rejected",
+      "message": "incomplete timing matrix: 719/720 rows"
+    },
+    {
+      "case": "CSV records reordered despite correct order labels",
+      "status": "rejected",
+      "message": "repeat: CSV record order differs from the manifest and balanced execution schedule"
+    },
+    {
+      "case": "cross-run weighted fingerprint mismatch",
+      "status": "rejected",
+      "message": "('random_path_n128_d2_p0', 2027): inconsistent fingerprints"
+    },
+    {
+      "case": "cross-run topology fingerprint mismatch",
+      "status": "rejected",
+      "message": "('random_path_n128_d2_p0', 2027): inconsistent fingerprints"
+    },
+    {
+      "case": "wrong execution order",
+      "status": "rejected",
+      "message": "/private/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-compare-test-hjlabvcd/repeat_timing.csv:2: unbalanced or incorrect execution order"
+    },
+    {
+      "case": "failed exact MST validation",
+      "status": "rejected",
+      "message": "/private/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-compare-test-hjlabvcd/repeat_timing.csv:2: failed exact-MST validation"
+    },
+    {
+      "case": "raw timing hash differs from metadata",
+      "status": "rejected",
+      "message": "/private/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/continuation-compare-test-hjlabvcd/repeat_metadata.json: runner raw-data or manifest hash differs"
+    },
+    {
+      "case": "frozen selection mismatch: selected_sizes=[32, 128]",
+      "status": "rejected",
+      "message": "candidate sizes differ from frozen selection"
+    },
+    {
+      "case": "frozen selection mismatch: selected_groups=[]",
+      "status": "rejected",
+      "message": "candidate groups differ from frozen selection"
+    },
+    {
+      "case": "frozen selection mismatch: selection_evidence_sha256={}",
+      "status": "rejected",
+      "message": "selection evidence differs from the complete declared screening set"
+    },
+    {
+      "case": "frozen selection mismatch: manifest_sha256={}",
+      "status": "rejected",
+      "message": "frozen confirmation/sensitivity manifests differ"
+    },
+    {
+      "case": "frozen selection mismatch: binary_sha256=dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "status": "rejected",
+      "message": "confirmation binary differs from frozen selection"
+    },
+    {
+      "case": "frozen selection mismatch: graph_seeds=[17, 42]",
+      "status": "rejected",
+      "message": "frozen graph_seeds differs from confirmation protocol"
+    },
+    {
+      "case": "frozen selection mismatch: frozen_utc=2026-10-13T03:00:00+00:00",
+      "status": "rejected",
+      "message": "confirmation started before the recorded selection freeze"
+    },
+    {
+      "case": "frozen selection mismatch: frozen_utc=2026-10-13T00:00:00",
+      "status": "rejected",
+      "message": "selection freeze: timestamp must specify timezone"
+    }
+  ]
+}

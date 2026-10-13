@@ -144,6 +144,30 @@ def main():
               "one successful size cannot satisfy the two-size rule")
         results.append({"case":"a single successful tested size remains insufficient for confirmation","status":"pass"})
 
+        def add_selection(cfg,documents):
+            for index,name in enumerate(("primary","repeat")):
+                doc=documents[name]
+                keep=lambda r:r["family"]!="hierarchical_path" or r["n"]!=32
+                rows=[r for r in doc["rows"] if keep(r)]
+                specs=[r for r in doc["specs"] if keep(r)]
+                doc["metadata"].update(basic_validated_rows=len(rows),
+                    checked_warmup_calls=len(specs)*len(comparison.HOLDOUT_GRAPHS)*len(comparison.HOLDOUT_SAMPLING)*2,
+                    started_utc=f"2026-10-13T0{index+1}:00:00+00:00")
+                rewrite(doc,rows=rows,specs=specs)
+            frozen={"selected_groups":cfg["confirmation"]["candidate_groups"],"selected_sizes":[64,128],
+                "graph_seeds":list(comparison.HOLDOUT_GRAPHS),"sampling_seeds":list(comparison.HOLDOUT_SAMPLING),
+                "repetitions":4,"warmups":1,"campaigns":2,"frozen_utc":"2026-10-13T00:00:00+00:00",
+                "binary_sha256":"a"*64,
+                "selection_evidence_sha256":{documents["screen"]["timing_csv"].name:comparison.sha256(documents["screen"]["timing_csv"])},
+                "manifest_sha256":{documents[n]["manifest"].name:comparison.sha256(documents[n]["manifest"]) for n in ("primary","repeat")}}
+            cfg["selection_file"]="selection.json"
+            (folder/"selection.json").write_text(json.dumps(frozen))
+            return frozen
+        config,docs=fixture(folder)
+        add_selection(config,docs)
+        comparison.collect(config,folder)
+        results.append({"case":"frozen candidates, sizes, raw hashes, manifests, binary and pre-run timestamp agree","status":"pass"})
+
         def reject(name,mutation):
             cfg,documents=fixture(folder)
             mutation(cfg,documents)
@@ -196,6 +220,17 @@ def main():
             d["repeat"]["metadata"]["output_sha256"]="0"*64
             rewrite(d["repeat"],update_hashes=False)
         reject("raw timing hash differs from metadata",stale_hash)
+        def frozen_change(c,d,field,value):
+            frozen=add_selection(c,d)
+            frozen[field]=value
+            (folder/"selection.json").write_text(json.dumps(frozen))
+        for field,value in (("selected_sizes",[32,128]),("selected_groups",[]),
+                            ("selection_evidence_sha256",{}),("manifest_sha256",{}),
+                            ("binary_sha256","d"*64),("graph_seeds",[17,42]),
+                            ("frozen_utc","2026-10-13T03:00:00+00:00"),
+                            ("frozen_utc","2026-10-13T00:00:00")):
+            reject("frozen selection mismatch: "+field+"="+str(value),
+                   lambda c,d,f=field,v=value:frozen_change(c,d,f,v))
     print(json.dumps({"validation":"pass","positive_checks":sum(r["status"]=="pass" for r in results),
                       "negative_checks":sum(r["status"]=="rejected" for r in results),"checks":results},indent=2))
 

@@ -1,0 +1,39 @@
+/usr/bin/clang++ -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -std=c++17 -O3 -Wall -Wextra -march=native -I. test/simple_test.cpp .build/boruvka/boruvka.o .build/kruskal/kruskal.o .build/prim/prim.o .build/lca/lca.o .build/union_find/union_find.o .build/graph_utils/graph_utils.o .build/verifier/verifier_v2.o .build/kkt/kkt.o -L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib -o bin/test_runner
+/usr/bin/clang++ -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -std=c++17 -O3 -Wall -Wextra -march=native -I. test/regression_test.cpp .build/boruvka/boruvka.o .build/kruskal/kruskal.o .build/lca/lca.o .build/union_find/union_find.o .build/graph_utils/graph_utils.o .build/verifier/verifier_v2.o .build/kkt/kkt.o -L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib -o bin/regression_runner
+/usr/bin/clang++ -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -std=c++17 -O3 -Wall -Wextra -march=native -I. test/contraction_test.cpp .build/boruvka/boruvka.o .build/kruskal/kruskal.o .build/lca/lca.o .build/union_find/union_find.o .build/graph_utils/graph_utils.o .build/verifier/verifier_v2.o .build/kkt/kkt.o -L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib -o bin/contraction_runner
+bin/test_runner
+=== KKT MST Algorithm Tests ===
+
+Running small_triangle... PASSED
+Running small_path... PASSED
+Running complete_graph_4... PASSED
+Running prim_and_kkt_in_same_binary... PASSED
+Running random_small... PASSED
+Running random_medium... PASSED
+Running random_large... PASSED
+Running boruvka_comparison... PASSED
+
+=== Results ===
+Passed: 8
+Failed: 0
+bin/regression_runner
+PASS edge ID metadata and duplicate endpoint selection
+PASS empty graphs and isolated vertices
+PASS recursive hierarchical paths
+PASS deterministic random graphs
+PASS disconnected minimum spanning forests
+PASS parallel edges after forced contractions
+PASS exhaustive upper-median tables through height 20
+PASS forest heavy edges against direct path searches
+PASS heavy-edge positions preserve IDs and component mappings
+PASS contiguous queries preserve negative, equal, and empty paths
+PASS verifier empty inputs and components without queries
+PASS LCA queries outlive input adjacency
+PASS isolate compaction preserves inputs and handles empty samples
+PASS sampling consumes a continuing reproducible stream
+PASS KKT preserves global C random state
+15 passed, 0 failed
+bin/contraction_runner
+PASS 214 contraction cases against independent partition/order oracle
+bin/certificate_test
+PASS independent MST certificate positive and negative cases

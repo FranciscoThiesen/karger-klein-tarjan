@@ -1,0 +1,26 @@
+timing legacy_random_n262144_d32_p0 graph_seed=17
+setup_generation_ms=2757 setup_reference_and_certificate_ms=2262
+timing legacy_random_n262144_d32_p0 graph_seed=42
+setup_generation_ms=2652 setup_reference_and_certificate_ms=2323
+timing legacy_random_n262144_d128_p0 graph_seed=17
+setup_generation_ms=13034 setup_reference_and_certificate_ms=9475
+timing legacy_random_n262144_d128_p0 graph_seed=42
+setup_generation_ms=12965 setup_reference_and_certificate_ms=9564
+      256.07 real       251.06 user         5.00 sys
+          5078073344  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              782160  page reclaims
+                   1  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  15  voluntary context switches
+                  92  involuntary context switches
+        584594891414  instructions retired
+       1012577984582  cycles elapsed
+          4107390936  peak memory footprint

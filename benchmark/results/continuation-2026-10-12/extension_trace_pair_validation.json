@@ -1,0 +1,64 @@
+{
+  "validation": "pass",
+  "paired_graphs": 8,
+  "paired_rounds": 140,
+  "trace_sha256": "226f41e369c96be72529f5a3f5d817c0daa7515ac9d5dd8bb062bcad3f5b11f7",
+  "checks": [
+    {
+      "case": "hierarchical_path_n262144_d64_p0",
+      "distance_twin": "distance_path_n262144_d64_p0",
+      "graph_seed": 17,
+      "rounds": 18,
+      "validation": "pass"
+    },
+    {
+      "case": "hierarchical_path_n262144_d64_p0",
+      "distance_twin": "distance_path_n262144_d64_p0",
+      "graph_seed": 42,
+      "rounds": 18,
+      "validation": "pass"
+    },
+    {
+      "case": "hierarchical_tree_n131072_d64_p0",
+      "distance_twin": "distance_tree_n131072_d64_p0",
+      "graph_seed": 17,
+      "rounds": 17,
+      "validation": "pass"
+    },
+    {
+      "case": "hierarchical_tree_n131072_d64_p0",
+      "distance_twin": "distance_tree_n131072_d64_p0",
+      "graph_seed": 42,
+      "rounds": 17,
+      "validation": "pass"
+    },
+    {
+      "case": "hierarchical_path_n131072_d64_p0",
+      "distance_twin": "distance_path_n131072_d64_p0",
+      "graph_seed": 17,
+      "rounds": 17,
+      "validation": "pass"
+    },
+    {
+      "case": "hierarchical_path_n131072_d64_p0",
+      "distance_twin": "distance_path_n131072_d64_p0",
+      "graph_seed": 42,
+      "rounds": 17,
+      "validation": "pass"
+    },
+    {
+      "case": "hierarchical_tree_n262144_d64_p0",
+      "distance_twin": "distance_tree_n262144_d64_p0",
+      "graph_seed": 17,
+      "rounds": 18,
+      "validation": "pass"
+    },
+    {
+      "case": "hierarchical_tree_n262144_d64_p0",
+      "distance_twin": "distance_tree_n262144_d64_p0",
+      "graph_seed": 42,
+      "rounds": 18,
+      "validation": "pass"
+    }
+  ]
+}

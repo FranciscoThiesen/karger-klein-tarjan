@@ -1,0 +1,76 @@
+{
+  "campaigns": [
+    {
+      "name": "discovery",
+      "role": "screen",
+      "manifest": "discovery.csv",
+      "timing_csv": "discovery_timing.csv",
+      "timing_metadata": "discovery_timing.json",
+      "graph_seeds": [
+        17,
+        42
+      ],
+      "sampling_seeds": [
+        0,
+        1
+      ],
+      "repetitions": 2,
+      "warmups": 1
+    },
+    {
+      "name": "extension",
+      "role": "screen",
+      "manifest": "extension.csv",
+      "timing_csv": "extension_fast_timing.csv",
+      "timing_metadata": "extension_fast_timing.json",
+      "work_csv": "extension_work.csv",
+      "trace_csv": "extension_trace.csv",
+      "graph_seeds": [
+        17,
+        42
+      ],
+      "sampling_seeds": [
+        0,
+        1
+      ],
+      "repetitions": 2,
+      "warmups": 1
+    },
+    {
+      "name": "million",
+      "role": "screen",
+      "manifest": "million_screen.csv",
+      "timing_csv": "million_timing.csv",
+      "timing_metadata": "million_timing.json",
+      "graph_seeds": [
+        17,
+        42
+      ],
+      "sampling_seeds": [
+        0,
+        1
+      ],
+      "repetitions": 2,
+      "warmups": 1,
+      "work_csv": "million_work.csv",
+      "trace_csv": "million_trace.csv"
+    },
+    {
+      "name": "large-random",
+      "role": "screen",
+      "manifest": "large_random_screen.csv",
+      "timing_csv": "large_random_timing.csv",
+      "timing_metadata": "large_random_timing.json",
+      "graph_seeds": [
+        17,
+        42
+      ],
+      "sampling_seeds": [
+        0,
+        1
+      ],
+      "repetitions": 2,
+      "warmups": 1
+    }
+  ]
+}

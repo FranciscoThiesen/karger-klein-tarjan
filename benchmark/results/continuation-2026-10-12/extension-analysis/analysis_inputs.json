@@ -1,0 +1,42 @@
+{
+  "cases": 12,
+  "timing_rows": 192,
+  "work_rows": 72,
+  "trace_graphs": 24,
+  "labeled_graph_realizations": 24,
+  "distinct_input_fingerprints": 24,
+  "distinct_topology_order_fingerprints": 16,
+  "trace_rows": 416,
+  "graph_seeds": [
+    17,
+    42
+  ],
+  "sampling_seeds": [
+    0,
+    1
+  ],
+  "repetitions": 2,
+  "warmups": 1,
+  "checked_warmup_calls": 96,
+  "validation": "pass",
+  "inputs": {
+    "timing_csv": {
+      "path": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/continuation-2026-10-12/extension_fast_timing.csv",
+      "sha256": "4bbf932fadc20497d7c6c87377b49f9a1d8a5e48d0efc6c5f30dd7cc4bfdb4b9"
+    },
+    "manifest": {
+      "path": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/continuation-2026-10-12/extension.csv",
+      "sha256": "aec723970f4335f41ae0c91abbf6f69525353e5b66e6a282371786d546a99577"
+    },
+    "trace_csv": {
+      "path": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/continuation-2026-10-12/extension_trace.csv",
+      "sha256": "226f41e369c96be72529f5a3f5d817c0daa7515ac9d5dd8bb062bcad3f5b11f7"
+    },
+    "work_csv": {
+      "path": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/continuation-2026-10-12/extension_work.csv",
+      "sha256": "31954a252a3748dcac1e51394b65629130443f4cd556232f18dd27bb566ccaac"
+    }
+  },
+  "analysis_source_sha256": "4c54afa330169be9a9e6674b6538168c82a364a5d0a4f449c174f4ee137cb65f",
+  "work_registry_sha256": "fc3e8b9e2afba1e12c1e2c47b9c79a7ef4772c3a0185d36ca80f85f25085d9ef"
+}

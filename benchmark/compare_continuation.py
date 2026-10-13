@@ -11,6 +11,7 @@ sizes, separately in both campaigns. The second manifest must reverse the first.
 """
 import argparse
 import collections
+from datetime import datetime
 import hashlib
 import json
 import math
@@ -148,7 +149,7 @@ def validate_confirmation(spec, campaigns):
 
 
 def collect(config, folder):
-    base.require(isinstance(config, dict) and {"campaigns"} <= set(config) <= {"campaigns", "confirmation"},
+    base.require(isinstance(config, dict) and {"campaigns"} <= set(config) <= {"campaigns", "confirmation", "selection_file"},
                  "unexpected top-level comparison configuration fields")
     base.require(isinstance(config["campaigns"], list) and config["campaigns"], "empty campaign list")
     campaigns = [load_campaign(c,folder) for c in config["campaigns"]]
@@ -167,7 +168,64 @@ def collect(config, folder):
     confirmation = validate_confirmation(config["confirmation"], campaigns) if "confirmation" in config else None
     base.require(confirmation is not None or all(c["role"] != "confirmation" for c in campaigns),
                  "confirmation campaign lacks a declared comparison")
+    if "selection_file" in config:
+        base.require(confirmation is not None and isinstance(config["selection_file"],str) and config["selection_file"],
+                     "selection_file requires a declared confirmation pair and a path")
+        validate_selection(folder/config["selection_file"],campaigns,confirmation)
     return campaigns, confirmation
+
+
+def timestamp(value, context):
+    base.require(isinstance(value,str), context+": missing timestamp")
+    result=datetime.fromisoformat(value.replace("Z","+00:00"))
+    base.require(result.tzinfo is not None, context+": timestamp must specify timezone")
+    return result
+
+
+def validate_selection(path, campaigns, confirmation):
+    """Bind the declared comparison to the archived pre-timing selection record.
+
+    The record and runner timestamps are evidence from the harness, not an
+    independent clock or an authenticated history; the git freeze remains part
+    of the provenance audit.
+    """
+    selection=json.loads(path.read_text())
+    a,b,candidates=confirmation
+    base.require(isinstance(selection,dict), "selection record must be an object")
+    raw_groups=selection.get("selected_groups")
+    base.require(isinstance(raw_groups,list) and all(isinstance(r,dict) and set(r)==set(GROUP_FIELDS)
+                 and isinstance(r["family"],str) and type(r["density"]) is int
+                 and type(r["intrusion_per_mille"]) is int for r in raw_groups),
+                 "invalid frozen candidate groups")
+    groups=[group(r) for r in raw_groups]
+    base.require(len(groups)==len(set(groups)) and set(groups)==candidates, "candidate groups differ from frozen selection")
+    sizes=selection.get("selected_sizes")
+    base.require(isinstance(sizes,list) and len(sizes)==2 and all(type(n) is int for n in sizes)
+                 and sizes==sorted(set(sizes)), "frozen selection must name two distinct ascending sizes")
+    for key in candidates:
+        base.require(sorted(r["n"] for r in a["cases"].values() if group(r)==key)==sizes,
+                     "candidate sizes differ from frozen selection")
+    for field,expected in (("graph_seeds",list(HOLDOUT_GRAPHS)),("sampling_seeds",list(HOLDOUT_SAMPLING)),
+                           ("repetitions",4),("warmups",1),("campaigns",2)):
+        actual=selection.get(field)
+        base.require(actual==expected and (type(actual) is list if isinstance(expected,list) else type(actual) is int),
+                     f"frozen {field} differs from confirmation protocol")
+        if isinstance(expected,list):base.require(all(type(x) is int for x in actual),f"frozen {field} requires integers")
+    screens={c["paths"]["timing_csv"].name:sha256(c["paths"]["timing_csv"])
+             for c in campaigns if c["role"]=="screen"}
+    base.require(len(screens)==sum(c["role"]=="screen" for c in campaigns) and
+                 selection.get("selection_evidence_sha256")==screens,
+                 "selection evidence differs from the complete declared screening set")
+    manifests={c["paths"]["manifest"].name:sha256(c["paths"]["manifest"])
+               for c in campaigns if c["role"] in ("confirmation","sensitivity")}
+    base.require(len(manifests)==sum(c["role"] in ("confirmation","sensitivity") for c in campaigns) and
+                 selection.get("manifest_sha256")==manifests, "frozen confirmation/sensitivity manifests differ")
+    frozen=timestamp(selection.get("frozen_utc"), "selection freeze")
+    for c in (a,b):
+        base.require(c["provenance"]["binary_sha256"]==selection.get("binary_sha256"),
+                     "confirmation binary differs from frozen selection")
+        started=timestamp(c["provenance"].get("started_utc"), c["name"]+" runner start")
+        base.require(started>frozen, "confirmation started before the recorded selection freeze")
 
 
 def confirmation_tables(confirmation):
@@ -239,8 +297,10 @@ def plots(output, campaigns, tables):
     groups = sorted({group(r) for r in tables["case_summary"]})
     colors = {c["name"]:plt.get_cmap("tab10")(i%10) for i,c in enumerate(campaigns)}
     def pages(kind, label):
-        for page in range(math.ceil(len(groups)/6)):
-            shown = groups[page*6:(page+1)*6]
+        plotted_groups = groups if kind != "work" else sorted({group(r) for r in
+            [*tables["work_summary"], *tables["trace_summary"]]})
+        for page in range(math.ceil(len(plotted_groups)/6)):
+            shown = plotted_groups[page*6:(page+1)*6]
             ncols=min(3,len(shown));nrows=math.ceil(len(shown)/ncols)
             fig,axes=plt.subplots(nrows,ncols,figsize=(5*ncols,3.7*nrows+1),squeeze=False)
             for axis in axes.flat[len(shown):]:axis.set_visible(False)
@@ -322,7 +382,9 @@ def write_report(output, campaigns, tables, confirmed):
             "A selected group passes only when its case ratio is ≤0.90 and every graph ratio is <1 at each of its two largest "
             "tested sizes, separately in both runs. Adjacent means adjacent entries in the frozen size menu. "
             "Runs use fresh seeds and reverse manifest order; they are not pooled. This descriptive criterion is not a significance test. "
-            "The analyzer checks the supplied candidate list; its hash does not by itself prove that selection preceded timing.","",
+            "When a frozen selection record is supplied, its candidates, sizes, screen/manifest hashes and binary must match, and "
+            "runner start timestamps must follow its freeze timestamp. These recorded timestamps complement the pre-timing git commit; "
+            "they are not an independent authentication of historical order.","",
             "| Family | m/n | Intrusion ‰ of n | Selected | Two largest sizes | Numeric rule | Confirmed selected group |",
             "|---|---:|---:|---|---|---|---|"]
         for r in confirmed[1]:
@@ -367,6 +429,9 @@ def main():
               "cross_screen_harness_body_equivalence":"requires separate source audit when harness hashes differ",
               "criterion":{"maximum_case_ratio":THRESHOLD,"every_graph_ratio_strictly_below":1,
                            "sizes":"two largest tested sizes per group", "both_runs_required":True},"campaigns":[]}
+    if "selection_file" in config:
+        selection_path=(args.config.resolve().parent/config["selection_file"]).resolve()
+        metadata["frozen_selection"]={"path":str(selection_path),"sha256":sha256(selection_path)}
     for c in campaigns:
         metadata["campaigns"].append({"name":c["name"],"role":c["role"],"graph_seeds":c["graph_seeds"],
             "sampling_seeds":c["sampling_seeds"],"repetitions":c["repetitions"],"warmups":c["warmups"],

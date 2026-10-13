@@ -1,0 +1,80 @@
+[
+  {
+    "case": "work rejects timing",
+    "status": "rejected",
+    "exit_status": 1,
+    "stderr": "continuation search: instrumented binary supports only --mode work"
+  },
+  {
+    "case": "work rejects trace",
+    "status": "rejected",
+    "exit_status": 1,
+    "stderr": "continuation search: instrumented binary supports only --mode work"
+  },
+  {
+    "case": "native rejects work",
+    "status": "rejected",
+    "exit_status": 1,
+    "stderr": "continuation search: native mode must be timing or trace"
+  },
+  {
+    "case": "native rejects unknown mode",
+    "status": "rejected",
+    "exit_status": 1,
+    "stderr": "continuation search: native mode must be timing or trace"
+  },
+  {
+    "case": "odd reps",
+    "status": "rejected",
+    "exit_status": 1,
+    "stderr": "continuation search: positive even repetitions required for balanced order"
+  },
+  {
+    "case": "zero reps",
+    "status": "rejected",
+    "exit_status": 1,
+    "stderr": "continuation search: positive even repetitions required for balanced order"
+  },
+  {
+    "case": "zero warmups",
+    "status": "rejected",
+    "exit_status": 1,
+    "stderr": "continuation search: at least one checked warmup required"
+  },
+  {
+    "case": "duplicate seeds",
+    "status": "rejected",
+    "exit_status": 1,
+    "stderr": "continuation search: duplicate seed"
+  },
+  {
+    "case": "empty seed field",
+    "status": "rejected",
+    "exit_status": 1,
+    "stderr": "continuation search: invalid unsigned integer:"
+  },
+  {
+    "case": "unsigned overflow",
+    "status": "rejected",
+    "exit_status": 1,
+    "stderr": "continuation search: integer out of range"
+  },
+  {
+    "case": "negative seed",
+    "status": "rejected",
+    "exit_status": 1,
+    "stderr": "continuation search: invalid unsigned integer: -1"
+  },
+  {
+    "case": "unknown family",
+    "status": "rejected",
+    "exit_status": 1,
+    "stderr": "trace unknown_n32_d1_p0 graph_seed=17\ncontinuation search: unknown continuation family: unknown"
+  },
+  {
+    "case": "duplicate cases",
+    "status": "rejected",
+    "exit_status": 1,
+    "stderr": "continuation search: duplicate manifest case"
+  }
+]

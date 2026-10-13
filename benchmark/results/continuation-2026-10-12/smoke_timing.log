@@ -1,0 +1,34 @@
+timing hierarchical_path_n256_d4_p0 graph_seed=17
+timing hierarchical_path_n256_d4_p100 graph_seed=17
+timing hierarchical_path_n256_d16_p0 graph_seed=17
+timing hierarchical_path_n256_d16_p100 graph_seed=17
+timing hierarchical_tree_n256_d4_p0 graph_seed=17
+timing hierarchical_tree_n256_d4_p100 graph_seed=17
+timing hierarchical_tree_n256_d16_p0 graph_seed=17
+timing hierarchical_tree_n256_d16_p100 graph_seed=17
+timing low_path_n256_d4_p0 graph_seed=17
+timing low_path_n256_d16_p0 graph_seed=17
+timing random_path_n256_d4_p0 graph_seed=17
+timing random_path_n256_d16_p0 graph_seed=17
+timing random_tree_n256_d4_p0 graph_seed=17
+timing random_tree_n256_d16_p0 graph_seed=17
+timing legacy_random_n256_d4_p0 graph_seed=17
+timing legacy_random_n256_d32_p0 graph_seed=17
+        0.38 real         0.03 user         0.00 sys
+             5144576  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                 483  page reclaims
+                   1  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   0  voluntary context switches
+                 100  involuntary context switches
+           190387322  instructions retired
+            95861581  cycles elapsed
+             4587880  peak memory footprint
