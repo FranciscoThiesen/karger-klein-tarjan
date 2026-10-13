@@ -1,0 +1,905 @@
+{
+  "generated_utc": "2026-10-13T04:12:51.518259+00:00",
+  "scope": "Four completed exploratory screens, both frozen confirmation runs, and sensitivity; all 2,944 recorded solver calls retained.",
+  "validation": "pass",
+  "rows_removed": 0,
+  "rows_adjusted": 0,
+  "solver_clock": "std::chrono::steady_clock, measured in integer nanoseconds",
+  "runner_clock": "Python time.monotonic; metadata field wall_seconds_including_setup",
+  "utc_clock": "datetime.now(timezone.utc) before and after child execution",
+  "third_clock": "/usr/bin/time -l real seconds, printed to 0.01 seconds",
+  "clock_limitations": "Names do not establish equal suspend behavior. Here UTC and time real include long gaps absent from runner monotonic. Native timed-call outliers are consistent with including suspended time. No per-call UTC timestamps or warmup durations were retained.",
+  "outlier_diagnostic": "Each recorded call divided by the median of all calls for the same campaign/case/graph seed/algorithm, pooling sampling seeds and repetitions. Flag at >=1.5 only as a descriptive diagnostic; no statistical classification, adjustment or exclusion.",
+  "power_query": {
+    "command": [
+      "/usr/bin/pmset",
+      "-g",
+      "log"
+    ],
+    "exit_status": 0,
+    "retention": "Only Sleep, Wake and DarkWake event lines within the seven exact capture UTC intervals; unrelated system records omitted."
+  },
+  "campaigns": [
+    {
+      "name": "discovery",
+      "metadata": "discovery_timing.json",
+      "raw_csv": "discovery_timing.csv",
+      "log": "discovery_timing.log",
+      "metadata_sha256": "aaea3f6b0accfb8fe74a1c3945e7dc1b651a44da9e286fa63c3eb1e8eb1a1d85",
+      "raw_sha256": "b068fa18db1dffd3ecb8f3eba02a44301b360df845fb6f40633d574deb51a5cb",
+      "log_sha256": "da25dcc75930d4260d79631312ac2c3f3a7268c27468d10c01ec4edb695b013a",
+      "raw_and_log_hashes_match_metadata": true,
+      "started_utc": "2026-10-12T23:31:35.484843+00:00",
+      "finished_utc": "2026-10-12T23:34:33.405723+00:00",
+      "utc_elapsed_seconds": 177.92088,
+      "runner_monotonic_seconds": 177.920294875,
+      "utc_minus_monotonic_seconds": 0.0005851250000148411,
+      "time_real_seconds": 177.91,
+      "time_user_seconds": 177.23,
+      "time_sys_seconds": 0.66,
+      "time_real_minus_utc_seconds": -0.010880000000014434,
+      "recorded_calls": 384,
+      "checked_warmups": 192,
+      "recorded_solver_seconds_sum": 55.510890459,
+      "max_recorded_solver_seconds": 1.281528166,
+      "max_relative_to_group_median": 1.4630150745321122,
+      "flagged_observations": [],
+      "top_three_relative_observations": [
+        {
+          "case_id": "hierarchical_path_n16384_d16_p0",
+          "graph_seed": "42",
+          "kkt_seed": "0",
+          "repetition": "1",
+          "algorithm": "compacting_boruvka",
+          "order": "1",
+          "elapsed_ns": 23410375,
+          "elapsed_seconds": 0.023410375,
+          "group_median_seconds": 0.0160014585,
+          "relative_to_group_median": 1.4630150745321122,
+          "excluded": false
+        },
+        {
+          "case_id": "hierarchical_path_n65536_d64_p0",
+          "graph_seed": "42",
+          "kkt_seed": "0",
+          "repetition": "0",
+          "algorithm": "compacting_boruvka",
+          "order": "0",
+          "elapsed_ns": 752413083,
+          "elapsed_seconds": 0.752413083,
+          "group_median_seconds": 0.647876375,
+          "relative_to_group_median": 1.161352863036563,
+          "excluded": false
+        },
+        {
+          "case_id": "legacy_random_n16384_d128_p0",
+          "graph_seed": "42",
+          "kkt_seed": "1",
+          "repetition": "0",
+          "algorithm": "compacting_boruvka",
+          "order": "1",
+          "elapsed_ns": 132300750,
+          "elapsed_seconds": 0.13230075,
+          "group_median_seconds": 0.1146706455,
+          "relative_to_group_median": 1.1537455764997853,
+          "excluded": false
+        }
+      ],
+      "sleep_wake_events": [],
+      "logged_sleep_seconds": 0,
+      "setup_generation_seconds_sum": null,
+      "setup_reference_seconds_sum": null,
+      "setup_max_single_phase_seconds": null,
+      "rows_removed": 0,
+      "rows_adjusted": 0
+    },
+    {
+      "name": "extension",
+      "metadata": "extension_fast_timing.json",
+      "raw_csv": "extension_fast_timing.csv",
+      "log": "extension_fast_timing.log",
+      "metadata_sha256": "d960c87421ec0531d0168cfb8b075273f5abeb865589054046869632241f40cd",
+      "raw_sha256": "4bbf932fadc20497d7c6c87377b49f9a1d8a5e48d0efc6c5f30dd7cc4bfdb4b9",
+      "log_sha256": "b7a81577f17e8cb6c25724dfc67ab63761cad2eb45f41ab573e08b25e589b534",
+      "raw_and_log_hashes_match_metadata": true,
+      "started_utc": "2026-10-12T23:45:54.557959+00:00",
+      "finished_utc": "2026-10-12T23:58:02.325907+00:00",
+      "utc_elapsed_seconds": 727.767948,
+      "runner_monotonic_seconds": 727.766691917,
+      "utc_minus_monotonic_seconds": 0.0012560830000438727,
+      "time_real_seconds": 727.76,
+      "time_user_seconds": 721.69,
+      "time_sys_seconds": 5.63,
+      "time_real_minus_utc_seconds": -0.0079480000000558,
+      "recorded_calls": 192,
+      "checked_warmups": 96,
+      "recorded_solver_seconds_sum": 399.679664042,
+      "max_recorded_solver_seconds": 4.513544416,
+      "max_relative_to_group_median": 1.1318079033297772,
+      "flagged_observations": [],
+      "top_three_relative_observations": [
+        {
+          "case_id": "hierarchical_tree_n131072_d64_p0",
+          "graph_seed": "42",
+          "kkt_seed": "1",
+          "repetition": "0",
+          "algorithm": "compacting_boruvka",
+          "order": "1",
+          "elapsed_ns": 1789627625,
+          "elapsed_seconds": 1.789627625,
+          "group_median_seconds": 1.581211458,
+          "relative_to_group_median": 1.1318079033297772,
+          "excluded": false
+        },
+        {
+          "case_id": "hierarchical_tree_n262144_d16_p0",
+          "graph_seed": "42",
+          "kkt_seed": "0",
+          "repetition": "1",
+          "algorithm": "compacting_boruvka",
+          "order": "1",
+          "elapsed_ns": 804019000,
+          "elapsed_seconds": 0.804019,
+          "group_median_seconds": 0.7500347085,
+          "relative_to_group_median": 1.0719757244407577,
+          "excluded": false
+        },
+        {
+          "case_id": "hierarchical_path_n262144_d16_p0",
+          "graph_seed": "17",
+          "kkt_seed": "1",
+          "repetition": "1",
+          "algorithm": "kkt",
+          "order": "0",
+          "elapsed_ns": 707334709,
+          "elapsed_seconds": 0.707334709,
+          "group_median_seconds": 0.6697107295,
+          "relative_to_group_median": 1.0561794485928122,
+          "excluded": false
+        }
+      ],
+      "sleep_wake_events": [],
+      "logged_sleep_seconds": 0,
+      "setup_generation_seconds_sum": 43.681,
+      "setup_reference_seconds_sum": 75.934,
+      "setup_max_single_phase_seconds": 6.921,
+      "rows_removed": 0,
+      "rows_adjusted": 0
+    },
+    {
+      "name": "large-random",
+      "metadata": "large_random_timing.json",
+      "raw_csv": "large_random_timing.csv",
+      "log": "large_random_timing.log",
+      "metadata_sha256": "5fdd0c6090758b0f90ea0582e3131cf6209c7ad0515abd41e5c4b270593497d5",
+      "raw_sha256": "390d5f1b45fe6209a00ffff59425276f88ee76d612ef778a5b0ea13ea2195847",
+      "log_sha256": "cd7e27e4f7fa97cb749430fa1fb4efc13472d32e1d5e16e12a541237a37b3c56",
+      "raw_and_log_hashes_match_metadata": true,
+      "started_utc": "2026-10-13T00:35:51.023294+00:00",
+      "finished_utc": "2026-10-13T00:40:07.097531+00:00",
+      "utc_elapsed_seconds": 256.074237,
+      "runner_monotonic_seconds": 256.075516959,
+      "utc_minus_monotonic_seconds": -0.001279959000044073,
+      "time_real_seconds": 256.07,
+      "time_user_seconds": 251.06,
+      "time_sys_seconds": 5.0,
+      "time_real_minus_utc_seconds": -0.004236999999989166,
+      "recorded_calls": 32,
+      "checked_warmups": 16,
+      "recorded_solver_seconds_sum": 131.671245666,
+      "max_recorded_solver_seconds": 7.101552667,
+      "max_relative_to_group_median": 1.0526838024307608,
+      "flagged_observations": [],
+      "top_three_relative_observations": [
+        {
+          "case_id": "legacy_random_n262144_d32_p0",
+          "graph_seed": "17",
+          "kkt_seed": "0",
+          "repetition": "1",
+          "algorithm": "compacting_boruvka",
+          "order": "0",
+          "elapsed_ns": 1396501166,
+          "elapsed_seconds": 1.396501166,
+          "group_median_seconds": 1.3266102915,
+          "relative_to_group_median": 1.0526838024307608,
+          "excluded": false
+        },
+        {
+          "case_id": "legacy_random_n262144_d32_p0",
+          "graph_seed": "42",
+          "kkt_seed": "1",
+          "repetition": "0",
+          "algorithm": "kkt",
+          "order": "0",
+          "elapsed_ns": 1401376333,
+          "elapsed_seconds": 1.401376333,
+          "group_median_seconds": 1.362934375,
+          "relative_to_group_median": 1.0282052890477578,
+          "excluded": false
+        },
+        {
+          "case_id": "legacy_random_n262144_d32_p0",
+          "graph_seed": "17",
+          "kkt_seed": "0",
+          "repetition": "0",
+          "algorithm": "compacting_boruvka",
+          "order": "1",
+          "elapsed_ns": 1362276250,
+          "elapsed_seconds": 1.36227625,
+          "group_median_seconds": 1.3266102915,
+          "relative_to_group_median": 1.026885030764892,
+          "excluded": false
+        }
+      ],
+      "sleep_wake_events": [],
+      "logged_sleep_seconds": 0,
+      "setup_generation_seconds_sum": 31.408,
+      "setup_reference_seconds_sum": 23.624,
+      "setup_max_single_phase_seconds": 13.034,
+      "rows_removed": 0,
+      "rows_adjusted": 0
+    },
+    {
+      "name": "million",
+      "metadata": "million_timing.json",
+      "raw_csv": "million_timing.csv",
+      "log": "million_timing.log",
+      "metadata_sha256": "39f925fefdee04b7fe71fb6d9f5afa27055c27a69685725616a46c1e17d86ac4",
+      "raw_sha256": "4a7c0b8df1658c7868397648d078f424ffbc9be938fb7f7a9aa40f93df016d1c",
+      "log_sha256": "0c5efa37f3ce203df276b5f589a0fa2d998e6e6a81813a2908cab4f7253b7554",
+      "raw_and_log_hashes_match_metadata": true,
+      "started_utc": "2026-10-13T00:09:29.991897+00:00",
+      "finished_utc": "2026-10-13T00:35:50.954544+00:00",
+      "utc_elapsed_seconds": 1580.962647,
+      "runner_monotonic_seconds": 551.3203315410001,
+      "utc_minus_monotonic_seconds": 1029.642315459,
+      "time_real_seconds": 1581.04,
+      "time_user_seconds": 541.25,
+      "time_sys_seconds": 9.82,
+      "time_real_minus_utc_seconds": 0.07735299999990275,
+      "recorded_calls": 80,
+      "checked_warmups": 40,
+      "recorded_solver_seconds_sum": 293.23514846,
+      "max_recorded_solver_seconds": 5.675122125,
+      "max_relative_to_group_median": 1.0381093690610592,
+      "flagged_observations": [],
+      "top_three_relative_observations": [
+        {
+          "case_id": "low_path_n1048576_d16_p0",
+          "graph_seed": "17",
+          "kkt_seed": "1",
+          "repetition": "0",
+          "algorithm": "compacting_boruvka",
+          "order": "0",
+          "elapsed_ns": 4682307833,
+          "elapsed_seconds": 4.682307833,
+          "group_median_seconds": 4.510418625,
+          "relative_to_group_median": 1.0381093690610592,
+          "excluded": false
+        },
+        {
+          "case_id": "hierarchical_tree_n1048576_d16_p0",
+          "graph_seed": "42",
+          "kkt_seed": "0",
+          "repetition": "0",
+          "algorithm": "compacting_boruvka",
+          "order": "0",
+          "elapsed_ns": 5675122125,
+          "elapsed_seconds": 5.675122125,
+          "group_median_seconds": 5.4879658125,
+          "relative_to_group_median": 1.0341030390666268,
+          "excluded": false
+        },
+        {
+          "case_id": "low_path_n1048576_d16_p0",
+          "graph_seed": "42",
+          "kkt_seed": "1",
+          "repetition": "1",
+          "algorithm": "kkt",
+          "order": "1",
+          "elapsed_ns": 4303067084,
+          "elapsed_seconds": 4.303067084,
+          "group_median_seconds": 4.180359292,
+          "relative_to_group_median": 1.0293534080275892,
+          "excluded": false
+        }
+      ],
+      "sleep_wake_events": [
+        "2026-10-12 17:14:16 -0700 Sleep               \tEntering Sleep state due to 'Clamshell Sleep':TCPKeepAlive=active Using AC (Charge:100%) 1030 secs ",
+        "2026-10-12 17:31:26 -0700 DarkWake            \tDarkWake from Deep Idle [CDNPB] : due to NUB.SPMI0Sw3IRQ nub-spmi0.0x02 rtc/Maintenance Using AC (Charge:100%)           "
+      ],
+      "logged_sleep_seconds": 1030,
+      "setup_generation_seconds_sum": 26.128,
+      "setup_reference_seconds_sum": 78.738,
+      "setup_max_single_phase_seconds": 12.807,
+      "rows_removed": 0,
+      "rows_adjusted": 0
+    },
+    {
+      "name": "confirmation",
+      "metadata": "confirmation_timing.json",
+      "raw_csv": "confirmation_timing.csv",
+      "log": "confirmation_timing.log",
+      "metadata_sha256": "f07f6cbe775cadd18ea3c05913dbb85f4ccd89d1e6cbc36b03303eae8fb6a6e2",
+      "raw_sha256": "f7cd88eff82a83029f9b67ec154ccf0076d343b2e1b035898c9c916c728d0000",
+      "log_sha256": "9170efe50311c2b90361e41813544726997122039c332302d894a981f4af1226",
+      "raw_and_log_hashes_match_metadata": true,
+      "started_utc": "2026-10-13T00:50:11.236518+00:00",
+      "finished_utc": "2026-10-13T02:24:47.769111+00:00",
+      "utc_elapsed_seconds": 5676.532593,
+      "runner_monotonic_seconds": 4759.558534959,
+      "utc_minus_monotonic_seconds": 916.9740580409998,
+      "time_real_seconds": 5676.52,
+      "time_user_seconds": 4716.34,
+      "time_sys_seconds": 42.97,
+      "time_real_minus_utc_seconds": -0.012592999999469612,
+      "recorded_calls": 1080,
+      "checked_warmups": 270,
+      "recorded_solver_seconds_sum": 4342.861027378,
+      "max_recorded_solver_seconds": 922.624889916,
+      "max_relative_to_group_median": 200.80094002374017,
+      "flagged_observations": [
+        {
+          "case_id": "low_path_n1048576_d16_p0",
+          "graph_seed": "131071",
+          "kkt_seed": "29",
+          "repetition": "3",
+          "algorithm": "kkt",
+          "order": "0",
+          "elapsed_ns": 922624889916,
+          "elapsed_seconds": 922.624889916,
+          "group_median_seconds": 4.594723958,
+          "relative_to_group_median": 200.80094002374017,
+          "excluded": false
+        }
+      ],
+      "top_three_relative_observations": [
+        {
+          "case_id": "low_path_n1048576_d16_p0",
+          "graph_seed": "131071",
+          "kkt_seed": "29",
+          "repetition": "3",
+          "algorithm": "kkt",
+          "order": "0",
+          "elapsed_ns": 922624889916,
+          "elapsed_seconds": 922.624889916,
+          "group_median_seconds": 4.594723958,
+          "relative_to_group_median": 200.80094002374017,
+          "excluded": false
+        },
+        {
+          "case_id": "hierarchical_path_n524288_d16_p0",
+          "graph_seed": "131071",
+          "kkt_seed": "97",
+          "repetition": "1",
+          "algorithm": "compacting_boruvka",
+          "order": "0",
+          "elapsed_ns": 3073800542,
+          "elapsed_seconds": 3.073800542,
+          "group_median_seconds": 2.5737103335,
+          "relative_to_group_median": 1.1943071067441864,
+          "excluded": false
+        },
+        {
+          "case_id": "random_path_n1048576_d16_p0",
+          "graph_seed": "104729",
+          "kkt_seed": "11",
+          "repetition": "2",
+          "algorithm": "compacting_boruvka",
+          "order": "0",
+          "elapsed_ns": 5553099958,
+          "elapsed_seconds": 5.553099958,
+          "group_median_seconds": 4.6764711045,
+          "relative_to_group_median": 1.1874552058402439,
+          "excluded": false
+        }
+      ],
+      "sleep_wake_events": [
+        "2026-10-12 18:51:53 -0700 Sleep               \tEntering Sleep state due to 'Maintenance Sleep':TCPKeepAlive=active Using AC (Charge:100%) 918 secs  ",
+        "2026-10-12 19:07:11 -0700 DarkWake            \tDarkWake from Deep Idle [CDNPB] : due to NUB.SPMI0Sw3IRQ nub-spmi0.0x02 rtc/Maintenance Using AC (Charge:100%) 3772 secs "
+      ],
+      "logged_sleep_seconds": 918,
+      "setup_generation_seconds_sum": 116.752,
+      "setup_reference_seconds_sum": 314.36,
+      "setup_max_single_phase_seconds": 15.397,
+      "rows_removed": 0,
+      "rows_adjusted": 0
+    },
+    {
+      "name": "confirmation-repeat",
+      "metadata": "confirmation_repeat_timing.json",
+      "raw_csv": "confirmation_repeat_timing.csv",
+      "log": "confirmation_repeat_timing.log",
+      "metadata_sha256": "3567f2518511f1657ddfe3b1bc47f091d8e87650e9c22aa0e9a45cc9204619a7",
+      "raw_sha256": "6cf9579dc04a9ac29584f9475018682b02a2019dd2aeedbc3c4efc2b300f4b44",
+      "log_sha256": "38c18091125e13563538e0bacab90f4751ba368f0905d9f6b1233271ab1d5214",
+      "raw_and_log_hashes_match_metadata": true,
+      "started_utc": "2026-10-13T02:24:47.848687+00:00",
+      "finished_utc": "2026-10-13T03:51:26.742424+00:00",
+      "utc_elapsed_seconds": 5198.893737,
+      "runner_monotonic_seconds": 4890.8404817499995,
+      "utc_minus_monotonic_seconds": 308.0532552500008,
+      "time_real_seconds": 5198.86,
+      "time_user_seconds": 4833.01,
+      "time_sys_seconds": 57.55,
+      "time_real_minus_utc_seconds": -0.033737000000655826,
+      "recorded_calls": 1080,
+      "checked_warmups": 270,
+      "recorded_solver_seconds_sum": 3831.207687777,
+      "max_recorded_solver_seconds": 312.622067125,
+      "max_relative_to_group_median": 83.08228550033762,
+      "flagged_observations": [
+        {
+          "case_id": "random_path_n1048576_d16_p0",
+          "graph_seed": "104729",
+          "kkt_seed": "11",
+          "repetition": "3",
+          "algorithm": "compacting_boruvka",
+          "order": "1",
+          "elapsed_ns": 312622067125,
+          "elapsed_seconds": 312.622067125,
+          "group_median_seconds": 3.7628005205,
+          "relative_to_group_median": 83.08228550033762,
+          "excluded": false
+        }
+      ],
+      "top_three_relative_observations": [
+        {
+          "case_id": "random_path_n1048576_d16_p0",
+          "graph_seed": "104729",
+          "kkt_seed": "11",
+          "repetition": "3",
+          "algorithm": "compacting_boruvka",
+          "order": "1",
+          "elapsed_ns": 312622067125,
+          "elapsed_seconds": 312.622067125,
+          "group_median_seconds": 3.7628005205,
+          "relative_to_group_median": 83.08228550033762,
+          "excluded": false
+        },
+        {
+          "case_id": "hierarchical_path_n524288_d16_p0",
+          "graph_seed": "131071",
+          "kkt_seed": "11",
+          "repetition": "3",
+          "algorithm": "kkt",
+          "order": "1",
+          "elapsed_ns": 2627311541,
+          "elapsed_seconds": 2.627311541,
+          "group_median_seconds": 2.065005125,
+          "relative_to_group_median": 1.272302673340823,
+          "excluded": false
+        },
+        {
+          "case_id": "hierarchical_tree_n1048576_d16_p0",
+          "graph_seed": "104729",
+          "kkt_seed": "97",
+          "repetition": "1",
+          "algorithm": "compacting_boruvka",
+          "order": "1",
+          "elapsed_ns": 7934910709,
+          "elapsed_seconds": 7.934910709,
+          "group_median_seconds": 6.3325734995,
+          "relative_to_group_median": 1.2530309691038746,
+          "excluded": false
+        }
+      ],
+      "sleep_wake_events": [
+        "2026-10-12 20:10:03 -0700 Sleep               \tEntering Sleep state due to 'Maintenance Sleep':TCPKeepAlive=active Using AC (Charge:100%) 308 secs  ",
+        "2026-10-12 20:15:11 -0700 DarkWake            \tDarkWake from Deep Idle [CDNPB] : due to NUB.SPMI0Sw3IRQ nub-spmi0.0x02 rtc/Maintenance Using AC (Charge:100%)           "
+      ],
+      "logged_sleep_seconds": 308,
+      "setup_generation_seconds_sum": 118.568,
+      "setup_reference_seconds_sum": 329.762,
+      "setup_max_single_phase_seconds": 16.543,
+      "rows_removed": 0,
+      "rows_adjusted": 0
+    },
+    {
+      "name": "sensitivity",
+      "metadata": "sensitivity_timing.json",
+      "raw_csv": "sensitivity_timing.csv",
+      "log": "sensitivity_timing.log",
+      "metadata_sha256": "42cacfc4d36a601d8765cd648097685064f5085253d58e1062b8b4d4fe822e31",
+      "raw_sha256": "3643ac6c296053c879626e7e8fb00ee9ee01a609e2d2b32d01fb25fa23d5a43e",
+      "log_sha256": "53950a78da1b9585fda5854fd9dc6d2b81829734b42ef42ca8f48c57538eb992",
+      "raw_and_log_hashes_match_metadata": true,
+      "started_utc": "2026-10-13T03:51:26.836167+00:00",
+      "finished_utc": "2026-10-13T04:06:57.718780+00:00",
+      "utc_elapsed_seconds": 930.882613,
+      "runner_monotonic_seconds": 930.8866244999999,
+      "utc_minus_monotonic_seconds": -0.004011499999933221,
+      "time_real_seconds": 930.87,
+      "time_user_seconds": 925.06,
+      "time_sys_seconds": 5.8,
+      "time_real_minus_utc_seconds": -0.01261299999998755,
+      "recorded_calls": 96,
+      "checked_warmups": 48,
+      "recorded_solver_seconds_sum": 493.66179579,
+      "max_recorded_solver_seconds": 6.308685041,
+      "max_relative_to_group_median": 1.1703842170731291,
+      "flagged_observations": [],
+      "top_three_relative_observations": [
+        {
+          "case_id": "hierarchical_path_n1048576_d16_p1",
+          "graph_seed": "42",
+          "kkt_seed": "0",
+          "repetition": "1",
+          "algorithm": "kkt",
+          "order": "0",
+          "elapsed_ns": 5857611542,
+          "elapsed_seconds": 5.857611542,
+          "group_median_seconds": 5.0048620415,
+          "relative_to_group_median": 1.1703842170731291,
+          "excluded": false
+        },
+        {
+          "case_id": "hierarchical_path_n1048576_d16_p10",
+          "graph_seed": "42",
+          "kkt_seed": "0",
+          "repetition": "0",
+          "algorithm": "kkt",
+          "order": "1",
+          "elapsed_ns": 5211474375,
+          "elapsed_seconds": 5.211474375,
+          "group_median_seconds": 4.9425302085,
+          "relative_to_group_median": 1.0544142686346112,
+          "excluded": false
+        },
+        {
+          "case_id": "hierarchical_path_n1048576_d16_p100",
+          "graph_seed": "17",
+          "kkt_seed": "1",
+          "repetition": "1",
+          "algorithm": "kkt",
+          "order": "0",
+          "elapsed_ns": 5083977209,
+          "elapsed_seconds": 5.083977209,
+          "group_median_seconds": 4.824786729,
+          "relative_to_group_median": 1.0537206087145992,
+          "excluded": false
+        }
+      ],
+      "sleep_wake_events": [],
+      "logged_sleep_seconds": 0,
+      "setup_generation_seconds_sum": 42.318,
+      "setup_reference_seconds_sum": 138.245,
+      "setup_max_single_phase_seconds": 15.356,
+      "rows_removed": 0,
+      "rows_adjusted": 0
+    }
+  ],
+  "independent_confirmation_check": {
+    "method": "From raw matched call pairs: median over repetitions, then sampling seeds, then graph seeds. Absolute algorithm medians computed separately using that hierarchy. All original observations used.",
+    "matches_final_comparison_cases": true,
+    "cases": [
+      {
+        "case_id": "hierarchical_path_n1048576_d16_p0",
+        "primary": {
+          "paired_runtime_ratio": 0.814004451503694,
+          "graph_min_ratio": 0.8120727677639002,
+          "graph_max_ratio": 0.8196602293265833,
+          "paired_observations": 60,
+          "kkt_slower_observations": 0,
+          "kkt_median_ns": 4493785645.5,
+          "compacting_boruvka_median_ns": 5525557167.0
+        },
+        "repeat": {
+          "paired_runtime_ratio": 0.8281314465014185,
+          "graph_min_ratio": 0.8068037261793676,
+          "graph_max_ratio": 0.836677849658076,
+          "paired_observations": 60,
+          "kkt_slower_observations": 0,
+          "kkt_median_ns": 5079413499.5,
+          "compacting_boruvka_median_ns": 6128655562.5
+        },
+        "repeat_over_primary_kkt_median": 1.130319490113294,
+        "repeat_over_primary_compaction_median": 1.109147073728936
+      },
+      {
+        "case_id": "hierarchical_tree_n524288_d16_p0",
+        "primary": {
+          "paired_runtime_ratio": 0.8606492163252588,
+          "graph_min_ratio": 0.8491580516115631,
+          "graph_max_ratio": 0.8634979559088751,
+          "paired_observations": 60,
+          "kkt_slower_observations": 0,
+          "kkt_median_ns": 1823260437.5,
+          "compacting_boruvka_median_ns": 2112685020.5
+        },
+        "repeat": {
+          "paired_runtime_ratio": 0.8679096714236221,
+          "graph_min_ratio": 0.852086705511149,
+          "graph_max_ratio": 0.9104334666483498,
+          "paired_observations": 60,
+          "kkt_slower_observations": 0,
+          "kkt_median_ns": 2330428395.5,
+          "compacting_boruvka_median_ns": 2649045416.5
+        },
+        "repeat_over_primary_kkt_median": 1.2781653940209516,
+        "repeat_over_primary_compaction_median": 1.2538761769007394
+      },
+      {
+        "case_id": "random_tree_n1048576_d16_p0",
+        "primary": {
+          "paired_runtime_ratio": 1.002950030959468,
+          "graph_min_ratio": 1.0011202169691436,
+          "graph_max_ratio": 1.0064009272276868,
+          "paired_observations": 60,
+          "kkt_slower_observations": 44,
+          "kkt_median_ns": 3777915312.0,
+          "compacting_boruvka_median_ns": 3788084999.5
+        },
+        "repeat": {
+          "paired_runtime_ratio": 1.0058660042198997,
+          "graph_min_ratio": 1.0006339209784638,
+          "graph_max_ratio": 1.0114359581410817,
+          "paired_observations": 60,
+          "kkt_slower_observations": 45,
+          "kkt_median_ns": 3783183083.5,
+          "compacting_boruvka_median_ns": 3733046979.0
+        },
+        "repeat_over_primary_kkt_median": 1.001394359339731,
+        "repeat_over_primary_compaction_median": 0.9854707535582584
+      },
+      {
+        "case_id": "random_path_n1048576_d16_p0",
+        "primary": {
+          "paired_runtime_ratio": 1.0289543023920245,
+          "graph_min_ratio": 1.0026071449147027,
+          "graph_max_ratio": 1.0437488989207373,
+          "paired_observations": 60,
+          "kkt_slower_observations": 47,
+          "kkt_median_ns": 4595329625.5,
+          "compacting_boruvka_median_ns": 4508848562.5
+        },
+        "repeat": {
+          "paired_runtime_ratio": 1.0314706028313405,
+          "graph_min_ratio": 1.0055902957745442,
+          "graph_max_ratio": 1.0510872976075434,
+          "paired_observations": 60,
+          "kkt_slower_observations": 52,
+          "kkt_median_ns": 4124612042.0,
+          "compacting_boruvka_median_ns": 4015785125.5
+        },
+        "repeat_over_primary_kkt_median": 0.8975660895166399,
+        "repeat_over_primary_compaction_median": 0.8906453764935025
+      },
+      {
+        "case_id": "hierarchical_path_n524288_d16_p0",
+        "primary": {
+          "paired_runtime_ratio": 0.8779236903843988,
+          "graph_min_ratio": 0.8659653867697483,
+          "graph_max_ratio": 0.8914875178231986,
+          "paired_observations": 60,
+          "kkt_slower_observations": 0,
+          "kkt_median_ns": 2261369416.5,
+          "compacting_boruvka_median_ns": 2613952708.0
+        },
+        "repeat": {
+          "paired_runtime_ratio": 0.8853903328341657,
+          "graph_min_ratio": 0.8659948196275734,
+          "graph_max_ratio": 0.915682962433368,
+          "paired_observations": 60,
+          "kkt_slower_observations": 1,
+          "kkt_median_ns": 2018541416.5,
+          "compacting_boruvka_median_ns": 2273038833.5
+        },
+        "repeat_over_primary_kkt_median": 0.892619048339376,
+        "repeat_over_primary_compaction_median": 0.8695791727766791
+      },
+      {
+        "case_id": "low_path_n1048576_d16_p0",
+        "primary": {
+          "paired_runtime_ratio": 0.9553827106204689,
+          "graph_min_ratio": 0.949352304588146,
+          "graph_max_ratio": 0.9663615266548546,
+          "paired_observations": 60,
+          "kkt_slower_observations": 5,
+          "kkt_median_ns": 4710102334.0,
+          "compacting_boruvka_median_ns": 4934123188.0
+        },
+        "repeat": {
+          "paired_runtime_ratio": 0.964044918352083,
+          "graph_min_ratio": 0.9558540138012763,
+          "graph_max_ratio": 0.9683572715261721,
+          "paired_observations": 60,
+          "kkt_slower_observations": 5,
+          "kkt_median_ns": 4556343812.5,
+          "compacting_boruvka_median_ns": 4685443666.5
+        },
+        "repeat_over_primary_kkt_median": 0.9673555879263832,
+        "repeat_over_primary_compaction_median": 0.9496000582018708
+      },
+      {
+        "case_id": "legacy_random_n65536_d32_p0",
+        "primary": {
+          "paired_runtime_ratio": 1.21851505475073,
+          "graph_min_ratio": 1.2109435561801698,
+          "graph_max_ratio": 1.226329439024977,
+          "paired_observations": 60,
+          "kkt_slower_observations": 60,
+          "kkt_median_ns": 151422166.5,
+          "compacting_boruvka_median_ns": 124032020.5
+        },
+        "repeat": {
+          "paired_runtime_ratio": 1.225724236608283,
+          "graph_min_ratio": 1.2100693360526211,
+          "graph_max_ratio": 1.2472537609237992,
+          "paired_observations": 60,
+          "kkt_slower_observations": 56,
+          "kkt_median_ns": 176323542.0,
+          "compacting_boruvka_median_ns": 148002000.0
+        },
+        "repeat_over_primary_kkt_median": 1.164450001446783,
+        "repeat_over_primary_compaction_median": 1.1932563817260398
+      },
+      {
+        "case_id": "legacy_random_n65536_d128_p0",
+        "primary": {
+          "paired_runtime_ratio": 1.0606990643014425,
+          "graph_min_ratio": 1.0439868735523143,
+          "graph_max_ratio": 1.0679033908909288,
+          "paired_observations": 60,
+          "kkt_slower_observations": 60,
+          "kkt_median_ns": 956039813.0,
+          "compacting_boruvka_median_ns": 916160521.0
+        },
+        "repeat": {
+          "paired_runtime_ratio": 1.098362911738151,
+          "graph_min_ratio": 1.0320444330516927,
+          "graph_max_ratio": 1.1028904077085322,
+          "paired_observations": 60,
+          "kkt_slower_observations": 47,
+          "kkt_median_ns": 1082159437.5,
+          "compacting_boruvka_median_ns": 991561750.0
+        },
+        "repeat_over_primary_kkt_median": 1.1319187995991962,
+        "repeat_over_primary_compaction_median": 1.0823013295941837
+      },
+      {
+        "case_id": "hierarchical_tree_n1048576_d16_p0",
+        "primary": {
+          "paired_runtime_ratio": 0.8120578818703672,
+          "graph_min_ratio": 0.8102766020014391,
+          "graph_max_ratio": 0.8153932243346362,
+          "paired_observations": 60,
+          "kkt_slower_observations": 0,
+          "kkt_median_ns": 4438203645.5,
+          "compacting_boruvka_median_ns": 5444722750.0
+        },
+        "repeat": {
+          "paired_runtime_ratio": 0.814577531846002,
+          "graph_min_ratio": 0.8100559342226552,
+          "graph_max_ratio": 0.8455560261198665,
+          "paired_observations": 60,
+          "kkt_slower_observations": 0,
+          "kkt_median_ns": 4600842375.0,
+          "compacting_boruvka_median_ns": 5636987187.5
+        },
+        "repeat_over_primary_kkt_median": 1.0366451705443718,
+        "repeat_over_primary_compaction_median": 1.0353120712161148
+      }
+    ],
+    "preselected_candidate_cases": 4,
+    "candidate_paired_observations_per_run": 240,
+    "primary_candidate_individual_losses": 0,
+    "repeat_candidate_individual_losses": 1,
+    "interpretation": "Both selected groups satisfy the frozen rule at both sizes in each run. One individual candidate pair loses in repeat. Large clock-consistent observations occur in controls, not selected cases. Raw median criteria passing does not make these runs sleep-controlled or isolate a cause for run-to-run drift."
+  },
+  "assertion_attempts": [
+    {
+      "path": "awake_assertion.json",
+      "sha256": "4e51e87ff199601db063e0ba8a168b94326d2b52c4159f66475fa2333948ec85",
+      "record": {
+        "started_utc": "2026-10-13T02:31:21.890606+00:00",
+        "command": [
+          "/usr/bin/caffeinate",
+          "-i",
+          "-s",
+          "-w",
+          "90990"
+        ],
+        "process_id": 93119,
+        "watched_job_shell_pid": 90990,
+        "repeat_runner_pid": 92815,
+        "reason": "After logged maintenance sleep and retained922.6second control observation in primary. Temporary idle/system sleep prevention on AC while the owned serial repeat+sensitivity shell remains alive; no display-awake flag, permanent setting, solver/data/binary change or row removal. Applied during repeat, so campaigns have different power-management conditions.",
+        "verified_persistent": false,
+        "outcome": "Attempted background process was absent during sensitivity while the watched serial job remained active. No persistent assertion was verified; repeat logged308seconds of maintenance sleep. Do not describe the repeat as sleep-controlled."
+      }
+    },
+    {
+      "path": "foreground_awake_assertion.json",
+      "sha256": "92f043c6a1c78c49c5aea7253ef2d08ca32961f3eb7a755a866e615fe222b8a4",
+      "record": {
+        "started_utc": "2026-10-13T03:54:35.069619+00:00",
+        "command": [
+          "/usr/bin/caffeinate",
+          "-i",
+          "-s",
+          "-t",
+          "1800"
+        ],
+        "mode": "Direct foreground attempt failed immediately; no session remains active",
+        "reason": "Replace unverified detached assertion attempt during remaining sensitivity and postprocessing. Both completed confirmation campaigns retain all data and power-state limitations.",
+        "exit_status": 1,
+        "failure": "Failed to create PreventUserIdleSystemSleep assertion",
+        "active": false
+      }
+    }
+  ],
+  "power_control_conclusion": "No persistent successful sleep-prevention assertion is established. The background process was later observed absent; its exact failure cause is unknown. The foreground retry explicitly failed with exit 1. Neither confirmation run is sleep-controlled; sensitivity has clock agreement but that is not proof of effective power control.",
+  "million_screen_conclusion": "Archived Clamshell Sleep lasting 1,030 seconds aligns with the 1,029.642-second UTC/monotonic gap. No measured call or setup phase contains a comparably long duration. Exact placement in unrecorded warmups, untimed work, or a clock transition is not established without per-call UTC timestamps. All 80 measured calls remain.",
+  "sensitivity_conclusion": "Same solver/runner clock choices as other campaigns. UTC elapsed differs from runner monotonic by -0.0040115 seconds; no Sleep/Wake/DarkWake event is present in the exact archived-query interval. No >=1.5x diagnostic calls. This rules out a gap comparable to the logged multi-minute sleeps, not other machine-state differences. p0 baseline comes from the earlier million screen with a logged sleep, so run-to-run sensitivity comparisons remain exploratory.",
+  "source_references": {
+    "solver": "benchmark/continuation_search.cpp:188",
+    "runner": "benchmark/results/continuation-2026-10-12/run_capture.py:51",
+    "audit_generator_sha256": "4ffaaaa27aad5c436e449e8f5f99c2c8e1602d31add88b8d7534d03935468bc6"
+  },
+  "untimed_sensitivity_captures": {
+    "audited_utc": "2026-10-13T04:39:07.453914+00:00",
+    "scope": "Separate post-timing work-counter and contraction-stage captures only. Not included in seven timing-campaign totals; no duration from these captures is performance evidence.",
+    "captures": [
+      {
+        "name": "sensitivity_work",
+        "mode": "work",
+        "performance_evidence": false,
+        "metadata": "sensitivity_work.json",
+        "metadata_sha256": "31a2e604df622820a02d74135e386f87f3f6175f4b8ec9fb1ba19e32928bfdfd",
+        "raw_csv": "sensitivity_work.csv",
+        "raw_sha256": "b69a203f82cfc541b3b46dc185ded51925fe87e9c322360c8faf42b600566236",
+        "log": "sensitivity_work.log",
+        "log_sha256": "69c000cbc617e910332b4556a223386014e9119174eacf11965a3c3db903c266",
+        "raw_and_log_hashes_match_metadata": true,
+        "started_utc": "2026-10-13T04:07:16.088831+00:00",
+        "finished_utc": "2026-10-13T04:13:27.576298+00:00",
+        "utc_elapsed_seconds": 371.487467,
+        "runner_monotonic_seconds": 371.48453620799995,
+        "utc_minus_monotonic_seconds": 0.0029307920000292143,
+        "time_real_seconds": 371.48,
+        "validated_rows": 36,
+        "sleep_wake_events": [],
+        "logged_sleep_seconds": 0,
+        "largest_logged_setup_generation": {
+          "case_id": "hierarchical_tree_n1048576_d16_p10",
+          "graph_seed": 17,
+          "seconds": 3.794
+        },
+        "rows_removed": 0,
+        "rows_adjusted": 0
+      },
+      {
+        "name": "sensitivity_trace",
+        "mode": "trace",
+        "performance_evidence": false,
+        "metadata": "sensitivity_trace.json",
+        "metadata_sha256": "5e344edecf2b7de420eb5842c904e5d0bba18b66428eb80e8072656450aee618",
+        "raw_csv": "sensitivity_trace.csv",
+        "raw_sha256": "c8199d23ec3fd8d03426d620a05268dceaf3ec7586b971ea25ea7f3d54ea470b",
+        "log": "sensitivity_trace.log",
+        "log_sha256": "3e1f12a069b1ce324096431b066faaee0bbe7e54fcb58712ed18f2f68a82b30e",
+        "raw_and_log_hashes_match_metadata": true,
+        "started_utc": "2026-10-13T04:13:27.627278+00:00",
+        "finished_utc": "2026-10-13T04:33:01.555656+00:00",
+        "utc_elapsed_seconds": 1173.928378,
+        "runner_monotonic_seconds": 256.6558215,
+        "utc_minus_monotonic_seconds": 917.2725565000001,
+        "time_real_seconds": 1173.92,
+        "validated_rows": 130,
+        "sleep_wake_events": [
+          "2026-10-12 21:16:38 -0700 Sleep               \tEntering Sleep state due to 'Maintenance Sleep':TCPKeepAlive=active Using AC (Charge:100%) 918 secs  ",
+          "2026-10-12 21:31:56 -0700 Wake                \tWake from Deep Idle [CDNVA] : due to smc.sysState.Wake(0x70070000) lid SMC.OutboxNotEmpty RTP.multi-touch/UserActivity Assertion Using AC (Charge:100%)           "
+        ],
+        "logged_sleep_seconds": 918,
+        "largest_logged_setup_generation": {
+          "case_id": "hierarchical_tree_n1048576_d16_p10",
+          "graph_seed": 42,
+          "seconds": 922.725
+        },
+        "rows_removed": 0,
+        "rows_adjusted": 0
+      }
+    ],
+    "interpretation": "Work clocks agree within 0.003 seconds. Trace has a 917.2725565-second UTC-minus-monotonic gap and a logged 918-second Maintenance Sleep. A 922.725-second generation phase for hierarchical_tree_n1048576_d16_p10, graph 42, is consistent with that suspension occurring during fixture setup, although no per-phase UTC timestamps establish exact alignment. Counter/stage records remain unchanged; captured duration is not solver timing."
+  }
+}

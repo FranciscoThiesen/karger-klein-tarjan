@@ -1,0 +1,16 @@
+{
+  "started_utc": "2026-10-13T02:31:21.890606+00:00",
+  "command": [
+    "/usr/bin/caffeinate",
+    "-i",
+    "-s",
+    "-w",
+    "90990"
+  ],
+  "process_id": 93119,
+  "watched_job_shell_pid": 90990,
+  "repeat_runner_pid": 92815,
+  "reason": "After logged maintenance sleep and retained922.6second control observation in primary. Temporary idle/system sleep prevention on AC while the owned serial repeat+sensitivity shell remains alive; no display-awake flag, permanent setting, solver/data/binary change or row removal. Applied during repeat, so campaigns have different power-management conditions.",
+  "verified_persistent": false,
+  "outcome": "Attempted background process was absent during sensitivity while the watched serial job remained active. No persistent assertion was verified; repeat logged308seconds of maintenance sleep. Do not describe the repeat as sleep-controlled."
+}

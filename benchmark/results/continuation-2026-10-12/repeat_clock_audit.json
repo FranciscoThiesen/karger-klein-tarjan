@@ -1,0 +1,22 @@
+{
+  "campaign": "confirmation-repeat",
+  "solver_clock": "std::chrono::steady_clock",
+  "runner_clock": "time.monotonic",
+  "utc_elapsed_seconds": 5198.893737,
+  "runner_monotonic_seconds": 4890.8404817499995,
+  "difference_seconds": 308.0532552500008,
+  "time_real_seconds": 5198.86,
+  "power_events": "repeat_power_events.log",
+  "logged_sleep_interval_local": "2026-10-12 20:10:03 to20:15:11 -0700",
+  "logged_sleep_seconds": 308,
+  "interpretation": "A logged maintenance sleep is consistent with the retained312.622second compactor call in the random_path control. No per-call UTC timestamps give exact attribution. No observation is excluded or adjusted. The background caffeinate attempt did not persist; it was found absent while the serial timing job was still running. The two completed campaigns are not sleep-controlled replications.",
+  "extreme_observation": {
+    "case_id": "random_path_n1048576_d16_p0",
+    "graph_seed": 104729,
+    "kkt_seed": 11,
+    "repetition": 3,
+    "compactor_seconds": 312.622067125,
+    "algorithm_order": "kkt_first",
+    "excluded": false
+  }
+}

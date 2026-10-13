@@ -1,0 +1,8 @@
+family,density,intrusion_per_mille,selected_candidate,tested_sizes,criterion_sizes,two_sizes_available,threshold,passes_numeric_rule,confirmed_preselected_group
+hierarchical_path,16,0,True,"524288,1048576","524288,1048576",True,0.9,True,True
+hierarchical_tree,16,0,True,"524288,1048576","524288,1048576",True,0.9,True,True
+legacy_random,32,0,False,65536,65536,False,0.9,False,False
+legacy_random,128,0,False,65536,65536,False,0.9,False,False
+low_path,16,0,False,1048576,1048576,False,0.9,False,False
+random_path,16,0,False,1048576,1048576,False,0.9,False,False
+random_tree,16,0,False,1048576,1048576,False,0.9,False,False

@@ -1,0 +1,108 @@
+{
+  "accepted": 1,
+  "rejected": 19,
+  "source_sha256": "822351f1f9ba61fe491cd9548a4aab3b599e947ee15d2a3c825bfbdf35e87c32",
+  "comparison_inputs_sha256": "127136e44155570f987f951957a37474504ea6b5493daf79997db2916128d054",
+  "scope": "presentation guards only; no plots or raw/MST revalidation",
+  "checks": [
+    {
+      "case": "complete real comparison tables",
+      "status": "accepted"
+    },
+    {
+      "case": "missing candidate",
+      "status": "rejected",
+      "reason": "headline requires all four candidate cases and all five controls"
+    },
+    {
+      "case": "missing control",
+      "status": "rejected",
+      "reason": "headline requires all four candidate cases and all five controls"
+    },
+    {
+      "case": "duplicate confirmation case",
+      "status": "rejected",
+      "reason": "headline requires all four candidate cases and all five controls"
+    },
+    {
+      "case": "wrong candidate label",
+      "status": "rejected",
+      "reason": "candidate label differs from frozen selection"
+    },
+    {
+      "case": "wrong pair count",
+      "status": "rejected",
+      "reason": "wrong matched-pair/loss count"
+    },
+    {
+      "case": "loss count out of range",
+      "status": "rejected",
+      "reason": "wrong matched-pair/loss count"
+    },
+    {
+      "case": "non-finite ratio",
+      "status": "rejected",
+      "reason": "invalid ratio or graph range"
+    },
+    {
+      "case": "nonpositive ratio",
+      "status": "rejected",
+      "reason": "invalid ratio or graph range"
+    },
+    {
+      "case": "range excludes median",
+      "status": "rejected",
+      "reason": "invalid ratio or graph range"
+    },
+    {
+      "case": "changed campaign summary",
+      "status": "rejected",
+      "reason": "confirmation and campaign summaries differ"
+    },
+    {
+      "case": "duplicate campaign case",
+      "status": "rejected",
+      "reason": "duplicate campaign/case summary"
+    },
+    {
+      "case": "missing sensitivity case",
+      "status": "rejected",
+      "reason": "sensitivity figure must retain all six perturbation cases"
+    },
+    {
+      "case": "unexpected sensitivity setting",
+      "status": "rejected",
+      "reason": "sensitivity figure must retain all six perturbation cases"
+    },
+    {
+      "case": "sensitivity wrong pair count",
+      "status": "rejected",
+      "reason": "sensitivity row has the wrong pair count"
+    },
+    {
+      "case": "failed comparison validation",
+      "status": "rejected",
+      "reason": "comparison did not pass strict validation"
+    },
+    {
+      "case": "wrong held-out graph bank",
+      "status": "rejected",
+      "reason": "headline protocol differs from frozen confirmation"
+    },
+    {
+      "case": "mismatched sensitivity bank",
+      "status": "rejected",
+      "reason": "zero-intrusion baseline and sensitivity do not use the same screen protocol"
+    },
+    {
+      "case": "no frozen selection",
+      "status": "rejected",
+      "reason": "headline figure requires a declared, frozen confirmation"
+    },
+    {
+      "case": "config changed after analysis",
+      "status": "rejected",
+      "reason": "comparison configuration changed after analysis"
+    }
+  ]
+}

@@ -176,3 +176,27 @@ It uses discovery graph seeds17,42 and sampling0,1, two balanced repetitions and
 one warmup. This exploratory stress test reuses the zero-intrusion topologies
 from the million-vertex screen; it does not add independent confirmation draws.
 Its outcome cannot change the frozen confirmation rule.
+
+## Operational note during confirmation
+
+The primary campaign completed its full matrix. Its UTC and `/usr/bin/time`
+elapsed interval exceeds the runner's `time.monotonic` duration by approximately
+917 seconds. macOS logged maintenance sleep from18:51:53 to19:07:11 on12October
+(UTC−7). The native `std::chrono::steady_clock` CSV retains a922.624890-second
+KKT observation in the cheap-path control (graph131071, sampling29, repetition3),
+consistent with that suspended interval. Do not assume the two clocks have the
+same suspend behavior. No observation is excluded or adjusted, and the
+predeclared median calculation and confirmation rule remain unchanged.
+
+At2026-10-13T02:31:21.890606Z, about6.6minutes into the repeat campaign, a
+temporary `/usr/bin/caffeinate -i -s -w` assertion was attempted for the owned
+serial campaign shell. Its process was later absent and no persistent assertion
+was verified. The repeat logged another308-second maintenance sleep, consistent
+with a retained312.622067-second compactor call in the random-path control.
+A direct foreground retry during sensitivity failed with
+`Failed to create PreventUserIdleSystemSleep assertion`. Consequently neither
+campaign is a sleep-controlled replication. No permanent setting, solver,
+binary, input, timing boundary or observation changed. See
+`primary_clock_audit.json`, `repeat_clock_audit.json`, both power-event logs,
+`awake_assertion.json` and `foreground_awake_assertion.json`. Preserve both
+outliers and all other losses in the final comparison.

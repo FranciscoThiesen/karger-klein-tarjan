@@ -1,0 +1,24 @@
+{
+  "campaign": "confirmation",
+  "solver_clock": "std::chrono::steady_clock",
+  "runner_clock": "time.monotonic",
+  "utc_elapsed_seconds": 5676.532593,
+  "runner_monotonic_seconds": 4759.558534959,
+  "difference_seconds": 916.9740580409998,
+  "time_real_seconds": 5676.52,
+  "power_events": "primary_power_events.log",
+  "logged_sleep_interval_local": "2026-10-12 18:51:53 to19:07:11 -0700",
+  "logged_sleep_seconds": 918,
+  "interpretation": "System log confirms maintenance sleep. Runner monotonic time excludes approximately917seconds relative to UTC and /usr/bin/time real. Native std::chrono::steady_clock timings contain a922.624890second KKT observation in the low_path control, consistent with including the suspended interval. Do not assume the native clock excludes suspend. Without per-call UTC timestamps this is a consistent attribution, not an exact event alignment. All observations remain unchanged; the predeclared median calculation is unchanged.",
+  "extreme_observation": {
+    "case_id": "low_path_n1048576_d16_p0",
+    "graph_seed": 131071,
+    "kkt_seed": 29,
+    "repetition": 3,
+    "kkt_seconds": 922.624889916,
+    "compactor_seconds": 4.947679541,
+    "ratio": 186.4762829263,
+    "algorithm_order": "kkt_first",
+    "excluded": false
+  }
+}

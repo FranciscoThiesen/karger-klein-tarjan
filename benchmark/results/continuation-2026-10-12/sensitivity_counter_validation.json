@@ -1,0 +1,107 @@
+{
+  "validation": "pass",
+  "counter_capture_checks": [
+    {
+      "mode": "work",
+      "rows": 36,
+      "metadata_sha256": "31a2e604df622820a02d74135e386f87f3f6175f4b8ec9fb1ba19e32928bfdfd",
+      "raw_sha256": "b69a203f82cfc541b3b46dc185ded51925fe87e9c322360c8faf42b600566236",
+      "binary_sha256": "8fb8b791a4bcd396af8cebd5d334cf0fc94185e8cdb9ff884eeb90d3ca49c5eb",
+      "validation": "pass"
+    },
+    {
+      "mode": "trace",
+      "rows": 130,
+      "metadata_sha256": "5e344edecf2b7de420eb5842c904e5d0bba18b66428eb80e8072656450aee618",
+      "raw_sha256": "c8199d23ec3fd8d03426d620a05268dceaf3ec7586b971ea25ea7f3d54ea470b",
+      "binary_sha256": "d0d33b2516b2a2e8ae3ecaba8786af7656706b88466ad8cd9181235f374d011f",
+      "validation": "pass"
+    }
+  ],
+  "counter_aggregation": "Arithmetic mean over sampling seeds within graph, then graphs; deterministic compactor recorded once per graph.",
+  "strict_counter_and_trace_crosschecks": "compare_continuation.py rerun passed all seven campaigns including sensitivity work/trace.",
+  "readme_rounding_claims": "All zero versus p100 values agree with README to stated precision.",
+  "work_summary_sha256": "b9e9801faf6dd81bf974382d34c31f11c60c2621fab39ef1728cbc78a4d99a8f",
+  "metrics": [
+    {
+      "family": "hierarchical_path",
+      "intrusion_per_mille": 0,
+      "kkt_contraction_input_over_m": 3.4193020462989807,
+      "compactor_contraction_input_over_m": 7.953610122203827,
+      "materialization_ratio_kkt_over_compactor": 0.7799829234319365,
+      "kkt_verifier_edges": 24455606.0,
+      "kkt_filtered_edges": 760968.0,
+      "mixed_work_proxy_ratio_kkt_over_compactor": 1.14742712766363
+    },
+    {
+      "family": "hierarchical_path",
+      "intrusion_per_mille": 1,
+      "kkt_contraction_input_over_m": 3.418099671602249,
+      "compactor_contraction_input_over_m": 7.576143145561218,
+      "materialization_ratio_kkt_over_compactor": 0.8219138546423096,
+      "kkt_verifier_edges": 24452190.5,
+      "kkt_filtered_edges": 750592.25,
+      "mixed_work_proxy_ratio_kkt_over_compactor": 1.2014390763109433
+    },
+    {
+      "family": "hierarchical_path",
+      "intrusion_per_mille": 10,
+      "kkt_contraction_input_over_m": 3.3960204273462296,
+      "compactor_contraction_input_over_m": 6.344063878059387,
+      "materialization_ratio_kkt_over_compactor": 0.982928255920694,
+      "kkt_verifier_edges": 24273044.25,
+      "kkt_filtered_edges": 693482.0,
+      "mixed_work_proxy_ratio_kkt_over_compactor": 1.4096577854178975
+    },
+    {
+      "family": "hierarchical_path",
+      "intrusion_per_mille": 100,
+      "kkt_contraction_input_over_m": 3.2101695090532303,
+      "compactor_contraction_input_over_m": 4.537190496921539,
+      "materialization_ratio_kkt_over_compactor": 1.2791983797412243,
+      "kkt_verifier_edges": 22620395.5,
+      "kkt_filtered_edges": 455712.25,
+      "mixed_work_proxy_ratio_kkt_over_compactor": 1.7919970464646524
+    },
+    {
+      "family": "hierarchical_tree",
+      "intrusion_per_mille": 0,
+      "kkt_contraction_input_over_m": 3.418643221259117,
+      "compactor_contraction_input_over_m": 7.953627347946167,
+      "materialization_ratio_kkt_over_compactor": 0.7798704181556574,
+      "kkt_verifier_edges": 24447087.75,
+      "kkt_filtered_edges": 759077.75,
+      "mixed_work_proxy_ratio_kkt_over_compactor": 1.1468526316774046
+    },
+    {
+      "family": "hierarchical_tree",
+      "intrusion_per_mille": 1,
+      "kkt_contraction_input_over_m": 3.414490818977356,
+      "compactor_contraction_input_over_m": 7.577480673789978,
+      "materialization_ratio_kkt_over_compactor": 0.8210535693996169,
+      "kkt_verifier_edges": 24421332.25,
+      "kkt_filtered_edges": 748464.25,
+      "mixed_work_proxy_ratio_kkt_over_compactor": 1.199750719901403
+    },
+    {
+      "family": "hierarchical_tree",
+      "intrusion_per_mille": 10,
+      "kkt_contraction_input_over_m": 3.3951116502285004,
+      "compactor_contraction_input_over_m": 6.345281898975372,
+      "materialization_ratio_kkt_over_compactor": 0.982346664387886,
+      "kkt_verifier_edges": 24258785.25,
+      "kkt_filtered_edges": 691204.75,
+      "mixed_work_proxy_ratio_kkt_over_compactor": 1.4085173862329265
+    },
+    {
+      "family": "hierarchical_tree",
+      "intrusion_per_mille": 100,
+      "kkt_contraction_input_over_m": 3.2096303403377533,
+      "compactor_contraction_input_over_m": 4.5316441655159,
+      "materialization_ratio_kkt_over_compactor": 1.2788526522402095,
+      "kkt_verifier_edges": 22583646.0,
+      "kkt_filtered_edges": 455689.25,
+      "mixed_work_proxy_ratio_kkt_over_compactor": 1.7918955535280312
+    }
+  ]
+}

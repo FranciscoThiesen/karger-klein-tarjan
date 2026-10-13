@@ -54,7 +54,14 @@ across 11 new graph variants and two unchanged controls. Its [offline HTML editi
 includes an interactive 3D explorer of certified contraction and filtering
 results. The [raw evidence and protocol](benchmark/results/common-2026-10-11/README.md)
 retain every measured case, including a compacting-Borůvka ablation that
-separates contraction benefits from randomized continuation.
+compares repeated production contraction with KKT continuation.
+
+The [compacting-Borůvka follow-up](benchmark/results/continuation-2026-10-12/README.md)
+finds a repeated KKT advantage on engineered hierarchical graphs: 17–19% less
+median time at one million vertices and 16.8 million edges. Both solvers are
+unchanged. The report retains ordinary random-graph losses, shows how cheap
+shortcut perturbations remove the advantage, and documents desktop power-state
+interruptions in the timing campaigns.
 
 The [latest implementation investigation](benchmark/results/practical-2026-10-10/README.md)
 records six accepted optimizations, a rejected experiment, fresh complexity

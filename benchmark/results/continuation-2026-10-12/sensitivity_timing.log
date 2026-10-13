@@ -1,0 +1,54 @@
+timing hierarchical_path_n1048576_d16_p1 graph_seed=17
+setup_generation_ms=3716 setup_reference_and_certificate_ms=14256
+certified_mst_backbone_edges=1047529 total=1048575
+timing hierarchical_path_n1048576_d16_p1 graph_seed=42
+setup_generation_ms=3509 setup_reference_and_certificate_ms=15356
+certified_mst_backbone_edges=1047529 total=1048575
+timing hierarchical_tree_n1048576_d16_p100 graph_seed=17
+setup_generation_ms=3456 setup_reference_and_certificate_ms=10162
+certified_mst_backbone_edges=954674 total=1048575
+timing hierarchical_tree_n1048576_d16_p100 graph_seed=42
+setup_generation_ms=3561 setup_reference_and_certificate_ms=9942
+certified_mst_backbone_edges=954895 total=1048575
+timing hierarchical_path_n1048576_d16_p100 graph_seed=17
+setup_generation_ms=3408 setup_reference_and_certificate_ms=9653
+certified_mst_backbone_edges=954677 total=1048575
+timing hierarchical_path_n1048576_d16_p100 graph_seed=42
+setup_generation_ms=3642 setup_reference_and_certificate_ms=9801
+certified_mst_backbone_edges=954782 total=1048575
+timing hierarchical_tree_n1048576_d16_p1 graph_seed=17
+setup_generation_ms=3534 setup_reference_and_certificate_ms=12390
+certified_mst_backbone_edges=1047529 total=1048575
+timing hierarchical_tree_n1048576_d16_p1 graph_seed=42
+setup_generation_ms=3548 setup_reference_and_certificate_ms=11573
+certified_mst_backbone_edges=1047529 total=1048575
+timing hierarchical_tree_n1048576_d16_p10 graph_seed=17
+setup_generation_ms=3643 setup_reference_and_certificate_ms=10683
+certified_mst_backbone_edges=1038219 total=1048575
+timing hierarchical_tree_n1048576_d16_p10 graph_seed=42
+setup_generation_ms=3449 setup_reference_and_certificate_ms=10853
+certified_mst_backbone_edges=1038211 total=1048575
+timing hierarchical_path_n1048576_d16_p10 graph_seed=17
+setup_generation_ms=3375 setup_reference_and_certificate_ms=12049
+certified_mst_backbone_edges=1038213 total=1048575
+timing hierarchical_path_n1048576_d16_p10 graph_seed=42
+setup_generation_ms=3477 setup_reference_and_certificate_ms=11527
+certified_mst_backbone_edges=1038207 total=1048575
+      930.87 real       925.06 user         5.80 sys
+          3869016064  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+             3009546  page reclaims
+                   1  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   0  voluntary context switches
+                 524  involuntary context switches
+       2312127977560  instructions retired
+       3390203612014  cycles elapsed
+          3191983296  peak memory footprint

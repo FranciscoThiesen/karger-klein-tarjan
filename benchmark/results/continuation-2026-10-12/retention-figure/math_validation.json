@@ -1,0 +1,19 @@
+{
+  "status": "pass",
+  "exact_rational_cases": 145,
+  "script_sha256": "8cfb188be7de836344e3e8aff574e3f31ffdaea18968d737972a98426d6df4b9",
+  "sizes": [
+    4,
+    8,
+    16,
+    32,
+    64,
+    128
+  ],
+  "saturated_cases_checked": 1,
+  "reference": "fractions.Fraction and independent math.comb(U-b*b,B)/math.comb(U,B)",
+  "maximum_absolute_error_edges": 8.134975229140359e-14,
+  "maximum_relative_error_nonzero_expectation": 1.9036207691115734e-16,
+  "acceptance": "16 ulps at scale max(1,exact expectation), plus the analytical saturation bound",
+  "scope": "Finite small-integer checks, not a proof of correctly rounded libm evaluations"
+}

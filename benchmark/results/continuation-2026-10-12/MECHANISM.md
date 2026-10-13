@@ -1,9 +1,12 @@
 # Why delayed contraction could favor KKT
 
 This note separates properties of the fixture and implementation from hypotheses
-about elapsed time. It does not declare a confirmed winner. The initial screen
-selects cases; the fresh-seed, two-campaign rule in [PROTOCOL.md](PROTOCOL.md)
-governs confirmation. Every solver is unchanged and receives ordinary edge tuples.
+about elapsed time. The [empirical report](README.md) gives the two-campaign
+result and timing limitations under the rule in [PROTOCOL.md](PROTOCOL.md).
+Every solver is unchanged and receives ordinary edge tuples.
+The [observed-versus-model retention figure](retention-figure/contraction_retention.png)
+checks the edge-volume explanation against separately collected contraction
+traces; it does not predict elapsed time.
 
 ## A hierarchy that keeps edges alive
 
@@ -78,6 +81,40 @@ has explicit finite size and weight-domain limits. At `d=1`, there is only one
 shortcut; the fixed-density lower-bound argument above does not apply.
 Intrusions and globally randomized controls also need not preserve dyadic
 partitions, so their actual traces must replace this formula.
+
+### Check against the archived large traces
+
+The exact conditional model closely matches the eight archived traces at
+`d=16`: two backbone shapes, two sizes and graph seeds 17/42. The table reports
+`V/m`, the sum of contraction-call input edge counts divided by the original
+edge count. It counts whole-call input volume, not individual loop passes.
+
+| Backbone | Vertices | Model V/m | Observed V/m, range of two graphs |
+|---|---:|---:|---:|
+| Path | 524,288 | 7.483962 | 7.483945–7.484046 |
+| Tree | 524,288 | 7.483962 | 7.484018–7.484119 |
+| Path | 1,048,576 | 7.953684 | 7.953464–7.953756 |
+| Tree | 1,048,576 | 7.953684 | 7.953582–7.953673 |
+
+Across nonzero residuals, the largest observed deviation from the model is
+0.013753% of that round's expected edge count. The largest deviation in total
+input-edge volume is 0.002760%. These describe two graph draws, not confidence
+intervals or a fitted timing model. The nonhierarchical `low_path` control in
+the same source CSV is explicitly excluded from this theory overlay and remains
+in the full performance analysis.
+
+![Expected and observed surviving edges](retention-figure/contraction_retention.png)
+
+The evaluator sums a stable logarithmic form of the exact hypergeometric
+product. When `B b²/U≥50`, it avoids a huge product by using the mathematical
+bound `P(no hit)≤exp(−50)`. The largest resulting expected-edge overestimate is
+bounded by `2.514×10⁻¹⁷` edges here, excluding floating-point roundoff. Separately,
+145 small-integer cases were compared with independent exact `math.comb` and
+rational arithmetic; the maximum relative numerical error was `1.904×10⁻¹⁶`.
+See the [per-round counts](retention-figure/retention.csv),
+[per-graph volumes](retention-figure/edge_volume.csv),
+[numerical checks](retention-figure/math_validation.json) and
+[provenance](retention-figure/provenance.json).
 
 ## What sampling offers, and what it costs
 

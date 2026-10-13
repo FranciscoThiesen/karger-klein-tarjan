@@ -1,0 +1,51 @@
+{
+  "generated_utc": "2026-10-13T04:12:01.948120+00:00",
+  "trace_path": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/continuation-2026-10-12/million_trace.csv",
+  "trace_sha256": "1a0ef8fb80e9cc9d1982b9be00c5841ec2376b6dd739ea0176b0b64c6049f785",
+  "script_sha256": "8cfb188be7de836344e3e8aff574e3f31ffdaea18968d737972a98426d6df4b9",
+  "raw_round_rows": 156,
+  "excluded_trace_groups": [
+    {
+      "case_id": "low_path_n1048576_d16_p0",
+      "graph_seed": 17,
+      "rows": 13,
+      "reason": "Nonhierarchical low_path control; dyadic expectation does not apply."
+    },
+    {
+      "case_id": "low_path_n1048576_d16_p0",
+      "graph_seed": 42,
+      "rows": 12,
+      "reason": "Nonhierarchical low_path control; dyadic expectation does not apply."
+    }
+  ],
+  "total_source_rows": 181,
+  "graph_traces": 8,
+  "retention_rows_including_terminal_zero": 164,
+  "families": [
+    "hierarchical_path",
+    "hierarchical_tree"
+  ],
+  "sizes": [
+    524288,
+    1048576
+  ],
+  "density": 16,
+  "graph_seeds": [
+    17,
+    42
+  ],
+  "intrusion_per_mille": 0,
+  "round_alignment": "Trace round1 input is model m_0. Final output adds m_log2(n)=0; production drops the final isolate.",
+  "expectation": "Conditioned on a fixed dyadic backbone, over uniform B-subsets of its U eligible shortcut pairs.",
+  "formula": "E[m_r]=(q-1)+(C(q,2)-q+1)*(1-C(U-B,b^2)/C(U,b^2))",
+  "definitions": "q=n/2^r; b=2^r; B=16n-n+1; U=C(n,2)-n+1",
+  "numeric_method": "fsum(log1p(-B/(U-j))), followed by -expm1; exact structural boundary identities",
+  "saturation_rule": "If B*b^2 >= 50*U, set no-hit to0; true no-hit <=exp(-50), so expected-edge overestimate <=S*exp(-50).",
+  "numeric_bound_scope": "Saturation bound is mathematical; floating values representing it are not certified rounding intervals. Ordinary floating-point roundoff is not included.",
+  "max_saturation_error_bound_edges": 2.5132574893893832e-17,
+  "max_product_terms_used": 1048576,
+  "configured_max_product_terms": 2000000,
+  "total_product_terms_evaluated": 1747624,
+  "plot_scope": "Shaded areas are expected pair categories, not uncertainty bands. Two graph seeds are two draws, not a fitted model or timing prediction.",
+  "matplotlib_version": "3.9.4"
+}
