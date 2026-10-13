@@ -20,7 +20,7 @@ import sys
 ALGORITHMS = ("kkt", "compacting_boruvka")
 FAMILIES = ("hierarchical_path", "hierarchical_tree", "low_path", "random_path",
             "random_tree", "distance_path", "distance_tree", "legacy_random",
-            "line_metric", "line_random", "grid2d_metric", "grid2d_random", "gnm_random")
+            "line_metric", "line_random", "grid2d_metric", "grid2d_random", "gnm_random", "line_wide_metric")
 MANIFEST_FIELDS = ("family", "n", "density", "intrusion_per_mille")
 PREFIX = ("case_id", "family", "n", "m", "density", "intrusion_per_mille",
           "graph_seed", "input_fingerprint", "topology_fingerprint")
@@ -72,7 +72,7 @@ def load_manifest(path):
             spec[field] = integer(raw[field], context + " " + field, 2**32 - 1)
         n, d, p, family = spec["n"], spec["density"], spec["intrusion_per_mille"], spec["family"]
         require(family in FAMILIES, f"{context}: unsupported family")
-        maximum_n = 2**23 if family in ("line_metric", "line_random", "grid2d_metric", "grid2d_random", "gnm_random") else 2**22
+        maximum_n = 2**23 if family in ("line_metric", "line_random", "grid2d_metric", "grid2d_random", "gnm_random", "line_wide_metric") else 2**22
         require(32 <= n <= maximum_n and n & (n - 1) == 0 and 1 <= d <= 512 and p <= 1000,
                 f"{context}: invalid dimensions or intrusion parameter")
         m = n * d
@@ -83,7 +83,7 @@ def load_manifest(path):
             require(p == 0, f"{context}: random/distance weight modes require p=0")
         if family == "legacy_random":
             require(p == 0 and d in (4, 32, 128), f"{context}: invalid legacy control")
-        if family in ("line_metric", "line_random", "grid2d_metric", "grid2d_random"):
+        if family in ("line_metric", "line_random", "grid2d_metric", "grid2d_random", "line_wide_metric"):
             require(p == 0, f"{context}: crossover geometric models require p=0")
         if family in ("grid2d_metric", "grid2d_random"):
             require(d >= 2, f"{context}: grid backbone requires density at least two")
@@ -127,7 +127,7 @@ def check_fingerprints(records):
         # Different weight modes/noise levels share a topology. Legacy fixtures
         # use a different generator and must not be folded into these controls.
         if row["family"] not in ("legacy_random", "gnm_random"):
-            if row["family"] in ("line_metric", "line_random"):
+            if row["family"] in ("line_metric", "line_random", "line_wide_metric"):
                 kind = "crossover_line"
             elif row["family"] in ("grid2d_metric", "grid2d_random"):
                 kind = "crossover_grid2d"

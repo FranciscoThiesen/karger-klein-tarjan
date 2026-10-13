@@ -1,0 +1,72 @@
+{
+  "validation": "pass",
+  "scope": "Untimed trace-only compatibility smoke; no performance calls",
+  "old_captures": [
+    {
+      "capture": "smoke_timing",
+      "raw_sha256": "7bba16e9b1b3155d2c647bd76b87581574100e21b05c858d164c45708579f821",
+      "matching_graphs": 7,
+      "archived_raw_unchanged": true
+    },
+    {
+      "capture": "smoke_work",
+      "raw_sha256": "94f3e8d76e57c228ed7402a03ac22007a03381402b3ae1c81ee9cbbc857a34d7",
+      "matching_graphs": 7,
+      "archived_raw_unchanged": true
+    },
+    {
+      "capture": "smoke_trace",
+      "raw_sha256": "35cad492cabe4c03f19db1b35a99176f1827a35931ce09d42d89fd8998493839",
+      "matching_graphs": 7,
+      "archived_raw_unchanged": true
+    }
+  ],
+  "new_trace_sha256": "35cad492cabe4c03f19db1b35a99176f1827a35931ce09d42d89fd8998493839",
+  "trace_rows": 30,
+  "old_and_new_trace_bytes_identical": true,
+  "matching_graphs": 7,
+  "graphs": [
+    {
+      "case_id": "line_metric_n128_d4_p0",
+      "graph_seed": 3037,
+      "input_fingerprint": 14657798147708610829,
+      "topology_fingerprint": 7507898591161391059
+    },
+    {
+      "case_id": "line_random_n128_d4_p0",
+      "graph_seed": 3037,
+      "input_fingerprint": 5989095665314325681,
+      "topology_fingerprint": 7507898591161391059
+    },
+    {
+      "case_id": "grid2d_metric_n128_d4_p0",
+      "graph_seed": 3037,
+      "input_fingerprint": 11231607240882055013,
+      "topology_fingerprint": 10491422756267436567
+    },
+    {
+      "case_id": "grid2d_random_n128_d4_p0",
+      "graph_seed": 3037,
+      "input_fingerprint": 12681947126133512017,
+      "topology_fingerprint": 10491422756267436567
+    },
+    {
+      "case_id": "random_tree_n128_d4_p0",
+      "graph_seed": 3037,
+      "input_fingerprint": 9958122436035734102,
+      "topology_fingerprint": 3894673553047486780
+    },
+    {
+      "case_id": "hierarchical_path_n128_d4_p0",
+      "graph_seed": 3037,
+      "input_fingerprint": 13073381514464889129,
+      "topology_fingerprint": 7507898591161391059
+    },
+    {
+      "case_id": "gnm_random_n128_d16_p0",
+      "graph_seed": 3037,
+      "input_fingerprint": 3293840503583495482,
+      "topology_fingerprint": 7363415412648518398
+    }
+  ]
+}

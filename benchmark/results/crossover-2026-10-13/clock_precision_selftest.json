@@ -1,0 +1,278 @@
+{
+  "validation": "pass",
+  "positive_checks": 4,
+  "negative_checks": 51,
+  "checks": [
+    {
+      "case": "complete nonnumeric seed/case order and paired-vs-independent CPU medians",
+      "status": "pass"
+    },
+    {
+      "case": "known918-second sleep-like timed observation retained and CPU summary unchanged",
+      "status": "pass"
+    },
+    {
+      "case": "within-call and between-call realtime reversals retained as flags",
+      "status": "pass"
+    },
+    {
+      "case": "invalid record case_id='unknown'",
+      "status": "rejected",
+      "message": "call 0: duplicate, missing or incorrectly ordered identity"
+    },
+    {
+      "case": "invalid record graph_seed=999",
+      "status": "rejected",
+      "message": "call 0: duplicate, missing or incorrectly ordered identity"
+    },
+    {
+      "case": "invalid record sampling_seed=999",
+      "status": "rejected",
+      "message": "call 0: duplicate, missing or incorrectly ordered identity"
+    },
+    {
+      "case": "invalid record phase='setup'",
+      "status": "rejected",
+      "message": "line 2: failed or invalid call identity"
+    },
+    {
+      "case": "invalid record repetition=2",
+      "status": "rejected",
+      "message": "call 0: duplicate, missing or incorrectly ordered identity"
+    },
+    {
+      "case": "invalid record order=2",
+      "status": "rejected",
+      "message": "call 0: duplicate, missing or incorrectly ordered identity"
+    },
+    {
+      "case": "invalid record algorithm='kruskal'",
+      "status": "rejected",
+      "message": "line 2: failed or invalid call identity"
+    },
+    {
+      "case": "invalid record validation='fail'",
+      "status": "rejected",
+      "message": "line 2: failed or invalid call identity"
+    },
+    {
+      "case": "invalid record process_cpu_elapsed_ns=0",
+      "status": "rejected",
+      "message": "line 2: invalid CPU delta or steady duration"
+    },
+    {
+      "case": "invalid record process_cpu_elapsed_ns=-1",
+      "status": "rejected",
+      "message": "line 2: invalid integer process_cpu_elapsed_ns"
+    },
+    {
+      "case": "invalid record process_cpu_elapsed_ns=1",
+      "status": "rejected",
+      "message": "line 2: invalid CPU delta or steady duration"
+    },
+    {
+      "case": "invalid record steady_elapsed_ns=0",
+      "status": "rejected",
+      "message": "line 2: invalid CPU delta or steady duration"
+    },
+    {
+      "case": "invalid record utc_start_ns=-1",
+      "status": "rejected",
+      "message": "line 2: invalid integer utc_start_ns"
+    },
+    {
+      "case": "invalid record utc_end_ns=9223372036854775808",
+      "status": "rejected",
+      "message": "line 2: invalid integer utc_end_ns"
+    },
+    {
+      "case": "invalid record graph_seed=True",
+      "status": "rejected",
+      "message": "line 2: invalid integer graph_seed"
+    },
+    {
+      "case": "invalid record utc_start_ns=1.0",
+      "status": "rejected",
+      "message": "line 2: invalid integer utc_start_ns"
+    },
+    {
+      "case": "invalid record process_cpu_end_ns='4'",
+      "status": "rejected",
+      "message": "line 2: invalid integer process_cpu_end_ns"
+    },
+    {
+      "case": "missing warmup record",
+      "status": "rejected",
+      "message": "incomplete warmup/timed call-clock sequence"
+    },
+    {
+      "case": "duplicate record",
+      "status": "rejected",
+      "message": "incomplete warmup/timed call-clock sequence"
+    },
+    {
+      "case": "same-count duplicate identity",
+      "status": "rejected",
+      "message": "call 0: duplicate, missing or incorrectly ordered identity"
+    },
+    {
+      "case": "reordered records",
+      "status": "rejected",
+      "message": "call 0: duplicate, missing or incorrectly ordered identity"
+    },
+    {
+      "case": "extra JSON field",
+      "status": "rejected",
+      "message": "line 2: incorrect call-clock schema"
+    },
+    {
+      "case": "missing JSON field",
+      "status": "rejected",
+      "message": "line 2: incorrect call-clock schema"
+    },
+    {
+      "case": "CPU clock overlap between calls",
+      "status": "rejected",
+      "message": "call 1: cumulative process CPU clock moved backward/overlapped"
+    },
+    {
+      "case": "CPU clock reversal within call",
+      "status": "rejected",
+      "message": "line 2: invalid CPU delta or steady duration"
+    },
+    {
+      "case": "CSV/clock duration mismatch",
+      "status": "rejected",
+      "message": "call 4: clock record differs from CSV steady duration"
+    },
+    {
+      "case": "CSV missing row",
+      "status": "rejected",
+      "message": "incomplete timing matrix: 31/32 rows"
+    },
+    {
+      "case": "CSV duplicate row",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/crossover-clock-test-cjh2_926/timing.csv:34: duplicate timing row"
+    },
+    {
+      "case": "CSV order mismatch",
+      "status": "rejected",
+      "message": "CSV rows do not follow the actual command/manifest schedule"
+    },
+    {
+      "case": "invalid JSON",
+      "status": "rejected",
+      "message": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)"
+    },
+    {
+      "case": "nonobject JSON",
+      "status": "rejected",
+      "message": "line 1: incorrect call-clock schema"
+    },
+    {
+      "case": "unknown clock version",
+      "status": "rejected",
+      "message": "line 1: unknown/malformed call-clock prefix"
+    },
+    {
+      "case": "malformed clock prefix",
+      "status": "rejected",
+      "message": "line 1: unknown/malformed call-clock prefix"
+    },
+    {
+      "case": "duplicate JSON key",
+      "status": "rejected",
+      "message": "duplicate JSON key: case_id"
+    },
+    {
+      "case": "nonfinite JSON",
+      "status": "rejected",
+      "message": "nonfinite JSON constant: NaN"
+    },
+    {
+      "case": "bad capture mode",
+      "status": "rejected",
+      "message": "capture did not complete timing successfully"
+    },
+    {
+      "case": "bad capture exit_status",
+      "status": "rejected",
+      "message": "capture did not complete timing successfully"
+    },
+    {
+      "case": "bad capture exit_status",
+      "status": "rejected",
+      "message": "capture did not complete timing successfully"
+    },
+    {
+      "case": "bad capture interruption",
+      "status": "rejected",
+      "message": "capture did not complete timing successfully"
+    },
+    {
+      "case": "timing mode",
+      "status": "rejected",
+      "message": "unexpected timing command options"
+    },
+    {
+      "case": "odd repetitions",
+      "status": "rejected",
+      "message": "repetitions must be even, in [2,100]"
+    },
+    {
+      "case": "zero warmups",
+      "status": "rejected",
+      "message": "warmups must be in [1,100]"
+    },
+    {
+      "case": "duplicate graph seeds",
+      "status": "rejected",
+      "message": "seed bank must be nonempty and distinct"
+    },
+    {
+      "case": "seed order differs",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/crossover-clock-test-cjh2_926/timing.csv:2: unbalanced or incorrect execution order"
+    },
+    {
+      "case": "unknown seed bank",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/crossover-clock-test-cjh2_926/timing.csv:6: unexpected algorithm or sampling seed"
+    },
+    {
+      "case": "duplicate command flag",
+      "status": "rejected",
+      "message": "duplicate command option"
+    },
+    {
+      "case": "missing command flag",
+      "status": "rejected",
+      "message": "unexpected timing command options"
+    },
+    {
+      "case": "ambiguous relative manifest",
+      "status": "rejected",
+      "message": "relative manifest needs an absolute metadata working_directory"
+    },
+    {
+      "case": "relative manifest resolved through explicit absolute working_directory",
+      "status": "pass"
+    },
+    {
+      "case": "raw hash mismatch",
+      "status": "rejected",
+      "message": "output_sha256: source differs from capture metadata"
+    },
+    {
+      "case": "log hash mismatch",
+      "status": "rejected",
+      "message": "log_sha256: source differs from capture metadata"
+    },
+    {
+      "case": "manifest hash mismatch",
+      "status": "rejected",
+      "message": "manifest_sha256: source differs from capture metadata"
+    }
+  ]
+}

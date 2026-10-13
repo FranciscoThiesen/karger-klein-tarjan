@@ -16,7 +16,9 @@
 // Geometric scaffold plus uniformly drawn distinct shortcuts, and connected
 // G(n,m) with independently ranked weights. The spatial models are synthetic,
 // not k-nearest-neighbor or road datasets.
-// Metric/random twins share geometry, topology, labels, IDs and input order.
+// Narrow metric/random twins share geometry, topology, labels, IDs and input
+// order. The wide-gap line ablation changes only geometry and distance ranks;
+// its topology, labels, IDs and input order match both existing line families.
 // Metric weights are DISTINCT RANKS of (exact distance key, original edge ID),
 // so they preserve distance ordering but need not themselves satisfy a metric.
 namespace benchmark_crossover {
@@ -44,8 +46,8 @@ struct Fixture {
     int topology_attempts = 1;
 };
 
-inline constexpr std::array<const char*, 5> families = {
-    "line_metric", "line_random", "grid2d_metric", "grid2d_random", "gnm_random"
+inline constexpr std::array<const char*, 6> families = {
+    "line_metric", "line_random", "grid2d_metric", "grid2d_random", "gnm_random", "line_wide_metric"
 };
 inline constexpr int gnm_attempt_limit = 32;
 
@@ -107,7 +109,7 @@ inline bool connected(const Graph& edges, int n) {
 inline std::uint64_t distance_key(bool line, const Position& a, const Position& b) {
     const std::int64_t dx = a[0] - b[0];
     if (line) {
-        // At n=2^23 a line coordinate can exceed UINT_MAX. Do not square it:
+        // At n=2^23 the wide-gap line span is below 2^55. Do not square it:
         // Euclidean length in one dimension is its exact absolute difference.
         return static_cast<std::uint64_t>(dx < 0 ? -dx : dx);
     }
@@ -124,6 +126,7 @@ inline Fixture make_fixture(const Spec& spec, unsigned int seed) {
     const int n = spec.n;
     const bool gnm = spec.family == "gnm_random";
     const bool line = spec.family.compare(0, 4, "line") == 0;
+    const bool wide_line = spec.family == "line_wide_metric";
     const bool metric = spec.family.find("_metric") != std::string::npos;
     std::mt19937 topology_rng(seed ^ 0x6a09e667u);
     std::mt19937 geometry_rng(seed ^ 0x510e527fu);
@@ -143,8 +146,16 @@ inline Fixture make_fixture(const Spec& spec, unsigned int seed) {
     if (line) {
         result.original_positions[0] = {0, 0};
         for (int v = 1; v < n; ++v) {
-            result.original_positions[v] = {
-                result.original_positions[v - 1][0] + 1 + bounded(geometry_rng, 1024), 0};
+            if (wide_line) {
+                // A full uniform 32-bit word gives gaps in [1,2^32]. This
+                // separate branch preserves the narrow family's exact draws.
+                result.original_positions[v] = {
+                    result.original_positions[v - 1][0] + 1LL +
+                        static_cast<std::uint32_t>(geometry_rng()), 0};
+            } else {
+                result.original_positions[v] = {
+                    result.original_positions[v - 1][0] + 1 + bounded(geometry_rng, 1024), 0};
+            }
             builder.add(v - 1, v);
         }
     } else if (!gnm) {

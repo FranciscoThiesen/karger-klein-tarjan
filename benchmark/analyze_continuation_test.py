@@ -202,7 +202,7 @@ def main():
             reject(f"manifest {field}={value}",lambda f=field,v=value:mutate(manifest_rows,specs,0,f,v))
         reject("random control with intrusions",lambda:manifest_rows([{"family":"random_path","n":32,"density":2,"intrusion_per_mille":1}]))
         reject("invalid legacy density",lambda:manifest_rows([{"family":"legacy_random","n":32,"density":2,"intrusion_per_mille":0}]))
-        crossover_families=("line_metric","line_random","grid2d_metric","grid2d_random","gnm_random")
+        crossover_families=("line_metric","line_random","grid2d_metric","grid2d_random","gnm_random","line_wide_metric")
         for family in crossover_families:
             for n in (2**22,2**23):
                 accepted=manifest_rows([{"family":family,"n":n,"density":16,"intrusion_per_mille":0}])
@@ -218,6 +218,24 @@ def main():
             if family not in crossover_families:
                 reject(f"old {family} retains4M vertex cap",lambda f=family:manifest_rows(
                     [{"family":f,"n":2**23,"density":32 if f=="legacy_random" else 16,"intrusion_per_mille":0}]))
+        line_specs=[{"family":f,"n":32,"density":2,"intrusion_per_mille":0}
+                    for f in ("line_metric","line_random","line_wide_metric")]
+        line_cases=manifest_rows(line_specs)
+        lt,lw,lr=synthetic(line_cases)
+        write(tp,analysis.TIMING_FIELDS,lt);write(wp,work_fields,lw);write(rp,analysis.TRACE_FIELDS,lr)
+        line_timing=analysis.load_timing(tp,line_cases,GRAPH_SEEDS,SAMPLING_SEEDS,2,1)
+        line_work=analysis.load_work(wp,line_cases,GRAPH_SEEDS,SAMPLING_SEEDS)
+        line_trace=analysis.load_traces(rp,line_cases,GRAPH_SEEDS)
+        analysis.crosscheck(line_timing,line_work,line_trace,SAMPLING_SEEDS)
+        checks.append({"case":"wide/narrow/random line families accept matched topology with distinct weighted inputs","status":"pass"})
+        changed=copy.deepcopy(lt)
+        for row in changed:
+            if row["family"]=="line_wide_metric":row["topology_fingerprint"]+=1
+        write(tp,analysis.TIMING_FIELDS,changed)
+        reject("wide line requires the shared narrow/random topology",lambda:analysis.load_timing(
+            tp,line_cases,GRAPH_SEEDS,SAMPLING_SEEDS,2,1))
+        reject("wide line rejects intrusions",lambda:manifest_rows(
+            [{"family":"line_wide_metric","n":32,"density":2,"intrusion_per_mille":1}]))
         distance_specs=[{"family":f,"n":32,"density":2,"intrusion_per_mille":0}
                         for f in ("distance_path","distance_tree")]
         distance_cases=manifest_rows(distance_specs)

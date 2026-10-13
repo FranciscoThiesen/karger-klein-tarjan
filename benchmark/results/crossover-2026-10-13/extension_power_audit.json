@@ -1,0 +1,24 @@
+{
+  "campaign": "extension",
+  "validation": "pass",
+  "query": [
+    "pmset",
+    "-g",
+    "log"
+  ],
+  "query_exit": 0,
+  "query_stderr": "",
+  "query_utc": "2026-10-13T05:53:15.565561+00:00",
+  "started_utc": "2026-10-13T05:34:12.139503+00:00",
+  "finished_utc": "2026-10-13T05:51:26.093854+00:00",
+  "utc_seconds": 1033.954351,
+  "monotonic_seconds": 1033.960059625,
+  "difference_seconds": -0.005708624999897438,
+  "timed_calls": 12,
+  "warmup_calls": 6,
+  "flagged_calls": 0,
+  "rows_removed": 0,
+  "power_events": [],
+  "scope": "Timestamped Sleep/Wake/DarkWake events within capture interval or sleep intervals overlapping it; absence is not proof of power control. Every clock/raw time retained.",
+  "limitation": "Late8Mline calls slowed in CPU as well as wall time, retaining one winning and one losing pair. Clocks do not identify contention, core migration, thermal state or frequency."
+}

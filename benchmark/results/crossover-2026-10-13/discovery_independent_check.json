@@ -1,0 +1,12 @@
+{
+  "validation": "pass",
+  "cases": 19,
+  "matched_pairs": 38,
+  "timed_calls": 76,
+  "warmup_calls": 38,
+  "checked_metrics": ["wall", "cpu"],
+  "scope": "Independent standard-library reconstruction of every one-graph pilot paired median and individual-loss count from raw CSV and log, without importing analyzer helpers.",
+  "inputs": ["discovery_timing.csv", "discovery_timing.log"],
+  "checked_outputs": ["discovery-comparison/wall_case_summary.csv", "discovery-comparison/cpu_case_summary.csv"],
+  "execution": "Completed after the initial pilot exited and before the extension timing started. This file records the already observed result; no check was rerun during extension timing."
+}

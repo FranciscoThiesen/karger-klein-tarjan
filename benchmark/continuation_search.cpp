@@ -108,7 +108,7 @@ Options options(int argc, char** argv) {
 using benchmark_continuation::case_id;
 
 Graph fixture(const Spec& spec, unsigned int seed) {
-    if (spec.family == "line_metric" || spec.family == "line_random" ||
+    if (spec.family == "line_metric" || spec.family == "line_random" || spec.family == "line_wide_metric" ||
         spec.family == "grid2d_metric" || spec.family == "grid2d_random" || spec.family == "gnm_random") {
         require(spec.intrusion_per_mille == 0, "geometric crossover fixtures require p=0");
         auto generated = benchmark_crossover::make_fixture({spec.family, spec.n, spec.density}, seed);
@@ -287,7 +287,7 @@ void run(const Options& config) {
                       << " setup_reference_and_certificate_ms="
                       << std::chrono::duration_cast<std::chrono::milliseconds>(certified-generated).count()
                       << '\n';
-            if (spec.family != "legacy_random" && spec.family != "line_metric" &&
+            if (spec.family != "legacy_random" && spec.family != "line_metric" && spec.family != "line_wide_metric" &&
                 spec.family != "line_random" && spec.family != "grid2d_metric" &&
                 spec.family != "grid2d_random" && spec.family != "gnm_random") {
                 const auto backbone_edges = std::count_if(expected.begin(), expected.end(),

@@ -1,0 +1,53 @@
+{
+  "validation": "pass",
+  "positive_cases": 1,
+  "negative_cases": 8,
+  "checks": [
+    {
+      "name": "valid_capture",
+      "validation": "pass",
+      "campaigns": 1,
+      "cases": 19
+    },
+    {
+      "name": "removed_observations",
+      "validation": "rejected",
+      "reason": "comparison reports removed or adjusted observations"
+    },
+    {
+      "name": "boolean_observation_count",
+      "validation": "rejected",
+      "reason": "comparison reports removed or adjusted observations"
+    },
+    {
+      "name": "configuration_hash_mismatch",
+      "validation": "rejected",
+      "reason": "comparison configuration: missing or hash-mismatched input /Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/crossover-2026-10-13/discovery_comparison.json"
+    },
+    {
+      "name": "raw_input_hash_mismatch",
+      "validation": "rejected",
+      "reason": "discovery/manifest: missing or hash-mismatched input /Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/crossover-2026-10-13/discovery.csv"
+    },
+    {
+      "name": "missing_case",
+      "validation": "rejected",
+      "reason": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/kkt-figure-validation-4cp9rrvi/comparison/wall_case_summary.csv: row count differs from validated raw data"
+    },
+    {
+      "name": "duplicate_case",
+      "validation": "rejected",
+      "reason": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/kkt-figure-validation-4cp9rrvi/comparison/wall_case_summary.csv: row count differs from validated raw data"
+    },
+    {
+      "name": "altered_ratio",
+      "validation": "rejected",
+      "reason": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/kkt-figure-validation-4cp9rrvi/comparison/wall_case_summary.csv:2: paired_runtime_ratio differs from raw-data aggregation"
+    },
+    {
+      "name": "nonfinite_ratio",
+      "validation": "rejected",
+      "reason": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/kkt-figure-validation-4cp9rrvi/comparison/wall_case_summary.csv:2: paired_runtime_ratio differs from raw-data aggregation"
+    }
+  ]
+}

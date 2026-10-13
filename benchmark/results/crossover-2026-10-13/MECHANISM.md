@@ -111,6 +111,63 @@ probability 1/2, and each other edge with probability 1/3. The implementation's
 finite integer gaps and ID tie-break require their own trace; later rounds also
 have correlated boundary weights and are not iid redraws.
 
+### A finite gap alphabet limits this line model's continuation
+
+The current metric line has a further structural restriction: its gaps belong
+to the fixed alphabet `{1,...,K}`, with `K=1024`. Path edge `(i−1,i)` is inserted
+with original ID `i−1`, before any shortcut. Sorting by `(distance,original ID)`
+therefore orders equal path gaps from left to right. Subsequent vertex-label
+and input-order shuffles do not alter that weight order. The public integer
+weight ranks remain distinct; this restriction is not an ambiguity between
+equal-cost MSTs.
+
+Every contraction component is an interval, as proved above. Consider the
+smallest raw gap still present among its path boundaries. In any consecutive
+block of boundaries with that raw gap, the component immediately to the right
+of each boundary selects that boundary: its alternative on the right either
+has a larger raw gap or the same gap with a larger original ID. All boundaries
+of the currently smallest raw-gap value disappear in this round. Shortcuts
+cannot change this choice because every shortcut is more expensive than the
+path boundary it crosses. Thus each round eliminates at least one distinct
+remaining gap value, and the whole compaction finishes within `K` rounds. The
+usual vertex-halving argument also applies, giving at most
+`min(K,floor(log2(n)))` rounds for `n>=2`.
+
+Writing `V=sum_r m_r`, no quotient contains more edges than the original, so
+`V<=Km`. Vertex halving gives `sum_r n_r<=2n`; consequently the repeated
+contraction scanning/materialization work is `O(Km+n)` in the unit-cost RAM
+model. The current contraction uses deterministic endpoint bucketing, rather
+than a hash table; final ID-set output construction separately assumes
+constant-cost hashing on average. These counts do not model allocation or
+cache latency. For **fixed** `K=1024`, this family has a linear
+contraction-work bound in its input size. It cannot establish an asymptotic
+logarithmic disadvantage for compaction, although the two implementations can
+still cross in practical elapsed time. Once only equal maximum-gap boundaries
+remain, their monotone rank order merges the entire remainder in one round.
+Many such boundaries may already have disappeared in earlier rounds, so this
+does not prove that a large terminal merge happened in any measured graph.
+
+At 8,388,608 vertices, the ordinary bound is 23 rounds, much smaller than 1024.
+The alphabet bound alone therefore does not explain a measured plateau or a
+particular number of rounds at that size. Per-round component moments and
+retained-edge traces must be examined before attributing a runtime trend to
+this effect.
+
+A proposed **new, retained precision ablation**, `line_wide_metric`, would draw
+positive gaps uniformly from `{1,...,2^32}` while preserving the same topology,
+IDs, label permutation and edge order through the separate random streams.
+At the current 8M size limit the largest possible coordinate is
+`(2^23−1)·2^32 < 2^55`, so absolute distances fit safely in signed 64-bit
+arithmetic; there is no need to square line distances. Its path ordering would
+approximate continuous random gaps more closely at the tested sizes, while
+still allowing some equal gaps and retaining the forced-path-MST limitation.
+It would also remain a fixed-alphabet model asymptotically. This is a proposal
+for a separately declared experiment after the current extension, not a
+replacement for any existing fixture or unfavorable result. The existing
+`low_path` control, with a uniform permutation of distinct cheap backbone
+ranks, is another useful path-order sanity check; it is a separate fixture,
+not an assumed byte-identical geometric input.
+
 ### The grid MST varies, but nearly all global shortcuts are still heavy
 
 The grid contains cycles, so its MST is not a predetermined list of scaffold

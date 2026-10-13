@@ -1,0 +1,45 @@
+timing gnm_random_n8388608_d16_p0 graph_seed=3037
+crossover_topology_attempts=1
+setup_generation_ms=31983 setup_reference_and_certificate_ms=88628
+call_clock_v1 {"case_id":"gnm_random_n8388608_d16_p0","graph_seed":3037,"sampling_seed":101,"phase":"warmup","repetition":0,"order":0,"algorithm":"kkt","utc_start_ns":1791869777214420000,"utc_end_ns":1791869822981224000,"process_cpu_start_ns":124661268000,"process_cpu_end_ns":170359624000,"process_cpu_elapsed_ns":45698356000,"steady_elapsed_ns":45767062125,"validation":"pass"}
+call_clock_v1 {"case_id":"gnm_random_n8388608_d16_p0","graph_seed":3037,"sampling_seed":101,"phase":"warmup","repetition":0,"order":1,"algorithm":"compacting_boruvka","utc_start_ns":1791869823609315000,"utc_end_ns":1791869868880241000,"process_cpu_start_ns":170987501000,"process_cpu_end_ns":216258624000,"process_cpu_elapsed_ns":45271123000,"steady_elapsed_ns":45271182875,"validation":"pass"}
+call_clock_v1 {"case_id":"gnm_random_n8388608_d16_p0","graph_seed":3037,"sampling_seed":101,"phase":"timed","repetition":0,"order":0,"algorithm":"kkt","utc_start_ns":1791869869500320000,"utc_end_ns":1791869914364631000,"process_cpu_start_ns":216878545000,"process_cpu_end_ns":261742781000,"process_cpu_elapsed_ns":44864236000,"steady_elapsed_ns":44864563709,"validation":"pass"}
+call_clock_v1 {"case_id":"gnm_random_n8388608_d16_p0","graph_seed":3037,"sampling_seed":101,"phase":"timed","repetition":0,"order":1,"algorithm":"compacting_boruvka","utc_start_ns":1791869914989709000,"utc_end_ns":1791869960386950000,"process_cpu_start_ns":262367650000,"process_cpu_end_ns":307764971000,"process_cpu_elapsed_ns":45397321000,"steady_elapsed_ns":45397496875,"validation":"pass"}
+call_clock_v1 {"case_id":"gnm_random_n8388608_d16_p0","graph_seed":3037,"sampling_seed":101,"phase":"timed","repetition":1,"order":0,"algorithm":"compacting_boruvka","utc_start_ns":1791869961002981000,"utc_end_ns":1791870006984257000,"process_cpu_start_ns":308380618000,"process_cpu_end_ns":354362088000,"process_cpu_elapsed_ns":45981470000,"steady_elapsed_ns":45981531417,"validation":"pass"}
+call_clock_v1 {"case_id":"gnm_random_n8388608_d16_p0","graph_seed":3037,"sampling_seed":101,"phase":"timed","repetition":1,"order":1,"algorithm":"kkt","utc_start_ns":1791870007614813000,"utc_end_ns":1791870052928669000,"process_cpu_start_ns":354992316000,"process_cpu_end_ns":400306294000,"process_cpu_elapsed_ns":45313978000,"steady_elapsed_ns":45314116000,"validation":"pass"}
+timing line_metric_n2097152_d16_p0 graph_seed=3037
+crossover_topology_attempts=1
+setup_generation_ms=10149 setup_reference_and_certificate_ms=21753
+call_clock_v1 {"case_id":"line_metric_n2097152_d16_p0","graph_seed":3037,"sampling_seed":101,"phase":"warmup","repetition":0,"order":0,"algorithm":"kkt","utc_start_ns":1791870086793060000,"utc_end_ns":1791870096700240000,"process_cpu_start_ns":434170235000,"process_cpu_end_ns":444077455000,"process_cpu_elapsed_ns":9907220000,"steady_elapsed_ns":9907224500,"validation":"pass"}
+call_clock_v1 {"case_id":"line_metric_n2097152_d16_p0","graph_seed":3037,"sampling_seed":101,"phase":"warmup","repetition":0,"order":1,"algorithm":"compacting_boruvka","utc_start_ns":1791870096748385000,"utc_end_ns":1791870107377313000,"process_cpu_start_ns":444125605000,"process_cpu_end_ns":454754581000,"process_cpu_elapsed_ns":10628976000,"steady_elapsed_ns":10628981500,"validation":"pass"}
+call_clock_v1 {"case_id":"line_metric_n2097152_d16_p0","graph_seed":3037,"sampling_seed":101,"phase":"timed","repetition":0,"order":0,"algorithm":"kkt","utc_start_ns":1791870107426978000,"utc_end_ns":1791870116938238000,"process_cpu_start_ns":454804253000,"process_cpu_end_ns":464315565000,"process_cpu_elapsed_ns":9511312000,"steady_elapsed_ns":9511306250,"validation":"pass"}
+call_clock_v1 {"case_id":"line_metric_n2097152_d16_p0","graph_seed":3037,"sampling_seed":101,"phase":"timed","repetition":0,"order":1,"algorithm":"compacting_boruvka","utc_start_ns":1791870116985980000,"utc_end_ns":1791870127762975000,"process_cpu_start_ns":464363311000,"process_cpu_end_ns":475140318000,"process_cpu_elapsed_ns":10777007000,"steady_elapsed_ns":10777047625,"validation":"pass"}
+call_clock_v1 {"case_id":"line_metric_n2097152_d16_p0","graph_seed":3037,"sampling_seed":101,"phase":"timed","repetition":1,"order":0,"algorithm":"compacting_boruvka","utc_start_ns":1791870127813145000,"utc_end_ns":1791870138585229000,"process_cpu_start_ns":475190497000,"process_cpu_end_ns":485962638000,"process_cpu_elapsed_ns":10772141000,"steady_elapsed_ns":10772139084,"validation":"pass"}
+call_clock_v1 {"case_id":"line_metric_n2097152_d16_p0","graph_seed":3037,"sampling_seed":101,"phase":"timed","repetition":1,"order":1,"algorithm":"kkt","utc_start_ns":1791870138633256000,"utc_end_ns":1791870148257409000,"process_cpu_start_ns":486010672000,"process_cpu_end_ns":495634674000,"process_cpu_elapsed_ns":9624002000,"steady_elapsed_ns":9624199709,"validation":"pass"}
+timing line_metric_n8388608_d16_p0 graph_seed=3037
+crossover_topology_attempts=1
+setup_generation_ms=46021 setup_reference_and_certificate_ms=152655
+call_clock_v1 {"case_id":"line_metric_n8388608_d16_p0","graph_seed":3037,"sampling_seed":101,"phase":"warmup","repetition":0,"order":0,"algorithm":"kkt","utc_start_ns":1791870351001843000,"utc_end_ns":1791870401385710000,"process_cpu_start_ns":698379827000,"process_cpu_end_ns":748761489000,"process_cpu_elapsed_ns":50381662000,"steady_elapsed_ns":50384153500,"validation":"pass"}
+call_clock_v1 {"case_id":"line_metric_n8388608_d16_p0","graph_seed":3037,"sampling_seed":101,"phase":"warmup","repetition":0,"order":1,"algorithm":"compacting_boruvka","utc_start_ns":1791870401613464000,"utc_end_ns":1791870456073973000,"process_cpu_start_ns":748989252000,"process_cpu_end_ns":803450056000,"process_cpu_elapsed_ns":54460804000,"steady_elapsed_ns":54460821917,"validation":"pass"}
+call_clock_v1 {"case_id":"line_metric_n8388608_d16_p0","graph_seed":3037,"sampling_seed":101,"phase":"timed","repetition":0,"order":0,"algorithm":"kkt","utc_start_ns":1791870456304846000,"utc_end_ns":1791870506896957000,"process_cpu_start_ns":803680936000,"process_cpu_end_ns":854272620000,"process_cpu_elapsed_ns":50591684000,"steady_elapsed_ns":50592398750,"validation":"pass"}
+call_clock_v1 {"case_id":"line_metric_n8388608_d16_p0","graph_seed":3037,"sampling_seed":101,"phase":"timed","repetition":0,"order":1,"algorithm":"compacting_boruvka","utc_start_ns":1791870507123599000,"utc_end_ns":1791870561040196000,"process_cpu_start_ns":854499269000,"process_cpu_end_ns":908415616000,"process_cpu_elapsed_ns":53916347000,"steady_elapsed_ns":53916908083,"validation":"pass"}
+call_clock_v1 {"case_id":"line_metric_n8388608_d16_p0","graph_seed":3037,"sampling_seed":101,"phase":"timed","repetition":1,"order":0,"algorithm":"compacting_boruvka","utc_start_ns":1791870561271019000,"utc_end_ns":1791870621557660000,"process_cpu_start_ns":908646446000,"process_cpu_end_ns":968691881000,"process_cpu_elapsed_ns":60045435000,"steady_elapsed_ns":60286990166,"validation":"pass"}
+call_clock_v1 {"case_id":"line_metric_n8388608_d16_p0","graph_seed":3037,"sampling_seed":101,"phase":"timed","repetition":1,"order":1,"algorithm":"kkt","utc_start_ns":1791870621827016000,"utc_end_ns":1791870685456577000,"process_cpu_start_ns":968960753000,"process_cpu_end_ns":1032485489000,"process_cpu_elapsed_ns":63524736000,"steady_elapsed_ns":63629922917,"validation":"pass"}
+     1033.95 real      1011.57 user        21.53 sys
+         25756418048  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+             7253600  page reclaims
+                   1  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  18  voluntary context switches
+               24073  involuntary context switches
+       1993831088404  instructions retired
+       4025989091850  cycles elapsed
+         21261716104  peak memory footprint

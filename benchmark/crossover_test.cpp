@@ -47,12 +47,13 @@ std::array<int, 2> independent_dimensions(int n) {
     return result;
 }
 
-void paired_check(const Fixture& metric, const Fixture& random) {
+void paired_check(const Fixture& metric, const Fixture& random, bool same_geometry = true) {
     require(metric.graph.size() == random.graph.size() &&
-            metric.original_positions == random.original_positions &&
             metric.original_to_label == random.original_to_label &&
             metric.backbone_ids == random.backbone_ids &&
             metric.grid_dimensions == random.grid_dimensions, "paired metadata differs");
+    require((metric.original_positions == random.original_positions) == same_geometry,
+            "paired geometry equality differs from the specified model");
     bool changed_weight = false;
     for (std::size_t i = 0; i < metric.graph.size(); ++i) {
         const auto& a = metric.graph[i];
@@ -68,6 +69,7 @@ int check(const Spec& spec, unsigned seed, bool check_mst) {
     const auto fixture = benchmark_crossover::make_fixture(spec, seed);
     const auto replay = benchmark_crossover::make_fixture(spec, seed);
     const bool line = spec.family.find("line_") == 0;
+    const bool wide_line = spec.family == "line_wide_metric";
     const bool gnm = spec.family == "gnm_random";
     const bool metric = spec.family.find("_metric") != std::string::npos;
     const int n = spec.n, m = n * spec.density;
@@ -99,10 +101,14 @@ int check(const Spec& spec, unsigned seed, bool check_mst) {
     } else if (line) {
         require(fixture.grid_dimensions == std::array<int, 2>{0, 0}, "line has grid metadata");
         require(fixture.original_positions[0] == benchmark_crossover::Position{0, 0}, "line origin moved");
+        std::mt19937 expected_wide_rng(seed ^ 0x510e527fu);
         for (int v = 1; v < n; ++v) {
             const auto gap = fixture.original_positions[v][0] - fixture.original_positions[v - 1][0];
-            require(gap >= 1 && gap <= 1024 && fixture.original_positions[v][1] == 0,
-                    "line gap is not in [1,1024] or leaves the axis");
+            require(gap >= 1 && gap <= (wide_line ? (std::int64_t{1} << 32) : 1024) &&
+                    fixture.original_positions[v][1] == 0, "line gap exceeds its range or leaves the axis");
+            if (wide_line)
+                require(gap == 1LL + static_cast<std::uint32_t>(expected_wide_rng()),
+                        "wide gap does not use one full 32-bit geometry word");
         }
     } else {
         require(fixture.grid_dimensions == dimensions, "grid dimensions differ from independent construction");
@@ -170,7 +176,16 @@ int check(const Spec& spec, unsigned seed, bool check_mst) {
     if (metric) {
         require(std::is_sorted(ranked.begin(), ranked.end()), "metric ranks violate exact length/ID order");
         const auto twin = benchmark_crossover::make_fixture({line ? "line_random" : "grid2d_random", n, spec.density}, seed);
-        paired_check(fixture, twin);
+        paired_check(fixture, twin, !wide_line);
+        if (wide_line) {
+            const auto narrow = benchmark_crossover::make_fixture({"line_metric", n, spec.density}, seed);
+            paired_check(fixture, narrow, false);
+            for (int v = 1; v < n; ++v) {
+                const auto wide_gap = fixture.original_positions[v][0] - fixture.original_positions[v-1][0];
+                const auto narrow_gap = narrow.original_positions[v][0] - narrow.original_positions[v-1][0];
+                require(narrow_gap == 1 + ((wide_gap - 1) % 1024), "wide/narrow gap RNG coupling changed");
+            }
+        }
     }
     if (!check_mst) return 0;
     const auto oracle = kruskal(fixture.graph, n);
@@ -290,17 +305,17 @@ void check_component_moments() {
 int main() {
     try {
         int fixtures = 0, mst_checks = 0;
-        for (const char* family : {"line_metric", "line_random", "grid2d_metric", "grid2d_random"})
+        for (const char* family : {"line_metric", "line_random", "grid2d_metric", "grid2d_random", "line_wide_metric"})
             for (int n : {32, 128, 1024})
                 for (int density : {2, 8})
                     for (unsigned seed : {17u, 42u, 999u}) {
                         mst_checks += check({family, n, density}, seed, true); ++fixtures;
                     }
-        for (const char* family : {"line_metric", "line_random", "grid2d_metric", "grid2d_random"}) {
+        for (const char* family : {"line_metric", "line_random", "grid2d_metric", "grid2d_random", "line_wide_metric"}) {
             mst_checks += check({family, 32, 15}, 17, true); ++fixtures;
             mst_checks += check({family, 4096, 16}, 42, false); ++fixtures;
         }
-        for (const char* family : {"line_metric", "line_random"}) {
+        for (const char* family : {"line_metric", "line_random", "line_wide_metric"}) {
             mst_checks += check({family, 128, 1}, 999, true); ++fixtures;
         }
         for (int n : {128, 1024}) for (unsigned seed : {17u, 42u, 999u}) {
@@ -347,6 +362,10 @@ int main() {
         require(longest_extended_line == 8589933568LL &&
                 benchmark_crossover::detail::distance_key(true, {0, 0}, {longest_extended_line, 0}) ==
                 static_cast<std::uint64_t>(longest_extended_line), "8M line distance truncated above UINT_MAX");
+        const std::int64_t longest_wide_line = ((std::int64_t{1} << 23) - 1) * (std::int64_t{1} << 32);
+        require(longest_wide_line == 36028792723996672LL &&
+                benchmark_crossover::detail::distance_key(true, {0, 0}, {longest_wide_line, 0}) ==
+                static_cast<std::uint64_t>(longest_wide_line), "maximum wide-line distance overflowed");
         const std::int64_t maximum_dx = 4095LL * 1024 + 400;
         const std::int64_t maximum_dy = 2047LL * 1024 + 400;
         require(benchmark_crossover::detail::distance_key(false, {-200, -200},

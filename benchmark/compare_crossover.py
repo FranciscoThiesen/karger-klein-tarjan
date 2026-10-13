@@ -42,7 +42,7 @@ import crossover_clocks as clocks
 
 GRAPHS = (1000003, 1000033, 1000037)
 SAMPLING = (211, 307)
-NEW_FAMILIES = {"line_metric", "line_random", "grid2d_metric", "grid2d_random", "gnm_random"}
+NEW_FAMILIES = {"line_metric", "line_random", "grid2d_metric", "grid2d_random", "gnm_random", "line_wide_metric"}
 CRITERION = {"maximum_case_ratio": 0.90, "every_graph_ratio_strictly_below": 1,
              "metrics": ["wall", "cpu"], "both_runs_required": True}
 SELECTION_FIELDS = {"schema", "frozen_utc", "revision_before_freeze_commit", "primary", "repeat",

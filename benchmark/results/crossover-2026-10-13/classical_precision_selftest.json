@@ -1,0 +1,184 @@
+{
+  "validation": "pass",
+  "scope": "synthetic rows and fake processes only",
+  "positive_checks": 4,
+  "negative_checks": 33,
+  "checks": [
+    {
+      "case": "complete warmup/timed schedule and input binding",
+      "status": "pass"
+    },
+    {
+      "case": "long steady/UTC observation retained with CPU diagnostic",
+      "status": "pass"
+    },
+    {
+      "case": "realtime reversal retained as diagnostic",
+      "status": "pass"
+    },
+    {
+      "case": "bad phase='timed'",
+      "status": "rejected",
+      "message": "duplicate, missing or incorrectly ordered classical measurement"
+    },
+    {
+      "case": "bad algorithm='compacting_boruvka'",
+      "status": "rejected",
+      "message": "duplicate, missing or incorrectly ordered classical measurement"
+    },
+    {
+      "case": "bad order=1",
+      "status": "rejected",
+      "message": "duplicate, missing or incorrectly ordered classical measurement"
+    },
+    {
+      "case": "bad repetition=4",
+      "status": "rejected",
+      "message": "duplicate, missing or incorrectly ordered classical measurement"
+    },
+    {
+      "case": "bad case_id='wrong'",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/classical-capture-test-s6n5h6vc/rows.csv:2: fixture identity differs from manifest"
+    },
+    {
+      "case": "bad family='line_metric'",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/classical-capture-test-s6n5h6vc/rows.csv:2: fixture identity differs from manifest"
+    },
+    {
+      "case": "bad n=256",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/classical-capture-test-s6n5h6vc/rows.csv:2: fixture identity differs from manifest"
+    },
+    {
+      "case": "bad m=2049",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/classical-capture-test-s6n5h6vc/rows.csv:2: fixture identity differs from manifest"
+    },
+    {
+      "case": "bad density=32",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/classical-capture-test-s6n5h6vc/rows.csv:2: fixture identity differs from manifest"
+    },
+    {
+      "case": "bad intrusion_per_mille=1",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/classical-capture-test-s6n5h6vc/rows.csv:2: fixture identity differs from manifest"
+    },
+    {
+      "case": "bad graph_seed=42",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/classical-capture-test-s6n5h6vc/rows.csv:2: seed, warmup or exact-MST validation mismatch"
+    },
+    {
+      "case": "bad kkt_seed=7",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/classical-capture-test-s6n5h6vc/rows.csv:2: seed, warmup or exact-MST validation mismatch"
+    },
+    {
+      "case": "bad warmups=0",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/classical-capture-test-s6n5h6vc/rows.csv:2: seed, warmup or exact-MST validation mismatch"
+    },
+    {
+      "case": "bad validation='fail'",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/classical-capture-test-s6n5h6vc/rows.csv:2: seed, warmup or exact-MST validation mismatch"
+    },
+    {
+      "case": "bad input_fingerprint=124",
+      "status": "rejected",
+      "message": "selected-case algorithms/phases received different inputs"
+    },
+    {
+      "case": "bad topology_fingerprint=457",
+      "status": "rejected",
+      "message": "selected-case algorithms/phases received different inputs"
+    },
+    {
+      "case": "bad elapsed_ns=0",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/classical-capture-test-s6n5h6vc/rows.csv:2: invalid steady/process-CPU duration or clock endpoint"
+    },
+    {
+      "case": "bad utc_start_ns=0",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/classical-capture-test-s6n5h6vc/rows.csv:2: invalid steady/process-CPU duration or clock endpoint"
+    },
+    {
+      "case": "bad utc_end_ns=9223372036854775808",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/classical-capture-test-s6n5h6vc/rows.csv:2 utc_end_ns: integer exceeds 9223372036854775807"
+    },
+    {
+      "case": "bad process_cpu_elapsed_ns=0",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/classical-capture-test-s6n5h6vc/rows.csv:2: invalid steady/process-CPU duration or clock endpoint"
+    },
+    {
+      "case": "bad process_cpu_end_ns=999",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/classical-capture-test-s6n5h6vc/rows.csv:2: invalid steady/process-CPU duration or clock endpoint"
+    },
+    {
+      "case": "bad graph_seed=True",
+      "status": "rejected",
+      "message": "/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/classical-capture-test-s6n5h6vc/rows.csv:2 graph_seed: expected an unsigned decimal integer"
+    },
+    {
+      "case": "missing warmup row",
+      "status": "rejected",
+      "message": "incomplete selected-case warmup/timing matrix"
+    },
+    {
+      "case": "same-count duplicate row",
+      "status": "rejected",
+      "message": "duplicate, missing or incorrectly ordered classical measurement"
+    },
+    {
+      "case": "reordered rows",
+      "status": "rejected",
+      "message": "duplicate, missing or incorrectly ordered classical measurement"
+    },
+    {
+      "case": "extra row",
+      "status": "rejected",
+      "message": "incomplete selected-case warmup/timing matrix"
+    },
+    {
+      "case": "wrong pilot fingerprint",
+      "status": "rejected",
+      "message": "selected-case input differs from the reference pilot"
+    },
+    {
+      "case": "inter-call process CPU overlap",
+      "status": "rejected",
+      "message": "process CPU clock reversed or overlapped between measurements"
+    },
+    {
+      "case": "fake-child full capture, raw preservation and metadata",
+      "status": "pass"
+    },
+    {
+      "case": "existing classical companion .csv",
+      "status": "rejected"
+    },
+    {
+      "case": "existing classical companion .json",
+      "status": "rejected"
+    },
+    {
+      "case": "existing classical companion _cases",
+      "status": "rejected"
+    },
+    {
+      "case": "fake child nonzero",
+      "status": "rejected"
+    },
+    {
+      "case": "fake child add_source",
+      "status": "rejected"
+    }
+  ]
+}
