@@ -1,0 +1,30 @@
+{
+  "validation": "pass",
+  "native_execution": false,
+  "manifests": {
+    "lifted-pilot.csv": {
+      "cases": 28,
+      "sha256": "5a980a4aff794482e7c7a9adf0c0b37cd29f11f3bad33245a296aec21545314c",
+      "largest_n": 1048576,
+      "largest_m": 67108864
+    },
+    "density-pilot.csv": {
+      "cases": 25,
+      "sha256": "fef24c4a6d3203a039dbf191877174180be695e0aee906027e5bd775afe79108",
+      "largest_n": 262144,
+      "largest_m": 33554432
+    }
+  },
+  "source_sha256": {
+    "benchmark/run_mst_search.py": "83203a526d2ebbde7851ef87ad429c2c7532fb5c7ce419a7300cc7b04a6f26c0",
+    "benchmark/analyze_mst_search.py": "abc34ddb69982e89b4e69e0da1755796331f1082f3ac6a6a114a8a489efbc86a"
+  },
+  "python_selftest_sha256": "0db3e8695dddaa527e7f7e759cd0b8d01c42dca9dc852daf32664b33a037aa68",
+  "checks": [
+    "python3 benchmark/analyze_mst_search.py --self-test",
+    "python3 -m py_compile benchmark/run_mst_search.py benchmark/analyze_mst_search.py",
+    "git diff --check"
+  ],
+  "selftest_file": "python_selftest_v2.json",
+  "change": "Certificate-marker detection ignores generation duration diagnostics; original v1 evidence preserved."
+}

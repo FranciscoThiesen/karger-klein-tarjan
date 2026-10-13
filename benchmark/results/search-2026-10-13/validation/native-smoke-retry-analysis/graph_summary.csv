@@ -1,0 +1,11 @@
+case_id,family,n,m,density,intrusion_per_mille,metric,algorithm,graph_seed,median_ns,trial_min_ns,trial_max_ns,sampling_seeds,timed_calls
+lifted_distance2_n256_d8_p0,lifted_distance2,256,2048,8,0,wall,kkt,23,83292,72667,109583,1,5
+lifted_distance2_n256_d8_p0,lifted_distance2,256,2048,8,0,wall,compacting_boruvka,23,35250,31458,46000,1,5
+lifted_distance2_n256_d8_p0,lifted_distance2,256,2048,8,0,wall,kruskal,23,45833,35709,63166,1,5
+lifted_distance2_n256_d8_p0,lifted_distance2,256,2048,8,0,wall,prim,23,149417,128459,194584,1,5
+lifted_distance2_n256_d8_p0,lifted_distance2,256,2048,8,0,wall,boruvka,23,71583,59541,99625,1,5
+lifted_distance2_n256_d8_p0,lifted_distance2,256,2048,8,0,cpu,kkt,23,84000,72000,110000,1,5
+lifted_distance2_n256_d8_p0,lifted_distance2,256,2048,8,0,cpu,compacting_boruvka,23,35000,31000,47000,1,5
+lifted_distance2_n256_d8_p0,lifted_distance2,256,2048,8,0,cpu,kruskal,23,45000,36000,65000,1,5
+lifted_distance2_n256_d8_p0,lifted_distance2,256,2048,8,0,cpu,prim,23,150000,129000,195000,1,5
+lifted_distance2_n256_d8_p0,lifted_distance2,256,2048,8,0,cpu,boruvka,23,73000,59000,101000,1,5

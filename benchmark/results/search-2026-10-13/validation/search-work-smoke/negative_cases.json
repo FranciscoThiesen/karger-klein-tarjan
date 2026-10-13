@@ -1,0 +1,99 @@
+[
+  {
+    "args": [],
+    "exit_code": 1,
+    "stderr": "search work: --family, --n and --density are required\n"
+  },
+  {
+    "args": [
+      "--family",
+      "lifted_hierarchy2",
+      "--n",
+      "256",
+      "--density",
+      "16",
+      "--n",
+      "256"
+    ],
+    "exit_code": 1,
+    "stderr": "search work: duplicate option: --n\n"
+  },
+  {
+    "args": [
+      "--family",
+      "lifted_hierarchy2",
+      "--n",
+      "256",
+      "--density",
+      "16",
+      "--warmups",
+      "1"
+    ],
+    "exit_code": 1,
+    "stderr": "search work: unknown option: --warmups\n"
+  },
+  {
+    "args": [
+      "--family",
+      "hierarchical_path",
+      "--n",
+      "256",
+      "--density",
+      "16"
+    ],
+    "exit_code": 1,
+    "stderr": "search work: unknown lifted family: hierarchical_path\n"
+  },
+  {
+    "args": [
+      "--family",
+      "lifted_hierarchy4",
+      "--n",
+      "32",
+      "--density",
+      "8"
+    ],
+    "exit_code": 1,
+    "stderr": "search work: lifted size exceeds budget or integral core domain\n"
+  },
+  {
+    "args": [
+      "--family",
+      "lifted_hierarchy2",
+      "--n",
+      "4194304",
+      "--density",
+      "33"
+    ],
+    "exit_code": 1,
+    "stderr": "search work: lifted size exceeds budget or integral core domain\n"
+  },
+  {
+    "args": [
+      "--family",
+      "lifted_hierarchy2",
+      "--n",
+      "256",
+      "--density",
+      "16",
+      "--kkt-seed",
+      "-1"
+    ],
+    "exit_code": 1,
+    "stderr": "search work: invalid unsigned integer: -1\n"
+  },
+  {
+    "args": [
+      "--family",
+      "lifted_hierarchy2",
+      "--n",
+      "256",
+      "--density",
+      "16",
+      "--graph-seed",
+      "4294967296"
+    ],
+    "exit_code": 1,
+    "stderr": "search work: unsigned integer overflow\n"
+  }
+]

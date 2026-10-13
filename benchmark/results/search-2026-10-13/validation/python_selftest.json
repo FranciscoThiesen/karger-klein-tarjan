@@ -1,0 +1,43 @@
+{
+  "validation": "pass",
+  "positive_checks": [
+    "complete calls and exact certificate",
+    "independent expected paired ratios",
+    "graph/sampling medians differ from pooled median",
+    "paired ratio differs from ratio of separate medians",
+    "lift factors not conflated",
+    "complete provenance, clocks, certificate and resource bundle",
+    "UTC reversal retained and flagged; monotonic sequence intact"
+  ],
+  "rejected_mutations": [
+    "missing row",
+    "duplicate row",
+    "wrong order",
+    "CPU duration",
+    "failed validation",
+    "fingerprint mismatch",
+    "unbalanced repetitions",
+    "missing certificate",
+    "boolean certificate",
+    "extra certificate field",
+    "paired lifted topology",
+    "manifest lifted_hierarchy4",
+    "manifest lifted_distance4",
+    "manifest gnm_random",
+    "manifest grid2d_random",
+    "manifest not_a_fixture",
+    "failed capture metadata",
+    "missing capture child",
+    "boolean seed metadata",
+    "recorded certificate boolean",
+    "ordinary stack profile",
+    "missing production source",
+    "incorrect raw count",
+    "monotonic child reversal",
+    "RSS peak mismatch",
+    "RSS sum",
+    "RSS boolean member",
+    "RSS over ceiling",
+    "RSS monotonic invalid"
+  ]
+}

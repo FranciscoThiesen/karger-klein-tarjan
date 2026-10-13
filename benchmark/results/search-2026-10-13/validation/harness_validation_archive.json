@@ -1,0 +1,36 @@
+{
+  "schema": "mst_search_harness_validation_archive_v1",
+  "validation": "pass",
+  "archived_utc": "2026-10-13T23:51:27.906888+00:00",
+  "source_directory": "/tmp/kkt-mst-search",
+  "files_sha256": {
+    "final_validation.json": "cd999ed6d5c9c0b6bb3f01f1598de38f311d35bed40d165aa75c463d9aaf5954",
+    "validate_build.py": "b2c6bec6bc1efe8d38255cdcd4bb1835febb485384ee71c6eaa1c842fe4606a5",
+    "untimed_smoke.cpp": "777b886b003cac1a733db19c2ef5117c3fa9428cc6e84b963ac302d794122803",
+    "untimed_smoke.log": "df3803dca96a5138aa1e53c5911da88a560829bcbc0e24b7fdc7a21c31013a02",
+    "untimed_smoke.json": "d8df7c7ed9e9e140ba4960cda7ece4fa6de99c1544a535f7113699344da010af",
+    "initial_validation.json": "8b3b38c24cc944c1c47db926e5504a8cb6ceb5ac563acbbd364eed41e912d818",
+    "Makefile.at_harness_validation": "d686619ffd457b272a3e48a54565741c9e8b146a6c7e4e6274ad13b943796d75"
+  },
+  "source_comparison_at_archive": {
+    "benchmark/mst_search.cpp": {
+      "recorded_sha256": "528cd04a99587e1dea9f8d4316f26fd7863bf77ec9fe77a06a40906f803f261a",
+      "current_sha256": "528cd04a99587e1dea9f8d4316f26fd7863bf77ec9fe77a06a40906f803f261a",
+      "matches": true
+    },
+    "benchmark/search_fixtures.hpp": {
+      "recorded_sha256": "186cfe198c1acee8b3355b7f2c6063896003b17396cb781ce9c09b01989fd24e",
+      "current_sha256": "186cfe198c1acee8b3355b7f2c6063896003b17396cb781ce9c09b01989fd24e",
+      "matches": true
+    },
+    "Makefile": {
+      "recorded_sha256": "d686619ffd457b272a3e48a54565741c9e8b146a6c7e4e6274ad13b943796d75",
+      "current_sha256": "80d43f8265886e84155ad6d9d878d7a948c115815a07fe1e36a628a6b5c66c32",
+      "matches": false
+    }
+  },
+  "recorded_binaries_match_at_archive": true,
+  "native_timed_calls": 0,
+  "makefile_note": "The root subsequently added only the search_work target. Removing that exact new block reproduces the recorded Makefile hash; this recovered recipe is archived. Native mst_search target recipes did not change.",
+  "limitation": "Initial supplemental untimed smoke was compiled before the lifted factory hook; final lifted fixture suite is archived separately. Validation scripts retain original local absolute paths."
+}

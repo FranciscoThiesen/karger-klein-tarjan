@@ -32,7 +32,7 @@ OBJS = $(SRCS:%.cpp=$(BUILD_DIR)/%.o)
 # Headers
 HDRS = $(wildcard */*.hpp)
 
-.PHONY: all clean test benchmark scaling-benchmark diverse-benchmark work-sweep shape-work common-work debug
+.PHONY: all clean test benchmark scaling-benchmark diverse-benchmark work-sweep shape-work common-work mst-search mst-search-large-stack debug
 
 all: $(BIN_DIR)/test_runner $(BIN_DIR)/regression_runner
 
@@ -48,6 +48,10 @@ work-sweep: $(BIN_DIR)/work_sweep
 shape-work: $(BIN_DIR)/shape_work
 
 common-work: $(BIN_DIR)/common_work
+
+mst-search: $(BIN_DIR)/mst_search
+
+mst-search-large-stack: $(BIN_DIR)/large_stack/mst_search
 
 WORK_OBJS = $(SRCS:%.cpp=$(BUILD_DIR)/workstats/%.o)
 
@@ -102,6 +106,33 @@ $(BIN_DIR)/crossover_test: benchmark/crossover_test.cpp benchmark/crossover_fixt
 $(BIN_DIR)/crossover_baselines: benchmark/crossover_baselines.cpp benchmark/crossover_fixtures.hpp benchmark/continuation_fixtures.hpp benchmark/mst_certificate.hpp $(OBJS)
 	@mkdir -p $(BIN_DIR)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -I. $(filter %.cpp %.o,$^) $(LDFLAGS) -o $@
+
+MST_SEARCH_DEPS = benchmark/mst_search.cpp benchmark/search_fixtures.hpp benchmark/crossover_fixtures.hpp benchmark/continuation_fixtures.hpp benchmark/mst_certificate.hpp $(OBJS)
+
+$(BIN_DIR)/search_fixtures_test: benchmark/search_fixtures_test.cpp benchmark/search_fixtures.hpp benchmark/continuation_fixtures.hpp benchmark/mst_certificate.hpp $(OBJS)
+	@mkdir -p $(dir $@)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -I. $(filter %.cpp %.o,$^) $(LDFLAGS) -o $@
+
+$(BIN_DIR)/search_work: benchmark/search_work.cpp benchmark/search_fixtures.hpp benchmark/continuation_fixtures.hpp benchmark/component_moments.hpp benchmark/work_metrics.hpp benchmark/mst_certificate.hpp $(WORK_OBJS)
+	@mkdir -p $(dir $@)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -DKKT_ENABLE_WORK_STATS -I. $(filter %.cpp %.o,$^) $(LDFLAGS) -o $@
+
+$(BIN_DIR)/mst_search: $(MST_SEARCH_DEPS)
+	@mkdir -p $(dir $@)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -I. $(filter %.cpp %.o,$^) $(LDFLAGS) -o $@
+
+# Keep the original recursive Boruvka baseline unchanged. This opt-in macOS
+# profile enlarges only the executable's main-thread stack to 512 MiB; its
+# compiler flags and production objects are identical to the default target.
+ifeq ($(shell uname -s),Darwin)
+$(BIN_DIR)/large_stack/mst_search: $(MST_SEARCH_DEPS)
+	@mkdir -p $(dir $@)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -I. $(filter %.cpp %.o,$^) $(LDFLAGS) -Wl,-stack_size,0x20000000 -o $@
+else
+$(BIN_DIR)/large_stack/mst_search:
+	@echo "mst-search-large-stack requires the macOS linker; use mst-search on this platform" >&2
+	@exit 1
+endif
 
 # Build object files
 $(BUILD_DIR)/%.o: %.cpp $(HDRS)

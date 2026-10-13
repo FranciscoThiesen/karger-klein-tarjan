@@ -1,0 +1,28 @@
+{
+  "validation": "pass",
+  "native_execution": false,
+  "manifests": {
+    "lifted-pilot.csv": {
+      "cases": 28,
+      "sha256": "5a980a4aff794482e7c7a9adf0c0b37cd29f11f3bad33245a296aec21545314c",
+      "largest_n": 1048576,
+      "largest_m": 67108864
+    },
+    "density-pilot.csv": {
+      "cases": 25,
+      "sha256": "fef24c4a6d3203a039dbf191877174180be695e0aee906027e5bd775afe79108",
+      "largest_n": 262144,
+      "largest_m": 33554432
+    }
+  },
+  "source_sha256": {
+    "benchmark/run_mst_search.py": "21dcf32658d9c1749ecc52ad1c064d6cbf06ce313304ec3a11770730c6069d00",
+    "benchmark/analyze_mst_search.py": "856cc405ca04d9c3f647ef76066236e0eb923f6ed238f039fa067c83f51c5a56"
+  },
+  "python_selftest_sha256": "ae8af9c33705a64a59b9430d98875b522e19a09c39922cd83c32bd94734f6574",
+  "checks": [
+    "python3 benchmark/analyze_mst_search.py --self-test",
+    "python3 -m py_compile benchmark/run_mst_search.py benchmark/analyze_mst_search.py",
+    "git diff --check"
+  ]
+}

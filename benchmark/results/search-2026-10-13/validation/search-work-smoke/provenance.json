@@ -1,0 +1,128 @@
+{
+  "generated_at_utc": "2026-10-13T23:52:22.543636+00:00",
+  "git_head": "055f6635d43afc096dd47e4aa5d722422c3f2c3b",
+  "negative_cases": 8,
+  "positive_cases": [
+    {
+      "command": [
+        "/Users/random_person/Desktop/karger-klein-tarjan/bin/search_work",
+        "--family",
+        "lifted_hierarchy2",
+        "--n",
+        "256",
+        "--density",
+        "16",
+        "--graph-seed",
+        "5009",
+        "--kkt-seed",
+        "149"
+      ],
+      "exit_code": 0,
+      "trace_rounds": 8
+    },
+    {
+      "command": [
+        "/Users/random_person/Desktop/karger-klein-tarjan/bin/search_work",
+        "--family",
+        "lifted_hierarchy4",
+        "--n",
+        "256",
+        "--density",
+        "16",
+        "--graph-seed",
+        "5009",
+        "--kkt-seed",
+        "149"
+      ],
+      "exit_code": 0,
+      "trace_rounds": 7
+    },
+    {
+      "command": [
+        "/Users/random_person/Desktop/karger-klein-tarjan/bin/search_work",
+        "--family",
+        "lifted_distance2",
+        "--n",
+        "256",
+        "--density",
+        "16",
+        "--graph-seed",
+        "5009",
+        "--kkt-seed",
+        "149"
+      ],
+      "exit_code": 0,
+      "trace_rounds": 8
+    },
+    {
+      "command": [
+        "/Users/random_person/Desktop/karger-klein-tarjan/bin/search_work",
+        "--family",
+        "lifted_distance4",
+        "--n",
+        "256",
+        "--density",
+        "16",
+        "--graph-seed",
+        "5009",
+        "--kkt-seed",
+        "149"
+      ],
+      "exit_code": 0,
+      "trace_rounds": 7
+    },
+    {
+      "command": [
+        "/Users/random_person/Desktop/karger-klein-tarjan/bin/search_work",
+        "--family",
+        "lifted_random2",
+        "--n",
+        "256",
+        "--density",
+        "16",
+        "--graph-seed",
+        "5009",
+        "--kkt-seed",
+        "149"
+      ],
+      "exit_code": 0,
+      "trace_rounds": 4
+    },
+    {
+      "command": [
+        "/Users/random_person/Desktop/karger-klein-tarjan/bin/search_work",
+        "--family",
+        "lifted_random4",
+        "--n",
+        "256",
+        "--density",
+        "16",
+        "--graph-seed",
+        "5009",
+        "--kkt-seed",
+        "149"
+      ],
+      "exit_code": 0,
+      "trace_rounds": 4
+    }
+  ],
+  "repeat_matches": true,
+  "schema_version": 1,
+  "sha256": {
+    ".build/workstats/boruvka/boruvka.o": "1c58b8cb7c1a54989938eb3c2ec2a786ed2ef0ab2b4f257e99faf9107bfca674",
+    ".build/workstats/graph_utils/graph_utils.o": "1e9aa75afc36902bf470d5fbe94964233b03df5f490d0e115feeaf9307744fe1",
+    ".build/workstats/kkt/kkt.o": "3a9930595bedec07e0300775f7dcd1f3ec72ae58b76390e25ba803bca6c5c1e9",
+    ".build/workstats/kruskal/kruskal.o": "d0d23eadc6eb81a4285a69077e56d07d32f3b32673e0a53ee6cb8537c659c942",
+    ".build/workstats/lca/lca.o": "a1eb3a9d6f33aa34886ebf9fd66efa6914aa3410b4689e20319e358cd55ea5c4",
+    ".build/workstats/prim/prim.o": "4954cd12ab635f0eb57fc95e269f2f77dd4f7b98a7b6012667ca38fb5e0b2f8a",
+    ".build/workstats/union_find/union_find.o": "fcc799fa111afbfdc0afe4e36f2a2db3acf37a061bd7b9d0022bd206046cb1ca",
+    ".build/workstats/verifier/verifier_v2.o": "fc174682527651ac97e2663f04bc0d0e56491ddd10ef065c5aeb680ec2dffa85",
+    "Makefile": "80d43f8265886e84155ad6d9d878d7a948c115815a07fe1e36a628a6b5c66c32",
+    "benchmark/component_moments.hpp": "11103da83a398746fe30755c477afb7c6fabdf3ada33ca600ec176770fc8cea6",
+    "benchmark/mst_certificate.hpp": "5e9c37e73c6a1bb78f1bfe5dca361abe9a4ddc4ea2e155a323989b6b34838495",
+    "benchmark/search_fixtures.hpp": "186cfe198c1acee8b3355b7f2c6063896003b17396cb781ce9c09b01989fd24e",
+    "benchmark/search_work.cpp": "e8bc45ec158ffc4104c7e71ae47b7689da374817ce49529ec62134887191e48a",
+    "benchmark/work_metrics.hpp": "fc3e8b9e2afba1e12c1e2c47b9c79a7ef4772c3a0185d36ca80f85f25085d9ef",
+    "bin/search_work": "e89b68d14595fd1ae4811120f11116c9dada349cefb1d4b1b63f5d6a0316397d"
+  }
+}

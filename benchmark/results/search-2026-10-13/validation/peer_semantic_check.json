@@ -1,0 +1,17 @@
+{
+  "validation": "pass",
+  "native_calls": 0,
+  "checks": [
+    "270-row 3graph x3sampling full five-algorithm synthetic data",
+    "paired nested median6 differs from pooled4",
+    "independent CPU paired median6.75",
+    "45pairs per competitor per metric;360total; wins+losses+ties complete",
+    "single-child full30-call balanced schedule",
+    "sleep-affected call retained and flagged",
+    "reversed UTC call retained and flagged"
+  ],
+  "source_sha256": {
+    "run_mst_search.py": "21dcf32658d9c1749ecc52ad1c064d6cbf06ce313304ec3a11770730c6069d00",
+    "analyze_mst_search.py": "856cc405ca04d9c3f647ef76066236e0eb923f6ed238f039fa067c83f51c5a56"
+  }
+}

@@ -1,0 +1,9 @@
+# Lifted fixture correctness gate
+
+`search_fixtures_test.log` is the final successful release-build run. It validates **167 fixtures, 917 full contraction stages and 1,169 solver outputs**. Every output is independently cycle-certified; the five algorithms are KKT (three sampling seeds), Kruskal, Prim, original Boruvka and compacting Boruvka. These are untimed correctness tests, not benchmark observations.
+
+The fixture checks cover deterministic replay; dense distinct IDs and weight ranks; simple connected topology; exact clone stars and complete bipartite core-edge bundles; independent endpoint-derived dyadic priorities; identical topology, labels, IDs and input order across hierarchy/distance/random controls; and exact expected clone/dyadic partitions for both structured modes. A vertex-by-edge minimum scan, separate DSU and ordered quotient map independently check every production contraction stage, including selected IDs and cheapest parallel representatives. An original-ID ledger reconstructs the component partition without trusting fixture component metadata.
+
+The chosen dense distance regression selects **7 non-backbone core bundles**, establishing that its certified MST is not merely the original planted core path. Twenty invalid dimensions are rejected, and all six families accept the exact 134,217,728-edge bound without allocating that largest graph.
+
+The release build uses the same system C++17 compiler and production object files as the harness. `search_fixtures_test_provenance.json` records source/object/binary hashes and commands. The retained `*_initial.*` logs are an earlier successful 166-fixture run before adding the dense-distance regression; the final run supersedes them. `*.time` measures the test executable only and is not performance evidence for an MST algorithm.

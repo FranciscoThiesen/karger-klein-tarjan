@@ -1,0 +1,226 @@
+{
+  "validation": "pass",
+  "timing_runs": 0,
+  "negative_cli_checks": [
+    {
+      "args": [],
+      "exit_code": 1,
+      "stderr": "mst search: --family, --n and --density are required"
+    },
+    {
+      "args": [
+        "--family",
+        "bad",
+        "--n",
+        "128",
+        "--density",
+        "4"
+      ],
+      "exit_code": 1,
+      "stderr": "mst search: unknown continuation family: bad"
+    },
+    {
+      "args": [
+        "--family",
+        "line_metric",
+        "--n",
+        "8388608",
+        "--density",
+        "4"
+      ],
+      "exit_code": 1,
+      "stderr": "mst search: n must be in [32,4194304]"
+    },
+    {
+      "args": [
+        "--family",
+        "hierarchical_path",
+        "--n",
+        "4194304",
+        "--density",
+        "33"
+      ],
+      "exit_code": 1,
+      "stderr": "mst search: edge target must be positive and at most 134217728"
+    },
+    {
+      "args": [
+        "--family",
+        "hierarchical_path",
+        "--n",
+        "128",
+        "--density",
+        "0"
+      ],
+      "exit_code": 1,
+      "stderr": "mst search: edge target must be positive and at most 134217728"
+    },
+    {
+      "args": [
+        "--family",
+        "hierarchical_path",
+        "--n",
+        "127",
+        "--density",
+        "4"
+      ],
+      "exit_code": 1,
+      "stderr": "mst search: continuation fixtures require a power-of-two n in [32, 2^22]"
+    },
+    {
+      "args": [
+        "--family",
+        "hierarchical_path",
+        "--n",
+        "32",
+        "--density",
+        "32"
+      ],
+      "exit_code": 1,
+      "stderr": "mst search: edge target exceeds the simple-graph or shared weight domain"
+    },
+    {
+      "args": [
+        "--family",
+        "hierarchical_path",
+        "--n",
+        "128",
+        "--density",
+        "4",
+        "--repetitions",
+        "4"
+      ],
+      "exit_code": 1,
+      "stderr": "mst search: repetitions must be a multiple of five in [5,100]"
+    },
+    {
+      "args": [
+        "--family",
+        "hierarchical_path",
+        "--n",
+        "128",
+        "--density",
+        "4",
+        "--repetitions",
+        "0"
+      ],
+      "exit_code": 1,
+      "stderr": "mst search: repetitions must be a multiple of five in [5,100]"
+    },
+    {
+      "args": [
+        "--family",
+        "hierarchical_path",
+        "--n",
+        "128",
+        "--density",
+        "4",
+        "--repetitions",
+        "105"
+      ],
+      "exit_code": 1,
+      "stderr": "mst search: repetitions must be a multiple of five in [5,100]"
+    },
+    {
+      "args": [
+        "--family",
+        "hierarchical_path",
+        "--n",
+        "128",
+        "--density",
+        "4",
+        "--warmups",
+        "0"
+      ],
+      "exit_code": 1,
+      "stderr": "mst search: warmups must be in [1,100]"
+    },
+    {
+      "args": [
+        "--family",
+        "hierarchical_path",
+        "--n",
+        "128",
+        "--density",
+        "4",
+        "--warmups",
+        "101"
+      ],
+      "exit_code": 1,
+      "stderr": "mst search: warmups must be in [1,100]"
+    },
+    {
+      "args": [
+        "--family",
+        "hierarchical_path",
+        "--n",
+        "128",
+        "--density",
+        "4",
+        "--n",
+        "128"
+      ],
+      "exit_code": 1,
+      "stderr": "mst search: duplicate option: --n"
+    },
+    {
+      "args": [
+        "--family",
+        "hierarchical_path",
+        "--n",
+        "128",
+        "--density",
+        "4",
+        "--graph-seed",
+        "-1"
+      ],
+      "exit_code": 1,
+      "stderr": "mst search: invalid unsigned integer: -1"
+    },
+    {
+      "args": [
+        "--family",
+        "hierarchical_path",
+        "--n",
+        "128",
+        "--density",
+        "4",
+        "--graph-seed",
+        "4294967296"
+      ],
+      "exit_code": 1,
+      "stderr": "mst search: integer out of range"
+    },
+    {
+      "args": [
+        "--family",
+        "hierarchical_path",
+        "--n",
+        "128",
+        "--density",
+        "4",
+        "--intrusion-per-mille",
+        "0"
+      ],
+      "exit_code": 1,
+      "stderr": "mst search: unknown option: --intrusion-per-mille"
+    }
+  ],
+  "help_check": "pass",
+  "normal_binary": {
+    "path": "/Users/random_person/Desktop/karger-klein-tarjan/bin/mst_search",
+    "sha256": "45ff4e3b1217cc8b59a418892428c6212ac55834515c3712f7e5e5c591b0d3be",
+    "text_bytes": 106776,
+    "text_sha256": "161691fe400d305f885444d324ad1803a3abd2dfb68fb247e73c352863bd68d9",
+    "stack_bytes": 0
+  },
+  "large_stack_binary": {
+    "path": "/Users/random_person/Desktop/karger-klein-tarjan/bin/large_stack/mst_search",
+    "sha256": "f75bf093e3fcf765333c49d32f5a20da8fbba030594170a9493c25753826a04b",
+    "text_bytes": 106776,
+    "text_sha256": "161691fe400d305f885444d324ad1803a3abd2dfb68fb247e73c352863bd68d9",
+    "stack_bytes": 536870912
+  },
+  "text_identity": "pass",
+  "scope": "Existing fixture dispatch, before root search_fixtures hook; only invalid CLI/help executed, no solver measurements."
+}
