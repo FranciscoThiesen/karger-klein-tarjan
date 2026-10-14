@@ -1,0 +1,920 @@
+{
+  "schema": "mst_search_figures_v1",
+  "validation": "pass",
+  "rows_removed": 0,
+  "campaigns_pooled": false,
+  "metrics": [
+    "wall",
+    "cpu"
+  ],
+  "input_sha256": {
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-analysis/provenance.json": "994a6856ed316bec6fbb80ab57b6757ad4b17c27de5463fe9273dc245e98845b",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-analysis/comparisons.csv": "ef49d8ebcb6584eaa5b47c651e81a2fb3f57389c11e30f30f2441ed1021b80e3",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-analysis/summary.csv": "888b06e052c3f416035095984a0578feee4d9c598de0dca015012cad701904c3"
+  },
+  "script_sha256": "581d2ef31be681007af71ae96cf7b583cd2e75c999239d92ae63a54742b0dd0a",
+  "matplotlib_version": "3.9.4",
+  "spread": "observed individual-trial min-max; not confidence intervals",
+  "figures": [
+    {
+      "campaign_index": 1,
+      "campaign": "search-2026-10-13/attachment-analysis",
+      "metric": "wall",
+      "kind": "paired_ratios",
+      "groups": [
+        {
+          "family": "community_distance16",
+          "density": 2
+        },
+        {
+          "family": "community_distance16",
+          "density": 16
+        },
+        {
+          "family": "community_distance4",
+          "density": 2
+        },
+        {
+          "family": "community_distance4",
+          "density": 16
+        },
+        {
+          "family": "community_hierarchy16",
+          "density": 2
+        },
+        {
+          "family": "community_hierarchy16",
+          "density": 16
+        }
+      ],
+      "files": [
+        "campaign_01_wall_paired_ratios_01.png",
+        "campaign_01_wall_paired_ratios_01.svg",
+        "campaign_01_wall_paired_ratios_01.pdf"
+      ]
+    },
+    {
+      "campaign_index": 1,
+      "campaign": "search-2026-10-13/attachment-analysis",
+      "metric": "wall",
+      "kind": "paired_ratios",
+      "groups": [
+        {
+          "family": "community_hierarchy4",
+          "density": 2
+        },
+        {
+          "family": "community_hierarchy4",
+          "density": 16
+        },
+        {
+          "family": "community_random16",
+          "density": 2
+        },
+        {
+          "family": "community_random16",
+          "density": 16
+        },
+        {
+          "family": "community_random4",
+          "density": 2
+        },
+        {
+          "family": "community_random4",
+          "density": 16
+        }
+      ],
+      "files": [
+        "campaign_01_wall_paired_ratios_02.png",
+        "campaign_01_wall_paired_ratios_02.svg",
+        "campaign_01_wall_paired_ratios_02.pdf"
+      ]
+    },
+    {
+      "campaign_index": 1,
+      "campaign": "search-2026-10-13/attachment-analysis",
+      "metric": "wall",
+      "kind": "paired_ratios",
+      "groups": [
+        {
+          "family": "community_shuffled16",
+          "density": 2
+        },
+        {
+          "family": "community_shuffled16",
+          "density": 16
+        },
+        {
+          "family": "community_shuffled4",
+          "density": 2
+        },
+        {
+          "family": "community_shuffled4",
+          "density": 16
+        },
+        {
+          "family": "leaf_distance16",
+          "density": 2
+        },
+        {
+          "family": "leaf_distance16",
+          "density": 16
+        }
+      ],
+      "files": [
+        "campaign_01_wall_paired_ratios_03.png",
+        "campaign_01_wall_paired_ratios_03.svg",
+        "campaign_01_wall_paired_ratios_03.pdf"
+      ]
+    },
+    {
+      "campaign_index": 1,
+      "campaign": "search-2026-10-13/attachment-analysis",
+      "metric": "wall",
+      "kind": "paired_ratios",
+      "groups": [
+        {
+          "family": "leaf_distance4",
+          "density": 2
+        },
+        {
+          "family": "leaf_distance4",
+          "density": 16
+        },
+        {
+          "family": "leaf_hierarchy16",
+          "density": 2
+        },
+        {
+          "family": "leaf_hierarchy16",
+          "density": 16
+        },
+        {
+          "family": "leaf_hierarchy4",
+          "density": 2
+        },
+        {
+          "family": "leaf_hierarchy4",
+          "density": 16
+        }
+      ],
+      "files": [
+        "campaign_01_wall_paired_ratios_04.png",
+        "campaign_01_wall_paired_ratios_04.svg",
+        "campaign_01_wall_paired_ratios_04.pdf"
+      ]
+    },
+    {
+      "campaign_index": 1,
+      "campaign": "search-2026-10-13/attachment-analysis",
+      "metric": "wall",
+      "kind": "paired_ratios",
+      "groups": [
+        {
+          "family": "leaf_random16",
+          "density": 2
+        },
+        {
+          "family": "leaf_random16",
+          "density": 16
+        },
+        {
+          "family": "leaf_random4",
+          "density": 2
+        },
+        {
+          "family": "leaf_random4",
+          "density": 16
+        },
+        {
+          "family": "leaf_shuffled16",
+          "density": 2
+        },
+        {
+          "family": "leaf_shuffled16",
+          "density": 16
+        }
+      ],
+      "files": [
+        "campaign_01_wall_paired_ratios_05.png",
+        "campaign_01_wall_paired_ratios_05.svg",
+        "campaign_01_wall_paired_ratios_05.pdf"
+      ]
+    },
+    {
+      "campaign_index": 1,
+      "campaign": "search-2026-10-13/attachment-analysis",
+      "metric": "wall",
+      "kind": "paired_ratios",
+      "groups": [
+        {
+          "family": "leaf_shuffled4",
+          "density": 2
+        },
+        {
+          "family": "leaf_shuffled4",
+          "density": 16
+        }
+      ],
+      "files": [
+        "campaign_01_wall_paired_ratios_06.png",
+        "campaign_01_wall_paired_ratios_06.svg",
+        "campaign_01_wall_paired_ratios_06.pdf"
+      ]
+    },
+    {
+      "campaign_index": 1,
+      "campaign": "search-2026-10-13/attachment-analysis",
+      "metric": "wall",
+      "kind": "runtimes",
+      "groups": [
+        {
+          "family": "community_distance16",
+          "density": 2
+        },
+        {
+          "family": "community_distance16",
+          "density": 16
+        },
+        {
+          "family": "community_distance4",
+          "density": 2
+        },
+        {
+          "family": "community_distance4",
+          "density": 16
+        },
+        {
+          "family": "community_hierarchy16",
+          "density": 2
+        },
+        {
+          "family": "community_hierarchy16",
+          "density": 16
+        }
+      ],
+      "files": [
+        "campaign_01_wall_runtimes_01.png",
+        "campaign_01_wall_runtimes_01.svg",
+        "campaign_01_wall_runtimes_01.pdf"
+      ]
+    },
+    {
+      "campaign_index": 1,
+      "campaign": "search-2026-10-13/attachment-analysis",
+      "metric": "wall",
+      "kind": "runtimes",
+      "groups": [
+        {
+          "family": "community_hierarchy4",
+          "density": 2
+        },
+        {
+          "family": "community_hierarchy4",
+          "density": 16
+        },
+        {
+          "family": "community_random16",
+          "density": 2
+        },
+        {
+          "family": "community_random16",
+          "density": 16
+        },
+        {
+          "family": "community_random4",
+          "density": 2
+        },
+        {
+          "family": "community_random4",
+          "density": 16
+        }
+      ],
+      "files": [
+        "campaign_01_wall_runtimes_02.png",
+        "campaign_01_wall_runtimes_02.svg",
+        "campaign_01_wall_runtimes_02.pdf"
+      ]
+    },
+    {
+      "campaign_index": 1,
+      "campaign": "search-2026-10-13/attachment-analysis",
+      "metric": "wall",
+      "kind": "runtimes",
+      "groups": [
+        {
+          "family": "community_shuffled16",
+          "density": 2
+        },
+        {
+          "family": "community_shuffled16",
+          "density": 16
+        },
+        {
+          "family": "community_shuffled4",
+          "density": 2
+        },
+        {
+          "family": "community_shuffled4",
+          "density": 16
+        },
+        {
+          "family": "leaf_distance16",
+          "density": 2
+        },
+        {
+          "family": "leaf_distance16",
+          "density": 16
+        }
+      ],
+      "files": [
+        "campaign_01_wall_runtimes_03.png",
+        "campaign_01_wall_runtimes_03.svg",
+        "campaign_01_wall_runtimes_03.pdf"
+      ]
+    },
+    {
+      "campaign_index": 1,
+      "campaign": "search-2026-10-13/attachment-analysis",
+      "metric": "wall",
+      "kind": "runtimes",
+      "groups": [
+        {
+          "family": "leaf_distance4",
+          "density": 2
+        },
+        {
+          "family": "leaf_distance4",
+          "density": 16
+        },
+        {
+          "family": "leaf_hierarchy16",
+          "density": 2
+        },
+        {
+          "family": "leaf_hierarchy16",
+          "density": 16
+        },
+        {
+          "family": "leaf_hierarchy4",
+          "density": 2
+        },
+        {
+          "family": "leaf_hierarchy4",
+          "density": 16
+        }
+      ],
+      "files": [
+        "campaign_01_wall_runtimes_04.png",
+        "campaign_01_wall_runtimes_04.svg",
+        "campaign_01_wall_runtimes_04.pdf"
+      ]
+    },
+    {
+      "campaign_index": 1,
+      "campaign": "search-2026-10-13/attachment-analysis",
+      "metric": "wall",
+      "kind": "runtimes",
+      "groups": [
+        {
+          "family": "leaf_random16",
+          "density": 2
+        },
+        {
+          "family": "leaf_random16",
+          "density": 16
+        },
+        {
+          "family": "leaf_random4",
+          "density": 2
+        },
+        {
+          "family": "leaf_random4",
+          "density": 16
+        },
+        {
+          "family": "leaf_shuffled16",
+          "density": 2
+        },
+        {
+          "family": "leaf_shuffled16",
+          "density": 16
+        }
+      ],
+      "files": [
+        "campaign_01_wall_runtimes_05.png",
+        "campaign_01_wall_runtimes_05.svg",
+        "campaign_01_wall_runtimes_05.pdf"
+      ]
+    },
+    {
+      "campaign_index": 1,
+      "campaign": "search-2026-10-13/attachment-analysis",
+      "metric": "wall",
+      "kind": "runtimes",
+      "groups": [
+        {
+          "family": "leaf_shuffled4",
+          "density": 2
+        },
+        {
+          "family": "leaf_shuffled4",
+          "density": 16
+        }
+      ],
+      "files": [
+        "campaign_01_wall_runtimes_06.png",
+        "campaign_01_wall_runtimes_06.svg",
+        "campaign_01_wall_runtimes_06.pdf"
+      ]
+    },
+    {
+      "campaign_index": 1,
+      "campaign": "search-2026-10-13/attachment-analysis",
+      "metric": "cpu",
+      "kind": "paired_ratios",
+      "groups": [
+        {
+          "family": "community_distance16",
+          "density": 2
+        },
+        {
+          "family": "community_distance16",
+          "density": 16
+        },
+        {
+          "family": "community_distance4",
+          "density": 2
+        },
+        {
+          "family": "community_distance4",
+          "density": 16
+        },
+        {
+          "family": "community_hierarchy16",
+          "density": 2
+        },
+        {
+          "family": "community_hierarchy16",
+          "density": 16
+        }
+      ],
+      "files": [
+        "campaign_01_cpu_paired_ratios_01.png",
+        "campaign_01_cpu_paired_ratios_01.svg",
+        "campaign_01_cpu_paired_ratios_01.pdf"
+      ]
+    },
+    {
+      "campaign_index": 1,
+      "campaign": "search-2026-10-13/attachment-analysis",
+      "metric": "cpu",
+      "kind": "paired_ratios",
+      "groups": [
+        {
+          "family": "community_hierarchy4",
+          "density": 2
+        },
+        {
+          "family": "community_hierarchy4",
+          "density": 16
+        },
+        {
+          "family": "community_random16",
+          "density": 2
+        },
+        {
+          "family": "community_random16",
+          "density": 16
+        },
+        {
+          "family": "community_random4",
+          "density": 2
+        },
+        {
+          "family": "community_random4",
+          "density": 16
+        }
+      ],
+      "files": [
+        "campaign_01_cpu_paired_ratios_02.png",
+        "campaign_01_cpu_paired_ratios_02.svg",
+        "campaign_01_cpu_paired_ratios_02.pdf"
+      ]
+    },
+    {
+      "campaign_index": 1,
+      "campaign": "search-2026-10-13/attachment-analysis",
+      "metric": "cpu",
+      "kind": "paired_ratios",
+      "groups": [
+        {
+          "family": "community_shuffled16",
+          "density": 2
+        },
+        {
+          "family": "community_shuffled16",
+          "density": 16
+        },
+        {
+          "family": "community_shuffled4",
+          "density": 2
+        },
+        {
+          "family": "community_shuffled4",
+          "density": 16
+        },
+        {
+          "family": "leaf_distance16",
+          "density": 2
+        },
+        {
+          "family": "leaf_distance16",
+          "density": 16
+        }
+      ],
+      "files": [
+        "campaign_01_cpu_paired_ratios_03.png",
+        "campaign_01_cpu_paired_ratios_03.svg",
+        "campaign_01_cpu_paired_ratios_03.pdf"
+      ]
+    },
+    {
+      "campaign_index": 1,
+      "campaign": "search-2026-10-13/attachment-analysis",
+      "metric": "cpu",
+      "kind": "paired_ratios",
+      "groups": [
+        {
+          "family": "leaf_distance4",
+          "density": 2
+        },
+        {
+          "family": "leaf_distance4",
+          "density": 16
+        },
+        {
+          "family": "leaf_hierarchy16",
+          "density": 2
+        },
+        {
+          "family": "leaf_hierarchy16",
+          "density": 16
+        },
+        {
+          "family": "leaf_hierarchy4",
+          "density": 2
+        },
+        {
+          "family": "leaf_hierarchy4",
+          "density": 16
+        }
+      ],
+      "files": [
+        "campaign_01_cpu_paired_ratios_04.png",
+        "campaign_01_cpu_paired_ratios_04.svg",
+        "campaign_01_cpu_paired_ratios_04.pdf"
+      ]
+    },
+    {
+      "campaign_index": 1,
+      "campaign": "search-2026-10-13/attachment-analysis",
+      "metric": "cpu",
+      "kind": "paired_ratios",
+      "groups": [
+        {
+          "family": "leaf_random16",
+          "density": 2
+        },
+        {
+          "family": "leaf_random16",
+          "density": 16
+        },
+        {
+          "family": "leaf_random4",
+          "density": 2
+        },
+        {
+          "family": "leaf_random4",
+          "density": 16
+        },
+        {
+          "family": "leaf_shuffled16",
+          "density": 2
+        },
+        {
+          "family": "leaf_shuffled16",
+          "density": 16
+        }
+      ],
+      "files": [
+        "campaign_01_cpu_paired_ratios_05.png",
+        "campaign_01_cpu_paired_ratios_05.svg",
+        "campaign_01_cpu_paired_ratios_05.pdf"
+      ]
+    },
+    {
+      "campaign_index": 1,
+      "campaign": "search-2026-10-13/attachment-analysis",
+      "metric": "cpu",
+      "kind": "paired_ratios",
+      "groups": [
+        {
+          "family": "leaf_shuffled4",
+          "density": 2
+        },
+        {
+          "family": "leaf_shuffled4",
+          "density": 16
+        }
+      ],
+      "files": [
+        "campaign_01_cpu_paired_ratios_06.png",
+        "campaign_01_cpu_paired_ratios_06.svg",
+        "campaign_01_cpu_paired_ratios_06.pdf"
+      ]
+    },
+    {
+      "campaign_index": 1,
+      "campaign": "search-2026-10-13/attachment-analysis",
+      "metric": "cpu",
+      "kind": "runtimes",
+      "groups": [
+        {
+          "family": "community_distance16",
+          "density": 2
+        },
+        {
+          "family": "community_distance16",
+          "density": 16
+        },
+        {
+          "family": "community_distance4",
+          "density": 2
+        },
+        {
+          "family": "community_distance4",
+          "density": 16
+        },
+        {
+          "family": "community_hierarchy16",
+          "density": 2
+        },
+        {
+          "family": "community_hierarchy16",
+          "density": 16
+        }
+      ],
+      "files": [
+        "campaign_01_cpu_runtimes_01.png",
+        "campaign_01_cpu_runtimes_01.svg",
+        "campaign_01_cpu_runtimes_01.pdf"
+      ]
+    },
+    {
+      "campaign_index": 1,
+      "campaign": "search-2026-10-13/attachment-analysis",
+      "metric": "cpu",
+      "kind": "runtimes",
+      "groups": [
+        {
+          "family": "community_hierarchy4",
+          "density": 2
+        },
+        {
+          "family": "community_hierarchy4",
+          "density": 16
+        },
+        {
+          "family": "community_random16",
+          "density": 2
+        },
+        {
+          "family": "community_random16",
+          "density": 16
+        },
+        {
+          "family": "community_random4",
+          "density": 2
+        },
+        {
+          "family": "community_random4",
+          "density": 16
+        }
+      ],
+      "files": [
+        "campaign_01_cpu_runtimes_02.png",
+        "campaign_01_cpu_runtimes_02.svg",
+        "campaign_01_cpu_runtimes_02.pdf"
+      ]
+    },
+    {
+      "campaign_index": 1,
+      "campaign": "search-2026-10-13/attachment-analysis",
+      "metric": "cpu",
+      "kind": "runtimes",
+      "groups": [
+        {
+          "family": "community_shuffled16",
+          "density": 2
+        },
+        {
+          "family": "community_shuffled16",
+          "density": 16
+        },
+        {
+          "family": "community_shuffled4",
+          "density": 2
+        },
+        {
+          "family": "community_shuffled4",
+          "density": 16
+        },
+        {
+          "family": "leaf_distance16",
+          "density": 2
+        },
+        {
+          "family": "leaf_distance16",
+          "density": 16
+        }
+      ],
+      "files": [
+        "campaign_01_cpu_runtimes_03.png",
+        "campaign_01_cpu_runtimes_03.svg",
+        "campaign_01_cpu_runtimes_03.pdf"
+      ]
+    },
+    {
+      "campaign_index": 1,
+      "campaign": "search-2026-10-13/attachment-analysis",
+      "metric": "cpu",
+      "kind": "runtimes",
+      "groups": [
+        {
+          "family": "leaf_distance4",
+          "density": 2
+        },
+        {
+          "family": "leaf_distance4",
+          "density": 16
+        },
+        {
+          "family": "leaf_hierarchy16",
+          "density": 2
+        },
+        {
+          "family": "leaf_hierarchy16",
+          "density": 16
+        },
+        {
+          "family": "leaf_hierarchy4",
+          "density": 2
+        },
+        {
+          "family": "leaf_hierarchy4",
+          "density": 16
+        }
+      ],
+      "files": [
+        "campaign_01_cpu_runtimes_04.png",
+        "campaign_01_cpu_runtimes_04.svg",
+        "campaign_01_cpu_runtimes_04.pdf"
+      ]
+    },
+    {
+      "campaign_index": 1,
+      "campaign": "search-2026-10-13/attachment-analysis",
+      "metric": "cpu",
+      "kind": "runtimes",
+      "groups": [
+        {
+          "family": "leaf_random16",
+          "density": 2
+        },
+        {
+          "family": "leaf_random16",
+          "density": 16
+        },
+        {
+          "family": "leaf_random4",
+          "density": 2
+        },
+        {
+          "family": "leaf_random4",
+          "density": 16
+        },
+        {
+          "family": "leaf_shuffled16",
+          "density": 2
+        },
+        {
+          "family": "leaf_shuffled16",
+          "density": 16
+        }
+      ],
+      "files": [
+        "campaign_01_cpu_runtimes_05.png",
+        "campaign_01_cpu_runtimes_05.svg",
+        "campaign_01_cpu_runtimes_05.pdf"
+      ]
+    },
+    {
+      "campaign_index": 1,
+      "campaign": "search-2026-10-13/attachment-analysis",
+      "metric": "cpu",
+      "kind": "runtimes",
+      "groups": [
+        {
+          "family": "leaf_shuffled4",
+          "density": 2
+        },
+        {
+          "family": "leaf_shuffled4",
+          "density": 16
+        }
+      ],
+      "files": [
+        "campaign_01_cpu_runtimes_06.png",
+        "campaign_01_cpu_runtimes_06.svg",
+        "campaign_01_cpu_runtimes_06.pdf"
+      ]
+    }
+  ],
+  "visual_qa": "not performed by this script; inspect the rendered images before publication",
+  "output_sha256": {
+    "README.md": "ab1fc74d35a95414a5ea38fcca9c7611cab09672a07f3c3da4ba01812b0d47ca",
+    "campaign_01_cpu_paired_ratios_01.pdf": "a2d164b1db43d24c545406299c604bc5f9f38e95727db897c8171c594907a62e",
+    "campaign_01_cpu_paired_ratios_01.png": "4f16e85c2bf1b7dcf120f1803c8c4c9b9cb18c52d9d6c15264f2f90426dda411",
+    "campaign_01_cpu_paired_ratios_01.svg": "b19c0f626247f19cdbfecaf426402d6795bdfdc88c1c66fac8ca289860c4010f",
+    "campaign_01_cpu_paired_ratios_02.pdf": "0445e1aa068db6b12b559a4c8238539ac15247984075370937ce8b28de36c791",
+    "campaign_01_cpu_paired_ratios_02.png": "e88d5644e1b5ab2f7b6e1c9845a1bb7e72482557a1f12d64e0ec04b45db77f40",
+    "campaign_01_cpu_paired_ratios_02.svg": "f7e86652051da3cdb1111f751c83dc9c55b961d30dd75932be7e722f96e09749",
+    "campaign_01_cpu_paired_ratios_03.pdf": "cb8cf0678714fdefbe249976e09f71aef8a9509e53a0eb1e295e710275671a42",
+    "campaign_01_cpu_paired_ratios_03.png": "b321cdf5c7c6fe8b9a70be155fb4303aece08ca83e61728a6b5c9030e427ea82",
+    "campaign_01_cpu_paired_ratios_03.svg": "0c2bb0d82145a00cdb8f679914cbfebb67c8ec5cb30391eccb87d171677b1899",
+    "campaign_01_cpu_paired_ratios_04.pdf": "2a8c91c9297ccf7b53734295e8a3894bacc9d1026a2e1bb5b3a39a6178286b36",
+    "campaign_01_cpu_paired_ratios_04.png": "b7c45147cd9b4849234f5658e4d5b7371ccee27bea05aa72031912d79d07b4a0",
+    "campaign_01_cpu_paired_ratios_04.svg": "ee338f242e2976a8d67f2f9c4dcc616c7a2b200d5dc801c4137b4eae2710259f",
+    "campaign_01_cpu_paired_ratios_05.pdf": "d0fb51194d15ff3460ed340df4bdd14e5099b2ac6f7e17355460ae952277e6d2",
+    "campaign_01_cpu_paired_ratios_05.png": "605fb989cf5c786b0966e786e0a9a5e543f0c62c0f42124c38396ad7b0ffceee",
+    "campaign_01_cpu_paired_ratios_05.svg": "d83f4f2f610e539a6e086084d380a71f3540b729d8aa0edd0c0978dc3ab2e317",
+    "campaign_01_cpu_paired_ratios_06.pdf": "3d7dcc82f2cb9d30760ae2a9d99f77e4bd8c9fb3c5c48d6c5a2595b7fe77ae2b",
+    "campaign_01_cpu_paired_ratios_06.png": "43b11cddc5297bcdf3db0b746b8aca9794dae160a377d05e5530f5c495780c0c",
+    "campaign_01_cpu_paired_ratios_06.svg": "15ae2ce849ecd537810c758ceb8ff73159dff736cd001db00acb9ea313f990e6",
+    "campaign_01_cpu_runtimes_01.pdf": "6c805379c21065c57ba732f728b945e8299d27c51aea133051b6a415a75ea341",
+    "campaign_01_cpu_runtimes_01.png": "763745bec20e73b2d5444dda22035c91298554a13ecb4f8eb2daa03079866ed1",
+    "campaign_01_cpu_runtimes_01.svg": "191e4256b57bda9956b2c8c5fa87c868417eb2dfb1692eacc669b55f139204b9",
+    "campaign_01_cpu_runtimes_02.pdf": "3df1d2b670452daba3e032af317f7ba0797f6d5ecfe8239812ade612ebdc0e63",
+    "campaign_01_cpu_runtimes_02.png": "718f9a3894e87fa49974bb03019fdea899f904e435567f92e8424f4474f6336f",
+    "campaign_01_cpu_runtimes_02.svg": "0d716fa7688ce99e76c8869f28f82d1ef06ce00ccbd2dfa49d0f0b01f2d4c70a",
+    "campaign_01_cpu_runtimes_03.pdf": "b6d990bc945561883b1e445b134458a496a5c08d4f4616e6d9cb6d563694c74c",
+    "campaign_01_cpu_runtimes_03.png": "6bc2962141c35450a4cfc27b63c8f2cb7703c301704ab23b4c2bc6b0bdcda129",
+    "campaign_01_cpu_runtimes_03.svg": "4f6d53526f1a074ee9f8bc75c1984929551685a55c6cc41d29fee47588b9b28f",
+    "campaign_01_cpu_runtimes_04.pdf": "530cf6593dd37247b24409b54b7297ddb432b642b286d5a9cc626d15aa5df9f6",
+    "campaign_01_cpu_runtimes_04.png": "3bd8e2106ac20df48788be07a30f49d849f6db02925d03bcda86c7236fa9297d",
+    "campaign_01_cpu_runtimes_04.svg": "1b6c934930a70646ea3bd4340cabfe6df2585f2413f6d86d70f86afb6bf5dfbc",
+    "campaign_01_cpu_runtimes_05.pdf": "2e53cd0a3754e0c09b56c3680276d36b86156ef2124f6d6c8a163572d5e38715",
+    "campaign_01_cpu_runtimes_05.png": "4c39ac7ec0672b6c45a19dded31a65beaa23f5937737728fec4cf38e62f907b4",
+    "campaign_01_cpu_runtimes_05.svg": "aa013b2f5aa1932fd5615c7ffc935da679e36a77fc97e98d18513359c156ac92",
+    "campaign_01_cpu_runtimes_06.pdf": "0bc49f63760d34e28c1626546d151e466f1857bec3ca96b0348ad20dae03afae",
+    "campaign_01_cpu_runtimes_06.png": "fc5f3243b425742d3362ebc1a50ef1d46827a1276bc192a2d892a013a6b7161c",
+    "campaign_01_cpu_runtimes_06.svg": "abab4076f4a9b7004cc3c80e24d2a8d4c523167b5471fe25985d430e7641cacc",
+    "campaign_01_wall_paired_ratios_01.pdf": "ad1b77b0fba6b53437aa1523f29070a3a7c283c21a11f5c3c89b00e45e7fd0e2",
+    "campaign_01_wall_paired_ratios_01.png": "8613768791980ebc695fa04960f79cde752c775cb470489e24f159d83c4b13b6",
+    "campaign_01_wall_paired_ratios_01.svg": "0a67fed1b50d942fe0b342abc8103b73dd0652b162bc0aa1aab16bb695fd8d5f",
+    "campaign_01_wall_paired_ratios_02.pdf": "5ebbb3da9301e733e77b96a2a4b7e4c27440ab3ee0460dc4ea5ce262345c1662",
+    "campaign_01_wall_paired_ratios_02.png": "6f19c3107f8e6f393911d0045252a6700df042130da64ba324f69588e64cd18f",
+    "campaign_01_wall_paired_ratios_02.svg": "abf080a01430e36749551863f960a72390264646ed91043ee19025297ac213fb",
+    "campaign_01_wall_paired_ratios_03.pdf": "4281bc3b9a2aa692a924a42c82e7f63d85c0e219c3c62ccc4e4def05428774a0",
+    "campaign_01_wall_paired_ratios_03.png": "2c542d9702f5e5dff78e101d1fba1b476a1747f3ceceb606524c7a59080b9900",
+    "campaign_01_wall_paired_ratios_03.svg": "c400dfd371f89404171cde94838502d1d56f9b85d6d92b65c20832d9fb92b631",
+    "campaign_01_wall_paired_ratios_04.pdf": "936c3846f13741849eafc17b95d50474bbb03248523fb139a2a2479c123743c9",
+    "campaign_01_wall_paired_ratios_04.png": "6091aaea52b927ed23d2e2384996d80f549b4183583156ca5ab52aae16c20c17",
+    "campaign_01_wall_paired_ratios_04.svg": "00e0459315bfd84d821eb31fad8acaa02e2d4fd6bfa6d1718b6a6de966aacf29",
+    "campaign_01_wall_paired_ratios_05.pdf": "4ccc817361abe034de98dbba8e0ce7716a77e7e7b2ce41b194b7e7e25c91564b",
+    "campaign_01_wall_paired_ratios_05.png": "989162aceaaacdc22c7e63a383c92c57a4e1d9dccdc26ee5ad439827bffb6b93",
+    "campaign_01_wall_paired_ratios_05.svg": "f120aa9ce725875a24e2975fcba30c9d7ced86e37250560efe4078b519e8f3f6",
+    "campaign_01_wall_paired_ratios_06.pdf": "fd9aac047f1bb9eb7b8c56444da4729bb40e5674980fbd63bcc0562cc8cd624a",
+    "campaign_01_wall_paired_ratios_06.png": "efd6db7bd8d00d70591b22c4e3adcac05a968fc48f5427cb638a1de97abc2049",
+    "campaign_01_wall_paired_ratios_06.svg": "e7ab96a1fe405184f3d1e6f1205e985e429abfb567ec46d23999e853451ff299",
+    "campaign_01_wall_runtimes_01.pdf": "a4a8553d54f2df6664ef04358014c749517c8902fe6dcb4c8525d36ff4ef8ce9",
+    "campaign_01_wall_runtimes_01.png": "e0b2ca9490cf4928e4f5ce4efb3b67b84042528a9584f9643e476feac089314d",
+    "campaign_01_wall_runtimes_01.svg": "0fcc71afb1ff8187cab462116e7f90fde48c7b55bad6a367b92807f7297f78a2",
+    "campaign_01_wall_runtimes_02.pdf": "e9bf104c08432b7219748b38b3fcb6300ddec6e8413b229ec4cf69305301ee8c",
+    "campaign_01_wall_runtimes_02.png": "2bd0d82c3b9a5bdd7700e9750c3b8b5526687a4dddf11091793125e87fe6c7b2",
+    "campaign_01_wall_runtimes_02.svg": "0f65e991b1179a13155f3cb604d41110a8837e23074cb1352f4c6e6cdd2fe7c6",
+    "campaign_01_wall_runtimes_03.pdf": "efc3aaf5fc9b3f0dcd0e2e40b5389a7533fe921c1012866807ac08b4a7fc8171",
+    "campaign_01_wall_runtimes_03.png": "d4e5d33fd9f9ec1c5df9e4133e2a1414c72904f295a666b9a3235656b0f2653d",
+    "campaign_01_wall_runtimes_03.svg": "1c88d1fcff53aed8077328c123c6f5a076adc5ffbc0f2583c167199f824e8440",
+    "campaign_01_wall_runtimes_04.pdf": "ef7bf5ac79f3369a902b596d07cbbf54351b513a4358b36507e91b3d74d8e1aa",
+    "campaign_01_wall_runtimes_04.png": "01b5f0c42cb3753eb638af928df48e0f7942ae94d23f2c46d1d60916be4322e1",
+    "campaign_01_wall_runtimes_04.svg": "79327202d05d85370b765539031d659200470ed21e031cf6408e8908bd085a9f",
+    "campaign_01_wall_runtimes_05.pdf": "d63c8f848f063ce593adbcba3e4be74c80df09fd4fbe5d485d03d56d5dec1309",
+    "campaign_01_wall_runtimes_05.png": "240c844fab9397315f4fb2b6f8bae850142d368d7f89969bfd3b533af3c6492c",
+    "campaign_01_wall_runtimes_05.svg": "20d3b9828fb0525c27a8118ffc5e0becdecb248cee2e31e3df90e917cd5d40a3",
+    "campaign_01_wall_runtimes_06.pdf": "2524d358e13501b337fe098db5a42fb1262d34ef2e092166204b97c983ea10a0",
+    "campaign_01_wall_runtimes_06.png": "78853b611dddb194f6eeb96f7fa330f77a7fbc2799bc305d934e314ac468513a",
+    "campaign_01_wall_runtimes_06.svg": "b12d4d59300b71249eea8d8aa44dde30a9862ed84ab7342a01e211cc5a1b6130"
+  }
+}

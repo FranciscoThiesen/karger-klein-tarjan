@@ -1,0 +1,53 @@
+{
+  "schema": "attachment_work_figures_v1",
+  "validation": "pass",
+  "work_records": 16,
+  "trace_rounds": 254,
+  "graph_seed": 5009,
+  "kkt_seed": 149,
+  "matplotlib_version": "3.9.4",
+  "input_sha256": {
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-work-analysis/provenance.json": "9a34844679bc6d6c252d15e1494db95fdabaaa131efdb5d377be81b6b86bf287",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-work-analysis/counters.csv": "0c213a8776e50f0411a35174dfcfb2a9e20d0c4baedf8b20e24aa10fd5126745",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-work-analysis/models.json": "fab8a09ff489544e6191be492eafb527c58c7629f048dfdd02454e702dd7df7e",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-work-analysis/report.md": "c4eb02256a91644c35f6f0f32609e1c8ce5d60198e15c6e6f538798996b8b62a",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-work-analysis/rounds.csv": "2c77d31046d13a39702f4259a41a64e5a3ae1f56ef396dd829213132d4bae4a3",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-work-analysis/summary.csv": "63b2151a30aa8a1b06c28b38d2249390a8b1dafbc872e05c6febd1decc839bb3",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-work-analysis/timing_links.csv": "10c7e31434d03cd40eae14eeaa4f7c5083af53ecdd5cd912076fce02bc12c954",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/plot_attachment_work.py": "e27774a55f25ddaecfc00411c5241ad02e046f6ed1a81fd7443d9c88448a05a7"
+  },
+  "figure_captions": [
+    {
+      "file": "volume_scaling.png",
+      "caption": "All eight ordered leaf b=4,d=16 size records. Compactor hierarchy/distance volumes are identical; overlapping KKT curves are retained. The ideal model predicts edge counts only."
+    },
+    {
+      "file": "round_occupancy.png",
+      "caption": "The original-input and terminal counts are exact. Intermediate signed deviations are retained; they are ordinary single-graph variation, not significance scores. Model truncation bounds do not cover floating-point roundoff or random-graph variation."
+    },
+    {
+      "file": "weight_controls.png",
+      "caption": "Hierarchy and distance share the ordered compactor trajectory. Core-only shuffle preserves the first star contraction; global shuffle may change it. No occupancy-model curve is assigned to the controls. The logarithmic axis shows all positive input counts through completion."
+    },
+    {
+      "file": "all_selected_records.png",
+      "caption": "All 16 selected records, including community endpoint twins, b=16, d=2 and both shuffled controls. These are operation counts, not performance measurements; every record also remains in data.csv and the analysis report table."
+    }
+  ],
+  "timings_fitted": false,
+  "rows_removed": 0,
+  "rows_adjusted": 0,
+  "artifact_sha256": {
+    "README.md": "c3023d8fd49a14967f8c4024e38e9e7fd79f761e74a7939f08ec5b58532e739a",
+    "all_selected_records.png": "60095f295cfd156d710f0ed157a5559c8ce95401cb967ed2f712db4b27fd4ee6",
+    "all_selected_records.svg": "da6ffb31fda5d4187485c9deeab2e4e8fc0ab9fafeb71ffb6eea85853f3317e8",
+    "data.csv": "63b2151a30aa8a1b06c28b38d2249390a8b1dafbc872e05c6febd1decc839bb3",
+    "round_data.csv": "2c77d31046d13a39702f4259a41a64e5a3ae1f56ef396dd829213132d4bae4a3",
+    "round_occupancy.png": "0bd6bea41392e67dba29273d7ebab6b2ac1fdcac399b7ef53a0a297fb844201c",
+    "round_occupancy.svg": "582008150698a16016c062c0cdf1817ecccba3df3e46ea34190a1fa9f496c3f5",
+    "volume_scaling.png": "b737a28c08e6ea84f9160438917abbcc35f2367db8af086d9c79d2650192e1f0",
+    "volume_scaling.svg": "13022ba51ea44eff11b8945582950142696e157a0718e6f5cbb63344260ebb2b",
+    "weight_controls.png": "99eb5f431bdc3d0ea719c4fd595b12dc8361b3b55e6c8af408f75c38d5d11bc3",
+    "weight_controls.svg": "90648bf793cb1f38af1961d5a75f054a45760d48b0c68c8164e3aa00f430537a"
+  }
+}

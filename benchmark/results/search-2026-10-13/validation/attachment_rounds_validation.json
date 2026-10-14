@@ -1,0 +1,353 @@
+{
+  "validation": "pass",
+  "synthetic_family_cases": 16,
+  "independently_reconstructed_quotients": 72,
+  "random_controls_with_nonstar_first_partition": 4,
+  "malformed_exports_rejected": 4,
+  "native_exports": [
+    {
+      "family": "community_distance16",
+      "input": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/attachment-diagnostics/community_distance16-view.json",
+      "input_sha256": "87d19850d9423002e47334edd38fa81f110197576189ba32bbf8a61af94c2bf9",
+      "work": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/attachment-diagnostics/community_distance16-work.json",
+      "work_sha256": "e6331aed016595166de1df8e106085f541939401faeb477340fd92a273110807",
+      "input_fingerprint": "3702432953081639164",
+      "matched_native_stages": 7,
+      "output": "community_distance16.html",
+      "output_sha256": "d2af6ddccacf827e6ec819b706086ecca09ef08576a3834399ef988b0a6f639a",
+      "summary": {
+        "schema": "attachment_rounds_v1",
+        "validation": "pass",
+        "n": 1024,
+        "m": 2048,
+        "contractions": 7,
+        "terminal_selected_edges": 1023,
+        "native_trace_identity": "not asserted; abstract minimum-edge quotients",
+        "shows_kkt_sampling_or_filtering": false
+      }
+    },
+    {
+      "family": "community_distance4",
+      "input": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/attachment-diagnostics/community_distance4-view.json",
+      "input_sha256": "d2368a14277730b9bd6906de367ec15b54a4039a9b90529e394b2ecd6353ea58",
+      "work": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/attachment-diagnostics/community_distance4-work.json",
+      "work_sha256": "36b33da739e85dc66f0ca44df29a1450c70c090f6be06b6cdc93bf4f40028759",
+      "input_fingerprint": "438823952182559815",
+      "matched_native_stages": 9,
+      "output": "community_distance4.html",
+      "output_sha256": "b5dc6a12bf535fbe0bf39edeb54ce8369c533379e7850901f7c18ec165051481",
+      "summary": {
+        "schema": "attachment_rounds_v1",
+        "validation": "pass",
+        "n": 1024,
+        "m": 2048,
+        "contractions": 9,
+        "terminal_selected_edges": 1023,
+        "native_trace_identity": "not asserted; abstract minimum-edge quotients",
+        "shows_kkt_sampling_or_filtering": false
+      }
+    },
+    {
+      "family": "community_hierarchy16",
+      "input": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/attachment-diagnostics/community_hierarchy16-view.json",
+      "input_sha256": "4fa700e22001cd15da3e8ae477aff27d957ea8c09f7647ae9cce36eacd970aa4",
+      "work": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/attachment-diagnostics/community_hierarchy16-work.json",
+      "work_sha256": "8d3aad7276a250362626841b85e32c564acf3a696a19432346a08eef88cfc226",
+      "input_fingerprint": "8272703976451818272",
+      "matched_native_stages": 7,
+      "output": "community_hierarchy16.html",
+      "output_sha256": "5909082787287ab0de60b4297f5e479e74c2f8921efd50f644986c3f769ddfb0",
+      "summary": {
+        "schema": "attachment_rounds_v1",
+        "validation": "pass",
+        "n": 1024,
+        "m": 2048,
+        "contractions": 7,
+        "terminal_selected_edges": 1023,
+        "native_trace_identity": "not asserted; abstract minimum-edge quotients",
+        "shows_kkt_sampling_or_filtering": false
+      }
+    },
+    {
+      "family": "community_hierarchy4",
+      "input": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/attachment-diagnostics/community_hierarchy4-view.json",
+      "input_sha256": "3dd16274b8dc52d69cfc6cde8cbfa645f9cc667729a8edae0c67a62bfd769688",
+      "work": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/attachment-diagnostics/community_hierarchy4-work.json",
+      "work_sha256": "bc40b9a2d4767723fd39d8eb6bb3c01099c8e4f824d14aeef397436a00bd2fd8",
+      "input_fingerprint": "10725891878000054811",
+      "matched_native_stages": 9,
+      "output": "community_hierarchy4.html",
+      "output_sha256": "70f66c5a19d909b0f091407a6b20dfbfc36fa29183aceb6d68a627ef18ae6564",
+      "summary": {
+        "schema": "attachment_rounds_v1",
+        "validation": "pass",
+        "n": 1024,
+        "m": 2048,
+        "contractions": 9,
+        "terminal_selected_edges": 1023,
+        "native_trace_identity": "not asserted; abstract minimum-edge quotients",
+        "shows_kkt_sampling_or_filtering": false
+      }
+    },
+    {
+      "family": "community_random16",
+      "input": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/attachment-diagnostics/community_random16-view.json",
+      "input_sha256": "e8781b8d879da6b6e46a9106193ebdf5ac677b9e3b42619a06aee0ea95020fb9",
+      "work": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/attachment-diagnostics/community_random16-work.json",
+      "work_sha256": "9be11fcaff297dc11b56dd23cf5bc207b95fbb88d66c042b6e9ac6d9263a6e87",
+      "input_fingerprint": "13747369485430187356",
+      "matched_native_stages": 5,
+      "output": "community_random16.html",
+      "output_sha256": "24a585bd194a09f236e587c53eb1c8ab6156bbb020a91fd8098b205a05955c6e",
+      "summary": {
+        "schema": "attachment_rounds_v1",
+        "validation": "pass",
+        "n": 1024,
+        "m": 2048,
+        "contractions": 5,
+        "terminal_selected_edges": 1023,
+        "native_trace_identity": "not asserted; abstract minimum-edge quotients",
+        "shows_kkt_sampling_or_filtering": false
+      }
+    },
+    {
+      "family": "community_random4",
+      "input": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/attachment-diagnostics/community_random4-view.json",
+      "input_sha256": "32c988d543a1bb6c6e435a9177ce9fa7de5a482be3bce9594916547dc333e829",
+      "work": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/attachment-diagnostics/community_random4-work.json",
+      "work_sha256": "ef27fd9562c9365a62a1d6f5b5aa2fdad1b9857e2201dad614cdd399b4badc14",
+      "input_fingerprint": "17419614060721768227",
+      "matched_native_stages": 5,
+      "output": "community_random4.html",
+      "output_sha256": "973015a6911b4b0874074004688a0b3b1fbd013c857d06b333eec71bf54541e6",
+      "summary": {
+        "schema": "attachment_rounds_v1",
+        "validation": "pass",
+        "n": 1024,
+        "m": 2048,
+        "contractions": 5,
+        "terminal_selected_edges": 1023,
+        "native_trace_identity": "not asserted; abstract minimum-edge quotients",
+        "shows_kkt_sampling_or_filtering": false
+      }
+    },
+    {
+      "family": "community_shuffled16",
+      "input": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/attachment-diagnostics/community_shuffled16-view.json",
+      "input_sha256": "07678bc8747e1619ded458635f15fc8e5ee97bc9fbfb6d021ac37d8cb2208b4a",
+      "work": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/attachment-diagnostics/community_shuffled16-work.json",
+      "work_sha256": "ff0425083e5a8ac4c7cd14d6b8e72456a68eea39e01e41b0f620ef8bbff312aa",
+      "input_fingerprint": "477471724042070580",
+      "matched_native_stages": 4,
+      "output": "community_shuffled16.html",
+      "output_sha256": "da218b548375616ae01359e78399f55a4bea6c61488e0af05b9c121a2b709207",
+      "summary": {
+        "schema": "attachment_rounds_v1",
+        "validation": "pass",
+        "n": 1024,
+        "m": 2048,
+        "contractions": 4,
+        "terminal_selected_edges": 1023,
+        "native_trace_identity": "not asserted; abstract minimum-edge quotients",
+        "shows_kkt_sampling_or_filtering": false
+      }
+    },
+    {
+      "family": "community_shuffled4",
+      "input": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/attachment-diagnostics/community_shuffled4-view.json",
+      "input_sha256": "91847de51c2da663e59316cc25857d42a195520d6aaa480a0f9c70eef9fc0b38",
+      "work": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/attachment-diagnostics/community_shuffled4-work.json",
+      "work_sha256": "f6736c6279025d32dbd0ff22022354080b5f6a72082f901e4924a527b3fa630c",
+      "input_fingerprint": "14243172832326214451",
+      "matched_native_stages": 5,
+      "output": "community_shuffled4.html",
+      "output_sha256": "83fd9000a2ddcecc5aaca3b281b0ee40187c2b47d959dd336ac9c3cb91d23305",
+      "summary": {
+        "schema": "attachment_rounds_v1",
+        "validation": "pass",
+        "n": 1024,
+        "m": 2048,
+        "contractions": 5,
+        "terminal_selected_edges": 1023,
+        "native_trace_identity": "not asserted; abstract minimum-edge quotients",
+        "shows_kkt_sampling_or_filtering": false
+      }
+    },
+    {
+      "family": "leaf_distance16",
+      "input": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/attachment-diagnostics/leaf_distance16-view.json",
+      "input_sha256": "d56a59d09ba23496d39efd60fabba73178016a63f334a26fd1883fabbcaf9299",
+      "work": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/attachment-diagnostics/leaf_distance16-work.json",
+      "work_sha256": "ca3c5d92e0c15fb7bd6ad802daacda1085cbb0016324b294957d2b35b5e1a42d",
+      "input_fingerprint": "7413070003793425643",
+      "matched_native_stages": 7,
+      "output": "leaf_distance16.html",
+      "output_sha256": "4c5a5d89807c75219319960db1c2ef4e74fe1614907916613d2fddf4caad8e3f",
+      "summary": {
+        "schema": "attachment_rounds_v1",
+        "validation": "pass",
+        "n": 1024,
+        "m": 2048,
+        "contractions": 7,
+        "terminal_selected_edges": 1023,
+        "native_trace_identity": "not asserted; abstract minimum-edge quotients",
+        "shows_kkt_sampling_or_filtering": false
+      }
+    },
+    {
+      "family": "leaf_distance4",
+      "input": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/attachment-diagnostics/leaf_distance4-view.json",
+      "input_sha256": "b5494c23d36b8d10da4ba45a02a01fa0470afe352594d0eec9102f0ba976de0c",
+      "work": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/attachment-diagnostics/leaf_distance4-work.json",
+      "work_sha256": "aadf89c96dffa1f71746ddc919d4366c23b031316e71f639939428f779f3b0bc",
+      "input_fingerprint": "2096667815617078544",
+      "matched_native_stages": 9,
+      "output": "leaf_distance4.html",
+      "output_sha256": "f2495ce2ba644571de35e59d2427ec0f75dd4ce42ef720bd44cda4ec6e1552c2",
+      "summary": {
+        "schema": "attachment_rounds_v1",
+        "validation": "pass",
+        "n": 1024,
+        "m": 2048,
+        "contractions": 9,
+        "terminal_selected_edges": 1023,
+        "native_trace_identity": "not asserted; abstract minimum-edge quotients",
+        "shows_kkt_sampling_or_filtering": false
+      }
+    },
+    {
+      "family": "leaf_hierarchy16",
+      "input": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/attachment-diagnostics/leaf_hierarchy16-view.json",
+      "input_sha256": "51243f813249fd8ae7dd34f11b4a63df5fc4455c04bd37c3b9c804b0c7731464",
+      "work": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/attachment-diagnostics/leaf_hierarchy16-work.json",
+      "work_sha256": "d9fbd7eaf9c24c049ca133a216a7c245f5565f9cde7d21cdc4f34cdeb3c92ae9",
+      "input_fingerprint": "10015125976483142767",
+      "matched_native_stages": 7,
+      "output": "leaf_hierarchy16.html",
+      "output_sha256": "47bf6026db0bbb186730f9e5384da34707b356fb999cb3baa51d044d97e92ab5",
+      "summary": {
+        "schema": "attachment_rounds_v1",
+        "validation": "pass",
+        "n": 1024,
+        "m": 2048,
+        "contractions": 7,
+        "terminal_selected_edges": 1023,
+        "native_trace_identity": "not asserted; abstract minimum-edge quotients",
+        "shows_kkt_sampling_or_filtering": false
+      }
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "input": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/attachment-diagnostics/leaf_hierarchy4-view.json",
+      "input_sha256": "079adcecfa63bcf77813e9dbe94aaafbb4645844da63e5ddd4695320127c7b86",
+      "work": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/attachment-diagnostics/leaf_hierarchy4-work.json",
+      "work_sha256": "1daa69449f4183a78c5131625886b6bd02f4083b71a6e0ecf5bdd1fdba562d1c",
+      "input_fingerprint": "36745519712658356",
+      "matched_native_stages": 9,
+      "output": "leaf_hierarchy4.html",
+      "output_sha256": "3140d266590c46b3222dd542a4b5b23ab48e16b18100fc6f277840cdbd3747e9",
+      "summary": {
+        "schema": "attachment_rounds_v1",
+        "validation": "pass",
+        "n": 1024,
+        "m": 2048,
+        "contractions": 9,
+        "terminal_selected_edges": 1023,
+        "native_trace_identity": "not asserted; abstract minimum-edge quotients",
+        "shows_kkt_sampling_or_filtering": false
+      }
+    },
+    {
+      "family": "leaf_random16",
+      "input": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/attachment-diagnostics/leaf_random16-view.json",
+      "input_sha256": "fe3b0abc11f51d97df8a995ee6b865dabc1b9d3413a8dc7ad6a4446cad5fb0f4",
+      "work": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/attachment-diagnostics/leaf_random16-work.json",
+      "work_sha256": "68d0903e37156eafb39b8027f21fa4a3335335bdf50d5ffdf6a9390b5d8b1e0a",
+      "input_fingerprint": "12836289696768167695",
+      "matched_native_stages": 3,
+      "output": "leaf_random16.html",
+      "output_sha256": "0f5c3cc9d5cb5cec52a78bfe89774838c65f278082dd99c5de2b5d4afb07bf28",
+      "summary": {
+        "schema": "attachment_rounds_v1",
+        "validation": "pass",
+        "n": 1024,
+        "m": 2048,
+        "contractions": 3,
+        "terminal_selected_edges": 1023,
+        "native_trace_identity": "not asserted; abstract minimum-edge quotients",
+        "shows_kkt_sampling_or_filtering": false
+      }
+    },
+    {
+      "family": "leaf_random4",
+      "input": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/attachment-diagnostics/leaf_random4-view.json",
+      "input_sha256": "a239ddae2459c9780f40285b70e8f6cd95026e9d1ca68ecd8c5127c96d33ed26",
+      "work": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/attachment-diagnostics/leaf_random4-work.json",
+      "work_sha256": "a91570f0201c51156ae1001230e03588f45a030fe3c7265ec28bb06c90537ec0",
+      "input_fingerprint": "1211039334428000180",
+      "matched_native_stages": 4,
+      "output": "leaf_random4.html",
+      "output_sha256": "9fef93ba908551602d2668d828e8ad53535316797d58e2990db3390d275dfc05",
+      "summary": {
+        "schema": "attachment_rounds_v1",
+        "validation": "pass",
+        "n": 1024,
+        "m": 2048,
+        "contractions": 4,
+        "terminal_selected_edges": 1023,
+        "native_trace_identity": "not asserted; abstract minimum-edge quotients",
+        "shows_kkt_sampling_or_filtering": false
+      }
+    },
+    {
+      "family": "leaf_shuffled16",
+      "input": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/attachment-diagnostics/leaf_shuffled16-view.json",
+      "input_sha256": "3d4824a4d4b7c3b3e853f8e5037265e52057670b9086af7992cd69f7f84153c1",
+      "work": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/attachment-diagnostics/leaf_shuffled16-work.json",
+      "work_sha256": "ad82b916c29da64cc50ebeaa193411691f4e55f88b0b06cef4fc7ce17b6a4b46",
+      "input_fingerprint": "16514470717418151507",
+      "matched_native_stages": 4,
+      "output": "leaf_shuffled16.html",
+      "output_sha256": "3a65b141366c5a0fbfa1ee420e9cce01041ae7e888ca5b879481cfeb7c93eea7",
+      "summary": {
+        "schema": "attachment_rounds_v1",
+        "validation": "pass",
+        "n": 1024,
+        "m": 2048,
+        "contractions": 4,
+        "terminal_selected_edges": 1023,
+        "native_trace_identity": "not asserted; abstract minimum-edge quotients",
+        "shows_kkt_sampling_or_filtering": false
+      }
+    },
+    {
+      "family": "leaf_shuffled4",
+      "input": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/attachment-diagnostics/leaf_shuffled4-view.json",
+      "input_sha256": "dea1e40023d300e379f40ab1cb55fc65788b1f48e214055b2e275571dd260e1f",
+      "work": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/attachment-diagnostics/leaf_shuffled4-work.json",
+      "work_sha256": "042cc743c26956df295f216f5289d34ee7ef5f9798c0766f2a09d591c608bc66",
+      "input_fingerprint": "6740351989926405488",
+      "matched_native_stages": 5,
+      "output": "leaf_shuffled4.html",
+      "output_sha256": "d23bdc758015dc1828690283b63eb7ba3b0478440ba7a19559f3ab11f8c5be35",
+      "summary": {
+        "schema": "attachment_rounds_v1",
+        "validation": "pass",
+        "n": 1024,
+        "m": 2048,
+        "contractions": 5,
+        "terminal_selected_edges": 1023,
+        "native_trace_identity": "not asserted; abstract minimum-edge quotients",
+        "shows_kkt_sampling_or_filtering": false
+      }
+    }
+  ],
+  "native_trace_identity": "counts and partition moments only; physical order not asserted",
+  "browser_rendering": "not tested",
+  "renderer_source_sha256": {
+    "benchmark/render_attachment_rounds.py": "226d6513dc68c331ca864506fa5b125d0f36b3808e39e5a1e8e75dcda7a6907a",
+    "benchmark/render_attachment_rounds_test.py": "fb377d767368929052869ab27a63e2d1e7341ce8e10f52afb3333b140a049286",
+    "benchmark/render_attachment_view.py": "24d49e111e876764e60ae5b44be36b235478fdbc9e84662d1e61c83634173a32",
+    "benchmark/render_attachment_view_test.py": "1fd6d47d9cb041cf335c61419a6ad121ca653fcb86212bcb7d393dd7ce1a0f8f"
+  }
+}

@@ -217,7 +217,7 @@ def render_pages(plt, Line2D, FixedLocator, FuncFormatter, campaigns, campaign, 
         columns = min(2, len(page_groups)); rows = math.ceil(len(page_groups)/columns)
         figure, axes = plt.subplots(rows, columns, figsize=(13, 3.4*rows+2.3), squeeze=False)
         figure.subplots_adjust(left=.085, right=.97, top=.80 if rows == 1 else .86,
-                               bottom=.18 if rows == 1 else .13,
+                               bottom=.27 if rows == 1 else .13,
                                hspace=.49, wspace=.28)
         for axis, group in zip(axes.flat, page_groups):
             family, density = group

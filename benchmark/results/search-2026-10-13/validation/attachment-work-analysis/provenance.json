@@ -1,0 +1,22 @@
+{
+  "schema": "attachment_work_analysis_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "-B",
+    "benchmark/analyze_attachment_work_test.py"
+  ],
+  "started_utc": "2026-10-14T01:51:20.479757+00:00",
+  "finished_utc": "2026-10-14T01:51:20.896963+00:00",
+  "exit_status": 0,
+  "native_binaries_executed": 0,
+  "source_sha256": {
+    "benchmark/analyze_attachment_work.py": "315b867cc2fa0e39b027294a533a30289e8eb49f40c154bab1ccd9d301d7fdf9",
+    "benchmark/analyze_attachment_work_test.py": "ccb4666085d5694bb420b9a783943732241fb768bf336d7721a46ebb5e61ac89",
+    "benchmark/attachment_occupancy.py": "4e93fab645acd69f60baea895ec9f9f6152182ecacbcc10069f664fb15a754e9",
+    "benchmark/work_metrics.hpp": "fc3e8b9e2afba1e12c1e2c47b9c79a7ef4772c3a0185d36ca80f85f25085d9ef",
+    "benchmark/results/search-2026-10-13/ATTACHMENT_BOUND.md": "5f29877de7390a73274d4151e82c17f832c51dfb0e22678cba6b60417b05edf0"
+  },
+  "stdout_sha256": "ae73b3f6e0c9b18183991917598d7e8d253a2d79e2c8776490dc6c50219f9d52",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

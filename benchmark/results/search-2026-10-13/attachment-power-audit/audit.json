@@ -1,0 +1,77 @@
+{
+  "schema": "mst_search_power_audit_v1",
+  "validation": "pass",
+  "query": {
+    "command": [
+      "/usr/bin/pmset",
+      "-g",
+      "log"
+    ],
+    "started_utc": "2026-10-14T01:45:42.497918+00:00",
+    "exit_status": 0,
+    "finished_utc": "2026-10-14T01:45:43.633928+00:00"
+  },
+  "raw_capture_validation": "pass",
+  "raw_protocol_recertified_by_this_helper": false,
+  "started_utc": "2026-10-14T01:08:38.390071+00:00",
+  "finished_utc": "2026-10-14T01:42:04.585479+00:00",
+  "utc_elapsed_seconds": 2006.195408,
+  "monotonic_elapsed_seconds": 2006.17088575,
+  "utc_minus_monotonic_seconds": 0.024522250000018175,
+  "utc_correlation_envelope_ns": [
+    1791940118390071000,
+    1791942124585479000
+  ],
+  "capture_clock_flags": [],
+  "recorded_clock_flagged_calls": 0,
+  "checked_calls": 2400,
+  "timed_calls": 2000,
+  "warmup_calls": 400,
+  "calls_with_nominal_sleep_overlap": 0,
+  "timed_calls_with_nominal_sleep_overlap": 0,
+  "calls_near_power_event": 0,
+  "utc_unalignable_calls": 0,
+  "parsed_power_events": 92,
+  "malformed_event_lines": 0,
+  "power_events_within_envelope": [],
+  "last_preceding_event_if_sleep": null,
+  "sleep_intervals_overlapping_envelope": [],
+  "assertion_attempts": [
+    {
+      "path": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-power-inhibition.json",
+      "sha256": "6233bffc54ffb2d6a826f6a9141cb061a79f15529d6b163c2718bb9b5fee2fdd",
+      "record": {
+        "utc": "2026-10-14T01:08:38.210305+00:00",
+        "campaign": "attachment",
+        "command_prefix": [
+          "/usr/bin/caffeinate",
+          "-i"
+        ],
+        "message": "Failed to create PreventUserIdleSystemSleep assertion; subsequent AC-power -s probe also failed to create PreventSystemSleep assertion.",
+        "idle_sleep_prevention_verified": false,
+        "action": "Previous two idle assertions and immediate AC assertion failed; run directly, retain clocks and audit actual logged events.",
+        "probe": "validation/caffeinate-ac-probe.json"
+      },
+      "explicit_assertion_failure": true,
+      "record_claims_verified_prevention": false
+    }
+  ],
+  "power_control_limitation": "The archived caffeinate attempt explicitly failed to create PreventUserIdleSystemSleep. Do not describe this campaign as sleep-inhibited or sleep-controlled.",
+  "interpretation": "Timestamp correlations only. pmset event timestamps have one-second resolution; nearby-event columns allow a one-second boundary margin. Sleep-to-first-Wake/DarkWake intervals describe logged transitions, not measured CPU inactivity. Unclosed intervals may reflect missing log records; source timestamp reversals and native UTC reversals weaken alignment. Absence of events is not proof of no sleep or stable frequency, thermal state, contention or core placement. Overlaps do not attribute an entire solver duration to sleep.",
+  "rows_removed": 0,
+  "rows_adjusted": 0,
+  "input_sha256": {
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-timing.csv": "d49a4e61f0b76338220bfbc44f2fb78857461ec04c4256c86933412026c8da19",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-timing.json": "2a6908f7ff899d19a2a4af0e964f0382a0792fd7d79ee3dc7669e6dc6ea7b51f",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-power-audit/pmset.log": "179881ccc539cd66cff22b1a0ca556ecb4459d76d16abcd6577b567efb0ffc66",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-power-audit/pmset.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-power-inhibition.json": "6233bffc54ffb2d6a826f6a9141cb061a79f15529d6b163c2718bb9b5fee2fdd"
+  },
+  "script_sha256": "566530914ee74564c5d5ba640b700f5ecfccc5927ac5ed046cb6e3bbdbd225c5",
+  "output_sha256": {
+    "call_power_associations.csv": "8b5de12beb88244bbc772384d1bfd8a8bb1c910dcd59559d135200cd83d2e256",
+    "events.json": "813920cca055bffb3941ead0e2e598c3c92f699a4ab2574efd42083c363c5d2d",
+    "pmset.log": "179881ccc539cd66cff22b1a0ca556ecb4459d76d16abcd6577b567efb0ffc66",
+    "pmset.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

@@ -1,0 +1,21 @@
+Running five-algorithm MST search community_shuffled16_n1048576_d2_p0 graph_seed=5009 kkt_seed=149
+generation_seconds=0.119637 reference_certificate_seconds=0.748415
+reference_certificate_v1 {"case_id":"community_shuffled16_n1048576_d2_p0","graph_seed":5009,"kkt_seed":149,"n":1048576,"m":2097152,"input_fingerprint":3768109146837415500,"topology_fingerprint":8598069681351006984,"validation":"pass"}
+       13.96 real        13.86 user         0.09 sys
+           515391488  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               59162  page reclaims
+                   1  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   0  voluntary context switches
+                  17  involuntary context switches
+         67065852672  instructions retired
+         52382937168  cycles elapsed
+           423297768  peak memory footprint
