@@ -1,0 +1,226 @@
+[
+  {
+    "file": "community_distance16-view.json",
+    "sha256": "87d19850d9423002e47334edd38fa81f110197576189ba32bbf8a61af94c2bf9",
+    "result": {
+      "validation": "pass",
+      "schema": "attachment_view_v1",
+      "n": 1024,
+      "m": 2048,
+      "mst_edges": 1023,
+      "core_vertices": 64,
+      "core_edges": 1088,
+      "input_fingerprint": "3702432953081639164"
+    }
+  },
+  {
+    "file": "community_distance4-view.json",
+    "sha256": "d2368a14277730b9bd6906de367ec15b54a4039a9b90529e394b2ecd6353ea58",
+    "result": {
+      "validation": "pass",
+      "schema": "attachment_view_v1",
+      "n": 1024,
+      "m": 2048,
+      "mst_edges": 1023,
+      "core_vertices": 256,
+      "core_edges": 1280,
+      "input_fingerprint": "438823952182559815"
+    }
+  },
+  {
+    "file": "community_hierarchy16-view.json",
+    "sha256": "4fa700e22001cd15da3e8ae477aff27d957ea8c09f7647ae9cce36eacd970aa4",
+    "result": {
+      "validation": "pass",
+      "schema": "attachment_view_v1",
+      "n": 1024,
+      "m": 2048,
+      "mst_edges": 1023,
+      "core_vertices": 64,
+      "core_edges": 1088,
+      "input_fingerprint": "8272703976451818272"
+    }
+  },
+  {
+    "file": "community_hierarchy4-view.json",
+    "sha256": "3dd16274b8dc52d69cfc6cde8cbfa645f9cc667729a8edae0c67a62bfd769688",
+    "result": {
+      "validation": "pass",
+      "schema": "attachment_view_v1",
+      "n": 1024,
+      "m": 2048,
+      "mst_edges": 1023,
+      "core_vertices": 256,
+      "core_edges": 1280,
+      "input_fingerprint": "10725891878000054811"
+    }
+  },
+  {
+    "file": "community_random16-view.json",
+    "sha256": "e8781b8d879da6b6e46a9106193ebdf5ac677b9e3b42619a06aee0ea95020fb9",
+    "result": {
+      "validation": "pass",
+      "schema": "attachment_view_v1",
+      "n": 1024,
+      "m": 2048,
+      "mst_edges": 1023,
+      "core_vertices": 64,
+      "core_edges": 1088,
+      "input_fingerprint": "13747369485430187356"
+    }
+  },
+  {
+    "file": "community_random4-view.json",
+    "sha256": "32c988d543a1bb6c6e435a9177ce9fa7de5a482be3bce9594916547dc333e829",
+    "result": {
+      "validation": "pass",
+      "schema": "attachment_view_v1",
+      "n": 1024,
+      "m": 2048,
+      "mst_edges": 1023,
+      "core_vertices": 256,
+      "core_edges": 1280,
+      "input_fingerprint": "17419614060721768227"
+    }
+  },
+  {
+    "file": "community_shuffled16-view.json",
+    "sha256": "07678bc8747e1619ded458635f15fc8e5ee97bc9fbfb6d021ac37d8cb2208b4a",
+    "result": {
+      "validation": "pass",
+      "schema": "attachment_view_v1",
+      "n": 1024,
+      "m": 2048,
+      "mst_edges": 1023,
+      "core_vertices": 64,
+      "core_edges": 1088,
+      "input_fingerprint": "477471724042070580"
+    }
+  },
+  {
+    "file": "community_shuffled4-view.json",
+    "sha256": "91847de51c2da663e59316cc25857d42a195520d6aaa480a0f9c70eef9fc0b38",
+    "result": {
+      "validation": "pass",
+      "schema": "attachment_view_v1",
+      "n": 1024,
+      "m": 2048,
+      "mst_edges": 1023,
+      "core_vertices": 256,
+      "core_edges": 1280,
+      "input_fingerprint": "14243172832326214451"
+    }
+  },
+  {
+    "file": "leaf_distance16-view.json",
+    "sha256": "d56a59d09ba23496d39efd60fabba73178016a63f334a26fd1883fabbcaf9299",
+    "result": {
+      "validation": "pass",
+      "schema": "attachment_view_v1",
+      "n": 1024,
+      "m": 2048,
+      "mst_edges": 1023,
+      "core_vertices": 64,
+      "core_edges": 1088,
+      "input_fingerprint": "7413070003793425643"
+    }
+  },
+  {
+    "file": "leaf_distance4-view.json",
+    "sha256": "b5494c23d36b8d10da4ba45a02a01fa0470afe352594d0eec9102f0ba976de0c",
+    "result": {
+      "validation": "pass",
+      "schema": "attachment_view_v1",
+      "n": 1024,
+      "m": 2048,
+      "mst_edges": 1023,
+      "core_vertices": 256,
+      "core_edges": 1280,
+      "input_fingerprint": "2096667815617078544"
+    }
+  },
+  {
+    "file": "leaf_hierarchy16-view.json",
+    "sha256": "51243f813249fd8ae7dd34f11b4a63df5fc4455c04bd37c3b9c804b0c7731464",
+    "result": {
+      "validation": "pass",
+      "schema": "attachment_view_v1",
+      "n": 1024,
+      "m": 2048,
+      "mst_edges": 1023,
+      "core_vertices": 64,
+      "core_edges": 1088,
+      "input_fingerprint": "10015125976483142767"
+    }
+  },
+  {
+    "file": "leaf_hierarchy4-view.json",
+    "sha256": "079adcecfa63bcf77813e9dbe94aaafbb4645844da63e5ddd4695320127c7b86",
+    "result": {
+      "validation": "pass",
+      "schema": "attachment_view_v1",
+      "n": 1024,
+      "m": 2048,
+      "mst_edges": 1023,
+      "core_vertices": 256,
+      "core_edges": 1280,
+      "input_fingerprint": "36745519712658356"
+    }
+  },
+  {
+    "file": "leaf_random16-view.json",
+    "sha256": "fe3b0abc11f51d97df8a995ee6b865dabc1b9d3413a8dc7ad6a4446cad5fb0f4",
+    "result": {
+      "validation": "pass",
+      "schema": "attachment_view_v1",
+      "n": 1024,
+      "m": 2048,
+      "mst_edges": 1023,
+      "core_vertices": 64,
+      "core_edges": 1088,
+      "input_fingerprint": "12836289696768167695"
+    }
+  },
+  {
+    "file": "leaf_random4-view.json",
+    "sha256": "a239ddae2459c9780f40285b70e8f6cd95026e9d1ca68ecd8c5127c96d33ed26",
+    "result": {
+      "validation": "pass",
+      "schema": "attachment_view_v1",
+      "n": 1024,
+      "m": 2048,
+      "mst_edges": 1023,
+      "core_vertices": 256,
+      "core_edges": 1280,
+      "input_fingerprint": "1211039334428000180"
+    }
+  },
+  {
+    "file": "leaf_shuffled16-view.json",
+    "sha256": "3d4824a4d4b7c3b3e853f8e5037265e52057670b9086af7992cd69f7f84153c1",
+    "result": {
+      "validation": "pass",
+      "schema": "attachment_view_v1",
+      "n": 1024,
+      "m": 2048,
+      "mst_edges": 1023,
+      "core_vertices": 64,
+      "core_edges": 1088,
+      "input_fingerprint": "16514470717418151507"
+    }
+  },
+  {
+    "file": "leaf_shuffled4-view.json",
+    "sha256": "dea1e40023d300e379f40ab1cb55fc65788b1f48e214055b2e275571dd260e1f",
+    "result": {
+      "validation": "pass",
+      "schema": "attachment_view_v1",
+      "n": 1024,
+      "m": 2048,
+      "mst_edges": 1023,
+      "core_vertices": 256,
+      "core_edges": 1280,
+      "input_fingerprint": "6740351989926405488"
+    }
+  }
+]

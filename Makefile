@@ -107,15 +107,29 @@ $(BIN_DIR)/crossover_baselines: benchmark/crossover_baselines.cpp benchmark/cros
 	@mkdir -p $(BIN_DIR)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -I. $(filter %.cpp %.o,$^) $(LDFLAGS) -o $@
 
-MST_SEARCH_DEPS = benchmark/mst_search.cpp benchmark/search_fixtures.hpp benchmark/crossover_fixtures.hpp benchmark/continuation_fixtures.hpp benchmark/mst_certificate.hpp $(OBJS)
+MST_SEARCH_DEPS = benchmark/mst_search.cpp benchmark/core_attachment_fixtures.hpp benchmark/search_fixtures.hpp benchmark/crossover_fixtures.hpp benchmark/continuation_fixtures.hpp benchmark/mst_certificate.hpp $(OBJS)
 
 $(BIN_DIR)/search_fixtures_test: benchmark/search_fixtures_test.cpp benchmark/search_fixtures.hpp benchmark/continuation_fixtures.hpp benchmark/mst_certificate.hpp $(OBJS)
 	@mkdir -p $(dir $@)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -I. $(filter %.cpp %.o,$^) $(LDFLAGS) -o $@
 
-$(BIN_DIR)/search_work: benchmark/search_work.cpp benchmark/search_fixtures.hpp benchmark/continuation_fixtures.hpp benchmark/component_moments.hpp benchmark/work_metrics.hpp benchmark/mst_certificate.hpp $(WORK_OBJS)
+$(BIN_DIR)/search_work: benchmark/search_work.cpp benchmark/core_attachment_fixtures.hpp benchmark/search_fixtures.hpp benchmark/continuation_fixtures.hpp benchmark/component_moments.hpp benchmark/work_metrics.hpp benchmark/mst_certificate.hpp $(WORK_OBJS)
 	@mkdir -p $(dir $@)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -DKKT_ENABLE_WORK_STATS -I. $(filter %.cpp %.o,$^) $(LDFLAGS) -o $@
+
+ATTACHMENT_FIXTURE_DEPS = benchmark/core_attachment_fixtures.hpp benchmark/continuation_fixtures.hpp benchmark/graph_fixtures.hpp benchmark/mst_certificate.hpp
+
+$(BIN_DIR)/core_attachment_test: benchmark/core_attachment_test.cpp $(ATTACHMENT_FIXTURE_DEPS) $(OBJS)
+	@mkdir -p $(dir $@)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -I. $(filter %.cpp %.o,$^) $(LDFLAGS) -o $@
+
+$(BIN_DIR)/workstats/core_attachment_test: benchmark/core_attachment_test.cpp $(ATTACHMENT_FIXTURE_DEPS) benchmark/work_metrics.hpp $(WORK_OBJS)
+	@mkdir -p $(dir $@)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -DKKT_ENABLE_WORK_STATS -I. $(filter %.cpp %.o,$^) $(LDFLAGS) -o $@
+
+$(BIN_DIR)/export_attachment_view: benchmark/export_attachment_view.cpp $(ATTACHMENT_FIXTURE_DEPS) $(OBJS)
+	@mkdir -p $(dir $@)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -I. $(filter %.cpp %.o,$^) $(LDFLAGS) -o $@
 
 $(BIN_DIR)/mst_search: $(MST_SEARCH_DEPS)
 	@mkdir -p $(dir $@)

@@ -25,11 +25,13 @@ METRICS = {"wall": "elapsed_ns", "cpu": "process_cpu_elapsed_ns"}
 IDENTITY = ("case_id", "family", "n", "m", "density", "intrusion_per_mille")
 HELPER_NAMES = {"run_mst_search.py", "analyze_mst_search.py", "run_crossover.py",
                 "analyze_continuation.py", "crossover_clocks.py", "run_crossover_baselines.py"}
+ATTACHMENT_NATIVE_FILE = "benchmark/core_attachment_fixtures.hpp"
 NATIVE_FILES = {f"{name}/{name}.{suffix}" for name in ("kkt", "boruvka", "kruskal", "prim", "lca", "union_find", "graph_utils")
                 for suffix in ("cpp", "hpp")} | {"common/edge.hpp", "common/work_stats.hpp", "kkt/random_sampling.hpp",
                 "verifier/verifier_v2.cpp", "verifier/verifier_v2.hpp", "verifier/median_table.hpp",
                 "benchmark/mst_search.cpp", "benchmark/search_fixtures.hpp", "benchmark/crossover_fixtures.hpp",
-                "benchmark/continuation_fixtures.hpp", "benchmark/graph_fixtures.hpp", "benchmark/mst_certificate.hpp"}
+                "benchmark/continuation_fixtures.hpp", "benchmark/graph_fixtures.hpp", "benchmark/mst_certificate.hpp",
+                ATTACHMENT_NATIVE_FILE}
 
 
 def equal(record, field, expected, context):
@@ -146,7 +148,10 @@ def load(timing_path, manifest_path=None):
     inventory(info.get("python_source_sha256"), "Python source inventory")
     base.require({Path(p).name for p in info["python_source_sha256"]} == HELPER_NAMES
                  and len(info["python_source_sha256"]) == len(HELPER_NAMES), "incorrect Python helper inventory")
-    base.require(NATIVE_FILES <= set(info["source_sha256"]), "missing native search/production sources")
+    # Keep old frozen campaigns analyzable; they predate the attachment header.
+    # The extra fixture source is mandatory for every attachment campaign below.
+    base.require(NATIVE_FILES-{ATTACHMENT_NATIVE_FILE} <= set(info["source_sha256"]),
+                 "missing native search/production sources")
     inventory(info.get("build_recipe_sha256"), "build recipe")
     base.require(set(info["build_recipe_sha256"]) == {"Makefile"}, "incorrect build recipe inventory")
     profile = info.get("binary_profile")
@@ -163,6 +168,8 @@ def load(timing_path, manifest_path=None):
     base.require(str(manifest_path) == info["manifest"], "manifest path differs from capture")
     hash_check(manifest_path, info.get("manifest_sha256")); hash_check(timing_path, info.get("output_sha256"))
     cases = capture.load_manifest(manifest_path)
+    if any(spec["family"] in capture.ATTACHMENT_FAMILIES for spec in cases.values()):
+        base.require(ATTACHMENT_NATIVE_FILE in info["source_sha256"], "missing attachment fixture source")
     equal(info, "case_order", list(cases), "capture")
     equal(info, "algorithms", list(capture.ALGORITHMS), "capture")
     graph_seeds = bank(info.get("graph_seeds"), "graph seeds")
@@ -394,6 +401,43 @@ def self_test():
             manifest = folder/"manifest.csv"
             manifest.write_text("family,n,density,intrusion_per_mille\n"+f"{family},{n},{d},0\n")
             reject("manifest "+family, lambda: capture.load_manifest(manifest))
+        # Attachment-domain checks are independent of native helper metadata.
+        # At b=4,n=64,d=4, E=208 exceeds C(16,2)=120 and is NOT feasible;
+        # n=128,d=4 instead has E=416 <= C(32,2)=496. At b=16,n=64,d=1,
+        # E=4 <= C(4,2)=6, while n=32,d=1 has E=2 > C(2,2)=1.
+        for family in capture.ATTACHMENT_FAMILIES:
+            b = 16 if family.endswith("16") else 4
+            for n, d in (((32, 1), (64, 2), (128, 4)) if b == 4 else ((64, 1), (1024, 2), (2048, 4))):
+                manifest.write_text("family,n,density,intrusion_per_mille\n"+f"{family},{n},{d},0\n")
+                parsed_case = next(iter(capture.load_manifest(manifest).values()))
+                q = n//b; expected_external = n*d-n+q
+                base.require(parsed_case["m"] == n*d and expected_external == q*(b*(d-1)+1)
+                             and q >= 2*b*(d-1)+3, "attachment count identity failed")
+        results["positive_checks"].append("all sixteen attachment families and independent core count identity")
+        for family, n, d, p in (("leaf_hierarchy4", 32, 2, 0), ("community_distance4", 64, 4, 0),
+                ("leaf_random16", 32, 1, 0), ("community_hierarchy16", 512, 2, 0),
+                ("leaf_distance16", 256, 16, 0), ("community_random16", 2**22, 64, 0),
+                ("leaf_hierarchy4", 128, 4, 1), ("community_random8", 128, 4, 0)):
+            manifest.write_text("family,n,density,intrusion_per_mille\n"+f"{family},{n},{d},{p}\n")
+            reject(f"attachment domain {family}/{n}/{d}/{p}", lambda: capture.load_manifest(manifest))
+        # Accept the global edge budget exactly without allocating any graph.
+        for family in capture.ATTACHMENT_FAMILIES:
+            manifest.write_text("family,n,density,intrusion_per_mille\n"+f"{family},{2**22},32,0\n")
+            base.require(next(iter(capture.load_manifest(manifest).values()))["m"] == 2**27,
+                         "valid maximum attachment edge budget rejected")
+        results["positive_checks"].append("attachment maximum count boundary without graph allocation")
+        leaf = {**rows[0], "family": "leaf_hierarchy4", "case_id": "leaf_h"}
+        leaf_twin = {**rows[0], "family": "leaf_distance4", "case_id": "leaf_d", "input_fingerprint": 10}
+        leaf_shuffled = {**rows[0], "family": "leaf_shuffled4", "case_id": "leaf_s", "input_fingerprint": 11}
+        leaf_random = {**rows[0], "family": "leaf_random4", "case_id": "leaf_r", "input_fingerprint": 12}
+        community = {**rows[0], "family": "community_hierarchy4", "case_id": "community_h", "topology_fingerprint": 88}
+        bigger = {**rows[0], "family": "leaf_hierarchy16", "case_id": "leaf16", "topology_fingerprint": 188}
+        capture.check_fingerprints([leaf, leaf_twin, leaf_shuffled, leaf_random, community, bigger])
+        results["positive_checks"].append("attachment endpoint modes and block sizes are separate topology groups")
+        leaf_twin["topology_fingerprint"] = 89
+        reject("attachment paired topology", lambda: capture.check_fingerprints([leaf, leaf_twin]))
+        leaf_shuffled["topology_fingerprint"] = 90
+        reject("attachment shuffled-core paired topology", lambda: capture.check_fingerprints([leaf, leaf_shuffled]))
         # A complete synthetic evidence bundle exercises the provenance loader;
         # mutants below recompute hashes so rejection is semantic, not stale SHA.
         manifest.write_text("family,n,density,intrusion_per_mille\nhierarchical_path,32,4,0\n")
@@ -436,6 +480,10 @@ def self_test():
         sidecar = combined.with_suffix(".json")
         capture.write_json(sidecar, info); load(combined)
         results["positive_checks"].append("complete provenance, clocks, certificate and resource bundle")
+        old_inventory = copy.deepcopy(info)
+        old_inventory["source_sha256"].pop(ATTACHMENT_NATIVE_FILE)
+        capture.write_json(sidecar, old_inventory); load(combined)
+        results["positive_checks"].append("old non-attachment capture remains valid without new fixture header")
         reversed_utc = copy.deepcopy(info)
         reversed_utc["captures"][0]["finished_utc"] = "2026-10-12T23:59:59+00:00"
         reversed_utc["capture_clock_flags"] = capture.capture_clock_flags(reversed_utc)

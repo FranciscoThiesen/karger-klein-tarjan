@@ -1,0 +1,15 @@
+{
+  "command": [
+    "make",
+    "-j4",
+    "mst-search",
+    "mst-search-large-stack",
+    "bin/core_attachment_test",
+    "bin/workstats/core_attachment_test",
+    "bin/search_work",
+    "bin/export_attachment_view"
+  ],
+  "started_utc": "2026-10-14T01:03:01.557254+00:00",
+  "finished_utc": "2026-10-14T01:03:05.538308+00:00",
+  "exit_status": 0
+}

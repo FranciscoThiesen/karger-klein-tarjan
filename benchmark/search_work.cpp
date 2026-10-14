@@ -1,8 +1,9 @@
-// Untimed logical-work and contraction diagnostics for the six lifted models.
+// Untimed logical-work and contraction diagnostics for lifted/attachment models.
 // Counter scopes match continuation_search's public tuple-input boundary. All
 // certificates, result checks and component-ledger reconstruction are outside
 // those scopes; this executable intentionally contains no timers.
 #include "search_fixtures.hpp"
+#include "core_attachment_fixtures.hpp"
 #include "component_moments.hpp"
 #include "mst_certificate.hpp"
 #include "work_metrics.hpp"
@@ -32,6 +33,16 @@ using Ids = std::unordered_set<int>;
 
 void require(bool value, const std::string& message) {
     if (!value) throw std::runtime_error(message);
+}
+
+int fixture_edge_count(const Spec& spec) {
+    if (benchmark_attachments::known(spec.family)) return benchmark_attachments::edge_count(spec);
+    return benchmark_search::edge_count(spec);
+}
+
+Graph fixture(const Spec& spec, unsigned int seed) {
+    if (benchmark_attachments::known(spec.family)) return benchmark_attachments::make_fixture(spec, seed).graph;
+    return benchmark_search::make_fixture(spec, seed).graph;
 }
 
 unsigned int number(const std::string& value) {
@@ -70,7 +81,7 @@ Options options(int argc, char** argv) {
     require(seen.count("--family") && seen.count("--n") && seen.count("--density"),
             "--family, --n and --density are required");
     // Validate exact model, dimensions and all integer/edge limits before allocation.
-    (void)benchmark_search::edge_count(result.spec);
+    (void)fixture_edge_count(result.spec);
     return result;
 }
 
@@ -136,8 +147,8 @@ void run(const Options& config) {
     const auto& spec = config.spec;
     const auto case_id = benchmark_continuation::case_id(spec);
     require(kkt_work::active == nullptr, "unexpected active work collector at setup");
-    const Graph graph = benchmark_search::make_fixture(spec, config.graph_seed).graph;
-    require(graph.size() == static_cast<std::size_t>(benchmark_search::edge_count(spec)),
+    const Graph graph = fixture(spec, config.graph_seed);
+    require(graph.size() == static_cast<std::size_t>(fixture_edge_count(spec)),
             "fixture edge count differs from validated target");
     const auto reference = kruskal(graph, spec.n);
     benchmark_validation::certify_mst(graph, reference, spec.n);
@@ -209,9 +220,13 @@ void run(const Options& config) {
     else
         require(kkt_stats.root_after_two_vertices == 0 && kkt_stats.root_after_two_edges == 0,
                 "KKT recorded a nonexistent second contraction");
-    if (spec.family.find("lifted_random") != 0) {
-        const int b = spec.family.back() - '0';
-        const std::size_t core_edges = (graph.size() - static_cast<std::size_t>(spec.n / b) * (b - 1)) / (b * b);
+    // Hierarchy/distance and attachment core-only shuffled weights all keep
+    // local stars cheaper than external edges. Global-random weights do not.
+    if (spec.family.find("_random") == std::string::npos) {
+        const bool attachment = benchmark_attachments::known(spec.family);
+        const int b = attachment ? benchmark_attachments::block_size(spec.family) : spec.family.back() - '0';
+        const std::size_t local = static_cast<std::size_t>(spec.n / b) * (b - 1);
+        const std::size_t core_edges = attachment ? graph.size() - local : (graph.size() - local) / (b * b);
         require(trace.front().output_vertices == spec.n / b && trace.front().output_edges == core_edges,
                 "first structured contraction did not recover exact core dimensions");
     }
@@ -248,7 +263,7 @@ void run(const Options& config) {
 int main(int argc, char** argv) {
     if (argc == 2 && std::string(argv[1]) == "--help") {
         std::cout << "Usage: search_work --family NAME --n N --density D [--graph-seed SEED] [--kkt-seed SEED]\n"
-                     "Only the six lifted search families are supported; defaults are graph seed 17, KKT seed 0.\n"
+                     "Supports six lifted and sixteen attachment families; defaults are graph seed 17, KKT seed 0.\n"
                      "Outputs one certified search_work_v1 JSON with KKT/compactor work counters and a compactor trace.\n"
                      "Logical counters are not elapsed time, CPU instructions, allocated bytes or distinct root edges.\n";
         return 0;

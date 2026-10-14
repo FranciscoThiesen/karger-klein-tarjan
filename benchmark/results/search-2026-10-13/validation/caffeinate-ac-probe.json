@@ -1,0 +1,16 @@
+{
+  "utc": "2026-10-14T01:07:55.347416+00:00",
+  "command": [
+    "/usr/bin/caffeinate",
+    "-s",
+    "-t",
+    "10"
+  ],
+  "exit_status": 1,
+  "stdout": "",
+  "stderr": "Failed to create PreventSystemSleep assertion\n",
+  "assertions_exit_status": 0,
+  "assertions_stdout": "2026-10-13 18:07:55 -0700 \nNo assertions.\nKernel Assertions: 0x100=MAGICWAKE\n   id=591  level=255 0x100=MAGICWAKE creat=  mod= description=en0 owner=IOSkywalkNetworkBSDClient\n",
+  "assertions_stderr": "",
+  "scope": "AC-power sleep assertion probe after user reaffirmed authorization"
+}

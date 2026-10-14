@@ -1,0 +1,9 @@
+Usage: /Users/random_person/Desktop/karger-klein-tarjan/bin/large_stack/mst_search --family NAME --n N --density D [--graph-seed SEED] [--kkt-seed SEED]
+       [--repetitions N] [--warmups N]
+Defaults: graph seed 17, KKT seed 0, 5 repetitions, 1 checked warmup.
+Repetitions must be a multiple of five in [5,100]; warmups in [1,100].
+Supports six lifted, sixteen leaf/community attachment, crossover and continuation families.
+Attachment modes: hierarchy, distance, shuffled core, and global random; intrusion is fixed at zero.
+Limits: n <= 4194304 and m <= 134217728, plus each fixture domain.
+CSV retains both warmup and timed rows; UTC/CPU clocks are diagnostic envelopes.
+boruvka is the original public baseline, not compacting_boruvka.

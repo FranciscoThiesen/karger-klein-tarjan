@@ -1,0 +1,26 @@
+{
+  "validation": "pass",
+  "native_commands_executed": 0,
+  "script_sha256": "dbacfecd35f3994663fa780bc316305ecb82ec9b210a1cac8c434c1a12426f83",
+  "negative_cli_cases_per_binary": 43,
+  "positive_checks": [
+    "synthetic arm64 normal/large text bytes equal and stack fields distinct"
+  ],
+  "rejected_macho_mutations": [
+    "wrong_architecture",
+    "wrong_file_type",
+    "truncated_commands",
+    "bad_command_extent",
+    "bad_section_table",
+    "bad_section_offset",
+    "truncated_header"
+  ],
+  "attachment_python_positive_checks": 12,
+  "attachment_python_rejected_mutations": 39,
+  "source_sha256": {
+    "run_mst_search.py": "843d65154d232bc12a946ad7d8793ab26840f7785507286a6e4d8ed09dfcad80",
+    "analyze_mst_search.py": "91d3fcad871444e9325c1465782365b5c3ed08fb2344aeeb62fbfc18254f5ba6",
+    "validate_attachment_build.py": "dbacfecd35f3994663fa780bc316305ecb82ec9b210a1cac8c434c1a12426f83",
+    "attachment-smoke.csv": "24349f9e7d13778cb74cc9f4ede6a12224b56b470e54f209f3b27951dc21cbb1"
+  }
+}

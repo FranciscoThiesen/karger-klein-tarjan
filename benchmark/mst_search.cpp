@@ -5,6 +5,7 @@
 #include "crossover_fixtures.hpp"
 #include "continuation_fixtures.hpp"
 #include "search_fixtures.hpp"
+#include "core_attachment_fixtures.hpp"
 #include "mst_certificate.hpp"
 #include "../kkt/kkt.hpp"
 #include "../kruskal/kruskal.hpp"
@@ -108,6 +109,8 @@ bool crossover_family(const std::string& family) {
 
 // Validate the model-specific domain and exact target before any graph allocation.
 int fixture_edge_count(const Spec& spec) {
+    if (benchmark_attachments::known(spec.family))
+        return benchmark_attachments::edge_count(spec);
     if (benchmark_search::known(spec.family))
         return benchmark_search::edge_count(spec);
     if (crossover_family(spec.family))
@@ -116,6 +119,8 @@ int fixture_edge_count(const Spec& spec) {
 }
 
 Graph fixture(const Spec& spec, unsigned int seed) {
+    if (benchmark_attachments::known(spec.family))
+        return benchmark_attachments::make_fixture(spec, seed).graph;
     if (benchmark_search::known(spec.family))
         return benchmark_search::make_fixture(spec, seed).graph;
     if (crossover_family(spec.family)) {
@@ -308,7 +313,8 @@ int main(int argc, char** argv) {
                      "       [--repetitions N] [--warmups N]\n"
                      "Defaults: graph seed 17, KKT seed 0, 5 repetitions, 1 checked warmup.\n"
                      "Repetitions must be a multiple of five in [5,100]; warmups in [1,100].\n"
-                     "Supports lifted search, crossover and continuation families, with intrusion fixed at zero.\n"
+                     "Supports six lifted, sixteen leaf/community attachment, crossover and continuation families.\n"
+                     "Attachment modes: hierarchy, distance, shuffled core, and global random; intrusion is fixed at zero.\n"
                      "Limits: n <= 4194304 and m <= 134217728, plus each fixture domain.\n"
                      "CSV retains both warmup and timed rows; UTC/CPU clocks are diagnostic envelopes.\n"
                      "boruvka is the original public baseline, not compacting_boruvka.\n";

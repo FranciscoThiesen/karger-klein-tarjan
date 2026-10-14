@@ -1,0 +1,20 @@
+[
+  {
+    "label": "normal",
+    "command": [
+      "bin/core_attachment_test"
+    ],
+    "started_utc": "2026-10-14T01:03:17.799641+00:00",
+    "finished_utc": "2026-10-14T01:03:23.267977+00:00",
+    "exit_status": 0
+  },
+  {
+    "label": "workstats",
+    "command": [
+      "bin/workstats/core_attachment_test"
+    ],
+    "started_utc": "2026-10-14T01:03:23.267997+00:00",
+    "finished_utc": "2026-10-14T01:03:28.757665+00:00",
+    "exit_status": 0
+  }
+]

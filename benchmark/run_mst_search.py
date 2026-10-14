@@ -28,7 +28,9 @@ ALGORITHMS = ("kkt", "compacting_boruvka", "kruskal", "prim", "boruvka")
 CERTIFICATE_PREFIX = "reference_certificate_v1 "
 CERTIFICATE_FIELDS = {"case_id", "graph_seed", "kkt_seed", "n", "m", "input_fingerprint", "topology_fingerprint", "validation"}
 LIFTED_FAMILIES = tuple(f"lifted_{mode}{factor}" for mode in ("hierarchy", "distance", "random") for factor in (2, 4))
-FAMILIES = (*(family for family in base.FAMILIES if family != "legacy_random"), *LIFTED_FAMILIES)
+ATTACHMENT_FAMILIES = tuple(f"{endpoint}_{mode}{factor}" for endpoint in ("leaf", "community")
+                            for mode in ("hierarchy", "distance", "shuffled", "random") for factor in (4, 16))
+FAMILIES = (*(family for family in base.FAMILIES if family != "legacy_random"), *LIFTED_FAMILIES, *ATTACHMENT_FAMILIES)
 
 
 def sha(path):
@@ -77,6 +79,14 @@ def load_manifest(path):
             base.require(q >= b*b and numerator >= 0 and numerator % (b*b) == 0 and
                          q-1 <= numerator//(b*b) <= q*(q-1)//2,
                          context + ": invalid lifted core size, integrality or simple-graph capacity")
+        if family in ATTACHMENT_FAMILIES:
+            b = 16 if family.endswith("16") else 4
+            q = n//b
+            # Each of q stars contributes b-1 edges; every external core pair
+            # contributes ONE edge. There is no b-squared bundle division.
+            external_edges = m-n+q
+            base.require(n % b == 0 and q-1 <= external_edges <= q*(q-1)//2,
+                         context + ": attachment core cannot be a connected simple graph")
         if family == "legacy_random":
             base.require(d in (4, 32, 128), context + ": invalid legacy density")
         if family in ("grid2d_metric", "grid2d_random"):
@@ -100,6 +110,10 @@ def check_fingerprints(rows):
         weighted[key] = value
         family = row["family"]
         if family in LIFTED_FAMILIES: group = "lift"+family[-1]
+        elif family in ATTACHMENT_FAMILIES:
+            endpoint = family.split("_", 1)[0]
+            b = 16 if family.endswith("16") else 4
+            group = f"attachment_{endpoint}{b}"
         elif family in ("line_metric", "line_random", "line_wide_metric"): group = "line"
         elif family in ("grid2d_metric", "grid2d_random"): group = "grid"
         elif family in ("hierarchical_tree", "random_tree", "distance_tree"): group = "tree"
