@@ -1,7 +1,7 @@
 {
   "schema": "attachment_graph_atlas_v1",
   "validation": "pass",
-  "visual_qa": "pending",
+  "visual_qa": "PNG inspected by two reviewers; see QA.md. SVG/PDF not separately rendered.",
   "input_sha256": {
     "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/render_attachment_atlas.py": "729417091e07afb38090eca54c61886b1f74b347c2b37e78aee87193ed0a1648",
     "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/render_attachment_view.py": "24d49e111e876764e60ae5b44be36b235478fdbc9e84662d1e61c83634173a32",
@@ -326,7 +326,7 @@
   "no_native_solver_execution": true,
   "performance_evidence": false,
   "artifact_sha256": {
-    "README.md": "890bfa6d8d9f915bbb22987df72f97f75f88a837e2fe8a4c54921680c8764f79",
+    "README.md": "5f5028d6deb9898e5637ee03ea34fe87d8fb4ed39186bc27871847f08ec4ae30",
     "actual_graph_atlas.pdf": "32a09d463332e2c7fee8e24e847a9c5a668f220f56b2b0b257062ba2a37f9271",
     "actual_graph_atlas.png": "4406f744a6cc6a45d1d243ba37bca6804fe997d02252350f7e2adfbe329d9cfe",
     "actual_graph_atlas.svg": "2934761cbebccbc3f11dd8ac0f660639cca24295baaad7bde3161e52ae52a44b",
@@ -338,6 +338,17 @@
     "inputs/leaf_shuffled4.json": "6466716168c165287dd6d261139b598542cb277bf11fee44cce81f3b97b571e6",
     "inputs/render_validation.json": "25f7aacc88f91fd0b82242c6b3701e695ee82226d707a2cc04b4e5e11f291d19",
     "panel_counts.csv": "3338a3159221a13d698e87e87e55b71d00653cd0a4161b10ff0bfa016a28cf6d",
-    "visible_edges.csv": "7efaa186704e48874de25c135947ac28901dbdf5dc40791d60fbb3ac48253504"
+    "visible_edges.csv": "7efaa186704e48874de25c135947ac28901dbdf5dc40791d60fbb3ac48253504",
+    "QA.md": "6fb8e8de12559c1faad05861b26938fe4b682f989d88c11f9439d7c80ae37582",
+    "generation-provenance.json": "10d9fbef0dee27f2b4c898c98a8e2fde245ac6f1bfff337d9d3b24dca60aa377",
+    "generation-README.md": "890bfa6d8d9f915bbb22987df72f97f75f88a837e2fe8a4c54921680c8764f79"
+  },
+  "post_generation_metadata_amendment": {
+    "reason": "Replace stale pending status with completed PNG inspection; no image, graph or timing changes",
+    "previous_provenance_sha256": "10d9fbef0dee27f2b4c898c98a8e2fde245ac6f1bfff337d9d3b24dca60aa377",
+    "previous_readme_sha256": "890bfa6d8d9f915bbb22987df72f97f75f88a837e2fe8a4c54921680c8764f79",
+    "generation_provenance_copy": "generation-provenance.json",
+    "generation_readme_copy": "generation-README.md",
+    "qa_note": "QA.md"
   }
 }

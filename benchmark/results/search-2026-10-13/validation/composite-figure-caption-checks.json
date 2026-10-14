@@ -1,0 +1,31 @@
+{
+  "schema": "attachment_plot_atlas_checks_v1",
+  "validation": "pass",
+  "checks": [
+    "actual composite/assessment source bindings and all 72 children; generic loader rejects composite",
+    "seven synthetic composite status/provenance/comparator/child-ledger rejection gates",
+    "selected/control coverage and real/extreme graph-range containment",
+    "full appendix real/extreme individual-trial ranges for all competitors and clocks",
+    "five compact-figure protocol rejection gates"
+  ],
+  "source_sha256": {
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/validate_plot_atlas.py": "ea97961fef8ab6863be6366ce9a19d2ab8e1966d08f23469bf770b69a9e11443",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/plot_confirmation_summary.py": "0e30e7029ed1936342f8b1410fc7ea35ef111e34cf9950c91dd5a4f639290301",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/render_attachment_atlas.py": "729417091e07afb38090eca54c61886b1f74b347c2b37e78aee87193ed0a1648",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/plot_mst_search.py": "e71cfc3468b34bd89f3e6e5a1007302694730c6b3143d76616a2543dc73ce2eb",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/render_attachment_view.py": "24d49e111e876764e60ae5b44be36b235478fdbc9e84662d1e61c83634173a32"
+  },
+  "phase": "composite",
+  "synthetic_B_for_figure_logic": false,
+  "campaign_analysis_provenance_sha256": {
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-analysis/provenance.json": "994a6856ed316bec6fbb80ab57b6757ad4b17c27de5463fe9273dc245e98845b",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-large-analysis/provenance.json": "abb8b30c7edaa8e20a64052c8611c87f49576da0084fdba27024f6b5e22fe4e8",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-confirmation-a-analysis/provenance.json": "969357d874f48490b206c7f89a1ec071f1bed1c5f2e59722493b5c056ed0f363",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-confirmation-b-composite-analysis/provenance.json": "8febaa328e8df83d97b62b380c0eb8966aaaebaa32529c01dd883703e8ec69cc"
+  },
+  "native_execution": false,
+  "matplotlib_imported": false,
+  "figures_rendered": false,
+  "visual_qa": "not performed by this script",
+  "synthetic_mutations": "temporary negative tests only; not measurement observations"
+}

@@ -37,13 +37,14 @@ artifact hash. No existing export, timing CSV or SVG was modified. Original
 native source/binary hashes are retained from the native export archive, not
 reverified against a current executable by the Python renderer.
 
-The generated README/provenance retain their generation-time `visual_qa:
-pending` status. This separate note records the subsequently completed PNG
-inspection. SVG and PDF were generated but have not been separately rendered
+The current README/provenance now record this completed PNG inspection. Their
+original generation-time versions are retained as generation-README.md and
+generation-provenance.json. The output-ledger check above binds that generation
+state; this documented metadata amendment changes no graph, image or timing data. SVG and PDF were generated but have not been separately rendered
 for format-specific QA. Use the inspected PNG in the report; inspect exported
 vector formats separately before distributing them as final layout artifacts.
 
-The confirmation figure has not been rendered. Its independent
+At the initial atlas inspection, the confirmation figure had not yet been rendered. Its independent
 [figure-logic checks](../validation/confirmation-figure-logic-checks.json)
 passed selected/control coverage, real and synthetic extreme range inclusion,
 full individual-trial appendix bounds, and five protocol negatives. Because

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""SOURCE-ONLY DRAFT: bounded post-release checks, without Matplotlib rendering.
+"""Bounded post-capture checks, without Matplotlib rendering.
 
 Requires both completed, strictly analyzed confirmations and explicit timing
 release. Does not execute native binaries, generate fixtures, or edit inputs.
@@ -209,12 +209,74 @@ def check_atlas(atlas, repo, folder):
             "five synthetic provenance/certificate/paired-topology rejection gates"]
 
 
+def check_composite(plot, helper, study, campaign):
+    folder = campaign["directory"]
+    assessment = study/"attachment-confirmation-recovery-assessment"
+    require(campaign["display_label"] == "B interrupted + recovery"
+            and len(campaign["source_children"]) == 72, "composite status/child coverage differs")
+    # The unchanged generic loader must continue to reject this new evidence
+    # type, and the failed original B must never become a successful capture.
+    rejected(lambda:helper.load_campaign(folder), "expected complete validated")
+    with tempfile.TemporaryDirectory(prefix="composite-plot-checks-") as temporary:
+        target = Path(temporary).resolve()/"composite"; target.mkdir()
+        audit = Path(temporary).resolve()/"assessment"; audit.mkdir()
+        for source in folder.iterdir():
+            if source.is_file(): shutil.copyfile(source,target/source.name)
+        for source in assessment.iterdir():
+            if source.is_file(): shutil.copyfile(source,audit/source.name)
+        original = helper.read_json(target/"provenance.json")
+        audit_original = helper.read_json(audit/"provenance.json")
+        def save(path,data): path.write_text(json.dumps(data,indent=2)+"\n")
+        def bind(provenance):
+            save(target/"provenance.json",provenance)
+            record = copy.deepcopy(audit_original)
+            record["input_sha256"].pop(str(folder/"provenance.json"),None)
+            record["input_sha256"][str(target/"provenance.json")] = sha(target/"provenance.json")
+            save(audit/"provenance.json",record)
+        bind(original)
+        loaded = plot.load_composite(helper,target,audit)
+        require(loaded["comparisons"] == campaign["comparisons"]
+                and loaded["summaries"] == campaign["summaries"], "bounded copy changed actual derived values")
+        negatives = [
+            (lambda p:p.update(schema="mst_search_analysis_v1"), "expected validated interrupted-B composite"),
+            (lambda p:p["composite_metadata"].update(frozen_execution_completed=True), "retain failed original B"),
+            (lambda p:p["source_capture_metadata"]["interrupted_prefix"].update(validation="pass"), "original/tail status"),
+            (lambda p:p.update(native_children_rerun=1), "reran observations"),
+            (lambda p:p["source_parts"]["interrupted_prefix"].update(native_calls=1770), "source split differs"),
+        ]
+        for mutate,fragment in negatives:
+            changed = copy.deepcopy(original); mutate(changed); bind(changed)
+            rejected(lambda:plot.load_composite(helper,target,audit),fragment)
+        # Refresh all synthetic hashes, so this reaches semantic row coverage
+        # instead of merely detecting changed bytes.
+        import csv
+        path = target/"comparisons.csv"
+        with path.open(newline="") as stream:
+            reader=csv.DictReader(stream); fields=reader.fieldnames; rows=list(reader)
+        with path.open("w",newline="") as stream:
+            writer=csv.DictWriter(stream,fieldnames=fields);writer.writeheader()
+            writer.writerows([r for r in rows if r["competitor"] != "prim"])
+        changed=copy.deepcopy(original); changed["derived_sha256"][path.name]=sha(path); bind(changed)
+        rejected(lambda:plot.load_composite(helper,target,audit), "omits a case/clock/comparator")
+        shutil.copyfile(folder/path.name,path)
+        path=target/"source_parts.csv"
+        with path.open(newline="") as stream:
+            reader=csv.DictReader(stream);fields=reader.fieldnames;rows=list(reader)
+        rows[0]["source_part"]="recovery_tail"
+        with path.open("w",newline="") as stream:
+            writer=csv.DictWriter(stream,fieldnames=fields);writer.writeheader();writer.writerows(rows)
+        changed=copy.deepcopy(original);changed["derived_sha256"][path.name]=sha(path);bind(changed)
+        rejected(lambda:plot.load_composite(helper,target,audit), "invalid part")
+    return ["actual composite/assessment source bindings and all 72 children; generic loader rejects composite",
+            "seven synthetic composite status/provenance/comparator/child-ledger rejection gates"]
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--repo-root",type=Path,required=True)
     parser.add_argument("--draft-dir",type=Path,default=Path(__file__).resolve().parent)
     parser.add_argument("--output",type=Path,required=True)
-    parser.add_argument("--phase",choices=("all","atlas","plot-logic"),default="all",
+    parser.add_argument("--phase",choices=("all","atlas","plot-logic","composite"),default="all",
                         help="plot-logic uses an explicitly synthetic A-copy only to test code; never renders or reports B outcomes")
     args = parser.parse_args()
     try:
@@ -230,7 +292,12 @@ def main():
                        ("confirmation_b",study/"attachment-confirmation-b-analysis")]
         checks, provenance_directories = [], []
         if args.phase != "atlas":
-            if args.phase == "plot-logic":
+            if args.phase == "composite":
+                directories[-1] = ("confirmation_b",study/"attachment-confirmation-b-composite-analysis")
+                campaigns = plot.load_all(helper,directories,True,study/"attachment-confirmation-recovery-assessment")
+                checks += check_composite(plot,helper,study,campaigns[-1])
+                provenance_directories = directories
+            elif args.phase == "plot-logic":
                 # The interrupted original B remains failed. This synthetic
                 # in-memory B is test scaffolding, never a successful capture.
                 real = [helper.load_campaign(folder) for _,folder in directories[:3]]
@@ -242,7 +309,7 @@ def main():
                 campaigns = plot.load_all(helper,directories)
                 provenance_directories = directories
             checks += check_plots(plot,helper,campaigns,directories)
-        if args.phase != "plot-logic":
+        if args.phase not in ("plot-logic","composite"):
             checks += check_atlas(atlas,repo,study/"attachment-views-d16")
         source_paths = (Path(__file__),plot_path,atlas_path,Path(helper.__file__),repo/"benchmark/render_attachment_view.py")
         result = {"schema":"attachment_plot_atlas_checks_v1","validation":"pass","checks":checks,

@@ -1,0 +1,91 @@
+{
+  "schema": "mst_search_power_audit_v1",
+  "validation": "pass",
+  "query": {
+    "command": [
+      "/usr/bin/pmset",
+      "-g",
+      "log"
+    ],
+    "started_utc": "2026-10-14T16:33:05.189444+00:00",
+    "exit_status": 0,
+    "finished_utc": "2026-10-14T16:33:06.594934+00:00"
+  },
+  "raw_capture_validation": "pass",
+  "raw_protocol_recertified_by_this_helper": false,
+  "started_utc": "2026-10-14T16:19:04.732867+00:00",
+  "finished_utc": "2026-10-14T16:32:34.082970+00:00",
+  "utc_elapsed_seconds": 809.350103,
+  "monotonic_elapsed_seconds": 809.642784916,
+  "utc_minus_monotonic_seconds": -0.29268191599999227,
+  "utc_correlation_envelope_ns": [
+    1791994744732867000,
+    1791995554082970000
+  ],
+  "capture_clock_flags": [],
+  "recorded_clock_flagged_calls": 0,
+  "checked_calls": 360,
+  "timed_calls": 300,
+  "warmup_calls": 60,
+  "calls_with_nominal_sleep_overlap": 0,
+  "timed_calls_with_nominal_sleep_overlap": 0,
+  "calls_near_power_event": 0,
+  "utc_unalignable_calls": 0,
+  "parsed_power_events": 70,
+  "malformed_event_lines": 0,
+  "power_events_within_envelope": [],
+  "last_preceding_event_if_sleep": null,
+  "sleep_intervals_overlapping_envelope": [],
+  "assertion_attempts": [
+    {
+      "path": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-confirmation-b-power-inhibition.json",
+      "sha256": "7de5bd0b9d19aeb5f0277a3572a7683f111177eccb235dd5267e7827349c035e",
+      "record": {
+        "utc": "2026-10-14T04:52:25.816582+00:00",
+        "campaign": "attachment-confirmation-b",
+        "idle_sleep_prevention_verified": false,
+        "message": "Failed to create PreventUserIdleSystemSleep assertion; subsequent AC-power -s probe also failed to create PreventSystemSleep assertion.",
+        "action": "Earlier idle and AC assertions failed. No fresh successful assertion is claimed; execute directly and audit logged events.",
+        "inherited_from": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-large-power-inhibition.json",
+        "inherited_sha256": "5a0a75c6e146208db9ecc2cbd1a13513864f02cd6666afe555969c487963e7c6",
+        "inherited_record": {
+          "utc": "2026-10-14T01:56:32.637534+00:00",
+          "campaign": "attachment-large",
+          "command_prefix": [
+            "/usr/bin/caffeinate",
+            "-i"
+          ],
+          "message": "Failed to create PreventUserIdleSystemSleep assertion; subsequent AC-power -s probe also failed to create PreventSystemSleep assertion.",
+          "idle_sleep_prevention_verified": false,
+          "action": "Previous idle and AC assertions failed; run directly with retained clocks and audit logged events.",
+          "probe": "validation/caffeinate-ac-probe.json"
+        }
+      },
+      "explicit_assertion_failure": true,
+      "record_claims_verified_prevention": false
+    }
+  ],
+  "power_control_limitation": "The archived caffeinate attempt explicitly failed to create PreventUserIdleSystemSleep. Do not describe this campaign as sleep-inhibited or sleep-controlled.",
+  "interpretation": "Timestamp correlations only. pmset event timestamps have one-second resolution; nearby-event columns allow a one-second boundary margin. Sleep-to-first-Wake/DarkWake intervals describe logged transitions, not measured CPU inactivity. Unclosed intervals may reflect missing log records; source timestamp reversals and native UTC reversals weaken alignment. Absence of events is not proof of no sleep or stable frequency, thermal state, contention or core placement. Overlaps do not attribute an entire solver duration to sleep.",
+  "rows_removed": 0,
+  "rows_adjusted": 0,
+  "input_sha256": {
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-confirmation-b-recovery-timing.csv": "a3bab5b36021f76e4764d540b7f160a85f05530c232396c2c257515984c04dcc",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-confirmation-b-recovery-timing.json": "0811eb84d37aade9b76e12feb6d53be45f544898583d4e4cf431e612f975761a",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-confirmation-b-recovery-power-audit/pmset.log": "83379ea14e6eb5d025cebad6235330eface552b1ae4e94e778791c4d797038b9",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-confirmation-b-recovery-power-audit/pmset.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-confirmation-b-power-inhibition.json": "7de5bd0b9d19aeb5f0277a3572a7683f111177eccb235dd5267e7827349c035e",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/audit_attachment_recovery_power.py": "e7a72cc054c6cfbcb1c6d5c6686e2332864632a12e10b60a9d3f16b6a5ca0c61",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/audit_mst_search_power.py": "566530914ee74564c5d5ba640b700f5ecfccc5927ac5ed046cb6e3bbdbd225c5"
+  },
+  "script_sha256": "e7a72cc054c6cfbcb1c6d5c6686e2332864632a12e10b60a9d3f16b6a5ca0c61",
+  "output_sha256": {
+    "call_power_associations.csv": "656ac46072bd73635c671c82d6b12beb028b65a19eca0a6a44d0110215344a1f",
+    "events.json": "ebc0a8ef76cc321783e23a002e5ff00ed34b37e5093af9f30cae37e72014b008",
+    "pmset.log": "83379ea14e6eb5d025cebad6235330eface552b1ae4e94e778791c4d797038b9",
+    "pmset.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "power_event_parser": "wake_requests_excluded_v1",
+  "parser_difference": "Wake Requests are scheduling records, not wake transitions; retained in the complete raw log, excluded only from event-state construction. No native observation is excluded or corrected.",
+  "underlying_auditor_sha256": "566530914ee74564c5d5ba640b700f5ecfccc5927ac5ed046cb6e3bbdbd225c5"
+}

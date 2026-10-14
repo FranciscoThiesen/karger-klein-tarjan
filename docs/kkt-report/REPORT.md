@@ -11,6 +11,14 @@ and retains the classical-baseline losses. The measurements and conclusions
 below describe the earlier experiment; its HTML/PDF companions remain that
 historical edition.
 
+**Follow-up, 14 October:** the [attachment-family crossover study](../../benchmark/results/search-2026-10-13/README.md)
+finds two ordered families with 14–19% lower paired median time than compacting
+Borůvka at one to two million vertices, while retaining their losses against
+Kruskal, Prim and original Borůvka. It includes actual graph views, work-count
+explanations and a separately labeled recovery of interrupted campaign B;
+the original B execution remains failed. The newer evidence does not change
+the historical measurements below.
+
 This report asks three distinct questions: whether the original implementation faithfully realized KKT's local complexity bounds; whether the current implementation *measures* like linear time; and which graph structures make it competitive in practice. The answers come from source inspection, certified benchmark outputs, separate work counters, two complete new timing campaigns, and a controlled comparison with repeated compacting Borůvka steps.
 
 The main document is this Markdown file. The [HTML edition](report.html) adds a fully offline, interactive 3D graph explorer. The [standalone explorer](graph-explorer.html) exposes actual contraction and filtering results for seven complete small graphs. A paginated companion checks the requested 40-page limit.

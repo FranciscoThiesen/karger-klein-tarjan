@@ -1,0 +1,1 @@
+Initial compact figures passed visual inspection. Appendix data and ranges were correct, but lower x labels sat too close to the legend. All first-render image bytes are retained here; use the revised canonical attachment-confirmation-summary-figures instead. No timing observations changed.

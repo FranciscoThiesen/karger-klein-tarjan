@@ -1,26 +1,34 @@
 <!-- Focused follow-up: link complete figure appendices rather than embedding
      every panel. Printed pagination has not yet been checked. -->
 
-# Searching for a KKT crossover against five MST solvers
+# Searching for a KKT crossover
 
-The completed discovery screens find a size-dependent KKT lead over compacting
-Borůvka, but **none of their 143 cases has KKT ahead of all four competitors**.
-The attachment families cross from a loss at 65,536 vertices to a lead at
-262,144, then save about 17–19% at 2,097,152–4,194,304. The strongest paired
-ratio is **0.8082**, at 2,097,152 vertices and 33,554,432 edges. On that input
-KKT takes about **4.32 times Kruskal's time**. These are discovery observations
-from one graph seed, with captures kept separate. Fresh-seed campaign A is
-complete: its upper selected cases save 16–19% against the compactor.
-Campaign B was interrupted by a stalled resource monitor after 60 native
-children. Its failed capture is retained, and a separately declared
-[recovery](ATTACHMENT_RECOVERY.md) will finish only the remaining cases.
-Full two-campaign confirmation is not claimed.
+**Two ordered attachment families show a measured crossover against compacting
+Borůvka.** They lose at 65,536 vertices, cross parity by 262,144, and save about
+14–19% at the two upper selected sizes, 1,048,576 and 2,097,152 vertices.
+Both pass the declared numerical advantage rule on complete campaign A and
+interrupted B plus its separately declared recovery, on both wall and CPU
+clocks and with every upper-size graph median favoring KKT.
+
+**Kruskal, Prim and original Borůvka remain faster on these families.** None
+of the 143 discovery cases wins all four comparisons, and neither selected
+family does so in the fresh-seed assessment. The larger, discovery-only
+4,194,304-vertex points retain a 17–17.5% compactor lead; the margin does not
+increase monotonically. This is a bounded compactor-specific crossover.
+
+The execution qualification matters. Original campaign B failed after a
+resource sampler stalled. All 60 completed native children are retained;
+the [declared recovery](ATTACHMENT_RECOVERY.md) ran only its remaining 12.
+The [numerical assessment](attachment-confirmation-recovery-assessment/README.md)
+passes the threshold, while **frozen campaign B did not complete as declared**.
+Its 149 clock-flagged calls and one logged sleep overlap remain in every
+analysis. A and the recovery tail have no call flags or logged sleep overlaps.
 
 This is a focused follow-up to the [implementation and complexity report](../../../docs/kkt-report/REPORT.md)
 and the [previous large-instance study](../crossover-2026-10-13/README.md).
 Those reports contain the repairs, Google Benchmark results, earlier graph
 families and detailed work diagnostics. Here the question is narrower: can a
-graph family make KKT competitive with **all five implementations measured in
+graph family make KKT competitive with **all four comparators measured in
 the same campaign**, while also exhibiting a clear size-dependent advantage?
 Production solvers are unchanged. The full [protocol](PROTOCOL.md) was frozen
 before timing.
@@ -33,9 +41,33 @@ before timing.
 | Larger attachment discovery sizes | Complete: ten cases, 250 timed calls, 50 checked warmups |
 | Attachment work counters and contraction traces | Complete: 16 discovery inputs, 254 compactor rounds, separate instrumented binary |
 | Fresh-seed campaign A | Complete: 1,800 timed calls and 360 checked warmups |
-| Fresh-seed campaign B | **INTERRUPTED**; all 60 completed native children validated (1,500 timed calls, 300 warmups); separately declared 12-child recovery pending |
+| Fresh-seed campaign B prefix | **INTERRUPTED**; all 60 completed native children validated (1,500 timed calls, 300 warmups) |
+| Declared recovery tail | Complete: exactly 12 previously unstarted children, 300 timed calls and 60 warmups; original B remains failed |
+| Separate numerical assessment | Both selected families pass the compactor rule; neither passes against the three classical solvers |
 
 ## Measurement rules and the original two pilots
+
+The earlier [implementation audit](../../../docs/kkt-report/REPORT.md#2-the-old-implementation-broke-local-accounting)
+documented two substantive complexity defects: recursive bookkeeping scanned
+arrays sized by original edge IDs instead of the current subproblem, and a
+verifier lookup table repeatedly enumerated subsets instead of constructing
+each mask entry in constant word operations. A third repair replaced recursive
+RNG reseeding with a private continuing stream. Subsequent storage and lookup
+changes reduced allocation, hashing and traversal costs. Thus the original
+slow behavior was partly an implementation problem, rather than a measured
+constant of the abstract KKT algorithm.
+
+The [Google Benchmark analysis](../../../docs/kkt-report/REPORT.md#9-googletest-is-not-a-complexity-estimator)
+remains distinct from this search. GoogleTest checks correctness; Google
+Benchmark fits candidate curves. Those earlier fits were approximately linear
+for stars but not uniformly linear across families. They used N=n+m, not
+vertices alone; fixed-density families have m=Θ(n), whereas complete graphs
+do not. The pinned Benchmark 1.5.2 also selects its automatic model using CPU
+time even when manual times are supplied. This extension adds paired wall/CPU
+measurements and separate work counts, not another `Complexity()` sweep or a
+timing-based proof of O(n). The source audit supports the intended expected
+O(m+n) design under its stated assumptions; it is not a formal equivalence
+proof of every implementation detail.
 
 The [28-case manifest](lifted-pilot.csv) contains four ordered families at
 65,536, 262,144 and 1,048,576 vertices with `d=m/n` equal to 16 or 64, plus four
@@ -472,6 +504,9 @@ forest, the expected number of remaining F-light edges is at most
 2(n'-1)<n/4, less than 1/64 of the original m=16n edges. This excludes safe
 edges already selected by the contractions. It is a theoretical residual
 bound, distinct from the measured statistic over recursive verifier incidences.
+For unique weights, an edge is F-light exactly when its endpoints lack a
+sampled path of lighter edges; that event is independent of the edge's own
+sampling coin. Thus p·E[number of F-light edges]=E[forest edges]≤n'-1.
 
 The [ideal uniform-shortcut model and proof](ATTACHMENT_BOUND.md) explicitly
 count occupied quotient pairs. It predicts **6.9862m** compactor input volume
@@ -531,6 +566,9 @@ with illustrative coordinates, not downsampled timing inputs. Native and
 Python certificate/round checks passed. Browser rendering and interaction
 QA remains incomplete because both isolated browsers aborted at startup;
 the [failure evidence](attachment-round-views/QA.md) is retained.
+A later [computer-use availability check](validation/browser-availability-followup.json)
+found no available controlled browser. The static atlas was rendered and
+visually inspected separately; interactive rendering is not claimed verified.
 
 The construction has plausible ingredients, but their exact conjunction is
 engineered. Published [weighted community models](https://arxiv.org/abs/0904.3940)
@@ -543,70 +581,144 @@ degree but asymptotically sparse. No real-network timing claim is made here.
 
 ## Fresh-seed confirmation and interrupted recovery
 
-The [selection and confirmation declaration](ATTACHMENT_CONFIRMATION.md)
-selects **leaf_hierarchy4 and leaf_distance4, both d=16**, whose largest
-cases have the two lowest compactor wall ratios among the 133 completed
-pilot cases. Because no case wins all four comparisons, selection uses the
-protocol's compactor-specific fallback. The selected cases lose to all
-three classical solvers. This is explicitly selection on discovery data.
+The [selection declaration](ATTACHMENT_CONFIRMATION.md) chose
+**leaf_hierarchy4 and leaf_distance4, both d=16**, because their largest
+pilot cases had the two lowest compactor wall ratios among 133 discovery
+cases. No case won all four comparisons, so selection used the declared
+compactor-specific fallback. The ten additional large discovery cases were
+separate; their 4,194,304-vertex points were excluded from confirmation before
+their outcomes were known.
 
-The ten completed additional discovery cases add 524,288, 2,097,152 and 4,194,304 vertices
-for those two groups, plus both leaf weight controls at the upper two sizes.
-The 4,194,304-vertex stress points are excluded from the confirmation grid
-by the declaration made before their outcomes. The two prospective
-confirmation campaigns each contain 12 cases: the two selected groups at
-65,536, 262,144, 524,288, 1,048,576 and 2,097,152 vertices, plus both controls
-at 2,097,152. They use graph seeds 1000039, 1000081 and 1000099 and sampling
-seeds 401 and 503, with five repetitions and one checked warmup per solver.
-The second campaign reverses case order while repeating the same graphs;
-it is not another independent graph sample. Each complete campaign is
-scheduled to retain 1,800 timed calls and 360 warmups.
+Each planned confirmation campaign contains the selected families at
+65,536, 262,144, 524,288, 1,048,576 and 2,097,152 vertices, plus shuffled-core
+and global-random controls at 2,097,152. Graph seeds are 1000039, 1000081 and
+1000099; sampling seeds are 401 and 503. Five rotated timed repetitions and
+one checked warmup are retained for every solver. B reverses A's case order
+on the same graphs; it is not another independent graph sample.
 
-Campaign A completed and passed its strict analysis and power audit. At the
-two upper sizes, all 120 paired KKT/compactor trials favor KKT. Its paired
-case medians are 0.8355 and 0.8153 for hierarchy, and 0.8416 and 0.8122 for
-distance. All three graph medians win in each case; CPU results preserve
-the direction and threshold. The
-[complete A analysis](attachment-confirmation-a-analysis/report.md) retains
-every smaller case, control and classical loss. This alone does not fulfill
-the declared two-campaign criterion.
-
-The original B capture failed after a stalled `ps` sampler prevented its
-60th native child from finalizing. That child's 30 outputs and native exit
-status zero survive, but the wrapper/controller correctly remain failed.
-The [recovery declaration](ATTACHMENT_RECOVERY.md) preserves this evidence
-and fixes a separate continuation for only the remaining 12 native children.
-No successful original B controller will be manufactured. A numerical
-assessment of interrupted B plus recovery will be reported separately from
-the failure to complete the frozen execution as declared.
-
-B also contains severe elapsed-time/CPU gaps, including a Prim call taking
-805.14 seconds elapsed and 3.63 seconds CPU. The
-[scoped power audit](attachment-confirmation-b-prefix-power-audit/audit.json)
-finds a recorded 803-second clamshell sleep overlapping that call. It
-distinguishes actual wake transitions from scheduled `Wake Requests` records.
-The prefix retains 149 flagged calls; this one sleep interval does not
-explain the broader disturbance.
-Those observations and the RSS-monitor gaps must remain visible; a completed
-recovery cannot retroactively establish quiet host conditions.
-
-A clear
-advantage requires paired case medians at most 0.90 at two adjacent largest
-selected sizes in both campaigns, every graph-level median below one, and
-the same threshold/direction in CPU diagnostics. Success against each
-competitor and against all four must be reported separately. An observed
+The declared numerical rule requires a paired case median ≤0.90 at both
+1,048,576 and 2,097,152 vertices in both orderings, with every graph median
+below one and the same threshold/direction on the process-CPU clock. A
 smaller-size loss/tie is additionally needed to bracket an onset. This is a
-predeclared descriptive criterion, not a significance test.
+predeclared descriptive rule, not a significance test.
+
+**Both families pass that numerical rule against compacting Borůvka.**
+The table gives wall-time KKT/compactor ratios; below one favors KKT. Each
+entry aggregates paired repetitions → sampling seeds → graph seeds.
+
+| Vertices | Hierarchy A | Hierarchy B + recovery | Distance A | Distance B + recovery |
+|---:|---:|---:|---:|---:|
+| 65,536 | 1.2102 | 1.1057 | 1.1978 | 1.2040 |
+| 262,144 | 0.9792 | 0.8746 | 0.9876 | 0.9072 |
+| 524,288 | 0.8823 | 0.8877 | 0.8908 | 0.8687 |
+| 1,048,576 | 0.8355 | 0.8288 | 0.8416 | 0.8202 |
+| 2,097,152 | 0.8153 | 0.8149 | 0.8122 | 0.8604 |
+
+![Selected families, separate campaigns and clocks](attachment-confirmation-summary-figures/selected_families.png)
+
+Parity is bracketed between 65,536 and 262,144 in both families, orderings
+and clocks. A's 10% threshold lies between 262,144 and 524,288 for both
+families; B's lies in the same interval for distance and between 65,536 and
+262,144 for hierarchy. These are intervals between observations, not fitted
+transition points. They do not promise a win at every intermediate or larger
+size. Figure ranges span the three graph medians, not confidence intervals;
+the full appendices also retain individual-trial ranges.
+The [complete figure index](attachment-confirmation-summary-figures/README.md)
+links both clocks, all five solver runtimes and all four paired comparisons.
+All ten final PNGs passed visual inspection; separate SVG/PDF rendering QA
+is not claimed.
+
+At the two upper sizes, A has 120/120 individual compactor wins on each clock.
+B plus recovery has 118/120 wall wins and 120/120 CPU wins. The two wall losses
+are retained in the two-million-vertex distance case. Its largest graph
+median is 0.9327 wall and 0.9031 CPU: every graph favors KKT, but not every
+graph individually reaches a 10% lead. The declared 10% test is on the case
+median, with a separate graph-level direction requirement.
+
+**The classical comparisons still lose.** Every one of the twelve case
+medians is above one against each classical solver, on both clocks and in
+both orderings. For example, at 2,097,152 vertices:
+
+| Family and ordering | KKT / compactor | KKT / Kruskal | KKT / Prim | KKT / original Borůvka |
+|---|---:|---:|---:|---:|
+| Hierarchy A | 0.8153 | 4.1311 | 2.7892 | 1.7361 |
+| Hierarchy B prefix | 0.8149 | 4.1247 | 2.7475 | 1.7828 |
+| Distance A | 0.8122 | 4.0925 | 2.0858 | 1.7297 |
+| Distance B prefix | 0.8604 | 5.0327 | 1.6306 | 1.6161 |
+
+The weight controls sharply reduce the compactor advantage. Shuffled-core
+wall ratios are 0.9833 in A and 0.9924 in B; B's worst graph median is 1.0118.
+Global-random ratios are 1.0359 and 1.0352, with every graph median losing.
+Captured topology/order fingerprints match across all four weight modes for
+each graph seed at this size, while their weighted fingerprints differ.
+Finite fingerprints corroborate the generator invariant; they are not a
+mathematical proof of identity. Leaf spokes remain forced MST edges even
+under global random weights, because their outer vertices have degree one.
+Global random can nevertheless select additional core edges in the first
+round and merge several star blocks at once.
+
+![Weight controls at the shared size](attachment-confirmation-summary-figures/weight_controls.png)
+
+### The execution failure is preserved
+
+A completed all 72 native children and passed its strict analysis. Original
+B's wrapper finalized 59 children; child 60 completed all 30 checked outputs
+and recorded native exit zero, but a blocked `ps` sampler prevented normal
+finalization. The controller and original capture remain failed. The
+[recovery declaration](ATTACHMENT_RECOVERY.md), manifest and repaired monitor
+were committed as `1d3f8c0` before exactly the 12 previously unstarted children
+were run. No completed measurement was repeated, replaced or removed.
+
+The [prefix validator](attachment-confirmation-b-prefix-analysis/README.md)
+checks all 60 completed native child files, preserving the original combined
+CSV's 59-child coverage. The [recovery analysis](attachment-confirmation-b-recovery-analysis/report.md)
+checks the remaining 360 calls. The [separate numerical assessment](attachment-confirmation-recovery-assessment/README.md)
+then verifies their disjoint union against the complete original B schedule,
+including every comparator, control and flag. It explicitly reports
+`original_frozen_execution_success: false`. A passing numerical rule is not
+successful completion of the frozen B execution.
+
+B's prefix retains 149 clock-flagged calls. One Prim call took 805.14 seconds
+elapsed and 3.63 seconds CPU; the [scoped power audit](attachment-confirmation-b-prefix-power-audit/audit.json)
+finds a recorded 803-second clamshell sleep overlapping it. A corrected parser
+distinguishes scheduled `Wake Requests` from actual wake transitions. That
+one interval does not explain the broader disturbance, including severe gaps
+in the final shuffled control. The blocked monitor also left long intervals
+without RSS observations. These results cannot establish quiet host conditions.
+
+The recovery took about 13.5 minutes, with zero call-clock flags and zero
+logged sleep overlaps. Its 409 scoped RSS observations were all available;
+the sampled peak was 4.352 GiB, maximum sampler duration 4.342 ms and maximum
+request gap 2.013 seconds. Occupied swap was 5,617.69 MiB before recovery and
+5,481.69 MiB afterward, compared with 459.81 MiB at A's boundaries. Occupied
+swap does not by itself demonstrate active paging. Sleep inhibition was not
+verified. Monitoring and environment differences remain explicit limitations.
+The [independent final review](validation/FINAL_RECOVERY_REVIEW.md) recomputes
+all 192 case comparisons directly from raw calls and checks the complete
+release, source, timing and resource evidence. No result required correction.
 
 ## Evidence quality and reproducibility
 
+Across the four discovery screens and complete A plus interrupted-B/recovery,
+**all 8,610 solver outputs passed validation: 7,175 timed calls and 1,435
+warmups**. These are checked invocations, not 8,610 independent graphs.
+The three fresh graph seeds are reused across sampling seeds, repetitions
+and the two orderings. Every measured result is checked outside its timer
+against an independently cycle-certified unique MST reference.
+
 Strict validation passed all 840 lifted calls, including 140 retained
 warmups; all 750 density calls, including 125 warmups; and all 2,400
-attachment calls, including 400 warmups. The separate
+attachment calls, including 400 warmups. The large extension adds 300 calls;
+A and B plus recovery add 4,320. The separate
 [fixture correctness gate](validation/SEARCH_FIXTURES_TEST.md)
 passed 167 fixtures, 917 complete contraction stages and 1,169 independently
 certified solver outputs, with explicit malformed-dimension and edge-cap
 checks. Those untimed tests are correctness evidence, not timing samples.
+The later [attachment-specific gate](validation/ATTACHMENT_VALIDATION.md)
+passed 176 fixtures, 1,197 contraction stages and 1,232 independently
+certified outputs. The [recovery gates](validation/ATTACHMENT_RECOVERY_ASSESSOR.md)
+and [monitor tests](validation/recovery-adapter-validation-2.json) validate
+the changed monitoring and evidence path without changing the solver binary.
 The [harness review](validation/PEER_REVIEW.md) records boundary, schedule,
 certificate and provenance checks, including the corrected log-parser smoke
 failure and its retained evidence.
@@ -667,9 +779,29 @@ The [2009 Filter-Kruskal paper](https://ae.iti.kit.edu/documents/teaching/algori
 also criticizes the engineering costs of expected-linear MST algorithms,
 but its experiments do not include full KKT. Filter-Kruskal remains a
 relevant additional practical competitor, beyond the five measured here.
+
+A [2021 external-memory connected-components study](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.SEA.2021.23)
+found a tuned KKT-derived algorithm competitive on many tested graphs, with
+higher density helping relative to its strongest alternative. This is useful
+evidence against treating every application of the KKT approach as inevitably
+impractical. It studies connected components and external-memory costs,
+however, rather than the full weighted MST implementation and in-memory
+timing boundary used here; its results cannot be imported as weighted-MST
+speedups.
+
 The [2022 implementation report](https://chico.dev/Linear-Time-MST/) makes
 its enormous fitted crossover conditional on extrapolating its equations.
 Neither that extrapolation nor the present finite measurements establish a
 universal “galactic” classification. These are distinct theorem, historical
 implementation and current-machine claims; none should substitute for the
 others.
+
+One concrete future implementation experiment is to retain parallel edges
+after KKT contractions while still deleting self-loops. The current quotient
+code already uses stamped buckets rather than hashing; the potential saving
+is its temporary arrays and extra traversal. The first quotient of these
+single-edge attachment graphs has no parallel edges to remove. This is an
+**unmeasured candidate**, not a claimed optimization: retaining parallel edges
+may inflate later samples, verifier queries and memory on other families.
+It should be a separate correctness-gated change, measured against the
+unchanged compactor and including dense and bundled controls.

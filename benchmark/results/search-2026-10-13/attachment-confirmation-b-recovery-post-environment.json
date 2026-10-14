@@ -1,0 +1,24 @@
+{
+  "utc": "2026-10-14T16:32:59.409654+00:00",
+  "observations": [
+    {
+      "command": [
+        "/usr/sbin/sysctl",
+        "vm.swapusage"
+      ],
+      "exit_status": 0,
+      "stdout": "vm.swapusage: total = 7168.00M  used = 5481.69M  free = 1686.31M  (encrypted)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/pmset",
+        "-g",
+        "batt"
+      ],
+      "exit_status": 0,
+      "stdout": "Now drawing from 'AC Power'\n",
+      "stderr": ""
+    }
+  ]
+}

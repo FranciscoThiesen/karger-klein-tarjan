@@ -1,0 +1,3 @@
+# Interrupted B plus separately declared recovery
+
+This is a complete numerical data set assembled from 60 completed native children in failed campaign B and exactly 12 previously unstarted children in the declared monitor recovery. Original B remains failed; this is not a successful frozen execution. All 2,160 calls, including 360 warmups, are retained in original case/seed order. source_parts.csv identifies every raw child and its hash. No observation was rerun, replaced, corrected, or removed. Timing medians use native call clocks, never stalled wrapper durations. Monitoring changed between the two parts; CPU agreement and numerical thresholds do not establish a quiet host.
