@@ -1,0 +1,158 @@
+{
+  "validation": "pass",
+  "controller_sha256": "a09e37a0faafb56551ec35bb3c8169ccfcc1702e1089c6794110f80724ece150",
+  "test_source_sha256": "73b41aa05e29bf6a96688a45949bff07760f34fff45960e7e20f1191b1b60398",
+  "native_processes_launched": 0,
+  "positive_checks": [
+    "actual completed large capture and strict analysis with complete hashes",
+    "actual A preflight, frozen declarations, no native launch or campaign file creation",
+    "synthetic completed A permits B preflight only; no reserved data generated"
+  ],
+  "negative_checks": [
+    {
+      "name": "failed prior capture",
+      "rejection": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-large-timing.csv validation differs from the required value"
+    },
+    {
+      "name": "missing checked calls",
+      "rejection": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-large-timing.csv checked_rows differs from the required value"
+    },
+    {
+      "name": "timed count incomplete",
+      "rejection": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-large-timing.csv checked_timed_rows differs from the required value"
+    },
+    {
+      "name": "wrong seed bank",
+      "rejection": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-large-timing.csv graph_seeds differs from the required value"
+    },
+    {
+      "name": "adjusted raw observations",
+      "rejection": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-large-timing.csv rows_adjusted differs from the required value"
+    },
+    {
+      "name": "missing child",
+      "rejection": "prior capture is failed or incomplete"
+    },
+    {
+      "name": "unknown child exit",
+      "rejection": "prior child exit status differs from the required value"
+    },
+    {
+      "name": "boolean child exit",
+      "rejection": "prior child exit status differs from the required value"
+    },
+    {
+      "name": "nonzero child exit",
+      "rejection": "prior child exit status differs from the required value"
+    },
+    {
+      "name": "interrupted child",
+      "rejection": "prior child interruption differs from the required value"
+    },
+    {
+      "name": "failed strict analysis",
+      "rejection": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-large-analysis validation differs from the required value"
+    },
+    {
+      "name": "strict analysis missing case",
+      "rejection": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-large-analysis cases differs from the required value"
+    },
+    {
+      "name": "altered C++ inventory",
+      "rejection": "current complete C++ inventory differs from the required value"
+    },
+    {
+      "name": "altered helper inventory",
+      "rejection": "current six helper files differs from the required value"
+    },
+    {
+      "name": "altered Makefile",
+      "rejection": "current Makefile differs from the required value"
+    },
+    {
+      "name": "altered binary hash",
+      "rejection": "current binary hash differs from the required value"
+    },
+    {
+      "name": "wrong stack profile",
+      "rejection": "prior stack size differs from the required value"
+    },
+    {
+      "name": "missing derived inventory",
+      "rejection": "prior analysis output has no hash inventory"
+    },
+    {
+      "name": "altered derived artifact",
+      "rejection": "prior analysis output changed: /Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-large-analysis/call_diagnostics.csv"
+    },
+    {
+      "name": "analysis/capture snapshot mismatch",
+      "rejection": "prior analysis capture metadata differs from the required value"
+    },
+    {
+      "name": "B without completed A",
+      "rejection": "[Errno 2] No such file or directory: '/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-confirmation-a-controller.json'"
+    },
+    {
+      "name": "frozen declaration rejects altered ATTACHMENT_CONFIRMATION.md",
+      "rejection": "frozen declaration ATTACHMENT_CONFIRMATION.md differs from the required value"
+    },
+    {
+      "name": "frozen declaration rejects altered attachment-confirmation-a.csv",
+      "rejection": "frozen declaration attachment-confirmation-a.csv differs from the required value"
+    },
+    {
+      "name": "frozen declaration rejects altered attachment-confirmation-b.csv",
+      "rejection": "frozen declaration attachment-confirmation-b.csv differs from the required value"
+    },
+    {
+      "name": "existing capture path cannot be overwritten",
+      "rejection": "refusing to overwrite any campaign evidence"
+    },
+    {
+      "name": "B rejects invalid A validation",
+      "rejection": "campaign A controller validation differs from the required value"
+    },
+    {
+      "name": "B rejects invalid A capture_exit_status",
+      "rejection": "campaign A controller capture_exit_status differs from the required value"
+    },
+    {
+      "name": "B rejects invalid A analysis_exit_status",
+      "rejection": "campaign A controller analysis_exit_status differs from the required value"
+    },
+    {
+      "name": "B rejects invalid A power_audit_exit_status",
+      "rejection": "campaign A controller power_audit_exit_status differs from the required value"
+    },
+    {
+      "name": "B rejects invalid A power_audit_validation",
+      "rejection": "campaign A controller power_audit_validation differs from the required value"
+    },
+    {
+      "name": "B rejects invalid A controller_sha256",
+      "rejection": "A/B controller source differs from the required value"
+    },
+    {
+      "name": "B rejects possible active A process",
+      "rejection": "campaign A controller has an error or potentially active process"
+    },
+    {
+      "name": "B rejects A cleanup timeout",
+      "rejection": "campaign A controller has an error or potentially active process"
+    },
+    {
+      "name": "B rejects mutated A artifact",
+      "rejection": "campaign A controller artifact changed: /Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/run_attachment_confirmation.py"
+    },
+    {
+      "name": "B rejects incomplete A audit",
+      "rejection": "campaign A power audit count differs from the required value"
+    },
+    {
+      "name": "B rejects failed A audit",
+      "rejection": "campaign A power audit differs from the required value"
+    }
+  ],
+  "method": "Actual completed-large preflight plus in-memory semantic mutations; snapshots are synchronized where appropriate so negative checks reach semantics rather than merely stale metadata hashes."
+}

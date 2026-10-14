@@ -1,0 +1,12 @@
+{
+  "utc": "2026-10-14T01:56:32.637534+00:00",
+  "campaign": "attachment-large",
+  "command_prefix": [
+    "/usr/bin/caffeinate",
+    "-i"
+  ],
+  "message": "Failed to create PreventUserIdleSystemSleep assertion; subsequent AC-power -s probe also failed to create PreventSystemSleep assertion.",
+  "idle_sleep_prevention_verified": false,
+  "action": "Previous idle and AC assertions failed; run directly with retained clocks and audit logged events.",
+  "probe": "validation/caffeinate-ac-probe.json"
+}

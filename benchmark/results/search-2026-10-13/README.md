@@ -3,13 +3,13 @@
 
 # Searching for a KKT crossover against five MST solvers
 
-The three completed pilots find KKT leads over compacting Borůvka, but **none
-of their 133 cases has KKT ahead of all four competitors**. The new attachment
-pilot's best paired ratio is **0.8309**, about 16.9% less elapsed time, at
-1,048,576 vertices and 16,777,216 edges. On that same input KKT takes about
-3.96 times Kruskal's elapsed time. The density and bundled-lift pilots' best
-compactor ratios are 0.8665 and 0.9274. These are discovery observations from
-one graph seed, with campaigns kept separate. Fresh-seed confirmation has
+The completed discovery screens find a size-dependent KKT lead over compacting
+Borůvka, but **none of their 143 cases has KKT ahead of all four competitors**.
+The attachment families cross from a loss at 65,536 vertices to a lead at
+262,144, then save about 17–19% at 2,097,152–4,194,304. The strongest paired
+ratio is **0.8082**, at 2,097,152 vertices and 33,554,432 edges. On that input
+KKT takes about **4.32 times Kruskal's time**. These are discovery observations
+from one graph seed, with captures kept separate. Fresh-seed confirmation has
 been declared but has no reported outcome here.
 
 This is a focused follow-up to the [implementation and complexity report](../../../docs/kkt-report/REPORT.md)
@@ -26,7 +26,7 @@ before timing.
 | Complete-bundle lifted pilot | Complete: 28 cases, 700 timed calls, 140 checked warmups |
 | Existing-family density pilot | Complete: 25 cases, 625 timed calls, 125 checked warmups |
 | Single-edge attachment pilot | Complete: 80 cases, 2,000 timed calls, 400 checked warmups |
-| Larger attachment discovery sizes | **PENDING**; ten cases frozen after the 80-case screen |
+| Larger attachment discovery sizes | Complete: ten cases, 250 timed calls, 50 checked warmups |
 | Attachment work counters and contraction traces | Complete: 16 discovery inputs, 254 compactor rounds, separate instrumented binary |
 | Fresh-seed confirmation | **PENDING**; two selected groups, two complete 12-case campaigns declared |
 
@@ -379,6 +379,58 @@ The [complete analysis](attachment-analysis/report.md),
 both clocks and every comparator. Its [visual audit](attachment-figures-fixed/QA.md)
 records the corrected final-page layout; no numerical observation changed.
 
+## The larger attachment screen retains the lead
+
+The [prospective extension](ATTACHMENT_CONFIRMATION.md) declared these ten
+cases before execution. All use b=4, d=16, discovery graph seed 5009 and
+sampling seed 149. The capture uses revision
+`5badf24acbff4de067a278cd69cb9e6a2f2cc6fd`, with the same native binary,
+solver/fixture sources and public-call boundaries as the attachment pilot.
+The full binary SHA-256 is
+`8188f6b8717a0a4b4261369ac589ca0a65f2247ebfbfb8c56f98a544bd156faf`.
+The two captures retain separate durations and provenance.
+
+Each cell is a paired wall-time ratio with KKT in the numerator. All ten
+extension cases and all four comparators appear here.
+
+| Core weights | n | Compactor | Kruskal | Prim | Original Borůvka |
+|---|---:|---:|---:|---:|---:|
+| Hierarchy | 524,288 | 0.8751 | 3.9821 | 2.8476 | 2.1323 |
+| Hierarchy | 2,097,152 | 0.8134 | 4.2378 | 2.9120 | 1.7972 |
+| Hierarchy | 4,194,304 | 0.8251 | 4.7739 | 2.3814 | 1.4849 |
+| Dyadic distance | 524,288 | 0.8885 | 3.1511 | 2.1085 | 2.0259 |
+| Dyadic distance | 2,097,152 | 0.8082 | 4.3166 | 2.0678 | 1.7307 |
+| Dyadic distance | 4,194,304 | 0.8302 | 4.7103 | 1.9181 | 1.4900 |
+| Shuffled core | 2,097,152 | 0.9892 | 4.6720 | 1.8352 | 2.4026 |
+| Shuffled core | 4,194,304 | 0.9913 | 4.4554 | 2.3024 | 2.4909 |
+| Global random | 2,097,152 | 1.0190 | 3.6006 | 1.1105 | 2.1610 |
+| Global random | 4,194,304 | 1.0447 | 3.6249 | 1.2439 | 2.2050 |
+
+Both ordered variants remain below 0.90 through the largest tested size,
+67,108,864 edges. Their advantage decreases slightly from 2.1 to 4.2 million
+vertices, so it is not monotonically increasing. Both controls remain close
+to parity or lose. The same-topology shuffled-core control keeps the cheap
+stars, isolating the contribution of core ordering more closely than global
+randomization does. These are observed size points, not a guarantee for all
+intermediate or larger graphs.
+
+KKT loses **all 50 paired trials to each classical solver**, on both wall and
+CPU metrics. Its compactor lead therefore demonstrates a benefit from its
+randomized continuation over repeated quotient compaction on these inputs;
+it does not make KKT the best of the five implementations.
+
+The [strict analysis](attachment-large-analysis/report.md) retains all 250
+timed calls and 50 warmups, with matching certified MST outputs. Two calls
+on the 2.1-million-vertex shuffled control have elapsed-time-versus-CPU flags:
+one original-Borůvka warmup and one timed KKT call. Both remain unchanged in
+the raw and derived data. The KKT call took 24.016 seconds elapsed versus
+14.564 seconds CPU. The [power audit](attachment-large-power-audit/audit.json)
+found no logged sleep overlap or capture/child UTC interval flags. This does
+not identify the cause of descheduling or establish an otherwise quiet host.
+Sampled process-group RSS peaked at 16.808 GiB; observed swap decreased from
+643.81 to 459.81 MiB. The [figures](attachment-large-figures/README.md) retain
+wall and CPU results, all competitors and all controls.
+
 ## Why the attachment crossover is plausible
 
 The [untimed capture](attachment-work/capture.json) measures 16 discovery
@@ -417,6 +469,18 @@ The original KKT theorem concerns expected O(m+n) work with the required
 linear-cost subroutines; the counts here do not independently prove this
 implementation's asymptotic complexity.
 
+There is a useful conditional conclusion here. KKT's theorem bounds expected
+work uniformly for each connected input, over valid independent algorithmic
+randomness; averaging over the ideal input family preserves O(m). The proved
+compactor edge-volume lower bound forces at least Ω(m log n) expected work
+on that family. Thus a KKT implementation satisfying all theorem assumptions
+has an asymptotic separation in expected work from this compactor under the
+same RAM model. This compares a ratio of expectations, not the expectation
+of a per-instance time ratio. It does not establish an elapsed-time crossover
+on this machine, a Kruskal lower bound, or unlimited scaling of finite IDs,
+seeds and storage. Unlike comparing two upper bounds, it does identify a
+specific source of avoidable asymptotic work in the comparator.
+
 The [complete work figures](attachment-work-figures/README.md) show predicted
 and observed round occupancy, both controls and all sixteen records. At b=16,
 the largest ordered compactor volume falls to 5.1001m while KKT falls to about
@@ -434,7 +498,16 @@ Python certificate/round checks passed. Browser rendering and interaction
 QA remains incomplete because both isolated browsers aborted at startup;
 the [failure evidence](attachment-round-views/QA.md) is retained.
 
-## Prospective experiments — outcomes PENDING
+The construction has plausible ingredients, but their exact conjunction is
+engineered. Published [weighted community models](https://arxiv.org/abs/0904.3940)
+and [hierarchical network models](https://arxiv.org/abs/1412.5918) motivate
+testing correlated weights; neither establishes KKT performance on this
+attachment family. The [relevance notes](REAL_RELEVANCE_NOTES.md) distinguish
+those analogies from actual weighted data and identify further tests. At
+fixed b=4,d=16 the core's average degree is 122, so it is relatively high
+degree but asymptotically sparse. No real-network timing claim is made here.
+
+## Prospective confirmation — outcomes PENDING
 
 The [selection and confirmation declaration](ATTACHMENT_CONFIRMATION.md)
 selects **leaf_hierarchy4 and leaf_distance4, both d=16**, whose largest
@@ -443,7 +516,7 @@ pilot cases. Because no case wins all four comparisons, selection uses the
 protocol's compactor-specific fallback. The selected cases lose to all
 three classical solvers. This is explicitly selection on discovery data.
 
-Ten additional discovery cases add 524,288, 2,097,152 and 4,194,304 vertices
+The ten completed additional discovery cases add 524,288, 2,097,152 and 4,194,304 vertices
 for those two groups, plus both leaf weight controls at the upper two sizes.
 The 4,194,304-vertex stress points are excluded from the confirmation grid
 by the declaration made before their outcomes. The two prospective
@@ -476,7 +549,9 @@ The [harness review](validation/PEER_REVIEW.md) records boundary, schedule,
 certificate and provenance checks, including the corrected log-parser smoke
 failure and its retained evidence.
 
-None of the three campaigns has diagnostic call-clock or capture/child UTC flags.
+None of the first three campaigns has diagnostic call-clock or capture/child
+UTC flags. The large attachment extension retains the two call flags described
+above and has no capture/child UTC flags.
 The [lifted power audit](lifted-power-audit/audit.json) and
 [density power audit](density-power-audit/audit.json), together with the
 [attachment power audit](attachment-power-audit/audit.json), find no logged
