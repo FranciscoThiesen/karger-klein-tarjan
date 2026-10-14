@@ -1,0 +1,29 @@
+{
+  "validation": "pass",
+  "native_calls": 0,
+  "scope": "Reparsed retained native smoke logs using corrected marker-prefix checker; original failed-capture status remains unchanged.",
+  "checks": [
+    {
+      "capture": "native-smoke-timing.json",
+      "case_id": "lifted_distance2_n256_d8_p0",
+      "original_capture_validation": "failed",
+      "rows": 30,
+      "certificate_marker": "pass",
+      "raw_sha256": "2d7a695369bdb7f3c413da2b20adbdc0fa22b4c322190b8fd1c901421d45213c",
+      "log_sha256": "5a7c596a822e654ef581c76010ecb6d510b21bc8db019a98cc70ea4cac0161ac"
+    },
+    {
+      "capture": "native-smoke-retry.json",
+      "case_id": "lifted_distance2_n256_d8_p0",
+      "original_capture_validation": "pass",
+      "rows": 30,
+      "certificate_marker": "pass",
+      "raw_sha256": "07df21a96ab338e33e5eb90111d567ae6afcc07cf60c3eacef8d463034ad5640",
+      "log_sha256": "848cb4aeba97bd872c3276a73a18032a7d2e711080ebaba355a912c5641ee5e2"
+    }
+  ],
+  "source_sha256": {
+    "run_mst_search.py": "83203a526d2ebbde7851ef87ad429c2c7532fb5c7ce419a7300cc7b04a6f26c0",
+    "analyze_mst_search.py": "abc34ddb69982e89b4e69e0da1755796331f1082f3ac6a6a114a8a489efbc86a"
+  }
+}

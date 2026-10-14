@@ -1,0 +1,21 @@
+Running five-algorithm MST search hierarchical_tree_n262144_d128_p0 graph_seed=5009 kkt_seed=149
+generation_seconds=7.48686 reference_certificate_seconds=11.3701
+reference_certificate_v1 {"case_id":"hierarchical_tree_n262144_d128_p0","graph_seed":5009,"kkt_seed":149,"n":262144,"m":33554432,"input_fingerprint":928032668640694318,"topology_fingerprint":2686219450097681972,"validation":"pass"}
+      162.89 real       158.39 user         4.48 sys
+          8301690880  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+             1313870  page reclaims
+                   1  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   3  voluntary context switches
+                 168  involuntary context switches
+        539321819527  instructions retired
+        632998211261  cycles elapsed
+          7243815152  peak memory footprint

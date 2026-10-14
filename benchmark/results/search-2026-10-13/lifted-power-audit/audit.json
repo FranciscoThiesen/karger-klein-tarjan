@@ -1,0 +1,75 @@
+{
+  "schema": "mst_search_power_audit_v1",
+  "validation": "pass",
+  "query": {
+    "command": [
+      "/usr/bin/pmset",
+      "-g",
+      "log"
+    ],
+    "started_utc": "2026-10-14T00:38:47.284610+00:00",
+    "exit_status": 0,
+    "finished_utc": "2026-10-14T00:38:48.618624+00:00"
+  },
+  "raw_capture_validation": "pass",
+  "raw_protocol_recertified_by_this_helper": false,
+  "started_utc": "2026-10-13T23:53:58.543262+00:00",
+  "finished_utc": "2026-10-14T00:38:27.589668+00:00",
+  "utc_elapsed_seconds": 2669.046406,
+  "monotonic_elapsed_seconds": 2668.95633875,
+  "utc_minus_monotonic_seconds": 0.09006724999971993,
+  "utc_correlation_envelope_ns": [
+    1791935638543262000,
+    1791938307589668000
+  ],
+  "capture_clock_flags": [],
+  "recorded_clock_flagged_calls": 0,
+  "checked_calls": 840,
+  "timed_calls": 700,
+  "warmup_calls": 140,
+  "calls_with_nominal_sleep_overlap": 0,
+  "timed_calls_with_nominal_sleep_overlap": 0,
+  "calls_near_power_event": 0,
+  "utc_unalignable_calls": 0,
+  "parsed_power_events": 92,
+  "malformed_event_lines": 0,
+  "power_events_within_envelope": [],
+  "last_preceding_event_if_sleep": null,
+  "sleep_intervals_overlapping_envelope": [],
+  "assertion_attempts": [
+    {
+      "path": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/power-inhibition.json",
+      "sha256": "5b98e51f65ad511322aacc266e5de0371fe15853c7e9b5672e9518d1a6964c3c",
+      "record": {
+        "utc": "2026-10-13T23:54:12.858104+00:00",
+        "command_prefix": [
+          "/usr/bin/caffeinate",
+          "-i"
+        ],
+        "message": "Failed to create PreventUserIdleSystemSleep assertion",
+        "idle_sleep_prevention_verified": false,
+        "action": "Capture continues with all clock records retained; audit timestamped Sleep/Wake events after capture. Do not claim sleep was inhibited."
+      },
+      "explicit_assertion_failure": true,
+      "record_claims_verified_prevention": false
+    }
+  ],
+  "power_control_limitation": "The archived caffeinate attempt explicitly failed to create PreventUserIdleSystemSleep. Do not describe this campaign as sleep-inhibited or sleep-controlled.",
+  "interpretation": "Timestamp correlations only. pmset event timestamps have one-second resolution; nearby-event columns allow a one-second boundary margin. Sleep-to-first-Wake/DarkWake intervals describe logged transitions, not measured CPU inactivity. Unclosed intervals may reflect missing log records; source timestamp reversals and native UTC reversals weaken alignment. Absence of events is not proof of no sleep or stable frequency, thermal state, contention or core placement. Overlaps do not attribute an entire solver duration to sleep.",
+  "rows_removed": 0,
+  "rows_adjusted": 0,
+  "input_sha256": {
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/lifted-timing.csv": "c14c22d7001aa66bccf873e8a933faf8be18451b429dc8bac2c358e780d8dae8",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/lifted-timing.json": "a4748d3cbd5959f0ff28c695c10ef0e189b65f3c85e47113e1982feef4f88582",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/lifted-power-audit/pmset.log": "eb3bfb6bdc31b6a50786f6700f203ef2e8ac484086ec87b51cc10aa3e5eba294",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/lifted-power-audit/pmset.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/power-inhibition.json": "5b98e51f65ad511322aacc266e5de0371fe15853c7e9b5672e9518d1a6964c3c"
+  },
+  "script_sha256": "566530914ee74564c5d5ba640b700f5ecfccc5927ac5ed046cb6e3bbdbd225c5",
+  "output_sha256": {
+    "call_power_associations.csv": "145d54c89c7c7d5be7c751271eb6fe047bce86d98df94848137c75a5e2477782",
+    "events.json": "1dbbf71140b066c885c4341cba9251f403e488fc7e222612ffde627c47cbda86",
+    "pmset.log": "eb3bfb6bdc31b6a50786f6700f203ef2e8ac484086ec87b51cc10aa3e5eba294",
+    "pmset.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

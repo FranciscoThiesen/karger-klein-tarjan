@@ -1,0 +1,355 @@
+{
+  "schema": "mst_search_figures_v1",
+  "validation": "pass",
+  "rows_removed": 0,
+  "campaigns_pooled": false,
+  "metrics": [
+    "wall",
+    "cpu"
+  ],
+  "input_sha256": {
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/lifted-analysis/provenance.json": "317d9d6f9adc512f75635a47daf64d5c216f21485bf6d39245025911fcb7da8a",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/lifted-analysis/comparisons.csv": "28d7d9c9b01ebd91005efbee665dfc37e981ae3d1733e08a0b98ba73f8a9b2af",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/lifted-analysis/summary.csv": "9bf26dc1d746a5c60d296e673dc0ccb2e39ed16f6c1e5d454a7e42177051feb9"
+  },
+  "script_sha256": "581d2ef31be681007af71ae96cf7b583cd2e75c999239d92ae63a54742b0dd0a",
+  "matplotlib_version": "3.9.4",
+  "spread": "observed individual-trial min-max; not confidence intervals",
+  "figures": [
+    {
+      "campaign_index": 1,
+      "campaign": "search-2026-10-13/lifted-analysis",
+      "metric": "wall",
+      "kind": "paired_ratios",
+      "groups": [
+        {
+          "family": "lifted_distance2",
+          "density": 16
+        },
+        {
+          "family": "lifted_distance2",
+          "density": 64
+        },
+        {
+          "family": "lifted_distance4",
+          "density": 16
+        },
+        {
+          "family": "lifted_distance4",
+          "density": 64
+        },
+        {
+          "family": "lifted_hierarchy2",
+          "density": 16
+        },
+        {
+          "family": "lifted_hierarchy2",
+          "density": 64
+        }
+      ],
+      "files": [
+        "campaign_01_wall_paired_ratios_01.png",
+        "campaign_01_wall_paired_ratios_01.svg",
+        "campaign_01_wall_paired_ratios_01.pdf"
+      ]
+    },
+    {
+      "campaign_index": 1,
+      "campaign": "search-2026-10-13/lifted-analysis",
+      "metric": "wall",
+      "kind": "paired_ratios",
+      "groups": [
+        {
+          "family": "lifted_hierarchy4",
+          "density": 16
+        },
+        {
+          "family": "lifted_hierarchy4",
+          "density": 64
+        },
+        {
+          "family": "lifted_random2",
+          "density": 16
+        },
+        {
+          "family": "lifted_random2",
+          "density": 64
+        },
+        {
+          "family": "lifted_random4",
+          "density": 16
+        },
+        {
+          "family": "lifted_random4",
+          "density": 64
+        }
+      ],
+      "files": [
+        "campaign_01_wall_paired_ratios_02.png",
+        "campaign_01_wall_paired_ratios_02.svg",
+        "campaign_01_wall_paired_ratios_02.pdf"
+      ]
+    },
+    {
+      "campaign_index": 1,
+      "campaign": "search-2026-10-13/lifted-analysis",
+      "metric": "wall",
+      "kind": "runtimes",
+      "groups": [
+        {
+          "family": "lifted_distance2",
+          "density": 16
+        },
+        {
+          "family": "lifted_distance2",
+          "density": 64
+        },
+        {
+          "family": "lifted_distance4",
+          "density": 16
+        },
+        {
+          "family": "lifted_distance4",
+          "density": 64
+        },
+        {
+          "family": "lifted_hierarchy2",
+          "density": 16
+        },
+        {
+          "family": "lifted_hierarchy2",
+          "density": 64
+        }
+      ],
+      "files": [
+        "campaign_01_wall_runtimes_01.png",
+        "campaign_01_wall_runtimes_01.svg",
+        "campaign_01_wall_runtimes_01.pdf"
+      ]
+    },
+    {
+      "campaign_index": 1,
+      "campaign": "search-2026-10-13/lifted-analysis",
+      "metric": "wall",
+      "kind": "runtimes",
+      "groups": [
+        {
+          "family": "lifted_hierarchy4",
+          "density": 16
+        },
+        {
+          "family": "lifted_hierarchy4",
+          "density": 64
+        },
+        {
+          "family": "lifted_random2",
+          "density": 16
+        },
+        {
+          "family": "lifted_random2",
+          "density": 64
+        },
+        {
+          "family": "lifted_random4",
+          "density": 16
+        },
+        {
+          "family": "lifted_random4",
+          "density": 64
+        }
+      ],
+      "files": [
+        "campaign_01_wall_runtimes_02.png",
+        "campaign_01_wall_runtimes_02.svg",
+        "campaign_01_wall_runtimes_02.pdf"
+      ]
+    },
+    {
+      "campaign_index": 1,
+      "campaign": "search-2026-10-13/lifted-analysis",
+      "metric": "cpu",
+      "kind": "paired_ratios",
+      "groups": [
+        {
+          "family": "lifted_distance2",
+          "density": 16
+        },
+        {
+          "family": "lifted_distance2",
+          "density": 64
+        },
+        {
+          "family": "lifted_distance4",
+          "density": 16
+        },
+        {
+          "family": "lifted_distance4",
+          "density": 64
+        },
+        {
+          "family": "lifted_hierarchy2",
+          "density": 16
+        },
+        {
+          "family": "lifted_hierarchy2",
+          "density": 64
+        }
+      ],
+      "files": [
+        "campaign_01_cpu_paired_ratios_01.png",
+        "campaign_01_cpu_paired_ratios_01.svg",
+        "campaign_01_cpu_paired_ratios_01.pdf"
+      ]
+    },
+    {
+      "campaign_index": 1,
+      "campaign": "search-2026-10-13/lifted-analysis",
+      "metric": "cpu",
+      "kind": "paired_ratios",
+      "groups": [
+        {
+          "family": "lifted_hierarchy4",
+          "density": 16
+        },
+        {
+          "family": "lifted_hierarchy4",
+          "density": 64
+        },
+        {
+          "family": "lifted_random2",
+          "density": 16
+        },
+        {
+          "family": "lifted_random2",
+          "density": 64
+        },
+        {
+          "family": "lifted_random4",
+          "density": 16
+        },
+        {
+          "family": "lifted_random4",
+          "density": 64
+        }
+      ],
+      "files": [
+        "campaign_01_cpu_paired_ratios_02.png",
+        "campaign_01_cpu_paired_ratios_02.svg",
+        "campaign_01_cpu_paired_ratios_02.pdf"
+      ]
+    },
+    {
+      "campaign_index": 1,
+      "campaign": "search-2026-10-13/lifted-analysis",
+      "metric": "cpu",
+      "kind": "runtimes",
+      "groups": [
+        {
+          "family": "lifted_distance2",
+          "density": 16
+        },
+        {
+          "family": "lifted_distance2",
+          "density": 64
+        },
+        {
+          "family": "lifted_distance4",
+          "density": 16
+        },
+        {
+          "family": "lifted_distance4",
+          "density": 64
+        },
+        {
+          "family": "lifted_hierarchy2",
+          "density": 16
+        },
+        {
+          "family": "lifted_hierarchy2",
+          "density": 64
+        }
+      ],
+      "files": [
+        "campaign_01_cpu_runtimes_01.png",
+        "campaign_01_cpu_runtimes_01.svg",
+        "campaign_01_cpu_runtimes_01.pdf"
+      ]
+    },
+    {
+      "campaign_index": 1,
+      "campaign": "search-2026-10-13/lifted-analysis",
+      "metric": "cpu",
+      "kind": "runtimes",
+      "groups": [
+        {
+          "family": "lifted_hierarchy4",
+          "density": 16
+        },
+        {
+          "family": "lifted_hierarchy4",
+          "density": 64
+        },
+        {
+          "family": "lifted_random2",
+          "density": 16
+        },
+        {
+          "family": "lifted_random2",
+          "density": 64
+        },
+        {
+          "family": "lifted_random4",
+          "density": 16
+        },
+        {
+          "family": "lifted_random4",
+          "density": 64
+        }
+      ],
+      "files": [
+        "campaign_01_cpu_runtimes_02.png",
+        "campaign_01_cpu_runtimes_02.svg",
+        "campaign_01_cpu_runtimes_02.pdf"
+      ]
+    },
+    {
+      "kind": "illustration_only",
+      "files": [
+        "illustrative_lifted_hierarchy.png",
+        "illustrative_lifted_hierarchy.svg",
+        "illustrative_lifted_hierarchy.pdf"
+      ]
+    }
+  ],
+  "visual_qa": "not performed by this script; inspect the rendered images before publication",
+  "output_sha256": {
+    "README.md": "5acd4bd3c16cfa49fc110fc58115a666b749b9d113c47e5c9ee133c3ae29ec8a",
+    "campaign_01_cpu_paired_ratios_01.pdf": "be1069dcac36904b9bbd796bbace93fefb84a3c8e94a297f1e904787de172c49",
+    "campaign_01_cpu_paired_ratios_01.png": "95edac658b4e3211a53ec38430bb536df23b5028193f7b8938d405122150cc0b",
+    "campaign_01_cpu_paired_ratios_01.svg": "093a1fc34519f96f869f934ffcb512ea8b576cb078ace6117c30a716ccd8fc1e",
+    "campaign_01_cpu_paired_ratios_02.pdf": "0bbc334d5b0c4cb38dd0e4add5a2ff629fe66844589ec5ecb7b145ddc6ea9f20",
+    "campaign_01_cpu_paired_ratios_02.png": "ecb4f9493d275f65c1c87eaff36d59c1e2195f55c269dc7485cbd5a523e4cd4e",
+    "campaign_01_cpu_paired_ratios_02.svg": "8ebb2d09d0a9685e815a4e445b6d74631e870b71829778a2c2167a35aa5ef1ab",
+    "campaign_01_cpu_runtimes_01.pdf": "0ace361ae2e0732509fb90f267317dd7af3208e674ae3bda944d5248b88fcc48",
+    "campaign_01_cpu_runtimes_01.png": "fcb35a1f9b382ca952ca298f439479440412c8ee2168d334d3fdc82d4c584fe1",
+    "campaign_01_cpu_runtimes_01.svg": "b8f265eb802e1e8e2ce1306f6e432a4d2ff5c89370d95103695bb8ec676bae8b",
+    "campaign_01_cpu_runtimes_02.pdf": "d387ad5379ac4a42e047d2bbebe3268acc509ea2da995f395e182e5278923730",
+    "campaign_01_cpu_runtimes_02.png": "0b25b951c3763e5bad523beb4150be732df3edbd2e561c9e688596d52587897f",
+    "campaign_01_cpu_runtimes_02.svg": "5661b265b1ab8403b5a4826343841f086489c14c9603dee46b3b58f2b157d16b",
+    "campaign_01_wall_paired_ratios_01.pdf": "ff62671c61e31cd0e3f1f17500084c3a21f4062535c8eef0dc2cbee13c78c0b4",
+    "campaign_01_wall_paired_ratios_01.png": "d3ab0e96f377db11b8e553adb0607950483ac25e85fa83ed128cad9b377f2453",
+    "campaign_01_wall_paired_ratios_01.svg": "96d6a1cc74a5b3fd12edf1fab7fea91b47dd00908a014c58f2d47695fcd2593d",
+    "campaign_01_wall_paired_ratios_02.pdf": "32594462a36ca1952aff4a0e6d66078b27d547e05cd4ce4c66207547138bd3f2",
+    "campaign_01_wall_paired_ratios_02.png": "e21ac365ee0e1778e8b8a912bfbfbc7ea55e0898c39fd307e3b655e6be9cb36e",
+    "campaign_01_wall_paired_ratios_02.svg": "b2725fbba4147b92e782d27672dd88e79d106f53cce083a2c43bd8abe4d0f74d",
+    "campaign_01_wall_runtimes_01.pdf": "d12fcda1ff9906300b21434f16b88e0e324286f90c2a2390b2b41f05791395ec",
+    "campaign_01_wall_runtimes_01.png": "f6f883f79a7f0b9ba6f6f36f2d748fd83d8e9f9fe1d69a9415d411e273d502e4",
+    "campaign_01_wall_runtimes_01.svg": "c2bed35018fa3b11e733dbcdac452730c0c235a56c198e653f3553fc1138bd01",
+    "campaign_01_wall_runtimes_02.pdf": "467039a59e5cba8b1cf1fd07ecb507f27f88342aced25e85e74a17793c7883f1",
+    "campaign_01_wall_runtimes_02.png": "c16d583c05f9fbb8a89e12a31ba70e1995aa7f26edf889fa2a5529c192fc3175",
+    "campaign_01_wall_runtimes_02.svg": "704046dba2bba31cbba6a4268d1f3baca7342fe69ee6eebaeecd04a72d73f678",
+    "illustrative_lifted_hierarchy.pdf": "a36bed391b7670928cd1c736c41942120e0cfff4d1023c7f555fd1d18a9fb9fb",
+    "illustrative_lifted_hierarchy.png": "f318eb613eff179f8722d3d2b77d7700a8d7f0d2ef3aa1234aea96c1484e2150",
+    "illustrative_lifted_hierarchy.svg": "7034042e3f69e8f444a7d4e289881531fe49f02585be08776a8966c086e45d98"
+  }
+}

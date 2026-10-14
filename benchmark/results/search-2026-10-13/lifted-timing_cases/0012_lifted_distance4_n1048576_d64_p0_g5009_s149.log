@@ -1,0 +1,21 @@
+Running five-algorithm MST search lifted_distance4_n1048576_d64_p0 graph_seed=5009 kkt_seed=149
+generation_seconds=2.02859 reference_certificate_seconds=45.6411
+reference_certificate_v1 {"case_id":"lifted_distance4_n1048576_d64_p0","graph_seed":5009,"kkt_seed":149,"n":1048576,"m":67108864,"input_fingerprint":14195135876860594121,"topology_fingerprint":11211310412266717369,"validation":"pass"}
+      273.61 real       269.92 user         3.68 sys
+          9399943168  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+             1402653  page reclaims
+                   1  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   0  voluntary context switches
+                  96  involuntary context switches
+        769378232397  instructions retired
+       1061422959066  cycles elapsed
+          5500965856  peak memory footprint

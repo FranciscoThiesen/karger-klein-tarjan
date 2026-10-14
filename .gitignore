@@ -1,3 +1,7 @@
 /.build/
 /bin/
 /bazel-*
+
+# Full machine power history stays local; publish scoped audit summaries only.
+benchmark/results/search-2026-10-13/*-power-audit/pmset.log
+benchmark/results/search-2026-10-13/*-power-audit/events.json
