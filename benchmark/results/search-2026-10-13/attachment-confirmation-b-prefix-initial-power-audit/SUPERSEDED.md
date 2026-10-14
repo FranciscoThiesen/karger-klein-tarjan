@@ -1,0 +1,1 @@
+Superseded initial audit: the frozen parser treated a Wake Requests scheduling record as a wake transition. Native calls are unchanged. Use the corrected prefix-power-audit; the original helper and this output are retained for diagnosis.

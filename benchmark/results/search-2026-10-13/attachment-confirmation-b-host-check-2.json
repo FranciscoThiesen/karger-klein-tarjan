@@ -1,0 +1,52 @@
+{
+  "utc": "2026-10-14T07:15:20.786267+00:00",
+  "owned_process_tree": [
+    {
+      "pid": 4532,
+      "ppid": 4530,
+      "pgid": 4530,
+      "state": "R",
+      "command": "/Users/random_person/Desktop/karger-klein-tarjan/bin/large_stack/mst_search"
+    },
+    {
+      "pid": 4530,
+      "ppid": 74412,
+      "pgid": 4530,
+      "state": "Ss",
+      "command": "/usr/bin/time"
+    },
+    {
+      "pid": 74412,
+      "ppid": 74408,
+      "pgid": 74408,
+      "state": "S",
+      "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+    },
+    {
+      "pid": 74408,
+      "ppid": 18218,
+      "pgid": 74408,
+      "state": "Ss",
+      "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+    }
+  ],
+  "native_count": 1,
+  "ps_exit": 0,
+  "completed_child": {
+    "case_id": "leaf_shuffled4_n2097152_d16_p0",
+    "graph_seed": 1000099,
+    "kkt_seed": 401,
+    "validation": "pass",
+    "rss_observations": 131,
+    "rss_unavailable": 1,
+    "sampled_peak_rss_kib": 8267440,
+    "monotonic_elapsed_seconds": 439.2578356670001
+  },
+  "completed_rss_max_monotonic_gap_s": 2.113914625,
+  "completed_rss_last_utc": "2026-10-14T07:11:16.914517+00:00",
+  "completed_rss_first_utc": "2026-10-14T07:06:49.368336+00:00",
+  "active_case": "leaf_shuffled4_n2097152_d16_p0",
+  "active_graph_seed": 1000099,
+  "active_kkt_seed": 503,
+  "interpretation": "A stale sample was observed and is not a continuous memory bound; process state snapshots do not assign a cause."
+}

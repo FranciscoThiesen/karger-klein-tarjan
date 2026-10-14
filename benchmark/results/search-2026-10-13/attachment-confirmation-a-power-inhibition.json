@@ -1,0 +1,21 @@
+{
+  "utc": "2026-10-14T02:58:19.068615+00:00",
+  "campaign": "attachment-confirmation-a",
+  "idle_sleep_prevention_verified": false,
+  "message": "Failed to create PreventUserIdleSystemSleep assertion; subsequent AC-power -s probe also failed to create PreventSystemSleep assertion.",
+  "action": "Earlier idle and AC assertions failed. No fresh successful assertion is claimed; execute directly and audit logged events.",
+  "inherited_from": "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/attachment-large-power-inhibition.json",
+  "inherited_sha256": "5a0a75c6e146208db9ecc2cbd1a13513864f02cd6666afe555969c487963e7c6",
+  "inherited_record": {
+    "utc": "2026-10-14T01:56:32.637534+00:00",
+    "campaign": "attachment-large",
+    "command_prefix": [
+      "/usr/bin/caffeinate",
+      "-i"
+    ],
+    "message": "Failed to create PreventUserIdleSystemSleep assertion; subsequent AC-power -s probe also failed to create PreventSystemSleep assertion.",
+    "idle_sleep_prevention_verified": false,
+    "action": "Previous idle and AC assertions failed; run directly with retained clocks and audit logged events.",
+    "probe": "validation/caffeinate-ac-probe.json"
+  }
+}

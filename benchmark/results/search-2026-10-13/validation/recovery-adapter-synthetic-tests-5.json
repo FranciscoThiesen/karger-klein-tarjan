@@ -1,0 +1,19 @@
+{
+  "schema": "mst_search_recovery_synthetic_tests_v1",
+  "validation": "failed",
+  "tests_run": 15,
+  "failures": 0,
+  "errors": 1,
+  "native_mst_executions": 0,
+  "native_builds": 0,
+  "adapter_sha256": "73f02f494f29b2f9183c9fc889dcda73444fe2ca4a240469a7d57dfec226058b",
+  "test_sha256": "df4eb638163a102d729927c848c45a26024143169c381d7505461570a97fda41",
+  "frozen_helpers_sha256": {
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/run_mst_search.py": "843d65154d232bc12a946ad7d8793ab26840f7785507286a6e4d8ed09dfcad80",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/analyze_mst_search.py": "91d3fcad871444e9325c1465782365b5c3ed08fb2344aeeb62fbfc18254f5ba6",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/run_crossover.py": "1669d3b761e0d4c09c432382c3a2e8738c0031c1c9e6dc69cfcb7734809a052f",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/analyze_continuation.py": "7a0afa5fe802516cb5ec27a7d567a0875c66807aa4a04ce0ff752f0bc31b9168",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/crossover_clocks.py": "725d469933eaf5ead32a38bf52b9f32e46a7ee3d4e386777c257c1ab3929fc0b",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/run_crossover_baselines.py": "2291db9114448516fc5ffb6c4b0fd119d23741bcfa2275ad7f25996c3b73921e"
+  }
+}

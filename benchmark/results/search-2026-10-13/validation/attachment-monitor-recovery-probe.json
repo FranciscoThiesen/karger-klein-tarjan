@@ -1,0 +1,47 @@
+{
+  "utc": "2026-10-14T08:24:48.069080+00:00",
+  "probe_pid": 46021,
+  "scope": "Read-only libproc lookup of previously recorded owned controller/wrapper and direct children only",
+  "validation": "completed",
+  "parents": [
+    {
+      "pid": 74408,
+      "path": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python",
+      "return": 135,
+      "errno": 0,
+      "child_bytes_returned": 1,
+      "child_errno": 0,
+      "children": [
+        {
+          "pid": 74412,
+          "path": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python",
+          "return": 135,
+          "errno": 0
+        }
+      ]
+    },
+    {
+      "pid": 74412,
+      "path": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python",
+      "return": 135,
+      "errno": 0,
+      "child_bytes_returned": 2,
+      "child_errno": 0,
+      "children": [
+        {
+          "pid": 17278,
+          "path": "/bin/ps",
+          "return": 7,
+          "errno": 0
+        },
+        {
+          "pid": 4530,
+          "path": null,
+          "return": 0,
+          "errno": 3
+        }
+      ]
+    }
+  ],
+  "finished_utc": "2026-10-14T08:24:48.076364+00:00"
+}

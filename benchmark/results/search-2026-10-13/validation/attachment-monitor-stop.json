@@ -1,0 +1,10 @@
+{
+  "utc": "2026-10-14T08:29:20.188649+00:00",
+  "wrapper_pid": 74412,
+  "controller_pid": 74408,
+  "signal": "SIGTERM",
+  "reason": "Completed native child60 cannot finalize because ps sampling is blocked; verified helper SIGKILL did not restore progress. Stop records interruption instead of pretending successful frozen execution.",
+  "native_measurements_modified": false,
+  "native_cases_rerun": false,
+  "validation": "signal_sent_exit_not_yet_confirmed"
+}

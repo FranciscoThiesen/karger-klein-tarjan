@@ -1,0 +1,24 @@
+{
+  "schema": "attachment_plot_atlas_checks_v1",
+  "validation": "pass",
+  "checks": [
+    "four real independent Python cycle certificates and shared coordinates/context",
+    "exact visible/hidden/MST/context ID partitions and two invented/local ID rejections",
+    "five synthetic provenance/certificate/paired-topology rejection gates"
+  ],
+  "source_sha256": {
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/validate_plot_atlas.py": "83393c93fc7920fa3e4ee5dd59655f73da60eca8a573f3b72fae4b35a293f7ca",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/plot_confirmation_summary.py": "2a791780b3557682173e37c2e96891f82251685dccf5ee75eaa9d22c03954143",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/render_attachment_atlas.py": "729417091e07afb38090eca54c61886b1f74b347c2b37e78aee87193ed0a1648",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/plot_mst_search.py": "e71cfc3468b34bd89f3e6e5a1007302694730c6b3143d76616a2543dc73ce2eb",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/render_attachment_view.py": "24d49e111e876764e60ae5b44be36b235478fdbc9e84662d1e61c83634173a32"
+  },
+  "phase": "atlas",
+  "synthetic_B_for_figure_logic": false,
+  "campaign_analysis_provenance_sha256": {},
+  "native_execution": false,
+  "matplotlib_imported": false,
+  "figures_rendered": false,
+  "visual_qa": "not performed by this script",
+  "synthetic_mutations": "temporary negative tests only; not measurement observations"
+}

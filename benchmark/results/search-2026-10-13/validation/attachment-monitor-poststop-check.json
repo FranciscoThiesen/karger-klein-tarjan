@@ -1,0 +1,31 @@
+{
+  "utc": "2026-10-14T16:15:33.736886+00:00",
+  "scope": "Read-only known owned controller/wrapper/sampler/native PIDs after finalized interruption; no signal or unrelated inventory",
+  "processes": [
+    {
+      "requested_pid": 74408,
+      "api_return": 0,
+      "errno": 3
+    },
+    {
+      "requested_pid": 74412,
+      "api_return": 0,
+      "errno": 3
+    },
+    {
+      "requested_pid": 17278,
+      "api_return": 0,
+      "errno": 3
+    },
+    {
+      "requested_pid": 4530,
+      "api_return": 0,
+      "errno": 3
+    },
+    {
+      "requested_pid": 4532,
+      "api_return": 0,
+      "errno": 3
+    }
+  ]
+}

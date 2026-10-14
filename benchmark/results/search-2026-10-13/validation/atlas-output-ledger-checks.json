@@ -1,0 +1,13 @@
+{
+  "validation": "pass",
+  "panels": 4,
+  "visible_ledger_rows": 4847,
+  "checks": [
+    "actual exported endpoints/weights/IDs",
+    "complete MST plus exact common context union",
+    "exact hidden counts",
+    "all generation artifact hashes"
+  ],
+  "native_execution": false,
+  "figures_edited": false
+}

@@ -1,0 +1,19 @@
+test_capture_cli_accepts_only_declared_tail (__main__.CaptureTests) ... ok
+test_ceiling_stops_before_second_child (__main__.CaptureTests) ... ok
+test_native_exit_during_timed_out_sample_cannot_authorize_next_child (__main__.CaptureTests) ... ok
+test_native_running_after_timeout_has_bounded_unknown_cleanup (__main__.CaptureTests) ... ok
+test_success_reuses_complete_strict_capture_and_analysis (__main__.CaptureTests) ... ok
+test_three_unavailable_samples_stop_before_second_child (__main__.CaptureTests) ... ok
+test_cleanup_does_not_join_timed_out_worker (__main__.MonitorTests) ... ok
+test_cleanup_known_exit_and_unknown_exit (__main__.MonitorTests) ... ok
+test_cleanup_rejects_foreign_group_and_surviving_members (__main__.MonitorTests) ... ok
+test_libproc_reads_only_disposable_owned_python_group (__main__.MonitorTests) ... ok
+test_real_interpreter_exit_does_not_join_daemon (__main__.MonitorTests) ... ok
+test_stuck_worker_has_no_thread_growth_and_late_result_is_discarded (__main__.MonitorTests) ... ok
+test_success_and_scoped_group (__main__.MonitorTests) ... ok
+test_wrong_group_and_provider_failure (__main__.MonitorTests) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 2.738s
+
+OK

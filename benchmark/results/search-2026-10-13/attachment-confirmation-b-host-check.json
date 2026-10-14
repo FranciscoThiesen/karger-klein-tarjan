@@ -1,0 +1,18 @@
+{
+  "utc": "2026-10-14T06:44:27.850315+00:00",
+  "scope": "Exact mst_search executable names only; unrelated process details discarded",
+  "native_processes": [
+    {
+      "pid": 4760,
+      "ppid": 4758,
+      "pgid": 4758,
+      "command": "/Users/random_person/Desktop/karger-klein-tarjan/bin/large_stack/mst_search"
+    }
+  ],
+  "native_count": 1,
+  "active_logged_process_group": 4758,
+  "matches_owned_group": true,
+  "host_load_exit": 0,
+  "host_load": "vm.loadavg: { 116.75 125.91 89.46 }\n",
+  "interpretation": "A load snapshot is not a causal attribution for any solver timing."
+}

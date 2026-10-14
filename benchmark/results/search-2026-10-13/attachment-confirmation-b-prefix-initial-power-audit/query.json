@@ -1,0 +1,20 @@
+{
+  "schema": "scoped_prefix_power_query_v1",
+  "command": [
+    "/usr/bin/pmset",
+    "-g",
+    "log"
+  ],
+  "started_utc": "2026-10-14T08:36:24.451957+00:00",
+  "deadline_seconds": 15,
+  "query_count": 1,
+  "pid": 59566,
+  "exit_status": 0,
+  "finished_utc": "2026-10-14T08:36:31.120907+00:00",
+  "monotonic_elapsed_seconds": 6.668540417,
+  "validation": "pass",
+  "output_sha256": {
+    "pmset.log": "ca9904537596ffddcd2c989a7b92af0af15b64b6235298983316818c3fe26fbf",
+    "pmset.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

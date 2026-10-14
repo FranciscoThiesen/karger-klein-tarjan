@@ -1,0 +1,107 @@
+test_ceiling_stops_before_second_child (__main__.CaptureTests) ... ERROR
+test_native_exit_during_timed_out_sample_cannot_authorize_next_child (__main__.CaptureTests) ... ERROR
+test_native_running_after_timeout_has_bounded_unknown_cleanup (__main__.CaptureTests) ... ERROR
+test_success_reuses_complete_strict_capture_and_analysis (__main__.CaptureTests) ... ERROR
+test_three_unavailable_samples_stop_before_second_child (__main__.CaptureTests) ... ERROR
+test_cleanup_does_not_join_timed_out_worker (__main__.MonitorTests) ... ok
+test_cleanup_known_exit_and_unknown_exit (__main__.MonitorTests) ... ok
+test_cleanup_rejects_foreign_group_and_surviving_members (__main__.MonitorTests) ... ok
+test_real_interpreter_exit_does_not_join_daemon (__main__.MonitorTests) ... ok
+test_stuck_worker_has_no_thread_growth_and_late_result_is_discarded (__main__.MonitorTests) ... ok
+test_success_and_scoped_group (__main__.MonitorTests) ... ok
+test_wrong_group_and_provider_failure (__main__.MonitorTests) ... ok
+
+======================================================================
+ERROR: test_ceiling_stops_before_second_child (__main__.CaptureTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/test_recover_mst_search.py", line 235, in test_ceiling_stops_before_second_child
+    output, info, children, sampler, error = self.run_synthetic(folder, lambda group: member(group, 40 * 1024**2 + 1), exits=False)
+  File "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/test_recover_mst_search.py", line 196, in run_synthetic
+    capture.main()
+  File "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/run_mst_search.py", line 279, in main
+    "platform":platform.platform(),"machine":platform.machine(),
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/platform.py", line 1253, in platform
+    bits, linkage = architecture(sys.executable)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/platform.py", line 679, in architecture
+    fileout = _syscmd_file(executable, '')
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/platform.py", line 637, in _syscmd_file
+    return output.decode('latin-1')
+AttributeError: 'str' object has no attribute 'decode'
+
+======================================================================
+ERROR: test_native_exit_during_timed_out_sample_cannot_authorize_next_child (__main__.CaptureTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/test_recover_mst_search.py", line 244, in test_native_exit_during_timed_out_sample_cannot_authorize_next_child
+    output, info, children, sampler, error = self.run_synthetic(folder, lambda group: (gate.wait(), member(group))[1])
+  File "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/test_recover_mst_search.py", line 196, in run_synthetic
+    capture.main()
+  File "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/run_mst_search.py", line 279, in main
+    "platform":platform.platform(),"machine":platform.machine(),
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/platform.py", line 1253, in platform
+    bits, linkage = architecture(sys.executable)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/platform.py", line 679, in architecture
+    fileout = _syscmd_file(executable, '')
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/platform.py", line 637, in _syscmd_file
+    return output.decode('latin-1')
+AttributeError: 'str' object has no attribute 'decode'
+
+======================================================================
+ERROR: test_native_running_after_timeout_has_bounded_unknown_cleanup (__main__.CaptureTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/test_recover_mst_search.py", line 257, in test_native_running_after_timeout_has_bounded_unknown_cleanup
+    output, info, children, sampler, error = self.run_synthetic(folder, lambda group: (gate.wait(), member(group))[1], exits=False)
+  File "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/test_recover_mst_search.py", line 196, in run_synthetic
+    capture.main()
+  File "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/run_mst_search.py", line 279, in main
+    "platform":platform.platform(),"machine":platform.machine(),
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/platform.py", line 1253, in platform
+    bits, linkage = architecture(sys.executable)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/platform.py", line 679, in architecture
+    fileout = _syscmd_file(executable, '')
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/platform.py", line 637, in _syscmd_file
+    return output.decode('latin-1')
+AttributeError: 'str' object has no attribute 'decode'
+
+======================================================================
+ERROR: test_success_reuses_complete_strict_capture_and_analysis (__main__.CaptureTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/test_recover_mst_search.py", line 203, in test_success_reuses_complete_strict_capture_and_analysis
+    output, info, children, sampler, error = self.run_synthetic(folder, member)
+  File "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/test_recover_mst_search.py", line 196, in run_synthetic
+    capture.main()
+  File "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/run_mst_search.py", line 279, in main
+    "platform":platform.platform(),"machine":platform.machine(),
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/platform.py", line 1253, in platform
+    bits, linkage = architecture(sys.executable)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/platform.py", line 679, in architecture
+    fileout = _syscmd_file(executable, '')
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/platform.py", line 637, in _syscmd_file
+    return output.decode('latin-1')
+AttributeError: 'str' object has no attribute 'decode'
+
+======================================================================
+ERROR: test_three_unavailable_samples_stop_before_second_child (__main__.CaptureTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/test_recover_mst_search.py", line 226, in test_three_unavailable_samples_stop_before_second_child
+    output, info, children, sampler, error = self.run_synthetic(folder, mock.Mock(side_effect=OSError("synthetic failure")), exits=False)
+  File "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/test_recover_mst_search.py", line 196, in run_synthetic
+    capture.main()
+  File "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/run_mst_search.py", line 279, in main
+    "platform":platform.platform(),"machine":platform.machine(),
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/platform.py", line 1253, in platform
+    bits, linkage = architecture(sys.executable)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/platform.py", line 679, in architecture
+    fileout = _syscmd_file(executable, '')
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/platform.py", line 637, in _syscmd_file
+    return output.decode('latin-1')
+AttributeError: 'str' object has no attribute 'decode'
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.656s
+
+FAILED (errors=5)

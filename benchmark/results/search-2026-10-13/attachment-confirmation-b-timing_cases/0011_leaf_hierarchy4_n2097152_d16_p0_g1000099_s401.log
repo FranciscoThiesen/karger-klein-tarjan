@@ -1,0 +1,21 @@
+Running five-algorithm MST search leaf_hierarchy4_n2097152_d16_p0 graph_seed=1000099 kkt_seed=401
+generation_seconds=7.07345 reference_certificate_seconds=15.1436
+reference_certificate_v1 {"case_id":"leaf_hierarchy4_n2097152_d16_p0","graph_seed":1000099,"kkt_seed":401,"n":2097152,"m":33554432,"input_fingerprint":1166561253374537261,"topology_fingerprint":10230725862160672531,"validation":"pass"}
+      218.94 real       215.90 user         3.03 sys
+          9031663616  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+             1661356  page reclaims
+                   1  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   1  voluntary context switches
+                  59  involuntary context switches
+        681525571480  instructions retired
+        850472818786  cycles elapsed
+          7271012664  peak memory footprint

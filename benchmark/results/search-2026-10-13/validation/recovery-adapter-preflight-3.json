@@ -1,0 +1,32 @@
+{
+  "validation": "pass",
+  "native_capture_started": false,
+  "recovery_protocol": {
+    "schema": "mst_search_monitor_recovery_v1",
+    "campaign": "attachment-confirmation-b-monitor-recovery",
+    "original_b_status": "failed; never relabeled, rewritten or resumed in place",
+    "provider": "macOS libproc proc_listpids(PROC_PGRP_ONLY), PROC_PIDTASKINFO resident bytes",
+    "scope": "Only the owned native child's newly created process group; no global process inventory",
+    "rss_conversion": "Each member's resident bytes rounded upward to KiB; sum members; shared pages may repeat",
+    "sampler": "One daemon worker at a time; no worker/context-manager joins; timed-out result permanently discarded",
+    "sample_wait_limit_seconds": 5.0,
+    "timeout_policy": "Timeout disables this sampler permanently. Three consecutive unavailable observations stop an active child; a completed child cannot advance to another child after a timeout.",
+    "ordinary_failure_policy": "Terminate above 40 GiB or after three consecutive unavailable observations; retain partial artifacts",
+    "cleanup": "Owned session/group TERM then bounded wait, KILL then bounded wait; group verification bounded by sampler; unknown exit fails closed",
+    "term_wait_seconds": 10.0,
+    "kill_wait_seconds": 5.0,
+    "native_measurement_change": "None: original binary, commands, clocks, boundaries, solver order, rows and certificate checks",
+    "protocol_deviation": "Recovery-only replacement of blocked ps RSS monitoring and unbounded cleanup; seven-helper inventory includes this adapter; sampler durations and gaps are descriptive, not native elapsed-time adjustments"
+  },
+  "python_source_sha256": {
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/run_mst_search.py": "843d65154d232bc12a946ad7d8793ab26840f7785507286a6e4d8ed09dfcad80",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/analyze_mst_search.py": "91d3fcad871444e9325c1465782365b5c3ed08fb2344aeeb62fbfc18254f5ba6",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/run_crossover.py": "1669d3b761e0d4c09c432382c3a2e8738c0031c1c9e6dc69cfcb7734809a052f",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/analyze_continuation.py": "7a0afa5fe802516cb5ec27a7d567a0875c66807aa4a04ce0ff752f0bc31b9168",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/crossover_clocks.py": "725d469933eaf5ead32a38bf52b9f32e46a7ee3d4e386777c257c1ab3929fc0b",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/run_crossover_baselines.py": "2291db9114448516fc5ffb6c4b0fd119d23741bcfa2275ad7f25996c3b73921e",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/recover_mst_search.py": "73f02f494f29b2f9183c9fc889dcda73444fe2ca4a240469a7d57dfec226058b"
+  },
+  "binary_sha256": "8188f6b8717a0a4b4261369ac589ca0a65f2247ebfbfb8c56f98a544bd156faf",
+  "manifest_sha256": "e644f8d70a2a1b305486acb281701233ebae71da61e9c298468dc6827456af22"
+}

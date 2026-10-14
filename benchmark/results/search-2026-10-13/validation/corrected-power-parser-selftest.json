@@ -1,0 +1,14 @@
+{
+  "validation": "pass",
+  "checks": [
+    "offset conversion",
+    "malformed event retained",
+    "DarkWake closes sleep",
+    "preceding sleep and multiple overlaps",
+    "unclosed sleep labeled",
+    "reversed UTC retained",
+    "no row removal"
+  ],
+  "power_event_parser": "wake_requests_excluded_v1",
+  "additional_check": "Wake Requests does not close the 803-second interval"
+}

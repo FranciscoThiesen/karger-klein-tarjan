@@ -1,0 +1,33 @@
+Traceback (most recent call last):
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 507, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1134, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1980, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1178, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['/bin/ps', '-axo', 'pid=,pgid=,rss=,comm=']' timed out after 5 seconds
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/run_mst_search.py", line 361, in <module>
+    main()
+  File "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/run_mst_search.py", line 336, in main
+    if failure:raise failure
+  File "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/run_mst_search.py", line 316, in main
+    observation=sample_rss(process.pid);observations.append(observation)
+  File "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/run_mst_search.py", line 223, in sample_rss
+    result = subprocess.run(["/bin/ps", "-axo", "pid=,pgid=,rss=,comm="], check=True,
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 520, in run
+    process.wait()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1189, in wait
+    return self._wait(timeout=timeout)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1917, in _wait
+    (pid, sts) = self._try_wait(0)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1875, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+  File "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/run_mst_search.py", line 294, in interrupted
+    def interrupted(signum,frame): raise KeyboardInterrupt(f"capture received signal {signum}")
+KeyboardInterrupt: capture received signal 15

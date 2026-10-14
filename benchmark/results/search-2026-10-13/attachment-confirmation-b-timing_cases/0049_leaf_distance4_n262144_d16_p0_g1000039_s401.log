@@ -1,0 +1,21 @@
+Running five-algorithm MST search leaf_distance4_n262144_d16_p0 graph_seed=1000039 kkt_seed=401
+generation_seconds=0.847259 reference_certificate_seconds=1.70158
+reference_certificate_v1 {"case_id":"leaf_distance4_n262144_d16_p0","graph_seed":1000039,"kkt_seed":401,"n":262144,"m":4194304,"input_fingerprint":1567149531115230848,"topology_fingerprint":14577673437003827112,"validation":"pass"}
+       20.76 real        20.43 user         0.27 sys
+          1096925184  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              125859  page reclaims
+                   1  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   1  voluntary context switches
+                7371  involuntary context switches
+         78826932933  instructions retired
+         70639303030  cycles elapsed
+           963708056  peak memory footprint

@@ -9,8 +9,12 @@ The attachment families cross from a loss at 65,536 vertices to a lead at
 262,144, then save about 17–19% at 2,097,152–4,194,304. The strongest paired
 ratio is **0.8082**, at 2,097,152 vertices and 33,554,432 edges. On that input
 KKT takes about **4.32 times Kruskal's time**. These are discovery observations
-from one graph seed, with captures kept separate. Fresh-seed confirmation has
-been declared but has no reported outcome here.
+from one graph seed, with captures kept separate. Fresh-seed campaign A is
+complete: its upper selected cases save 16–19% against the compactor.
+Campaign B was interrupted by a stalled resource monitor after 60 native
+children. Its failed capture is retained, and a separately declared
+[recovery](ATTACHMENT_RECOVERY.md) will finish only the remaining cases.
+Full two-campaign confirmation is not claimed.
 
 This is a focused follow-up to the [implementation and complexity report](../../../docs/kkt-report/REPORT.md)
 and the [previous large-instance study](../crossover-2026-10-13/README.md).
@@ -28,7 +32,8 @@ before timing.
 | Single-edge attachment pilot | Complete: 80 cases, 2,000 timed calls, 400 checked warmups |
 | Larger attachment discovery sizes | Complete: ten cases, 250 timed calls, 50 checked warmups |
 | Attachment work counters and contraction traces | Complete: 16 discovery inputs, 254 compactor rounds, separate instrumented binary |
-| Fresh-seed confirmation | **PENDING**; two selected groups, two complete 12-case campaigns declared |
+| Fresh-seed campaign A | Complete: 1,800 timed calls and 360 checked warmups |
+| Fresh-seed campaign B | **INTERRUPTED**; all 60 completed native children validated (1,500 timed calls, 300 warmups); separately declared 12-child recovery pending |
 
 ## Measurement rules and the original two pilots
 
@@ -253,8 +258,9 @@ CPU median 0.866511; its observed wall range is 0.8590–0.8999. That is a
 Each of those four groups has a measured smaller-size loss and a larger
 lead, so the screen contains observed parity crossings. It does **not**
 pass the confirmation criterion: only one size in each group reaches the
-10% threshold, only one graph seed has been used, and the two fresh-seed
-campaigns have not run. Near-ties remain mixed: hierarchy/d64 at n=65,536
+10% threshold, only one graph seed has been used, and these density groups
+were not selected for fresh-seed confirmation. Near-ties remain mixed:
+hierarchy/d64 at n=65,536
 has three winning and two losing repetitions; hierarchy/d512 at the same
 size has four wins and one loss. Distance/d512 has two wins and three losses.
 
@@ -415,9 +421,9 @@ randomization does. These are observed size points, not a guarantee for all
 intermediate or larger graphs.
 
 KKT loses **all 50 paired trials to each classical solver**, on both wall and
-CPU metrics. Its compactor lead therefore demonstrates a benefit from its
-randomized continuation over repeated quotient compaction on these inputs;
-it does not make KKT the best of the five implementations.
+CPU metrics. The KKT continuation as a whole is faster than repeated quotient
+compaction on these inputs; this does not isolate the cost of each internal
+phase or make KKT the best of the five implementations.
 
 The [strict analysis](attachment-large-analysis/report.md) retains all 250
 timed calls and 50 warmups, with matching certified MST outputs. Two calls
@@ -458,6 +464,15 @@ sampled forest lets its verifier remove heavy edges sooner. Across recursive
 verifier incidences, the ordered d=16 runs reject about 98.36%; this is not
 the fraction of distinct original edges rejected at the root.
 
+There is also a useful first-filter bound. On the ordered b=4,d=16 inputs,
+the first contraction forms the four-vertex stars and the second pairs
+aligned core blocks. Sampling therefore starts with exactly n'=n/8 vertices.
+Under independent half-sampling and a correct sampled minimum spanning
+forest, the expected number of remaining F-light edges is at most
+2(n'-1)<n/4, less than 1/64 of the original m=16n edges. This excludes safe
+edges already selected by the contractions. It is a theoretical residual
+bound, distinct from the measured statistic over recursive verifier incidences.
+
 The [ideal uniform-shortcut model and proof](ATTACHMENT_BOUND.md) explicitly
 count occupied quotient pairs. It predicts **6.9862m** compactor input volume
 at the largest b=4,d=16 case, close to the observed **6.9865m**. For fixed
@@ -488,6 +503,25 @@ the largest ordered compactor volume falls to 5.1001m while KKT falls to about
 work. The d=2 losses remain in the same tables; contraction savings alone do
 not pay for KKT's full costs.
 
+The classical losses put these counters in perspective. At n=1,048,576 and
+b=4, the original Borůvka source makes 20 full original-edge scans, including
+its terminal scan, yet runs faster than KKT on the measured leaf cases.
+That scan count is source-derived; a simple scan and a contraction or
+verification pass have different costs. The
+[separate classical work bounds](CLASSICAL_BOUNDS.md) explain the original
+Borůvka bound and the independent-permutation assumption needed for a
+comparison-sort Kruskal lower bound. Neither supplies a finite runtime
+crossover against those implementations.
+
+![Actual certified attachment graphs and weight controls](attachment-atlas-figures/actual_graph_atlas.png)
+
+The [static graph atlas](attachment-atlas-figures/README.md) shows four actual
+n=1,024,d=16 graphs with the same topology, coordinates and context-edge
+selection. Every MST edge is shown. The ordered hierarchy uses its prescribed
+core backbone; distance allows shortcuts to enter the MST, while shuffled
+and random weights largely replace that backbone. Coordinates illustrate
+the construction; geometric edge length is not the edge cost.
+
 For an interactive view, open the [four small density-16 graphs](attachment-views-d16/README.md)
 or the [sixteen density-2 illustrations](attachment-round-views/README.md).
 Their round sliders reconstruct actual compacting Borůvka contractions and
@@ -507,7 +541,7 @@ those analogies from actual weighted data and identify further tests. At
 fixed b=4,d=16 the core's average degree is 122, so it is relatively high
 degree but asymptotically sparse. No real-network timing claim is made here.
 
-## Prospective confirmation — outcomes PENDING
+## Fresh-seed confirmation and interrupted recovery
 
 The [selection and confirmation declaration](ATTACHMENT_CONFIRMATION.md)
 selects **leaf_hierarchy4 and leaf_distance4, both d=16**, whose largest
@@ -525,8 +559,36 @@ confirmation campaigns each contain 12 cases: the two selected groups at
 at 2,097,152. They use graph seeds 1000039, 1000081 and 1000099 and sampling
 seeds 401 and 503, with five repetitions and one checked warmup per solver.
 The second campaign reverses case order while repeating the same graphs;
-it is not another independent graph sample. Each retains 1,800 timed calls
-and 360 warmups. No outcomes from these captures are asserted here.
+it is not another independent graph sample. Each complete campaign is
+scheduled to retain 1,800 timed calls and 360 warmups.
+
+Campaign A completed and passed its strict analysis and power audit. At the
+two upper sizes, all 120 paired KKT/compactor trials favor KKT. Its paired
+case medians are 0.8355 and 0.8153 for hierarchy, and 0.8416 and 0.8122 for
+distance. All three graph medians win in each case; CPU results preserve
+the direction and threshold. The
+[complete A analysis](attachment-confirmation-a-analysis/report.md) retains
+every smaller case, control and classical loss. This alone does not fulfill
+the declared two-campaign criterion.
+
+The original B capture failed after a stalled `ps` sampler prevented its
+60th native child from finalizing. That child's 30 outputs and native exit
+status zero survive, but the wrapper/controller correctly remain failed.
+The [recovery declaration](ATTACHMENT_RECOVERY.md) preserves this evidence
+and fixes a separate continuation for only the remaining 12 native children.
+No successful original B controller will be manufactured. A numerical
+assessment of interrupted B plus recovery will be reported separately from
+the failure to complete the frozen execution as declared.
+
+B also contains severe elapsed-time/CPU gaps, including a Prim call taking
+805.14 seconds elapsed and 3.63 seconds CPU. The
+[scoped power audit](attachment-confirmation-b-prefix-power-audit/audit.json)
+finds a recorded 803-second clamshell sleep overlapping that call. It
+distinguishes actual wake transitions from scheduled `Wake Requests` records.
+The prefix retains 149 flagged calls; this one sleep interval does not
+explain the broader disturbance.
+Those observations and the RSS-monitor gaps must remain visible; a completed
+recovery cannot retroactively establish quiet host conditions.
 
 A clear
 advantage requires paired case medians at most 0.90 at two adjacent largest

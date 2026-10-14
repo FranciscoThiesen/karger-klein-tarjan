@@ -1,0 +1,38 @@
+{
+  "utc": "2026-10-14T08:27:02.895946+00:00",
+  "probe_pid": 48414,
+  "scope": "Known owned wrapper, its blocked ps child and completed time child only",
+  "validation": "completed",
+  "processes": [
+    {
+      "requested_pid": 74412,
+      "api_return": 64,
+      "errno": 0,
+      "pid": 74412,
+      "ppid": 74408,
+      "pgid": 74408,
+      "status": 2,
+      "flags": 557858832,
+      "comm": "Python",
+      "in_exit": false
+    },
+    {
+      "requested_pid": 17278,
+      "api_return": 64,
+      "errno": 0,
+      "pid": 17278,
+      "ppid": 74412,
+      "pgid": 74408,
+      "status": 2,
+      "flags": 557867024,
+      "comm": "ps",
+      "in_exit": false
+    },
+    {
+      "requested_pid": 4530,
+      "api_return": 0,
+      "errno": 3
+    }
+  ],
+  "finished_utc": "2026-10-14T08:27:02.901128+00:00"
+}

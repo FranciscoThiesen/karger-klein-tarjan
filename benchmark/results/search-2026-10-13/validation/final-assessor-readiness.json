@@ -1,0 +1,23 @@
+{
+  "validation": "pass",
+  "native_benchmarks_started": false,
+  "original_b_validation": "failed",
+  "sources_sha256": {
+    "benchmark/assess_attachment_confirmation.py": "175140825fab0c678f2319f5811c95f62aac99a938d3633f3b2a939885b3c579",
+    "benchmark/assess_attachment_confirmation_test.py": "e6416027f8175a1c6d77ea2833dead8bac3d70c1b39b36e73975db1798d9083e",
+    "benchmark/assess_attachment_recovery.py": "522817105c2dfb036acf206265b473d63ce305fc2be603149da81ad4b8d3e102",
+    "benchmark/assess_attachment_composite.py": "2b0c9e77a8f111adccb891b247774acb11d4d10b534ee85ff0c0d84431d6213c",
+    "benchmark/test_assess_attachment_recovery.py": "684728b7cbba8fd5e05a60c98460a23446f2d1189ba36e7164c00d2fb70990c9",
+    "benchmark/audit_attachment_recovery_power.py": "e7a72cc054c6cfbcb1c6d5c6686e2332864632a12e10b60a9d3f16b6a5ca0c61"
+  },
+  "evidence_sha256": {
+    "benchmark/results/search-2026-10-13/validation/confirmation_assessor_selftest.json": "008723a43c87413eeadfb8371d0da4cf0441a07183e37d6398665754796a500d",
+    "benchmark/results/search-2026-10-13/validation/attachment-recovery-assessor-tests-final.json": "7ce920f28146e0c92244f8b2e2815ae17cc181275990a27eed20e384fdbbf00b",
+    "benchmark/results/search-2026-10-13/validation/corrected-power-parser-selftest.json": "26bfecd8ff2df79dbb267141daebc8b9bd6f421d520b5370cd5f4f557cb80f1e",
+    "benchmark/results/search-2026-10-13/validation/confirmation_a_independent_assessment.json": "66e1e304913e6f2f2ee45e57a75914ac5ac54d8ba63625cc17e8da08defbbf01",
+    "benchmark/results/search-2026-10-13/attachment-confirmation-b-prefix-analysis/provenance.json": "79702092cbebc77507d2db56b6c71027b83f16160ae44582225d1e43940339f8",
+    "benchmark/results/search-2026-10-13/attachment-confirmation-b-prefix-power-audit/audit.json": "c701ac851932f499388dfe1f7aa23edd0391cb8565413f46221b38603cd3143d",
+    "benchmark/results/search-2026-10-13/attachment-confirmation-a-transition-power-audit/audit.json": "79fe3efcda4151a94d883cda688bb4da1cfbd84a039aaa838b91f7b3a9503a3a"
+  },
+  "chronology_limitation": "Python 3.9.6/macOS monotonic origins are process-local here; enforce monotonic sequence within captures, never compare distinct-process monotonic origins. Cross-part order is bound by stopped/release provenance and recorded UTC."
+}

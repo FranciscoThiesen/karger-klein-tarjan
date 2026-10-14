@@ -1,0 +1,38 @@
+{
+  "schema": "mst_search_recovery_adapter_validation_v1",
+  "validation": "pass",
+  "utc": "2026-10-14T16:10:32.953073+00:00",
+  "native_mst_executions": 0,
+  "native_builds": 0,
+  "recovery_capture_not_started": true,
+  "frozen_original_b_validation": "failed",
+  "frozen_original_b_metadata_sha256": "495b0767e4413428d0734fa7dead3bf1810832678ad26f68d303a84c5ff7ba78",
+  "unchanged_frozen_six_helpers": true,
+  "unchanged_native_source_inventory": true,
+  "unchanged_makefile": true,
+  "unchanged_native_binary": true,
+  "python_source_sha256": {
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/run_mst_search.py": "843d65154d232bc12a946ad7d8793ab26840f7785507286a6e4d8ed09dfcad80",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/analyze_mst_search.py": "91d3fcad871444e9325c1465782365b5c3ed08fb2344aeeb62fbfc18254f5ba6",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/run_crossover.py": "1669d3b761e0d4c09c432382c3a2e8738c0031c1c9e6dc69cfcb7734809a052f",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/analyze_continuation.py": "7a0afa5fe802516cb5ec27a7d567a0875c66807aa4a04ce0ff752f0bc31b9168",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/crossover_clocks.py": "725d469933eaf5ead32a38bf52b9f32e46a7ee3d4e386777c257c1ab3929fc0b",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/run_crossover_baselines.py": "2291db9114448516fc5ffb6c4b0fd119d23741bcfa2275ad7f25996c3b73921e",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/recover_mst_search.py": "029a3e0c0ac59c3e4ace487112fbff235b7a4024d8f3ee74906c0be3e438d6c8"
+  },
+  "test_source_sha256": {
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/test_recover_mst_search.py": "a1d6de64f256f793954fbcc0837ae5ebbcd59398fa1745d86604b77bb3ff2e63"
+  },
+  "validation_artifact_sha256": {
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/recovery-adapter-synthetic-tests-4.json": "83b223faf6b10efb98ef30bd9ae94464157911144765a210b9fb13e510a00868",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/recovery-adapter-synthetic-tests-4.log": "1b8708c4161196f72134915f547a884ca6e77421c4635118ae9f4d27965c4a53",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/recovery-adapter-preflight-2.json": "2a0c96ddcb10bf584a82cf5a197fd68cde6c3aadf8dadb32c4a66e719f340166",
+    "/Users/random_person/Desktop/karger-klein-tarjan/benchmark/results/search-2026-10-13/validation/recovery-frozen-analyzer-self-test.json": "0a1efeb0fd2e6997b2b56acf619f1370cc8977ff66c5ea2bdadc165a9270d9c8"
+  },
+  "retained_preliminary_attempts": [
+    "First synthetic run had five test-harness platform mock errors, no native execution; original JSON/log retained. Second run passed12tests.",
+    "Third run added real libproc scoped disposable Python-child smoke and passed13tests.",
+    "Initial CLI preflight correctly did not launch but incorrectly rejected the declared seed tuples because adapter compared tuples to lists; empty redirected stdout retained as recovery-adapter-preflight.json. Fixed and covered by CLI regression test.",
+    "Final fourth synthetic run passed14tests; second CLI preflight passed without native launch."
+  ]
+}

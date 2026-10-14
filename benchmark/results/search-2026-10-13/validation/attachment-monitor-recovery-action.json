@@ -1,0 +1,16 @@
+{
+  "utc": "2026-10-14T08:25:41.427049+00:00",
+  "scope": "Only verified /bin/ps child17278 of owned wrapper74412, after child0060 completed all30 native rows and wrote its time footer",
+  "controller_pid": 74408,
+  "wrapper_pid": 74412,
+  "monitor_pid": 17278,
+  "signal": "SIGKILL",
+  "native_data_modified": false,
+  "native_case_rerun": false,
+  "schedule_changed": false,
+  "probe_sha256": "45c4a8eb12ea38d4d94e744b6b67ded37f02310ab94e15d0bef1326f6d6b7584",
+  "native_csv_sha256": "820f4a9b7d3daa5d5fb18c19439b24c6efbba40f80e62c7649a586a00e94ff74",
+  "native_log_sha256": "3a49b2791ee673511d5c1aaaa2e2e5612036ecf3f67e9bed504475f8a14ea23a",
+  "validation": "signal_sent_termination_not_yet_confirmed",
+  "finished_utc": "2026-10-14T08:25:41.429729+00:00"
+}

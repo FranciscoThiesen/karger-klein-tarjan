@@ -1,0 +1,72 @@
+{
+  "validation": "pass",
+  "purpose": "Small additional actual n1024,d16,g5009,s149 illustrations; not timed pilot inputs",
+  "records": [
+    {
+      "family": "leaf_hierarchy4",
+      "input_sha256": "8ac579cf45ab79959b17a71686d2665099f32976ed7223529fccdc4165aca5e2",
+      "html_sha256": "23791d651061ee82453d84042992c3f0d4e1577d6fa74479ec75a0d9b6f859a8",
+      "summary": {
+        "schema": "attachment_rounds_v1",
+        "validation": "pass",
+        "n": 1024,
+        "m": 16384,
+        "contractions": 9,
+        "terminal_selected_edges": 1023,
+        "native_trace_identity": "not asserted; abstract minimum-edge quotients",
+        "shows_kkt_sampling_or_filtering": false
+      }
+    },
+    {
+      "family": "leaf_distance4",
+      "input_sha256": "c349826250dfab0c7cd50c9b09b1d376ab049df17e1885bafcbb5c73c71232f6",
+      "html_sha256": "909ad33cfeba345f24035b4685831263a307ef93b6dd96aece746480679f9a09",
+      "summary": {
+        "schema": "attachment_rounds_v1",
+        "validation": "pass",
+        "n": 1024,
+        "m": 16384,
+        "contractions": 9,
+        "terminal_selected_edges": 1023,
+        "native_trace_identity": "not asserted; abstract minimum-edge quotients",
+        "shows_kkt_sampling_or_filtering": false
+      }
+    },
+    {
+      "family": "leaf_shuffled4",
+      "input_sha256": "6466716168c165287dd6d261139b598542cb277bf11fee44cce81f3b97b571e6",
+      "html_sha256": "65da54cceba05c16c787459622c9783aafecd37f2210a29f31628519e4d7fdf6",
+      "summary": {
+        "schema": "attachment_rounds_v1",
+        "validation": "pass",
+        "n": 1024,
+        "m": 16384,
+        "contractions": 5,
+        "terminal_selected_edges": 1023,
+        "native_trace_identity": "not asserted; abstract minimum-edge quotients",
+        "shows_kkt_sampling_or_filtering": false
+      }
+    },
+    {
+      "family": "leaf_random4",
+      "input_sha256": "6f74a518d843fc11aa7896edc63e45cf4fa7365728c03b4e99a679e8a8d578be",
+      "html_sha256": "61d50de85c9d38b6e3b016d9b17c54ea3eecede16198326a8c807c8391a772f1",
+      "summary": {
+        "schema": "attachment_rounds_v1",
+        "validation": "pass",
+        "n": 1024,
+        "m": 16384,
+        "contractions": 4,
+        "terminal_selected_edges": 1023,
+        "native_trace_identity": "not asserted; abstract minimum-edge quotients",
+        "shows_kkt_sampling_or_filtering": false
+      }
+    }
+  ],
+  "renderer_sha256": {
+    "benchmark/render_attachment_rounds.py": "226d6513dc68c331ca864506fa5b125d0f36b3808e39e5a1e8e75dcda7a6907a",
+    "benchmark/render_attachment_view.py": "24d49e111e876764e60ae5b44be36b235478fdbc9e84662d1e61c83634173a32"
+  },
+  "native_exports_provenance_sha256": "d1fb101acaf8a1779118dede27fb8d3e134290d5738b7e963eefc14910c87769",
+  "native_trace_identity": "not separately compared for these four additional inputs"
+}
