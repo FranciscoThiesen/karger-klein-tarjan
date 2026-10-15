@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-15T05:28:11.067431+00:00",
+  "scope": "Untimed direct solver/certificate tests; no harness measure() calls",
+  "command": [
+    "bin/retention-control-sanitizer/retention_control_test"
+  ],
+  "exit_status": 0,
+  "options": {
+    "ASAN_OPTIONS": "detect_leaks=1:halt_on_error=1",
+    "UBSAN_OPTIONS": "halt_on_error=1:print_stacktrace=1"
+  },
+  "binary_sha256": "bfada0cacc5b1a37830b98262c754d4c6df9da9f80142f05e2f315031c410fc0",
+  "log_sha256": "de3a08c6ee609a7573716046f578e5427fbfbfdf8c26bcc46478d31ccd5525f8"
+}

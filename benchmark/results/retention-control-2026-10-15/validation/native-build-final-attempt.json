@@ -1,0 +1,19 @@
+{
+  "utc": "2026-10-15T05:26:38.864540+00:00",
+  "command": [
+    "/usr/bin/arch",
+    "-arm64",
+    "/usr/bin/make",
+    "-f",
+    "benchmark/retention_control.mk",
+    "-B",
+    "-j4",
+    "CXX=/usr/bin/clang++",
+    "BUILD_DIR=.build/retention-control",
+    "BIN_DIR=bin/retention-control",
+    "CXXFLAGS=-std=c++17 -O3 -Wall -Wextra -march=native -DKKT_EXPERIMENT_RETAIN_PARALLEL",
+    "retention-control",
+    "retention-control-test"
+  ],
+  "exit_status": 0
+}

@@ -1,0 +1,20 @@
+{
+  "schema": "retention_control_collector_validation_v1",
+  "command": [
+    "/usr/local/opt/python@3.14/bin/python3.14",
+    "-B",
+    "benchmark/test_retention_control.py"
+  ],
+  "scope": "Synthetic Python only; no native solver built or executed",
+  "started_utc": "2026-10-15T05:39:28.483850+00:00",
+  "finished_utc": "2026-10-15T05:39:31.903988+00:00",
+  "exit_status": 0,
+  "validation": "pass",
+  "test_groups": 7,
+  "log": "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/validation/collector-tests.log",
+  "log_sha256": "dac58671365737bafd12413bee65da2a0b6aee6c7631fbfab7d3b80a596883ed",
+  "source_sha256": {
+    "benchmark/run_retention_control.py": "f913b9b0721102489f17eafe9bc82d4886ef3bbfad9d9f2d4963ee84f5df4f85",
+    "benchmark/test_retention_control.py": "7dad1343c4d50cb72de7ee1c0c7933ba0e8a5fa8c7549aa3079d89b54add3d1e"
+  }
+}

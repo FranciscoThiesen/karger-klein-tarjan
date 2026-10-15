@@ -1,0 +1,35 @@
+{
+  "schema": "retention_control_independent_review_v1",
+  "utc": "2026-10-15T05:41:34.181305+00:00",
+  "validation": "pass",
+  "command": [
+    "/usr/local/opt/python@3.14/bin/python3.14",
+    "-B",
+    "benchmark/test_retention_control.py"
+  ],
+  "exit_status": 0,
+  "log": "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/validation/collector-independent-review-tests.log",
+  "log_sha256": "c753e78aa414e79775edb5d06f1f2f1efcf3bbfd095700720890999c43c64dbb",
+  "reviewed_source_sha256": {
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/run_retention_control.py": "f913b9b0721102489f17eafe9bc82d4886ef3bbfad9d9f2d4963ee84f5df4f85",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/test_retention_control.py": "7dad1343c4d50cb72de7ee1c0c7933ba0e8a5fa8c7549aa3079d89b54add3d1e"
+  },
+  "native_build_record_sha256": "251dc8f11be5f770b329a31f6e7d4435bddd6fb375abf71fce0ff3d0222f57e0",
+  "protocol_sha256": "1ffdbec28033256c722461ae9a4d96fabe0be3729f81472639eb9427475a995b",
+  "manifest_sha256": "2d083d60a7e1562b07a8184dd8808d157ce84e1755f1436c3bda68badaef0f56",
+  "scope": "Read-only source/provenance review and mocked Python tests; no native solver launched or built",
+  "review_checks": [
+    "Exact frozen parent helper content with relocation by unique basename",
+    "Exact parent native sources plus three declared additions; original Makefile unchanged",
+    "All eight actual native object hashes equal parent candidate; flags/profile/build/binary bound",
+    "Ten cases, two fresh graph seeds,20 serial children and840outputs",
+    "Six-way position balance,42rows perchild,720timed and120warmup",
+    "Independent certificate, all timestamps, retainedflags, combined/raw equality",
+    "Bounded scoped RSS sampling, poison stopslaunch, verifiedemptyownedgroup afterwrapperexit",
+    "Pooled12 pairedtrial median differs from median-of-graph medians;6trialgraph summaries retained",
+    "All five competitors, both clocks and all absolute times present",
+    "Protocol explicitly separates this campaign from unrun five-solver followup and prior screen"
+  ],
+  "findings": [],
+  "remaining_blockers": []
+}
