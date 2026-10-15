@@ -1,0 +1,50 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "docs/kkt-report/publication-tools/test_plot_complexity_paper_v2.py",
+    "--complexity-package",
+    "benchmark/current_complexity"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "started_utc": "2026-10-15T18:47:39.702394+00:00",
+  "started_monotonic_ns": 23094666,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/plot_complexity_paper_v2.py": "c5d2d6d2d0a712e961a618378cffe9beb14abca6ff02b1cd338139a1193b829d",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/test_plot_complexity_paper_v2.py": "29032c5a03a6964cc5ea4872059d143517e5e73fc73d71042e7219f97a5c57ac",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/plot_complexity.py": "f18ddc540b60ad1556e00b5961dd44683aa999f25e278df91e65d267993aa7fd",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/analyze_complexity.py": "4ccd57d906c3fea7191f6819a6bf57e3aecdfa966b7eb0a11737752cdfc19c3f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/test_analyze_complexity.py": "67e519995e8f1db0d6ab5bf953417d0c67266aa190f6e32da047e3dbc8e7f255"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 85820,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 85820,
+    "members": [],
+    "monotonic_ns": 1101687625,
+    "utc": "2026-10-15T18:47:40.780948+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/plot_complexity_paper_v2.py": "c5d2d6d2d0a712e961a618378cffe9beb14abca6ff02b1cd338139a1193b829d",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/test_plot_complexity_paper_v2.py": "29032c5a03a6964cc5ea4872059d143517e5e73fc73d71042e7219f97a5c57ac",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/plot_complexity.py": "f18ddc540b60ad1556e00b5961dd44683aa999f25e278df91e65d267993aa7fd",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/analyze_complexity.py": "4ccd57d906c3fea7191f6819a6bf57e3aecdfa966b7eb0a11737752cdfc19c3f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/test_analyze_complexity.py": "67e519995e8f1db0d6ab5bf953417d0c67266aa190f6e32da047e3dbc8e7f255"
+  },
+  "finished_utc": "2026-10-15T18:47:40.781354+00:00",
+  "finished_monotonic_ns": 1102102375,
+  "elapsed_seconds": 1.079007709,
+  "stdout": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/paper-v2-mocks-attempt01.stdout",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/paper-v2-mocks-attempt01.stderr",
+  "stderr_sha256": "fc1fdb24c83c3da703a1db280fcd0d58f5f6191424b46f27c6b8e5ed5a90b882"
+}

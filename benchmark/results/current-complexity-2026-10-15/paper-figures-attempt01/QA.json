@@ -1,0 +1,31 @@
+{
+  "schema": "current_complexity_figure_visual_qa_v1",
+  "validation": "pass",
+  "provenance_sha256": "a1053b20bfe06b4752ca880d023763acdbf62230ecc1512143667ee28e6c61de",
+  "guard_receipt_sha256": "e749d45ac3c76228e9745308aaf37ff0db7fa5c4dbf7b18894efd6cb68504a6b",
+  "png_sha256": {
+    "paper_normalized_native_steady.png": "0b8879bb5009a09e96c3987119ce18eaf2aee4bb5ef9786c22b6345a0f625b85",
+    "paper_normalized_native_process_cpu.png": "25a14db04d6365707988c1653a18862d99d099d2b13431cc492a51d5e335af22",
+    "paper_google_cpu_models_full11.png": "4601e2b49423034330e5c6fa57204672f354724176a1ee59293aa527a5fff039",
+    "paper_normalized_library_process_cpu.png": "0786038b879ee6abef78930a710817b28325ddf7175dc61e48f25e4293537ed5",
+    "paper_google_cpu_models_upper6.png": "f066ec9d711c80984dac59a420b8adfad6df2dc833a40de80a760f6a74f6741d",
+    "paper_normalized_library_manual.png": "51c7709c940ba2de14020597adde1c696fd4eab5f3818bde95cbab3c2bc6fca8"
+  },
+  "all_input_and_output_hashes_rechecked": true,
+  "reviewer": "multigraph_design",
+  "inspection": "Every PNG at original resolution through view_image",
+  "checks": [
+    "complete families, graph/sampler labels and endpoints",
+    "all clock distinctions and full observed ranges",
+    "all 24 model rows and six model columns",
+    "legends, labels and captions visible without clipping",
+    "matching clock panel bounds; no removed observations"
+  ],
+  "root_second_review": {
+    "status": "pass",
+    "scope": "all six paper PNGs at original resolution",
+    "evidence": "Root message confirms all three panels/four G-S curves and both full 24-row heatmaps readable; no clipping"
+  },
+  "pdf_page_scale_qa": "pending",
+  "native_solver_execution": false
+}

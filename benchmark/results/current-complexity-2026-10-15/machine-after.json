@@ -1,0 +1,85 @@
+{
+  "schema": "current_complexity_machine_metadata_v1",
+  "phase": "after",
+  "created_utc": "2026-10-15T19:57:08.994566+00:00",
+  "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/launch-preparation/machine_power.py",
+  "source_sha256": "06a8b1a843a6de6fff2b709e6b114921a88103d3243b1315b7f4a767f0601664",
+  "validation": "pass",
+  "commands": [
+    {
+      "command": [
+        "/usr/bin/arch"
+      ],
+      "started_utc": "2026-10-15T19:57:08.994700+00:00",
+      "timeout_seconds": 15,
+      "exit_status": 0,
+      "stdout": "arm64",
+      "stderr": "",
+      "finished_utc": "2026-10-15T19:57:08.997710+00:00"
+    },
+    {
+      "command": [
+        "/usr/sbin/sysctl",
+        "-n",
+        "machdep.cpu.brand_string"
+      ],
+      "started_utc": "2026-10-15T19:57:08.997715+00:00",
+      "timeout_seconds": 15,
+      "exit_status": 0,
+      "stdout": "Apple M3 Max\n",
+      "stderr": "",
+      "finished_utc": "2026-10-15T19:57:09.000387+00:00"
+    },
+    {
+      "command": [
+        "/usr/sbin/sysctl",
+        "-n",
+        "hw.memsize"
+      ],
+      "started_utc": "2026-10-15T19:57:09.000395+00:00",
+      "timeout_seconds": 15,
+      "exit_status": 0,
+      "stdout": "137438953472\n",
+      "stderr": "",
+      "finished_utc": "2026-10-15T19:57:09.002255+00:00"
+    },
+    {
+      "command": [
+        "/usr/bin/sw_vers"
+      ],
+      "started_utc": "2026-10-15T19:57:09.002261+00:00",
+      "timeout_seconds": 15,
+      "exit_status": 0,
+      "stdout": "ProductName:\t\tmacOS\nProductVersion:\t\t26.6.2\nBuildVersion:\t\t25G83\n",
+      "stderr": "",
+      "finished_utc": "2026-10-15T19:57:09.007919+00:00"
+    },
+    {
+      "command": [
+        "/usr/sbin/sysctl",
+        "vm.swapusage"
+      ],
+      "started_utc": "2026-10-15T19:57:09.007926+00:00",
+      "timeout_seconds": 15,
+      "exit_status": 0,
+      "stdout": "vm.swapusage: total = 5120.00M  used = 3864.62M  free = 1255.38M  (encrypted)\n",
+      "stderr": "",
+      "finished_utc": "2026-10-15T19:57:09.009966+00:00"
+    },
+    {
+      "command": [
+        "/usr/bin/pmset",
+        "-g",
+        "assertions"
+      ],
+      "started_utc": "2026-10-15T19:57:09.009972+00:00",
+      "timeout_seconds": 15,
+      "exit_status": 0,
+      "stdout": "2026-10-15 12:57:09 -0700 \nNo assertions.\nKernel Assertions: 0x100=MAGICWAKE\n   id=591  level=255 0x100=MAGICWAKE creat=  mod= description=en0 owner=IOSkywalkNetworkBSDClient\n",
+      "stderr": "",
+      "finished_utc": "2026-10-15T19:57:09.019093+00:00"
+    }
+  ],
+  "sleep_inhibition_verified": false,
+  "note": "Metadata only. Prior caffeinate attempts failed; no verified sleep inhibition or thermal stability. Architecture output describes this metadata process, not the already proven arm64 solver binary. Unrelated host activity is uncontrolled."
+}

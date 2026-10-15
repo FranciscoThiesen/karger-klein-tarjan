@@ -1,0 +1,29 @@
+{
+  "schema": "current_complexity_figure_visual_qa_v1",
+  "validation": "pass",
+  "provenance_sha256": "835e5886498db1fc7f8e243ada0b1372015f640c775c458b5c4ab73ac88d5132",
+  "guard_receipt_sha256": "b55febe1fe83586d2a702c5bbf6b422b58c6cdee1aa6ab844df0fdf0e6f7cc1b",
+  "png_sha256": {
+    "normalized_native_steady.png": "6a2a5d0e29b7f3dada09f935e412c7ee72327e260f3b9066c71ed0d46ec530b6",
+    "normalized_native_process_cpu.png": "ee63bdc12930acecf366aa16315c6f874cac682024700b1dd1a2094759c49518",
+    "google_cpu_models.png": "8293577f5b14716d9820f86cd5d9fd5d5d0c06ad1c1a9884e29847a9588775bd",
+    "normalized_library_process_cpu.png": "ba5c6e0ef84674d89810f1c17689c3434e8301dae1a07269e7fb7d4bde54472a",
+    "normalized_library_manual.png": "2b397954ba9a57d17ccc42e3a96341a61a1fa2f26ac4e8a13d16517d03a25f1e"
+  },
+  "all_input_and_output_hashes_rechecked": true,
+  "reviewer": "multigraph_design",
+  "inspection": "Every PNG at original resolution through view_image",
+  "checks": [
+    "complete families, graph/sampler labels and endpoints",
+    "all clock distinctions and full observed ranges",
+    "all 24 model rows and six model columns",
+    "legends, labels and captions visible without clipping",
+    "matching clock panel bounds; no removed observations"
+  ],
+  "root_second_review": {
+    "status": "not claimed",
+    "scope": "original five reviewed by multigraph_design"
+  },
+  "pdf_page_scale_qa": "pending",
+  "native_solver_execution": false
+}
