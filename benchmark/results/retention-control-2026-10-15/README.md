@@ -180,8 +180,10 @@ the reduced graph into `G_tuples` immediately before its positional verifier.
 An internal overload could read the existing edge records directly. The proposed
 experiment will preserve sampling, forest construction, filter marks and edge
 order, and compare newly built tuple and Edge paths on fresh paired timings.
-It is not yet a measured improvement. Early temporary release and in-place
-filtering are separate possible repairs, not silently bundled changes.
+The subsequent [direct-edge experiment](../edge-view-2026-10-15/README.md)
+measures a 2.9–6.8% reduction across its ten case medians, while retained-edge
+Boruvka still wins all direct comparisons. Early temporary release and in-place
+filtering remain separate possible repairs, not silently bundled changes.
 
 ## Correctness, resources and limits
 

@@ -30,6 +30,13 @@ compactor, but retained-edge Borůvka beats KKT in every one of its 120 paired
 comparisons on both clocks. The earlier lead therefore does not establish a
 win over Borůvka using the same cheaper contraction.
 
+**Experimental follow-up, 15 October:** the [direct-edge verifier study](../../benchmark/results/edge-view-2026-10-15/README.md)
+removes one full graph copy and reduces KKT's fresh paired case medians by
+2.9–6.8%, with all 1,680 outputs validated. Retained-edge Borůvka still wins
+every direct comparison. The report includes both clocks, unchanged-solver
+drift, all losses, and the expected-complexity qualifications of retaining
+parallel edges. It does not establish a crossover against that stronger control.
+
 This report asks three distinct questions: whether the original implementation faithfully realized KKT's local complexity bounds; whether the current implementation *measures* like linear time; and which graph structures make it competitive in practice. The answers come from source inspection, certified benchmark outputs, separate work counters, two complete new timing campaigns, and a controlled comparison with repeated compacting Borůvka steps.
 
 The main document is this Markdown file. The [HTML edition](report.html) adds a fully offline, interactive 3D graph explorer. The [standalone explorer](graph-explorer.html) exposes actual contraction and filtering results for seven complete small graphs. A paginated companion checks the requested 40-page limit.

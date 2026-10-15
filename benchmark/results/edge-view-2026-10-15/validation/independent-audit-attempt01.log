@@ -1,0 +1,348 @@
+{
+  "validation": "pass",
+  "checked_outputs": 1680,
+  "within_variant_pairs": 2400,
+  "cross_variant_pairs": 1440,
+  "strong_crossovers": [
+    {
+      "variant": "tuple",
+      "family": "gnm_random",
+      "density": 16,
+      "competitor": "compacting_boruvka",
+      "classification": "strong_observed_crossover",
+      "lower_measured_n": 4096,
+      "upper_measured_n": 1048576,
+      "point_states": "4096:loss;1048576:strong_win"
+    },
+    {
+      "variant": "tuple",
+      "family": "gnm_random",
+      "density": 128,
+      "competitor": "compacting_boruvka",
+      "classification": "strong_observed_crossover",
+      "lower_measured_n": 4096,
+      "upper_measured_n": 262144,
+      "point_states": "4096:loss;262144:strong_win"
+    },
+    {
+      "variant": "tuple",
+      "family": "leaf_distance4",
+      "density": 16,
+      "competitor": "compacting_boruvka",
+      "classification": "strong_observed_crossover",
+      "lower_measured_n": 65536,
+      "upper_measured_n": 262144,
+      "point_states": "65536:loss;262144:strong_win;2097152:strong_win"
+    },
+    {
+      "variant": "tuple",
+      "family": "leaf_distance4",
+      "density": 16,
+      "competitor": "boruvka",
+      "classification": "strong_observed_crossover",
+      "lower_measured_n": 262144,
+      "upper_measured_n": 2097152,
+      "point_states": "65536:loss;262144:loss;2097152:strong_win"
+    },
+    {
+      "variant": "tuple",
+      "family": "leaf_hierarchy4",
+      "density": 16,
+      "competitor": "compacting_boruvka",
+      "classification": "strong_observed_crossover",
+      "lower_measured_n": 65536,
+      "upper_measured_n": 262144,
+      "point_states": "65536:loss;262144:strong_win;2097152:strong_win"
+    },
+    {
+      "variant": "tuple",
+      "family": "leaf_hierarchy4",
+      "density": 16,
+      "competitor": "boruvka",
+      "classification": "strong_observed_crossover",
+      "lower_measured_n": 262144,
+      "upper_measured_n": 2097152,
+      "point_states": "65536:loss;262144:loss;2097152:strong_win"
+    },
+    {
+      "variant": "edge",
+      "family": "gnm_random",
+      "density": 16,
+      "competitor": "compacting_boruvka",
+      "classification": "strong_observed_crossover",
+      "lower_measured_n": 4096,
+      "upper_measured_n": 1048576,
+      "point_states": "4096:loss;1048576:strong_win"
+    },
+    {
+      "variant": "edge",
+      "family": "gnm_random",
+      "density": 128,
+      "competitor": "compacting_boruvka",
+      "classification": "strong_observed_crossover",
+      "lower_measured_n": 4096,
+      "upper_measured_n": 262144,
+      "point_states": "4096:loss;262144:strong_win"
+    },
+    {
+      "variant": "edge",
+      "family": "leaf_distance4",
+      "density": 16,
+      "competitor": "boruvka",
+      "classification": "strong_observed_crossover",
+      "lower_measured_n": 262144,
+      "upper_measured_n": 2097152,
+      "point_states": "65536:loss;262144:loss;2097152:strong_win"
+    },
+    {
+      "variant": "edge",
+      "family": "leaf_hierarchy4",
+      "density": 16,
+      "competitor": "boruvka",
+      "classification": "strong_observed_crossover",
+      "lower_measured_n": 262144,
+      "upper_measured_n": 2097152,
+      "point_states": "65536:loss;262144:loss;2097152:strong_win"
+    }
+  ],
+  "within_variant_wins": [
+    {
+      "variant": "tuple",
+      "competitor": "compacting_boruvka",
+      "metric": "wall",
+      "individual_wins": 74,
+      "individual_pairs": 120
+    },
+    {
+      "variant": "tuple",
+      "competitor": "compacting_boruvka",
+      "metric": "cpu",
+      "individual_wins": 74,
+      "individual_pairs": 120
+    },
+    {
+      "variant": "tuple",
+      "competitor": "multigraph_boruvka",
+      "metric": "wall",
+      "individual_wins": 0,
+      "individual_pairs": 120
+    },
+    {
+      "variant": "tuple",
+      "competitor": "multigraph_boruvka",
+      "metric": "cpu",
+      "individual_wins": 0,
+      "individual_pairs": 120
+    },
+    {
+      "variant": "tuple",
+      "competitor": "kruskal",
+      "metric": "wall",
+      "individual_wins": 13,
+      "individual_pairs": 120
+    },
+    {
+      "variant": "tuple",
+      "competitor": "kruskal",
+      "metric": "cpu",
+      "individual_wins": 13,
+      "individual_pairs": 120
+    },
+    {
+      "variant": "tuple",
+      "competitor": "prim",
+      "metric": "wall",
+      "individual_wins": 28,
+      "individual_pairs": 120
+    },
+    {
+      "variant": "tuple",
+      "competitor": "prim",
+      "metric": "cpu",
+      "individual_wins": 28,
+      "individual_pairs": 120
+    },
+    {
+      "variant": "tuple",
+      "competitor": "boruvka",
+      "metric": "wall",
+      "individual_wins": 24,
+      "individual_pairs": 120
+    },
+    {
+      "variant": "tuple",
+      "competitor": "boruvka",
+      "metric": "cpu",
+      "individual_wins": 24,
+      "individual_pairs": 120
+    },
+    {
+      "variant": "edge",
+      "competitor": "compacting_boruvka",
+      "metric": "wall",
+      "individual_wins": 92,
+      "individual_pairs": 120
+    },
+    {
+      "variant": "edge",
+      "competitor": "compacting_boruvka",
+      "metric": "cpu",
+      "individual_wins": 92,
+      "individual_pairs": 120
+    },
+    {
+      "variant": "edge",
+      "competitor": "multigraph_boruvka",
+      "metric": "wall",
+      "individual_wins": 0,
+      "individual_pairs": 120
+    },
+    {
+      "variant": "edge",
+      "competitor": "multigraph_boruvka",
+      "metric": "cpu",
+      "individual_wins": 0,
+      "individual_pairs": 120
+    },
+    {
+      "variant": "edge",
+      "competitor": "kruskal",
+      "metric": "wall",
+      "individual_wins": 18,
+      "individual_pairs": 120
+    },
+    {
+      "variant": "edge",
+      "competitor": "kruskal",
+      "metric": "cpu",
+      "individual_wins": 18,
+      "individual_pairs": 120
+    },
+    {
+      "variant": "edge",
+      "competitor": "prim",
+      "metric": "wall",
+      "individual_wins": 33,
+      "individual_pairs": 120
+    },
+    {
+      "variant": "edge",
+      "competitor": "prim",
+      "metric": "cpu",
+      "individual_wins": 33,
+      "individual_pairs": 120
+    },
+    {
+      "variant": "edge",
+      "competitor": "boruvka",
+      "metric": "wall",
+      "individual_wins": 24,
+      "individual_pairs": 120
+    },
+    {
+      "variant": "edge",
+      "competitor": "boruvka",
+      "metric": "cpu",
+      "individual_wins": 24,
+      "individual_pairs": 120
+    }
+  ],
+  "cross_variant_drift": [
+    {
+      "algorithm": "kkt",
+      "metric": "wall",
+      "edge_faster_pairs": 115,
+      "individual_pairs": 120,
+      "pooled_case_ratio_min": 0.9320925790483585,
+      "pooled_case_ratio_max": 0.970651779527189
+    },
+    {
+      "algorithm": "kkt",
+      "metric": "cpu",
+      "edge_faster_pairs": 115,
+      "individual_pairs": 120,
+      "pooled_case_ratio_min": 0.9321041101987778,
+      "pooled_case_ratio_max": 0.9706513798522449
+    },
+    {
+      "algorithm": "compacting_boruvka",
+      "metric": "wall",
+      "edge_faster_pairs": 54,
+      "individual_pairs": 120,
+      "pooled_case_ratio_min": 0.9726460023029031,
+      "pooled_case_ratio_max": 1.0159457268827528
+    },
+    {
+      "algorithm": "compacting_boruvka",
+      "metric": "cpu",
+      "edge_faster_pairs": 54,
+      "individual_pairs": 120,
+      "pooled_case_ratio_min": 0.972648856055312,
+      "pooled_case_ratio_max": 1.015946261376341
+    },
+    {
+      "algorithm": "multigraph_boruvka",
+      "metric": "wall",
+      "edge_faster_pairs": 49,
+      "individual_pairs": 120,
+      "pooled_case_ratio_min": 0.9956614375394726,
+      "pooled_case_ratio_max": 1.0113583757483546
+    },
+    {
+      "algorithm": "multigraph_boruvka",
+      "metric": "cpu",
+      "edge_faster_pairs": 49,
+      "individual_pairs": 120,
+      "pooled_case_ratio_min": 0.9956622655971047,
+      "pooled_case_ratio_max": 1.0112311884551077
+    },
+    {
+      "algorithm": "kruskal",
+      "metric": "wall",
+      "edge_faster_pairs": 61,
+      "individual_pairs": 120,
+      "pooled_case_ratio_min": 0.9962434235136092,
+      "pooled_case_ratio_max": 1.0147863148863394
+    },
+    {
+      "algorithm": "kruskal",
+      "metric": "cpu",
+      "edge_faster_pairs": 61,
+      "individual_pairs": 120,
+      "pooled_case_ratio_min": 0.9962450810558411,
+      "pooled_case_ratio_max": 1.0148410713335412
+    },
+    {
+      "algorithm": "prim",
+      "metric": "wall",
+      "edge_faster_pairs": 63,
+      "individual_pairs": 120,
+      "pooled_case_ratio_min": 0.988560253364061,
+      "pooled_case_ratio_max": 1.0081202188607474
+    },
+    {
+      "algorithm": "prim",
+      "metric": "cpu",
+      "edge_faster_pairs": 63,
+      "individual_pairs": 120,
+      "pooled_case_ratio_min": 0.9885609578540879,
+      "pooled_case_ratio_max": 1.0080960473652638
+    },
+    {
+      "algorithm": "boruvka",
+      "metric": "wall",
+      "edge_faster_pairs": 84,
+      "individual_pairs": 120,
+      "pooled_case_ratio_min": 0.9805484422676013,
+      "pooled_case_ratio_max": 1.004733798925999
+    },
+    {
+      "algorithm": "boruvka",
+      "metric": "cpu",
+      "edge_faster_pairs": 84,
+      "individual_pairs": 120,
+      "pooled_case_ratio_min": 0.9805016013455912,
+      "pooled_case_ratio_max": 1.0047291867413928
+    }
+  ]
+}
