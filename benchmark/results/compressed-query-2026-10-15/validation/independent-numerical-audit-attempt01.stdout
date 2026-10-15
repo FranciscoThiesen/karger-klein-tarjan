@@ -1,0 +1,285 @@
+{
+  "validation": "pass",
+  "checked_outputs": 1008,
+  "table_counts": {
+    "paired_ratios": 1440,
+    "variant_pairs": 864,
+    "realization_comparisons": 240,
+    "graph_comparisons": 240,
+    "sampling_comparisons": 120,
+    "comparisons": 120,
+    "realization_variant_comparisons": 144,
+    "graph_variant_comparisons": 144,
+    "sampling_variant_comparisons": 72,
+    "variant_comparisons": 72,
+    "realization_summary": 288,
+    "graph_summary": 288,
+    "sampling_summary": 144,
+    "summary": 144,
+    "strong_crossover_classifications": 30
+  },
+  "strong_crossovers": [
+    {
+      "variant": "reference",
+      "family": "gnm_random",
+      "density": 16,
+      "competitor": "compacting_boruvka",
+      "classification": "strong_observed_crossover",
+      "lower_measured_n": 4096,
+      "upper_measured_n": 1048576,
+      "small_state": "loss",
+      "large_state": "strong_lead"
+    },
+    {
+      "variant": "compressed",
+      "family": "gnm_random",
+      "density": 16,
+      "competitor": "compacting_boruvka",
+      "classification": "strong_observed_crossover",
+      "lower_measured_n": 4096,
+      "upper_measured_n": 1048576,
+      "small_state": "loss",
+      "large_state": "strong_lead"
+    }
+  ],
+  "within_variant_wins": [
+    {
+      "variant": "reference",
+      "competitor": "compacting_boruvka",
+      "metric": "wall",
+      "individual_pairs": 72,
+      "individual_wins": 59
+    },
+    {
+      "variant": "reference",
+      "competitor": "compacting_boruvka",
+      "metric": "cpu",
+      "individual_pairs": 72,
+      "individual_wins": 59
+    },
+    {
+      "variant": "reference",
+      "competitor": "multigraph_boruvka",
+      "metric": "wall",
+      "individual_pairs": 72,
+      "individual_wins": 0
+    },
+    {
+      "variant": "reference",
+      "competitor": "multigraph_boruvka",
+      "metric": "cpu",
+      "individual_pairs": 72,
+      "individual_wins": 0
+    },
+    {
+      "variant": "reference",
+      "competitor": "kruskal",
+      "metric": "wall",
+      "individual_pairs": 72,
+      "individual_wins": 7
+    },
+    {
+      "variant": "reference",
+      "competitor": "kruskal",
+      "metric": "cpu",
+      "individual_pairs": 72,
+      "individual_wins": 7
+    },
+    {
+      "variant": "reference",
+      "competitor": "prim",
+      "metric": "wall",
+      "individual_pairs": 72,
+      "individual_wins": 24
+    },
+    {
+      "variant": "reference",
+      "competitor": "prim",
+      "metric": "cpu",
+      "individual_pairs": 72,
+      "individual_wins": 24
+    },
+    {
+      "variant": "reference",
+      "competitor": "boruvka",
+      "metric": "wall",
+      "individual_pairs": 72,
+      "individual_wins": 0
+    },
+    {
+      "variant": "reference",
+      "competitor": "boruvka",
+      "metric": "cpu",
+      "individual_pairs": 72,
+      "individual_wins": 0
+    },
+    {
+      "variant": "compressed",
+      "competitor": "compacting_boruvka",
+      "metric": "wall",
+      "individual_pairs": 72,
+      "individual_wins": 60
+    },
+    {
+      "variant": "compressed",
+      "competitor": "compacting_boruvka",
+      "metric": "cpu",
+      "individual_pairs": 72,
+      "individual_wins": 60
+    },
+    {
+      "variant": "compressed",
+      "competitor": "multigraph_boruvka",
+      "metric": "wall",
+      "individual_pairs": 72,
+      "individual_wins": 12
+    },
+    {
+      "variant": "compressed",
+      "competitor": "multigraph_boruvka",
+      "metric": "cpu",
+      "individual_pairs": 72,
+      "individual_wins": 12
+    },
+    {
+      "variant": "compressed",
+      "competitor": "kruskal",
+      "metric": "wall",
+      "individual_pairs": 72,
+      "individual_wins": 2
+    },
+    {
+      "variant": "compressed",
+      "competitor": "kruskal",
+      "metric": "cpu",
+      "individual_pairs": 72,
+      "individual_wins": 2
+    },
+    {
+      "variant": "compressed",
+      "competitor": "prim",
+      "metric": "wall",
+      "individual_pairs": 72,
+      "individual_wins": 24
+    },
+    {
+      "variant": "compressed",
+      "competitor": "prim",
+      "metric": "cpu",
+      "individual_pairs": 72,
+      "individual_wins": 24
+    },
+    {
+      "variant": "compressed",
+      "competitor": "boruvka",
+      "metric": "wall",
+      "individual_pairs": 72,
+      "individual_wins": 0
+    },
+    {
+      "variant": "compressed",
+      "competitor": "boruvka",
+      "metric": "cpu",
+      "individual_pairs": 72,
+      "individual_wins": 0
+    }
+  ],
+  "cross_variant_drift": [
+    {
+      "algorithm": "kkt",
+      "metric": "wall",
+      "individual_pairs": 72,
+      "compressed_faster_pairs": 37,
+      "pooled_case_ratio_min": 0.8536241610108395,
+      "pooled_case_ratio_max": 1.0748943243920612
+    },
+    {
+      "algorithm": "kkt",
+      "metric": "cpu",
+      "individual_pairs": 72,
+      "compressed_faster_pairs": 37,
+      "pooled_case_ratio_min": 0.8536234819969142,
+      "pooled_case_ratio_max": 1.074880572689914
+    },
+    {
+      "algorithm": "compacting_boruvka",
+      "metric": "wall",
+      "individual_pairs": 72,
+      "compressed_faster_pairs": 27,
+      "pooled_case_ratio_min": 0.9957378119150446,
+      "pooled_case_ratio_max": 1.0370549604769899
+    },
+    {
+      "algorithm": "compacting_boruvka",
+      "metric": "cpu",
+      "individual_pairs": 72,
+      "compressed_faster_pairs": 27,
+      "pooled_case_ratio_min": 0.9957371586498717,
+      "pooled_case_ratio_max": 1.0370444951058893
+    },
+    {
+      "algorithm": "multigraph_boruvka",
+      "metric": "wall",
+      "individual_pairs": 72,
+      "compressed_faster_pairs": 22,
+      "pooled_case_ratio_min": 0.9992181708478267,
+      "pooled_case_ratio_max": 1.0103326790492824
+    },
+    {
+      "algorithm": "multigraph_boruvka",
+      "metric": "cpu",
+      "individual_pairs": 72,
+      "compressed_faster_pairs": 22,
+      "pooled_case_ratio_min": 0.9990898348872738,
+      "pooled_case_ratio_max": 1.010327917041342
+    },
+    {
+      "algorithm": "kruskal",
+      "metric": "wall",
+      "individual_pairs": 72,
+      "compressed_faster_pairs": 23,
+      "pooled_case_ratio_min": 0.9973415554129815,
+      "pooled_case_ratio_max": 1.0137273689553465
+    },
+    {
+      "algorithm": "kruskal",
+      "metric": "cpu",
+      "individual_pairs": 72,
+      "compressed_faster_pairs": 23,
+      "pooled_case_ratio_min": 0.9973410995091254,
+      "pooled_case_ratio_max": 1.013728786704388
+    },
+    {
+      "algorithm": "prim",
+      "metric": "wall",
+      "individual_pairs": 72,
+      "compressed_faster_pairs": 33,
+      "pooled_case_ratio_min": 0.9682583902293664,
+      "pooled_case_ratio_max": 1.019569799237605
+    },
+    {
+      "algorithm": "prim",
+      "metric": "cpu",
+      "individual_pairs": 72,
+      "compressed_faster_pairs": 33,
+      "pooled_case_ratio_min": 0.9682574139542963,
+      "pooled_case_ratio_max": 1.0195820310082766
+    },
+    {
+      "algorithm": "boruvka",
+      "metric": "wall",
+      "individual_pairs": 72,
+      "compressed_faster_pairs": 40,
+      "pooled_case_ratio_min": 0.9898297510222875,
+      "pooled_case_ratio_max": 1.0059108030555606
+    },
+    {
+      "algorithm": "boruvka",
+      "metric": "cpu",
+      "individual_pairs": 72,
+      "compressed_faster_pairs": 40,
+      "pooled_case_ratio_min": 0.9898296676813312,
+      "pooled_case_ratio_max": 1.005907838906842
+    }
+  ]
+}

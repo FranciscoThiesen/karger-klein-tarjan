@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/usr/bin/arch",
+    "-arm64",
+    "/usr/bin/caffeinate",
+    "-i",
+    "-t",
+    "14400"
+  ],
+  "started_utc": "2026-10-15T12:13:18.503680+00:00",
+  "pid": 31470,
+  "process_still_running": false,
+  "exit_status": 1,
+  "stdout": "",
+  "stderr": "Failed to create PreventUserIdleSystemSleep assertion\n",
+  "assertions_query_exit": 0,
+  "assertions_stdout": "2026-10-15 05:13:19 -0700 \nNo assertions.\nKernel Assertions: 0x100=MAGICWAKE\n   id=591  level=255 0x100=MAGICWAKE creat=  mod= description=en0 owner=IOSkywalkNetworkBSDClient\n",
+  "assertions_stderr": "",
+  "sleep_inhibition_verified": false,
+  "note": "Retried outside performance capture following latest user request; no global power settings changed."
+}

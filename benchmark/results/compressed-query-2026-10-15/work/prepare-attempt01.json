@@ -1,0 +1,25 @@
+{
+  "schema": "compressed_work_preparation_execution_v1",
+  "command": [
+    "/usr/local/opt/python@3.14/bin/python3.14",
+    "-B",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/work/collect.py",
+    "prepare",
+    "--timing-capture",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired.json",
+    "--freeze",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/work/freeze.json"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-compressed-queries",
+  "collector_sha256": "6bba53051d5ce6565b6eaff43a9118f20d4eeb5491ac25686e2707c50233fda1",
+  "protocol_sha256": "cb646f8f2558371480990098b31b9625f513151ae19cee58b6b29e77fd258b77",
+  "timing_capture_sha256": "ef90d2e0d3537f073886ac5b04ed3603d0a33d81a293082573be420e70511950",
+  "started_utc": "2026-10-15T10:57:18.071813+00:00",
+  "exit_status": 0,
+  "status": "pass",
+  "elapsed_seconds": 0.5163453752174973,
+  "finished_utc": "2026-10-15T10:57:18.588686+00:00",
+  "log": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/work/prepare-attempt01.log",
+  "log_sha256": "55d0c0c534e0b97924880552f5c88e095cf13a692c4d0a4ab180569154514451",
+  "freeze_sha256": "6fe07ed1d07ab5fc0a374a4e2090022589e3f91ade3f15940c48a58b34549a2b"
+}

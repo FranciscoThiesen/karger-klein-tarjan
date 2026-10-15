@@ -1,0 +1,977 @@
+{
+  "schema": "heldout_families_figures_v1",
+  "validation": "pass",
+  "capture": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout.json",
+  "input_sha256": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout.json": "df8041a26629bc6aa16f114501d316b0d94be25db3543f49a60d113d27ba6543",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout.csv": "70feaf96fe332d3215a31bb5bfa81b5428ea0ac5743ce922c0b586ba43a8d507",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/freeze.json": "6b120affb241e447ce5875645e7b746dfd1164a03aeabefffd4d42f5a01ba28f",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/freeze.json": "bd65da13058d3e9cfa58919a0fe5e02b8a46b1d0b8fe7f05801692d5a0866df9",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0001_leaf_distance4_n1024_d32_p0_g9000011_s2003.csv": "5fef20011fa13c98b62917875b5a3c4ae5e08fc69408933c75cbe735acb77d13",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0001_leaf_distance4_n1024_d32_p0_g9000011_s2003.log": "b0b5a97c280a5140726ffb7f642c26b3dce2296e14e06619b8d14a9222c42296",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0001_leaf_distance4_n1024_d32_p0_g9000011_s2003.rss.jsonl": "026090cdb95054bdd937de40444954c55613c529f8597d8e851f9c970cd5fd13",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0002_leaf_shuffled4_n1024_d32_p0_g9000011_s2003.csv": "cb4a8cd227343561fc14d24025e115bf2694e07ed991bf0509b78cc3a09db317",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0002_leaf_shuffled4_n1024_d32_p0_g9000011_s2003.log": "a374ac7c6c5a89abeb9933edd118035e47500dc18c1989e1ceafb8e4e339cbcb",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0002_leaf_shuffled4_n1024_d32_p0_g9000011_s2003.rss.jsonl": "42f37f0fdfe4508a967dc4607d362b8f7479826f0569450861d5b4637ab585b1",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0003_grid2d_metric_n1024_d32_p0_g9000011_s2003.csv": "c037407539350f273c37b3e4afba07796b2f375b3658447b5395a4b8bfd673c9",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0003_grid2d_metric_n1024_d32_p0_g9000011_s2003.log": "4d727aecf83144eb7a8c058aafc5ebf8b1ec1ac5c1b5a8f8a1c9bddfa48e0f2b",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0003_grid2d_metric_n1024_d32_p0_g9000011_s2003.rss.jsonl": "836eeffb6ad8d42fa2487adcedc4aa23070c776db49b003e89eeda02227ff988",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0004_grid2d_random_n1024_d32_p0_g9000011_s2003.csv": "2a85420ea9c96f3b65f64b189f47dac61786a84557a11bdfc81414dfc264f78a",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0004_grid2d_random_n1024_d32_p0_g9000011_s2003.log": "2a14175019180e45d681e1a89be421530ccbd2137040612d54383044f4668a09",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0004_grid2d_random_n1024_d32_p0_g9000011_s2003.rss.jsonl": "730a23a2e5f5cfe0d97e31e10e414c19bdf9c231466f2dc1416b1105d74d5ba8",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0005_line_metric_n1024_d32_p0_g9000011_s2003.csv": "1de2dcc8a20ecf80f3a2285e44b668af11040997ead7e1fab70ed393beba821d",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0005_line_metric_n1024_d32_p0_g9000011_s2003.log": "d76a6fb0147907ac68274c04d654fcf66e14ee37acde1c2a355144a62b92b6e4",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0005_line_metric_n1024_d32_p0_g9000011_s2003.rss.jsonl": "e9bc9dacef4494fbc9628afbe846bbede04c4ab1d75c6b6f28e74e91f0b920e4",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0006_line_random_n1024_d32_p0_g9000011_s2003.csv": "8d63313ef7242183667cd8537a77b373a6f3fb168a4085129593d8c83287fd75",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0006_line_random_n1024_d32_p0_g9000011_s2003.log": "2f15ac88410636552af5abf677635b07db8b62387072f8b44be9bd4368cc2d0f",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0006_line_random_n1024_d32_p0_g9000011_s2003.rss.jsonl": "bc5b2f999cea7af60991c8d049ee59479b0eeecabd2f3ceaea19bab67d182370",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0007_grid2d_metric_n4096_d32_p0_g9000011_s2003.csv": "0bdba08dbee0fbf51600ca4a02ba6e493b390e10c5171e15fac24bc4bfea49f8",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0007_grid2d_metric_n4096_d32_p0_g9000011_s2003.log": "23f40f0f211fc456668e889dc1eaaac3353216f0758ac1cc80cbabedadc446a3",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0007_grid2d_metric_n4096_d32_p0_g9000011_s2003.rss.jsonl": "da0c85c0f046dc9dc8ba650dcd2546e2ac8d6ea78d67ebb2dc22ae62674de29c",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0008_grid2d_random_n4096_d32_p0_g9000011_s2003.csv": "598e50f7406f545c81fe3b3e88b4ab237732bf56e298338ebcfb77180687701a",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0008_grid2d_random_n4096_d32_p0_g9000011_s2003.log": "82640e360c51dee2d5831b44921e801b671f181bb650fa0424a96c86cdffd24e",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0008_grid2d_random_n4096_d32_p0_g9000011_s2003.rss.jsonl": "d60a5d82fa5050e7bafbe594351e85047346f12ef949f36f90d9c954991583f4",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0009_line_metric_n4096_d32_p0_g9000011_s2003.csv": "3a8779f30d742e50f38c39a6214c48d4c034fd39c609da904fed07629255c8db",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0009_line_metric_n4096_d32_p0_g9000011_s2003.log": "eb37dcb1f389fead5dd6d920b7638570aff6b83c63f7b672e017726dbda58d7c",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0009_line_metric_n4096_d32_p0_g9000011_s2003.rss.jsonl": "58190df421011c0986147243cc823e0aad71e6d2d161fd7c8bce370644308388",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0010_line_random_n4096_d32_p0_g9000011_s2003.csv": "e7a271ca39c66e178566ff9251c3a2fe1a53c6814d4ce87dd1f68d13c0e9fc25",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0010_line_random_n4096_d32_p0_g9000011_s2003.log": "790ec2adde149143d78522b2b921f510279252d37ab41d23a93d5dd978f0d35f",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0010_line_random_n4096_d32_p0_g9000011_s2003.rss.jsonl": "40cc8a340602ffdaac0f85857210580e0e5152b6c99bb81c9521d53b6c331261",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0011_leaf_distance4_n4096_d32_p0_g9000011_s2003.csv": "b2d16071a72811953020e1104e9dc716eb50215b15cffb123c701075f8b29af1",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0011_leaf_distance4_n4096_d32_p0_g9000011_s2003.log": "6f99fccf6d2acbe60bb9c582ce79ed43209b654041e72f27ea9dde3dca80e73f",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0011_leaf_distance4_n4096_d32_p0_g9000011_s2003.rss.jsonl": "0f4f0b6d6d307f544a4b536ae968fd188c8d92aa37958b44762a8446ceea43e4",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0012_leaf_shuffled4_n4096_d32_p0_g9000011_s2003.csv": "19e3ee73a0371002aba52f4da75e74053f899a6fdcabd0d01b28342479a33778",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0012_leaf_shuffled4_n4096_d32_p0_g9000011_s2003.log": "465ed55328bdddbec3b85c95c9f29e80b7ff8ad86825b5419bcda0db9c07bac0",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0012_leaf_shuffled4_n4096_d32_p0_g9000011_s2003.rss.jsonl": "8cf4866c9b7453c53736b25ab26c2fb2c63be976b4b097a5e6158ac50f686984",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0013_line_metric_n16384_d32_p0_g9000011_s2003.csv": "f90ea6ce16c24b926d83f57e7cd908c5f4087e249865435a8c7e7f07bc7630cd",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0013_line_metric_n16384_d32_p0_g9000011_s2003.log": "2a8ccb4ed085d9e4572a2bfcfb53897e69ae037cfea23f111e08d6bc82724a0c",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0013_line_metric_n16384_d32_p0_g9000011_s2003.rss.jsonl": "654a9ee7359d1d292c62301a7b5daa95c26e470e9310d4160035be03991f83a3",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0014_line_random_n16384_d32_p0_g9000011_s2003.csv": "75ce28a5a61b4e172d69745e2ec82b4161a3eb07c04c2787ff9aaf82f05e4632",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0014_line_random_n16384_d32_p0_g9000011_s2003.log": "cb26a4df1460e6584adad437dedafc6d1a4b25a0571e10adcbc2d89609de97c9",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0014_line_random_n16384_d32_p0_g9000011_s2003.rss.jsonl": "cde551d4333878ad27b1389f16c59165bd9614c96f9c9f7b5e1f820c596cfd65",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0015_leaf_distance4_n16384_d32_p0_g9000011_s2003.csv": "3f5e1ca366b188b0a99e2b2742e1154c2156daad802928f926516b95b263e2d4",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0015_leaf_distance4_n16384_d32_p0_g9000011_s2003.log": "801af5685db106939ee4b628dd67151dd84014b5abe1581803dadccf40039226",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0015_leaf_distance4_n16384_d32_p0_g9000011_s2003.rss.jsonl": "5c84b19313ececeee0d3f17e84758d4fa3ab272bf90a91168739b42cef9b6a94",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0016_leaf_shuffled4_n16384_d32_p0_g9000011_s2003.csv": "0a2a4295cc6c7b7a26456d5cdf4789946210c882196b81d752cd3ffee1b3766a",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0016_leaf_shuffled4_n16384_d32_p0_g9000011_s2003.log": "a09fb812172acd23af44dcdb62efc33eac0093b5eccc09ab963c43c2a111f456",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0016_leaf_shuffled4_n16384_d32_p0_g9000011_s2003.rss.jsonl": "94bdbc43e2bb173233692f5ff8e0cc2dcf484ef9eef261ea0055d70585286d56",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0017_grid2d_metric_n16384_d32_p0_g9000011_s2003.csv": "86e71831c6fcc8ead47c162d2a856d361dab798b5bfc25f7cd36c738444f483d",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0017_grid2d_metric_n16384_d32_p0_g9000011_s2003.log": "26eff117c682cd0395ac704f672d2d144aa50fb5f1da3ce8bb5e05501482bb87",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0017_grid2d_metric_n16384_d32_p0_g9000011_s2003.rss.jsonl": "4378cc9889d022165b32048e8460c3addcdc40dfcf85cd8839675094a902c940",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0018_grid2d_random_n16384_d32_p0_g9000011_s2003.csv": "654c72837501496aab64f6d650331b9871f8bf99946c82f9e66798931a983764",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0018_grid2d_random_n16384_d32_p0_g9000011_s2003.log": "5f4b39ad8a9d22a9cac65a926ff914b165ec2ce7656dcda5b5ff188a910cfa28",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0018_grid2d_random_n16384_d32_p0_g9000011_s2003.rss.jsonl": "68d79955f5a877b51dfa935dd80e03c876c2f3d42d67b0215440a8fbce93b75c",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0019_leaf_distance4_n65536_d32_p0_g9000011_s2003.csv": "1b972c1b95cac1253405fc80b325ab4d46a3546e505cf190b5cc841187e9994a",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0019_leaf_distance4_n65536_d32_p0_g9000011_s2003.log": "04a12d1adb38f5ca6cc69d13e6a668ba3da355060389e8f1da064bffda09e256",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0019_leaf_distance4_n65536_d32_p0_g9000011_s2003.rss.jsonl": "c5e9d3ac17d92428eda5387af0e6345d1cfd3cecf28937e1943afa32606966b4",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0020_leaf_shuffled4_n65536_d32_p0_g9000011_s2003.csv": "0560cf0a97b2d0ab699cc6af044fb239e753adfad6d535f9b185876cbcb9c85d",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0020_leaf_shuffled4_n65536_d32_p0_g9000011_s2003.log": "56d3948ab0ba099548dfd6b1fc2e2044541cb9882c9986987d364bbfdf3d5085",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0020_leaf_shuffled4_n65536_d32_p0_g9000011_s2003.rss.jsonl": "9092247a1db1db608067ec45a88bc46d2d6f7554d0abce6aa9f0bcfd73f44b58",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0021_grid2d_metric_n65536_d32_p0_g9000011_s2003.csv": "50e4b2f959bed22f82c5a6e7be9ab17a0ede9f5806a409050a5e1218ce22ca4f",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0021_grid2d_metric_n65536_d32_p0_g9000011_s2003.log": "cd214af94596b3f1d06d658c3c5057d68e5cb3483122d7c6d0f524f5151c7ce5",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0021_grid2d_metric_n65536_d32_p0_g9000011_s2003.rss.jsonl": "fda81a2ed3cfabb73cf48534085acba5228313c046227c5dec69b49c4be2d253",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0022_grid2d_random_n65536_d32_p0_g9000011_s2003.csv": "538b8162aa1610de0d0cbc2dfc2437b30b52248ad3f1079b26c3bc6a3b743c10",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0022_grid2d_random_n65536_d32_p0_g9000011_s2003.log": "d1ca809f98cdab5318fff829565c137d5a560ad30e88af3399cc6e6057c19f67",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0022_grid2d_random_n65536_d32_p0_g9000011_s2003.rss.jsonl": "80e55c064778765166d09d0695b261560d24551d456c019e969ce9775679675c",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0023_line_metric_n65536_d32_p0_g9000011_s2003.csv": "8cf2f4bfae9043b1ffebac5639459a5609c6a97dd0eb9ba9f03cd0954680bd8a",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0023_line_metric_n65536_d32_p0_g9000011_s2003.log": "420a03b01f902693b8049b90440047cf3dc0cecf03c01d1c6e12d06841ffa284",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0023_line_metric_n65536_d32_p0_g9000011_s2003.rss.jsonl": "c73c6c542da13ed6fcf666f6a501382c4297cb288aaf490442d01bcc9cd9f925",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0024_line_random_n65536_d32_p0_g9000011_s2003.csv": "2ad84a126507fde49749da4ef43b733bc6943396700919025a97083cc106c18b",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0024_line_random_n65536_d32_p0_g9000011_s2003.log": "3636399f540e0939a372881928231f70be7bd5ec8633194d06652a2f6e4047d1",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0024_line_random_n65536_d32_p0_g9000011_s2003.rss.jsonl": "8fdb9e7f2886cb1116ed32ae0aa966bdf85fc87cf1fe103695e3c2b8e8024dc2",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0025_grid2d_metric_n262144_d32_p0_g9000011_s2003.csv": "fa33f851e195e47b3adcf7766b5fd5e92689b647c5f9392181bf9b69a6988398",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0025_grid2d_metric_n262144_d32_p0_g9000011_s2003.log": "b05e0690deb4c560f03e733541419df3aa8b374df29612adf32f2d719a35bc27",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0025_grid2d_metric_n262144_d32_p0_g9000011_s2003.rss.jsonl": "7f2887137620559f71b3dba06df6a5fc4152b9db8900d6bc909f74ba186b9f19",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0026_grid2d_random_n262144_d32_p0_g9000011_s2003.csv": "c79f76f0339294ad6bd9a03442f48000d72c09afeda6dad49f5e90b17b772f9d",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0026_grid2d_random_n262144_d32_p0_g9000011_s2003.log": "b631a4bf7f68835a8de59de6fe92c6ad99ee13d0f200117ef7fb6283507dadfd",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0026_grid2d_random_n262144_d32_p0_g9000011_s2003.rss.jsonl": "df694da2f8ec03355d6c3a249a1bd8b5f23a6563285eddfcc03932825304faac",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0027_line_metric_n262144_d32_p0_g9000011_s2003.csv": "f5b728d3e2b023ed46b1259af9a89a4ac6e38a145bc06e29d517e4ebd06e3490",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0027_line_metric_n262144_d32_p0_g9000011_s2003.log": "394a71d5ae5b2002cba288cb20d5e08942638cdbe4b319b1bca4ead4fcc167c3",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0027_line_metric_n262144_d32_p0_g9000011_s2003.rss.jsonl": "f4b0a35b41c3b8ff5e3b7bcb2501d862e5a99ed978f7c2ce95d6da79bba1d8e3",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0028_line_random_n262144_d32_p0_g9000011_s2003.csv": "a137f4e5766bf6fd8c891a1349ab777e87e79cef36da4b80aa4022b5acdc4cce",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0028_line_random_n262144_d32_p0_g9000011_s2003.log": "01d70591d2736d4e740113b2352929ef4a90cb9d7d0138eba2363401938f911c",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0028_line_random_n262144_d32_p0_g9000011_s2003.rss.jsonl": "218f3d6a3d911282eab42be3e25b8ab6caa7ae1aaf8f5203d23162cdd6e1c6b0",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0029_leaf_distance4_n262144_d32_p0_g9000011_s2003.csv": "8d81eb12e80a9ae82eb59f00dd430d705acee6f3f508306afa8d92040cc1945f",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0029_leaf_distance4_n262144_d32_p0_g9000011_s2003.log": "2ae038b73ab820486291e9e0d2b08206d79d54bce96eaa3053f10a15aa83c9db",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0029_leaf_distance4_n262144_d32_p0_g9000011_s2003.rss.jsonl": "9e5778ee0820d0d6e45e898f5c692fdda20f33f85950f152fb5f48cb1cc30334",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0030_leaf_shuffled4_n262144_d32_p0_g9000011_s2003.csv": "26d12c392c9641f710536bab4a468808e65992f454845a5319f38a3b8a9d8fad",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0030_leaf_shuffled4_n262144_d32_p0_g9000011_s2003.log": "ca9a108596ebfe2f1f2ab47b55dec4111688872bb0fa55e29b6c275c23b68aba",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0030_leaf_shuffled4_n262144_d32_p0_g9000011_s2003.rss.jsonl": "ad5d16d8aa0557eb0c64ae5c692fb3aaa30731f7a74b0d92c0f22fa69e4fc78e",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0031_line_metric_n1048576_d32_p0_g9000011_s2003.csv": "9dc24e4ba1d0746077f70ad5d5d22b274e05ddbb7e474b24dece1bd5095d5f89",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0031_line_metric_n1048576_d32_p0_g9000011_s2003.log": "834de6f843fa551bb6cb7498d9b7072d41a67a6d9c16fed6fcfcacefa181f13e",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0031_line_metric_n1048576_d32_p0_g9000011_s2003.rss.jsonl": "58fab20490d86b4f2dd2b8088727fe8497de4da4002f0642261c81bd88706282",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0032_line_random_n1048576_d32_p0_g9000011_s2003.csv": "e2dc4a737635da7ba29649ae5ff6eba71d9f9d19637e301204bd472d1b150fd6",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0032_line_random_n1048576_d32_p0_g9000011_s2003.log": "4e03d86dc911a51ef8969365bdde4f45f8a75a0c6e7d3fad3c880cf965fde133",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0032_line_random_n1048576_d32_p0_g9000011_s2003.rss.jsonl": "a37b60d7f23ca0b117cd39a8c4d1f46f6a9742ece975b7e2948f2e63ee8b708c",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0033_leaf_distance4_n1048576_d32_p0_g9000011_s2003.csv": "eea33fc237a5719a81f9e6593b90caa2d86674ae5beec17d1174962a64689ea1",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0033_leaf_distance4_n1048576_d32_p0_g9000011_s2003.log": "312bc109500abb7aa90cee86da2db06e64e99d0bea3c76f1ff55abe59f0a0749",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0033_leaf_distance4_n1048576_d32_p0_g9000011_s2003.rss.jsonl": "6b8a21b0332f4e91a50c8ce07837be978e3f62f138476350432fd0a1ee77ae39",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0034_leaf_shuffled4_n1048576_d32_p0_g9000011_s2003.csv": "629d9a88ce7bc8ecbb86f340475d3df0c3d2ae15d56644fbca555a7fc73d6f56",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0034_leaf_shuffled4_n1048576_d32_p0_g9000011_s2003.log": "5a4b971bb803909102a12d8114172d9d0eea0de2a940190a32f4cb8c54897b1a",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0034_leaf_shuffled4_n1048576_d32_p0_g9000011_s2003.rss.jsonl": "03bd1047d0f79f49d46586e615b176cd78278fe17253a01f6bda9bc489402468",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0035_grid2d_metric_n1048576_d32_p0_g9000011_s2003.csv": "c8f4d79431d1b3c468b7146b33157ffd48e4c601373b377dde453a8dec5db72c",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0035_grid2d_metric_n1048576_d32_p0_g9000011_s2003.log": "c337314df538d00ac6232ded27db7f702289718f82e1658a533ac2667371d659",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0035_grid2d_metric_n1048576_d32_p0_g9000011_s2003.rss.jsonl": "5dc48f3cfafd6590fa46c0b77081c2d142ab77adfdf87db843de1136ba93576b",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0036_grid2d_random_n1048576_d32_p0_g9000011_s2003.csv": "607daf5c090955d62fdaf6c254e1622de7ea9636abdce80634b06e18d2d49189",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0036_grid2d_random_n1048576_d32_p0_g9000011_s2003.log": "e446f3bacf33a6e1fce45d07aef2aa7336f08f91749c02d8dd3a38ddbf8b2cbc",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0036_grid2d_random_n1048576_d32_p0_g9000011_s2003.rss.jsonl": "cdf6af145a117cf6298d00848853a71e138cbeb02edd13608482eef2483cff60",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0037_grid2d_random_n1048576_d32_p0_g9000049_s2003.csv": "acc0f710443fb958cb38b4fcce256b382d493090c04c4f8a92142cba407a431f",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0037_grid2d_random_n1048576_d32_p0_g9000049_s2003.log": "1b81c6fd38bd590b06c055f42a1bd402188b864479f61a7a66976f0b2d329174",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0037_grid2d_random_n1048576_d32_p0_g9000049_s2003.rss.jsonl": "7208b464f7ac66d9489f90509c02ddc17d39a78bb4e5ba950bfd509a6dbb7470",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0038_grid2d_metric_n1048576_d32_p0_g9000049_s2003.csv": "41ac09a1f7d0dc7276fc2a4df901bb7225c4ebbcd09147db1cac515f8c7bf210",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0038_grid2d_metric_n1048576_d32_p0_g9000049_s2003.log": "816c46bde0d45f5118b3b1a4be281e881c1a2ae05a70ab7e4b39b62c618d2426",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0038_grid2d_metric_n1048576_d32_p0_g9000049_s2003.rss.jsonl": "f1826f880929aaf5bc71b2a8447dc905a5d1f6fb2e94127029b670d87a082319",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0039_leaf_shuffled4_n1048576_d32_p0_g9000049_s2003.csv": "2800584dd8d3c70b8b77a17bf6ee43641642ed8369374098ce5432c9d4f165f9",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0039_leaf_shuffled4_n1048576_d32_p0_g9000049_s2003.log": "7d767d79fa497734c1a6f9fa728bab4fdedfc56210625c9972e3f08193c9cbd8",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0039_leaf_shuffled4_n1048576_d32_p0_g9000049_s2003.rss.jsonl": "da2409a5606eb56bee000dd4fc1355859ea35d6a29285199f47e448a43c0c601",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0040_leaf_distance4_n1048576_d32_p0_g9000049_s2003.csv": "0649f4a1c5dd608c84b052ddcfcf577f2015853361b530add94e36f9884fc622",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0040_leaf_distance4_n1048576_d32_p0_g9000049_s2003.log": "148f9a639c2539bcb982437133feb3727c164a0e461c375108d54a45f65f2724",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0040_leaf_distance4_n1048576_d32_p0_g9000049_s2003.rss.jsonl": "7f0d906b52b5060373655885416e878c4da06a867ce3de976df68dc0234c9cd6",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0041_line_random_n1048576_d32_p0_g9000049_s2003.csv": "2452d9a26a569b76182f9af1333d5bb988454908e87f661b5edf7b10fd90da0f",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0041_line_random_n1048576_d32_p0_g9000049_s2003.log": "cc893573aca764bc309c28c845da54716d64819b7005cb3688305d08f876e48c",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0041_line_random_n1048576_d32_p0_g9000049_s2003.rss.jsonl": "f8367a7afc30df32c21a369df20275e7fd77306e78293a960e205a3f5e08fac0",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0042_line_metric_n1048576_d32_p0_g9000049_s2003.csv": "95e5c7052d585794fcb8791841a2c95ebef48fb82d96b535efa96c8e1d6eea8b",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0042_line_metric_n1048576_d32_p0_g9000049_s2003.log": "5d545d6ff08830b6accfbcde5c9550c831c30e32b142eddc6b3d8f90d76c40c0",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0042_line_metric_n1048576_d32_p0_g9000049_s2003.rss.jsonl": "f41b000f5b0067ed5dd8c5369532d5632acdc856023920cb953dd3b6e96315ba",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0043_leaf_shuffled4_n262144_d32_p0_g9000049_s2003.csv": "ce389eb541c091dc406235cc84cf88dfd1bee0a6ce28d7c3fd74d57e7096d789",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0043_leaf_shuffled4_n262144_d32_p0_g9000049_s2003.log": "ed7117e4130f488c92495e8e18a2b31ab60cea1e1f9bd962acdfe14d67904f35",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0043_leaf_shuffled4_n262144_d32_p0_g9000049_s2003.rss.jsonl": "1e84acefaf20cb8f0c7e19dceca56dbad0d5e188833d14ac00b46355cbce2fdf",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0044_leaf_distance4_n262144_d32_p0_g9000049_s2003.csv": "c54bdb55f2f71017363ebde18922c34578e27fa4b5095c2cd3b525aaf7132f66",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0044_leaf_distance4_n262144_d32_p0_g9000049_s2003.log": "2678c88805a81f4252f70ac99004c9a804de6d674d7e788520ce244194da395e",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0044_leaf_distance4_n262144_d32_p0_g9000049_s2003.rss.jsonl": "c53d4d5ae0a2f71cf696d76a291038b1245276706ce9569394fad78acfa34b04",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0045_line_random_n262144_d32_p0_g9000049_s2003.csv": "6849c0bbf1a24dd39ff75f472e9624bfd79311cacb1f1a9a40c96f01896778c3",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0045_line_random_n262144_d32_p0_g9000049_s2003.log": "4e5f4d8df52c17376e2685fa828a9fcbafa68da4cb69a75331fea0f27148928d",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0045_line_random_n262144_d32_p0_g9000049_s2003.rss.jsonl": "5fd72544ddffe2c92c5ffcea68b2e8385269ae0b9eeaf170a6e6d66c26c90e85",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0046_line_metric_n262144_d32_p0_g9000049_s2003.csv": "eb1e497b6fb28af2cfa9182a2d990c8f65b5b6104bc43e842f083d6f68be7b3e",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0046_line_metric_n262144_d32_p0_g9000049_s2003.log": "7bb95822f12876ccf6d6f1f21aed68c9e62b3fab5d7b48a3c2d4ea29f7307cc8",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0046_line_metric_n262144_d32_p0_g9000049_s2003.rss.jsonl": "62bd193a1a75afb0db793d010f5b5c0943d9032f8f01db3e33dc8be864dd3a36",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0047_grid2d_random_n262144_d32_p0_g9000049_s2003.csv": "e0aa2d3d9075c46290156e6f74b1742cd6aa92da4caa3b10268806253974bbd8",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0047_grid2d_random_n262144_d32_p0_g9000049_s2003.log": "ba0753e7379f06056e2f0823e7791e2c4870636141f48a9dbad3c6191ef1843d",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0047_grid2d_random_n262144_d32_p0_g9000049_s2003.rss.jsonl": "b85efd500cbc845fc8b34f9b56cea0e31d888eb75b22b1df9457aa16eab2d2f9",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0048_grid2d_metric_n262144_d32_p0_g9000049_s2003.csv": "ff50fda87174183df0a61cea84748ea3b148c20360afe50374eab7ecb3629819",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0048_grid2d_metric_n262144_d32_p0_g9000049_s2003.log": "b008fe25a8d6a6e1947c418ca5923eb1087f54e0231ff876accc7017bc536a0f",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0048_grid2d_metric_n262144_d32_p0_g9000049_s2003.rss.jsonl": "4c380fe8c921daa0aa9cea0fc9b6aae02e5a5d38cd2ec539c5faaf2f480c92be",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0049_line_random_n65536_d32_p0_g9000049_s2003.csv": "9884e1085829c7fe74c3ce814ba42e4eabc755444fcdde1eb2978a914bde7e9f",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0049_line_random_n65536_d32_p0_g9000049_s2003.log": "dd8f20c7df03a50867298211a0985322467c6e1bf8751796fafddd7240b1c3fb",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0049_line_random_n65536_d32_p0_g9000049_s2003.rss.jsonl": "70624ee71a047129d4d23d679757a9fb152f6e64033b730d6e0c19918dd06ba4",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0050_line_metric_n65536_d32_p0_g9000049_s2003.csv": "c54f21f8fc9c92bf7eb04867bb24e65d1a25290e706020dcae3442162aa6e639",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0050_line_metric_n65536_d32_p0_g9000049_s2003.log": "eefcbd262c3a4c663b6664ac5ec469b3bfeab2593cfec596a4c63eeaed161fd9",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0050_line_metric_n65536_d32_p0_g9000049_s2003.rss.jsonl": "0f89fe04e6fd8bd2c9e5ccb8ba0c138c0d10ae699930ad1832ebbcf1647ef2c2",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0051_grid2d_random_n65536_d32_p0_g9000049_s2003.csv": "d285ee5ad6b26bc29568413989a6275aa60feda313c4796dceffcb433aad16e4",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0051_grid2d_random_n65536_d32_p0_g9000049_s2003.log": "594b28c84dba7bd256351d7ebd1dd01c3210751df485280e58f19de3a1656bca",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0051_grid2d_random_n65536_d32_p0_g9000049_s2003.rss.jsonl": "87fb23c7585d5d27e4a0fe616e98f0385207cec9e57c25975cb19c40900417a4",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0052_grid2d_metric_n65536_d32_p0_g9000049_s2003.csv": "a4986b053f5d01ee3a8cbb2a6124999c249a453abd1dab9c0a97e6b675e1e03f",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0052_grid2d_metric_n65536_d32_p0_g9000049_s2003.log": "8dd0f9ba1fd2eeebe14e29336944415fd77ee367cd8467bff2eb67e823d33e4e",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0052_grid2d_metric_n65536_d32_p0_g9000049_s2003.rss.jsonl": "eeab51d9a5e958cc316b741f1a1dbc8e1092c89d13181d58bab60b3d81301500",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0053_leaf_shuffled4_n65536_d32_p0_g9000049_s2003.csv": "e2eddc34adb1bcdfd35c1adbc60d0ee59cc5211546fccf114f07bfccdda2ff9f",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0053_leaf_shuffled4_n65536_d32_p0_g9000049_s2003.log": "1ef58ef5a2693fd19f69f25664fbf790cc794d542748f908ae1166211efc6d88",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0053_leaf_shuffled4_n65536_d32_p0_g9000049_s2003.rss.jsonl": "428ab03b6c534efb95302de6f665c5acf13ce7f9b499403099f9f2a6b81e3ab0",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0054_leaf_distance4_n65536_d32_p0_g9000049_s2003.csv": "21b8f5a4800af9b589f7c2cd12a545a1e7a04a4aadb8198613ff25bb08096933",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0054_leaf_distance4_n65536_d32_p0_g9000049_s2003.log": "f18c803b6b15e276c538ba20e21bbac69c85a44d41b0a436f54272645863e31d",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0054_leaf_distance4_n65536_d32_p0_g9000049_s2003.rss.jsonl": "78d00d7f0534dbb9d4facc0ca1dc76cf1ea035338335737b6f40a5fdc6f884e3",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0055_grid2d_random_n16384_d32_p0_g9000049_s2003.csv": "362d1c3eea1d543d69d44dcd184b08bbb81a4709c7c42176a169193384b4dbff",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0055_grid2d_random_n16384_d32_p0_g9000049_s2003.log": "1c3f7dfcfcc248821bea2152ac45014ac285f6da51b6e37573038bbe6371a12d",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0055_grid2d_random_n16384_d32_p0_g9000049_s2003.rss.jsonl": "07cd2d3eb1c4c6e88aeba853e77c9e82e16f3e6ab2140b56e3dfb217adf8b48e",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0056_grid2d_metric_n16384_d32_p0_g9000049_s2003.csv": "35a0d414370a045afd269b88d58a9bc9c6541c5b8ff3ab58477603c6ffb1d92e",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0056_grid2d_metric_n16384_d32_p0_g9000049_s2003.log": "f123dbf191847016c2614dac996614ef9536e5ab2eebd8a061ae76cd42e373fb",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0056_grid2d_metric_n16384_d32_p0_g9000049_s2003.rss.jsonl": "6b23187bbad03b0fc37fa43a1012d5442a78d1b17169fdfda251b69d29ed1a3a",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0057_leaf_shuffled4_n16384_d32_p0_g9000049_s2003.csv": "c399b4c569302f6e7ec142f85d95400ba8811270eae047ecbecfe99e7bfc1829",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0057_leaf_shuffled4_n16384_d32_p0_g9000049_s2003.log": "2f803af7f8f5d47b792db7b8b8427a498f95e70dea8ad35dc1fe7e41b6556f0f",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0057_leaf_shuffled4_n16384_d32_p0_g9000049_s2003.rss.jsonl": "03eb0462147d0d30e10c23f24a970d0cd39a5a43683df4a7cdb26df5078b8e5f",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0058_leaf_distance4_n16384_d32_p0_g9000049_s2003.csv": "22c345cd2474f007c5f375595abfb69951756e4145881aed6c80336f700af995",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0058_leaf_distance4_n16384_d32_p0_g9000049_s2003.log": "e5a599793f8a7f6ed856b6a58286d3a0ddac227ac4f2e009496e453847339024",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0058_leaf_distance4_n16384_d32_p0_g9000049_s2003.rss.jsonl": "2883a7819c7c8de83ffef9b789590ef742e1103208a468c7b3f524a9681ece42",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0059_line_random_n16384_d32_p0_g9000049_s2003.csv": "070e41ea3420e9b37bb4ea9009c5d369786c291861b216a3b7f17686ee479ff3",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0059_line_random_n16384_d32_p0_g9000049_s2003.log": "f2054b18b530affeddb6fd63c8d3a8bfc3d6ab4e0ea02f1c1fe3e1fc0b695db1",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0059_line_random_n16384_d32_p0_g9000049_s2003.rss.jsonl": "d7b83dd9ed7d0b1402dcbd559008d87c6ef3a08852e2a5fef66094a149ff74d7",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0060_line_metric_n16384_d32_p0_g9000049_s2003.csv": "b431fa5825fcb1dbb33d49dada013a8bc8c1f07afd06024aee3cdb59157453f1",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0060_line_metric_n16384_d32_p0_g9000049_s2003.log": "ae4e968d84800ab9ea0973c0b4ec8e8b8e661d65e14070bf483e1bf29011b152",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0060_line_metric_n16384_d32_p0_g9000049_s2003.rss.jsonl": "43ad77c25a29341e89513e7e408eeab47e4e8b729d986f84ee3136ebc41420e4",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0061_leaf_shuffled4_n4096_d32_p0_g9000049_s2003.csv": "7e2162c0ce15bcb3b804a89c92686ab8a85d77e2b29b31c25a1a979b2c99d1b7",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0061_leaf_shuffled4_n4096_d32_p0_g9000049_s2003.log": "d3a9c9bf8bb314e085503b099ddde149596b5403a3319d227825828c05ee8871",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0061_leaf_shuffled4_n4096_d32_p0_g9000049_s2003.rss.jsonl": "6a8c846aea1828410d6853e605bd1cff34125d6d9b64a625edf8a12e2be2acb4",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0062_leaf_distance4_n4096_d32_p0_g9000049_s2003.csv": "f2c395a3c75d712e4650883abc7fa4a038e6e525fd615a4256096f8825c75f4d",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0062_leaf_distance4_n4096_d32_p0_g9000049_s2003.log": "7b51d657ef3030bb78a5c1c62bf5f73fa96e55d53a679bf2458be34985c8c4ab",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0062_leaf_distance4_n4096_d32_p0_g9000049_s2003.rss.jsonl": "f0d723f39ba4951a2c005ebe54a0bb97b064d9118cba15af920619f9e97f7720",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0063_line_random_n4096_d32_p0_g9000049_s2003.csv": "54485f5699fd9490cca96a1b2a61fa81f961deb6158cc9f342d1c809a58ae723",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0063_line_random_n4096_d32_p0_g9000049_s2003.log": "91a04c0814661cc785c98a10651289155efae6301d52264d3aed6366141e5871",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0063_line_random_n4096_d32_p0_g9000049_s2003.rss.jsonl": "0d3c5d37dc7435ca5a2fad708dc0055cbe0a81a6ef9b5433fc4bf49d5ba09170",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0064_line_metric_n4096_d32_p0_g9000049_s2003.csv": "e02dac2783d1743c77e3062ccf70e820d619262970a4f5d3707eb6deb9353145",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0064_line_metric_n4096_d32_p0_g9000049_s2003.log": "220dbf8cd8286443bb26ffebd6599ec34d50820bd67788cd5d40c9a17f0c930a",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0064_line_metric_n4096_d32_p0_g9000049_s2003.rss.jsonl": "b17952e2bf8abe6f7fb3e7fa3e050ccf5de02c57e11fae1ea1ca0314d4f3a551",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0065_grid2d_random_n4096_d32_p0_g9000049_s2003.csv": "baf22f3bf758ea69a5cb9322a93c7bcafe9bbc33d50446e810a1c4f5864834bd",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0065_grid2d_random_n4096_d32_p0_g9000049_s2003.log": "9f25ebce9f9b4f4de10cf2d8e72404bc6d2e45bb65cc7f77aca5f8c6f95b165d",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0065_grid2d_random_n4096_d32_p0_g9000049_s2003.rss.jsonl": "c1cd9bb1801a3f0a98b1995eadb9fc489eee756bc2c96a32fa2cb0a709a29d1d",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0066_grid2d_metric_n4096_d32_p0_g9000049_s2003.csv": "dda18d5089ee6eb9810170fd1e285d424231ee343ca0a964af5aa1d1ceb6617d",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0066_grid2d_metric_n4096_d32_p0_g9000049_s2003.log": "3e46fe8149b9bd93e07474ef242f1a536c906e2f48e60807c35f7110f3e3c924",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0066_grid2d_metric_n4096_d32_p0_g9000049_s2003.rss.jsonl": "8b02ccbf9b35240d64e778f169947a9b6d6b01f69d16a13dddd214de2c51826f",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0067_line_random_n1024_d32_p0_g9000049_s2003.csv": "9bdd1066cde8baffbc68ac1e05ab695031a9700b3123fa55d7bb1698e8ea68a1",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0067_line_random_n1024_d32_p0_g9000049_s2003.log": "0bac8fc598adf8073cd5b8824eec14c162f9e783932b17ab946f6e516090c0b2",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0067_line_random_n1024_d32_p0_g9000049_s2003.rss.jsonl": "c0295be8212e0a92c3d2e0f91d54e26664d225433c94a3938005543019509189",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0068_line_metric_n1024_d32_p0_g9000049_s2003.csv": "2055ee9802817bfd70a70747d6f3f83f271e7ab75babcd03a0d411e5d84b8929",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0068_line_metric_n1024_d32_p0_g9000049_s2003.log": "f2b90ea4364fa06f222be0646e76f76e3d50dfbb655af58fca7639bb5fa45251",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0068_line_metric_n1024_d32_p0_g9000049_s2003.rss.jsonl": "48b8c4e33ec4fcb812cf3465acd399c041d72b975e550cb27f16bcbbde18db01",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0069_grid2d_random_n1024_d32_p0_g9000049_s2003.csv": "45a8613d590f63916aeca3801c9cfccae7a66cd56a655df715bbae3c0a9a8665",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0069_grid2d_random_n1024_d32_p0_g9000049_s2003.log": "48dd9adc544c4a597df0a8de62718082bda830d25d0fb5af6a961c081f71f7f7",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0069_grid2d_random_n1024_d32_p0_g9000049_s2003.rss.jsonl": "503d87aed47cd082ea1d5ef88d86d8b030f3eca455157c51978de91e98b49235",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0070_grid2d_metric_n1024_d32_p0_g9000049_s2003.csv": "3c82ed83ce7584a2ebae7020eeb6c5eaaa319dc98e809223d22fc62e06a8b4ea",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0070_grid2d_metric_n1024_d32_p0_g9000049_s2003.log": "182649a6237936e72a0ba27f1f8b9cd08453167f1fd442a83688821468d7a81e",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0070_grid2d_metric_n1024_d32_p0_g9000049_s2003.rss.jsonl": "8d67313fac0b58b9f5904d33db4f68172ca8c81d91b2a5ec2780fb5ce84bd6b4",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0071_leaf_shuffled4_n1024_d32_p0_g9000049_s2003.csv": "2c0ab775b9cd88a99ecb5f4a6b38d106b6ad7b369adce0c19f940dca10bc08ff",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0071_leaf_shuffled4_n1024_d32_p0_g9000049_s2003.log": "c2836e417c3cd226e9e6ac1a3fd75e36d58dddd4771cc3041252d09a978b01f0",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0071_leaf_shuffled4_n1024_d32_p0_g9000049_s2003.rss.jsonl": "e6c15e4531654b4137e64a010ab7ffc155b162beb3afbdcdec6eb1464c6ab1e7",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0072_leaf_distance4_n1024_d32_p0_g9000049_s2003.csv": "ef6fcd8c0a63184b83f7ca15dfd4bde05818bf3b0c9ebdc45c01ab5bd8ba7ffc",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0072_leaf_distance4_n1024_d32_p0_g9000049_s2003.log": "0a402eea816f3b89a8116a5b58d385fbdc7c6f6e363546e9669afdbbc19e1e23",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/heldout_cases/0072_leaf_distance4_n1024_d32_p0_g9000049_s2003.rss.jsonl": "c9470017ced61206c5957ebd293a058a4d9e302245f69b8909c20cd1fdb461a7",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/run_mst_search.py": "843d65154d232bc12a946ad7d8793ab26840f7785507286a6e4d8ed09dfcad80",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/analyze_mst_search.py": "91d3fcad871444e9325c1465782365b5c3ed08fb2344aeeb62fbfc18254f5ba6",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/run_crossover.py": "1669d3b761e0d4c09c432382c3a2e8738c0031c1c9e6dc69cfcb7734809a052f",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/analyze_continuation.py": "7a0afa5fe802516cb5ec27a7d567a0875c66807aa4a04ce0ff752f0bc31b9168",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/crossover_clocks.py": "725d469933eaf5ead32a38bf52b9f32e46a7ee3d4e386777c257c1ab3929fc0b",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/run_crossover_baselines.py": "2291db9114448516fc5ffb6c4b0fd119d23741bcfa2275ad7f25996c3b73921e",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/run_multigraph_experiment.py": "f039d2523e212d9431ed9e062459a6eb3cf2e3ebf463c49d4d57097bcef4fd8e",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/recover_mst_search.py": "73f02f494f29b2f9183c9fc889dcda73444fe2ca4a240469a7d57dfec226058b",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/audit_attachment_recovery_power.py": "e7a72cc054c6cfbcb1c6d5c6686e2332864632a12e10b60a9d3f16b6a5ca0c61",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/audit_mst_search_power.py": "566530914ee74564c5d5ba640b700f5ecfccc5927ac5ed046cb6e3bbdbd225c5",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/run_retention_control.py": "f913b9b0721102489f17eafe9bc82d4886ef3bbfad9d9f2d4963ee84f5df4f85",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/run_edge_view_experiment.py": "67d018d74e6658988421b98ae613ce5e649b4f80e5436fc8776540d2298fd227",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/run_compressed_queries.py": "6e42a9f11e395960bbba9e96a9bdbce626987f80c26764db9f260236e07d72ba",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/run_heldout_families.py": "e32beaceeb13ad8933cd461e0cab45c15a7a0b4bd4c9c5d58875f9290859cb4d",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/plot_heldout_families.py": "c4029cf466661dc375481fdf4c42226f66b458cbb724325e0c44b553a34046c7",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/plot_retention_control.py": "a19d4edf72aea875885aa3494ca268038d2654531b9e3c670b21355e2b7e635a"
+  },
+  "matplotlib_version": "3.9.4",
+  "checked_outputs": 3024,
+  "timed_outputs": 2592,
+  "warmup_outputs": 432,
+  "rows_removed": 0,
+  "rows_adjusted": 0,
+  "graph_realizations": 2,
+  "sampling_seeds": [
+    2003
+  ],
+  "trials_per_case": 12,
+  "flagged_calls_retained": 0,
+  "coverage": [
+    {
+      "figure": "ratios_wall",
+      "family": "leaf_distance4",
+      "case_ids": [
+        "leaf_distance4_n1024_d32_p0",
+        "leaf_distance4_n4096_d32_p0",
+        "leaf_distance4_n16384_d32_p0",
+        "leaf_distance4_n65536_d32_p0",
+        "leaf_distance4_n262144_d32_p0",
+        "leaf_distance4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 30,
+      "graph_median_points": 60,
+      "trial_range_endpoints": 60,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.268960824040574,
+        3.2367429678358066
+      ]
+    },
+    {
+      "figure": "ratios_wall",
+      "family": "leaf_shuffled4",
+      "case_ids": [
+        "leaf_shuffled4_n1024_d32_p0",
+        "leaf_shuffled4_n4096_d32_p0",
+        "leaf_shuffled4_n16384_d32_p0",
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n262144_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 30,
+      "graph_median_points": 60,
+      "trial_range_endpoints": 60,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.27109286255224435,
+        4.714597660610043
+      ]
+    },
+    {
+      "figure": "ratios_wall",
+      "family": "grid2d_metric",
+      "case_ids": [
+        "grid2d_metric_n1024_d32_p0",
+        "grid2d_metric_n4096_d32_p0",
+        "grid2d_metric_n16384_d32_p0",
+        "grid2d_metric_n65536_d32_p0",
+        "grid2d_metric_n262144_d32_p0",
+        "grid2d_metric_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 30,
+      "graph_median_points": 60,
+      "trial_range_endpoints": 60,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.30290821433885295,
+        3.966940006880805
+      ]
+    },
+    {
+      "figure": "ratios_wall",
+      "family": "grid2d_random",
+      "case_ids": [
+        "grid2d_random_n1024_d32_p0",
+        "grid2d_random_n4096_d32_p0",
+        "grid2d_random_n16384_d32_p0",
+        "grid2d_random_n65536_d32_p0",
+        "grid2d_random_n262144_d32_p0",
+        "grid2d_random_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 30,
+      "graph_median_points": 60,
+      "trial_range_endpoints": 60,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.28296397133595513,
+        4.597103599496598
+      ]
+    },
+    {
+      "figure": "ratios_wall",
+      "family": "line_metric",
+      "case_ids": [
+        "line_metric_n1024_d32_p0",
+        "line_metric_n4096_d32_p0",
+        "line_metric_n16384_d32_p0",
+        "line_metric_n65536_d32_p0",
+        "line_metric_n262144_d32_p0",
+        "line_metric_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 30,
+      "graph_median_points": 60,
+      "trial_range_endpoints": 60,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.09494526454452558,
+        3.642632700675284
+      ]
+    },
+    {
+      "figure": "ratios_wall",
+      "family": "line_random",
+      "case_ids": [
+        "line_random_n1024_d32_p0",
+        "line_random_n4096_d32_p0",
+        "line_random_n16384_d32_p0",
+        "line_random_n65536_d32_p0",
+        "line_random_n262144_d32_p0",
+        "line_random_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 30,
+      "graph_median_points": 60,
+      "trial_range_endpoints": 60,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.2934825142119068,
+        3.951089432490525
+      ]
+    },
+    {
+      "figure": "ratios_cpu",
+      "family": "leaf_distance4",
+      "case_ids": [
+        "leaf_distance4_n1024_d32_p0",
+        "leaf_distance4_n4096_d32_p0",
+        "leaf_distance4_n16384_d32_p0",
+        "leaf_distance4_n65536_d32_p0",
+        "leaf_distance4_n262144_d32_p0",
+        "leaf_distance4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 30,
+      "graph_median_points": 60,
+      "trial_range_endpoints": 60,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.268960824040574,
+        3.2367429678358066
+      ]
+    },
+    {
+      "figure": "ratios_cpu",
+      "family": "leaf_shuffled4",
+      "case_ids": [
+        "leaf_shuffled4_n1024_d32_p0",
+        "leaf_shuffled4_n4096_d32_p0",
+        "leaf_shuffled4_n16384_d32_p0",
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n262144_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 30,
+      "graph_median_points": 60,
+      "trial_range_endpoints": 60,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.27109286255224435,
+        4.714597660610043
+      ]
+    },
+    {
+      "figure": "ratios_cpu",
+      "family": "grid2d_metric",
+      "case_ids": [
+        "grid2d_metric_n1024_d32_p0",
+        "grid2d_metric_n4096_d32_p0",
+        "grid2d_metric_n16384_d32_p0",
+        "grid2d_metric_n65536_d32_p0",
+        "grid2d_metric_n262144_d32_p0",
+        "grid2d_metric_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 30,
+      "graph_median_points": 60,
+      "trial_range_endpoints": 60,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.30290821433885295,
+        3.966940006880805
+      ]
+    },
+    {
+      "figure": "ratios_cpu",
+      "family": "grid2d_random",
+      "case_ids": [
+        "grid2d_random_n1024_d32_p0",
+        "grid2d_random_n4096_d32_p0",
+        "grid2d_random_n16384_d32_p0",
+        "grid2d_random_n65536_d32_p0",
+        "grid2d_random_n262144_d32_p0",
+        "grid2d_random_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 30,
+      "graph_median_points": 60,
+      "trial_range_endpoints": 60,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.28296397133595513,
+        4.597103599496598
+      ]
+    },
+    {
+      "figure": "ratios_cpu",
+      "family": "line_metric",
+      "case_ids": [
+        "line_metric_n1024_d32_p0",
+        "line_metric_n4096_d32_p0",
+        "line_metric_n16384_d32_p0",
+        "line_metric_n65536_d32_p0",
+        "line_metric_n262144_d32_p0",
+        "line_metric_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 30,
+      "graph_median_points": 60,
+      "trial_range_endpoints": 60,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.09494526454452558,
+        3.642632700675284
+      ]
+    },
+    {
+      "figure": "ratios_cpu",
+      "family": "line_random",
+      "case_ids": [
+        "line_random_n1024_d32_p0",
+        "line_random_n4096_d32_p0",
+        "line_random_n16384_d32_p0",
+        "line_random_n65536_d32_p0",
+        "line_random_n262144_d32_p0",
+        "line_random_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 30,
+      "graph_median_points": 60,
+      "trial_range_endpoints": 60,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.2934825142119068,
+        3.951089432490525
+      ]
+    },
+    {
+      "figure": "times_wall",
+      "family": "leaf_distance4",
+      "case_ids": [
+        "leaf_distance4_n1024_d32_p0",
+        "leaf_distance4_n4096_d32_p0",
+        "leaf_distance4_n16384_d32_p0",
+        "leaf_distance4_n65536_d32_p0",
+        "leaf_distance4_n262144_d32_p0",
+        "leaf_distance4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 36,
+      "graph_median_points": 72,
+      "trial_range_endpoints": 72,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.0003019887385057551,
+        24.232619341971056
+      ]
+    },
+    {
+      "figure": "times_wall",
+      "family": "leaf_shuffled4",
+      "case_ids": [
+        "leaf_shuffled4_n1024_d32_p0",
+        "leaf_shuffled4_n4096_d32_p0",
+        "leaf_shuffled4_n16384_d32_p0",
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n262144_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 36,
+      "graph_median_points": 72,
+      "trial_range_endpoints": 72,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.00015781215169447305,
+        20.110143153102626
+      ]
+    },
+    {
+      "figure": "times_wall",
+      "family": "grid2d_metric",
+      "case_ids": [
+        "grid2d_metric_n1024_d32_p0",
+        "grid2d_metric_n4096_d32_p0",
+        "grid2d_metric_n16384_d32_p0",
+        "grid2d_metric_n65536_d32_p0",
+        "grid2d_metric_n262144_d32_p0",
+        "grid2d_metric_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 36,
+      "graph_median_points": 72,
+      "trial_range_endpoints": 72,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.00020913722893622864,
+        21.08426979902799
+      ]
+    },
+    {
+      "figure": "times_wall",
+      "family": "grid2d_random",
+      "case_ids": [
+        "grid2d_random_n1024_d32_p0",
+        "grid2d_random_n4096_d32_p0",
+        "grid2d_random_n16384_d32_p0",
+        "grid2d_random_n65536_d32_p0",
+        "grid2d_random_n262144_d32_p0",
+        "grid2d_random_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 36,
+      "graph_median_points": 72,
+      "trial_range_endpoints": 72,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.0001591045747843237,
+        19.44320312920174
+      ]
+    },
+    {
+      "figure": "times_wall",
+      "family": "line_metric",
+      "case_ids": [
+        "line_metric_n1024_d32_p0",
+        "line_metric_n4096_d32_p0",
+        "line_metric_n16384_d32_p0",
+        "line_metric_n65536_d32_p0",
+        "line_metric_n262144_d32_p0",
+        "line_metric_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 36,
+      "graph_median_points": 72,
+      "trial_range_endpoints": 72,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.00023728221650512628,
+        70.75517018532777
+      ]
+    },
+    {
+      "figure": "times_wall",
+      "family": "line_random",
+      "case_ids": [
+        "line_random_n1024_d32_p0",
+        "line_random_n4096_d32_p0",
+        "line_random_n16384_d32_p0",
+        "line_random_n65536_d32_p0",
+        "line_random_n262144_d32_p0",
+        "line_random_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 36,
+      "graph_median_points": 72,
+      "trial_range_endpoints": 72,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.00021106689852761675,
+        19.093027495215924
+      ]
+    },
+    {
+      "figure": "times_cpu",
+      "family": "leaf_distance4",
+      "case_ids": [
+        "leaf_distance4_n1024_d32_p0",
+        "leaf_distance4_n4096_d32_p0",
+        "leaf_distance4_n16384_d32_p0",
+        "leaf_distance4_n65536_d32_p0",
+        "leaf_distance4_n262144_d32_p0",
+        "leaf_distance4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 36,
+      "graph_median_points": 72,
+      "trial_range_endpoints": 72,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.0003019887385057551,
+        24.232619341971056
+      ]
+    },
+    {
+      "figure": "times_cpu",
+      "family": "leaf_shuffled4",
+      "case_ids": [
+        "leaf_shuffled4_n1024_d32_p0",
+        "leaf_shuffled4_n4096_d32_p0",
+        "leaf_shuffled4_n16384_d32_p0",
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n262144_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 36,
+      "graph_median_points": 72,
+      "trial_range_endpoints": 72,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.00015781215169447305,
+        20.110143153102626
+      ]
+    },
+    {
+      "figure": "times_cpu",
+      "family": "grid2d_metric",
+      "case_ids": [
+        "grid2d_metric_n1024_d32_p0",
+        "grid2d_metric_n4096_d32_p0",
+        "grid2d_metric_n16384_d32_p0",
+        "grid2d_metric_n65536_d32_p0",
+        "grid2d_metric_n262144_d32_p0",
+        "grid2d_metric_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 36,
+      "graph_median_points": 72,
+      "trial_range_endpoints": 72,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.00020913722893622864,
+        21.08426979902799
+      ]
+    },
+    {
+      "figure": "times_cpu",
+      "family": "grid2d_random",
+      "case_ids": [
+        "grid2d_random_n1024_d32_p0",
+        "grid2d_random_n4096_d32_p0",
+        "grid2d_random_n16384_d32_p0",
+        "grid2d_random_n65536_d32_p0",
+        "grid2d_random_n262144_d32_p0",
+        "grid2d_random_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 36,
+      "graph_median_points": 72,
+      "trial_range_endpoints": 72,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.0001591045747843237,
+        19.44320312920174
+      ]
+    },
+    {
+      "figure": "times_cpu",
+      "family": "line_metric",
+      "case_ids": [
+        "line_metric_n1024_d32_p0",
+        "line_metric_n4096_d32_p0",
+        "line_metric_n16384_d32_p0",
+        "line_metric_n65536_d32_p0",
+        "line_metric_n262144_d32_p0",
+        "line_metric_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 36,
+      "graph_median_points": 72,
+      "trial_range_endpoints": 72,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.00023728221650512628,
+        70.75517018532777
+      ]
+    },
+    {
+      "figure": "times_cpu",
+      "family": "line_random",
+      "case_ids": [
+        "line_random_n1024_d32_p0",
+        "line_random_n4096_d32_p0",
+        "line_random_n16384_d32_p0",
+        "line_random_n65536_d32_p0",
+        "line_random_n262144_d32_p0",
+        "line_random_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 36,
+      "graph_median_points": 72,
+      "trial_range_endpoints": 72,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.00021106689852761675,
+        19.093027495215924
+      ]
+    }
+  ],
+  "legends": {
+    "ratios_wall": [
+      "Compacting Bor\u016fvka",
+      "Retained-edge Bor\u016fvka",
+      "Kruskal",
+      "Prim",
+      "Original Bor\u016fvka",
+      "Two graph medians",
+      "Full trial range"
+    ],
+    "ratios_cpu": [
+      "Compacting Bor\u016fvka",
+      "Retained-edge Bor\u016fvka",
+      "Kruskal",
+      "Prim",
+      "Original Bor\u016fvka",
+      "Two graph medians",
+      "Full trial range"
+    ],
+    "times_wall": [
+      "KKT",
+      "Compacting Bor\u016fvka",
+      "Retained-edge Bor\u016fvka",
+      "Kruskal",
+      "Prim",
+      "Original Bor\u016fvka",
+      "Two graph medians",
+      "Full trial range"
+    ],
+    "times_cpu": [
+      "KKT",
+      "Compacting Bor\u016fvka",
+      "Retained-edge Bor\u016fvka",
+      "Kruskal",
+      "Prim",
+      "Original Bor\u016fvka",
+      "Two graph medians",
+      "Full trial range"
+    ]
+  },
+  "control_normalization": false,
+  "confidence_intervals": false,
+  "interpolated_crossover": false,
+  "matched_clock_axes": true,
+  "output_sha256": {
+    "ratios_wall.png": "3fcafb7c2161e1f80214cc01b3a4b6a0b85891e600242ee5890788ee5042a570",
+    "ratios_wall.svg": "8b3ee8cb43b48ef5e02cc0856d32760034c2e8ff2df833d25061b2857a7a0140",
+    "ratios_wall.pdf": "23b0d176a294bd4527218b865c005af3541c0cfb7b0f5c96422b847024db1059",
+    "ratios_cpu.png": "101e712f260d7a6ad8cee1af98c96fabd328dcfd4c382077a9686bd32ffee6fd",
+    "ratios_cpu.svg": "e8c385b7196b3f4c9f487239f37b8b4f13b299e93eeffa6c60e92a30d446ab3a",
+    "ratios_cpu.pdf": "8af8fa343cb1cfc92df4547d049d6cd26ac0a0da776841a6a60cb9070a643fee",
+    "times_wall.png": "0b446ce7ef32dd28cf75eec9aa7516b762866b67675eb65dfc0e2c6f24e8addb",
+    "times_wall.svg": "279a00812e374f9787d88cd4844a1ffc719825d7ce9d183dd1be7bc8333cd64d",
+    "times_wall.pdf": "d490aa38f24c7801a8e3629f5537b492d2d8c96828255f0f792a570ccd1b632e",
+    "times_cpu.png": "b34dfa406ea9e7692b4220b8f4e6b85dd68f0ccffe0d671488650eb5a60a58e1",
+    "times_cpu.svg": "7cda2c8a9646d00e0b3a68b6b9298fcba6a12834e5fd630a8d7156ef3be8c017",
+    "times_cpu.pdf": "812739abc6aa220e925a1fa8d292c278b82f3deeb9baa83c0746080e8928dc2c",
+    "plotted_values.json": "84c13e7c7118fcfbb5400dfa194e94f49dcf0d793cf1db06fc28abd3bbeae310"
+  },
+  "visual_review": "pending: inspect all four PNGs before publication"
+}

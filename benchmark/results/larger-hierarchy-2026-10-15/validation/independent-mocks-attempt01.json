@@ -1,0 +1,46 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "benchmark/test_larger_hierarchy.py"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-compressed-queries",
+  "started_utc": "2026-10-15T12:14:37.822708+00:00",
+  "started_monotonic_ns": 34618833,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/run_larger_hierarchy.py": "7f49abf5147d33be7c2441ee0082cf2e0b9a1785437ef3d91236022a1684a8ad",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/test_larger_hierarchy.py": "b21e3c4c424c5cfd4c00df5006b0d156be3c4400850ffcd2968b28660f10c0c9",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/PROTOCOL.md": "fdfd9ae5b786777095341a086d98a76f241c75dcb0ae2424f8651aa75e589523",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/manifest.csv": "b889fcaba1dd843ac16472a961284d40f4f99e3fc4f049e0e85d14c5fee28c27"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 31531,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 31531,
+    "members": [],
+    "monotonic_ns": 6805047500,
+    "utc": "2026-10-15T12:14:44.593927+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/run_larger_hierarchy.py": "7f49abf5147d33be7c2441ee0082cf2e0b9a1785437ef3d91236022a1684a8ad",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/test_larger_hierarchy.py": "b21e3c4c424c5cfd4c00df5006b0d156be3c4400850ffcd2968b28660f10c0c9",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/PROTOCOL.md": "fdfd9ae5b786777095341a086d98a76f241c75dcb0ae2424f8651aa75e589523",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/manifest.csv": "b889fcaba1dd843ac16472a961284d40f4f99e3fc4f049e0e85d14c5fee28c27"
+  },
+  "finished_utc": "2026-10-15T12:14:44.594419+00:00",
+  "finished_monotonic_ns": 6805546416,
+  "elapsed_seconds": 6.770927583,
+  "stdout": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/validation/independent-mocks-attempt01.stdout",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/validation/independent-mocks-attempt01.stderr",
+  "stderr_sha256": "ac096a1d809d7d8bdff49662af92f22dcf42d898341a73d43b673bc6e545671a"
+}

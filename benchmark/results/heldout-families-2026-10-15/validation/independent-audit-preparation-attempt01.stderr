@@ -1,0 +1,22 @@
+test_all_450_intervals_and_exact_sustained_thresholds (__main__.IndependentAuditTests) ... ok
+test_all_pairs_and_2376_exact_summary_medians (__main__.IndependentAuditTests) ... ok
+test_complete_raw_schema_schedule_certificates_resources_and_concat (__main__.IndependentAuditTests) ... ERROR
+test_recursive_declared_artifact_hash_proof_and_drift (__main__.IndependentAuditTests) ... ok
+test_table_identity_values_none_and_native_domains (__main__.IndependentAuditTests) ... ok
+
+======================================================================
+ERROR: test_complete_raw_schema_schedule_certificates_resources_and_concat (__main__.IndependentAuditTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/validation/test_independent_numerical_audit.py", line 196, in test_complete_raw_schema_schedule_certificates_resources_and_concat
+    result=audit.raw_capture(path)
+  File "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/validation/independent_numerical_audit.py", line 235, in raw_capture
+    require(child['csv'] == str(raw_path) and child['log'] == str(raw_path.with_suffix('.log')) and child['rss_log'] == str(raw_path.with_suffix('.rss.jsonl')), 'child evidence paths differ')
+  File "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/validation/independent_numerical_audit.py", line 45, in require
+    if not condition: raise ValueError(message)
+ValueError: child evidence paths differ
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.085s
+
+FAILED (errors=1)

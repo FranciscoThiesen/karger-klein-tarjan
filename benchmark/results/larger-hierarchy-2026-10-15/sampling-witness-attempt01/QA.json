@@ -1,0 +1,22 @@
+{
+  "schema": "larger_study_figure_visual_qa_v1",
+  "validation": "pass",
+  "reviewer": "multigraph_design",
+  "original_resolution_inspection": true,
+  "panels_inspected": 3,
+  "pngs": [
+    {
+      "file": "sampling_witness.png",
+      "width": 2827,
+      "height": 1313,
+      "sha256": "ff6199cb5a1fabd05f43ee426d794960957ba59021787cd56c17adb16be41ad0"
+    }
+  ],
+  "notes": "All eight vertices and every edge in each graph are drawn. Blue original-MST edges, dashed orange sampled chords, weights1\u201310, derived 28/7/10/18 counts and 3/2/3 rounds are legible; labels, titles, legend and constructed-witness caption do not overlap or clip.",
+  "provenance_sha256": "7450d355c378d1780a1c171a31c7894b595e2c7dc7bf4fa2e75d6b2df8042010",
+  "qa_script_sha256": "8b08b4ec4b57a8549c43b39afb4c3b32e27a5ed301e069ab9f829cc313a89f18",
+  "declared_inputs_rehashed": 2,
+  "declared_outputs_rehashed": 5,
+  "svg_pdf_generated_and_hashed": true,
+  "svg_pdf_separately_rasterized": false
+}

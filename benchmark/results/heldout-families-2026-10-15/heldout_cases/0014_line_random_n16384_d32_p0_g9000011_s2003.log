@@ -1,0 +1,22 @@
+Running six-algorithm retention control line_random_n16384_d32_p0 graph_seed=9000011 kkt_seed=2003
+crossover_topology_attempts=1
+generation_seconds=0.0302416 reference_certificate_seconds=0.0826888
+reference_certificate_v1 {"case_id":"line_random_n16384_d32_p0","graph_seed":9000011,"kkt_seed":2003,"n":16384,"m":524288,"input_fingerprint":17529171931601096537,"topology_fingerprint":6441380471969701565,"validation":"pass"}
+        1.02 real         1.00 user         0.01 sys
+           129269760  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               11705  page reclaims
+                   1  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   0  voluntary context switches
+                   8  involuntary context switches
+         10171482145  instructions retired
+          4019862979  cycles elapsed
+           111034824  peak memory footprint

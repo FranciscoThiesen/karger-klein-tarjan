@@ -1,0 +1,48 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "benchmark/results/larger-hierarchy-2026-10-15/validation/independent_numerical_audit.py",
+    "--capture",
+    "benchmark/results/larger-hierarchy-2026-10-15/larger.json",
+    "--analysis-dir",
+    "benchmark/results/larger-hierarchy-2026-10-15/analysis",
+    "--output-dir",
+    "benchmark/results/larger-hierarchy-2026-10-15/validation/independent-numerical-audit-attempt01"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-compressed-queries",
+  "started_utc": "2026-10-15T13:45:39.422720+00:00",
+  "started_monotonic_ns": 24483791,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/validation/independent_numerical_audit.py": "f44cd2403c947a7b2d152371ab69b57d8c49440a81d0989e280b3ccf01753d36",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/validation/test_independent_numerical_audit.py": "53fe0d9b208809a8936b75d714a3c23f573452663f4da61095d34dab3d33665d"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 35691,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 35691,
+    "members": [],
+    "monotonic_ns": 296234416,
+    "utc": "2026-10-15T13:45:39.694454+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/validation/independent_numerical_audit.py": "f44cd2403c947a7b2d152371ab69b57d8c49440a81d0989e280b3ccf01753d36",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/validation/test_independent_numerical_audit.py": "53fe0d9b208809a8936b75d714a3c23f573452663f4da61095d34dab3d33665d"
+  },
+  "finished_utc": "2026-10-15T13:45:39.694704+00:00",
+  "finished_monotonic_ns": 296491541,
+  "elapsed_seconds": 0.27200775,
+  "stdout": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/validation/audit-actual-attempt01.stdout",
+  "stdout_sha256": "078c1b1460559c8d09fcc8ce4588345c9e3cf3cb1f9c791ce5279bd6cc31549f",
+  "stderr": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/validation/audit-actual-attempt01.stderr",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

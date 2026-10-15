@@ -1,0 +1,61 @@
+{
+  "created_utc": "2026-10-15T12:11:57.060244+00:00",
+  "commands": [
+    {
+      "command": [
+        "/usr/bin/arch"
+      ],
+      "exit_status": 0,
+      "stdout": "i386",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/sbin/sysctl",
+        "-n",
+        "machdep.cpu.brand_string"
+      ],
+      "exit_status": 0,
+      "stdout": "Apple M3 Max\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/sbin/sysctl",
+        "-n",
+        "hw.memsize"
+      ],
+      "exit_status": 0,
+      "stdout": "137438953472\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/sw_vers"
+      ],
+      "exit_status": 0,
+      "stdout": "ProductName:\t\tmacOS\nProductVersion:\t\t26.6.2\nBuildVersion:\t\t25G83\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/sbin/sysctl",
+        "vm.swapusage"
+      ],
+      "exit_status": 0,
+      "stdout": "vm.swapusage: total = 6144.00M  used = 4514.19M  free = 1629.81M  (encrypted)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/pmset",
+        "-g",
+        "assertions"
+      ],
+      "exit_status": 0,
+      "stdout": "2026-10-15 05:11:57 -0700 \nNo assertions.\nKernel Assertions: 0x100=MAGICWAKE\n   id=591  level=255 0x100=MAGICWAKE creat=  mod= description=en0 owner=IOSkywalkNetworkBSDClient\n",
+      "stderr": ""
+    }
+  ],
+  "note": "Metadata only. All owned diagnostic, test and plotting jobs exited before capture. All three caffeinate attempts failed; no verified sleep inhibition or thermal stability. Unrelated host activity is not controlled."
+}

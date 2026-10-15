@@ -1,0 +1,25 @@
+{
+  "recorded_utc": "2026-10-15T12:13:04.870301+00:00",
+  "command": [
+    "python3",
+    "-B",
+    "-u",
+    "benchmark/run_heldout_families.py",
+    "capture",
+    "--freeze",
+    "benchmark/results/heldout-families-2026-10-15/freeze.json",
+    "--output",
+    "benchmark/results/heldout-families-2026-10-15/heldout.csv",
+    "--released"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-compressed-queries",
+  "tool_session_id": 31626,
+  "controller_exit_status": 0,
+  "exit_status_source": "Root write_stdin completion result after capture; not inferred from log text",
+  "capture_validation": "pass",
+  "native_groups": 72,
+  "all_native_groups_verified_empty": true,
+  "controller_log_sha256": "ed0d5c85b797f2f4b713f88beb79d373ac9f8c21671d1f2bb79ae539b5c42f52",
+  "capture_sha256": "df8041a26629bc6aa16f114501d316b0d94be25db3543f49a60d113d27ba6543",
+  "sleep_inhibition_verified": false
+}

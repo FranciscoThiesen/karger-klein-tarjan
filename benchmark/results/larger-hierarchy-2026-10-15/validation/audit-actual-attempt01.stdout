@@ -1,0 +1,208 @@
+{
+  "validation": "pass",
+  "checked_outputs": 504,
+  "table_counts": {
+    "paired_ratios": 720,
+    "comparisons": 60,
+    "graph_comparisons": 120,
+    "summary": 72,
+    "graph_summary": 144,
+    "crossover_points": 30,
+    "crossover_brackets": 30,
+    "crossover_summary": 10
+  },
+  "within_variant_wins": [
+    {
+      "competitor": "compacting_boruvka",
+      "metric": "wall",
+      "individual_pairs": 72,
+      "individual_wins": 72
+    },
+    {
+      "competitor": "compacting_boruvka",
+      "metric": "cpu",
+      "individual_pairs": 72,
+      "individual_wins": 72
+    },
+    {
+      "competitor": "multigraph_boruvka",
+      "metric": "wall",
+      "individual_pairs": 72,
+      "individual_wins": 11
+    },
+    {
+      "competitor": "multigraph_boruvka",
+      "metric": "cpu",
+      "individual_pairs": 72,
+      "individual_wins": 11
+    },
+    {
+      "competitor": "kruskal",
+      "metric": "wall",
+      "individual_pairs": 72,
+      "individual_wins": 0
+    },
+    {
+      "competitor": "kruskal",
+      "metric": "cpu",
+      "individual_pairs": 72,
+      "individual_wins": 0
+    },
+    {
+      "competitor": "prim",
+      "metric": "wall",
+      "individual_pairs": 72,
+      "individual_wins": 0
+    },
+    {
+      "competitor": "prim",
+      "metric": "cpu",
+      "individual_pairs": 72,
+      "individual_wins": 0
+    },
+    {
+      "competitor": "boruvka",
+      "metric": "wall",
+      "individual_pairs": 72,
+      "individual_wins": 15
+    },
+    {
+      "competitor": "boruvka",
+      "metric": "cpu",
+      "individual_pairs": 72,
+      "individual_wins": 15
+    }
+  ],
+  "crossover_summary": [
+    {
+      "family": "leaf_hierarchy4",
+      "density": 32,
+      "competitor": "compacting_boruvka",
+      "strong_crossover": false,
+      "qualifying_brackets": 0,
+      "primary_lower_n": null,
+      "primary_upper_n": null,
+      "smallest_state": "strong_lead",
+      "largest_state": "strong_lead",
+      "strong_lead_at_every_measured_size": true,
+      "loss_at_every_measured_size": false
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "density": 32,
+      "competitor": "multigraph_boruvka",
+      "strong_crossover": false,
+      "qualifying_brackets": 0,
+      "primary_lower_n": null,
+      "primary_upper_n": null,
+      "smallest_state": "loss",
+      "largest_state": "loss",
+      "strong_lead_at_every_measured_size": false,
+      "loss_at_every_measured_size": false
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "density": 32,
+      "competitor": "kruskal",
+      "strong_crossover": false,
+      "qualifying_brackets": 0,
+      "primary_lower_n": null,
+      "primary_upper_n": null,
+      "smallest_state": "loss",
+      "largest_state": "loss",
+      "strong_lead_at_every_measured_size": false,
+      "loss_at_every_measured_size": true
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "density": 32,
+      "competitor": "prim",
+      "strong_crossover": false,
+      "qualifying_brackets": 0,
+      "primary_lower_n": null,
+      "primary_upper_n": null,
+      "smallest_state": "loss",
+      "largest_state": "loss",
+      "strong_lead_at_every_measured_size": false,
+      "loss_at_every_measured_size": true
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "density": 32,
+      "competitor": "boruvka",
+      "strong_crossover": true,
+      "qualifying_brackets": 2,
+      "primary_lower_n": 1048576,
+      "primary_upper_n": 4194304,
+      "smallest_state": "loss",
+      "largest_state": "strong_lead",
+      "strong_lead_at_every_measured_size": false,
+      "loss_at_every_measured_size": false
+    },
+    {
+      "family": "leaf_shuffled4",
+      "density": 32,
+      "competitor": "compacting_boruvka",
+      "strong_crossover": false,
+      "qualifying_brackets": 0,
+      "primary_lower_n": null,
+      "primary_upper_n": null,
+      "smallest_state": "strong_lead",
+      "largest_state": "strong_lead",
+      "strong_lead_at_every_measured_size": true,
+      "loss_at_every_measured_size": false
+    },
+    {
+      "family": "leaf_shuffled4",
+      "density": 32,
+      "competitor": "multigraph_boruvka",
+      "strong_crossover": false,
+      "qualifying_brackets": 0,
+      "primary_lower_n": null,
+      "primary_upper_n": null,
+      "smallest_state": "loss",
+      "largest_state": "loss",
+      "strong_lead_at_every_measured_size": false,
+      "loss_at_every_measured_size": true
+    },
+    {
+      "family": "leaf_shuffled4",
+      "density": 32,
+      "competitor": "kruskal",
+      "strong_crossover": false,
+      "qualifying_brackets": 0,
+      "primary_lower_n": null,
+      "primary_upper_n": null,
+      "smallest_state": "loss",
+      "largest_state": "loss",
+      "strong_lead_at_every_measured_size": false,
+      "loss_at_every_measured_size": true
+    },
+    {
+      "family": "leaf_shuffled4",
+      "density": 32,
+      "competitor": "prim",
+      "strong_crossover": false,
+      "qualifying_brackets": 0,
+      "primary_lower_n": null,
+      "primary_upper_n": null,
+      "smallest_state": "loss",
+      "largest_state": "loss",
+      "strong_lead_at_every_measured_size": false,
+      "loss_at_every_measured_size": true
+    },
+    {
+      "family": "leaf_shuffled4",
+      "density": 32,
+      "competitor": "boruvka",
+      "strong_crossover": false,
+      "qualifying_brackets": 0,
+      "primary_lower_n": null,
+      "primary_upper_n": null,
+      "smallest_state": "loss",
+      "largest_state": "loss",
+      "strong_lead_at_every_measured_size": false,
+      "loss_at_every_measured_size": true
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "schema": "larger_hierarchy_final_readiness_v1",
+  "status": "pass",
+  "created_utc": "2026-10-15T12:18:07.103837+00:00",
+  "validation_receipt_sha256": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/validation/owner-mocks-attempt01.json": "ac72881de2bd0a80319d63ed78bcf71b8010f89a3bd1492f9048588b548af7ab",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/validation/independent-mocks-attempt01.json": "ac8c65332e8916f9e963aa55fbc567ef63c3f75a52e3c21fd9c9d25fccecef4c",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/validation/readiness-attempt01.json": "5a7dca9ccdf4423c9bbedff508610a1a2a3826e4f83e8fba92a18b43ab2668bf"
+  },
+  "source_sha256": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/run_larger_hierarchy.py": "7f49abf5147d33be7c2441ee0082cf2e0b9a1785437ef3d91236022a1684a8ad",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/test_larger_hierarchy.py": "b21e3c4c424c5cfd4c00df5006b0d156be3c4400850ffcd2968b28660f10c0c9",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/PROTOCOL.md": "fdfd9ae5b786777095341a086d98a76f241c75dcb0ae2424f8651aa75e589523",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/manifest.csv": "b889fcaba1dd843ac16472a961284d40f4f99e3fc4f049e0e85d14c5fee28c27",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/README.md": "047a649e4b0ac606f4a29f2eb1fd62b22d478b4f10b3af2f5d66f5e1f9642327",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/INDEPENDENT_SOURCE_REVIEW.md": "8b7a1e2d436278c4e0dca89e66d764f9466c3efbfe4e2c19ac8724e47b14685d"
+  },
+  "owner_mock_groups": 11,
+  "independent_mock_groups": 11,
+  "all_validation_groups_known_empty": true,
+  "full_parent_native_proof": "pass",
+  "seed_nonreuse_recheck": "pass within declared worktree source/protocol/freeze scope",
+  "native_solver_executed": false,
+  "freeze_created_by_agent": false,
+  "prior_bookkeeping_failure": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/validation/final-readiness-attempt01-error.log",
+  "remaining_root_steps": [
+    "prospective preflight/freeze",
+    "machine/power checks",
+    "explicit separate performance release"
+  ],
+  "resource_fit": "4M input remains unexecuted; no peak-memory guarantee"
+}

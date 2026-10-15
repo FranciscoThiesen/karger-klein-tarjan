@@ -1,0 +1,56 @@
+{
+  "schema": "heldout_visual_qa_v1",
+  "validation": "pass",
+  "reviewed_utc": "2026-10-15T12:19:02.845628+00:00",
+  "reviewers": [
+    "multigraph_design",
+    "root"
+  ],
+  "images": [
+    {
+      "path": "ratios_wall.png",
+      "sha256": "3fcafb7c2161e1f80214cc01b3a4b6a0b85891e600242ee5890788ee5042a570",
+      "pixels": [
+        2766,
+        2600
+      ],
+      "original_resolution_review": "pass"
+    },
+    {
+      "path": "ratios_cpu.png",
+      "sha256": "101e712f260d7a6ad8cee1af98c96fabd328dcfd4c382077a9686bd32ffee6fd",
+      "pixels": [
+        2766,
+        2600
+      ],
+      "original_resolution_review": "pass"
+    },
+    {
+      "path": "times_wall.png",
+      "sha256": "0b446ce7ef32dd28cf75eec9aa7516b762866b67675eb65dfc0e2c6f24e8addb",
+      "pixels": [
+        2767,
+        2600
+      ],
+      "original_resolution_review": "pass"
+    },
+    {
+      "path": "times_cpu.png",
+      "sha256": "b34dfa406ea9e7692b4220b8f4e6b85dd68f0ccffe0d671488650eb5a60a58e1",
+      "pixels": [
+        2767,
+        2600
+      ],
+      "original_resolution_review": "pass"
+    }
+  ],
+  "panels_reviewed": 24,
+  "input_output_hashes_rechecked": true,
+  "figure_provenance_sha256": "ed75d174e9746a00e66735ec388736f8a644a45fb7a1b310af4f7da4c1c97b07",
+  "all_legends_present": true,
+  "neutral_kkt_label": true,
+  "axes_and_captions_legible": true,
+  "no_clipping_or_overlap_found": true,
+  "matched_wall_cpu_limits": true,
+  "scope": "All four PNGs inspected at original resolution by both reviewers. SVG/PDF generated and hashed, not separately rasterized."
+}

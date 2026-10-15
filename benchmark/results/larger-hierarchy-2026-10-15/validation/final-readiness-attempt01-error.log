@@ -1,0 +1,12 @@
+Supplemental summary-receipt attempt 01 failed before writing a receipt.
+Both underlying validation suites and the actual parent readiness proof had
+already passed; no suite or native solver was launched by this attempt.
+
+Traceback (most recent call last):
+  File "<stdin>", line 8, in <module>
+  File "<stdin>", line 8, in <genexpr>
+KeyError: 'status'
+
+Cause: the summary assumed every receipt used a top-level "status" field.
+The independent receipt's reviewed schema uses "validation": "pass" instead.
+The corrected summary checks each receipt's actual schema-specific fields.

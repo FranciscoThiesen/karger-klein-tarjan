@@ -1,0 +1,27 @@
+{
+  "command": [
+    "/usr/local/opt/python@3.14/bin/python3.14",
+    "-B",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/test_heldout_families.py"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-compressed-queries",
+  "started_utc": "2026-10-15T10:59:00.305016+00:00",
+  "source_sha256": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/run_heldout_families.py": "e32beaceeb13ad8933cd461e0cab45c15a7a0b4bd4c9c5d58875f9290859cb4d",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/test_heldout_families.py": "463d4d505da4a6f05d071dd2926a19d4e4711c19aec1fd074494ad1d0d7b56ec",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/PROTOCOL.md": "64ed6f857b215300068d668756c3d4a69dcba4247bc0e6e6e0f7e5b029921fb9",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/manifest.csv": "57a424af3afc321814640bb9194340158a7fd98cc8bfc733fa01f2a776a828a7"
+  },
+  "native_processes_executed": false,
+  "status": "pass",
+  "process_group": 26971,
+  "exit_status": 0,
+  "owned_group_verified_empty": true,
+  "sources_unchanged": true,
+  "finished_utc": "2026-10-15T10:59:26.800773+00:00",
+  "elapsed_seconds": 26.49216549983248,
+  "stdout": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/validation/owner-mocks-attempt01.stdout",
+  "stderr": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/validation/owner-mocks-attempt01.stderr",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "15a6b13eb37322c6f1f4c303c0d1621e0765909a00a220c5d5b5a54a9299259d"
+}

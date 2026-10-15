@@ -1,0 +1,234 @@
+{
+  "schema": "compressed_work_execution_v1",
+  "status": "pass",
+  "command": [
+    "/usr/local/opt/python@3.14/bin/python3.14",
+    "-B",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/work/collect.py",
+    "capture",
+    "--freeze",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/work/freeze.json",
+    "--output",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/work/capture-attempt01.json",
+    "--released"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-compressed-queries",
+  "freeze_sha256": "6fe07ed1d07ab5fc0a374a4e2090022589e3f91ade3f15940c48a58b34549a2b",
+  "collector_sha256": "6bba53051d5ce6565b6eaff43a9118f20d4eeb5491ac25686e2707c50233fda1",
+  "started_utc": "2026-10-15T10:58:37.622696+00:00",
+  "purpose": "Untimed diagnostic counters; no performance measurement",
+  "outer_timeout_seconds": 44100,
+  "controller_pid": 26940,
+  "collector_process_group": 26942,
+  "exit_status": 0,
+  "collector_group_verification": {
+    "utc": "2026-10-15T11:07:32.928951+00:00",
+    "monotonic_ns": 3620364778701333,
+    "process_group": 26942,
+    "validation": "pass",
+    "members": [],
+    "rss_kib": 0
+  },
+  "collector_group_known_empty": true,
+  "native_group_postflight": [
+    {
+      "utc": "2026-10-15T11:07:32.935701+00:00",
+      "monotonic_ns": 3620364785470375,
+      "process_group": 26943,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    {
+      "utc": "2026-10-15T11:07:32.935923+00:00",
+      "monotonic_ns": 3620364785696208,
+      "process_group": 26946,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    {
+      "utc": "2026-10-15T11:07:32.936096+00:00",
+      "monotonic_ns": 3620364785869750,
+      "process_group": 26947,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    {
+      "utc": "2026-10-15T11:07:32.936187+00:00",
+      "monotonic_ns": 3620364785961083,
+      "process_group": 26948,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    {
+      "utc": "2026-10-15T11:07:32.936294+00:00",
+      "monotonic_ns": 3620364786067708,
+      "process_group": 26951,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    {
+      "utc": "2026-10-15T11:07:32.936421+00:00",
+      "monotonic_ns": 3620364786193833,
+      "process_group": 27051,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    {
+      "utc": "2026-10-15T11:07:32.936545+00:00",
+      "monotonic_ns": 3620364786318750,
+      "process_group": 27127,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    {
+      "utc": "2026-10-15T11:07:32.936658+00:00",
+      "monotonic_ns": 3620364786432041,
+      "process_group": 27187,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    {
+      "utc": "2026-10-15T11:07:32.936776+00:00",
+      "monotonic_ns": 3620364786549458,
+      "process_group": 27282,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    {
+      "utc": "2026-10-15T11:07:32.936885+00:00",
+      "monotonic_ns": 3620364786659041,
+      "process_group": 27283,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    {
+      "utc": "2026-10-15T11:07:32.936977+00:00",
+      "monotonic_ns": 3620364786750541,
+      "process_group": 27284,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    {
+      "utc": "2026-10-15T11:07:32.937062+00:00",
+      "monotonic_ns": 3620364786836083,
+      "process_group": 27303,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    {
+      "utc": "2026-10-15T11:07:32.937155+00:00",
+      "monotonic_ns": 3620364786929166,
+      "process_group": 27353,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    {
+      "utc": "2026-10-15T11:07:32.937241+00:00",
+      "monotonic_ns": 3620364787014500,
+      "process_group": 27386,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    {
+      "utc": "2026-10-15T11:07:32.937328+00:00",
+      "monotonic_ns": 3620364787102041,
+      "process_group": 27398,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    {
+      "utc": "2026-10-15T11:07:32.937415+00:00",
+      "monotonic_ns": 3620364787189000,
+      "process_group": 27399,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    {
+      "utc": "2026-10-15T11:07:32.937499+00:00",
+      "monotonic_ns": 3620364787272708,
+      "process_group": 27400,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    {
+      "utc": "2026-10-15T11:07:32.937591+00:00",
+      "monotonic_ns": 3620364787364625,
+      "process_group": 27441,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    {
+      "utc": "2026-10-15T11:07:32.937671+00:00",
+      "monotonic_ns": 3620364787444583,
+      "process_group": 27575,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    {
+      "utc": "2026-10-15T11:07:32.937748+00:00",
+      "monotonic_ns": 3620364787522000,
+      "process_group": 27614,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    {
+      "utc": "2026-10-15T11:07:32.937829+00:00",
+      "monotonic_ns": 3620364787603458,
+      "process_group": 27639,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    {
+      "utc": "2026-10-15T11:07:32.937923+00:00",
+      "monotonic_ns": 3620364787697375,
+      "process_group": 27641,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    {
+      "utc": "2026-10-15T11:07:32.938007+00:00",
+      "monotonic_ns": 3620364787780833,
+      "process_group": 27644,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    {
+      "utc": "2026-10-15T11:07:32.938123+00:00",
+      "monotonic_ns": 3620364787896416,
+      "process_group": 27647,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    }
+  ],
+  "all_native_groups_known_empty": true,
+  "elapsed_seconds": 535.3109569158405,
+  "finished_utc": "2026-10-15T11:07:32.938355+00:00",
+  "log": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/work/capture-attempt01.log",
+  "log_sha256": "38290b2cd3cea61982c7f2a7d6c782a77b714ccfd896c7923cb3b013e70c9d90",
+  "capture": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/work/capture-attempt01.json",
+  "capture_sha256": "ad3aa0a8ccb0b5a8dc7ceba6aa243571992584a20ef175398053af7274f53fd3"
+}

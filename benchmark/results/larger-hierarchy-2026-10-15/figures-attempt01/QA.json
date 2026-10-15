@@ -1,0 +1,40 @@
+{
+  "schema": "larger_study_figure_visual_qa_v1",
+  "validation": "pass",
+  "reviewer": "multigraph_design",
+  "original_resolution_inspection": true,
+  "panels_inspected": 8,
+  "pngs": [
+    {
+      "file": "ratios_wall.png",
+      "width": 2762,
+      "height": 1339,
+      "sha256": "3b0cf39b5140ba5392e74c03de59a31a98f060f18d4138122a53ece5ccd4c5b4"
+    },
+    {
+      "file": "ratios_cpu.png",
+      "width": 2762,
+      "height": 1339,
+      "sha256": "ddb34a870ae121dc7284e3737e0ebb06e96f75b4fd7676f4f89b63d79a820c83"
+    },
+    {
+      "file": "times_wall.png",
+      "width": 2762,
+      "height": 1339,
+      "sha256": "203cc61aa29f5289aedcd3c6ebf079b0cafd3e2997a9df1a5f5e16ef986e790d"
+    },
+    {
+      "file": "times_cpu.png",
+      "width": 2762,
+      "height": 1339,
+      "sha256": "470a219bd682e9cd8e855c5d08921d08518d1a844391c69d6ca2780e744019f7"
+    }
+  ],
+  "notes": "All four original-resolution PNGs are readable: two family panels each, all six absolute-time or five comparator series, both graph medians, complete trial ranges, neutral KKT legends, threshold captions and all measured endpoints. Wall and CPU panels use matching bounds; no clipping or overlap was found. Lines connect measurements without implying an interpolated crossover.",
+  "provenance_sha256": "73613320422a3e7ff5d46bf5a5a6eee956abcd77bb092a4963196e5f4c725413",
+  "qa_script_sha256": "8b08b4ec4b57a8549c43b39afb4c3b32e27a5ed301e069ab9f829cc313a89f18",
+  "declared_inputs_rehashed": 56,
+  "declared_outputs_rehashed": 13,
+  "svg_pdf_generated_and_hashed": true,
+  "svg_pdf_separately_rasterized": false
+}
