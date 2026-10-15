@@ -23,8 +23,12 @@ the historical measurements below.
 [multigraph contraction study](../../benchmark/results/multigraph-2026-10-14/README.md)
 cuts KKT time by about 52% on the large ordered attachment cases in its fresh
 two-seed screen. It retains all controls, classical-solver losses, correctness
-gates and separate work counters. Default KKT is unchanged; additional size
-replication and a Borůvka control using the same cheaper contraction are pending.
+gates and separate work counters. Default KKT is unchanged. The subsequent
+[six-solver control](../../benchmark/results/retention-control-2026-10-15/README.md)
+reaches 2.1 million vertices and confirms the crossover against the deduplicating
+compactor, but retained-edge Borůvka beats KKT in every one of its 120 paired
+comparisons on both clocks. The earlier lead therefore does not establish a
+win over Borůvka using the same cheaper contraction.
 
 This report asks three distinct questions: whether the original implementation faithfully realized KKT's local complexity bounds; whether the current implementation *measures* like linear time; and which graph structures make it competitive in practice. The answers come from source inspection, certified benchmark outputs, separate work counters, two complete new timing campaigns, and a controlled comparison with repeated compacting Borůvka steps.
 

@@ -11,8 +11,8 @@ This is an experimental implementation, enabled only with
 `KKT_EXPERIMENT_RETAIN_PARALLEL`. Default KKT is unchanged. The paired source
 and validation commit is `ae03ec6`; the screen protocol and freeze were
 committed at `36b8ea7` before timing. A fresh-seed six-solver follow-up has been
-[declared separately](../retention-control-2026-10-15/PROTOCOL.md) and is pending;
-its eventual results must not be pooled with this screen. It gives repeated
+[completed separately](../retention-control-2026-10-15/README.md);
+its results must not be pooled with this screen. It gives repeated
 Boruvka the same cheap contraction, to test how much of KKT's lead depends on
 random filtering rather than the shared contraction implementation. The earlier
 five-solver follow-up draft was superseded before any freeze or native timing.
@@ -130,12 +130,13 @@ allocation, record copies and different operations have different costs.
 These amplified counts identify a risk for other inputs, not an observed
 runtime regression in this screen.
 
-This also motivates the stronger control: repeat the candidate's same retained-
-parallel step until the graph is empty. Its results will test whether ordinary
-Boruvka can obtain similar gains from the cheaper contraction. Until then,
-the 2.5× lead is specifically over the retained, unchanged **deduplicating**
-compactor; it does not establish superiority over every tuned Boruvka variant
-or isolate the contribution of random sampling.
+This motivated the [stronger six-solver control](../retention-control-2026-10-15/README.md):
+repeat the candidate's same retained-parallel step until the graph is empty.
+That completed fresh-seed study finds retained-edge Boruvka faster than KKT
+in all 120 paired comparisons, on both clocks. The screen's 2.5× lead is
+specifically over the unchanged **deduplicating** compactor; it does not
+establish superiority over the shared-contraction Boruvka variant or isolate
+the contribution of random sampling.
 
 ## Correctness, complexity and retained evidence
 
@@ -171,6 +172,6 @@ must not be relabeled as measurements of this code.
 The [screen protocol](PROTOCOL.md), [freeze](freeze.json), [raw capture](screen.csv),
 [strict analysis](screen-analysis/README.md), [work counters](work/README.md), and
 [superseded, unexecuted follow-up draft](FOLLOWUP_PROTOCOL.md) retain both wins and
-losses. The six-solver follow-up is selected after this screen and will be reported
+losses. The six-solver follow-up was selected after this screen and is reported
 separately. These are unpublished repository experiments, not independent
 sources for a Wikipedia classification.

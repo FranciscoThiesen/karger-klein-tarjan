@@ -1,0 +1,11 @@
+{
+  "created_utc": "2026-10-15T06:10:03.001159+00:00",
+  "command": [
+    "/usr/sbin/sysctl",
+    "vm.swapusage"
+  ],
+  "exit_status": 0,
+  "stdout": "vm.swapusage: total = 6144.00M  used = 4618.19M  free = 1525.81M  (encrypted)\n",
+  "stderr": "",
+  "limitation": "Before/after swap occupancy does not measure paging activity."
+}

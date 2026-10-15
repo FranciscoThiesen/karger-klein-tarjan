@@ -1,0 +1,331 @@
+{
+  "schema": "independent_retention_numerical_audit_v1",
+  "validation": "pass",
+  "collector_imported": false,
+  "raw_native_children": 20,
+  "certificates": 20,
+  "checked_outputs": 840,
+  "timed_outputs": 720,
+  "warmup_outputs": 120,
+  "paired_ratios": 1200,
+  "case_medians": 100,
+  "graph_medians": 200,
+  "clock_flagged_calls": 0,
+  "strict_analyzer_medians_agree": true,
+  "arithmetic": "Exact Fraction ratios and medians; decimal CSV values are convenience conversions. Crossover predicates evaluated on exact fractions.",
+  "scope": "Independent numeric/schedule/certificate/hash audit; full process-group resource validation is the separate strict collector analysis.",
+  "individual_wins": [
+    {
+      "comparator": "compacting_boruvka",
+      "metric": "wall",
+      "individual_wins": 74,
+      "individual_pairs": 120
+    },
+    {
+      "comparator": "compacting_boruvka",
+      "metric": "cpu",
+      "individual_wins": 74,
+      "individual_pairs": 120
+    },
+    {
+      "comparator": "multigraph_boruvka",
+      "metric": "wall",
+      "individual_wins": 0,
+      "individual_pairs": 120
+    },
+    {
+      "comparator": "multigraph_boruvka",
+      "metric": "cpu",
+      "individual_wins": 0,
+      "individual_pairs": 120
+    },
+    {
+      "comparator": "kruskal",
+      "metric": "wall",
+      "individual_wins": 12,
+      "individual_pairs": 120
+    },
+    {
+      "comparator": "kruskal",
+      "metric": "cpu",
+      "individual_wins": 12,
+      "individual_pairs": 120
+    },
+    {
+      "comparator": "prim",
+      "metric": "wall",
+      "individual_wins": 32,
+      "individual_pairs": 120
+    },
+    {
+      "comparator": "prim",
+      "metric": "cpu",
+      "individual_wins": 32,
+      "individual_pairs": 120
+    },
+    {
+      "comparator": "boruvka",
+      "metric": "wall",
+      "individual_wins": 24,
+      "individual_pairs": 120
+    },
+    {
+      "comparator": "boruvka",
+      "metric": "cpu",
+      "individual_wins": 24,
+      "individual_pairs": 120
+    }
+  ],
+  "crossover_results": [
+    {
+      "family": "gnm_random",
+      "density": 16,
+      "comparator": "compacting_boruvka",
+      "classification": "strong_observed_crossover",
+      "lower_measured_n": 4096,
+      "upper_measured_n": 1048576,
+      "point_states": "4096:loss;1048576:strong_win"
+    },
+    {
+      "family": "gnm_random",
+      "density": 16,
+      "comparator": "multigraph_boruvka",
+      "classification": "loss_entire_measured_range",
+      "lower_measured_n": null,
+      "upper_measured_n": null,
+      "point_states": "4096:loss;1048576:loss"
+    },
+    {
+      "family": "gnm_random",
+      "density": 16,
+      "comparator": "kruskal",
+      "classification": "loss_entire_measured_range",
+      "lower_measured_n": null,
+      "upper_measured_n": null,
+      "point_states": "4096:loss;1048576:loss"
+    },
+    {
+      "family": "gnm_random",
+      "density": 16,
+      "comparator": "prim",
+      "classification": "strong_lead_entire_measured_range",
+      "lower_measured_n": null,
+      "upper_measured_n": null,
+      "point_states": "4096:strong_win;1048576:strong_win"
+    },
+    {
+      "family": "gnm_random",
+      "density": 16,
+      "comparator": "boruvka",
+      "classification": "loss_entire_measured_range",
+      "lower_measured_n": null,
+      "upper_measured_n": null,
+      "point_states": "4096:loss;1048576:loss"
+    },
+    {
+      "family": "gnm_random",
+      "density": 128,
+      "comparator": "compacting_boruvka",
+      "classification": "strong_observed_crossover",
+      "lower_measured_n": 4096,
+      "upper_measured_n": 262144,
+      "point_states": "4096:loss;262144:strong_win"
+    },
+    {
+      "family": "gnm_random",
+      "density": 128,
+      "comparator": "multigraph_boruvka",
+      "classification": "loss_entire_measured_range",
+      "lower_measured_n": null,
+      "upper_measured_n": null,
+      "point_states": "4096:loss;262144:loss"
+    },
+    {
+      "family": "gnm_random",
+      "density": 128,
+      "comparator": "kruskal",
+      "classification": "no_strong_observed_crossover",
+      "lower_measured_n": null,
+      "upper_measured_n": null,
+      "point_states": "4096:mixed_or_narrow;262144:loss"
+    },
+    {
+      "family": "gnm_random",
+      "density": 128,
+      "comparator": "prim",
+      "classification": "loss_entire_measured_range",
+      "lower_measured_n": null,
+      "upper_measured_n": null,
+      "point_states": "4096:loss;262144:loss"
+    },
+    {
+      "family": "gnm_random",
+      "density": 128,
+      "comparator": "boruvka",
+      "classification": "loss_entire_measured_range",
+      "lower_measured_n": null,
+      "upper_measured_n": null,
+      "point_states": "4096:loss;262144:loss"
+    },
+    {
+      "family": "leaf_distance4",
+      "density": 16,
+      "comparator": "compacting_boruvka",
+      "classification": "strong_observed_crossover",
+      "lower_measured_n": 65536,
+      "upper_measured_n": 262144,
+      "point_states": "65536:loss;262144:strong_win;2097152:strong_win"
+    },
+    {
+      "family": "leaf_distance4",
+      "density": 16,
+      "comparator": "multigraph_boruvka",
+      "classification": "loss_entire_measured_range",
+      "lower_measured_n": null,
+      "upper_measured_n": null,
+      "point_states": "65536:loss;262144:loss;2097152:loss"
+    },
+    {
+      "family": "leaf_distance4",
+      "density": 16,
+      "comparator": "kruskal",
+      "classification": "loss_entire_measured_range",
+      "lower_measured_n": null,
+      "upper_measured_n": null,
+      "point_states": "65536:loss;262144:loss;2097152:loss"
+    },
+    {
+      "family": "leaf_distance4",
+      "density": 16,
+      "comparator": "prim",
+      "classification": "no_strong_observed_crossover",
+      "lower_measured_n": null,
+      "upper_measured_n": null,
+      "point_states": "65536:loss;262144:loss;2097152:mixed_or_narrow"
+    },
+    {
+      "family": "leaf_distance4",
+      "density": 16,
+      "comparator": "boruvka",
+      "classification": "strong_observed_crossover",
+      "lower_measured_n": 262144,
+      "upper_measured_n": 2097152,
+      "point_states": "65536:loss;262144:loss;2097152:strong_win"
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "density": 16,
+      "comparator": "compacting_boruvka",
+      "classification": "strong_observed_crossover",
+      "lower_measured_n": 65536,
+      "upper_measured_n": 262144,
+      "point_states": "65536:loss;262144:strong_win;2097152:strong_win"
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "density": 16,
+      "comparator": "multigraph_boruvka",
+      "classification": "loss_entire_measured_range",
+      "lower_measured_n": null,
+      "upper_measured_n": null,
+      "point_states": "65536:loss;262144:loss;2097152:loss"
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "density": 16,
+      "comparator": "kruskal",
+      "classification": "loss_entire_measured_range",
+      "lower_measured_n": null,
+      "upper_measured_n": null,
+      "point_states": "65536:loss;262144:loss;2097152:loss"
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "density": 16,
+      "comparator": "prim",
+      "classification": "loss_entire_measured_range",
+      "lower_measured_n": null,
+      "upper_measured_n": null,
+      "point_states": "65536:loss;262144:loss;2097152:loss"
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "density": 16,
+      "comparator": "boruvka",
+      "classification": "strong_observed_crossover",
+      "lower_measured_n": 262144,
+      "upper_measured_n": 2097152,
+      "point_states": "65536:loss;262144:loss;2097152:strong_win"
+    }
+  ],
+  "input_sha256": {
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup.json": "5796b23ebc92b70c627554654bd265ee93cba2237f09884481b7e9ebba608703",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/freeze.json": "57459498d3a87d6b128ec7ca9cb89a5cda809350865b1c83208ad39f50b92359",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/PROTOCOL.md": "1ffdbec28033256c722461ae9a4d96fabe0be3729f81472639eb9427475a995b",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/manifest.csv": "2d083d60a7e1562b07a8184dd8808d157ce84e1755f1436c3bda68badaef0f56",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0001_leaf_hierarchy4_n65536_d16_p0_g3000001_s809.csv": "10fc8db7c83a31fcbf8a9b4418d1ae69b4bd3187132c660dcf56cb5fcca64695",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0001_leaf_hierarchy4_n65536_d16_p0_g3000001_s809.log": "7ef84d71e1156eca57eb37d32c5e69da46f39a5f445c10b4a9d9198d1eccbb78",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0001_leaf_hierarchy4_n65536_d16_p0_g3000001_s809.rss.jsonl": "cd4e4aa845c67918c490c79c592c9c6c3f35e1c0d3c7c2a43db20591d9f07c26",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0002_leaf_hierarchy4_n262144_d16_p0_g3000001_s809.csv": "b8df95c7524322f1cf2de667a058701e570f7752bd678682476d70f4dd7b0c02",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0002_leaf_hierarchy4_n262144_d16_p0_g3000001_s809.log": "b6ef4523862554222d674fd632440a86f23e75366f639041584f7c5548b02fcb",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0002_leaf_hierarchy4_n262144_d16_p0_g3000001_s809.rss.jsonl": "c6eb49a3103e5e8844f0549ec8e5b4e9b88ba23cdeea3adebde2e8adf103eaa2",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0003_leaf_hierarchy4_n2097152_d16_p0_g3000001_s809.csv": "c02a677719d900b785f230e0c8ccb2f46eb9ee4ea3e9a63d2263d2e8e569234a",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0003_leaf_hierarchy4_n2097152_d16_p0_g3000001_s809.log": "99a24380b59582592e547f202ee6d4674957e0bb36bae6f4e72bfa64edbf05cd",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0003_leaf_hierarchy4_n2097152_d16_p0_g3000001_s809.rss.jsonl": "f6e3932358c9d1f80618f32a3e3270b481f09678afac4091f9d973472d8724e9",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0004_leaf_distance4_n65536_d16_p0_g3000001_s809.csv": "78460852511cd343a20bc8e3480ed8e455eaed26eddcd8fb4687281c6c12beda",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0004_leaf_distance4_n65536_d16_p0_g3000001_s809.log": "7cba976f642569026675ba67e9e5cdbf0d44b2166aa570e7ff0d41265b994b59",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0004_leaf_distance4_n65536_d16_p0_g3000001_s809.rss.jsonl": "aef97ee73cd77c7b5a828e5bbb53a3cded0f3c756665f3e4fe985638ad6518dd",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0005_leaf_distance4_n262144_d16_p0_g3000001_s809.csv": "fd997ca51e40f630069b2ea0d65b8226d9820556f1a43c965e7c975d22a67ea1",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0005_leaf_distance4_n262144_d16_p0_g3000001_s809.log": "9edd002ba88eb1508cbf2bdc40f93a4be5514ccb8a142dbfe8aad78ae4549a2e",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0005_leaf_distance4_n262144_d16_p0_g3000001_s809.rss.jsonl": "0a09e3a7538a5b05f47a2137e304c394273bc4d3f7be7a3cdf50c38aa4b11b0d",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0006_leaf_distance4_n2097152_d16_p0_g3000001_s809.csv": "3ac7668247c87e9e59448cd2cbbec2f2ffc2fc9d077a45b638f442ae444614dd",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0006_leaf_distance4_n2097152_d16_p0_g3000001_s809.log": "cf7830dc510b3d43e6cbe0060332186038a23276f43c5acf8504d6f523c2af2f",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0006_leaf_distance4_n2097152_d16_p0_g3000001_s809.rss.jsonl": "b4718ed0d0e039224ec2a96dc36a92ac3ce6aa201de6afcfe19621f1ed05ee49",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0007_gnm_random_n4096_d16_p0_g3000001_s809.csv": "967b6c517dd2a352160b7ec5dc157eaa99e2540a70c7443b647069e64c36673d",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0007_gnm_random_n4096_d16_p0_g3000001_s809.log": "cc8bf84d90aa3e15845740eaf6fcbb1045ac4142a03f5ac9295732972f9b3e48",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0007_gnm_random_n4096_d16_p0_g3000001_s809.rss.jsonl": "eaed10232ba67f06b14c56da2e43292321c6c3738b7dd206ef1c6099ae245e40",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0008_gnm_random_n1048576_d16_p0_g3000001_s809.csv": "8c0bb373a411e4573b14be5d475263599a9fe757f2e3f538decda88c90c997c6",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0008_gnm_random_n1048576_d16_p0_g3000001_s809.log": "6001af7fe4c11b69499ffdfa63d75526caa5d74cff552f6ef386ac16226d34ad",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0008_gnm_random_n1048576_d16_p0_g3000001_s809.rss.jsonl": "68428e48e5ce4ef05fbc7def55cdce1fecb8c045b604e2c3432b4b4137b880ed",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0009_gnm_random_n4096_d128_p0_g3000001_s809.csv": "47c9bdba1364918402d240f1d1a9754c47c297d40c5cfb0c0d0c8bd5492f8aed",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0009_gnm_random_n4096_d128_p0_g3000001_s809.log": "5f78d608810c864f0b165acc73fae62fe2d1db3232573d9fd27319fd2a2b9076",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0009_gnm_random_n4096_d128_p0_g3000001_s809.rss.jsonl": "c9147ac090fdc0f25006c57e6e47edc8b6e7d77a908c9b2eca2483e55e4a2c88",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0010_gnm_random_n262144_d128_p0_g3000001_s809.csv": "6b4512fe016a6e53620b4853d0756337de7577a6846a2c762c7a23f9ad9c956a",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0010_gnm_random_n262144_d128_p0_g3000001_s809.log": "4b23d6cb363d4c817871e25fd1cfead578613051f367ada41fc50f53fbe81c13",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0010_gnm_random_n262144_d128_p0_g3000001_s809.rss.jsonl": "1cc0f058ace715b0d4be7dd451a56cf23e2e919d5ea1bb50f38d1d539d70bae2",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0011_gnm_random_n262144_d128_p0_g3000029_s809.csv": "e1193cf97b630a32316ac57489043bed5fd6e7ba2e9a16faf58b2989f5b67ef1",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0011_gnm_random_n262144_d128_p0_g3000029_s809.log": "172a3fcbc1b280b74aca77e654a8774428ba9206a26a0a686a996198541627c2",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0011_gnm_random_n262144_d128_p0_g3000029_s809.rss.jsonl": "ab156e59b6976d247685f49baf27034faad43c545cabc4e4a025241ca1b949d5",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0012_gnm_random_n4096_d128_p0_g3000029_s809.csv": "27e67d935fedfbfef245e0f368036cdb4a9a5dc38cc22c7165787b3e95817da7",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0012_gnm_random_n4096_d128_p0_g3000029_s809.log": "3779c7d804c2574775f50c4e57d93e92bcf036bee7a5e97ecc72fcbea65c37f3",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0012_gnm_random_n4096_d128_p0_g3000029_s809.rss.jsonl": "bf3f584004d9c69034ff8c2d0522935364db8a96428dd6ee1d10611e3c834f40",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0013_gnm_random_n1048576_d16_p0_g3000029_s809.csv": "55874fd504e71854ec38d1bc46137b493ec9845f089387db89c0a7f9dc5f9727",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0013_gnm_random_n1048576_d16_p0_g3000029_s809.log": "3acda7c9b0a39f4c3c9c77762ae4f7f5cdaa6e89dcdc873aa0efafd4aa638ee7",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0013_gnm_random_n1048576_d16_p0_g3000029_s809.rss.jsonl": "36c2b2a09b6675c9aa69ab45cf7f7613b17d5cf0bd410ba84a922e775198bae6",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0014_gnm_random_n4096_d16_p0_g3000029_s809.csv": "30719d91703fbcbd36f18851f83d4669faa5022c0a22d5a091954522074d5d37",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0014_gnm_random_n4096_d16_p0_g3000029_s809.log": "65657a0b52e594b57c59a1d4f5aeeddcdd9e9a813549288140c79c8f6f7f24d6",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0014_gnm_random_n4096_d16_p0_g3000029_s809.rss.jsonl": "377f54fda8d62bb03eecec1d2409effe23d2ac93c7c4d841b97f7a584ba36c41",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0015_leaf_distance4_n2097152_d16_p0_g3000029_s809.csv": "59dca9f0c41ed222d6338af30df81c7163caef468f45e6f1c5ccd51946202892",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0015_leaf_distance4_n2097152_d16_p0_g3000029_s809.log": "5a6c4d82e5fdaee7f4be9d1b43166a215e8762f251a565e153c3d37865fd4d62",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0015_leaf_distance4_n2097152_d16_p0_g3000029_s809.rss.jsonl": "c3dc6bdac43f2ba4fdeb4873d0f52b96424b3ad38a2b7ea8ae12a910a354165d",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0016_leaf_distance4_n262144_d16_p0_g3000029_s809.csv": "b6a4f145a604a6f2eabd097d532c331fc935b04383be6824ec0ef01ca064523d",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0016_leaf_distance4_n262144_d16_p0_g3000029_s809.log": "5e76e2fd669d1cd5d2d3c7f0be4f8d6df973f5047042b0232fa9f74936f9852e",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0016_leaf_distance4_n262144_d16_p0_g3000029_s809.rss.jsonl": "5076e88a20c5fd0538fc30035b8254b6b8e327e79317f2699548de92344c748f",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0017_leaf_distance4_n65536_d16_p0_g3000029_s809.csv": "d64865a7952492585ced221c8e65c408e1281cdcc6bd8177f0dbde41e0e74f36",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0017_leaf_distance4_n65536_d16_p0_g3000029_s809.log": "bcf453f703a8fcd02132beb72b3bd55fdf772823dd5e7985af37cefb21157c7f",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0017_leaf_distance4_n65536_d16_p0_g3000029_s809.rss.jsonl": "cf9c0fb2ad959846456e36b924ee92e844539b0574c0029010cdcec5de28af56",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0018_leaf_hierarchy4_n2097152_d16_p0_g3000029_s809.csv": "4ca22deb5309e805e9eff82bb2e9c2bc0abec50f467438f2fb1cc3d74a6c46e4",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0018_leaf_hierarchy4_n2097152_d16_p0_g3000029_s809.log": "6d5676c6eced60a8f67b79de681083ee4e486307885a8f2cb81109d2322077a1",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0018_leaf_hierarchy4_n2097152_d16_p0_g3000029_s809.rss.jsonl": "75d5998e8efc4d1e7569fe946ac16053463a495c98474a0a66cd392d8315ad03",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0019_leaf_hierarchy4_n262144_d16_p0_g3000029_s809.csv": "be381d3854b03024b792dc9d5ccef86bc2d274ef74fc2c8db36aa5606935b764",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0019_leaf_hierarchy4_n262144_d16_p0_g3000029_s809.log": "f52a33137ea25fb9efbd5b6001b0824fd1cf37c6454d55d3743d3f9a0fd359cc",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0019_leaf_hierarchy4_n262144_d16_p0_g3000029_s809.rss.jsonl": "651d37ce42b2d5bd42fe97e938870b0150c02a1d14333db66ac8dc6f98e42540",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0020_leaf_hierarchy4_n65536_d16_p0_g3000029_s809.csv": "b05ddb6ccd1359ed1427ac734fa2d6f370adbf713a936673ba4faaf9fd61ca0e",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0020_leaf_hierarchy4_n65536_d16_p0_g3000029_s809.log": "a9b1eb022769940956e23fc295cb0258db653d20b0d0d4d6f2e797610d4c0113",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup_cases/0020_leaf_hierarchy4_n65536_d16_p0_g3000029_s809.rss.jsonl": "5ffb57217a50e28b216b6e07eba616f77ea62252be71ff518567c6bbd9811fe3",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/followup.csv": "37f8f28d434e677e176ad8943e4f6c08dbf6b4cc0280cf3df530f9f34df08d61",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/analysis/comparisons.csv": "29018beca2568d2f659c091ce9120a59be1379827ccb29844b1ba0866aa14dcc",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/analysis/graph_comparisons.csv": "7db753980088fcadbfd49feef980e0592fcead19cc77cdbee559b17bd5ebdd40",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/validation/independent_numerical_audit.py": "6e7ae10fc804528fcbf26f226ba44e24957420f0d0af31bd41d76e005664366a"
+  }
+}
