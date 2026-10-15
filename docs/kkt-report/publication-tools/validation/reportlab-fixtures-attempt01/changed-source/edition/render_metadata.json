@@ -1,0 +1,66 @@
+{
+  "schema": "kkt_current_report_render_v1",
+  "validation": "rendered_pending_visual_qa",
+  "source": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/validation/reportlab-fixtures-attempt01/changed-source/source.md",
+  "source_sha256": "712595d92666041ad497fe41b43cb878b6974efeb70655e0f8da1ea104bae93f",
+  "input_sha256": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/validation/reportlab-fixtures-attempt01/changed-source/source.md": "712595d92666041ad497fe41b43cb878b6974efeb70655e0f8da1ea104bae93f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/build_current_report.py": "ad0a30727f7c6434ada8d97836b6be038c9a0dfae769fac2a848db3e2cfc9663",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/validation/reportlab-fixtures-attempt01/changed-source/evidence.txt": "fd248884ddb42b947e19d3a209bb6ed3b029c80926a9957e6258893ae5ba9746",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/validation/reportlab-fixtures-attempt01/changed-source/figure.png": "0d94ca944c6cd625b0993df58a49eb2ccad6aa0c284ef546910c9f0a6d5f91ef"
+  },
+  "equation_translations": [
+    {
+      "source_tex": "A\\geq\\frac{c}{1-p},\\qquad B\\geq2c+\\frac{A}{2p}.",
+      "offline_text": "A \u2265 c / (1 \u2212 p),     B \u2265 2c + A / (2p)."
+    },
+    {
+      "source_tex": "U\\leq\\min\\left(Q,\\sum_v\\operatorname{depth}(v)\\right)\\leq\\min(Q,Bh).",
+      "offline_text": "U \u2264 min(Q, \u03a3\u1d65 depth(v)) \u2264 min(Q, B\u00b7h)."
+    },
+    {
+      "source_tex": "I_b=(c/b)\\binom b2-(c-c/b).",
+      "offline_text": "I_b = (c / b) \u00b7 choose(b, 2) \u2212 (c \u2212 c / b)."
+    }
+  ],
+  "figures": [
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/validation/reportlab-fixtures-attempt01/changed-source/figure.png",
+      "sha256": "0d94ca944c6cd625b0993df58a49eb2ccad6aa0c284ef546910c9f0a6d5f91ef",
+      "asset": "assets/0d94ca944c6cd625-figure.png"
+    }
+  ],
+  "local_evidence_links": [
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/validation/reportlab-fixtures-attempt01/changed-source/evidence.txt",
+      "href": "../evidence.txt",
+      "location_inside_repository": true
+    }
+  ],
+  "external_local_dependencies": [],
+  "linked_viewers": [],
+  "viewer_proof_validation": "separate prerequisite, not performed by renderer",
+  "print_hyphens": {
+    "scope": "HTML text nodes and their character references; PDF inherits HTML",
+    "source_codepoints": "U+2010 through U+2015",
+    "replacement": "U+002D",
+    "replacement_count": 2,
+    "math_minus_U2212_preserved": true,
+    "markdown_attributes_and_figure_bytes_unchanged": true
+  },
+  "all_evidence_paths_inside_repository": true,
+  "evidence_bundle_portability_verified": false,
+  "publication_file_tracking_check": "pending: each linked file must be tracked or explicitly copied into the edition",
+  "native_build_proof_portability": "not established by relative report links; original-machine paths may remain",
+  "embedded_figures": 1,
+  "markdown_library_version": "3.9",
+  "browser_interaction_qa": "pending",
+  "pdf_every_page_visual_qa": "pending",
+  "page_cap": 40,
+  "pdf_pages": null,
+  "output_sha256": {
+    "REPORT.md": "5e3fb9f10e01dc8dd038c76818ce6ff8124a8d60f1a7696fea60c0a2a91b7546",
+    "report.html": "d1623c2a7402565ede4359825376da5b41b74fac6311d66ea71c07b5f0918318",
+    "assets/0d94ca944c6cd625-figure.png": "0d94ca944c6cd625b0993df58a49eb2ccad6aa0c284ef546910c9f0a6d5f91ef"
+  }
+}

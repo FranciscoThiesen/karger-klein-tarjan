@@ -1,0 +1,40 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "docs/kkt-report/publication-tools/validation/rasterize_reportlab_synthetic.py"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "started_utc": "2026-10-15T18:48:25.241715+00:00",
+  "started_monotonic_ns": 20507208,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/validation/rasterize_reportlab_synthetic.py": "ddf248b9e386e8c14c6e4feef5c6beef9adff212180716f56d32be7ea5e04d34"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 93004,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 93004,
+    "members": [],
+    "monotonic_ns": 446239625,
+    "utc": "2026-10-15T18:48:25.667432+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/validation/rasterize_reportlab_synthetic.py": "ddf248b9e386e8c14c6e4feef5c6beef9adff212180716f56d32be7ea5e04d34"
+  },
+  "finished_utc": "2026-10-15T18:48:25.667663+00:00",
+  "finished_monotonic_ns": 446479250,
+  "elapsed_seconds": 0.425972042,
+  "stdout": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/validation/reportlab-raster-controller-attempt01.stdout",
+  "stdout_sha256": "71d81fba1baae5c56eb2fd81610ab860a4ea480c53fe3003d92b8521e0bec3c7",
+  "stderr": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/validation/reportlab-raster-controller-attempt01.stderr",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

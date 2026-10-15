@@ -1,0 +1,31 @@
+{
+  "name": "paired",
+  "directory": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/figures-paper-attempt02",
+  "validation": "pass",
+  "images": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/figures-paper-attempt02/paper_eighth_ratios_cpu.png": "526974293ab4f235c3163bfb6944d7500415bcda2a3c9f6066acf8a7e8fa7eea",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/figures-paper-attempt02/paper_eighth_ratios_wall.png": "6ed6f03eb3af8098ffbb9c09e285a63fc03d1fc089bd81744cf9d23ed0f51c7a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/figures-paper-attempt02/paper_variant_gains_cpu.png": "b5d745ffc152d47e41a81d23da930877b2e39ca59c9d7bceb02c80c8cd1277df",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/figures-paper-attempt02/paper_variant_gains_wall.png": "f45050c03f5d308cb955fbe7ec985086805637b6c3beab77dbb73a237aff1203"
+  },
+  "provenance": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/figures-paper-attempt02/provenance.json",
+  "provenance_sha256": "0a7a43468caf8bda7227866ab81eb4171a3b70e663caf65b1805acafa1e1cf95",
+  "archival_receipt": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/validation/paper-plots-attempt02.json",
+  "archival_receipt_sha256": "ad2e5b0e7105336fe2531132195d4667e6ad0383ae98a329dc8195ed77f3c0f2",
+  "actual_exit_status": 0,
+  "owned_group_verified_empty": true,
+  "all_bound_files_rechecked": true,
+  "visual_checks": [
+    "All panels and clock/family titles present",
+    "Exact endpoint labels readable and separated",
+    "All designated solver/comparator or logical-count series retained",
+    "Legends and captions visible without overlap",
+    "Full ranges and realization markers retained",
+    "No clipping or unsupported physical-size acceptance claim"
+  ],
+  "root_second_visual_review": "pending",
+  "schema": "publication_paper_visual_qa_v1",
+  "reviewer": "multigraph_design",
+  "scope": "Original-resolution PNG review of explicit7.1in layouts; final PDF placement/readability/page count remain pending",
+  "original_artifacts_unchanged": true
+}

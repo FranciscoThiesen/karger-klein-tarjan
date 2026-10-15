@@ -1,0 +1,48 @@
+{
+  "schema": "kkt_mechanism_paper_figure_v1",
+  "validation": "rendered_pending_visual_qa",
+  "invocation": [
+    "docs/kkt-report/publication-tools/plot_mechanisms_paper.py",
+    "--kind",
+    "witness",
+    "--source-plot",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/plot_sampling_witness.py",
+    "--standalone",
+    "benchmark/results/larger-hierarchy-2026-10-15/sampling-witness-attempt01",
+    "--output",
+    "benchmark/results/larger-hierarchy-2026-10-15/witness-figures-paper-attempt01",
+    "--released"
+  ],
+  "native_solver_execution": false,
+  "measured_inputs": [],
+  "visual_review": "pending",
+  "input_sha256": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/plot_mechanisms_paper.py": "8c3098a3b77876bb7960b6833e84a63ab518924f52a6ca1cfc26cb6c279d7bfe",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/sampling-witness-attempt01/provenance.json": "7450d355c378d1780a1c171a31c7894b595e2c7dc7bf4fa2e75d6b2df8042010",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/plot_sampling_witness.py": "326eb5a51bf359ffa741c139d27bdc51be9d288478028698bd74a9fde0bc1489",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/SAMPLING_MECHANISM.md": "41541fc7d3598195113780f2c6d241aa91e7c5d1ffae769e0d15bc539c47422a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/sampling-witness-attempt01/sampling_witness.png": "ff6199cb5a1fabd05f43ee426d794960957ba59021787cd56c17adb16be41ad0",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/sampling-witness-attempt01/sampling_witness.svg": "43c590c8cc46b9959e0d0719973a5e8492f780c458b50710fa77ec9fc39e1f20",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/sampling-witness-attempt01/sampling_witness.pdf": "cb2c36c5cf6003f5ca640fec7ff9af73fabf43ca99bb6549d488d41475a7c54e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/sampling-witness-attempt01/witness_edges.csv": "92a10cf2f57f7b58ee99f47c7b461cb37e8ae7ccbe48fc1d20effc677758952e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/sampling-witness-attempt01/independent_checks.json": "04853351a63867bfdb3d8979da49dce943631d16cd76199addf3679c314b4d7b"
+  },
+  "kind": "witness",
+  "figures": 1,
+  "panels": 3,
+  "figure_width_inches": 7.1,
+  "minimum_text_points": 8.5,
+  "original_canonical_values_equal": true,
+  "all_original_panels_preserved": true,
+  "original_artifacts_modified": false,
+  "mathematical_illustration_only": true,
+  "performance_claim": false,
+  "output_sha256": {
+    "paper_values.json": "170d0776f36015a4d16474c55ed4ff87bfe98d1331401ef05bac5d787c77ea2c",
+    "paper_sampling_witness.svg": "ca01aa4c12b288f704130cce5e9d564db4165519ebcf5c807f549a01e3d81a6d",
+    "paper_sampling_witness.png": "3a0e6e907ea0df0e32932153808b99cf9ee1e8dd17f9a9ca754bfb5440e7cd38",
+    "paper_sampling_witness.pdf": "eccb5b92abc2102d37cae37b5a3a3a0df74037a66024da3970cb9f790770835b",
+    "witness_edges.csv": "92a10cf2f57f7b58ee99f47c7b461cb37e8ae7ccbe48fc1d20effc677758952e",
+    "independent_checks.json": "04853351a63867bfdb3d8979da49dce943631d16cd76199addf3679c314b4d7b"
+  }
+}

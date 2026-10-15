@@ -1,0 +1,46 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "docs/kkt-report/publication-tools/test_reportlab_pdf.py",
+    "--artifacts-dir",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/validation/reportlab-fixtures-attempt01"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "started_utc": "2026-10-15T18:47:53.655100+00:00",
+  "started_monotonic_ns": 22395125,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/build_reportlab_pdf.py": "b670b09cfef6e903ec3f739f52fe91c8e8da5446f124b27e8c4e37f70283ad73",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/test_reportlab_pdf.py": "951309bd801fc71dbf33c121620683e9740a8a2f4e0607e48b3c0d5748f9931f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/build_current_report.py": "ad0a30727f7c6434ada8d97836b6be038c9a0dfae769fac2a848db3e2cfc9663"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 89189,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 89189,
+    "members": [],
+    "monotonic_ns": 937432958,
+    "utc": "2026-10-15T18:47:54.570119+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/build_reportlab_pdf.py": "b670b09cfef6e903ec3f739f52fe91c8e8da5446f124b27e8c4e37f70283ad73",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/test_reportlab_pdf.py": "951309bd801fc71dbf33c121620683e9740a8a2f4e0607e48b3c0d5748f9931f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/build_current_report.py": "ad0a30727f7c6434ada8d97836b6be038c9a0dfae769fac2a848db3e2cfc9663"
+  },
+  "finished_utc": "2026-10-15T18:47:54.570448+00:00",
+  "finished_monotonic_ns": 937769750,
+  "elapsed_seconds": 0.915374625,
+  "stdout": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/validation/reportlab-synthetic-attempt01.stdout",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/validation/reportlab-synthetic-attempt01.stderr",
+  "stderr_sha256": "3e030cfc5199c4a93a288da7cf5ed249d54f7cbbac5987ef608baf6e95f67947"
+}

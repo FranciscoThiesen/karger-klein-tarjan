@@ -1,0 +1,168 @@
+{
+  "schema": "publication_paper_visual_review_v1",
+  "validation": "pass",
+  "reviewer": "multigraph_design",
+  "scope": "All16 accepted original-resolution PNGs inspected; not final assembled PDF/page-scale approval",
+  "final_pdf_page_count_verified": false,
+  "final_pdf_page_scale_qa": "pending",
+  "native_solver_execution": false,
+  "owned_runtime_jobs_active": false,
+  "sets": [
+    {
+      "name": "distance",
+      "directory": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/figures-paper-attempt01",
+      "validation": "pass",
+      "images": {
+        "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/figures-paper-attempt01/paper_ratios_wall.png": "3e00c25d6bcaac8496812355f1d228b9d6e412db016d8168461ee3fe1b131596",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/figures-paper-attempt01/paper_ratios_cpu.png": "b32f06ee76665ee6d26a80d7a199043c2fda89d751447803894cae6f62832658",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/figures-paper-attempt01/paper_times_wall.png": "de53b12fd6e631014a4c32da71231e02d20f392b51c7c00693fca13311e3eccb",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/figures-paper-attempt01/paper_times_cpu.png": "3721a656418d41f81325c2c40e748d3003c322a5040e001f1c1fde160fa57d78"
+      },
+      "provenance": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/figures-paper-attempt01/provenance.json",
+      "archival_receipt": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/validation/paper-plots-attempt01.json",
+      "actual_exit_status": 0,
+      "elapsed_seconds": 2.349081167,
+      "owned_group_verified_empty": true,
+      "all_bound_files_rechecked": true,
+      "canonical_plotted_values_equal": true,
+      "root_second_visual_review": "pass: parent message reports all four original-resolution PNGs inspected",
+      "visual_checks": ["All eight clock/family panels present", "All six exact size labels readable", "All5 comparisons/all6 times", "Complete graph medians and full ranges", "No legend/caption clipping or overlap"]
+    },
+    {
+      "name": "extension",
+      "directory": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/figures-paper-attempt03",
+      "validation": "pass",
+      "images": {
+        "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/figures-paper-attempt03/paper_ratios_cpu.png": "9ae4ebd46b65ee887b94ed89a24bca4a70f5ca914b4909a75b6f4135be976053",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/figures-paper-attempt03/paper_ratios_wall.png": "6337b60e813b09fa9b33a113d3d632def58e8a989c151c382efbe321e9f99d0e",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/figures-paper-attempt03/paper_times_cpu.png": "9d9658da1f219f9167ba603ba0c22f64474daf663ae57624b04d67589f9c4263",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/figures-paper-attempt03/paper_times_wall.png": "d59c4c0021ecafb601a8847bb4792e772daddefbac6dc59f2a30ae6689b0ff4d"
+      },
+      "provenance": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/figures-paper-attempt03/provenance.json",
+      "provenance_sha256": "49bd79ec30842953762cefe5658520d5b5ce1490c6b8a1032f54a1eaa9854771",
+      "archival_receipt": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/validation/paper-plots-attempt03.json",
+      "archival_receipt_sha256": "f107c74788d5c1662d3ba9095e1dd15fd317a5b14f8932c97df6dc3319892973",
+      "actual_exit_status": 0,
+      "owned_group_verified_empty": true,
+      "all_bound_files_rechecked": true,
+      "visual_checks": [
+        "All panels and clock/family titles present",
+        "Exact endpoint labels readable and separated",
+        "All designated solver/comparator or logical-count series retained",
+        "Legends and captions visible without overlap",
+        "Full ranges and realization markers retained",
+        "No clipping or unsupported physical-size acceptance claim"
+      ],
+      "root_second_visual_review": "pending"
+    },
+    {
+      "name": "paired",
+      "directory": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/figures-paper-attempt02",
+      "validation": "pass",
+      "images": {
+        "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/figures-paper-attempt02/paper_eighth_ratios_cpu.png": "526974293ab4f235c3163bfb6944d7500415bcda2a3c9f6066acf8a7e8fa7eea",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/figures-paper-attempt02/paper_eighth_ratios_wall.png": "6ed6f03eb3af8098ffbb9c09e285a63fc03d1fc089bd81744cf9d23ed0f51c7a",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/figures-paper-attempt02/paper_variant_gains_cpu.png": "b5d745ffc152d47e41a81d23da930877b2e39ca59c9d7bceb02c80c8cd1277df",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/figures-paper-attempt02/paper_variant_gains_wall.png": "f45050c03f5d308cb955fbe7ec985086805637b6c3beab77dbb73a237aff1203"
+      },
+      "provenance": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/figures-paper-attempt02/provenance.json",
+      "provenance_sha256": "0a7a43468caf8bda7227866ab81eb4171a3b70e663caf65b1805acafa1e1cf95",
+      "archival_receipt": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/validation/paper-plots-attempt02.json",
+      "archival_receipt_sha256": "ad2e5b0e7105336fe2531132195d4667e6ad0383ae98a329dc8195ed77f3c0f2",
+      "actual_exit_status": 0,
+      "owned_group_verified_empty": true,
+      "all_bound_files_rechecked": true,
+      "visual_checks": [
+        "All panels and clock/family titles present",
+        "Exact endpoint labels readable and separated",
+        "All designated solver/comparator or logical-count series retained",
+        "Legends and captions visible without overlap",
+        "Full ranges and realization markers retained",
+        "No clipping or unsupported physical-size acceptance claim"
+      ],
+      "root_second_visual_review": "pending"
+    },
+    {
+      "name": "work",
+      "directory": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/figures-paper-attempt01",
+      "validation": "pass",
+      "images": {
+        "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/figures-paper-attempt01/paper_work_large.png": "11a0c7e13c04e556acb734ca1f47c4abb5f3cd107c2b448b3e32b602c3516241",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/figures-paper-attempt01/paper_work_small.png": "4db0788c6d2b2dc33858a76531e6137e90bf1a540df443302dc95a670fedc47e"
+      },
+      "provenance": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/figures-paper-attempt01/provenance.json",
+      "provenance_sha256": "d9b0db07fd33f9aa9d53c07cd0d7fbf82223d705c73bec65fd083ae7143689e2",
+      "archival_receipt": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/paper-plots-attempt01.json",
+      "archival_receipt_sha256": "20217202e09f731ef46de7a15bb7d99e4086323444ed84ad020edb4d68e2a54c",
+      "actual_exit_status": 0,
+      "owned_group_verified_empty": true,
+      "all_bound_files_rechecked": true,
+      "visual_checks": [
+        "All panels and clock/family titles present",
+        "Exact endpoint labels readable and separated",
+        "All designated solver/comparator or logical-count series retained",
+        "Legends and captions visible without overlap",
+        "Full ranges and realization markers retained",
+        "No clipping or unsupported physical-size acceptance claim"
+      ],
+      "root_second_visual_review": "pending"
+    },
+    {
+      "name": "retention_model",
+      "directory": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/retention-figures-paper-attempt02",
+      "validation": "pass",
+      "images": {
+        "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/retention-figures-paper-attempt02/paper_hierarchy_expectation.png": "b013c5a958c3ba9731252f021230834fd098758823ee2c1158c27c69dfe4feb5"
+      },
+      "provenance": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/retention-figures-paper-attempt02/provenance.json",
+      "provenance_sha256": "28b3a836b79fc6850287f7c66ef669b2e3de022390ddcf0e57dc6a704246cc15",
+      "archival_receipt": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/validation/paper-retention-attempt02.json",
+      "archival_receipt_sha256": "b49673da50bc5e6ab73f431b2a6562dc121dce62e4ef7061e8c36c441fab56ae",
+      "actual_exit_status": 0,
+      "owned_group_verified_empty": true,
+      "all_bound_files_rechecked": true,
+      "visual_checks": [
+        "All panels and clock/family titles present",
+        "Exact endpoint labels readable and separated",
+        "All designated solver/comparator or logical-count series retained",
+        "Legends and captions visible without overlap",
+        "Full ranges and realization markers retained",
+        "No clipping or unsupported physical-size acceptance claim"
+      ],
+      "root_second_visual_review": "pending"
+    },
+    {
+      "name": "witness",
+      "directory": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/witness-figures-paper-attempt01",
+      "validation": "pass",
+      "images": {
+        "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/witness-figures-paper-attempt01/paper_sampling_witness.png": "3a0e6e907ea0df0e32932153808b99cf9ee1e8dd17f9a9ca754bfb5440e7cd38"
+      },
+      "provenance": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/witness-figures-paper-attempt01/provenance.json",
+      "provenance_sha256": "c407ecbc425c263a9e60413acf037b495f520c756ad1f6c22a15ddd3123dc783",
+      "archival_receipt": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/validation/paper-witness-attempt01.json",
+      "archival_receipt_sha256": "8c1d05ff69f60448f5a449d4c9532ce8bb9b8213fe139b2c047030fd4a20877a",
+      "actual_exit_status": 0,
+      "owned_group_verified_empty": true,
+      "all_bound_files_rechecked": true,
+      "visual_checks": [
+        "All panels and clock/family titles present",
+        "Exact endpoint labels readable and separated",
+        "All designated solver/comparator or logical-count series retained",
+        "Legends and captions visible without overlap",
+        "Full ranges and realization markers retained",
+        "No clipping or unsupported physical-size acceptance claim"
+      ],
+      "root_second_visual_review": "pass (parent message; all three stages and labels legible)"
+    }
+  ],
+  "repair_canonical_data_byte_identical": true,
+  "source_sha256": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/plot_mechanisms_paper.py": "8c3098a3b77876bb7960b6833e84a63ab518924f52a6ca1cfc26cb6c279d7bfe",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/plot_mechanisms_paper_v2.py": "1f37d4136cd4bf3460d2a5a76e55eb86f6a34098d7c5f8b04e772d62d758baee",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/plot_mst_paper.py": "92a4e026fdc376531d3232cacf9f58e0993c029556cad45e7057a90b22a90029",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/plot_mst_paper_v2.py": "336330f583917e1b20b4873ad4c666fe360a66429f7e48a43f339b7244943e3d",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/plot_mst_paper_v3.py": "310e99d4f814b96e3545b8c2d428b4cb2b0dcc7ba96475b048aadd6ba9a5c946",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/plot_mst_paper_v4.py": "5d6478ab344ede58a2c4d6af21f8c517357ab50adf6f32d8f426694538595fd7"
+  }
+}

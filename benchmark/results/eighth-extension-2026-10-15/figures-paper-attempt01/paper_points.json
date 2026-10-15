@@ -1,0 +1,4516 @@
+{
+  "points": [
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n1024_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 1024,
+      "median": 1.38558902087285,
+      "minimum": 1.2979661321744342,
+      "maximum": 1.4470340695536201,
+      "realization_medians": [
+        1.3353672562147745,
+        1.4230634953258536
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n4096_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 4096,
+      "median": 0.9818876427712526,
+      "minimum": 0.9544867393037471,
+      "maximum": 0.9950239209151208,
+      "realization_medians": [
+        0.988914171088989,
+        0.9722541897815575
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n16384_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 16384,
+      "median": 0.7972751408687254,
+      "minimum": 0.7637933444491145,
+      "maximum": 0.8378000316969596,
+      "realization_medians": [
+        0.8159892331703786,
+        0.7885765262865267
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n65536_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 65536,
+      "median": 0.5958960893675642,
+      "minimum": 0.5686375987038542,
+      "maximum": 0.6070621447955663,
+      "realization_medians": [
+        0.5968877288266988,
+        0.5799845831683319
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n262144_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 262144,
+      "median": 0.29430767754050513,
+      "minimum": 0.2771854170237068,
+      "maximum": 0.31877527245510273,
+      "realization_medians": [
+        0.3100957785088338,
+        0.2896681501355733
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n1048576_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 1048576,
+      "median": 0.22380423665044347,
+      "minimum": 0.2174353199744128,
+      "maximum": 0.22568424714010998,
+      "realization_medians": [
+        0.22411813489739962,
+        0.22229115294152635
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n4194304_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 4194304,
+      "median": 0.2959735909030974,
+      "minimum": 0.2776122924369742,
+      "maximum": 0.4867317761456448,
+      "realization_medians": [
+        0.30094716832595136,
+        0.29590193769742557
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n1024_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 1024,
+      "median": 0.9178657955132824,
+      "minimum": 0.9041647035380223,
+      "maximum": 0.9480707775824281,
+      "realization_medians": [
+        0.909122685234174,
+        0.9321380790452235
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n4096_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 4096,
+      "median": 0.7730128501508899,
+      "minimum": 0.7579519918001837,
+      "maximum": 0.7815702144824994,
+      "realization_medians": [
+        0.7702830688738218,
+        0.7743469455956238
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n16384_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 16384,
+      "median": 0.6956271833773593,
+      "minimum": 0.6833116714412298,
+      "maximum": 0.7238166964821316,
+      "realization_medians": [
+        0.7000899809062232,
+        0.6955267935542723
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n65536_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 65536,
+      "median": 0.774970452533553,
+      "minimum": 0.7506033731502012,
+      "maximum": 0.8181407159748819,
+      "realization_medians": [
+        0.7683248509406935,
+        0.7791052097532349
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n262144_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 262144,
+      "median": 0.7123970227138738,
+      "minimum": 0.6923043824809995,
+      "maximum": 0.7351844579533688,
+      "realization_medians": [
+        0.7092976924430862,
+        0.7165990513325324
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n1048576_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 1048576,
+      "median": 0.6712995567670612,
+      "minimum": 0.6586280809195046,
+      "maximum": 0.6811558418042989,
+      "realization_medians": [
+        0.6685516899799278,
+        0.6722916249133506
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n4194304_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 4194304,
+      "median": 0.8414362655069194,
+      "minimum": 0.6409465105619627,
+      "maximum": 1.461799453306656,
+      "realization_medians": [
+        0.8310346642817121,
+        0.8414362655069194
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n1024_d32_p0",
+      "algorithm": "kruskal",
+      "n": 1024,
+      "median": 0.7979625255217779,
+      "minimum": 0.7660361416457067,
+      "maximum": 0.8089248104965433,
+      "realization_medians": [
+        0.7928515280359243,
+        0.7998872415849143
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n4096_d32_p0",
+      "algorithm": "kruskal",
+      "n": 4096,
+      "median": 0.7224458724108129,
+      "minimum": 0.7066230323889344,
+      "maximum": 0.7396168050143994,
+      "realization_medians": [
+        0.7347631321708453,
+        0.7150605209842269
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n16384_d32_p0",
+      "algorithm": "kruskal",
+      "n": 16384,
+      "median": 0.6906431918636866,
+      "minimum": 0.6644474868158472,
+      "maximum": 0.7482159228327601,
+      "realization_medians": [
+        0.7268259608504335,
+        0.6728499734413391
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n65536_d32_p0",
+      "algorithm": "kruskal",
+      "n": 65536,
+      "median": 0.8833955061329852,
+      "minimum": 0.8306532312721764,
+      "maximum": 0.917160239030267,
+      "realization_medians": [
+        0.8926932103138503,
+        0.8435803507538824
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n262144_d32_p0",
+      "algorithm": "kruskal",
+      "n": 262144,
+      "median": 0.9469847872388045,
+      "minimum": 0.9114924691045316,
+      "maximum": 0.9876766221771055,
+      "realization_medians": [
+        0.953808048449496,
+        0.9226125149225413
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n1048576_d32_p0",
+      "algorithm": "kruskal",
+      "n": 1048576,
+      "median": 1.0253828882328873,
+      "minimum": 0.9881840021273598,
+      "maximum": 1.0622500509745911,
+      "realization_medians": [
+        1.020720533526991,
+        1.0355505428265819
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n4194304_d32_p0",
+      "algorithm": "kruskal",
+      "n": 4194304,
+      "median": 1.6616327091857186,
+      "minimum": 1.2844076636724562,
+      "maximum": 2.996283684786753,
+      "realization_medians": [
+        1.6514157177547615,
+        1.6616327091857186
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n1024_d32_p0",
+      "algorithm": "prim",
+      "n": 1024,
+      "median": 1.8618159192245818,
+      "minimum": 1.7749840135506514,
+      "maximum": 1.964566355969818,
+      "realization_medians": [
+        1.793987411405869,
+        1.8938058163464246
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n4096_d32_p0",
+      "algorithm": "prim",
+      "n": 4096,
+      "median": 1.5539046227779334,
+      "minimum": 1.4818140095886658,
+      "maximum": 1.6802753787053706,
+      "realization_medians": [
+        1.6403980639286064,
+        1.5288330002999708
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n16384_d32_p0",
+      "algorithm": "prim",
+      "n": 16384,
+      "median": 1.378544096529835,
+      "minimum": 1.3263071084205753,
+      "maximum": 1.4581600927855465,
+      "realization_medians": [
+        1.4318436632795208,
+        1.3362917560480123
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n65536_d32_p0",
+      "algorithm": "prim",
+      "n": 65536,
+      "median": 1.604427340806081,
+      "minimum": 1.510571826174579,
+      "maximum": 1.6710044738716976,
+      "realization_medians": [
+        1.6296138285395383,
+        1.5710596965214174
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n262144_d32_p0",
+      "algorithm": "prim",
+      "n": 262144,
+      "median": 1.4495549693573138,
+      "minimum": 1.410705157128838,
+      "maximum": 1.5048376315388214,
+      "realization_medians": [
+        1.4884721155044656,
+        1.4376290667988707
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n1048576_d32_p0",
+      "algorithm": "prim",
+      "n": 1048576,
+      "median": 1.2578766855348757,
+      "minimum": 0.932678722374755,
+      "maximum": 1.281537505851625,
+      "realization_medians": [
+        1.262261164923726,
+        1.2375588936213062
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n4194304_d32_p0",
+      "algorithm": "prim",
+      "n": 4194304,
+      "median": 1.2637692130433607,
+      "minimum": 1.1603588961041422,
+      "maximum": 1.5727999251809532,
+      "realization_medians": [
+        1.2724622812697932,
+        1.2430671572934116
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n1024_d32_p0",
+      "algorithm": "boruvka",
+      "n": 1024,
+      "median": 1.6937450652040078,
+      "minimum": 1.6074489273233499,
+      "maximum": 1.731758034026465,
+      "realization_medians": [
+        1.6713903429458514,
+        1.6937450652040078
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n4096_d32_p0",
+      "algorithm": "boruvka",
+      "n": 4096,
+      "median": 1.4627696569662132,
+      "minimum": 1.4423085201459507,
+      "maximum": 1.512151008745346,
+      "realization_medians": [
+        1.5019702113752482,
+        1.4491600445732118
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n16384_d32_p0",
+      "algorithm": "boruvka",
+      "n": 16384,
+      "median": 1.2678598918953985,
+      "minimum": 1.215154417369302,
+      "maximum": 1.309274011743952,
+      "realization_medians": [
+        1.300270089148854,
+        1.2539715768212087
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n65536_d32_p0",
+      "algorithm": "boruvka",
+      "n": 65536,
+      "median": 1.1512379797375103,
+      "minimum": 1.1332550687520413,
+      "maximum": 1.2149873105180689,
+      "realization_medians": [
+        1.1626152921162682,
+        1.1454190868191678
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n262144_d32_p0",
+      "algorithm": "boruvka",
+      "n": 262144,
+      "median": 0.959205863843902,
+      "minimum": 0.9230908993621473,
+      "maximum": 0.9996100768433022,
+      "realization_medians": [
+        0.9627658076326848,
+        0.956480739908306
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n1048576_d32_p0",
+      "algorithm": "boruvka",
+      "n": 1048576,
+      "median": 0.7330472499104398,
+      "minimum": 0.6778103621535412,
+      "maximum": 0.7494458025272397,
+      "realization_medians": [
+        0.7337766017826307,
+        0.7317452744558827
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n4194304_d32_p0",
+      "algorithm": "boruvka",
+      "n": 4194304,
+      "median": 0.7378985019342864,
+      "minimum": 0.6636028070000481,
+      "maximum": 0.9184151371653289,
+      "realization_medians": [
+        0.7399875613225639,
+        0.7312197028110464
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n1024_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 1024,
+      "median": 1.5474351435917515,
+      "minimum": 1.4033822481358735,
+      "maximum": 1.665606681248757,
+      "realization_medians": [
+        1.5018344906325196,
+        1.610058481205037
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n4096_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 4096,
+      "median": 1.2130492403271127,
+      "minimum": 1.1476891241484208,
+      "maximum": 1.2397346708559212,
+      "realization_medians": [
+        1.2249973960077403,
+        1.2053466903705417
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n16384_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 16384,
+      "median": 0.9822199316012528,
+      "minimum": 0.9433889806121022,
+      "maximum": 1.0414933581499346,
+      "realization_medians": [
+        1.0070147881400102,
+        0.952557378957329
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n65536_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 65536,
+      "median": 0.6232743981858959,
+      "minimum": 0.5945087849922979,
+      "maximum": 0.6923292384671805,
+      "realization_medians": [
+        0.6661520000498986,
+        0.6122739859678553
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n262144_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 262144,
+      "median": 0.34314930920848585,
+      "minimum": 0.326203866586224,
+      "maximum": 0.367831522166468,
+      "realization_medians": [
+        0.3546697360718083,
+        0.3339608181556243
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n1048576_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 1048576,
+      "median": 0.241232006234894,
+      "minimum": 0.23685040382665878,
+      "maximum": 0.24925606468851375,
+      "realization_medians": [
+        0.2421315448334631,
+        0.23830391382304147
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n4194304_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 4194304,
+      "median": 0.3222474211315346,
+      "minimum": 0.2675502500995887,
+      "maximum": 0.36159180896709886,
+      "realization_medians": [
+        0.357689826874037,
+        0.2876629601477012
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n1024_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 1024,
+      "median": 1.3397703730001633,
+      "minimum": 1.2107301776093538,
+      "maximum": 1.417218968650396,
+      "realization_medians": [
+        1.251844080597567,
+        1.3904613276952302
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n4096_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 4096,
+      "median": 1.344357938611342,
+      "minimum": 1.1563588965880554,
+      "maximum": 1.5244135927969793,
+      "realization_medians": [
+        1.4992284026405391,
+        1.174189491699659
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n16384_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 16384,
+      "median": 1.1752064479801096,
+      "minimum": 1.1164242856582918,
+      "maximum": 1.2069134287550418,
+      "realization_medians": [
+        1.200218755044332,
+        1.1540232388742608
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n65536_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 65536,
+      "median": 1.311644181023373,
+      "minimum": 1.1068346320168467,
+      "maximum": 1.4731116436895109,
+      "realization_medians": [
+        1.145622729770329,
+        1.4400101496635194
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n262144_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 262144,
+      "median": 1.2340211561210865,
+      "minimum": 1.2101110468374157,
+      "maximum": 1.259438159379479,
+      "realization_medians": [
+        1.2210135482473135,
+        1.2388890947486206
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n1048576_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 1048576,
+      "median": 1.1570960068147227,
+      "minimum": 1.0884439893044626,
+      "maximum": 1.181788937415252,
+      "realization_medians": [
+        1.1675431198778352,
+        1.1377314685963176
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n4194304_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 4194304,
+      "median": 1.2482225736031825,
+      "minimum": 1.1751985575529036,
+      "maximum": 1.333928536099986,
+      "realization_medians": [
+        1.3042465118891826,
+        1.2041753610400607
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n1024_d32_p0",
+      "algorithm": "kruskal",
+      "n": 1024,
+      "median": 0.7332353171817703,
+      "minimum": 0.6775599560101273,
+      "maximum": 0.7690356224752112,
+      "realization_medians": [
+        0.6832145245085641,
+        0.7393079946362854
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n4096_d32_p0",
+      "algorithm": "kruskal",
+      "n": 4096,
+      "median": 0.6568021804790731,
+      "minimum": 0.6357376588440768,
+      "maximum": 0.6758981409316919,
+      "realization_medians": [
+        0.6555480706888863,
+        0.6598352205632652
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n16384_d32_p0",
+      "algorithm": "kruskal",
+      "n": 16384,
+      "median": 0.6404658851426059,
+      "minimum": 0.6291213534393091,
+      "maximum": 0.6620761571237153,
+      "realization_medians": [
+        0.6521102716471272,
+        0.6330684715417628
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n65536_d32_p0",
+      "algorithm": "kruskal",
+      "n": 65536,
+      "median": 0.7344381572738283,
+      "minimum": 0.6879779140564832,
+      "maximum": 0.7824001992559753,
+      "realization_medians": [
+        0.7398396665019781,
+        0.692806541023361
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n262144_d32_p0",
+      "algorithm": "kruskal",
+      "n": 262144,
+      "median": 0.8860955727462823,
+      "minimum": 0.8319295191006373,
+      "maximum": 0.9484983413153646,
+      "realization_medians": [
+        0.9003225821548044,
+        0.8492539504971539
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n1048576_d32_p0",
+      "algorithm": "kruskal",
+      "n": 1048576,
+      "median": 0.9062786541897726,
+      "minimum": 0.881366159066053,
+      "maximum": 0.934032288806158,
+      "realization_medians": [
+        0.8972585041750483,
+        0.9155632062709551
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n4194304_d32_p0",
+      "algorithm": "kruskal",
+      "n": 4194304,
+      "median": 1.4460770077806848,
+      "minimum": 1.2286098296267012,
+      "maximum": 1.689913774874856,
+      "realization_medians": [
+        1.6566904776436795,
+        1.2414423266785832
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n1024_d32_p0",
+      "algorithm": "prim",
+      "n": 1024,
+      "median": 1.6865264323292384,
+      "minimum": 1.5017954108972504,
+      "maximum": 1.7947341991341992,
+      "realization_medians": [
+        1.652215365818938,
+        1.717683822270548
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n4096_d32_p0",
+      "algorithm": "prim",
+      "n": 4096,
+      "median": 1.4382325428849114,
+      "minimum": 1.1631388558897844,
+      "maximum": 1.5541809197123175,
+      "realization_medians": [
+        1.4059987158216585,
+        1.4458867088240197
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n16384_d32_p0",
+      "algorithm": "prim",
+      "n": 16384,
+      "median": 1.2450396731964641,
+      "minimum": 1.2022554147516884,
+      "maximum": 1.3008441565465676,
+      "realization_medians": [
+        1.2736004674366597,
+        1.2143686362630106
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n65536_d32_p0",
+      "algorithm": "prim",
+      "n": 65536,
+      "median": 1.3402254998438872,
+      "minimum": 1.2764165230817428,
+      "maximum": 1.4240040179163516,
+      "realization_medians": [
+        1.3809660967651283,
+        1.292326083445303
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n262144_d32_p0",
+      "algorithm": "prim",
+      "n": 262144,
+      "median": 1.3764339249533046,
+      "minimum": 1.3335294083837494,
+      "maximum": 1.437667953850702,
+      "realization_medians": [
+        1.4026071548316794,
+        1.3648873960073438
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n1048576_d32_p0",
+      "algorithm": "prim",
+      "n": 1048576,
+      "median": 1.1140446922070346,
+      "minimum": 1.0743986927310094,
+      "maximum": 1.1620029465286335,
+      "realization_medians": [
+        1.1217165981338204,
+        1.1113475553546777
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n4194304_d32_p0",
+      "algorithm": "prim",
+      "n": 4194304,
+      "median": 0.9181860926498626,
+      "minimum": 0.8693385841645054,
+      "maximum": 0.9784116074196597,
+      "realization_medians": [
+        0.9000195963960895,
+        0.9396514567049945
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n1024_d32_p0",
+      "algorithm": "boruvka",
+      "n": 1024,
+      "median": 2.3555814442209835,
+      "minimum": 2.0978682016763286,
+      "maximum": 2.5964706628607677,
+      "realization_medians": [
+        2.242610131555236,
+        2.5490512859833796
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n4096_d32_p0",
+      "algorithm": "boruvka",
+      "n": 4096,
+      "median": 2.3388687322376818,
+      "minimum": 2.1467335586618383,
+      "maximum": 2.83542267674522,
+      "realization_medians": [
+        2.7396262721317877,
+        2.184083305894557
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n16384_d32_p0",
+      "algorithm": "boruvka",
+      "n": 16384,
+      "median": 2.0618485620193354,
+      "minimum": 1.95174089876524,
+      "maximum": 2.1760285094000835,
+      "realization_medians": [
+        2.152367085906759,
+        1.96661522977753
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n65536_d32_p0",
+      "algorithm": "boruvka",
+      "n": 65536,
+      "median": 1.899824910727966,
+      "minimum": 1.7226627918279205,
+      "maximum": 2.1814416755098947,
+      "realization_medians": [
+        1.727883666578386,
+        2.021551377451753
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n262144_d32_p0",
+      "algorithm": "boruvka",
+      "n": 262144,
+      "median": 1.5966769365267348,
+      "minimum": 1.5161184124065819,
+      "maximum": 1.6603019747052152,
+      "realization_medians": [
+        1.590080113260183,
+        1.603825723220048
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n1048576_d32_p0",
+      "algorithm": "boruvka",
+      "n": 1048576,
+      "median": 1.1959662021007396,
+      "minimum": 1.1845047998389375,
+      "maximum": 1.2273803343729255,
+      "realization_medians": [
+        1.220102633045336,
+        1.191656268206403
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n4194304_d32_p0",
+      "algorithm": "boruvka",
+      "n": 4194304,
+      "median": 0.973410168318053,
+      "minimum": 0.8856759094061396,
+      "maximum": 1.0114306356816545,
+      "realization_medians": [
+        0.9638430066164907,
+        0.9786464619333087
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n1024_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 1024,
+      "median": 1.3864966883022873,
+      "minimum": 1.2997601918465227,
+      "maximum": 1.4388398486759142,
+      "realization_medians": [
+        1.335454639069097,
+        1.4233540888335408
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n4096_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 4096,
+      "median": 0.9832174193298415,
+      "minimum": 0.9545068027210885,
+      "maximum": 0.9949863263445761,
+      "realization_medians": [
+        0.9889568699646945,
+        0.9716331152466413
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n16384_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 16384,
+      "median": 0.7973050214038035,
+      "minimum": 0.7637481910274964,
+      "maximum": 0.8378425630490843,
+      "realization_medians": [
+        0.8159628761063319,
+        0.7882515201703832
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n65536_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 65536,
+      "median": 0.5958997281542909,
+      "minimum": 0.568694758591286,
+      "maximum": 0.6070584329729327,
+      "realization_medians": [
+        0.596897918385926,
+        0.580151595401963
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n262144_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 262144,
+      "median": 0.29431049755612243,
+      "minimum": 0.27718608315824395,
+      "maximum": 0.3187754217297614,
+      "realization_medians": [
+        0.3100977794545317,
+        0.2896699110151194
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n1048576_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 1048576,
+      "median": 0.22380348211299364,
+      "minimum": 0.21735847533833808,
+      "maximum": 0.22568452155067792,
+      "realization_medians": [
+        0.22411838647517623,
+        0.222279043891551
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n4194304_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 4194304,
+      "median": 0.2969322056731518,
+      "minimum": 0.27763460124271183,
+      "maximum": 0.48581278733966393,
+      "realization_medians": [
+        0.3019620377066361,
+        0.2958946190204452
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n1024_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 1024,
+      "median": 0.9195379635457477,
+      "minimum": 0.9045608108108109,
+      "maximum": 0.9481054365733114,
+      "realization_medians": [
+        0.9094744581041059,
+        0.9296442433642186
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n4096_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 4096,
+      "median": 0.7727313528343427,
+      "minimum": 0.7580185317177477,
+      "maximum": 0.7816526370039512,
+      "realization_medians": [
+        0.770372315135965,
+        0.7740812932475654
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n16384_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 16384,
+      "median": 0.6954618607153589,
+      "minimum": 0.6833212897009738,
+      "maximum": 0.7237931287085195,
+      "realization_medians": [
+        0.7000832647313864,
+        0.6953872768837708
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n65536_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 65536,
+      "median": 0.7750444968090151,
+      "minimum": 0.7506146167026745,
+      "maximum": 0.8178864201194407,
+      "realization_medians": [
+        0.7683340151583524,
+        0.7790469762451901
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n262144_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 262144,
+      "median": 0.7123992227298599,
+      "minimum": 0.692303059503734,
+      "maximum": 0.735184216096712,
+      "realization_medians": [
+        0.7092981112227239,
+        0.7166034514057911
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n1048576_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 1048576,
+      "median": 0.6712990569500608,
+      "minimum": 0.6585371036417179,
+      "maximum": 0.681155890997405,
+      "realization_medians": [
+        0.6685536689571921,
+        0.6724740124571138
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n4194304_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 4194304,
+      "median": 0.8412546166097605,
+      "minimum": 0.6486238050781118,
+      "maximum": 1.4467304726296066,
+      "realization_medians": [
+        0.8310915754795712,
+        0.8412546166097605
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n1024_d32_p0",
+      "algorithm": "kruskal",
+      "n": 1024,
+      "median": 0.7973885489510489,
+      "minimum": 0.7664335664335664,
+      "maximum": 0.8084795321637427,
+      "realization_medians": [
+        0.7928698933477947,
+        0.7983904322727027
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n4096_d32_p0",
+      "algorithm": "kruskal",
+      "n": 4096,
+      "median": 0.7224506487820941,
+      "minimum": 0.7050517728271102,
+      "maximum": 0.7393734123624047,
+      "realization_medians": [
+        0.7348909152255721,
+        0.7157907139817306
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n16384_d32_p0",
+      "algorithm": "kruskal",
+      "n": 16384,
+      "median": 0.6906473050213796,
+      "minimum": 0.6643471571438562,
+      "maximum": 0.7482019778243931,
+      "realization_medians": [
+        0.7268153529846431,
+        0.6727815478771682
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n65536_d32_p0",
+      "algorithm": "kruskal",
+      "n": 65536,
+      "median": 0.8834030463109737,
+      "minimum": 0.8306003512693597,
+      "maximum": 0.9171494785631518,
+      "realization_medians": [
+        0.8926957619306795,
+        0.8435064504172329
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n262144_d32_p0",
+      "algorithm": "kruskal",
+      "n": 262144,
+      "median": 0.946986438758544,
+      "minimum": 0.9114920889851855,
+      "maximum": 0.9876741227688977,
+      "realization_medians": [
+        0.9538077358271989,
+        0.9226363372306154
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n1048576_d32_p0",
+      "algorithm": "kruskal",
+      "n": 1048576,
+      "median": 1.0251583752574704,
+      "minimum": 0.9991505639136495,
+      "maximum": 1.0622303481203295,
+      "realization_medians": [
+        1.0207203438926,
+        1.035553788132292
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n4194304_d32_p0",
+      "algorithm": "kruskal",
+      "n": 4194304,
+      "median": 1.6618422932094106,
+      "minimum": 1.3260926856511093,
+      "maximum": 2.9868021578799646,
+      "realization_medians": [
+        1.651242798642805,
+        1.6618422932094106
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n1024_d32_p0",
+      "algorithm": "prim",
+      "n": 1024,
+      "median": 1.8576288640835616,
+      "minimum": 1.7739837398373983,
+      "maximum": 1.9609929078014185,
+      "realization_medians": [
+        1.7957294813439622,
+        1.8893073870458816
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n4096_d32_p0",
+      "algorithm": "prim",
+      "n": 4096,
+      "median": 1.557557014900394,
+      "minimum": 1.4845024469820554,
+      "maximum": 1.6796153846153845,
+      "realization_medians": [
+        1.6397856779907083,
+        1.5302296368523765
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n16384_d32_p0",
+      "algorithm": "prim",
+      "n": 16384,
+      "median": 1.3783170378861098,
+      "minimum": 1.3265605362379556,
+      "maximum": 1.4580976088104398,
+      "realization_medians": [
+        1.4318210713535624,
+        1.336311288341812
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n65536_d32_p0",
+      "algorithm": "prim",
+      "n": 65536,
+      "median": 1.6044658076303724,
+      "minimum": 1.5097348978704912,
+      "maximum": 1.6710220440881765,
+      "realization_medians": [
+        1.629606103261675,
+        1.5710114119112881
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n262144_d32_p0",
+      "algorithm": "prim",
+      "n": 262144,
+      "median": 1.4495508202089882,
+      "minimum": 1.4107042881053369,
+      "maximum": 1.5048273703471855,
+      "realization_medians": [
+        1.4884760865392994,
+        1.437629419728184
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n1048576_d32_p0",
+      "algorithm": "prim",
+      "n": 1048576,
+      "median": 1.2578765178554074,
+      "minimum": 0.9413665413941316,
+      "maximum": 1.281512914640126,
+      "realization_medians": [
+        1.2622615205751528,
+        1.2372838766563143
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n4194304_d32_p0",
+      "algorithm": "prim",
+      "n": 4194304,
+      "median": 1.26400104334203,
+      "minimum": 1.1637923997699768,
+      "maximum": 1.5659815443903111,
+      "realization_medians": [
+        1.2726780866896061,
+        1.243234002460401
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n1024_d32_p0",
+      "algorithm": "boruvka",
+      "n": 1024,
+      "median": 1.690415947078508,
+      "minimum": 1.6070381231671553,
+      "maximum": 1.724659606656581,
+      "realization_medians": [
+        1.6710085973111766,
+        1.690415947078508
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n4096_d32_p0",
+      "algorithm": "boruvka",
+      "n": 4096,
+      "median": 1.4615955768553501,
+      "minimum": 1.4444444444444444,
+      "maximum": 1.5122965015587115,
+      "realization_medians": [
+        1.5018166987011963,
+        1.4504692513212518
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n16384_d32_p0",
+      "algorithm": "boruvka",
+      "n": 16384,
+      "median": 1.2684798699109985,
+      "minimum": 1.2151118933869751,
+      "maximum": 1.3091957069034053,
+      "realization_medians": [
+        1.3002570465002137,
+        1.25364716055079
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n65536_d32_p0",
+      "algorithm": "boruvka",
+      "n": 65536,
+      "median": 1.1511065578947997,
+      "minimum": 1.1335183641230417,
+      "maximum": 1.2150170272325511,
+      "realization_medians": [
+        1.1626113253352321,
+        1.1453368894082765
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n262144_d32_p0",
+      "algorithm": "boruvka",
+      "n": 262144,
+      "median": 0.9592042549061318,
+      "minimum": 0.9231310102759847,
+      "maximum": 0.9996061646231875,
+      "realization_medians": [
+        0.9627772982560061,
+        0.9564855411813593
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n1048576_d32_p0",
+      "algorithm": "boruvka",
+      "n": 1048576,
+      "median": 0.7330444991045595,
+      "minimum": 0.6788418406921284,
+      "maximum": 0.7492939947330953,
+      "realization_medians": [
+        0.7337143002521428,
+        0.7317422327281843
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n4194304_d32_p0",
+      "algorithm": "boruvka",
+      "n": 4194304,
+      "median": 0.7379362347876991,
+      "minimum": 0.6638272737432503,
+      "maximum": 0.917727727688719,
+      "realization_medians": [
+        0.7399246828862502,
+        0.7312893967603529
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n1024_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 1024,
+      "median": 1.5459311925759196,
+      "minimum": 1.4042553191489362,
+      "maximum": 1.6592356687898089,
+      "realization_medians": [
+        1.5033055095795476,
+        1.6192598778249225
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n4096_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 4096,
+      "median": 1.2150144406550527,
+      "minimum": 1.1477109127555427,
+      "maximum": 1.2397260273972603,
+      "realization_medians": [
+        1.2234286123509022,
+        1.2065496733637373
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n16384_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 16384,
+      "median": 0.9819608230727681,
+      "minimum": 0.9438970990695129,
+      "maximum": 1.0414751973606693,
+      "realization_medians": [
+        1.0069862875785693,
+        0.9527481820605381
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n65536_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 65536,
+      "median": 0.6231807091996726,
+      "minimum": 0.5945343818529745,
+      "maximum": 0.6923664295272585,
+      "realization_medians": [
+        0.6661580350323945,
+        0.6123455675315925
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n262144_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 262144,
+      "median": 0.3431504580464003,
+      "minimum": 0.3262052680623807,
+      "maximum": 0.36783094916584225,
+      "realization_medians": [
+        0.35467159020187233,
+        0.33396204912238
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n1048576_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 1048576,
+      "median": 0.24123310067138165,
+      "minimum": 0.23685237419693292,
+      "maximum": 0.2492562276725504,
+      "realization_medians": [
+        0.2421317056339684,
+        0.23830420782762157
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n4194304_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 4194304,
+      "median": 0.3222112515126731,
+      "minimum": 0.27002240649222226,
+      "maximum": 0.361319081727889,
+      "realization_medians": [
+        0.3577429819140545,
+        0.28784530709466455
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n1024_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 1024,
+      "median": 1.3391843971631205,
+      "minimum": 1.2094240837696335,
+      "maximum": 1.4153005464480874,
+      "realization_medians": [
+        1.2523361265780912,
+        1.3873396653098147
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n4096_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 4096,
+      "median": 1.3441365669513852,
+      "minimum": 1.1562588301780163,
+      "maximum": 1.5203252032520325,
+      "realization_medians": [
+        1.4992931270196372,
+        1.1742940926611065
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n16384_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 16384,
+      "median": 1.1757075646517485,
+      "minimum": 1.1158601644385866,
+      "maximum": 1.2069156676598989,
+      "realization_medians": [
+        1.2001848682262832,
+        1.1535049936410788
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n65536_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 65536,
+      "median": 1.3116921565746693,
+      "minimum": 1.1068394769357497,
+      "maximum": 1.471641932129691,
+      "realization_medians": [
+        1.1456244952820989,
+        1.4401431329562817
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n262144_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 262144,
+      "median": 1.2340235476239467,
+      "minimum": 1.210116000815547,
+      "maximum": 1.2594425866354342,
+      "realization_medians": [
+        1.2210073928387906,
+        1.2388898470226648
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n1048576_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 1048576,
+      "median": 1.157097842381806,
+      "minimum": 1.0884456167402154,
+      "maximum": 1.1817852255986487,
+      "realization_medians": [
+        1.1675428924541045,
+        1.1377324735841956
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n4194304_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 4194304,
+      "median": 1.2481269784295617,
+      "minimum": 1.175222907416224,
+      "maximum": 1.3335974569563076,
+      "realization_medians": [
+        1.3041286547743454,
+        1.2042890916948155
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n1024_d32_p0",
+      "algorithm": "kruskal",
+      "n": 1024,
+      "median": 0.7353843089986988,
+      "minimum": 0.6774193548387096,
+      "maximum": 0.7656135194709772,
+      "realization_medians": [
+        0.6829443635917308,
+        0.7392416156542667
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n4096_d32_p0",
+      "algorithm": "kruskal",
+      "n": 4096,
+      "median": 0.6575208653556088,
+      "minimum": 0.635779669182592,
+      "maximum": 0.6759306046824995,
+      "realization_medians": [
+        0.6547201202291776,
+        0.6611889047998729
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n16384_d32_p0",
+      "algorithm": "kruskal",
+      "n": 16384,
+      "median": 0.6403967282436411,
+      "minimum": 0.6292560345437814,
+      "maximum": 0.6620725815512528,
+      "realization_medians": [
+        0.6521001124638808,
+        0.6329916715718288
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n65536_d32_p0",
+      "algorithm": "kruskal",
+      "n": 65536,
+      "median": 0.7344412521777497,
+      "minimum": 0.6878214880823009,
+      "maximum": 0.7824407914972147,
+      "realization_medians": [
+        0.7398457177993448,
+        0.6928138320114877
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n262144_d32_p0",
+      "algorithm": "kruskal",
+      "n": 262144,
+      "median": 0.8860965023054947,
+      "minimum": 0.8319308355255872,
+      "maximum": 0.948500009037905,
+      "realization_medians": [
+        0.9003246082953771,
+        0.8492568489121066
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n1048576_d32_p0",
+      "algorithm": "kruskal",
+      "n": 1048576,
+      "median": 0.906279461547048,
+      "minimum": 0.8813694931363337,
+      "maximum": 0.9340665856464146,
+      "realization_medians": [
+        0.8972595824848828,
+        0.9155647559322581
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n4194304_d32_p0",
+      "algorithm": "kruskal",
+      "n": 4194304,
+      "median": 1.4453091641096008,
+      "minimum": 1.228465009854052,
+      "maximum": 1.6886366617023285,
+      "realization_medians": [
+        1.6557652573962947,
+        1.2414128668776656
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n1024_d32_p0",
+      "algorithm": "prim",
+      "n": 1024,
+      "median": 1.6861625100563153,
+      "minimum": 1.5,
+      "maximum": 1.792387543252595,
+      "realization_medians": [
+        1.6512342803912436,
+        1.7137878787878789
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n4096_d32_p0",
+      "algorithm": "prim",
+      "n": 4096,
+      "median": 1.438927991047275,
+      "minimum": 1.1630434782608696,
+      "maximum": 1.5503355704697988,
+      "realization_medians": [
+        1.4059369496090979,
+        1.4473728415539722
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n16384_d32_p0",
+      "algorithm": "prim",
+      "n": 16384,
+      "median": 1.24534638466444,
+      "minimum": 1.2033354266973693,
+      "maximum": 1.300713707600618,
+      "realization_medians": [
+        1.2735505901566326,
+        1.2137683392451373
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n65536_d32_p0",
+      "algorithm": "prim",
+      "n": 65536,
+      "median": 1.340336253286099,
+      "minimum": 1.2759609354000538,
+      "maximum": 1.424061950893343,
+      "realization_medians": [
+        1.3809819665735827,
+        1.292370421382314
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n262144_d32_p0",
+      "algorithm": "prim",
+      "n": 262144,
+      "median": 1.3764363948814125,
+      "minimum": 1.3335331659008034,
+      "maximum": 1.437668003080754,
+      "realization_medians": [
+        1.4026038850621996,
+        1.3648836540493607
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n1048576_d32_p0",
+      "algorithm": "prim",
+      "n": 1048576,
+      "median": 1.114044678164018,
+      "minimum": 1.0744012690252982,
+      "maximum": 1.1619991074918026,
+      "realization_medians": [
+        1.121716857199643,
+        1.1113478960389185
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n4194304_d32_p0",
+      "algorithm": "prim",
+      "n": 4194304,
+      "median": 0.918457738507537,
+      "minimum": 0.8695940702144627,
+      "maximum": 0.9782950599054223,
+      "realization_medians": [
+        0.899803730704827,
+        0.9403910455982103
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n1024_d32_p0",
+      "algorithm": "boruvka",
+      "n": 1024,
+      "median": 2.354798267608844,
+      "minimum": 2.0927601809954752,
+      "maximum": 2.589873417721519,
+      "realization_medians": [
+        2.244744714798564,
+        2.5409546816708457
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n4096_d32_p0",
+      "algorithm": "boruvka",
+      "n": 4096,
+      "median": 2.338349676439514,
+      "minimum": 2.1536842105263156,
+      "maximum": 2.8349928876244666,
+      "realization_medians": [
+        2.737515645614154,
+        2.1829612876437436
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n16384_d32_p0",
+      "algorithm": "boruvka",
+      "n": 16384,
+      "median": 2.061255969505677,
+      "minimum": 1.9530011325028314,
+      "maximum": 2.1757538461538464,
+      "realization_medians": [
+        2.1522541632934966,
+        1.9662504321181875
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n65536_d32_p0",
+      "algorithm": "boruvka",
+      "n": 65536,
+      "median": 1.8996069533006972,
+      "minimum": 1.7226249675473808,
+      "maximum": 2.1810731297282153,
+      "realization_medians": [
+        1.7278710307446914,
+        2.021412396855279
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n262144_d32_p0",
+      "algorithm": "boruvka",
+      "n": 262144,
+      "median": 1.596674447392692,
+      "minimum": 1.5161623189574909,
+      "maximum": 1.6603009036891616,
+      "realization_medians": [
+        1.5900743512735778,
+        1.603857254990289
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n1048576_d32_p0",
+      "algorithm": "boruvka",
+      "n": 1048576,
+      "median": 1.1959673316757975,
+      "minimum": 1.1845055624789644,
+      "maximum": 1.2273766876798347,
+      "realization_medians": [
+        1.220243589278466,
+        1.1916568212909597
+      ]
+    },
+    {
+      "kind": "ratios",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n4194304_d32_p0",
+      "algorithm": "boruvka",
+      "n": 4194304,
+      "median": 0.973358854116325,
+      "minimum": 0.8933708316702675,
+      "maximum": 1.0114329932862498,
+      "realization_medians": [
+        0.9638498226309551,
+        0.9785717835161987
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n1024_d32_p0",
+      "algorithm": "kkt",
+      "n": 1024,
+      "median": 0.00111925,
+      "minimum": 0.001070833,
+      "maximum": 0.001165125,
+      "realization_medians": [
+        0.0010930415,
+        0.001147979
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n4096_d32_p0",
+      "algorithm": "kkt",
+      "n": 4096,
+      "median": 0.004423042,
+      "minimum": 0.0042535,
+      "maximum": 0.004549292,
+      "realization_medians": [
+        0.004344125,
+        0.004496146
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n16384_d32_p0",
+      "algorithm": "kkt",
+      "n": 16384,
+      "median": 0.019274021,
+      "minimum": 0.018853833,
+      "maximum": 0.019973125,
+      "realization_medians": [
+        0.019545313,
+        0.019200125
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n65536_d32_p0",
+      "algorithm": "kkt",
+      "n": 65536,
+      "median": 0.1042025,
+      "minimum": 0.100752834,
+      "maximum": 0.110387875,
+      "realization_medians": [
+        0.1037377915,
+        0.1042685
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n262144_d32_p0",
+      "algorithm": "kkt",
+      "n": 262144,
+      "median": 0.4845900625,
+      "minimum": 0.477231458,
+      "maximum": 0.500136,
+      "realization_medians": [
+        0.483167521,
+        0.488064021
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n1048576_d32_p0",
+      "algorithm": "kkt",
+      "n": 1048576,
+      "median": 2.38755475,
+      "minimum": 2.371029417,
+      "maximum": 2.4540165,
+      "realization_medians": [
+        2.3849251875,
+        2.391243229
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n4194304_d32_p0",
+      "algorithm": "kkt",
+      "n": 4194304,
+      "median": 17.7516087705,
+      "minimum": 15.153141458,
+      "maximum": 36.875712125,
+      "realization_medians": [
+        18.6133086455,
+        16.8694897915
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n1024_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 1024,
+      "median": 0.0008127915,
+      "minimum": 0.000790375,
+      "maximum": 0.000834125,
+      "realization_medians": [
+        0.0008244795,
+        0.0008049375
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n4096_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 4096,
+      "median": 0.0045137915,
+      "minimum": 0.004311667,
+      "maximum": 0.00470375,
+      "realization_medians": [
+        0.0043919375,
+        0.0046337295
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n16384_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 16384,
+      "median": 0.024353979,
+      "minimum": 0.022879166,
+      "maximum": 0.0251485,
+      "realization_medians": [
+        0.0240121875,
+        0.0243630835
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n65536_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 65536,
+      "median": 0.1758216045,
+      "minimum": 0.16866675,
+      "maximum": 0.183203459,
+      "realization_medians": [
+        0.173487333,
+        0.180441396
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n262144_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 262144,
+      "median": 1.65523675,
+      "minimum": 1.542559834,
+      "maximum": 1.736254458,
+      "realization_medians": [
+        1.5696330625,
+        1.6813613125
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n1048576_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 1048576,
+      "median": 10.688881708,
+      "minimum": 10.590559167,
+      "maximum": 11.043754459,
+      "realization_medians": [
+        10.642624,
+        10.762246625
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n4194304_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 4194304,
+      "median": 57.3102015625,
+      "minimum": 53.99582075,
+      "maximum": 75.761875292,
+      "realization_medians": [
+        59.752036625,
+        56.690571
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n1024_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 1024,
+      "median": 0.001209167,
+      "minimum": 0.001158666,
+      "maximum": 0.001280791,
+      "realization_medians": [
+        0.001187396,
+        0.001228458
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n4096_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 4096,
+      "median": 0.005732375,
+      "minimum": 0.005611833,
+      "maximum": 0.005848,
+      "realization_medians": [
+        0.005632188,
+        0.0058157705
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n16384_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 16384,
+      "median": 0.0276367705,
+      "minimum": 0.027300709,
+      "maximum": 0.02906025,
+      "realization_medians": [
+        0.0274955835,
+        0.027646083
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n65536_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 65536,
+      "median": 0.134276625,
+      "minimum": 0.133675916,
+      "maximum": 0.136492167,
+      "realization_medians": [
+        0.134293,
+        0.133846896
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n262144_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 262144,
+      "median": 0.6812117705,
+      "minimum": 0.672523,
+      "maximum": 0.697363959,
+      "realization_medians": [
+        0.682712583,
+        0.6802005415
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n1048576_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 1048576,
+      "median": 3.567056812,
+      "minimum": 3.4986665,
+      "maximum": 3.647210125,
+      "realization_medians": [
+        3.5754788745,
+        3.5516394795
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n4194304_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 4194304,
+      "median": 19.6828635835,
+      "minimum": 19.415412833,
+      "maximum": 29.135659958,
+      "realization_medians": [
+        20.446238021,
+        19.6828635835
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n1024_d32_p0",
+      "algorithm": "kruskal",
+      "n": 1024,
+      "median": 0.001430146,
+      "minimum": 0.0013435,
+      "maximum": 0.001474041,
+      "realization_medians": [
+        0.0013769375,
+        0.0014347715
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n4096_d32_p0",
+      "algorithm": "kruskal",
+      "n": 4096,
+      "median": 0.006097146,
+      "minimum": 0.005902458,
+      "maximum": 0.006378166,
+      "realization_medians": [
+        0.005915271,
+        0.0062746665
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n16384_d32_p0",
+      "algorithm": "kruskal",
+      "n": 16384,
+      "median": 0.0283103545,
+      "minimum": 0.026348416,
+      "maximum": 0.029029958,
+      "realization_medians": [
+        0.0265362295,
+        0.028523875
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n65536_d32_p0",
+      "algorithm": "kruskal",
+      "n": 65536,
+      "median": 0.1202457295,
+      "minimum": 0.114519042,
+      "maximum": 0.125415,
+      "realization_medians": [
+        0.1155706035,
+        0.123202146
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n262144_d32_p0",
+      "algorithm": "kruskal",
+      "n": 262144,
+      "median": 0.5178195,
+      "minimum": 0.500433083,
+      "maximum": 0.530649,
+      "realization_medians": [
+        0.5070041255,
+        0.5292505
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n1048576_d32_p0",
+      "algorithm": "kruskal",
+      "n": 1048576,
+      "median": 2.3329017705,
+      "minimum": 2.275849542,
+      "maximum": 2.483359875,
+      "realization_medians": [
+        2.3434544165,
+        2.30228925
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n4194304_d32_p0",
+      "algorithm": "kruskal",
+      "n": 4194304,
+      "median": 10.4163965625,
+      "minimum": 9.97489025,
+      "maximum": 14.53930875,
+      "realization_medians": [
+        10.603834375,
+        10.237142292
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n1024_d32_p0",
+      "algorithm": "prim",
+      "n": 1024,
+      "median": 0.0006064585,
+      "minimum": 0.00056325,
+      "maximum": 0.000622916,
+      "realization_medians": [
+        0.000607,
+        0.000606396
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n4096_d32_p0",
+      "algorithm": "prim",
+      "n": 4096,
+      "median": 0.0028439375,
+      "minimum": 0.002596583,
+      "maximum": 0.003070083,
+      "realization_medians": [
+        0.0026546875,
+        0.0029431245
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n16384_d32_p0",
+      "algorithm": "prim",
+      "n": 16384,
+      "median": 0.0142400625,
+      "minimum": 0.013256375,
+      "maximum": 0.014529458,
+      "realization_medians": [
+        0.013549042,
+        0.0143385835
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n65536_d32_p0",
+      "algorithm": "prim",
+      "n": 65536,
+      "median": 0.0657524375,
+      "minimum": 0.062374833,
+      "maximum": 0.069086834,
+      "realization_medians": [
+        0.063158291,
+        0.066312063
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n262144_d32_p0",
+      "algorithm": "prim",
+      "n": 262144,
+      "median": 0.3346633955,
+      "minimum": 0.323767125,
+      "maximum": 0.346140459,
+      "realization_medians": [
+        0.325573125,
+        0.339769354
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n1048576_d32_p0",
+      "algorithm": "prim",
+      "n": 1048576,
+      "median": 1.8982195,
+      "minimum": 1.854178333,
+      "maximum": 2.560792042,
+      "realization_medians": [
+        1.8930677915,
+        1.9252457295
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n4194304_d32_p0",
+      "algorithm": "prim",
+      "n": 4194304,
+      "median": 14.1156551875,
+      "minimum": 11.898206,
+      "maximum": 23.4459015,
+      "realization_medians": [
+        15.2098549165,
+        13.2557764375
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n1024_d32_p0",
+      "algorithm": "boruvka",
+      "n": 1024,
+      "median": 0.0006728755,
+      "minimum": 0.0006355,
+      "maximum": 0.000691917,
+      "realization_medians": [
+        0.000648291,
+        0.000679688
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n4096_d32_p0",
+      "algorithm": "boruvka",
+      "n": 4096,
+      "median": 0.0029953125,
+      "minimum": 0.002886958,
+      "maximum": 0.003149084,
+      "realization_medians": [
+        0.002890833,
+        0.0030928535
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n16384_d32_p0",
+      "algorithm": "boruvka",
+      "n": 16384,
+      "median": 0.015264896,
+      "minimum": 0.014540959,
+      "maximum": 0.015907375,
+      "realization_medians": [
+        0.0151524585,
+        0.0152735625
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n65536_d32_p0",
+      "algorithm": "boruvka",
+      "n": 65536,
+      "median": 0.0908284375,
+      "minimum": 0.08809325,
+      "maximum": 0.091602625,
+      "realization_medians": [
+        0.0886602705,
+        0.091110458
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n262144_d32_p0",
+      "algorithm": "boruvka",
+      "n": 262144,
+      "median": 0.504268375,
+      "minimum": 0.50020625,
+      "maximum": 0.527657542,
+      "realization_medians": [
+        0.5016942085,
+        0.5114482705
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n1048576_d32_p0",
+      "algorithm": "boruvka",
+      "n": 1048576,
+      "median": 3.262991042,
+      "minimum": 3.243285958,
+      "maximum": 3.523693917,
+      "realization_medians": [
+        3.257015896,
+        3.266204271
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_hierarchy4_n4194304_d32_p0",
+      "algorithm": "boruvka",
+      "n": 4194304,
+      "median": 24.2107293125,
+      "minimum": 21.424986083,
+      "maximum": 40.151463791,
+      "realization_medians": [
+        25.164949125,
+        23.7061762495
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n1024_d32_p0",
+      "algorithm": "kkt",
+      "n": 1024,
+      "median": 0.001016271,
+      "minimum": 0.000923542,
+      "maximum": 0.001047042,
+      "realization_medians": [
+        0.000937417,
+        0.001023417
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n4096_d32_p0",
+      "algorithm": "kkt",
+      "n": 4096,
+      "median": 0.004052125,
+      "minimum": 0.003893208,
+      "maximum": 0.004216875,
+      "realization_medians": [
+        0.0039700835,
+        0.0041261045
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n16384_d32_p0",
+      "algorithm": "kkt",
+      "n": 16384,
+      "median": 0.017380646,
+      "minimum": 0.017095291,
+      "maximum": 0.017802083,
+      "realization_medians": [
+        0.0172264165,
+        0.017440417
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n65536_d32_p0",
+      "algorithm": "kkt",
+      "n": 65536,
+      "median": 0.08599025,
+      "minimum": 0.085230167,
+      "maximum": 0.093532584,
+      "realization_medians": [
+        0.0864968335,
+        0.0857553335
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n262144_d32_p0",
+      "algorithm": "kkt",
+      "n": 262144,
+      "median": 0.457872188,
+      "minimum": 0.451074792,
+      "maximum": 0.475293333,
+      "realization_medians": [
+        0.4589834165,
+        0.45750225
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n1048576_d32_p0",
+      "algorithm": "kkt",
+      "n": 1048576,
+      "median": 2.0787736665,
+      "minimum": 2.040118667,
+      "maximum": 2.138258875,
+      "realization_medians": [
+        2.075313708,
+        2.0791504795
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n4194304_d32_p0",
+      "algorithm": "kkt",
+      "n": 4194304,
+      "median": 15.620084083,
+      "minimum": 13.008363667,
+      "maximum": 19.411800167,
+      "realization_medians": [
+        19.054907417,
+        13.0893731045
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n1024_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 1024,
+      "median": 0.0006297085,
+      "minimum": 0.000613167,
+      "maximum": 0.000685458,
+      "realization_medians": [
+        0.000623792,
+        0.0006357085
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n4096_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 4096,
+      "median": 0.0034185,
+      "minimum": 0.003196042,
+      "maximum": 0.003472666,
+      "realization_medians": [
+        0.003244271,
+        0.0034254375
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n16384_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 16384,
+      "median": 0.0178868955,
+      "minimum": 0.016973584,
+      "maximum": 0.018352,
+      "realization_medians": [
+        0.017079625,
+        0.018304
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n65536_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 65536,
+      "median": 0.1387757915,
+      "minimum": 0.128940625,
+      "maximum": 0.149072958,
+      "realization_medians": [
+        0.130003583,
+        0.1412348125
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n262144_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 262144,
+      "median": 1.3371536665,
+      "minimum": 1.246342,
+      "maximum": 1.413972667,
+      "realization_medians": [
+        1.296261625,
+        1.3864773955
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n1048576_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 1048576,
+      "median": 8.661757042,
+      "minimum": 8.477133791,
+      "maximum": 8.737834125,
+      "realization_medians": [
+        8.554451563,
+        8.6961708755
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n4194304_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 4194304,
+      "median": 50.223421625,
+      "minimum": 44.478768708,
+      "maximum": 53.68429175,
+      "realization_medians": [
+        53.2722376455,
+        45.468961063
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n1024_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 1024,
+      "median": 0.000748771,
+      "minimum": 0.000727666,
+      "maximum": 0.000778584,
+      "realization_medians": [
+        0.000761,
+        0.000737729
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n4096_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 4096,
+      "median": 0.003092979,
+      "minimum": 0.00258225,
+      "maximum": 0.00354,
+      "realization_medians": [
+        0.0026480005,
+        0.0035166045
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n16384_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 16384,
+      "median": 0.0149076665,
+      "minimum": 0.014304625,
+      "maximum": 0.015945625,
+      "realization_medians": [
+        0.0143846255,
+        0.0150810415
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n65536_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 65536,
+      "median": 0.069326625,
+      "minimum": 0.059431,
+      "maximum": 0.077694834,
+      "realization_medians": [
+        0.0756131665,
+        0.0596090835
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n262144_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 262144,
+      "median": 0.37366575,
+      "minimum": 0.367408917,
+      "maximum": 0.377385209,
+      "realization_medians": [
+        0.3755761255,
+        0.369462042
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n1048576_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 1048576,
+      "median": 1.811726396,
+      "minimum": 1.7639535,
+      "maximum": 1.902816792,
+      "realization_medians": [
+        1.779107854,
+        1.832007583
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n4194304_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 4194304,
+      "median": 12.2982591665,
+      "minimum": 10.723217458,
+      "maximum": 14.762584334,
+      "realization_medians": [
+        14.73713475,
+        10.9153835835
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n1024_d32_p0",
+      "algorithm": "kruskal",
+      "n": 1024,
+      "median": 0.0013793755,
+      "minimum": 0.001352375,
+      "maximum": 0.001394,
+      "realization_medians": [
+        0.0013696665,
+        0.001383604
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n4096_d32_p0",
+      "algorithm": "kruskal",
+      "n": 4096,
+      "median": 0.0062346875,
+      "minimum": 0.005936791,
+      "maximum": 0.0062945,
+      "realization_medians": [
+        0.005979917,
+        0.0062710205
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n16384_d32_p0",
+      "algorithm": "kruskal",
+      "n": 16384,
+      "median": 0.0270610005,
+      "minimum": 0.0261415,
+      "maximum": 0.028273042,
+      "realization_medians": [
+        0.0265787915,
+        0.027451729
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n65536_d32_p0",
+      "algorithm": "kruskal",
+      "n": 65536,
+      "median": 0.1206594585,
+      "minimum": 0.11650925,
+      "maximum": 0.125954625,
+      "realization_medians": [
+        0.116996542,
+        0.123818916
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n262144_d32_p0",
+      "algorithm": "kruskal",
+      "n": 262144,
+      "median": 0.5247244375,
+      "minimum": 0.497901459,
+      "maximum": 0.550800917,
+      "realization_medians": [
+        0.506487979,
+        0.5385299165
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n1048576_d32_p0",
+      "algorithm": "kruskal",
+      "n": 1048576,
+      "median": 2.299042083,
+      "minimum": 2.246480959,
+      "maximum": 2.347010625,
+      "realization_medians": [
+        2.322430438,
+        2.28180225
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n4194304_d32_p0",
+      "algorithm": "kruskal",
+      "n": 4194304,
+      "median": 10.841877167,
+      "minimum": 10.463410291,
+      "maximum": 11.699933083,
+      "realization_medians": [
+        11.444734292,
+        10.503260042
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n1024_d32_p0",
+      "algorithm": "prim",
+      "n": 1024,
+      "median": 0.000591875,
+      "minimum": 0.000564292,
+      "maximum": 0.000632875,
+      "realization_medians": [
+        0.0005788125,
+        0.0006025
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n4096_d32_p0",
+      "algorithm": "prim",
+      "n": 4096,
+      "median": 0.0028550415,
+      "minimum": 0.002532792,
+      "maximum": 0.003403291,
+      "realization_medians": [
+        0.002829979,
+        0.00286075
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n16384_d32_p0",
+      "algorithm": "prim",
+      "n": 16384,
+      "median": 0.0139471045,
+      "minimum": 0.013433875,
+      "maximum": 0.014732916,
+      "realization_medians": [
+        0.0135302705,
+        0.0143188125
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n65536_d32_p0",
+      "algorithm": "prim",
+      "n": 65536,
+      "median": 0.0662275,
+      "minimum": 0.062265959,
+      "maximum": 0.068178,
+      "realization_medians": [
+        0.0625390835,
+        0.0664167085
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n262144_d32_p0",
+      "algorithm": "prim",
+      "n": 262144,
+      "median": 0.3335359585,
+      "minimum": 0.325517875,
+      "maximum": 0.343620125,
+      "realization_medians": [
+        0.3265126875,
+        0.335637771
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n1048576_d32_p0",
+      "algorithm": "prim",
+      "n": 1048576,
+      "median": 1.8691784165,
+      "minimum": 1.803902375,
+      "maximum": 1.909495917,
+      "realization_medians": [
+        1.8557914165,
+        1.876138021
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n4194304_d32_p0",
+      "algorithm": "prim",
+      "n": 4194304,
+      "median": 16.970514417,
+      "minimum": 13.375279791,
+      "maximum": 21.580046083,
+      "realization_medians": [
+        21.370738021,
+        13.9227186875
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n1024_d32_p0",
+      "algorithm": "boruvka",
+      "n": 1024,
+      "median": 0.0004129375,
+      "minimum": 0.000392833,
+      "maximum": 0.000460459,
+      "realization_medians": [
+        0.000427334,
+        0.0004051665
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n4096_d32_p0",
+      "algorithm": "boruvka",
+      "n": 4096,
+      "median": 0.0017359375,
+      "minimum": 0.001405625,
+      "maximum": 0.001936792,
+      "realization_medians": [
+        0.0014387085,
+        0.0018949165
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n16384_d32_p0",
+      "algorithm": "boruvka",
+      "n": 16384,
+      "median": 0.008466521,
+      "minimum": 0.007963583,
+      "maximum": 0.009093375,
+      "realization_medians": [
+        0.008035771,
+        0.008849042
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n65536_d32_p0",
+      "algorithm": "boruvka",
+      "n": 65536,
+      "median": 0.046583458,
+      "minimum": 0.042216917,
+      "maximum": 0.050184792,
+      "realization_medians": [
+        0.0498408125,
+        0.0425345625
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n262144_d32_p0",
+      "algorithm": "boruvka",
+      "n": 262144,
+      "median": 0.287055188,
+      "minimum": 0.282995125,
+      "maximum": 0.2975195,
+      "realization_medians": [
+        0.289774854,
+        0.2863952295
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n1048576_d32_p0",
+      "algorithm": "boruvka",
+      "n": 1048576,
+      "median": 1.7349313335,
+      "minimum": 1.662812209,
+      "maximum": 1.764495375,
+      "realization_medians": [
+        1.7185947505,
+        1.7482404375
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "wall",
+      "case_id": "leaf_shuffled4_n4194304_d32_p0",
+      "algorithm": "boruvka",
+      "n": 4194304,
+      "median": 16.542036167,
+      "minimum": 12.938632209,
+      "maximum": 19.927208542,
+      "realization_medians": [
+        19.7738073125,
+        13.375503833
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n1024_d32_p0",
+      "algorithm": "kkt",
+      "n": 1024,
+      "median": 0.001119,
+      "minimum": 0.001071,
+      "maximum": 0.001166,
+      "realization_medians": [
+        0.0010935,
+        0.001146
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n4096_d32_p0",
+      "algorithm": "kkt",
+      "n": 4096,
+      "median": 0.0044235,
+      "minimum": 0.004254,
+      "maximum": 0.00455,
+      "realization_medians": [
+        0.0043445,
+        0.004492
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n16384_d32_p0",
+      "algorithm": "kkt",
+      "n": 16384,
+      "median": 0.019256,
+      "minimum": 0.018855,
+      "maximum": 0.019974,
+      "realization_medians": [
+        0.0195455,
+        0.019175
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n65536_d32_p0",
+      "algorithm": "kkt",
+      "n": 65536,
+      "median": 0.104129,
+      "minimum": 0.100755,
+      "maximum": 0.110247,
+      "realization_medians": [
+        0.103739,
+        0.104129
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n262144_d32_p0",
+      "algorithm": "kkt",
+      "n": 262144,
+      "median": 0.4845915,
+      "minimum": 0.477232,
+      "maximum": 0.500137,
+      "realization_medians": [
+        0.483171,
+        0.488066
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n1048576_d32_p0",
+      "algorithm": "kkt",
+      "n": 1048576,
+      "median": 2.38734,
+      "minimum": 2.370004,
+      "maximum": 2.453495,
+      "realization_medians": [
+        2.3847225,
+        2.3912175
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n4194304_d32_p0",
+      "algorithm": "kkt",
+      "n": 4194304,
+      "median": 17.7473705,
+      "minimum": 15.152645,
+      "maximum": 36.266612,
+      "realization_medians": [
+        18.606407,
+        16.8628015
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n1024_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 1024,
+      "median": 0.000813,
+      "minimum": 0.000791,
+      "maximum": 0.000834,
+      "realization_medians": [
+        0.0008245,
+        0.000805
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n4096_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 4096,
+      "median": 0.004508,
+      "minimum": 0.004312,
+      "maximum": 0.004704,
+      "realization_medians": [
+        0.004392,
+        0.0046255
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n16384_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 16384,
+      "median": 0.024328,
+      "minimum": 0.022879,
+      "maximum": 0.025149,
+      "realization_medians": [
+        0.0240135,
+        0.024328
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n65536_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 65536,
+      "median": 0.175703,
+      "minimum": 0.168668,
+      "maximum": 0.182947,
+      "realization_medians": [
+        0.1734885,
+        0.1801765
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n262144_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 262144,
+      "median": 1.655224,
+      "minimum": 1.542561,
+      "maximum": 1.736256,
+      "realization_medians": [
+        1.569635,
+        1.681363
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n1048576_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 1048576,
+      "median": 10.6888775,
+      "minimum": 10.590561,
+      "maximum": 11.042641,
+      "realization_medians": [
+        10.6426265,
+        10.7622195
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n4194304_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 4194304,
+      "median": 57.235263,
+      "minimum": 53.995294,
+      "maximum": 74.651415,
+      "realization_medians": [
+        59.727819,
+        56.6032075
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n1024_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 1024,
+      "median": 0.00121,
+      "minimum": 0.001159,
+      "maximum": 0.00127,
+      "realization_medians": [
+        0.0011875,
+        0.0012295
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n4096_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 4096,
+      "median": 0.0057265,
+      "minimum": 0.005612,
+      "maximum": 0.005844,
+      "realization_medians": [
+        0.005633,
+        0.005813
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n16384_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 16384,
+      "median": 0.027602,
+      "minimum": 0.027302,
+      "maximum": 0.029061,
+      "realization_medians": [
+        0.0274965,
+        0.02761
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n65536_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 65536,
+      "median": 0.1342775,
+      "minimum": 0.133505,
+      "maximum": 0.136493,
+      "realization_medians": [
+        0.1342955,
+        0.1336845
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n262144_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 262144,
+      "median": 0.681213,
+      "minimum": 0.672524,
+      "maximum": 0.697368,
+      "realization_medians": [
+        0.682715,
+        0.680202
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n1048576_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 1048576,
+      "median": 3.5670505,
+      "minimum": 3.498669,
+      "maximum": 3.639263,
+      "realization_medians": [
+        3.575465,
+        3.5516245
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n4194304_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 4194304,
+      "median": 19.6817615,
+      "minimum": 19.411101,
+      "maximum": 28.78117,
+      "realization_medians": [
+        20.4410095,
+        19.6817615
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n1024_d32_p0",
+      "algorithm": "kruskal",
+      "n": 1024,
+      "median": 0.0014285,
+      "minimum": 0.001344,
+      "maximum": 0.001474,
+      "realization_medians": [
+        0.0013775,
+        0.001435
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n4096_d32_p0",
+      "algorithm": "kruskal",
+      "n": 4096,
+      "median": 0.0060985,
+      "minimum": 0.005903,
+      "maximum": 0.006374,
+      "realization_medians": [
+        0.0059155,
+        0.006269
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n16384_d32_p0",
+      "algorithm": "kruskal",
+      "n": 16384,
+      "median": 0.028294,
+      "minimum": 0.026349,
+      "maximum": 0.028996,
+      "realization_medians": [
+        0.0265375,
+        0.0284895
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n65536_d32_p0",
+      "algorithm": "kruskal",
+      "n": 65536,
+      "median": 0.1201735,
+      "minimum": 0.11452,
+      "maximum": 0.12526,
+      "realization_medians": [
+        0.115572,
+        0.1230645
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n262144_d32_p0",
+      "algorithm": "kruskal",
+      "n": 262144,
+      "median": 0.51782,
+      "minimum": 0.500435,
+      "maximum": 0.53065,
+      "realization_medians": [
+        0.5070055,
+        0.5292515
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n1048576_d32_p0",
+      "algorithm": "kruskal",
+      "n": 1048576,
+      "median": 2.332904,
+      "minimum": 2.275851,
+      "maximum": 2.450819,
+      "realization_medians": [
+        2.3434565,
+        2.3022695
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n4194304_d32_p0",
+      "algorithm": "kruskal",
+      "n": 4194304,
+      "median": 10.394513,
+      "minimum": 9.971856,
+      "maximum": 14.077562,
+      "realization_medians": [
+        10.478818,
+        10.232929
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n1024_d32_p0",
+      "algorithm": "prim",
+      "n": 1024,
+      "median": 0.000607,
+      "minimum": 0.000564,
+      "maximum": 0.000623,
+      "realization_medians": [
+        0.000607,
+        0.0006065
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n4096_d32_p0",
+      "algorithm": "prim",
+      "n": 4096,
+      "median": 0.0028445,
+      "minimum": 0.002597,
+      "maximum": 0.003065,
+      "realization_medians": [
+        0.002656,
+        0.0029375
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n16384_d32_p0",
+      "algorithm": "prim",
+      "n": 16384,
+      "median": 0.0142335,
+      "minimum": 0.013257,
+      "maximum": 0.01451,
+      "realization_medians": [
+        0.013549,
+        0.0143165
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n65536_d32_p0",
+      "algorithm": "prim",
+      "n": 65536,
+      "median": 0.065715,
+      "minimum": 0.062375,
+      "maximum": 0.06903,
+      "realization_medians": [
+        0.063159,
+        0.0662255
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n262144_d32_p0",
+      "algorithm": "prim",
+      "n": 262144,
+      "median": 0.3346655,
+      "minimum": 0.323769,
+      "maximum": 0.34612,
+      "realization_medians": [
+        0.3255745,
+        0.339771
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n1048576_d32_p0",
+      "algorithm": "prim",
+      "n": 1048576,
+      "median": 1.898221,
+      "minimum": 1.854181,
+      "maximum": 2.537135,
+      "realization_medians": [
+        1.8930695,
+        1.9252485
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n4194304_d32_p0",
+      "algorithm": "prim",
+      "n": 4194304,
+      "median": 14.1132195,
+      "minimum": 11.898208,
+      "maximum": 23.159029,
+      "realization_medians": [
+        15.1979165,
+        13.2547985
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n1024_d32_p0",
+      "algorithm": "boruvka",
+      "n": 1024,
+      "median": 0.000673,
+      "minimum": 0.000636,
+      "maximum": 0.000693,
+      "realization_medians": [
+        0.0006485,
+        0.0006805
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n4096_d32_p0",
+      "algorithm": "boruvka",
+      "n": 4096,
+      "median": 0.0029955,
+      "minimum": 0.002887,
+      "maximum": 0.00315,
+      "realization_medians": [
+        0.0028915,
+        0.0030935
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n16384_d32_p0",
+      "algorithm": "boruvka",
+      "n": 16384,
+      "median": 0.015241,
+      "minimum": 0.014542,
+      "maximum": 0.015908,
+      "realization_medians": [
+        0.0151535,
+        0.0152555
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n65536_d32_p0",
+      "algorithm": "boruvka",
+      "n": 65536,
+      "median": 0.090711,
+      "minimum": 0.088094,
+      "maximum": 0.091597,
+      "realization_medians": [
+        0.088662,
+        0.0910025
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n262144_d32_p0",
+      "algorithm": "boruvka",
+      "n": 262144,
+      "median": 0.50427,
+      "minimum": 0.500209,
+      "maximum": 0.527638,
+      "realization_medians": [
+        0.501692,
+        0.5114495
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n1048576_d32_p0",
+      "algorithm": "boruvka",
+      "n": 1048576,
+      "median": 3.262974,
+      "minimum": 3.243283,
+      "maximum": 3.518307,
+      "realization_medians": [
+        3.2570085,
+        3.266191
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_hierarchy4_n4194304_d32_p0",
+      "algorithm": "boruvka",
+      "n": 4194304,
+      "median": 24.178043,
+      "minimum": 21.424245,
+      "maximum": 39.517834,
+      "realization_medians": [
+        25.15764,
+        23.6656345
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n1024_d32_p0",
+      "algorithm": "kkt",
+      "n": 1024,
+      "median": 0.001017,
+      "minimum": 0.000924,
+      "maximum": 0.001042,
+      "realization_medians": [
+        0.0009375,
+        0.0010235
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n4096_d32_p0",
+      "algorithm": "kkt",
+      "n": 4096,
+      "median": 0.0040525,
+      "minimum": 0.003894,
+      "maximum": 0.004217,
+      "realization_medians": [
+        0.0039705,
+        0.0041265
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n16384_d32_p0",
+      "algorithm": "kkt",
+      "n": 16384,
+      "median": 0.017356,
+      "minimum": 0.017095,
+      "maximum": 0.017779,
+      "realization_medians": [
+        0.017227,
+        0.017422
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n65536_d32_p0",
+      "algorithm": "kkt",
+      "n": 65536,
+      "median": 0.085992,
+      "minimum": 0.085129,
+      "maximum": 0.093411,
+      "realization_medians": [
+        0.086498,
+        0.085655
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n262144_d32_p0",
+      "algorithm": "kkt",
+      "n": 262144,
+      "median": 0.4578745,
+      "minimum": 0.451078,
+      "maximum": 0.475296,
+      "realization_medians": [
+        0.458985,
+        0.4575045
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n1048576_d32_p0",
+      "algorithm": "kkt",
+      "n": 1048576,
+      "median": 2.078778,
+      "minimum": 2.040128,
+      "maximum": 2.138261,
+      "realization_medians": [
+        2.0753195,
+        2.0791535
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n4194304_d32_p0",
+      "algorithm": "kkt",
+      "n": 4194304,
+      "median": 15.6108635,
+      "minimum": 13.006501,
+      "maximum": 19.372296,
+      "realization_medians": [
+        19.0289595,
+        13.0882705
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n1024_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 1024,
+      "median": 0.0006295,
+      "minimum": 0.000613,
+      "maximum": 0.000685,
+      "realization_medians": [
+        0.000624,
+        0.000632
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n4096_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 4096,
+      "median": 0.0034115,
+      "minimum": 0.003197,
+      "maximum": 0.003473,
+      "realization_medians": [
+        0.0032445,
+        0.003418
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n16384_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 16384,
+      "median": 0.017874,
+      "minimum": 0.016974,
+      "maximum": 0.018338,
+      "realization_medians": [
+        0.017081,
+        0.0182825
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n65536_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 65536,
+      "median": 0.1385945,
+      "minimum": 0.128941,
+      "maximum": 0.148941,
+      "realization_medians": [
+        0.130007,
+        0.1410395
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n262144_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 262144,
+      "median": 1.3371555,
+      "minimum": 1.246347,
+      "maximum": 1.413974,
+      "realization_medians": [
+        1.2962605,
+        1.3864795
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n1048576_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 1048576,
+      "median": 8.6617345,
+      "minimum": 8.477115,
+      "maximum": 8.737836,
+      "realization_medians": [
+        8.5544535,
+        8.6961725
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n4194304_d32_p0",
+      "algorithm": "compacting_boruvka",
+      "n": 4194304,
+      "median": 49.9780285,
+      "minimum": 44.474298,
+      "maximum": 53.61548,
+      "realization_medians": [
+        53.2012015,
+        45.438284
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n1024_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 1024,
+      "median": 0.000749,
+      "minimum": 0.000728,
+      "maximum": 0.00078,
+      "realization_medians": [
+        0.0007615,
+        0.000738
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n4096_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 4096,
+      "median": 0.0030935,
+      "minimum": 0.002583,
+      "maximum": 0.003539,
+      "realization_medians": [
+        0.0026485,
+        0.003517
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n16384_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 16384,
+      "median": 0.0148965,
+      "minimum": 0.014305,
+      "maximum": 0.015933,
+      "realization_medians": [
+        0.014385,
+        0.015063
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n65536_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 65536,
+      "median": 0.0693175,
+      "minimum": 0.059366,
+      "maximum": 0.077696,
+      "realization_medians": [
+        0.0756145,
+        0.0595295
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n262144_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 262144,
+      "median": 0.373667,
+      "minimum": 0.36741,
+      "maximum": 0.377386,
+      "realization_medians": [
+        0.3755795,
+        0.369464
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n1048576_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 1048576,
+      "median": 1.8117285,
+      "minimum": 1.763956,
+      "maximum": 1.902819,
+      "realization_medians": [
+        1.7791105,
+        1.832006
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n4194304_d32_p0",
+      "algorithm": "multigraph_boruvka",
+      "n": 4194304,
+      "median": 12.2924615,
+      "minimum": 10.720199,
+      "maximum": 14.73822,
+      "realization_medians": [
+        14.713392,
+        10.9137035
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n1024_d32_p0",
+      "algorithm": "kruskal",
+      "n": 1024,
+      "median": 0.0013785,
+      "minimum": 0.001353,
+      "maximum": 0.001394,
+      "realization_medians": [
+        0.0013705,
+        0.0013825
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n4096_d32_p0",
+      "algorithm": "kruskal",
+      "n": 4096,
+      "median": 0.006229,
+      "minimum": 0.005937,
+      "maximum": 0.006284,
+      "realization_medians": [
+        0.0059805,
+        0.00626
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n16384_d32_p0",
+      "algorithm": "kruskal",
+      "n": 16384,
+      "median": 0.027049,
+      "minimum": 0.026143,
+      "maximum": 0.028254,
+      "realization_medians": [
+        0.0265795,
+        0.027416
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n65536_d32_p0",
+      "algorithm": "kruskal",
+      "n": 65536,
+      "median": 0.120592,
+      "minimum": 0.116511,
+      "maximum": 0.125796,
+      "realization_medians": [
+        0.1169975,
+        0.1236705
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n262144_d32_p0",
+      "algorithm": "kruskal",
+      "n": 262144,
+      "median": 0.5247255,
+      "minimum": 0.497903,
+      "maximum": 0.550803,
+      "realization_medians": [
+        0.5064895,
+        0.5385315
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n1048576_d32_p0",
+      "algorithm": "kruskal",
+      "n": 1048576,
+      "median": 2.2990445,
+      "minimum": 2.246483,
+      "maximum": 2.347014,
+      "realization_medians": [
+        2.322433,
+        2.2817625
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n4194304_d32_p0",
+      "algorithm": "kruskal",
+      "n": 4194304,
+      "median": 10.838175,
+      "minimum": 10.462934,
+      "maximum": 11.685699,
+      "realization_medians": [
+        11.424748,
+        10.5026835
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n1024_d32_p0",
+      "algorithm": "prim",
+      "n": 1024,
+      "median": 0.0005915,
+      "minimum": 0.000565,
+      "maximum": 0.000628,
+      "realization_medians": [
+        0.000579,
+        0.0006025
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n4096_d32_p0",
+      "algorithm": "prim",
+      "n": 4096,
+      "median": 0.0028555,
+      "minimum": 0.002533,
+      "maximum": 0.003404,
+      "realization_medians": [
+        0.0028305,
+        0.0028615
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n16384_d32_p0",
+      "algorithm": "prim",
+      "n": 16384,
+      "median": 0.013941,
+      "minimum": 0.013439,
+      "maximum": 0.014727,
+      "realization_medians": [
+        0.013531,
+        0.0143
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n65536_d32_p0",
+      "algorithm": "prim",
+      "n": 65536,
+      "median": 0.0661635,
+      "minimum": 0.062267,
+      "maximum": 0.068075,
+      "realization_medians": [
+        0.0625405,
+        0.0663285
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n262144_d32_p0",
+      "algorithm": "prim",
+      "n": 262144,
+      "median": 0.333538,
+      "minimum": 0.32552,
+      "maximum": 0.343621,
+      "realization_medians": [
+        0.326514,
+        0.335641
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n1048576_d32_p0",
+      "algorithm": "prim",
+      "n": 1048576,
+      "median": 1.8691805,
+      "minimum": 1.803905,
+      "maximum": 1.909497,
+      "realization_medians": [
+        1.8557865,
+        1.876141
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n4194304_d32_p0",
+      "algorithm": "prim",
+      "n": 4194304,
+      "median": 16.959394,
+      "minimum": 13.37525,
+      "maximum": 21.535079,
+      "realization_medians": [
+        21.3380675,
+        13.921426
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n1024_d32_p0",
+      "algorithm": "boruvka",
+      "n": 1024,
+      "median": 0.0004125,
+      "minimum": 0.000394,
+      "maximum": 0.00046,
+      "realization_medians": [
+        0.000428,
+        0.0004055
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n4096_d32_p0",
+      "algorithm": "boruvka",
+      "n": 4096,
+      "median": 0.001737,
+      "minimum": 0.001406,
+      "maximum": 0.001938,
+      "realization_medians": [
+        0.0014385,
+        0.001895
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n16384_d32_p0",
+      "algorithm": "boruvka",
+      "n": 16384,
+      "median": 0.0084645,
+      "minimum": 0.007964,
+      "maximum": 0.009087,
+      "realization_medians": [
+        0.0080365,
+        0.0088375
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n65536_d32_p0",
+      "algorithm": "boruvka",
+      "n": 65536,
+      "median": 0.04656,
+      "minimum": 0.042168,
+      "maximum": 0.050186,
+      "realization_medians": [
+        0.0498425,
+        0.04248
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n262144_d32_p0",
+      "algorithm": "boruvka",
+      "n": 262144,
+      "median": 0.2870575,
+      "minimum": 0.282997,
+      "maximum": 0.297513,
+      "realization_medians": [
+        0.2897765,
+        0.286397
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n1048576_d32_p0",
+      "algorithm": "boruvka",
+      "n": 1048576,
+      "median": 1.734934,
+      "minimum": 1.662817,
+      "maximum": 1.764501,
+      "realization_medians": [
+        1.718601,
+        1.7482425
+      ]
+    },
+    {
+      "kind": "times",
+      "metric": "cpu",
+      "case_id": "leaf_shuffled4_n4194304_d32_p0",
+      "algorithm": "boruvka",
+      "n": 4194304,
+      "median": 16.454723,
+      "minimum": 12.937032,
+      "maximum": 19.898457,
+      "realization_medians": [
+        19.7425765,
+        13.375037
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "figure": "ratios_wall",
+      "family": "leaf_hierarchy4",
+      "cases": [
+        "leaf_hierarchy4_n1024_d32_p0",
+        "leaf_hierarchy4_n4096_d32_p0",
+        "leaf_hierarchy4_n16384_d32_p0",
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n262144_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0",
+        "leaf_hierarchy4_n4194304_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "limits": [
+        0.17620737076734466,
+        3.696029573395583
+      ]
+    },
+    {
+      "figure": "ratios_wall",
+      "family": "leaf_shuffled4",
+      "cases": [
+        "leaf_shuffled4_n1024_d32_p0",
+        "leaf_shuffled4_n4096_d32_p0",
+        "leaf_shuffled4_n16384_d32_p0",
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n262144_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0",
+        "leaf_shuffled4_n4194304_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "limits": [
+        0.19418811016967522,
+        3.458352859088924
+      ]
+    },
+    {
+      "figure": "ratios_cpu",
+      "family": "leaf_hierarchy4",
+      "cases": [
+        "leaf_hierarchy4_n1024_d32_p0",
+        "leaf_hierarchy4_n4096_d32_p0",
+        "leaf_hierarchy4_n16384_d32_p0",
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n262144_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0",
+        "leaf_hierarchy4_n4194304_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "limits": [
+        0.17620737076734466,
+        3.696029573395583
+      ]
+    },
+    {
+      "figure": "ratios_cpu",
+      "family": "leaf_shuffled4",
+      "cases": [
+        "leaf_shuffled4_n1024_d32_p0",
+        "leaf_shuffled4_n4096_d32_p0",
+        "leaf_shuffled4_n16384_d32_p0",
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n262144_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0",
+        "leaf_shuffled4_n4194304_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "limits": [
+        0.19418811016967522,
+        3.458352859088924
+      ]
+    },
+    {
+      "figure": "times_wall",
+      "family": "leaf_hierarchy4",
+      "cases": [
+        "leaf_hierarchy4_n1024_d32_p0",
+        "leaf_hierarchy4_n4096_d32_p0",
+        "leaf_hierarchy4_n16384_d32_p0",
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n262144_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0",
+        "leaf_hierarchy4_n4194304_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "limits": [
+        0.00021897838030820522,
+        194.8725540766091
+      ]
+    },
+    {
+      "figure": "times_wall",
+      "family": "leaf_shuffled4",
+      "cases": [
+        "leaf_shuffled4_n1024_d32_p0",
+        "leaf_shuffled4_n4096_d32_p0",
+        "leaf_shuffled4_n16384_d32_p0",
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n262144_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0",
+        "leaf_shuffled4_n4194304_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "limits": [
+        0.0001525305451627331,
+        138.26057828960208
+      ]
+    },
+    {
+      "figure": "times_cpu",
+      "family": "leaf_hierarchy4",
+      "cases": [
+        "leaf_hierarchy4_n1024_d32_p0",
+        "leaf_hierarchy4_n4096_d32_p0",
+        "leaf_hierarchy4_n16384_d32_p0",
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n262144_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0",
+        "leaf_hierarchy4_n4194304_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "limits": [
+        0.00021897838030820522,
+        194.8725540766091
+      ]
+    },
+    {
+      "figure": "times_cpu",
+      "family": "leaf_shuffled4",
+      "cases": [
+        "leaf_shuffled4_n1024_d32_p0",
+        "leaf_shuffled4_n4096_d32_p0",
+        "leaf_shuffled4_n16384_d32_p0",
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n262144_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0",
+        "leaf_shuffled4_n4194304_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "limits": [
+        0.0001525305451627331,
+        138.26057828960208
+      ]
+    }
+  ],
+  "figures": 4,
+  "matplotlib_version": "3.9.4"
+}

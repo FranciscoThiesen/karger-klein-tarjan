@@ -1,0 +1,53 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "docs/kkt-report/publication-tools/plot_mst_paper.py",
+    "--study",
+    "work",
+    "--capture",
+    "benchmark/results/eighth-sampling-2026-10-15/work/capture-attempt01.json",
+    "--source-plot",
+    "benchmark/results/eighth-sampling-2026-10-15/work/plot_work.py",
+    "--standalone",
+    "benchmark/results/eighth-sampling-2026-10-15/work/figures-attempt01",
+    "--audit",
+    "benchmark/results/eighth-sampling-2026-10-15/work/independent-counter-audit-attempt01/audit.json",
+    "--output",
+    "benchmark/results/eighth-sampling-2026-10-15/work/figures-paper-attempt01",
+    "--released"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "started_utc": "2026-10-15T18:22:20.591936+00:00",
+  "started_monotonic_ns": 35195750,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/plot_mst_paper.py": "92a4e026fdc376531d3232cacf9f58e0993c029556cad45e7057a90b22a90029"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 98971,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 98971,
+    "members": [],
+    "monotonic_ns": 2517428208,
+    "utc": "2026-10-15T18:22:23.074154+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/plot_mst_paper.py": "92a4e026fdc376531d3232cacf9f58e0993c029556cad45e7057a90b22a90029"
+  },
+  "finished_utc": "2026-10-15T18:22:23.074464+00:00",
+  "finished_monotonic_ns": 2517751625,
+  "elapsed_seconds": 2.482555875,
+  "stdout": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/paper-plots-attempt01.stdout",
+  "stdout_sha256": "bb2f7e52c6d320270aa93bb4c0183700d74959e5ebc6cdfcc429a7d6169f0d08",
+  "stderr": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/paper-plots-attempt01.stderr",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

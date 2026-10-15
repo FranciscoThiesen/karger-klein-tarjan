@@ -1,0 +1,39 @@
+--- /tmp/kkt-current-report-publish-prep/plot_complexity_paper.py	2026-10-15 10:13:38
++++ /tmp/kkt-current-report-publish-prep/plot_complexity_paper_v2.py	2026-10-15 11:40:17
+@@ -170,10 +170,10 @@
+                     label=f'G{original.GRAPHS.index(g)+1}/S{original.SAMPLERS.index(s)+1}') for i,(g,s) in enumerate(realizations)]
+         fig.legend(handles=handles,loc='lower center',bbox_to_anchor=(.5,.125),ncol=3,frameon=False,fontsize=8.5)
+         scope='six native calls' if clock.startswith('native_') else 'three library two-call means'
+-        fig.text(.5,.088,'Median and complete min-max of '+scope+' per size/realization.',ha='center',fontsize=8.3)
+-        fig.text(.5,.064,'G1 ascending, G2 descending: graph/order confounded. Ranges are not CIs.',ha='center',fontsize=8.3)
+-        fig.text(.5,.040,'Lines connect observations. All four clocks share y limits; all flags retained.',ha='center',fontsize=8.3)
+-        fig.text(.5,.018,'Library CPU uses a different timer envelope. No pooled fit or extrapolation.',ha='center',fontsize=8.3)
++        fig.text(.5,.088,'Median and complete min-max of '+scope+' per size/realization.',ha='center',fontsize=8.5)
++        fig.text(.5,.064,'G1 ascending, G2 descending: graph/order confounded. Ranges are not CIs.',ha='center',fontsize=8.5)
++        fig.text(.5,.040,'Lines connect observations. All four clocks share y limits; all flags retained.',ha='center',fontsize=8.5)
++        fig.text(.5,.018,'Library CPU uses a different timer envelope. No pooled fit or extrapolation.',ha='center',fontsize=8.5)
+         save(fig,'paper_normalized_'+clock)
+     color_max=max(max(row['plotted_rms_percent'] for row in cells.values()),1e-12)
+     labels=[f'{("Ordered" if f==original.FAMILIES[0] else "Shuffled" if f==original.FAMILIES[1] else "G(n,m)")} / '
+@@ -184,7 +184,7 @@
+         grid=[[cells[(*curve,window,model)]['plotted_rms_percent'] for model in original.MODELS] for curve in original.curve_order()]
+         image=axis.imshow(grid,aspect='auto',cmap='YlGnBu',norm=Normalize(0,color_max),interpolation='nearest')
+         axis.set_xticks(range(6),['1','log N','N','N log N','N²','N³'],fontsize=8.5)
+-        axis.set_yticks(range(24),labels,fontsize=8.4)
++        axis.set_yticks(range(24),labels,fontsize=8.5)
+         for index,curve in enumerate(original.curve_order()):
+             row_cells=[cells[(*curve,window,model)] for model in original.MODELS]
+             require(sum(row['outlined'] is True for row in row_cells)==1,'wrong selected model count')
+@@ -202,9 +202,9 @@
+         count=33 if window=='full11' else 18
+         fig.text(.5,.920,f'{count} two-call library CPU means per curve; each realization remains separate.',ha='center',fontsize=8.8)
+         fig.text(.5,.108,'Red outline: '+('reported Google CPU choice.' if window=='full11' else 'custom upper-window minimum, not a built-in result.'),ha='center',fontsize=8.5)
+-        fig.text(.5,.080,'Google shares its CPU-selected model with the manual coefficient; CPU RMS only.',ha='center',fontsize=8.2)
+-        fig.text(.5,.052,'Both pages share color limits. Exact four-clock/all-model values remain in CSV.',ha='center',fontsize=8.2)
+-        fig.text(.5,.024,'Residual labels are rounded for display. Fit labels do not prove asymptotic complexity.',ha='center',fontsize=8.2)
++        fig.text(.5,.080,'Google shares its CPU-selected model with the manual coefficient; CPU RMS only.',ha='center',fontsize=8.5)
++        fig.text(.5,.052,'Both pages share color limits. Exact four-clock/all-model values remain in CSV.',ha='center',fontsize=8.5)
++        fig.text(.5,.024,'Residual labels are rounded for display. Fit labels do not prove asymptotic complexity.',ha='center',fontsize=8.5)
+         save(fig,'paper_google_cpu_models_'+window)
+     exact(plotted,values,'paper plotting dropped or changed a standalone value')
+     return plotted,matplotlib.__version__

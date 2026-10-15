@@ -1,0 +1,10 @@
+{
+  "schema": "publication_paper_visual_qa_v1",
+  "validation": "failed",
+  "reviewer": "multigraph_design",
+  "scope": "original-resolution PNG inspection, not final PDF",
+  "reason": "rightmost exact 4,194,304 x-axis label clips at the page edge in all four extension timing figures",
+  "source_sha256": "92a4e026fdc376531d3232cacf9f58e0993c029556cad45e7057a90b22a90029",
+  "all_original_observations_preserved": true,
+  "rerender": "figures-paper-attempt02 using separate plot_mst_paper_v2.py; first source and artifacts retained"
+}

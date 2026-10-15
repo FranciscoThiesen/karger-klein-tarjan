@@ -1,0 +1,200 @@
+{
+  "validation": "rendered_pending_visual_qa",
+  "pdf_pages": 1,
+  "pdf_sha256": "79ec8a386ea1e233ee2d6264009bae17c7130b2671dafec7b07f627eb15b9059",
+  "input_sha256": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/validation/reportlab-fixtures-attempt01/positive/edition/render_metadata.json": "a886c93c637123341b2ce1d6d4610692ff9e00f2e31f9f3b7566932258da632b",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/validation/reportlab-fixtures-attempt01/positive/source.md": "712595d92666041ad497fe41b43cb878b6974efeb70655e0f8da1ea104bae93f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/build_current_report.py": "ad0a30727f7c6434ada8d97836b6be038c9a0dfae769fac2a848db3e2cfc9663",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/validation/reportlab-fixtures-attempt01/positive/evidence.txt": "fd248884ddb42b947e19d3a209bb6ed3b029c80926a9957e6258893ae5ba9746",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/validation/reportlab-fixtures-attempt01/positive/figure.png": "0d94ca944c6cd625b0993df58a49eb2ccad6aa0c284ef546910c9f0a6d5f91ef",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/validation/reportlab-fixtures-attempt01/positive/edition/REPORT.md": "5e3fb9f10e01dc8dd038c76818ce6ff8124a8d60f1a7696fea60c0a2a91b7546",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/validation/reportlab-fixtures-attempt01/positive/edition/report.html": "d1623c2a7402565ede4359825376da5b41b74fac6311d66ea71c07b5f0918318",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/validation/reportlab-fixtures-attempt01/positive/edition/assets/0d94ca944c6cd625-figure.png": "0d94ca944c6cd625b0993df58a49eb2ccad6aa0c284ef546910c9f0a6d5f91ef",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/validation/reportlab-fixtures-attempt01/positive/figure-layout.json": "270a942ffd48fb394e75fe0dbfd1a3f6792c63d868891723bf686f5b35c689d8",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/build_reportlab_pdf.py": "b670b09cfef6e903ec3f739f52fe91c8e8da5446f124b27e8c4e37f70283ad73",
+    "/Users/random_person/Library/Python/3.9/lib/python/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans.ttf": "3fdf69cabf06049ea70a00b5919340e2ce1e6d02b0cc3c4b44fb6801bd1e0d22",
+    "/Users/random_person/Library/Python/3.9/lib/python/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Bold.ttf": "b184b89e3c1075f22f6b71575b6fc20d4972b3cfd3b23322ca6fd596dcaef167",
+    "/Users/random_person/Library/Python/3.9/lib/python/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-Oblique.ttf": "ccdf74b350f11fd3dd5774de50e5e6346a1a5da1f5b7d5fb83590665e97a5213",
+    "/Users/random_person/Library/Python/3.9/lib/python/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSans-BoldOblique.ttf": "6edf0283160186af451cbee71e7b845f2e4cabf264bb992ce668c83c25465e6f",
+    "/Users/random_person/Library/Python/3.9/lib/python/site-packages/matplotlib/mpl-data/fonts/ttf/DejaVuSansMono.ttf": "602ec86b8948cfcd956482fe64f94c36c867770149ef2f791d4613f443bcecb3"
+  },
+  "figures": [
+    {
+      "sha256": "0d94ca944c6cd625b0993df58a49eb2ccad6aa0c284ef546910c9f0a6d5f91ef",
+      "asset": "assets/0d94ca944c6cd625-figure.png",
+      "width_pt": 511.2,
+      "height_pt": 180.0,
+      "declared_minimum_label_pt": 9,
+      "placed_minimum_label_pt": 9.0,
+      "declaration_basis": "Synthetic fixture only; 36px labels on a 1420px-wide PNG.",
+      "page_scale_visual_qa": "pending"
+    }
+  ],
+  "body_blocks": [
+    {
+      "tag": "h1",
+      "text": "Synthetic current edition"
+    },
+    {
+      "tag": "p",
+      "text": "This body has bold, italic, inline code, an en-dash, an em-dash,\nand a mathematical minus \u2212. Evidence stays a local link."
+    },
+    {
+      "tag": "h2",
+      "text": "Offline equations"
+    },
+    {
+      "tag": "p",
+      "text": "A \u2265 c / (1 \u2212 p),     B \u2265 2c + A / (2p)."
+    },
+    {
+      "tag": "p",
+      "text": "U \u2264 min(Q, \u03a3\u1d65 depth(v)) \u2264 min(Q, B\u00b7h)."
+    },
+    {
+      "tag": "p",
+      "text": "I_b = (c / b) \u00b7 choose(b, 2) \u2212 (c \u2212 c / b)."
+    },
+    {
+      "tag": "h2",
+      "text": "Controls and ranges"
+    },
+    {
+      "tag": "th",
+      "text": "Case"
+    },
+    {
+      "tag": "th",
+      "text": "KKT"
+    },
+    {
+      "tag": "th",
+      "text": "Retained Boruvka"
+    },
+    {
+      "tag": "th",
+      "text": "Deduplicating Boruvka"
+    },
+    {
+      "tag": "th",
+      "text": "Kruskal"
+    },
+    {
+      "tag": "th",
+      "text": "Prim"
+    },
+    {
+      "tag": "th",
+      "text": "Original Boruvka"
+    },
+    {
+      "tag": "td",
+      "text": "synthetic_small_identifier"
+    },
+    {
+      "tag": "td",
+      "text": "1.49"
+    },
+    {
+      "tag": "td",
+      "text": "1.00"
+    },
+    {
+      "tag": "td",
+      "text": "1.19"
+    },
+    {
+      "tag": "td",
+      "text": "0.78"
+    },
+    {
+      "tag": "td",
+      "text": "0.81"
+    },
+    {
+      "tag": "td",
+      "text": "0.89"
+    },
+    {
+      "tag": "td",
+      "text": "synthetic_large_identifier"
+    },
+    {
+      "tag": "td",
+      "text": "0.84"
+    },
+    {
+      "tag": "td",
+      "text": "1.00"
+    },
+    {
+      "tag": "td",
+      "text": "2.15"
+    },
+    {
+      "tag": "td",
+      "text": "0.72"
+    },
+    {
+      "tag": "td",
+      "text": "0.79"
+    },
+    {
+      "tag": "td",
+      "text": "1.13"
+    },
+    {
+      "tag": "p",
+      "text": "A numbered item."
+    },
+    {
+      "tag": "p",
+      "text": "Another item preserving the endpoint loss."
+    },
+    {
+      "tag": "p",
+      "text": "One bullet with emphasis."
+    },
+    {
+      "tag": "p",
+      "text": "Another bullet with same-page navigation."
+    },
+    {
+      "tag": "pre",
+      "text": "This_code_path_is_deliberately_long_to_exercise_wrapping_without_reducing_the_fixed_nine_point_type_size_and_without_clipping_the_page_frame.\n    indentation is retained\n"
+    },
+    {
+      "tag": "figcaption",
+      "text": "Synthetic chart caption, preserving every stated range."
+    },
+    {
+      "tag": "h2",
+      "text": "Closing body sentinel"
+    },
+    {
+      "tag": "p",
+      "text": "No measurements or final report text are synthesized here."
+    }
+  ],
+  "body_text_sha256": "1c8db5215e32eb6814a4c530c8dacdbcbeeea0ecbb4991311805c6eaf6e25544",
+  "links": [
+    "../evidence.txt",
+    "#offline-equations"
+  ],
+  "anchors": [
+    "closing-body-sentinel",
+    "controls-and-ranges",
+    "offline-equations",
+    "synthetic-current-edition"
+  ],
+  "reportlab_version": "5.0.1",
+  "pypdf_version": "6.14.2",
+  "text_font_pt": 10,
+  "code_font_pt": 9,
+  "table_font_pt": 8.5,
+  "caption_font_pt": 9,
+  "typography_source": "Already normalized accepted HTML; original Markdown/HTML/assets unchanged",
+  "generated_navigation_omitted": "HTML nav and duplicate contents list only; all main report content retained",
+  "figure_label_check": "Declared source minimum times physical placement scale; visual confirmation still required"
+}

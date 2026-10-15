@@ -1,0 +1,23 @@
+{
+  "schema": "reportlab_synthetic_raster_v1",
+  "validation": "pass",
+  "source_sha256": "ddf248b9e386e8c14c6e4feef5c6beef9adff212180716f56d32be7ea5e04d34",
+  "native_solver_execution": false,
+  "input_pdf": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/validation/reportlab-fixtures-attempt01/positive/pdf/report.pdf",
+  "input_sha256": "79ec8a386ea1e233ee2d6264009bae17c7130b2671dafec7b07f627eb15b9059",
+  "command": [
+    "/usr/local/bin/pdftoppm",
+    "-r",
+    "120",
+    "-png",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/validation/reportlab-fixtures-attempt01/positive/pdf/report.pdf",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/validation/reportlab-raster-attempt01/page"
+  ],
+  "exit_status": 0,
+  "stdout": "",
+  "stderr": "",
+  "output_sha256": {
+    "page-1.png": "cfd53591e3ca92d57d6b67a5570ef1207e19c7e181ad92650a894b4aae0c830f"
+  },
+  "visual_qa": "pending"
+}

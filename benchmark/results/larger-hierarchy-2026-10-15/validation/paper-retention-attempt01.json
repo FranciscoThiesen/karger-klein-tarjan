@@ -1,0 +1,49 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "docs/kkt-report/publication-tools/plot_mechanisms_paper.py",
+    "--kind",
+    "retention",
+    "--source-plot",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/plot_hierarchy_retention.py",
+    "--standalone",
+    "benchmark/results/larger-hierarchy-2026-10-15/hierarchy-figure-attempt01",
+    "--output",
+    "benchmark/results/larger-hierarchy-2026-10-15/retention-figures-paper-attempt01",
+    "--released"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "started_utc": "2026-10-15T18:22:20.591860+00:00",
+  "started_monotonic_ns": 35119958,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/plot_mechanisms_paper.py": "8c3098a3b77876bb7960b6833e84a63ab518924f52a6ca1cfc26cb6c279d7bfe"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 98972,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 98972,
+    "members": [],
+    "monotonic_ns": 1139125875,
+    "utc": "2026-10-15T18:22:21.695850+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/plot_mechanisms_paper.py": "8c3098a3b77876bb7960b6833e84a63ab518924f52a6ca1cfc26cb6c279d7bfe"
+  },
+  "finished_utc": "2026-10-15T18:22:21.696092+00:00",
+  "finished_monotonic_ns": 1139384041,
+  "elapsed_seconds": 1.104264083,
+  "stdout": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/validation/paper-retention-attempt01.stdout",
+  "stdout_sha256": "b8423294f885fac7d5187209c540c10c23dd652c0cc9df97a2375353858b23a0",
+  "stderr": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/validation/paper-retention-attempt01.stderr",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

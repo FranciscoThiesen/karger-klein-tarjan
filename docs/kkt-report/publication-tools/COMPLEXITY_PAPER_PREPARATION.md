@@ -1,0 +1,14 @@
+# Complexity paper layouts — source only
+
+`plot_complexity_paper.py` is unimported, untested and unrendered. There is no current library build, complexity capture, fitted outcome, standalone complexity figure or paper figure yet. The source does not fabricate one. No frozen source or active-result file was edited/read.
+
+This is a layout adapter for the already reviewed standalone `plot_complexity.py`, not a new analysis. It requires explicit reviewed analyzer/collector/standalone-source hashes, complete analysis and standalone directories, an exclusive output directory and a separate release. It calls the original strict loader and preparation, rechecking the full build/schema/capture/raw/model proof. It verifies the standalone provenance, all 22 output artifacts and every bound input, and requires exact equality with every 1,056 normalized point, 288 model cell, 24 Google choice, common axis limit and flag count before plotting, after drawing and after saving the new plotted JSON. All six canonical CSV tables are copied unchanged. The adapter explicitly is not another independent raw numerical audit.
+
+The output is six figures, each PNG/SVG/PDF at 7.05×9.0 inches:
+
+- Four normalized-time figures, one for each native/library clock, with the three families stacked vertically. Both algorithms, all four graph/sampler realizations, all eleven sizes and full six-native-call/three-library-mean ranges remain. All four figures share the original full-range y limits; every endpoint is checked within them.
+- Two separate 24×6 residual pages: full eleven-size actual Google CPU choice and upper-six custom selection. All six models/all24curves remain on both pages, with common color limits, per-cell displayed residuals and selected-model outlines. Upper-window results are never relabelled as built-in Google choices. Exact four-clock/all-model fit tables remain available.
+
+Colors/markers/line styles and data are unchanged; only page layout, type sizes, captions and model-page splitting change. Graph/order confounding, complete-range versus confidence-interval distinction, CPU/manual model semantics and finite-fit limitations stay visible. The figures have explicit legends and 8.2–10.5-point principal text at the intended physical size; that is a design target, not a visual PASS. The new report renderer must not reinstate a universal height cap that silently shrinks them.
+
+Future acceptance requires a bounded synthetic rendering check with distinct clocks, all realizations, zero residuals and widely separated ranges; rejection of altered standalone values/tables/provenance; and original-resolution plus actual PDF-page inspection of all six figures. Inspect the long 24-row labels, rounded residual labels, colorbars, legends, caption widths and all endpoint marks. Final pages must remain <=40, with no dropped loss case or unreadably scaled text. Source readiness supplies none of these gates.
