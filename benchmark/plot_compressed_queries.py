@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
-"""Prepared compressed-query plots; install in benchmark/ after root release.
-
-Source only: not imported, tested, or rendered during the active packed capture.
-"""
+"""Render the complete, strictly validated compressed-query timing matrix."""
 import argparse
 import json
 import math
@@ -110,9 +107,11 @@ def render(cases, tables, info, output):
             title = ('Compressed / reference: all six solvers' if kind == 'variant_gains' else
                      kind.split('_')[0].title() + (' absolute solver times' if times else ' KKT against all five MST comparators'))
             figure.suptitle(title+'\n'+clock_label, fontsize=16, y=.99)
-            handles = [Line2D([], [], color=style.COLORS[name], marker='o', label=style.LABELS.get(name, 'KKT')) for name in names]
+            handles = [Line2D([], [], color=style.COLORS[name], marker='o',
+                              label='KKT' if name == 'kkt' else style.LABELS[name]) for name in names]
             handles += [Line2D([], [], color='#666666', marker='^', linestyle='none', alpha=.42, label='Two graph medians · one fixed sampler seed'),
                         Line2D([], [], color='#777777', linewidth=2, alpha=.3, label='Full trial range')]
+            figure.legend(handles=handles, loc='lower center', bbox_to_anchor=(.5,.105), ncol=4, frameon=False, fontsize=9)
             statistic = 'twelve individual durations' if times else 'twelve individual paired ratios'
             caption = (f'Solid points are medians of {statistic}; faint markers show two six-trial graph medians. Repetitions reuse each graph.\n'
                        'Two graph seeds × one fixed scalar sampling seed. All cases, controls, losses and ranges remain; ranges are descriptive, not confidence intervals.\n'

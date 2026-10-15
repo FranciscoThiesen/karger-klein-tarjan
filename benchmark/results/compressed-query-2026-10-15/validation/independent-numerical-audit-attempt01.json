@@ -1,0 +1,34 @@
+{
+  "command": [
+    "/usr/local/opt/python@3.14/bin/python3.14",
+    "-B",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/validation/independent_numerical_audit.py",
+    "--capture",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired.json",
+    "--analysis-dir",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/analysis",
+    "--output-dir",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/validation/independent-numerical-audit"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-compressed-queries",
+  "started_utc": "2026-10-15T10:57:25.287223+00:00",
+  "source_sha256": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/validation/independent_numerical_audit.py": "a5bc64816bc5f08216ddc350bbffdf00c96a30b8606455b3d6889aa33e361104"
+  },
+  "input_sha256": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired.json": "ef90d2e0d3537f073886ac5b04ed3603d0a33d81a293082573be420e70511950",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/freeze.json": "bd65da13058d3e9cfa58919a0fe5e02b8a46b1d0b8fe7f05801692d5a0866df9",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/analysis/provenance.json": "eeb7d6b29746f356db7dfd055f76c031966bd6f03b13edbbb295069a5071c24f"
+  },
+  "native_processes_executed": false,
+  "status": "pass",
+  "process_group": 26817,
+  "exit_status": 0,
+  "owned_group_verified_empty": true,
+  "finished_utc": "2026-10-15T10:57:25.984554+00:00",
+  "elapsed_seconds": 0.6889031250029802,
+  "stdout": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/validation/independent-numerical-audit-attempt01.stdout",
+  "stderr": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/validation/independent-numerical-audit-attempt01.stderr",
+  "stdout_sha256": "dd790658263798b8d4807f99aec946470a7f369479852bef344dbfbbea18b14b",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

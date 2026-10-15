@@ -1,0 +1,37 @@
+{
+  "schema": "compressed_work_analysis_execution_v1",
+  "status": "pass",
+  "command": [
+    "/usr/local/opt/python@3.14/bin/python3.14",
+    "-B",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/work/collect.py",
+    "analyze",
+    "--capture",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/work/capture-attempt01.json",
+    "--output-dir",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/work/analysis-attempt01"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-compressed-queries",
+  "capture_sha256": "ad3aa0a8ccb0b5a8dc7ceba6aa243571992584a20ef175398053af7274f53fd3",
+  "started_utc": "2026-10-15T11:09:57.876004+00:00",
+  "native_solver_execution": false,
+  "exit_status": 0,
+  "counter_summary_rows": 65,
+  "all_raw_integer_deltas_verified": 780,
+  "query_pairs": 12,
+  "comparator_pairs": 24,
+  "outputs_sha256": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/work/analysis-attempt01/rounds.csv": "dc23cba913faeb2d0e07c4aa2aad7858fa016eb3677b3320538d10fabef00190",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/work/analysis-attempt01/query_compression.csv": "33a45f70ecf59f45461c499fc3f684ced6ce0fb31c3f96317f68f34348bccd48",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/work/analysis-attempt01/report.json": "f3fadbc88a8b1157bd95fd1dc0787c0eb632814db4f7ee1a99c056da9eb6ae75",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/work/analysis-attempt01/provenance.json": "92ec349d7fb7c843232e0512d74363100b56feb21a8bcc645adac5053ad82539",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/work/analysis-attempt01/README.md": "d4841cbdba75f22dd71f4c409cfa08e059cd160d9de1a0b74f80187f2451d9f4",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/work/analysis-attempt01/counter_difference_summary.csv": "42d5850ff06f404d51ad75117586d247537ae70a7e6383e355e99ad8ca02b603",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/work/analysis-attempt01/work.csv": "eb05bea7811deb5820094a54d2ed649496bc9e4371360e8d7c6a2852a90b9548",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/work/analysis-attempt01/paired_kkt_work.csv": "e9eaece1ffd66d3f8b5637efa1d84884ec9a5f8553a059165cab46f5aaa11524"
+  },
+  "elapsed_seconds": 0.5880459169857204,
+  "finished_utc": "2026-10-15T11:09:58.465353+00:00",
+  "log": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/work/analysis-attempt01.log",
+  "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

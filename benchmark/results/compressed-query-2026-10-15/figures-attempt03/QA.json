@@ -1,0 +1,25 @@
+{
+  "validation": "pass",
+  "reviewed_utc": "2026-10-15T11:03:29.363332+00:00",
+  "reviewer": "root",
+  "method": "Original-resolution visual inspection of all ten PNGs through view_image",
+  "reviewed_pngs": {
+    "compressed_ratios_cpu.png": "1b582ca4df3b0453971c9affa27832dd3f724a2600605f813194482f18e27651",
+    "compressed_ratios_wall.png": "d6b1a1c0eda42a1afb8ef6e3a9d7a94447dd9ba163e84c4d3e769159cfa8bdb4",
+    "compressed_times_cpu.png": "79bb60c8283ffca3aa1873299b8dbb111e98038fed2546fbb9b6f369a618398d",
+    "compressed_times_wall.png": "4a3fc4c95578a55c9aea509203deb7b48f21e793a771ab39614200b24ad96bf4",
+    "reference_ratios_cpu.png": "faa36c5ceb107c1ed1e6398f618253af3691187230f2531ef81eee09175e1f7f",
+    "reference_ratios_wall.png": "30ae20ed58f74278554fe05de785a4a1c5cac5a91a518a2a1ab4d466044ee341",
+    "reference_times_cpu.png": "dca1cf7cd1bd83aebd8108befcbcfb8a8200372476c119d4169109d92d3f0728",
+    "reference_times_wall.png": "4aa65137450d17f46a9544599834f9c41b1965c63efab829d4399a4446e4ec8b",
+    "variant_gains_cpu.png": "6e9d5eab9405d93e85bf613cc3c959e98da0c9ffa2565867909e1fd55238a605",
+    "variant_gains_wall.png": "1e82b14efb1996dd39a81791f7ede5d7539ad1709c26137bd1e6953c429d73ad"
+  },
+  "generation_provenance_sha256": "9e6ae8ae5656d757c8f04387b155663fb2085386b3ab4dd76390526f8cc72da8",
+  "all_30_panels_within_bounds": true,
+  "both_clock_axes_match": true,
+  "all_three_attempts_same_plotted_values": true,
+  "legend_and_variant_labels_clear": true,
+  "missing_or_clipped_data": false,
+  "confidence_intervals_claimed": false
+}

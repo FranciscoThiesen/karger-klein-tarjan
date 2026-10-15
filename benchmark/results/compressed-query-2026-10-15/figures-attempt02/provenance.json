@@ -1,0 +1,858 @@
+{
+  "schema": "compressed_query_figures_v1",
+  "validation": "pass",
+  "capture": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired.json",
+  "input_sha256": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired.json": "ef90d2e0d3537f073886ac5b04ed3603d0a33d81a293082573be420e70511950",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired.csv": "7cecaa0dc09b9e956c9f1c69d94f0722f626f2f1e35e18e20d500fc1d4c316ac",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/freeze.json": "bd65da13058d3e9cfa58919a0fe5e02b8a46b1d0b8fe7f05801692d5a0866df9",
+    "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/freeze.json": "f976a7d61650f5aaf8e7221c7684461e36bcb51492347f45a56497b6b1cee306",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0001_reference_leaf_hierarchy4_n65536_d32_p0_g8000009_s1801.csv": "dab920355d3e9e1e1f0ca80738c5b8e296eefb031858cd09b166dc123fbb248f",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0001_reference_leaf_hierarchy4_n65536_d32_p0_g8000009_s1801.log": "fff8640bd3464385a35890b4b047a38bd75419782352546c37a62ce085bff0cb",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0001_reference_leaf_hierarchy4_n65536_d32_p0_g8000009_s1801.rss.jsonl": "566d1897b522f475d588d31c81475e596300405a0186e542ad390e4eab6cbdbf",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0002_compressed_leaf_hierarchy4_n65536_d32_p0_g8000009_s1801.csv": "a2a9d424e1b263ab1e35e9870de802824423273e25ffdb2d33f5387a8acca89c",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0002_compressed_leaf_hierarchy4_n65536_d32_p0_g8000009_s1801.log": "a4d8586d78787bdd999d026aa38ae8986e81ddf1c29a62dd02063e3014efc348",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0002_compressed_leaf_hierarchy4_n65536_d32_p0_g8000009_s1801.rss.jsonl": "ddec11318a2de5142655d386eb64e2c68b605a06ab582f1cd703673978c73488",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0003_reference_leaf_shuffled4_n65536_d32_p0_g8000009_s1801.csv": "df428758e0613231290733f7e239a74f67f2b8bd93092dae14a55230a80883ff",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0003_reference_leaf_shuffled4_n65536_d32_p0_g8000009_s1801.log": "01c65a22b8053d368d145c7b924aed9234ec90c0bf5551e1c343f855673ffda3",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0003_reference_leaf_shuffled4_n65536_d32_p0_g8000009_s1801.rss.jsonl": "1f4b6355559c5c88d4418f9aa907b81d3865fb930c7b4b60de59eef2b96a8c18",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0004_compressed_leaf_shuffled4_n65536_d32_p0_g8000009_s1801.csv": "e5545fc5cf276d9bddf358cc1a0835f828ec8cffc1578d2650ffea59892043d7",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0004_compressed_leaf_shuffled4_n65536_d32_p0_g8000009_s1801.log": "4a6e0d6030fc9fd37c1682e0a344df93729b6f9f0f0a86b6330c29fce57255fd",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0004_compressed_leaf_shuffled4_n65536_d32_p0_g8000009_s1801.rss.jsonl": "20c4d98adbf698d88e643745965c233382371d79e8d8999006b5e030a8e38878",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0005_reference_leaf_hierarchy4_n1048576_d32_p0_g8000009_s1801.csv": "b586031ccf69d084589cee02ffd4eb790ff3fe0a5862a92de6280e6405cf74f9",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0005_reference_leaf_hierarchy4_n1048576_d32_p0_g8000009_s1801.log": "79b2b10a9c8b2942f1a1a2e9b167780dba1ee4c13ca61b9d83ae04b49bcf4927",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0005_reference_leaf_hierarchy4_n1048576_d32_p0_g8000009_s1801.rss.jsonl": "5f59b3da51e1ad5889ed206b8eee4e66f2255685bd5c69031fb974936b9f45b3",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0006_compressed_leaf_hierarchy4_n1048576_d32_p0_g8000009_s1801.csv": "245d0f218c4d411e4c5f2f46a265a7814dfc9f09c21e94ccc44082072f24c19f",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0006_compressed_leaf_hierarchy4_n1048576_d32_p0_g8000009_s1801.log": "29784d00e85032d9d173e07c8cbba63a4552cd0d2c0c92d350a9a81639ae89b5",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0006_compressed_leaf_hierarchy4_n1048576_d32_p0_g8000009_s1801.rss.jsonl": "47a3a2d1f0bba1cfc56a9c059fd8d5ddb97cbf672be3a99d6954da7cad94df8a",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0007_reference_leaf_shuffled4_n1048576_d32_p0_g8000009_s1801.csv": "6e74c61db55a08787d585b8a92762eb8e785c087e2a464559288dcaef70d37c8",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0007_reference_leaf_shuffled4_n1048576_d32_p0_g8000009_s1801.log": "5d8074b836a6493e1e47d19ce67e79ef4a0381f34efb5410c5d0133b0186a05a",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0007_reference_leaf_shuffled4_n1048576_d32_p0_g8000009_s1801.rss.jsonl": "f9ce857da6a8337ac71aab06c60e98521fe38e5559d7623f7926b4f5669d3728",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0008_compressed_leaf_shuffled4_n1048576_d32_p0_g8000009_s1801.csv": "66ea1bd82faf003370159d24c5b20af83aba85c418b21d63096bb15280930021",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0008_compressed_leaf_shuffled4_n1048576_d32_p0_g8000009_s1801.log": "2020b320932128642ff69710f3c79889d9da20c5fe9a66c33be5684314a6f432",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0008_compressed_leaf_shuffled4_n1048576_d32_p0_g8000009_s1801.rss.jsonl": "416bb15df086b4bf9fa502fedca74012075c7cf44ed29c2ce1b4dded309cc807",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0009_reference_gnm_random_n4096_d16_p0_g8000009_s1801.csv": "ef3e820f6535847ccfc7eff9f8ca71ef6f931acddf943a090d64c633e017311f",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0009_reference_gnm_random_n4096_d16_p0_g8000009_s1801.log": "2bc89e8758dfb972039b339feda2fb2e32f632116a66678e369112da8efd2f2d",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0009_reference_gnm_random_n4096_d16_p0_g8000009_s1801.rss.jsonl": "8af82179e421a7836f1e21210b95a6ddd4d3ec1352830c909059ccdcefacc2f8",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0010_compressed_gnm_random_n4096_d16_p0_g8000009_s1801.csv": "4376c58e4ee024c39423a55914e1ab7ccf67b600a84026d34c101893d861a0e7",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0010_compressed_gnm_random_n4096_d16_p0_g8000009_s1801.log": "5af85ee957e71a382d2d4ebfdba054d1d4d1945f288ad01be976714e85a8dd5e",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0010_compressed_gnm_random_n4096_d16_p0_g8000009_s1801.rss.jsonl": "89b741591008fa1b7782bd9bb3ebd5d9ad9a160eddd8bd13d43d2bf8d198a0c3",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0011_reference_gnm_random_n1048576_d16_p0_g8000009_s1801.csv": "9c41db5a6d646a50f6ec5fa9af448cdc2a25e8f90d039ea5de5ebc639f44b23f",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0011_reference_gnm_random_n1048576_d16_p0_g8000009_s1801.log": "a14ad3abcda244f4d13d10585fce5fcff3107c54ea84502570833f7b6512f904",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0011_reference_gnm_random_n1048576_d16_p0_g8000009_s1801.rss.jsonl": "07c2b576902ba49c3683015c72960414677942bf42a27766591cd11e928ae7a0",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0012_compressed_gnm_random_n1048576_d16_p0_g8000009_s1801.csv": "791da608379da3c23a11be3d840c154db567f36397f5ef9f9008156a7ac38243",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0012_compressed_gnm_random_n1048576_d16_p0_g8000009_s1801.log": "f240b42225866c0e534617c3b8cf43f71768bb10e1b27f6b06555dbebfab00d6",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0012_compressed_gnm_random_n1048576_d16_p0_g8000009_s1801.rss.jsonl": "81c90f1234c9531fca0b7c086ff957283fbc0d49b0008c9259a91f2891088411",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0013_compressed_gnm_random_n1048576_d16_p0_g8000023_s1801.csv": "1d8003a6ce55b46ca0d91ccd1aa9d3a18287951697110186b69918427eae86e3",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0013_compressed_gnm_random_n1048576_d16_p0_g8000023_s1801.log": "44af9fab4ea50af088509710ef354d9991e5a3a7c177a0c972f36d6adc2bec0d",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0013_compressed_gnm_random_n1048576_d16_p0_g8000023_s1801.rss.jsonl": "2fc51d75a291fe599adf0a162594255cffd3a1330dcaec4039751571f174b134",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0014_reference_gnm_random_n1048576_d16_p0_g8000023_s1801.csv": "d6b7e6f7881e9f813bbab9dc9bb4fae5946572bef4fb45943a81fa0bc19b8a4f",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0014_reference_gnm_random_n1048576_d16_p0_g8000023_s1801.log": "da84a99b4e9fcbb346f703f27f81565ed88ba89faccf55eedc59dd2ebb4fa74a",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0014_reference_gnm_random_n1048576_d16_p0_g8000023_s1801.rss.jsonl": "7b729a0c68b29a465d3d2c269d45aa7d1e1128559dce26c961677bd77558328b",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0015_compressed_gnm_random_n4096_d16_p0_g8000023_s1801.csv": "0855ef0056ac8ac7032e2102e9e1c39c1886e4718de3f81b5cbc73ab1d66159a",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0015_compressed_gnm_random_n4096_d16_p0_g8000023_s1801.log": "a7c1d95fd290f81e6ea81e1bd150014b529cab5407eb1c44965abb591a681602",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0015_compressed_gnm_random_n4096_d16_p0_g8000023_s1801.rss.jsonl": "7ce7c21a502ea748a606182648e62e71285c0efd433c1acf59363c4596af379e",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0016_reference_gnm_random_n4096_d16_p0_g8000023_s1801.csv": "5804ad77afc666cf1231990b050a13d8641bc9e9950658904529135170161812",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0016_reference_gnm_random_n4096_d16_p0_g8000023_s1801.log": "f0cb801f481f5c742ed2e7a959f4620a4dc884a3c14116f63d193d686dc7567c",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0016_reference_gnm_random_n4096_d16_p0_g8000023_s1801.rss.jsonl": "c5bf6bd440ca8b60f7ebd4b83d8fdcd01c0551390f06889e0590d9c366ac0c37",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0017_compressed_leaf_shuffled4_n1048576_d32_p0_g8000023_s1801.csv": "ff96d442795a021efafcc0f4e0900fbb05ca21b95727b609e45690fb2bd7afd6",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0017_compressed_leaf_shuffled4_n1048576_d32_p0_g8000023_s1801.log": "6c058d6d4b5d12e6c73d4b6f0536bdc5eeb8e418cf5da3ed1fbc2203a531fdbf",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0017_compressed_leaf_shuffled4_n1048576_d32_p0_g8000023_s1801.rss.jsonl": "a192a14ddee348c720121abbefe83208110a02369be435e1aacafbde9c51fef3",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0018_reference_leaf_shuffled4_n1048576_d32_p0_g8000023_s1801.csv": "db0653abb8b9e3f6be2316c2f4cebadb76ea92d362a8b0d0c3bd9358a7e3bfdd",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0018_reference_leaf_shuffled4_n1048576_d32_p0_g8000023_s1801.log": "eac489c9a702dca0fd4ec7a5f7d44a0966428999431eccca112c9b64947fd21a",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0018_reference_leaf_shuffled4_n1048576_d32_p0_g8000023_s1801.rss.jsonl": "49c844b0a4e314fe3140f5e5a4f199cfd48fc2af9e10f6c796b7255bf83d34d5",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0019_compressed_leaf_hierarchy4_n1048576_d32_p0_g8000023_s1801.csv": "e46c5354cf975b42e70930356ede5ddab2254f922da2fd88f573f196009f2fc6",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0019_compressed_leaf_hierarchy4_n1048576_d32_p0_g8000023_s1801.log": "82401758bf14382e1263be010425ef879a6f8f6784549520a57666a6aedf91ac",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0019_compressed_leaf_hierarchy4_n1048576_d32_p0_g8000023_s1801.rss.jsonl": "5b95fa9f608fb5de0b944b4945cc9b4118f55975bdb946250445ba97fcb003eb",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0020_reference_leaf_hierarchy4_n1048576_d32_p0_g8000023_s1801.csv": "4590d2556d21324dffe7fa40392cdd16b0c9c59f3ef071c85b25b3b2b031e937",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0020_reference_leaf_hierarchy4_n1048576_d32_p0_g8000023_s1801.log": "b0700f069d7017fc3983572bf4e1003fd4c2da5c681967160e1f53c8b8580938",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0020_reference_leaf_hierarchy4_n1048576_d32_p0_g8000023_s1801.rss.jsonl": "d84f9cfae63c020561404b789e93fe4336ca966c46f139cd6021da86fdc32920",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0021_compressed_leaf_shuffled4_n65536_d32_p0_g8000023_s1801.csv": "4bd8b3bb0c1e2d700b0f2169ac0ce54a777fce60eb5bc980e127b6325769d45c",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0021_compressed_leaf_shuffled4_n65536_d32_p0_g8000023_s1801.log": "65c54cca77c44b4ea4fe6c1c2a11971fb5e93b3a08b2c743571ed261622c1fc2",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0021_compressed_leaf_shuffled4_n65536_d32_p0_g8000023_s1801.rss.jsonl": "74d7e647dc8ba061b1650f8bbbdbbd64673d115cf33a5d562d0690d9c79f7b17",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0022_reference_leaf_shuffled4_n65536_d32_p0_g8000023_s1801.csv": "64993284e1d25e4b95066a336e713e7b87314271f343f08603025a40d81d56b2",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0022_reference_leaf_shuffled4_n65536_d32_p0_g8000023_s1801.log": "52db38fc8f8f2ea15bc111f4b49a58cf01fb8c47599743c71a67339b0837548c",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0022_reference_leaf_shuffled4_n65536_d32_p0_g8000023_s1801.rss.jsonl": "d2695db7e25781aadd45cf926bc863d1ad057137acdc87d742f503720df289f8",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0023_compressed_leaf_hierarchy4_n65536_d32_p0_g8000023_s1801.csv": "191ba1602858c9240f2623782c071cdf98e875207300ab84127ae1163be97386",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0023_compressed_leaf_hierarchy4_n65536_d32_p0_g8000023_s1801.log": "9b40df942c01b68bc8269bbe1557228f349f24c98cf42a46573f3a32f82e75c4",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0023_compressed_leaf_hierarchy4_n65536_d32_p0_g8000023_s1801.rss.jsonl": "6343f30225a372dcd5c200e2e9e5ce61d4935eab78309cd099f4c3ddd791e47c",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0024_reference_leaf_hierarchy4_n65536_d32_p0_g8000023_s1801.csv": "9bc49a7aa3023f5e62425eba9a5b8955e2dcf7cfc892ab7225074f9b07e41f5d",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0024_reference_leaf_hierarchy4_n65536_d32_p0_g8000023_s1801.log": "722dba8565c58aa8b65873d6c273af6e48f9900af87cf56a200b45f2cc0eeed8",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/paired_cases/0024_reference_leaf_hierarchy4_n65536_d32_p0_g8000023_s1801.rss.jsonl": "1f88abf6d84660e218e946cce2d29ab129e720dc8ad38ebd112cb0b49b610f8e",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/run_mst_search.py": "843d65154d232bc12a946ad7d8793ab26840f7785507286a6e4d8ed09dfcad80",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/analyze_mst_search.py": "91d3fcad871444e9325c1465782365b5c3ed08fb2344aeeb62fbfc18254f5ba6",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/run_crossover.py": "1669d3b761e0d4c09c432382c3a2e8738c0031c1c9e6dc69cfcb7734809a052f",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/analyze_continuation.py": "7a0afa5fe802516cb5ec27a7d567a0875c66807aa4a04ce0ff752f0bc31b9168",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/crossover_clocks.py": "725d469933eaf5ead32a38bf52b9f32e46a7ee3d4e386777c257c1ab3929fc0b",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/run_crossover_baselines.py": "2291db9114448516fc5ffb6c4b0fd119d23741bcfa2275ad7f25996c3b73921e",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/run_multigraph_experiment.py": "f039d2523e212d9431ed9e062459a6eb3cf2e3ebf463c49d4d57097bcef4fd8e",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/recover_mst_search.py": "73f02f494f29b2f9183c9fc889dcda73444fe2ca4a240469a7d57dfec226058b",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/audit_attachment_recovery_power.py": "e7a72cc054c6cfbcb1c6d5c6686e2332864632a12e10b60a9d3f16b6a5ca0c61",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/audit_mst_search_power.py": "566530914ee74564c5d5ba640b700f5ecfccc5927ac5ed046cb6e3bbdbd225c5",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/run_retention_control.py": "f913b9b0721102489f17eafe9bc82d4886ef3bbfad9d9f2d4963ee84f5df4f85",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/run_edge_view_experiment.py": "67d018d74e6658988421b98ae613ce5e649b4f80e5436fc8776540d2298fd227",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/run_compressed_queries.py": "6e42a9f11e395960bbba9e96a9bdbce626987f80c26764db9f260236e07d72ba",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/plot_compressed_queries.py": "7a9a835dd2080a0926f7c8b82ab882e59103bae7bdae11c1bf9c261d1db59884",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/plot_retention_control.py": "a19d4edf72aea875885aa3494ca268038d2654531b9e3c670b21355e2b7e635a"
+  },
+  "matplotlib_version": "3.9.4",
+  "checked_outputs": 1008,
+  "timed_outputs": 864,
+  "warmup_outputs": 144,
+  "rows_removed": 0,
+  "rows_adjusted": 0,
+  "graph_realizations": 2,
+  "sampling_seeds": [
+    1801
+  ],
+  "trials_per_case": 12,
+  "flagged_calls_retained": 0,
+  "coverage": [
+    {
+      "figure": "variant_gains_wall",
+      "group": "Ordered core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 24,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.8097172968821256,
+        1.1798527869187694
+      ]
+    },
+    {
+      "figure": "variant_gains_wall",
+      "group": "Shuffled core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 24,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.7501534812109995,
+        1.2825783797648376
+      ]
+    },
+    {
+      "figure": "variant_gains_wall",
+      "group": "Random G(n,m) \u00b7 m/n = 16",
+      "case_ids": [
+        "gnm_random_n4096_d16_p0",
+        "gnm_random_n1048576_d16_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 24,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.8308047117479722,
+        1.1812686729514912
+      ]
+    },
+    {
+      "figure": "variant_gains_cpu",
+      "group": "Ordered core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 24,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.8097172968821256,
+        1.1798527869187694
+      ]
+    },
+    {
+      "figure": "variant_gains_cpu",
+      "group": "Shuffled core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 24,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.7501534812109995,
+        1.2825783797648376
+      ]
+    },
+    {
+      "figure": "variant_gains_cpu",
+      "group": "Random G(n,m) \u00b7 m/n = 16",
+      "case_ids": [
+        "gnm_random_n4096_d16_p0",
+        "gnm_random_n1048576_d16_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 24,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.8308047117479722,
+        1.1812686729514912
+      ]
+    },
+    {
+      "figure": "reference_ratios_wall",
+      "group": "Ordered core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 20,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.307542159908956,
+        2.6309688486748573
+      ]
+    },
+    {
+      "figure": "reference_ratios_wall",
+      "group": "Shuffled core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 20,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.33452860986250854,
+        3.1420891906445165
+      ]
+    },
+    {
+      "figure": "reference_ratios_wall",
+      "group": "Random G(n,m) \u00b7 m/n = 16",
+      "case_ids": [
+        "gnm_random_n4096_d16_p0",
+        "gnm_random_n1048576_d16_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 20,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.36825611775338307,
+        2.438818080101748
+      ]
+    },
+    {
+      "figure": "reference_ratios_cpu",
+      "group": "Ordered core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 20,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.307542159908956,
+        2.6309688486748573
+      ]
+    },
+    {
+      "figure": "reference_ratios_cpu",
+      "group": "Shuffled core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 20,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.33452860986250854,
+        3.1420891906445165
+      ]
+    },
+    {
+      "figure": "reference_ratios_cpu",
+      "group": "Random G(n,m) \u00b7 m/n = 16",
+      "case_ids": [
+        "gnm_random_n4096_d16_p0",
+        "gnm_random_n1048576_d16_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 20,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.36825611775338307,
+        2.438818080101748
+      ]
+    },
+    {
+      "figure": "compressed_ratios_wall",
+      "group": "Ordered core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 20,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.2720108113055574,
+        2.7740993372462475
+      ]
+    },
+    {
+      "figure": "compressed_ratios_wall",
+      "group": "Shuffled core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 20,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.28186975697545336,
+        3.164790842136203
+      ]
+    },
+    {
+      "figure": "compressed_ratios_wall",
+      "group": "Random G(n,m) \u00b7 m/n = 16",
+      "case_ids": [
+        "gnm_random_n4096_d16_p0",
+        "gnm_random_n1048576_d16_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 20,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.33585696412689314,
+        2.702584872579903
+      ]
+    },
+    {
+      "figure": "compressed_ratios_cpu",
+      "group": "Ordered core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 20,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.2720108113055574,
+        2.7740993372462475
+      ]
+    },
+    {
+      "figure": "compressed_ratios_cpu",
+      "group": "Shuffled core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 20,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.28186975697545336,
+        3.164790842136203
+      ]
+    },
+    {
+      "figure": "compressed_ratios_cpu",
+      "group": "Random G(n,m) \u00b7 m/n = 16",
+      "case_ids": [
+        "gnm_random_n4096_d16_p0",
+        "gnm_random_n1048576_d16_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 20,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.33585696412689314,
+        2.702584872579903
+      ]
+    },
+    {
+      "figure": "reference_times_wall",
+      "group": "Ordered core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 24,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.04275895785899259,
+        16.169915504122432
+      ]
+    },
+    {
+      "figure": "reference_times_wall",
+      "group": "Shuffled core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 24,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.033153628782910435,
+        13.087366659519459
+      ]
+    },
+    {
+      "figure": "reference_times_wall",
+      "group": "Random G(n,m) \u00b7 m/n = 16",
+      "case_ids": [
+        "gnm_random_n4096_d16_p0",
+        "gnm_random_n1048576_d16_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 24,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.000771516716683312,
+        7.3959482289354055
+      ]
+    },
+    {
+      "figure": "reference_times_cpu",
+      "group": "Ordered core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 24,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.04275895785899259,
+        16.169915504122432
+      ]
+    },
+    {
+      "figure": "reference_times_cpu",
+      "group": "Shuffled core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 24,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.033153628782910435,
+        13.087366659519459
+      ]
+    },
+    {
+      "figure": "reference_times_cpu",
+      "group": "Random G(n,m) \u00b7 m/n = 16",
+      "case_ids": [
+        "gnm_random_n4096_d16_p0",
+        "gnm_random_n1048576_d16_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 24,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.000771516716683312,
+        7.3959482289354055
+      ]
+    },
+    {
+      "figure": "compressed_times_wall",
+      "group": "Ordered core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 24,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.04389007873117532,
+        16.18642256559397
+      ]
+    },
+    {
+      "figure": "compressed_times_wall",
+      "group": "Shuffled core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 24,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.03326835002746004,
+        13.05356374750132
+      ]
+    },
+    {
+      "figure": "compressed_times_wall",
+      "group": "Random G(n,m) \u00b7 m/n = 16",
+      "case_ids": [
+        "gnm_random_n4096_d16_p0",
+        "gnm_random_n1048576_d16_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 24,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.0007614966706866828,
+        7.2280412950533695
+      ]
+    },
+    {
+      "figure": "compressed_times_cpu",
+      "group": "Ordered core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 24,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.04389007873117532,
+        16.18642256559397
+      ]
+    },
+    {
+      "figure": "compressed_times_cpu",
+      "group": "Shuffled core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 24,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.03326835002746004,
+        13.05356374750132
+      ]
+    },
+    {
+      "figure": "compressed_times_cpu",
+      "group": "Random G(n,m) \u00b7 m/n = 16",
+      "case_ids": [
+        "gnm_random_n4096_d16_p0",
+        "gnm_random_n1048576_d16_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 24,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.0007614966706866828,
+        7.2280412950533695
+      ]
+    }
+  ],
+  "control_normalization": false,
+  "confidence_intervals": false,
+  "interpolated_crossover": false,
+  "matched_clock_axes": true,
+  "output_sha256": {
+    "variant_gains_wall.png": "c6f36db6f28549b01cf4881f32887fe57bf12177bf3d009c4548e0b8dd5b13e1",
+    "variant_gains_wall.svg": "6c88012c3707322803c790e5c2819a6d85417167a7296a4838cf0092d38f0f37",
+    "variant_gains_wall.pdf": "a9c43bbc32504795a7c4112d3ec635fc6d932d90fa30f84b720cc97056e1d67a",
+    "variant_gains_cpu.png": "c3b9da0dbe8625e635146ee144d28e82d40bad1d9afdf9beb1ee5a084e8f4b54",
+    "variant_gains_cpu.svg": "c85eb91939d04e79083dfaf8242e20199c57919f4e28d362713b1dfb7affc99a",
+    "variant_gains_cpu.pdf": "437b6f65f32254207e2a0c57eca1226f8f32d9f523bc01e8e8df140028789a84",
+    "reference_ratios_wall.png": "30ae20ed58f74278554fe05de785a4a1c5cac5a91a518a2a1ab4d466044ee341",
+    "reference_ratios_wall.svg": "e214b084f5efb10026ee3d15695d9ad0bf0c4e27dab9b218e70f41880a055fef",
+    "reference_ratios_wall.pdf": "480d153d4323a971c889cb87840c6c77a64d752c5551b15b96ff1e06dcdd161a",
+    "reference_ratios_cpu.png": "faa36c5ceb107c1ed1e6398f618253af3691187230f2531ef81eee09175e1f7f",
+    "reference_ratios_cpu.svg": "fcb900e7f889f13710a2280ee289c19b2ad95d5010225aa02717d19a47cdd4d4",
+    "reference_ratios_cpu.pdf": "c48f4fafe86151b4ee81ce26ec332ea984aace8699cd29b48846300b56d14111",
+    "compressed_ratios_wall.png": "d6b1a1c0eda42a1afb8ef6e3a9d7a94447dd9ba163e84c4d3e769159cfa8bdb4",
+    "compressed_ratios_wall.svg": "f0dc57ea9673cc2bcc548acb5d9216293d325b759cb6ca83496d5ab2bf09d5e8",
+    "compressed_ratios_wall.pdf": "9860cefe120c323e107d5d0d55bca08034c782754e35fd33f05ad635a9060cc2",
+    "compressed_ratios_cpu.png": "1b582ca4df3b0453971c9affa27832dd3f724a2600605f813194482f18e27651",
+    "compressed_ratios_cpu.svg": "c742dca2e6dd1ea9195aec4aa55e796d18bead59f56d11858203445f92addff0",
+    "compressed_ratios_cpu.pdf": "b2189283dfea7d793f2af5d403ad5c14c03c0aebc93be5ea0f2f5dbff5f05765",
+    "reference_times_wall.png": "3ea08c517bf69fba238136381de615ddcd74164cff2a1d0bd12c41be662dff65",
+    "reference_times_wall.svg": "20849dc07fe48fb66f1e77a9e2950606ff07898ee4c99dffab9eb3a969caf8f8",
+    "reference_times_wall.pdf": "f165f9da5996f1adc62997e6e974e49baacd90897c358aabcb82a664d6c18122",
+    "reference_times_cpu.png": "f9041219964f5b7b992a3e4bdade88c32d952025a99a158f7650041d912b9993",
+    "reference_times_cpu.svg": "282debd658a733459bf25a5513d341bfbdf603666deceda4239e29d99e9704d9",
+    "reference_times_cpu.pdf": "ce6544970c3a04df500d5284efa6f80d515879f2c6686b13d5581f54ec7c2fe3",
+    "compressed_times_wall.png": "f0c67decc9de2345edc0c4d0bb20dbc4d77902709ef09b890d65e8fb1ce8b65b",
+    "compressed_times_wall.svg": "6861cf8fc06140031fd5e2deca5e84a8ef2e508aaf451abacaf96fc5b1230d52",
+    "compressed_times_wall.pdf": "0de459935c899973a41cbb932724547c5e59f636f29b58485643a786c42db773",
+    "compressed_times_cpu.png": "832aebe4e58da8e187090bbe9708f1fed2bd2a29af61739db2f7236b0ed63f8d",
+    "compressed_times_cpu.svg": "49b56956254923ed172260465aed6d9543fd923c75bc834a6b105a702d04f9c5",
+    "compressed_times_cpu.pdf": "79a09b30690e180d287c3dbd9f87595049ebdc3eddfb870c884214eaabf15412",
+    "plotted_values.json": "7ffba255200e0dfd8160a85adee8bea20f838437f788f2ec03a68fa521843dc3"
+  },
+  "visual_review": "pending: inspect all ten PNGs before publication"
+}

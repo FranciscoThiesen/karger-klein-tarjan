@@ -30,8 +30,17 @@ certificate/fingerprints, comparator drift, late exits including consistent
 reload metadata, RSS corruption, poison, unknown exit, overwrite protection
 and refusal to launch another child after failure.
 
-Native diagnostic capture remains **unexecuted**. Its freeze requires the
+At the preparation checkpoint, native diagnostic capture was **unexecuted**. Its freeze required the
 completed compressed-query timing capture and strict parent validation; native
-execution requires root's separate post-timing release. No timing helper,
+execution required root's separate post-timing release. No timing helper,
 native source or driver was edited. This receipt validates collector preparation,
 not any numerical work result or performance claim.
+
+After that separate release, [capture attempt 01](capture-attempt01-execution.json)
+passed all 24 children and 72 certified solver outputs. All native groups and
+the collector group were observed empty. [Strict analysis and independent raw
+reconstruction](analysis-attempt01-execution.json) checked all 12 query pairs,
+all 780 field comparisons, and both comparators' complete records and round
+sequences. The [diagnostic report](analysis-attempt01/README.md) retains all 65
+fields, including increased verifier vertex work. These are logical counters,
+not performance or peak-memory measurements.
