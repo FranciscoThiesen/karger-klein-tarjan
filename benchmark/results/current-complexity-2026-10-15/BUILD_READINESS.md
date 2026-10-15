@@ -1,8 +1,12 @@
 # Current Google Benchmark harness: actual gate results
 
 The pinned library, current-object harness and real schema smoke passed. The
-24-curve complexity study has **not** run. Its preflight/freeze awaits the root
-declaration commit and release. The earlier source-preparation documents retain
+24-curve complexity study has **not** run. After declaration commit
+`6fb39a0ea621cdcb1fe5be151c29cefab3b3aa78`, guarded preflight and a fresh strict
+freeze reload both passed with actual zero exits and empty groups. The freeze
+SHA-256 is `bc0abc5f8675ce9771b6ce81f5cd933afd5d3ffd36d79bc6b34b98e4a89620c7`;
+it fixes 24 curves and eleven sizes. Performance release remains pending.
+The earlier source-preparation documents retain
 their historical status; the receipts below establish actual runtime status.
 
 The library is Google Benchmark v1.5.2, commit
