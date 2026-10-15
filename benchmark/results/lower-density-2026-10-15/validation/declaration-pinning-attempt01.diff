@@ -1,0 +1,15 @@
+--- independent_numerical_audit.unpinned.py
++++ independent_numerical_audit.py
+@@ -25,9 +25,9 @@
+ # must be replaced by the independently reviewed final declaration hashes before
+ # any runtime gate; a missing pin fails closed, never acting as a wildcard.
+ DECLARATION_SHA256 = {
+-    'benchmark/run_lower_density.py': None,
+-    'benchmark/results/lower-density-2026-10-15/PROTOCOL.md': None,
+-    'benchmark/results/lower-density-2026-10-15/manifest.csv': None,
++    'benchmark/run_lower_density.py': '062d3e8e22d4dd4b0c53f25fc5e12128935119ed1bf9dadd236070091df2f9b2',
++    'benchmark/results/lower-density-2026-10-15/PROTOCOL.md': 'b0538b73e9a86a853cef4938b2ef5bbe7a5a6522e432cc9703bf8ce080267f95',
++    'benchmark/results/lower-density-2026-10-15/manifest.csv': 'bb3aa71a0c73fb08cfd8d5a4af66110f907ffa935d0e639641fbca2be9894da4',
+ }
+ LADDERS = ((16, (512, 2048, 8192, 32768, 131072, 524288, 2097152)),
+            (8, (256, 1024, 4096, 16384, 65536, 262144, 1048576, 4194304)))

@@ -1,0 +1,42 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "benchmark/test_lower_density.py"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "started_utc": "2026-10-15T19:59:00.511791+00:00",
+  "started_monotonic_ns": 23828208,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_lower_density.py": "062d3e8e22d4dd4b0c53f25fc5e12128935119ed1bf9dadd236070091df2f9b2",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/test_lower_density.py": "e2934b6471b76d381aeef8970ffb0f597317b3d27cb49c5cb8b399d79dbf9f95"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 1052,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 1052,
+    "members": [],
+    "monotonic_ns": 24979583875,
+    "utc": "2026-10-15T19:59:25.467647+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_lower_density.py": "062d3e8e22d4dd4b0c53f25fc5e12128935119ed1bf9dadd236070091df2f9b2",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/test_lower_density.py": "e2934b6471b76d381aeef8970ffb0f597317b3d27cb49c5cb8b399d79dbf9f95"
+  },
+  "finished_utc": "2026-10-15T19:59:25.467939+00:00",
+  "finished_monotonic_ns": 24979884375,
+  "elapsed_seconds": 24.956056167,
+  "stdout": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/collector-mocks-attempt01.stdout",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/collector-mocks-attempt01.stderr",
+  "stderr_sha256": "bb6f39eda0dd86b8c357c1b4bd6be0d9e8df7646d26f56ff20e72f757f327c23"
+}

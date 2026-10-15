@@ -1,0 +1,109 @@
+{
+  "schema": "lower_density_work_installation_v1",
+  "validation": "pass",
+  "started_utc": "2026-10-15T19:58:29.546022+00:00",
+  "native_solver_execution": false,
+  "build_execution": false,
+  "files": [
+    {
+      "source": "/private/tmp/kkt-lower-density-work-prep/overlay/benchmark/results/lower-density-2026-10-15/work/PROTOCOL.md",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/PROTOCOL.md",
+      "source_sha256": "3be1379fb6a2bd51d02cbba8fe6db156d9d6d70922cc8fb9dec4901b235ea6c2",
+      "installed_sha256": "3be1379fb6a2bd51d02cbba8fe6db156d9d6d70922cc8fb9dec4901b235ea6c2",
+      "bytes": 5126
+    },
+    {
+      "source": "/private/tmp/kkt-lower-density-work-prep/overlay/benchmark/results/lower-density-2026-10-15/work/collect.py",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/collect.py",
+      "source_sha256": "783fb454e41492e54ebbf2a98884d3641669f84ac4aac2ae348a194471a5aa30",
+      "installed_sha256": "783fb454e41492e54ebbf2a98884d3641669f84ac4aac2ae348a194471a5aa30",
+      "bytes": 22714
+    },
+    {
+      "source": "/private/tmp/kkt-lower-density-work-prep/overlay/benchmark/results/lower-density-2026-10-15/work/plot_work.py",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/plot_work.py",
+      "source_sha256": "5f9ef7d15367d7edef28752a009cc4bf5061edba1c23f6a9609576fad1132e6e",
+      "installed_sha256": "5f9ef7d15367d7edef28752a009cc4bf5061edba1c23f6a9609576fad1132e6e",
+      "bytes": 9542
+    },
+    {
+      "source": "/private/tmp/kkt-lower-density-work-prep/overlay/benchmark/results/lower-density-2026-10-15/work/run_capture_attempt.py",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/run_capture_attempt.py",
+      "source_sha256": "7e16cc1b9edcfdb905c95bcda2dc9fca8cd833cea76f0d9955683c8da82b612e",
+      "installed_sha256": "7e16cc1b9edcfdb905c95bcda2dc9fca8cd833cea76f0d9955683c8da82b612e",
+      "bytes": 10405
+    },
+    {
+      "source": "/private/tmp/kkt-lower-density-work-prep/overlay/benchmark/results/lower-density-2026-10-15/work/test_collect.py",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/test_collect.py",
+      "source_sha256": "0e9e37c9c234a37adb02deb692c3b53290fe52c5c1ad946d07e72372c37a7281",
+      "installed_sha256": "0e9e37c9c234a37adb02deb692c3b53290fe52c5c1ad946d07e72372c37a7281",
+      "bytes": 24002
+    },
+    {
+      "source": "/private/tmp/kkt-lower-density-work-prep/overlay/benchmark/results/lower-density-2026-10-15/work/test_run_capture_attempt.py",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/test_run_capture_attempt.py",
+      "source_sha256": "2496ea7ba78dd14e30e28ddd99cbdc608d0fa79baa8d386b7474406d69e1b23a",
+      "installed_sha256": "2496ea7ba78dd14e30e28ddd99cbdc608d0fa79baa8d386b7474406d69e1b23a",
+      "bytes": 11944
+    },
+    {
+      "source": "/private/tmp/kkt-lower-density-work-audit-prep/audit_counters.py",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/audit_counters.py",
+      "source_sha256": "84e27436d597e16ac9e31c04c22a428474da51317987a268ac0086b41db85bdb",
+      "installed_sha256": "84e27436d597e16ac9e31c04c22a428474da51317987a268ac0086b41db85bdb",
+      "bytes": 17095
+    },
+    {
+      "source": "/private/tmp/kkt-lower-density-work-audit-prep/test_audit_counters.py",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/test_audit_counters.py",
+      "source_sha256": "581916eb30f739e071765241350221a80c067c47863fce527bb1098cfa5be936",
+      "installed_sha256": "581916eb30f739e071765241350221a80c067c47863fce527bb1098cfa5be936",
+      "bytes": 10757
+    },
+    {
+      "source": "/private/tmp/kkt-lower-density-work-prep/INDEPENDENT_OUTER_SOURCE_REVIEW.md",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/source-preparation/work/INDEPENDENT_OUTER_SOURCE_REVIEW.md",
+      "source_sha256": "3ade4e336e2392af6d155de97213f0ab1cda02a44a92e3f257beffa4a1f5a539",
+      "installed_sha256": "3ade4e336e2392af6d155de97213f0ab1cda02a44a92e3f257beffa4a1f5a539",
+      "bytes": 2238
+    },
+    {
+      "source": "/private/tmp/kkt-lower-density-work-prep/INDEPENDENT_SOURCE_REVIEW.md",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/source-preparation/work/INDEPENDENT_SOURCE_REVIEW.md",
+      "source_sha256": "e19c86b1063694d9145141e8bd6db2c6714b6f1af1a6ca6bdf9262323f5abac6",
+      "installed_sha256": "e19c86b1063694d9145141e8bd6db2c6714b6f1af1a6ca6bdf9262323f5abac6",
+      "bytes": 2364
+    },
+    {
+      "source": "/private/tmp/kkt-lower-density-work-prep/README.md",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/source-preparation/work/README.md",
+      "source_sha256": "5b9c942203fa6e49dd96932ad664c4c7f1caf344b1b1801b0b62d361f0b1fc17",
+      "installed_sha256": "5b9c942203fa6e49dd96932ad664c4c7f1caf344b1b1801b0b62d361f0b1fc17",
+      "bytes": 4985
+    },
+    {
+      "source": "/private/tmp/kkt-lower-density-work-audit-prep/INDEPENDENT_SOURCE_REVIEW.md",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/source-preparation/work-audit/INDEPENDENT_SOURCE_REVIEW.md",
+      "source_sha256": "1e287c11da8385176dee2244653909fd649a80ca8b3b0ea803fe27a6497787a5",
+      "installed_sha256": "1e287c11da8385176dee2244653909fd649a80ca8b3b0ea803fe27a6497787a5",
+      "bytes": 2220
+    },
+    {
+      "source": "/private/tmp/kkt-lower-density-work-audit-prep/README.md",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/source-preparation/work-audit/README.md",
+      "source_sha256": "a954f239e3f6f453de4ff19fdc3a42109904e77ff6550b911f078846bb65cd32",
+      "installed_sha256": "a954f239e3f6f453de4ff19fdc3a42109904e77ff6550b911f078846bb65cd32",
+      "bytes": 2856
+    },
+    {
+      "source": "/private/tmp/kkt-lower-density-post-google-checklist.md",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/source-preparation/work/POST_GOOGLE_CHECKLIST.md",
+      "source_sha256": "8524e7933694fe5d8bf8ce5fc5253655a3350c0a99ec429d65f5545469d3ae84",
+      "installed_sha256": "8524e7933694fe5d8bf8ce5fc5253655a3350c0a99ec429d65f5545469d3ae84",
+      "bytes": 12187
+    }
+  ],
+  "scope": "work overlay, independent counter audit, work/work-audit preparation notes; timing notes owned by candidate agent",
+  "finished_utc": "2026-10-15T19:58:29.549871+00:00"
+}

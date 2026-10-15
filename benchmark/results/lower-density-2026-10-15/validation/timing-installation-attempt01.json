@@ -1,0 +1,142 @@
+{
+  "schema": "lower_density_timing_installation_v1",
+  "validation": "pass",
+  "created_utc": "2026-10-15T19:58:37.278751+00:00",
+  "files": [
+    {
+      "source": "/tmp/kkt-lower-density-prep/overlay/benchmark/plot_lower_density.py",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/plot_lower_density.py",
+      "source_sha256": "d579fbeb4771766b9a72f3d8a718de1c628c6c6e511991a3fe681843a4c86c4d",
+      "installed_sha256": "d579fbeb4771766b9a72f3d8a718de1c628c6c6e511991a3fe681843a4c86c4d"
+    },
+    {
+      "source": "/tmp/kkt-lower-density-prep/overlay/benchmark/results/lower-density-2026-10-15/PROTOCOL.md",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/PROTOCOL.md",
+      "source_sha256": "b0538b73e9a86a853cef4938b2ef5bbe7a5a6522e432cc9703bf8ce080267f95",
+      "installed_sha256": "b0538b73e9a86a853cef4938b2ef5bbe7a5a6522e432cc9703bf8ce080267f95"
+    },
+    {
+      "source": "/tmp/kkt-lower-density-prep/overlay/benchmark/results/lower-density-2026-10-15/SEED_FRESHNESS.md",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/SEED_FRESHNESS.md",
+      "source_sha256": "8b7f808115328f4f2c44e689ad5906054c91d374965196f9f97598654d261f7d",
+      "installed_sha256": "8b7f808115328f4f2c44e689ad5906054c91d374965196f9f97598654d261f7d"
+    },
+    {
+      "source": "/tmp/kkt-lower-density-prep/overlay/benchmark/results/lower-density-2026-10-15/SOURCE_DOMAIN_REVIEW.md",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/SOURCE_DOMAIN_REVIEW.md",
+      "source_sha256": "e2eaad0c0538babaf24af902e1f55aae696d1521eea41e59a3df2eeec5ca169f",
+      "installed_sha256": "e2eaad0c0538babaf24af902e1f55aae696d1521eea41e59a3df2eeec5ca169f"
+    },
+    {
+      "source": "/tmp/kkt-lower-density-prep/overlay/benchmark/results/lower-density-2026-10-15/manifest.csv",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/manifest.csv",
+      "source_sha256": "bb3aa71a0c73fb08cfd8d5a4af66110f907ffa935d0e639641fbca2be9894da4",
+      "installed_sha256": "bb3aa71a0c73fb08cfd8d5a4af66110f907ffa935d0e639641fbca2be9894da4"
+    },
+    {
+      "source": "/tmp/kkt-lower-density-prep/overlay/benchmark/results/lower-density-2026-10-15/validation/INDEPENDENT_AUDIT_PREPARATION.md",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/INDEPENDENT_AUDIT_PREPARATION.md",
+      "source_sha256": "1bf6dc253ed80872833046bad79fcc4d1f3faacb1d1b3fc21f6ff7c26098f170",
+      "installed_sha256": "1bf6dc253ed80872833046bad79fcc4d1f3faacb1d1b3fc21f6ff7c26098f170"
+    },
+    {
+      "source": "/tmp/kkt-lower-density-prep/overlay/benchmark/results/lower-density-2026-10-15/validation/INDEPENDENT_AUDIT_SOURCE_REVIEW.md",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/INDEPENDENT_AUDIT_SOURCE_REVIEW.md",
+      "source_sha256": "2cd41f1bf4ad865b21d90127576e517d1dc57eabf6fe3dc942f62ff10bd24a15",
+      "installed_sha256": "2cd41f1bf4ad865b21d90127576e517d1dc57eabf6fe3dc942f62ff10bd24a15"
+    },
+    {
+      "source": "/tmp/kkt-lower-density-prep/overlay/benchmark/results/lower-density-2026-10-15/validation/INDEPENDENT_COLLECTOR_SOURCE_REVIEW.md",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/INDEPENDENT_COLLECTOR_SOURCE_REVIEW.md",
+      "source_sha256": "c9825be10db083862c99a2e966f3b71a8144e087d5d44e7382afd081a19ca352",
+      "installed_sha256": "c9825be10db083862c99a2e966f3b71a8144e087d5d44e7382afd081a19ca352"
+    },
+    {
+      "source": "/tmp/kkt-lower-density-prep/overlay/benchmark/results/lower-density-2026-10-15/validation/INDEPENDENT_PLOT_OUTER_SOURCE_REVIEW.md",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/INDEPENDENT_PLOT_OUTER_SOURCE_REVIEW.md",
+      "source_sha256": "e8da54b5d8b826e5bcca4eaff224fc9f2dd3b478e479ea3ae814893598746bf7",
+      "installed_sha256": "e8da54b5d8b826e5bcca4eaff224fc9f2dd3b478e479ea3ae814893598746bf7"
+    },
+    {
+      "source": "/tmp/kkt-lower-density-prep/overlay/benchmark/results/lower-density-2026-10-15/validation/independent_numerical_audit.py",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/independent_numerical_audit.py",
+      "source_sha256": "59941f2d571d43286000ed7c7c8b09b4a3b9ec55e45023c2825369ca75253b7b",
+      "installed_sha256": "59941f2d571d43286000ed7c7c8b09b4a3b9ec55e45023c2825369ca75253b7b"
+    },
+    {
+      "source": "/tmp/kkt-lower-density-prep/overlay/benchmark/results/lower-density-2026-10-15/validation/launch-preparation/README.md",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/launch-preparation/README.md",
+      "source_sha256": "91fc8d6a0739780ae6b2aec8fb0170da1e9b95d8fb3cfb96bfada1d22b1a2fff",
+      "installed_sha256": "91fc8d6a0739780ae6b2aec8fb0170da1e9b95d8fb3cfb96bfada1d22b1a2fff"
+    },
+    {
+      "source": "/tmp/kkt-lower-density-prep/overlay/benchmark/results/lower-density-2026-10-15/validation/launch-preparation/machine_power.py",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/launch-preparation/machine_power.py",
+      "source_sha256": "f36ec01c88a11c2d112091f2fc9d014d2e626ece58a8d1c7ef2820005691bdbc",
+      "installed_sha256": "f36ec01c88a11c2d112091f2fc9d014d2e626ece58a8d1c7ef2820005691bdbc"
+    },
+    {
+      "source": "/tmp/kkt-lower-density-prep/overlay/benchmark/results/lower-density-2026-10-15/validation/launch-preparation/run_capture_attempt.py",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/launch-preparation/run_capture_attempt.py",
+      "source_sha256": "aee1125d9235cf7684e4c7fb6d154447cc72fbaf7c2e289d4fe43d2b0c39c285",
+      "installed_sha256": "aee1125d9235cf7684e4c7fb6d154447cc72fbaf7c2e289d4fe43d2b0c39c285"
+    },
+    {
+      "source": "/tmp/kkt-lower-density-prep/overlay/benchmark/results/lower-density-2026-10-15/validation/launch-preparation/test_run_capture_attempt.py",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/launch-preparation/test_run_capture_attempt.py",
+      "source_sha256": "08b92ee58b3ff19524758f8b70ae438dd53cbcb449b4d2d5a9e279a4070fbae4",
+      "installed_sha256": "08b92ee58b3ff19524758f8b70ae438dd53cbcb449b4d2d5a9e279a4070fbae4"
+    },
+    {
+      "source": "/tmp/kkt-lower-density-prep/overlay/benchmark/results/lower-density-2026-10-15/validation/test_independent_numerical_audit.py",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/test_independent_numerical_audit.py",
+      "source_sha256": "5f8561ec4cd275132b56a6aaeb8be80f6bd78f82dbd1ae494ee93e4e4f94c282",
+      "installed_sha256": "5f8561ec4cd275132b56a6aaeb8be80f6bd78f82dbd1ae494ee93e4e4f94c282"
+    },
+    {
+      "source": "/tmp/kkt-lower-density-prep/overlay/benchmark/run_lower_density.py",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_lower_density.py",
+      "source_sha256": "062d3e8e22d4dd4b0c53f25fc5e12128935119ed1bf9dadd236070091df2f9b2",
+      "installed_sha256": "062d3e8e22d4dd4b0c53f25fc5e12128935119ed1bf9dadd236070091df2f9b2"
+    },
+    {
+      "source": "/tmp/kkt-lower-density-prep/overlay/benchmark/test_lower_density.py",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/test_lower_density.py",
+      "source_sha256": "e2934b6471b76d381aeef8970ffb0f597317b3d27cb49c5cb8b399d79dbf9f95",
+      "installed_sha256": "e2934b6471b76d381aeef8970ffb0f597317b3d27cb49c5cb8b399d79dbf9f95"
+    },
+    {
+      "source": "/tmp/kkt-lower-density-prep/LOWER_DENSITY_PLOT_PREPARATION.md",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/source-preparation/timing/LOWER_DENSITY_PLOT_PREPARATION.md",
+      "source_sha256": "428c4d73e9a5b80fde3bcf1b25a48195f55c54ff1d01c678250f879a12f629c0",
+      "installed_sha256": "428c4d73e9a5b80fde3bcf1b25a48195f55c54ff1d01c678250f879a12f629c0"
+    },
+    {
+      "source": "/tmp/kkt-lower-density-prep/MECHANISM_AND_WORK_FEASIBILITY.md",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/source-preparation/timing/MECHANISM_AND_WORK_FEASIBILITY.md",
+      "source_sha256": "fcee34ac16ea92b58156b1397ce094dfd0713783edd1609acc6b431788a2bb23",
+      "installed_sha256": "fcee34ac16ea92b58156b1397ce094dfd0713783edd1609acc6b431788a2bb23"
+    },
+    {
+      "source": "/tmp/kkt-lower-density-prep/README.md",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/source-preparation/timing/README.md",
+      "source_sha256": "e1984bbce6d8095551e2703fee8631a5cda10e2677e75f7af8b27cec1d6a1934",
+      "installed_sha256": "e1984bbce6d8095551e2703fee8631a5cda10e2677e75f7af8b27cec1d6a1934"
+    },
+    {
+      "source": "/tmp/kkt-lower-density-prep/ROOT_EXECUTION_HANDOFF.md",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/source-preparation/timing/ROOT_EXECUTION_HANDOFF.md",
+      "source_sha256": "f64ccdb28d8cbea71d80bdda3694e380793eb7e130e98cbec7d4e784a8c7effd",
+      "installed_sha256": "f64ccdb28d8cbea71d80bdda3694e380793eb7e130e98cbec7d4e784a8c7effd"
+    },
+    {
+      "source": "/tmp/kkt-lower-density-report-integration.md",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/source-preparation/timing/REPORT_INTEGRATION_TEMPLATE.md",
+      "source_sha256": "946cece5771526045ce6548a96a0369063bc8ccbcc3c2e9236b36ca0d68862c0",
+      "installed_sha256": "946cece5771526045ce6548a96a0369063bc8ccbcc3c2e9236b36ca0d68862c0"
+    }
+  ],
+  "native_execution": false,
+  "source_bytes_preserved_before_declared_pinning": true,
+  "pinning_receipt": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/declaration-pinning-attempt01.json"
+}

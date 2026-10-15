@@ -1,0 +1,17 @@
+{
+  "schema": "lower_density_declaration_pinning_v1",
+  "validation": "pass",
+  "created_utc": "2026-10-15T19:58:37.278751+00:00",
+  "audit": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/independent_numerical_audit.py",
+  "before_sha256": "59941f2d571d43286000ed7c7c8b09b4a3b9ec55e45023c2825369ca75253b7b",
+  "after_sha256": "8937cabcf4fb60806f8301cc52ee731aee4ac8f524b49f465057fb1683705b16",
+  "original_unpinned": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/source-preparation/timing/independent_numerical_audit.unpinned.py.txt",
+  "declaration_sha256": {
+    "benchmark/run_lower_density.py": "062d3e8e22d4dd4b0c53f25fc5e12128935119ed1bf9dadd236070091df2f9b2",
+    "benchmark/results/lower-density-2026-10-15/PROTOCOL.md": "b0538b73e9a86a853cef4938b2ef5bbe7a5a6522e432cc9703bf8ce080267f95",
+    "benchmark/results/lower-density-2026-10-15/manifest.csv": "bb3aa71a0c73fb08cfd8d5a4af66110f907ffa935d0e639641fbca2be9894da4"
+  },
+  "parent_sha256": "2be7556d15b58f3f65cc380ac22b67c57fdf8aea747d651b9d648c6a1aa59d2f",
+  "only_change": "replace exactly three None declaration pins with actual installed SHA256 values",
+  "native_execution": false
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "lower_density_work_mock_validation_v1",
+  "validation": "pass",
+  "created_utc": "2026-10-15T19:59:45.187324+00:00",
+  "installed_files": 14,
+  "installation_receipt": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/work-installation-attempt01.json",
+  "installation_receipt_sha256": "940b547e20e9c67f911ba3f6ad4fe3c9a306cce75ead435b9d42770518495371",
+  "groups": 20,
+  "suites": [
+    {
+      "suite": "collector",
+      "groups": 9,
+      "receipt": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/work-collector-mocks-attempt01.json",
+      "receipt_sha256": "24c1b2c595ddbfbf2e958691d123b1d376e18b241e9587d296f96c7aff0026b1",
+      "process_group": 1029,
+      "exit_status": 0,
+      "owned_groups_verified_empty": true,
+      "elapsed_seconds": 4.599244459
+    },
+    {
+      "suite": "outer",
+      "groups": 6,
+      "receipt": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/work-outer-mocks-attempt01.json",
+      "receipt_sha256": "d1e3f46a11fd1c1caee23b40757eae96be2d7d0c618cd467b149f6b984d1a5ed",
+      "process_group": 1031,
+      "exit_status": 0,
+      "owned_groups_verified_empty": true,
+      "elapsed_seconds": 0.211874958
+    },
+    {
+      "suite": "audit",
+      "groups": 5,
+      "receipt": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/work-audit-mocks-attempt01.json",
+      "receipt_sha256": "aadd3af521e9473c5e5badcca8e483e52f0d82f2f0f1187552ea77cccdfe2325",
+      "process_group": 1030,
+      "exit_status": 0,
+      "owned_groups_verified_empty": true,
+      "elapsed_seconds": 0.292488792
+    }
+  ],
+  "attempts": 1,
+  "failed_attempts": 0,
+  "native_solver_execution": false,
+  "build_execution": false,
+  "prepare_or_freeze_execution": false,
+  "commit_execution": false,
+  "all_test_wrappers_observed_exit_zero": true,
+  "all_owned_groups_verified_empty": true
+}

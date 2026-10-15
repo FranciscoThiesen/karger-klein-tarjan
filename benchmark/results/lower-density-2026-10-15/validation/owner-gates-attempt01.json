@@ -1,0 +1,73 @@
+{
+  "schema": "lower_density_owner_installation_gates_v1",
+  "validation": "pass",
+  "created_utc": "2026-10-15T19:59:50.122100+00:00",
+  "timing_mock_groups": 23,
+  "paper_mock_groups": 4,
+  "mocked_groups": 27,
+  "native_execution": false,
+  "rendering_performed": false,
+  "preflight_performed": false,
+  "freeze_created": false,
+  "all_actual_wrapper_exits_observed": true,
+  "all_owned_groups_verified_empty": true,
+  "final_group_query": {
+    "command": [
+      "/bin/ps",
+      "-axo",
+      "pid=,pgid="
+    ],
+    "exit_status": 0,
+    "members": []
+  },
+  "declaration_sha256": {
+    "benchmark/run_lower_density.py": "062d3e8e22d4dd4b0c53f25fc5e12128935119ed1bf9dadd236070091df2f9b2",
+    "benchmark/results/lower-density-2026-10-15/PROTOCOL.md": "b0538b73e9a86a853cef4938b2ef5bbe7a5a6522e432cc9703bf8ce080267f95",
+    "benchmark/results/lower-density-2026-10-15/manifest.csv": "bb3aa71a0c73fb08cfd8d5a4af66110f907ffa935d0e639641fbca2be9894da4"
+  },
+  "pinned_audit_sha256": "8937cabcf4fb60806f8301cc52ee731aee4ac8f524b49f465057fb1683705b16",
+  "attempts": [
+    {
+      "suite": "collector",
+      "groups": 11,
+      "receipt": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/collector-mocks-attempt01.json",
+      "receipt_sha256": "d8c93f94d721820e762bf66212ab206aa8a7d26ef3daf0a0443f8f2337c16195",
+      "elapsed_seconds": 24.956056167,
+      "process_group": 1052,
+      "validation": "pass",
+      "actual_tool_exit_status": 0
+    },
+    {
+      "suite": "audit",
+      "groups": 6,
+      "receipt": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/audit-mocks-attempt01.json",
+      "receipt_sha256": "27907cf224531a2093b2a266972bd6ed33c28276b5997c4ca813257786b9c7e6",
+      "elapsed_seconds": 2.466820125,
+      "process_group": 1054,
+      "validation": "pass",
+      "actual_tool_exit_status": 0
+    },
+    {
+      "suite": "outer",
+      "groups": 6,
+      "receipt": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/outer-mocks-attempt01.json",
+      "receipt_sha256": "b6c6957b83b266b460b72ce785507ec423197957b3a36b657b52b0b1069ddcac",
+      "elapsed_seconds": 0.217427375,
+      "process_group": 1053,
+      "validation": "pass",
+      "actual_tool_exit_status": 0
+    },
+    {
+      "suite": "paper",
+      "groups": 4,
+      "receipt": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/paper-mocks-attempt01.json",
+      "receipt_sha256": "ea662431cd0d0489623d27b853372c455589541f8d5932ab7883720707264346",
+      "elapsed_seconds": 0.890665833,
+      "process_group": 1055,
+      "validation": "pass",
+      "actual_tool_exit_status": 0
+    }
+  ],
+  "failures": [],
+  "source_preparation_notes_are_historical": true
+}

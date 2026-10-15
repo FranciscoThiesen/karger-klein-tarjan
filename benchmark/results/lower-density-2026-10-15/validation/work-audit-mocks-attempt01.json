@@ -1,0 +1,42 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/test_audit_counters.py"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "started_utc": "2026-10-15T19:58:59.044813+00:00",
+  "started_monotonic_ns": 26253166,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/audit_counters.py": "84e27436d597e16ac9e31c04c22a428474da51317987a268ac0086b41db85bdb",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/test_audit_counters.py": "581916eb30f739e071765241350221a80c067c47863fce527bb1098cfa5be936"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 1030,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 1030,
+    "members": [],
+    "monotonic_ns": 318515250,
+    "utc": "2026-10-15T19:58:59.337048+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/audit_counters.py": "84e27436d597e16ac9e31c04c22a428474da51317987a268ac0086b41db85bdb",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/test_audit_counters.py": "581916eb30f739e071765241350221a80c067c47863fce527bb1098cfa5be936"
+  },
+  "finished_utc": "2026-10-15T19:58:59.337269+00:00",
+  "finished_monotonic_ns": 318741958,
+  "elapsed_seconds": 0.292488792,
+  "stdout": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/work-audit-mocks-attempt01.stdout",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/work-audit-mocks-attempt01.stderr",
+  "stderr_sha256": "ff96d148ed98882b90316c4fe1aa9ae7b4d884f81ecfa505fb15a96955ceb8b4"
+}
