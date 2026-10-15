@@ -1,0 +1,35 @@
+{
+  "schema": "edge_view_independent_collector_review_v1",
+  "created_utc": "2026-10-15T06:28:58.194801+00:00",
+  "status": "pass",
+  "command": [
+    "/usr/local/opt/python@3.14/bin/python3.14",
+    "-B",
+    "benchmark/test_edge_view_experiment.py"
+  ],
+  "exit_status": 0,
+  "test_groups": 8,
+  "log": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/collector-independent-tests.log",
+  "log_sha256": "e5a094cb9af095999d40b8b4b200557caa5efde224a3a17ae862e4d65f97665d",
+  "reviewed_source_sha256": {
+    "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/run_edge_view_experiment.py": "67d018d74e6658988421b98ae613ce5e649b4f80e5436fc8776540d2298fd227",
+    "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/test_edge_view_experiment.py": "a611190487275eb3a7ea26cc88e8213e5a82c6c12358f819de58349b2c6b3970"
+  },
+  "native_execution": false,
+  "performance_execution": false,
+  "findings": [
+    {
+      "severity": "resolved",
+      "description": "Cross-variant aggregation originally omitted five unchanged solvers. Owner extended canonical tables to all six algorithms and tests now require unchanged-solver drift ratios as well as KKT gains."
+    }
+  ],
+  "checks": [
+    "Frozen parent helpers matched by basename and hash; current native inventory permits exactly three changed sources and one new test.",
+    "Actual eight production object files, shared main object, binary profiles, source/recipe inventories and all twelve compile/link commands are checked.",
+    "Shared seven production object paths/hashes and harness object are identical; only KKT macro differs.",
+    "Schedule is forty sequential children, 1680 outputs,1440timed and240warmups; each child has all six timed positions.",
+    "Raw certificates, same-input fingerprints across variants, clocks, RSS, verified group exit and exact combined concatenation are reread.",
+    "All six cross-variant ratios pool twelve trial pairs; each graph median uses six, with both clocks and all losses retained.",
+    "Parent/helper/seed scopes restore after nested failure; release gate prevents unauthorized native launch."
+  ]
+}

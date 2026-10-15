@@ -1,0 +1,22 @@
+{
+  "schema": "edge_view_collector_mock_tests_v1",
+  "command": [
+    "python3",
+    "-B",
+    "benchmark/test_edge_view_experiment.py"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-edge-verifier-view",
+  "started_utc": "2026-10-15T06:27:36.666790+00:00",
+  "finished_utc": "2026-10-15T06:27:45.994551+00:00",
+  "elapsed_monotonic_ns": 9327125542,
+  "exit_status": 0,
+  "validation": "pass",
+  "native_builds_or_solver_executions": 0,
+  "review_correction": "All six algorithms retained in variant pairs and medians; unchanged-solver drift is canonical.",
+  "source_sha256": {
+    "benchmark/run_edge_view_experiment.py": "67d018d74e6658988421b98ae613ce5e649b4f80e5436fc8776540d2298fd227",
+    "benchmark/test_edge_view_experiment.py": "a611190487275eb3a7ea26cc88e8213e5a82c6c12358f819de58349b2c6b3970"
+  },
+  "log": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/collector-final-tests.log",
+  "log_sha256": "b391f8dafcd1c8cecf719249e92bef3bee8a1edb89b4936d70366a4743612524"
+}

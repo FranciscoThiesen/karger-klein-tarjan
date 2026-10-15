@@ -64,7 +64,7 @@ Their commands, binary profiles, outputs, and hashes are recorded separately in
 
 ## Reproduction and build binding
 
-From the worktree root, with a fresh evidence output directory:
+The captured invocation shapes, run from the worktree root, were:
 
 ```sh
 python3 -B benchmark/build_edge_verifier.py --profile native-correctness
@@ -73,7 +73,14 @@ python3 -B benchmark/build_edge_verifier.py --profile timing-build
 python3 -B benchmark/results/edge-view-2026-10-15/validation/validate_harness.py
 ```
 
-The build script refuses to overwrite existing logs. Every compile, link, and
+These commands are an audit record, not commands to rerun over this frozen
+evidence. The build script refuses to overwrite existing logs. For a fresh
+reproduction, use another isolated worktree and pass `--output` with a new
+directory to each build invocation. The auxiliary `validate_harness.py` is bound
+to this validation directory and its recorded object paths; a reproduction must
+adapt those evidence paths explicitly.
+
+Every compile, link, and
 test invocation explicitly uses `/usr/bin/arch -arm64`; native flags are
 `-std=c++17 -O3 -Wall -Wextra -march=native`, without `NDEBUG`. Work counters
 appear only in correctness profiles. The sanitizer profile uses `-O1 -g`

@@ -1,0 +1,20 @@
+{
+  "schema": "edge_view_plot_preparation_v1",
+  "script": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/plot_edge_view_experiment.py",
+  "script_sha256": "e39ae62b6d98656be5fdfb63da3cb4ae1cd5228f3c47c8494c38aaf89ffc4b9e",
+  "syntax": "pass",
+  "rendered": false,
+  "synthetic_data_used": false,
+  "native_execution": false,
+  "figures_planned": 4,
+  "metrics": [
+    "wall",
+    "cpu"
+  ],
+  "contents": [
+    "All six Edge/tuple paired ratios with unchanged-solver drift retained",
+    "Direct Edge KKT versus all five comparators within the same child"
+  ],
+  "aggregation": "Canonical strict collector tables: twelve paired trials per case; six per graph seed; complete trial ranges.",
+  "visual_review": "pending after complete native capture and explicit root release"
+}
