@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="660" viewBox="0 0 1120 660" role="img" aria-labelledby="title desc">
+  <title id="title">One path answer can serve many query edges</title>
+  <desc id="desc">A constructed four-leaf verifier tree. Twelve oriented query records generate twenty-four endpoint-to-root requests, but only four distinct paths. Each leaf requests its one ancestor six times. The compressed representation stores one answer per leaf. This schematic is not a runtime measurement.</desc>
+  <defs>
+    <style>
+      text { font-family: system-ui, -apple-system, sans-serif; fill: #172b4d; }
+      .title { font-size: 28px; font-weight: 650; }
+      .subtitle { font-size: 18px; fill: #52657d; }
+      .label { font-size: 19px; }
+      .small { font-size: 16px; fill: #52657d; }
+      .number { font-size: 21px; font-weight: 600; text-anchor: middle; }
+      .edge { stroke: #8292a7; stroke-width: 2; }
+    </style>
+    <g id="six">
+      <rect x="0" width="49" height="28" rx="4"/>
+      <rect x="57" width="49" height="28" rx="4"/>
+      <rect x="114" width="49" height="28" rx="4"/>
+      <rect x="171" width="49" height="28" rx="4"/>
+      <rect x="228" width="49" height="28" rx="4"/>
+      <rect x="285" width="49" height="28" rx="4"/>
+    </g>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#52657d"/></marker>
+  </defs>
+  <rect width="1120" height="660" fill="#ffffff"/>
+  <text x="44" y="48" class="title">One path answer can serve many query edges</text>
+  <text x="44" y="79" class="subtitle">Constructed correctness fixture: 12 oriented query records, 24 endpoint requests, 4 distinct paths</text>
+  <path d="M560 143 L220 240 M560 143 L440 240 M560 143 L660 240 M560 143 L880 240" class="edge" fill="none"/>
+  <circle cx="560" cy="143" r="26" fill="#e9eef5" stroke="#8292a7"/>
+  <text x="560" y="150" class="number">4</text>
+  <text x="600" y="149" class="label">root, depth 0</text>
+  <circle cx="220" cy="240" r="25" fill="#d5eaf8" stroke="#2878a8"/>
+  <circle cx="440" cy="240" r="25" fill="#d9efdf" stroke="#36834b"/>
+  <circle cx="660" cy="240" r="25" fill="#ffead2" stroke="#ba7520"/>
+  <circle cx="880" cy="240" r="25" fill="#e9def4" stroke="#8052a3"/>
+  <text x="220" y="247" class="number">0</text>
+  <text x="440" y="247" class="number">1</text>
+  <text x="660" y="247" class="number">2</text>
+  <text x="880" y="247" class="number">3</text>
+  <text x="220" y="286" class="small" text-anchor="middle">path maximum −3</text>
+  <text x="440" y="286" class="small" text-anchor="middle">path maximum −3</text>
+  <text x="660" y="286" class="small" text-anchor="middle">path maximum −2</text>
+  <text x="880" y="286" class="small" text-anchor="middle">path maximum −1</text>
+  <text x="44" y="329" class="small">Tree shown after full-branching-tree reduction; each original vertex is now a leaf at depth 1.</text>
+  <text x="44" y="376" class="label">Expanded requests: Q = 24</text>
+  <text x="735" y="376" class="label">Distinct answers: U = 4</text>
+  <text x="44" y="415" class="small">0 → root</text><use href="#six" x="139" y="395" fill="#d5eaf8"/>
+  <text x="44" y="456" class="small">1 → root</text><use href="#six" x="139" y="436" fill="#d9efdf"/>
+  <text x="44" y="497" class="small">2 → root</text><use href="#six" x="139" y="477" fill="#ffead2"/>
+  <text x="44" y="538" class="small">3 → root</text><use href="#six" x="139" y="518" fill="#e9def4"/>
+  <path d="M510 472 L684 472" stroke="#52657d" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="597" y="443" class="small" text-anchor="middle">same vertex</text>
+  <text x="597" y="463" class="small" text-anchor="middle">+ ancestor depth</text>
+  <rect x="735" y="395" width="300" height="28" rx="4" fill="#d5eaf8"/>
+  <rect x="735" y="436" width="300" height="28" rx="4" fill="#d9efdf"/>
+  <rect x="735" y="477" width="300" height="28" rx="4" fill="#ffead2"/>
+  <rect x="735" y="518" width="300" height="28" rx="4" fill="#e9def4"/>
+  <text x="750" y="415" class="small">(vertex 0, depth 0) → −3</text>
+  <text x="750" y="456" class="small">(vertex 1, depth 0) → −3</text>
+  <text x="750" y="497" class="small">(vertex 2, depth 0) → −2</text>
+  <text x="750" y="538" class="small">(vertex 3, depth 0) → −1</text>
+  <text x="44" y="592" class="label">The final edge scan reuses these answers and makes the same heavy-edge comparisons.</text>
+  <text x="44" y="625" class="small">This illustrates storage and repeated work. It does not predict a runtime speedup or benchmark crossover.</text>
+</svg>

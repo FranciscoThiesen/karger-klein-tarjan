@@ -4,6 +4,9 @@
 
 #include "verifier_v2.hpp"
 #include "median_table.hpp"
+#ifdef KKT_EXPERIMENT_COMPRESSED_QUERIES
+#include "experimental_compressed_queries.hpp"
+#endif
 #include "../common/edge.hpp"
 #include "../common/work_stats.hpp"
 // #include "../boruvka/boruvka.hpp"
@@ -347,6 +350,33 @@ struct test_graph
 	// explained on the Karger-Klein-Tarjan' 1995 paper.
 	vector<unsigned char> compute_heavy_marks()
 	{
+#ifdef KKT_EXPERIMENT_COMPRESSED_QUERIES
+		verifier_detail::compressed_tree_path_maxima verifier(root, child, sibling, weight);
+		vector<int> ancestors(G.size());
+		KKT_WORK_ADD(initialized_slots, ancestors.size());
+		KKT_WORK_ADD(verifier_edge_visits, G.size());
+		for (size_t i = 0; i < G.size(); ++i) {
+			const int from = query_from(G[i]), to = query_to(G[i]);
+			const int ancestor = ancestors[i] = lca.query(from, to);
+			if (ancestor != from) verifier.add_request(from, ancestor);
+			if (ancestor != to) verifier.add_request(to, ancestor);
+		}
+		verifier.compute_answer();
+		vector<unsigned char> heavy_marks(G.size(), 0);
+		KKT_WORK_ADD(initialized_slots, heavy_marks.size());
+		KKT_WORK_ADD(verifier_edge_visits, G.size());
+		for (size_t i = 0; i < G.size(); ++i) {
+			const int from = query_from(G[i]), to = query_to(G[i]);
+			// Preserve the API's unmarked self-loop result before any lookup.
+			if (from == to) continue;
+			const int ancestor = ancestors[i];
+			int maximum = numeric_limits<int>::lowest();
+			if (ancestor != from) maximum = max(maximum, verifier.lookup(from, ancestor));
+			if (ancestor != to) maximum = max(maximum, verifier.lookup(to, ancestor));
+			if (maximum < query_cost(G[i])) heavy_marks[i] = 1;
+		}
+		return heavy_marks;
+#else
 		int M = static_cast<int>(G.size());
 		vector<size_t> query_offsets(static_cast<size_t>(total_nodes) + 1, 0);
 		vector<path_query> queries;
@@ -407,6 +437,7 @@ struct test_graph
 				heavy_marks[i] = 1;
 		}
 		return heavy_marks;
+#endif
 	}
 };
 

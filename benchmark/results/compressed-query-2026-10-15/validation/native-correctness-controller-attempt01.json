@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/usr/local/opt/python@3.14/bin/python3.14",
+    "-B",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/build_compressed_queries.py",
+    "--profile",
+    "native-correctness",
+    "--output",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/validation",
+    "--parent-freeze",
+    "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/freeze.json"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-compressed-queries",
+  "started_utc": "2026-10-15T09:56:12.989944+00:00",
+  "status": "pass",
+  "recipe_sha256": "6a479edf88c079fdd6ac6c0729c3da97d6fc8cb921cac8f409f08d8c01d4fdbb",
+  "controller_purpose": "native correctness only; no timing or work-driver execution",
+  "exit_status": 0,
+  "elapsed_seconds": 37.25119945779443,
+  "finished_utc": "2026-10-15T09:56:50.243491+00:00",
+  "log": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/validation/native-correctness-controller-attempt01.log",
+  "log_sha256": "66ac7bb9761ca5baa012dd7cd32eb035293e82842516a0f7d69d20e305070bdd"
+}

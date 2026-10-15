@@ -1,0 +1,16 @@
+{
+  "exit_status": 0,
+  "command": [
+    "python3",
+    "-B",
+    "benchmark/test_compressed_queries.py"
+  ],
+  "elapsed_seconds": 14.01080795796588,
+  "source_sha256": "bfef545a0d9c9723c170b2e18953aa2477a22e64750c9b3cd9d580365388463c",
+  "collector_sha256": "6e42a9f11e395960bbba9e96a9bdbce626987f80c26764db9f260236e07d72ba",
+  "log": "benchmark/results/compressed-query-2026-10-15/validation/collector-tests-attempt02.log",
+  "native_performance_executed": false,
+  "owned_group": 24026,
+  "owned_group_empty": true,
+  "reason": "Refresh after docstring and trailing-blank-only cleanup; no behavioral changes."
+}

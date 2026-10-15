@@ -1,0 +1,3068 @@
+{
+  "groups": [
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-c",
+        "boruvka/boruvka.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/boruvka/boruvka.o"
+      ],
+      "process_group": 21784,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:19.863589+00:00",
+          "monotonic_ns": 3616151736578041,
+          "process_group": 21784,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616151740362083,
+        "process_group": 21784,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:19.867202+00:00",
+          "monotonic_ns": 3616151740369041,
+          "process_group": 21784,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616151740560166,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-c",
+        "kruskal/kruskal.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/kruskal/kruskal.o"
+      ],
+      "process_group": 21792,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:20.532270+00:00",
+          "monotonic_ns": 3616152405421416,
+          "process_group": 21792,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616152405982291,
+        "process_group": 21792,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:20.532818+00:00",
+          "monotonic_ns": 3616152405989125,
+          "process_group": 21792,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616152406148916,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-c",
+        "prim/prim.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/prim/prim.o"
+      ],
+      "process_group": 21800,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:21.164092+00:00",
+          "monotonic_ns": 3616153037246166,
+          "process_group": 21800,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616153037772000,
+        "process_group": 21800,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:21.164604+00:00",
+          "monotonic_ns": 3616153037776166,
+          "process_group": 21800,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616153037875041,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-c",
+        "lca/lca.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/lca/lca.o"
+      ],
+      "process_group": 21809,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:21.705954+00:00",
+          "monotonic_ns": 3616153579110291,
+          "process_group": 21809,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616153579733000,
+        "process_group": 21809,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:21.706569+00:00",
+          "monotonic_ns": 3616153579741333,
+          "process_group": 21809,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616153579937708,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-c",
+        "union_find/union_find.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/union_find/union_find.o"
+      ],
+      "process_group": 21813,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:22.071703+00:00",
+          "monotonic_ns": 3616153944855041,
+          "process_group": 21813,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616153945466625,
+        "process_group": 21813,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:22.072299+00:00",
+          "monotonic_ns": 3616153945471916,
+          "process_group": 21813,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616153945588500,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-c",
+        "graph_utils/graph_utils.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/graph_utils/graph_utils.o"
+      ],
+      "process_group": 21817,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:22.713539+00:00",
+          "monotonic_ns": 3616154586685416,
+          "process_group": 21817,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616154587496958,
+        "process_group": 21817,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:22.714331+00:00",
+          "monotonic_ns": 3616154587503458,
+          "process_group": 21817,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616154587673708,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-c",
+        "kkt/kkt.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/kkt/kkt.o"
+      ],
+      "process_group": 21827,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:23.690132+00:00",
+          "monotonic_ns": 3616155563291708,
+          "process_group": 21827,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616155563887958,
+        "process_group": 21827,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:23.690719+00:00",
+          "monotonic_ns": 3616155563893083,
+          "process_group": 21827,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616155564041208,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-c",
+        "verifier/verifier_v2.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/reference/verifier/verifier_v2.o"
+      ],
+      "process_group": 21836,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:25.030690+00:00",
+          "monotonic_ns": 3616156903845291,
+          "process_group": 21836,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616156904549250,
+        "process_group": 21836,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:25.031378+00:00",
+          "monotonic_ns": 3616156904553875,
+          "process_group": 21836,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616156904703833,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-DKKT_EXPERIMENT_COMPRESSED_QUERIES",
+        "-c",
+        "verifier/verifier_v2.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/compressed/verifier/verifier_v2.o"
+      ],
+      "process_group": 21849,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:26.339203+00:00",
+          "monotonic_ns": 3616158212343958,
+          "process_group": 21849,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616158213427291,
+        "process_group": 21849,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:26.340257+00:00",
+          "monotonic_ns": 3616158213434041,
+          "process_group": 21849,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616158213651416,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-c",
+        "test/compressed_query_test.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/test/compressed_query_test.o"
+      ],
+      "process_group": 21878,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:27.708328+00:00",
+          "monotonic_ns": 3616159581484583,
+          "process_group": 21878,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616159582156875,
+        "process_group": 21878,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:27.708983+00:00",
+          "monotonic_ns": 3616159582162000,
+          "process_group": 21878,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616159582315083,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/reference/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/test/compressed_query_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/reference/compressed_query_test"
+      ],
+      "process_group": 21925,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:27.890366+00:00",
+          "monotonic_ns": 3616159763522083,
+          "process_group": 21925,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616159764227208,
+        "process_group": 21925,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:27.891053+00:00",
+          "monotonic_ns": 3616159764232250,
+          "process_group": 21925,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616159764350458,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/compressed/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/test/compressed_query_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/compressed/compressed_query_test"
+      ],
+      "process_group": 21930,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:28.169360+00:00",
+          "monotonic_ns": 3616160042503208,
+          "process_group": 21930,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616160043382375,
+        "process_group": 21930,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:28.170211+00:00",
+          "monotonic_ns": 3616160043389958,
+          "process_group": 21930,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616160043539916,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-c",
+        "test/edge_verifier_view_test.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/test/edge_verifier_view_test.o"
+      ],
+      "process_group": 21944,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:29.788326+00:00",
+          "monotonic_ns": 3616161661475250,
+          "process_group": 21944,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616161662233958,
+        "process_group": 21944,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:29.789060+00:00",
+          "monotonic_ns": 3616161662240083,
+          "process_group": 21944,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616161662404708,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/reference/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/test/edge_verifier_view_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/reference/edge_verifier_view_test"
+      ],
+      "process_group": 21971,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:29.972640+00:00",
+          "monotonic_ns": 3616161845785583,
+          "process_group": 21971,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616161846679791,
+        "process_group": 21971,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:29.973506+00:00",
+          "monotonic_ns": 3616161846687208,
+          "process_group": 21971,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616161846840583,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/compressed/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/test/edge_verifier_view_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/compressed/edge_verifier_view_test"
+      ],
+      "process_group": 21990,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:30.258700+00:00",
+          "monotonic_ns": 3616162131858166,
+          "process_group": 21990,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616162132650208,
+        "process_group": 21990,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:30.259474+00:00",
+          "monotonic_ns": 3616162132655458,
+          "process_group": 21990,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616162132841291,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-c",
+        "test/multigraph_contraction_test.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/test/multigraph_contraction_test.o"
+      ],
+      "process_group": 21997,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:32.397602+00:00",
+          "monotonic_ns": 3616164270761000,
+          "process_group": 21997,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616164271565750,
+        "process_group": 21997,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:32.398390+00:00",
+          "monotonic_ns": 3616164271573083,
+          "process_group": 21997,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616164271739208,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/reference/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/test/multigraph_contraction_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/reference/multigraph_contraction_test"
+      ],
+      "process_group": 22028,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:32.575980+00:00",
+          "monotonic_ns": 3616164449138458,
+          "process_group": 22028,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616164450011166,
+        "process_group": 22028,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:32.576835+00:00",
+          "monotonic_ns": 3616164450018416,
+          "process_group": 22028,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616164450150916,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/compressed/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/test/multigraph_contraction_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/compressed/multigraph_contraction_test"
+      ],
+      "process_group": 22035,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:32.864674+00:00",
+          "monotonic_ns": 3616164737836416,
+          "process_group": 22035,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616164738616375,
+        "process_group": 22035,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:32.865439+00:00",
+          "monotonic_ns": 3616164738622666,
+          "process_group": 22035,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616164738753208,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-c",
+        "test/regression_test.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/test/regression_test.o"
+      ],
+      "process_group": 22043,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:34.607147+00:00",
+          "monotonic_ns": 3616166480311041,
+          "process_group": 22043,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616166481116208,
+        "process_group": 22043,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:34.607938+00:00",
+          "monotonic_ns": 3616166481121958,
+          "process_group": 22043,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616166481262916,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/reference/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/test/regression_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/reference/regression_test"
+      ],
+      "process_group": 22062,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:34.732637+00:00",
+          "monotonic_ns": 3616166605805625,
+          "process_group": 22062,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616166606319625,
+        "process_group": 22062,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:34.733140+00:00",
+          "monotonic_ns": 3616166606325666,
+          "process_group": 22062,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616166606453208,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/compressed/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/test/regression_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/compressed/regression_test"
+      ],
+      "process_group": 22068,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:35.008358+00:00",
+          "monotonic_ns": 3616166881518291,
+          "process_group": 22068,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616166882399291,
+        "process_group": 22068,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:35.009220+00:00",
+          "monotonic_ns": 3616166882406458,
+          "process_group": 22068,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616166882546583,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-c",
+        "test/contraction_test.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/test/contraction_test.o"
+      ],
+      "process_group": 22094,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:36.482099+00:00",
+          "monotonic_ns": 3616168355265583,
+          "process_group": 22094,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616168355929000,
+        "process_group": 22094,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:36.482747+00:00",
+          "monotonic_ns": 3616168355934916,
+          "process_group": 22094,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616168356065291,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/reference/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/test/contraction_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/reference/contraction_test"
+      ],
+      "process_group": 22108,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:36.668879+00:00",
+          "monotonic_ns": 3616168542028916,
+          "process_group": 22108,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616168542966958,
+        "process_group": 22108,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:36.669786+00:00",
+          "monotonic_ns": 3616168542973833,
+          "process_group": 22108,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616168543113500,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/compressed/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/test/contraction_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/compressed/contraction_test"
+      ],
+      "process_group": 22115,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:36.907382+00:00",
+          "monotonic_ns": 3616168780551083,
+          "process_group": 22115,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616168781155416,
+        "process_group": 22115,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:36.907972+00:00",
+          "monotonic_ns": 3616168781160833,
+          "process_group": 22115,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616168781264833,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-c",
+        "test/simple_test.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/test/simple_test.o"
+      ],
+      "process_group": 22122,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:37.720917+00:00",
+          "monotonic_ns": 3616169594090083,
+          "process_group": 22122,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616169594689125,
+        "process_group": 22122,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:37.721505+00:00",
+          "monotonic_ns": 3616169594694458,
+          "process_group": 22122,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616169594862875,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/reference/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/test/simple_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/reference/simple_test"
+      ],
+      "process_group": 22129,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:37.899696+00:00",
+          "monotonic_ns": 3616169772861125,
+          "process_group": 22129,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616169773641958,
+        "process_group": 22129,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:37.900464+00:00",
+          "monotonic_ns": 3616169773648125,
+          "process_group": 22129,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616169773781166,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/compressed/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/test/simple_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/compressed/simple_test"
+      ],
+      "process_group": 22134,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:38.123256+00:00",
+          "monotonic_ns": 3616169996429375,
+          "process_group": 22134,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616169996964791,
+        "process_group": 22134,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:38.123780+00:00",
+          "monotonic_ns": 3616169996969750,
+          "process_group": 22134,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616169997109125,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-c",
+        "benchmark/core_attachment_test.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/benchmark/core_attachment_test.o"
+      ],
+      "process_group": 22141,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:40.260101+00:00",
+          "monotonic_ns": 3616172133275875,
+          "process_group": 22141,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 22141,
+              "rss_kib": 323088,
+              "command": "/opt/homebrew/Cellar/llvm/22.1.8/bin/clang-22"
+            }
+          ],
+          "rss_kib": 323088
+        },
+        {
+          "utc": "2026-10-15T09:57:41.385203+00:00",
+          "monotonic_ns": 3616173258385458,
+          "process_group": 22141,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616173258812208,
+        "process_group": 22141,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:41.385625+00:00",
+          "monotonic_ns": 3616173258818250,
+          "process_group": 22141,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616173258959833,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/reference/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/benchmark/core_attachment_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/reference/core_attachment_test"
+      ],
+      "process_group": 22172,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:41.563220+00:00",
+          "monotonic_ns": 3616173436386291,
+          "process_group": 22172,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616173437228458,
+        "process_group": 22172,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:41.564045+00:00",
+          "monotonic_ns": 3616173437235375,
+          "process_group": 22172,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616173437363375,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/compressed/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/benchmark/core_attachment_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/compressed/core_attachment_test"
+      ],
+      "process_group": 22179,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:41.858967+00:00",
+          "monotonic_ns": 3616173732126791,
+          "process_group": 22179,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616173733361875,
+        "process_group": 22179,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:41.860184+00:00",
+          "monotonic_ns": 3616173733375750,
+          "process_group": 22179,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616173733564500,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-c",
+        "benchmark/certificate_test.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/benchmark/certificate_test.o"
+      ],
+      "process_group": 22184,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:42.821192+00:00",
+          "monotonic_ns": 3616174694372000,
+          "process_group": 22184,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616174694949666,
+        "process_group": 22184,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:42.821761+00:00",
+          "monotonic_ns": 3616174694955416,
+          "process_group": 22184,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616174695071666,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/reference/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/benchmark/certificate_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/reference/certificate_test"
+      ],
+      "process_group": 22193,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:43.004021+00:00",
+          "monotonic_ns": 3616174877178500,
+          "process_group": 22193,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616174878286875,
+        "process_group": 22193,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:43.005120+00:00",
+          "monotonic_ns": 3616174878314041,
+          "process_group": 22193,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616174878520541,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/compressed/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/sanitizer-correctness/shared/benchmark/certificate_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/compressed/certificate_test"
+      ],
+      "process_group": 22202,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:43.293722+00:00",
+          "monotonic_ns": 3616175166896458,
+          "process_group": 22202,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616175167505583,
+        "process_group": 22202,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:43.294316+00:00",
+          "monotonic_ns": 3616175167511333,
+          "process_group": 22202,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616175167665750,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/reference/compressed_query_test",
+        "reference"
+      ],
+      "process_group": 22221,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:44.391172+00:00",
+          "monotonic_ns": 3616176264336041,
+          "process_group": 22221,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616176265067833,
+        "process_group": 22221,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:44.391878+00:00",
+          "monotonic_ns": 3616176265074291,
+          "process_group": 22221,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616176265224625,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/reference/edge_verifier_view_test"
+      ],
+      "process_group": 22236,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:45.546799+00:00",
+          "monotonic_ns": 3616177419966083,
+          "process_group": 22236,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616177420593750,
+        "process_group": 22236,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:45.547402+00:00",
+          "monotonic_ns": 3616177420599666,
+          "process_group": 22236,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616177420721500,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/reference/multigraph_contraction_test"
+      ],
+      "process_group": 22247,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:47.574438+00:00",
+          "monotonic_ns": 3616179447617958,
+          "process_group": 22247,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 22247,
+              "rss_kib": 608544,
+              "command": "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/reference/multigraph_contraction_test"
+            }
+          ],
+          "rss_kib": 608544
+        },
+        {
+          "utc": "2026-10-15T09:57:49.585253+00:00",
+          "monotonic_ns": 3616181458448833,
+          "process_group": 22247,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 22247,
+              "rss_kib": 776928,
+              "command": "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/reference/multigraph_contraction_test"
+            }
+          ],
+          "rss_kib": 776928
+        },
+        {
+          "utc": "2026-10-15T09:57:51.593153+00:00",
+          "monotonic_ns": 3616183466350916,
+          "process_group": 22247,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 22247,
+              "rss_kib": 777280,
+              "command": "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/reference/multigraph_contraction_test"
+            }
+          ],
+          "rss_kib": 777280
+        },
+        {
+          "utc": "2026-10-15T09:57:53.600694+00:00",
+          "monotonic_ns": 3616185473894375,
+          "process_group": 22247,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 22247,
+              "rss_kib": 849920,
+              "command": "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/reference/multigraph_contraction_test"
+            }
+          ],
+          "rss_kib": 849920
+        },
+        {
+          "utc": "2026-10-15T09:57:55.606119+00:00",
+          "monotonic_ns": 3616187479321583,
+          "process_group": 22247,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 22247,
+              "rss_kib": 922864,
+              "command": "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/reference/multigraph_contraction_test"
+            }
+          ],
+          "rss_kib": 922864
+        },
+        {
+          "utc": "2026-10-15T09:57:57.160737+00:00",
+          "monotonic_ns": 3616189033934250,
+          "process_group": 22247,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616189034535208,
+        "process_group": 22247,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:57.161340+00:00",
+          "monotonic_ns": 3616189034549000,
+          "process_group": 22247,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616189034772833,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/reference/regression_test"
+      ],
+      "process_group": 22374,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:58.024829+00:00",
+          "monotonic_ns": 3616189898209291,
+          "process_group": 22374,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616189898904458,
+        "process_group": 22374,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:58.025514+00:00",
+          "monotonic_ns": 3616189898912875,
+          "process_group": 22374,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616189899037541,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/reference/contraction_test"
+      ],
+      "process_group": 22384,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:58.580604+00:00",
+          "monotonic_ns": 3616190454369291,
+          "process_group": 22384,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616190454994791,
+        "process_group": 22384,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:58.581218+00:00",
+          "monotonic_ns": 3616190455001958,
+          "process_group": 22384,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616190455113916,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/reference/simple_test"
+      ],
+      "process_group": 22391,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:57:59.142892+00:00",
+          "monotonic_ns": 3616191017012708,
+          "process_group": 22391,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616191018108958,
+        "process_group": 22391,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:57:59.143964+00:00",
+          "monotonic_ns": 3616191018119208,
+          "process_group": 22391,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616191018251333,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/reference/core_attachment_test"
+      ],
+      "process_group": 22396,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:58:01.167743+00:00",
+          "monotonic_ns": 3616193043120791,
+          "process_group": 22396,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 22396,
+              "rss_kib": 571968,
+              "command": "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/reference/core_attachment_test"
+            }
+          ],
+          "rss_kib": 571968
+        },
+        {
+          "utc": "2026-10-15T09:58:03.167506+00:00",
+          "monotonic_ns": 3616195043969750,
+          "process_group": 22396,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 22396,
+              "rss_kib": 582944,
+              "command": "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/reference/core_attachment_test"
+            }
+          ],
+          "rss_kib": 582944
+        },
+        {
+          "utc": "2026-10-15T09:58:05.175176+00:00",
+          "monotonic_ns": 3616197052589583,
+          "process_group": 22396,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 22396,
+              "rss_kib": 642704,
+              "command": "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/reference/core_attachment_test"
+            }
+          ],
+          "rss_kib": 642704
+        },
+        {
+          "utc": "2026-10-15T09:58:07.182027+00:00",
+          "monotonic_ns": 3616199060276125,
+          "process_group": 22396,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 22396,
+              "rss_kib": 731024,
+              "command": "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/reference/core_attachment_test"
+            }
+          ],
+          "rss_kib": 731024
+        },
+        {
+          "utc": "2026-10-15T09:58:09.181959+00:00",
+          "monotonic_ns": 3616201060938000,
+          "process_group": 22396,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 22396,
+              "rss_kib": 697200,
+              "command": "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/reference/core_attachment_test"
+            }
+          ],
+          "rss_kib": 697200
+        },
+        {
+          "utc": "2026-10-15T09:58:11.191929+00:00",
+          "monotonic_ns": 3616203071557666,
+          "process_group": 22396,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 22396,
+              "rss_kib": 660192,
+              "command": "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/reference/core_attachment_test"
+            }
+          ],
+          "rss_kib": 660192
+        },
+        {
+          "utc": "2026-10-15T09:58:13.192007+00:00",
+          "monotonic_ns": 3616205072200625,
+          "process_group": 22396,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 22396,
+              "rss_kib": 633376,
+              "command": "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/reference/core_attachment_test"
+            }
+          ],
+          "rss_kib": 633376
+        },
+        {
+          "utc": "2026-10-15T09:58:15.202109+00:00",
+          "monotonic_ns": 3616207082804625,
+          "process_group": 22396,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 22396,
+              "rss_kib": 683520,
+              "command": "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/reference/core_attachment_test"
+            }
+          ],
+          "rss_kib": 683520
+        },
+        {
+          "utc": "2026-10-15T09:58:17.212189+00:00",
+          "monotonic_ns": 3616209093327416,
+          "process_group": 22396,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 22396,
+              "rss_kib": 737952,
+              "command": "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/reference/core_attachment_test"
+            }
+          ],
+          "rss_kib": 737952
+        },
+        {
+          "utc": "2026-10-15T09:58:19.222280+00:00",
+          "monotonic_ns": 3616211103806000,
+          "process_group": 22396,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 22396,
+              "rss_kib": 691184,
+              "command": "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/reference/core_attachment_test"
+            }
+          ],
+          "rss_kib": 691184
+        },
+        {
+          "utc": "2026-10-15T09:58:20.075887+00:00",
+          "monotonic_ns": 3616211957561041,
+          "process_group": 22396,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616211957958541,
+        "process_group": 22396,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:58:20.076286+00:00",
+          "monotonic_ns": 3616211957968708,
+          "process_group": 22396,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616211958079458,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/reference/certificate_test"
+      ],
+      "process_group": 22584,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:58:20.637009+00:00",
+          "monotonic_ns": 3616212518759041,
+          "process_group": 22584,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616212519650333,
+        "process_group": 22584,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:58:20.637880+00:00",
+          "monotonic_ns": 3616212519657458,
+          "process_group": 22584,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616212519836333,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/compressed/compressed_query_test",
+        "compressed"
+      ],
+      "process_group": 22590,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:58:21.385971+00:00",
+          "monotonic_ns": 3616213267853291,
+          "process_group": 22590,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616213268454375,
+        "process_group": 22590,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:58:21.386563+00:00",
+          "monotonic_ns": 3616213268461291,
+          "process_group": 22590,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616213268631458,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/compressed/edge_verifier_view_test"
+      ],
+      "process_group": 22603,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:58:22.587681+00:00",
+          "monotonic_ns": 3616214469746625,
+          "process_group": 22603,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616214470397125,
+        "process_group": 22603,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:58:22.588327+00:00",
+          "monotonic_ns": 3616214470406708,
+          "process_group": 22603,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616214470596416,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/compressed/multigraph_contraction_test"
+      ],
+      "process_group": 22646,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:58:24.608153+00:00",
+          "monotonic_ns": 3616216490496083,
+          "process_group": 22646,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 22646,
+              "rss_kib": 595280,
+              "command": "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/compressed/multigraph_contraction_test"
+            }
+          ],
+          "rss_kib": 595280
+        },
+        {
+          "utc": "2026-10-15T09:58:26.618583+00:00",
+          "monotonic_ns": 3616218501180500,
+          "process_group": 22646,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 22646,
+              "rss_kib": 776992,
+              "command": "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/compressed/multigraph_contraction_test"
+            }
+          ],
+          "rss_kib": 776992
+        },
+        {
+          "utc": "2026-10-15T09:58:28.628945+00:00",
+          "monotonic_ns": 3616220511758333,
+          "process_group": 22646,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 22646,
+              "rss_kib": 777424,
+              "command": "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/compressed/multigraph_contraction_test"
+            }
+          ],
+          "rss_kib": 777424
+        },
+        {
+          "utc": "2026-10-15T09:58:30.637772+00:00",
+          "monotonic_ns": 3616222520774583,
+          "process_group": 22646,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 22646,
+              "rss_kib": 839744,
+              "command": "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/compressed/multigraph_contraction_test"
+            }
+          ],
+          "rss_kib": 839744
+        },
+        {
+          "utc": "2026-10-15T09:58:32.648127+00:00",
+          "monotonic_ns": 3616224531299000,
+          "process_group": 22646,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 22646,
+              "rss_kib": 919824,
+              "command": "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/compressed/multigraph_contraction_test"
+            }
+          ],
+          "rss_kib": 919824
+        },
+        {
+          "utc": "2026-10-15T09:58:34.293428+00:00",
+          "monotonic_ns": 3616226176718291,
+          "process_group": 22646,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616226177257125,
+        "process_group": 22646,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:58:34.293972+00:00",
+          "monotonic_ns": 3616226177270166,
+          "process_group": 22646,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616226177444958,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/compressed/regression_test"
+      ],
+      "process_group": 22779,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:58:35.139575+00:00",
+          "monotonic_ns": 3616227022914000,
+          "process_group": 22779,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616227023702583,
+        "process_group": 22779,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:58:35.140355+00:00",
+          "monotonic_ns": 3616227023711625,
+          "process_group": 22779,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616227023851250,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/compressed/contraction_test"
+      ],
+      "process_group": 22785,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:58:35.708032+00:00",
+          "monotonic_ns": 3616227591409500,
+          "process_group": 22785,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616227592090375,
+        "process_group": 22785,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:58:35.708702+00:00",
+          "monotonic_ns": 3616227592097875,
+          "process_group": 22785,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616227592223416,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/compressed/simple_test"
+      ],
+      "process_group": 22790,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:58:36.274751+00:00",
+          "monotonic_ns": 3616228158155541,
+          "process_group": 22790,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616228159139666,
+        "process_group": 22790,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:58:36.275718+00:00",
+          "monotonic_ns": 3616228159149250,
+          "process_group": 22790,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616228159287416,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/compressed/core_attachment_test"
+      ],
+      "process_group": 22796,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:58:38.298004+00:00",
+          "monotonic_ns": 3616230181535958,
+          "process_group": 22796,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 22796,
+              "rss_kib": 559664,
+              "command": "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/compressed/core_attachment_test"
+            }
+          ],
+          "rss_kib": 559664
+        },
+        {
+          "utc": "2026-10-15T09:58:40.300160+00:00",
+          "monotonic_ns": 3616232183809958,
+          "process_group": 22796,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 22796,
+              "rss_kib": 573184,
+              "command": "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/compressed/core_attachment_test"
+            }
+          ],
+          "rss_kib": 573184
+        },
+        {
+          "utc": "2026-10-15T09:58:42.307540+00:00",
+          "monotonic_ns": 3616234191284500,
+          "process_group": 22796,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 22796,
+              "rss_kib": 630960,
+              "command": "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/compressed/core_attachment_test"
+            }
+          ],
+          "rss_kib": 630960
+        },
+        {
+          "utc": "2026-10-15T09:58:44.312991+00:00",
+          "monotonic_ns": 3616236196817541,
+          "process_group": 22796,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 22796,
+              "rss_kib": 716560,
+              "command": "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/compressed/core_attachment_test"
+            }
+          ],
+          "rss_kib": 716560
+        },
+        {
+          "utc": "2026-10-15T09:58:46.323428+00:00",
+          "monotonic_ns": 3616238207330083,
+          "process_group": 22796,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 22796,
+              "rss_kib": 676064,
+              "command": "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/compressed/core_attachment_test"
+            }
+          ],
+          "rss_kib": 676064
+        },
+        {
+          "utc": "2026-10-15T09:58:48.333864+00:00",
+          "monotonic_ns": 3616240217831458,
+          "process_group": 22796,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 22796,
+              "rss_kib": 664816,
+              "command": "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/compressed/core_attachment_test"
+            }
+          ],
+          "rss_kib": 664816
+        },
+        {
+          "utc": "2026-10-15T09:58:50.344291+00:00",
+          "monotonic_ns": 3616242228316291,
+          "process_group": 22796,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 22796,
+              "rss_kib": 623424,
+              "command": "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/compressed/core_attachment_test"
+            }
+          ],
+          "rss_kib": 623424
+        },
+        {
+          "utc": "2026-10-15T09:58:52.352580+00:00",
+          "monotonic_ns": 3616244236658916,
+          "process_group": 22796,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 22796,
+              "rss_kib": 662224,
+              "command": "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/compressed/core_attachment_test"
+            }
+          ],
+          "rss_kib": 662224
+        },
+        {
+          "utc": "2026-10-15T09:58:54.353354+00:00",
+          "monotonic_ns": 3616246237480125,
+          "process_group": 22796,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 22796,
+              "rss_kib": 714416,
+              "command": "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/compressed/core_attachment_test"
+            }
+          ],
+          "rss_kib": 714416
+        },
+        {
+          "utc": "2026-10-15T09:58:56.357799+00:00",
+          "monotonic_ns": 3616248241968041,
+          "process_group": 22796,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 22796,
+              "rss_kib": 673184,
+              "command": "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/compressed/core_attachment_test"
+            }
+          ],
+          "rss_kib": 673184
+        },
+        {
+          "utc": "2026-10-15T09:58:57.280186+00:00",
+          "monotonic_ns": 3616249164365500,
+          "process_group": 22796,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616249164997750,
+        "process_group": 22796,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:58:57.280819+00:00",
+          "monotonic_ns": 3616249165010875,
+          "process_group": 22796,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616249165228875,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/compressed/certificate_test"
+      ],
+      "process_group": 23038,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:58:57.855554+00:00",
+          "monotonic_ns": 3616249739731500,
+          "process_group": 23038,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3616249740753791,
+        "process_group": 23038,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T09:58:57.856561+00:00",
+          "monotonic_ns": 3616249740763375,
+          "process_group": 23038,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616249740994291,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/reference/compressed_query_test",
+        "compressed"
+      ],
+      "process_group": 23039,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:58:58.318302+00:00",
+          "monotonic_ns": 3616250202464208,
+          "process_group": 23039,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 1,
+      "cleanup": {
+        "started_monotonic_ns": 3616250203048458,
+        "process_group": 23039,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 1,
+        "group_verification": {
+          "utc": "2026-10-15T09:58:58.318844+00:00",
+          "monotonic_ns": 3616250203055791,
+          "process_group": 23039,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616250203171458,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/compressed-query/sanitizer-correctness/compressed/compressed_query_test",
+        "reference"
+      ],
+      "process_group": 23058,
+      "observations": [
+        {
+          "utc": "2026-10-15T09:58:58.832247+00:00",
+          "monotonic_ns": 3616250716435000,
+          "process_group": 23058,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 1,
+      "cleanup": {
+        "started_monotonic_ns": 3616250716996625,
+        "process_group": 23058,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 1,
+        "group_verification": {
+          "utc": "2026-10-15T09:58:58.832783+00:00",
+          "monotonic_ns": 3616250717003458,
+          "process_group": 23058,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3616250717157458,
+        "native_process_may_still_be_running": false
+      }
+    }
+  ]
+}
