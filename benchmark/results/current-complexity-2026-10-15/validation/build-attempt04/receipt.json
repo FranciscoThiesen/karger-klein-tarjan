@@ -1,0 +1,1391 @@
+{
+  "schema": "current_complexity_outer_gate_v1",
+  "validation": "pass",
+  "phase": "build",
+  "command": [
+    "/usr/bin/arch",
+    "-arm64",
+    "/usr/bin/python3",
+    "-B",
+    "-u",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/build_library_main.py",
+    "build",
+    "--parent-freeze",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/freeze.json",
+    "--library-source",
+    "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04",
+    "--build-directory",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04",
+    "--git-resolve",
+    "github.com:443:20.29.134.23",
+    "--output",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/build-attempt04/inner",
+    "--released"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "package": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity",
+  "started_monotonic_ns": 99234916,
+  "started_utc": "2026-10-15T18:20:49.931194+00:00",
+  "complete_interval_budget_seconds": 2100,
+  "deadline_scope": "launch through cleanup and full inner proof",
+  "cleanup_term_seconds": 30,
+  "cleanup_kill_seconds": 5,
+  "source_sha256": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/ANALYSIS_PREPARATION.md": "e6f39638a6e0090bff09e91287c4f72f18ae850d0b42e8d19cfcd20fc9cb4a0a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/BUILD_GATE_PLAN.md": "38bd2572cad662bf72735fae6dc132a2364e57ef8fc6d33c858180de29e78694",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/BUILD_PLAN.md": "d99f323e0c07fb7d29034cb78903f78037d19535482048202fdeea76e7d32d4a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/COLLECTOR_ANALYSIS_CONTRACT.md": "a9f6b4add1038928e35b19ef4a89327406b0353845057bd8f2cc10efaf5f849b",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/DESIGN.md": "aa085c47e0da1b0f0ce1c7979d10b5f8f75592c6f70d853bdb816bda0edb4a7f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/INDEPENDENT_ANALYSIS_SOURCE_REVIEW.md": "a78e0aea4ece9c831e0aa11a9cf307ee34a47ba1189cdcce6db1302b1c483f59",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/INDEPENDENT_BUILD_GATE_SOURCE_REVIEW.md": "fa79ad17a950ef28621b91a4afa7fcadb4d157fe51a551c08f3fdb3df4975432",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/INDEPENDENT_BUILD_PRODUCER_SOURCE_REVIEW.md": "60adf9852ddc6b33f6b6f62759cb424ea8738afed557ee2da492189cb802d173",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/INDEPENDENT_COLLECTOR_SOURCE_REVIEW.md": "7627a61db149060599970b8b4c5baeaadcecd54026ef40213f2a732b1c0d05eb",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/INDEPENDENT_PLOT_SOURCE_REVIEW.md": "5a2143662da67b90ac7caa507e87027d32efe934bba740f1a0ff63e4ffcf3bfd",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/INDEPENDENT_SOURCE_REVIEW.md": "dff4ba19e1353b430d01fd52e7b036d51a1147d7db6ed3ba82bde8042eceed9f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/PLOT_PREPARATION.md": "71e8a20cccd8ca7fb5f34761d778fdb35c7f16e4943afb388fe59bb068da0505",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/PROTOCOL.md": "ce9bcd7ff6d19d6b715d1e741c410f0260eaa0e771bd107e209269c6ba05434d",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/SEED_FRESHNESS.md": "a5c772325176cd6aaedd78e97832a6833bd7f57005f98ec2860ad7b3d51f0225",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/analyze_complexity.py": "4ccd57d906c3fea7191f6819a6bf57e3aecdfa966b7eb0a11737752cdfc19c3f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/build_library_main.py": "989bec37ed7d1cea927e7d0eae6ef922a210e403b68241ec8bdbb8981467ab4f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/collect.py": "69c34734e478c43d158ecb01d2e77cdff4d1ad0274424be647723fc7e6bdc393",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/current_complexity.cpp": "ccc746954240cb7432cf137357b32f077994729df6fa01e092aadec1f53629a4",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/plot_complexity.py": "f18ddc540b60ad1556e00b5961dd44683aa999f25e278df91e65d267993aa7fd",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/test_analyze_complexity.py": "67e519995e8f1db0d6ab5bf953417d0c67266aa190f6e32da047e3dbc8e7f255",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/test_build_library_main.py": "f371c4442576887d97f3be6e99c37e2481adf96eb53d283c0a9fd686614ac66b",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/test_collect.py": "71b09016017bec0aae5b0444b5ee33891b678f6dd9512cf7a4b8736c2ce4e814",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/test_validate_build.py": "37d26e018aba191d66eb4948b3158eed455d3257e57478c63a02b755d7528cd6",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/validate_build.py": "cb08e4c7e798cf48b27330009e68f1c93ff4aa78b55419de67cc646d5a687a6a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/launch-preparation/run_gate_attempt.py": "27241bdc69dceb635b22fb91f175f73adab600aae208f1f11e24b92317eed65c"
+  },
+  "input_sha256": {},
+  "performance_execution_authorized": false,
+  "native_library_execution_authorized": true,
+  "native_solver_execution_authorized": false,
+  "native_library_execution": true,
+  "native_solver_execution": false,
+  "outer_observations": [
+    {
+      "utc": "2026-10-15T18:20:51.936111+00:00",
+      "monotonic_ns": 2104122541,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 24608,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 24608
+    },
+    {
+      "utc": "2026-10-15T18:20:53.945957+00:00",
+      "monotonic_ns": 4113984500,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 26992,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26992
+    },
+    {
+      "utc": "2026-10-15T18:20:55.950416+00:00",
+      "monotonic_ns": 6118435416,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 26992,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26992
+    },
+    {
+      "utc": "2026-10-15T18:20:57.958544+00:00",
+      "monotonic_ns": 8126558625,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 26992,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26992
+    },
+    {
+      "utc": "2026-10-15T18:20:59.960001+00:00",
+      "monotonic_ns": 10128008708,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 26992,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26992
+    },
+    {
+      "utc": "2026-10-15T18:21:01.969542+00:00",
+      "monotonic_ns": 12137542333,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:21:03.970909+00:00",
+      "monotonic_ns": 14138904375,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:21:05.971691+00:00",
+      "monotonic_ns": 16139678625,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:21:07.982130+00:00",
+      "monotonic_ns": 18150112333,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:21:09.982884+00:00",
+      "monotonic_ns": 20150859416,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:21:11.987995+00:00",
+      "monotonic_ns": 22155961958,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:21:13.989483+00:00",
+      "monotonic_ns": 24157441833,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:21:15.990524+00:00",
+      "monotonic_ns": 26158479208,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:21:18.000936+00:00",
+      "monotonic_ns": 28168882125,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:21:20.002384+00:00",
+      "monotonic_ns": 30170326000,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:21:22.006628+00:00",
+      "monotonic_ns": 32174563500,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:21:24.009144+00:00",
+      "monotonic_ns": 34177072666,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:21:26.016548+00:00",
+      "monotonic_ns": 36184468750,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:21:28.025539+00:00",
+      "monotonic_ns": 38193455000,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:21:30.026825+00:00",
+      "monotonic_ns": 40194690500,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:21:32.037890+00:00",
+      "monotonic_ns": 42205791833,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:21:34.039327+00:00",
+      "monotonic_ns": 44207223083,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:21:36.040981+00:00",
+      "monotonic_ns": 46208867625,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:21:38.049878+00:00",
+      "monotonic_ns": 48217757583,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:21:40.051228+00:00",
+      "monotonic_ns": 50219100833,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:21:42.060677+00:00",
+      "monotonic_ns": 52228542541,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:21:44.066785+00:00",
+      "monotonic_ns": 54234644125,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:21:46.067874+00:00",
+      "monotonic_ns": 56235726625,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:21:48.070722+00:00",
+      "monotonic_ns": 58238568583,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:21:50.081280+00:00",
+      "monotonic_ns": 60249121833,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:21:52.082945+00:00",
+      "monotonic_ns": 62250775750,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:21:54.093117+00:00",
+      "monotonic_ns": 64260942958,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:21:56.101427+00:00",
+      "monotonic_ns": 66269248166,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:21:58.104422+00:00",
+      "monotonic_ns": 68272234208,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:22:00.113846+00:00",
+      "monotonic_ns": 70281652416,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:22:02.117664+00:00",
+      "monotonic_ns": 72285463291,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:22:04.122330+00:00",
+      "monotonic_ns": 74290122458,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:22:06.126314+00:00",
+      "monotonic_ns": 76294102166,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:22:08.128140+00:00",
+      "monotonic_ns": 78295919791,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:22:10.130093+00:00",
+      "monotonic_ns": 80297865416,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:22:12.137260+00:00",
+      "monotonic_ns": 82305026291,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:22:14.138816+00:00",
+      "monotonic_ns": 84306574916,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:22:16.142445+00:00",
+      "monotonic_ns": 86310200125,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:22:18.143300+00:00",
+      "monotonic_ns": 88311049541,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 87554,
+          "rss_kib": 27008,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 27008
+    },
+    {
+      "utc": "2026-10-15T18:22:19.429906+00:00",
+      "monotonic_ns": 89597650083,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    }
+  ],
+  "outer_group_verified_empty": true,
+  "detached_native_groups_verified_empty": true,
+  "detached_native_process_may_still_be_running": false,
+  "all_owned_groups_verified_empty": true,
+  "outer_process_group": 87554,
+  "wrapper_exit_observed_monotonic_ns": 89597952750,
+  "outer_cleanup": {
+    "started_monotonic_ns": 89598068000,
+    "process_group": 87554,
+    "signals": [],
+    "native_exit_known": true,
+    "group_exit_known": true,
+    "returncode": 0,
+    "group_verification": {
+      "utc": "2026-10-15T18:22:19.430325+00:00",
+      "monotonic_ns": 89598071625,
+      "process_group": 87554,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    "finished_monotonic_ns": 89598196208,
+    "native_process_may_still_be_running": false
+  },
+  "exit_status": 0,
+  "inner_proof": {
+    "validation": "pass",
+    "current_phase_groups": 6,
+    "bound_sha256": {
+      "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/freeze.json": "2be7556d15b58f3f65cc380ac22b67c57fdf8aea747d651b9d648c6a1aa59d2f",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/current_complexity.cpp": "ccc746954240cb7432cf137357b32f077994729df6fa01e092aadec1f53629a4",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/current_complexity.o": "3cd7ab1b2d7c043e79f49a94b0e75a2cc8d515ec815f31298ef35300f355cd76",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/current_complexity": "d9db66dbb9a8509e502d9a34e9bcd9e66390305d1d1212f4e52e6af3fc3733fa",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/src/libbenchmark.a": "dc6b2bda7f4c9cdd383a6ffcce031577b27c922f925b34a3f70c0b8916c76cf2",
+      "/usr/local/lib/python3.10/site-packages/cmake/data/bin/cmake": "2cc4e4af7cc1cd44e57f0825165924a3e7f4f25a365fe5e16d0b287dbdd71dc2",
+      "/usr/local/lib/python3.10/site-packages/cmake/data/bin/ctest": "22dd339286db7ed32a7da1428f521e50a3e7be2d43933d3f66fd8ef413adfe72",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/boruvka/boruvka.o": "1c58b8cb7c1a54989938eb3c2ec2a786ed2ef0ab2b4f257e99faf9107bfca674",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/kruskal/kruskal.o": "d0d23eadc6eb81a4285a69077e56d07d32f3b32673e0a53ee6cb8537c659c942",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/prim/prim.o": "4954cd12ab635f0eb57fc95e269f2f77dd4f7b98a7b6012667ca38fb5e0b2f8a",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/lca/lca.o": "c7d6f8f4c332846ccfe17ccd1435fbfb2780de00f477a060655fb3af309b406c",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/union_find/union_find.o": "fcc799fa111afbfdc0afe4e36f2a2db3acf37a061bd7b9d0022bd206046cb1ca",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/graph_utils/graph_utils.o": "1e9aa75afc36902bf470d5fbe94964233b03df5f490d0e115feeaf9307744fe1",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/verifier/verifier_v2.o": "e982c047394b1c131233b248d3e7d0733064e45fc66faba963eff3f0eac6f4e9",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/eighth/kkt/kkt.o": "8db016001ef1bd2173696f6942538819e0949e2b5e2825e2d7c093d979e6402b",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/.clang-format": "7afd30f20593f45823ced9f715cd49f9355686ebda79dc6d23f0a54e27bf9dff",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/.github/ISSUE_TEMPLATE/bug_report.md": "b4f6aad793ecb3583ddf2b660db1c08b7084a2f3eff397093a25ee89cd2b039c",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/.github/ISSUE_TEMPLATE/feature_request.md": "9ce190ba1e25309e3198b44a5234a1fba0f5235e13db95251242adf0cd90ea3d",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/.github/workflows/build-and-test.yml": "ed33d2915b0b53ca0a4e72da3790e22c72f23f2ed143143a97a0a461aee12964",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/.github/workflows/pylint.yml": "1ecda0a7f537b3527aff6f917ea8906a5e7daeb9d9a0f16e9de6f9cb8e9a1fcf",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/.github/workflows/test_bindings.yml": "cbe5f283cfcd104ac0fc670912cb866c054b602a772e666777e804dee9cd811e",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/.gitignore": "1cfb93669b087fadcdb0da33deed82989caf9c82b3596a18c4988820ff701149",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/.travis-libcxx-setup.sh": "da4d7588444bc31088852699ff43d22069f076320c4c5e8566ddd99e36992409",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/.travis.yml": "b443a41bfe550169b68a513df38128813a49fda8c84fd30e79fe7ef12b86485b",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/.ycm_extra_conf.py": "6cf822764e965b1e27ee1bc5a5a43e548d0c1be55ff0b84502c5dcad1cb15f40",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/AUTHORS": "971042f2c5e8c69cad124eed472e70ee5d8d1dae9a003d9ae9779f879642a509",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/BUILD.bazel": "96cc1014b2140c30cbe5074faba5ce867829928c78f82132e50b729ce1eda3c8",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/CMakeLists.txt": "5242871139bae81d064b5ca74805cbc671f1b07f06b1cb626e92ecf701d12682",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/CONTRIBUTING.md": "49ca25038f001931162e3140ba8cae9a7494f88353e33a96129ffa61ce922068",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/CONTRIBUTORS": "0a3f58ccfcc6743f1a6c5625714bf7d82c7cc069ac25521e52e1964b5dab451f",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/README.md": "d11d592a1a33d42c8c5a3b83e4c3455566954e00b006c596c934fd583f006fb8",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/WORKSPACE": "4db81b29795eea1b544b02fca4b806e2f0fcf4a686e59fe1285f2e57e89745ff",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/_config.yml": "9f19d69852012017cef3f27c6c691df4753c1cbae12ae60ecca68498d48b1cbb",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/appveyor.yml": "1b7286487142280af350ba706aa45c493691437618095e5347de2aab10affbf8",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/bindings/python/BUILD": "145e7e928954db345ff74ff23b01c9f316c7dc0d33f4a93d36f1f1b26af0c47f",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/bindings/python/build_defs.bzl": "73af6e31083486e3d6f60c70faf407ec14e566a1bbd618da3fc158e9e6315134",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/bindings/python/google_benchmark/BUILD": "a2874d7126502633cf7ec1058695454e1369f9f8f2125cfdd1e47fbf6c259b64",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/bindings/python/google_benchmark/__init__.py": "f7e71c61f61d16eb476a89c6c8cc84db6617c8ebe8be1692705d56a022ba4784",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/bindings/python/google_benchmark/benchmark.cc": "0462909a24cbfbc1ef33a4a8ead8ef38cae2e603816ae735bd23355850525d3c",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/bindings/python/google_benchmark/example.py": "5efadb0258791a91d82c06403883d958210deac2912add1e9e4e2873a73a88d0",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/bindings/python/pybind11.BUILD": "c7c7bfca0f23e18335bfb082e910d0946d1b3e64b041c13e6c7eb6599a1e6dfd",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/bindings/python/python_headers.BUILD": "0b76686b0c3724860a9f7bb87303654cd42bbd3837c76b3dc21ac30f325da65f",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/bindings/python/requirements.txt": "a32f09f237f2d19ca5ba07da01643fcc5a497d8e235303cc0102e50e37218161",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/cmake/AddCXXCompilerFlag.cmake": "d3250a53916984c3d8623202783f2c509dd9d118e0b69dd5a73fd5a4632e9577",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/cmake/CXXFeatureCheck.cmake": "1c1d1c482fe22cc3f40e686dbd4dd3473ac77f5a382db9b65ccf49b82ebfda9b",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/cmake/Config.cmake.in": "66aee3b4740303281316f5f85b55bbf696bdde82de42033f8755c92ac6c4d10c",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/cmake/GetGitVersion.cmake": "365eb0bf30df881d1b765ba54448c8ad301094111f00be7287eec415a3a0d14c",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/cmake/GoogleTest.cmake": "c3cece02b9ffaf004e22dc3d368c681f0c7bc3d1a052554e95cd2989f8457891",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/cmake/GoogleTest.cmake.in": "faad216e8f195c5da2c1d3e0e68ec3c6480343a9bf5d8e0bed170220480c7fc7",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/cmake/Modules/FindLLVMAr.cmake": "5c6899ac771a6991a30ee41c3dcb72c8bc5a68cb2d437e67e9a04494fd3faadf",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/cmake/Modules/FindLLVMNm.cmake": "88480c9fa481c7927cb794d1a60dc858a05b02dce38d6686664009112f8d42f6",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/cmake/Modules/FindLLVMRanLib.cmake": "462cddcca5b8d2523382f6a0ca55cba7d8818704dba13fcb6440b3defe981e7b",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/cmake/benchmark.pc.in": "7892c2a9842e7e0fe08aaba091cd2ffa69f5a1ad577cc0cdd06e59623e99552f",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/cmake/gnu_posix_regex.cpp": "76a047e9a9c7091975278a208e6ca69bf4d9f9ba52aa325c4e022a666bd435e4",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/cmake/llvm-toolchain.cmake": "287b6d25bd8088b5a71710fa5f48136698ee83141a02678a0e79cda050d9405f",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/cmake/posix_regex.cpp": "bc08e929ba007d49378ac06c88b8d7e20540e5ac3b7619cbb8c050e665f256e0",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/cmake/split_list.cmake": "1b1f5a101b8d027d15da62b885e28ab346886267ae025e7d85ee7197d1e802ba",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/cmake/std_regex.cpp": "0fa3924afd4a383fabbfe2948a4df87869998bb1b3e7d50c3210dfbda8c9757d",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/cmake/steady_clock.cpp": "e07b58df90208bd4530468045b7ca4dce0cfdb9ae58f998acf15b3cc6ad977a6",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/cmake/thread_safety_attributes.cpp": "6a20eedd42dd562cdcaf22d8155be99b8126576b6de0e2b777ef34ba94e70484",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/conan/CMakeLists.txt": "e3880109035506131385ec2e66be3a3433ca144c1fb6f34fd4b373a1503b6f7a",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/conan/test_package/CMakeLists.txt": "6f42e50314a2cff22c2e23600375c307abf81c51140b047a14e78c309f5883d9",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/conan/test_package/conanfile.py": "96938d411f7e6e3a1851f135fa40322bc8ca95c91eb18c16d9a318a11ef9506b",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/conan/test_package/test_package.cpp": "b65f0ee4d54943306a44fea7b0f6bfaec5fdca2a9f10ef245b7653481c14c237",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/conanfile.py": "b1bdcedf1247ee562e8131915c506a4c5629211b41ef833a51e17689306ce7cf",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/dependencies.md": "0c7f688adfbc099342b6950cdcb2628a845e34f6e8728098c3ff78fc8f059570",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/docs/AssemblyTests.md": "010f7680376927132f1d98991dc2cbaebccf28c7f145dda635e1cb11cfa831ac",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/docs/_config.yml": "9f19d69852012017cef3f27c6c691df4753c1cbae12ae60ecca68498d48b1cbb",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/docs/releasing.md": "61fe772116eab36cd1f24da0f5c99d85a6edc06b2e033a486eec03ce45be5c25",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/docs/tools.md": "b97ec4fb4f78e1a96d4d00ba4d7191e83887b5f78741bf5c3a48842a145d480b",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/include/benchmark/benchmark.h": "6e637e873e6f373f37103b9d465e0baca1b7cd26ccb049305b4e7301ac863937",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/setup.py": "dda0a345e0ab85eef096f4f72f78b17dcb672c510ab0f123fc67ada57d0f8c93",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/CMakeLists.txt": "f52af257ae7b5b7d33fdcd4844941830a3c20ba38d6cc6c27259fa8f544b37bc",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/arraysize.h": "cb507681e134f78975b22cf015044359145544ecbcc2cf51a32ee84f041588ac",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/benchmark.cc": "7e5b8d8b52a61837da9ba81bb94b37d0b7982045b5df41a1e1998002bac0412d",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/benchmark_api_internal.cc": "3671072868c96be681b76d097d24dc770a217992b6e7740eab21dcc4b87aaa87",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/benchmark_api_internal.h": "10a9fe0372e5535d7c2fb03dde86cceb58f4be65d4cfb60d8cc134439eb5f394",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/benchmark_main.cc": "317ff2d66675576761a79f3491759a67caded3e7dbf665a2bcf49d12411f5df7",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/benchmark_name.cc": "ee34559dab049b599e04663b09a966e5b7eec7b11a9848980dcede03e6588b12",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/benchmark_register.cc": "37fd7fb9f4aea40f5682cbadb510bd416627fc0400c6a2516d20700942f8ac13",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/benchmark_register.h": "e6468628718707552beb9e6c01743af9c69f4cee79876be7499bf0fc345c1d4a",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/benchmark_runner.cc": "b05a7a3b95d7abcd3e605224b36a45551730faf86cda285b0c5f41d03bd4dfa1",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/benchmark_runner.h": "d3ba05bf7e4bd5bb25b85c11b5fda6051959cdcadb3cfec9f81f44671f05392a",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/check.h": "b604032ee5f64572705d5f47339acb6cb36cba15af37f7a58a19d7c066235ed8",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/colorprint.cc": "477b5fef44b2f003d07a0c49012e8e9de279e2859309d535d14ea71dd95fb6d1",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/colorprint.h": "fda7e169dcb7c7f4805829d634ad9d6c0c8565ff45fc913822e30a7357dc5489",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/commandlineflags.cc": "6aee4b07725519492b09cbb28f8a958a07d62dd752f461a1a5c9f07a93936427",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/commandlineflags.h": "3d5527884a5880c65e2adaa58f79605e4bd6c4aabdaae3b5541436f61c6792fb",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/complexity.cc": "4ed74169a0db8eed8948448e9f70ce0d60cfa832db4f0afc7bdf6ed448d72b09",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/complexity.h": "d9a9202afd50f9ce59f0454e4c1312c117721a8435b37daf93069773e935a71a",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/console_reporter.cc": "ec1feec5c2744c63556c022f6533b7a663f807e2953c2e1b76610e25e253dc6a",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/counter.cc": "a7856ca57bdb34414aa1b0b01bf09391846d7c90edc16c46ce4c69cc76295864",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/counter.h": "bb726ba64e38a002051197aa6dbc1375a183443a3c6e21a4480f4968ddd040af",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/csv_reporter.cc": "6d8c5562b85f2b398fc2c1b5daf0f362a428fab0ef3c854c964380efca057da3",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/cycleclock.h": "0b92952060baffdbf5af72b47a6fe012f655821d995f710b1360d852dcd3bd4e",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/internal_macros.h": "bc1a9d811f50eb593bd7070161ddb5a9620613398e12ea8a86723519832a3f42",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/json_reporter.cc": "cfd0f55c38700464ebafdd1bffeb64391e26d4ad0dfb92b8273db3d3da07a7c1",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/log.h": "8c332bcdf7a1f2fb734bf86ecd13130e6a536b822e36adfdce4b0bb207cc1ff7",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/mutex.h": "207e46a86e717dce638f97c2b4311ad592686968be8a107614d95e98cd7ade6b",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/re.h": "3062dc95119b82589112d0cf514275055a47b5de76d103e72c81c3b1b810a298",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/reporter.cc": "6b88e89c589ea3596381018595632255cdc04a162f4dfe8a8677cd8b2271fe29",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/sleep.cc": "adfa3519a2f18ee6e5ff69f59967f5b0ee23ef167f2ac112ae145d0bccfd1f92",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/sleep.h": "8db51462b96ff347d5da4bb2cf1b491129a85ef907164b337d52204ccdba8976",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/statistics.cc": "9836ee1fdb50a9995ffe9f8be12643f25f78ecb10e94b0624ec44eadd1d54590",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/statistics.h": "4a868da2300a5f103818183e42f1a5b25a58199e6658aad67e8f1cb2b6cd81e8",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/string_util.cc": "cacff8440b5c143b2d92dbf1ec421808bb135ee7c2bb6c76634551ba1cf339b7",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/string_util.h": "5e62d4dd0e81bd143f0a7f049979421864f12fd699037121abb2516d0ae40acf",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/sysinfo.cc": "2d3a7a95dead7f0b0b278fc5910b5e26abcedef96748add4644e1082843bc1a2",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/thread_manager.h": "322cbbe59617b4ba0036c10bdcfcdeac481749193ba5e54a4cc1f31a3c3a5354",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/thread_timer.h": "3ccdabbd0ad8626c36255760a98af23393f1acf02689b0484e71f1a6ac5eee25",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/timers.cc": "ce8e8ba95c8ffaa5947f8158b1a314d57999376afc096feeebf94c6691651f46",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/timers.h": "22d3dfdba65eb18956c076ad7231ebfdd990918ef2210a4fdfad75354a0c68c7",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/AssemblyTests.cmake": "60b3c8568671262d85221bbb477f6cc3a865c3a9c2e553cbfc960ff3f17be533",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/BUILD": "23d3d7c5ad526a9c86beaab80f8cb307e244ecea1605e134c029eeeb1cf6a6a9",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/CMakeLists.txt": "d71fe304d9011d9223d09206fcf70d8ecd6d30e27ef8404e7c6e3b64932f9651",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/args_product_test.cc": "f6761ca025cc7f013c87e6f1e0c09f5446a016d428b33f7e17c6a9bde5011db2",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/basic_test.cc": "e732d46fed627652cda3e75a223d2d6a195e996c09167bb711ae9f09ccb8d71f",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/benchmark_gtest.cc": "f2dd385f821d8c6559046a6ec584177d0a17a12d985ac19d46e977970e8a1a11",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/benchmark_name_gtest.cc": "dde19fc1c14bf48815fcbdc97d50f88c41ab726590deb235dfe9edf41f03c410",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/benchmark_test.cc": "86fb612cca00fa6fa486991fc8b2884fa0319ca169d17858caa5938cc479a913",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/clobber_memory_assembly_test.cc": "df3f100c0938b14acd7fb0f23fe39dbde3d0c93c8693ba4d30bc522b73f7c504",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/commandlineflags_gtest.cc": "eb28276b7740bf3f26976dc33549d79d75e99e20d1da48fe5fe86db9d6fbb66c",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/complexity_test.cc": "0e9cf509bf1edced7eb66f89a0c34c9aa25a053e3658aa39024a8d92d181961f",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/cxx03_test.cc": "81f708d2e63ac26fac1d55dc0892074beab08cb95c9603a06db9fe396ef79168",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/diagnostics_test.cc": "103305b557c0d8847168f6d0ed097416222beae9f990d4981182ce2b4e64010b",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/display_aggregates_only_test.cc": "f1fd2f22abe43ce99f8fabe2374d442ae0062fc75d01618efd9e635cd04c1d29",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/donotoptimize_assembly_test.cc": "aa0204177e85c3b0df212bdf696b3da0a31763db668b6451a9266c0fd3b7891b",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/donotoptimize_test.cc": "4656b45b1d069f93bcdd1bba975a0197ab1d10f493f21f006cf0a751a0d9b822",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/filter_test.cc": "abb0ab6b6f0f24a6c5a5f86948ce2acf8cdafbe1bec98a8222b7ac79492a2e27",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/fixture_test.cc": "a830425367bcdaa7e20aabf6f3e05ce58174129b7c11e0dc5d7bb59df9320d5d",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/internal_threading_test.cc": "822f19fea2441f91d4c73adc28a10c691805683d2913d9fbe5b24302223a8037",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/link_main_test.cc": "bb9ba3718f32343f751434018a1b790ec0a9d6c47e8e2134e838706325f282dc",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/map_test.cc": "39e3edf6acb6dcdb5566033961613adc4d5fd82db9d92a718fd4ffd90b2468c5",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/memory_manager_test.cc": "bf8c6a3026d8c27e6ffdc2d57b62ca4dc97041ce87eb538b9657b7789ac324cd",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/multiple_ranges_test.cc": "ddaa54b2ef818c8defb62f76e5fdb51df2e4ad0ef9924a480ae2594be57f20b5",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/options_test.cc": "32c1a30cdf8665a2736eb124caf7ec0537c9f3ed0711c09c426bb3e8524a31e7",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/output_test.h": "c82a6649e08b717556f45d26a6568fd9481eb5b0dafc5466789712443458a0c6",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/output_test_helper.cc": "2f79687169d88c4d709357497543d449c44bc32cbc3f3da6e05ed132fa0ebc0e",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/register_benchmark_test.cc": "620e8dad182ff0fb6eee0819f66282bcc7c5eaa10fc9bc719c373a27047ee97d",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/report_aggregates_only_test.cc": "be7a893e796f124225d0ba9f0c52d3a9aa9836b17832e7bea179bb7459176b25",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/reporter_output_test.cc": "818e87ed30dfd4ad8bbabd39591ebd90b752c901fc6244aace5b2c8c70a8ca5c",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/skip_with_error_test.cc": "d709405258828ec90700bcdccfb0152600e6ceae5b0b130cb602cba662640af1",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/state_assembly_test.cc": "26e38917e5e844bb375f1e45a49b956ae0c99724011a957aefa068368a0a8c5b",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/statistics_gtest.cc": "86276310f020d28811ef7323b5d1d244a31905e8d3d1c093400e2f098bc6c77f",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/string_util_gtest.cc": "714cee02f29cb639fa34c09669e93db636108226166a29d2c01f662a9d52c5d5",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/templated_fixture_test.cc": "1aca2925aa28806be77709942127758c0b3e11765427f5984fefc74555994264",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/user_counters_tabular_test.cc": "d65e7a1764097d110c29ef77f921490ef6bbf9643a0a709f6cfb586a62975da3",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/user_counters_test.cc": "7c42a59589b89d9186ef82ee892f05ccb4863d3324e9d787194b5d4b37f4418d",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/user_counters_thousands_test.cc": "dbf84aaa3dd36ec1253077f497c4203db54829544916a6feb8631b40e56c886b",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/tools/compare.py": "3b5d6dab61fb9df282a7859b878da7dd22459f7edba03b1c95297a204092f987",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/tools/gbench/Inputs/test1_run1.json": "67baf8805471b171ff43acceaed6456c81a5f8bb180e174263e3873126a790b1",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/tools/gbench/Inputs/test1_run2.json": "25387c30e23aeac4b60ffcdf46d56362b3c9c47de0ab9647a4e4605c271e8c93",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/tools/gbench/Inputs/test2_run.json": "1ad4554d507f72e813509435fd1851810f77120d7a080c3335f2621b9e46354b",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/tools/gbench/Inputs/test3_run0.json": "0a405fbef7249d4caf3d3dffafc5e94a32d91b6f51762631cfcbcb5174b5491c",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/tools/gbench/Inputs/test3_run1.json": "6a41a74a3debf25f9cd4a5f8c818eca8e1bef43ee66532e78e6fe69db0796565",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/tools/gbench/__init__.py": "b7a3c0b46e0d8f6b3219c257fb60e5324054ea02291f0b947b2ffe070769601a",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/tools/gbench/report.py": "23ac1aa5ed9566d5d50b1364b3d5e2634baa297a989a750bf15e5e569fd8236b",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/tools/gbench/util.py": "c65218e115402bdf54212807078a88d848d03af99122ff15c348e6ae50151590",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/tools/requirements.txt": "6eb5b9bb1a207b6130cf520bb5752236f5dddcb98c44a559e626ed853aa83e96",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/tools/strip_asm.py": "d67ecfaea737e00af1383f5db9add1bcc98f4a72548ac3545e48d2687f2567b2",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/build-attempt04/inner/build.log": "f409a19abc32c2786802019486ca3f555f87723efa6aaf0b1c867d4577d7bf5f",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/build-attempt04/inner/build-groups.json": "e9ab30a93f4adfea3adadaae55232a28cb750c60709651b97aeec46495dcd83f",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/library-tests.xml": "798f150f385adc71b9ecb9e944d7fb0da940ce2d482011fcd24af4b8c4e1acbb",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/CMakeCache.txt": "296f914995e2d4ff21f7ba0a1ade10a0e271d51af22731ba42f8dc8b5a6aacc4",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/src/generated/benchmark.pc": "e0999f798211608cd18387c3745f99a398c5e777ffc9b0e83486c4bfb75d7426",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/build-attempt04/inner/acquisition.log": "c09dba99e1d82804e09113cf3bd3592b07629001cee6093bec6e7c1cdc0d958a",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/build-attempt04/inner/acquisition-groups.json": "e63466d536c00b852bb602464d78614441799b697da94c5c8eb52c94d4ace638",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/compile_commands.json": "43d8075b8642b7f94919938f070a6fe9305ac2658173f9078c73b8e67f86ce77",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/src/CMakeFiles/benchmark.dir/benchmark.cc.o": "937057411c19dbef2f45e268e80ac4508ec035f9dbf0082469b2746b5004e343",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/src/CMakeFiles/benchmark.dir/benchmark_api_internal.cc.o": "52afd0825d2b0920aa424681ada84e67b88a555baed6bca7509bbe90d44cfcc2",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/src/CMakeFiles/benchmark.dir/benchmark_name.cc.o": "c7e0836295c992eaacd9030e870fa2a804d28b33ca5c7a587b4401856a1f9334",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/src/CMakeFiles/benchmark.dir/benchmark_register.cc.o": "90fda505dc10e6f0f5840208e51ae677587a0f8eb3f948ce93a382c0387dc85e",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/src/CMakeFiles/benchmark.dir/benchmark_runner.cc.o": "7a7b7f32739831c491eb51d51a9fce45e653706b4e8733bb437e830cb280e508",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/src/CMakeFiles/benchmark.dir/colorprint.cc.o": "8652e28bb99c95b24fef97aa47183174ed9d558c91060c6709ddb89b52572137",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/src/CMakeFiles/benchmark.dir/commandlineflags.cc.o": "1b10c978e58c827e3fb59297141fe607cb9a656a23f0e160af4836c69f25f606",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/src/CMakeFiles/benchmark.dir/complexity.cc.o": "ae2a7f99b44c6eccff6da08664d181a0340faafa4c66176c89e49611427f5528",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/src/CMakeFiles/benchmark.dir/console_reporter.cc.o": "170c7b8db160298ea42b340b8d0d49dd33e068d016858d1894e88c301116bed3",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/src/CMakeFiles/benchmark.dir/counter.cc.o": "ceda786a13908d852b8857f9e9fe395140141254f6d31363d2d6e3f341fda55e",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/src/CMakeFiles/benchmark.dir/csv_reporter.cc.o": "e85f0e9e784f9ce34e81570f9a8fc7183496ee77ad6d1f5880cbfbb860d50265",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/src/CMakeFiles/benchmark.dir/json_reporter.cc.o": "31ef54c5a00e2aa996a59ae085588a611e93f7f7a0f15c5e04fa8143214e3722",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/src/CMakeFiles/benchmark.dir/reporter.cc.o": "4c66721d1b62acaf15bbd3fc75ae8235fc633a7d4ecb90261c2a171b581691cd",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/src/CMakeFiles/benchmark.dir/sleep.cc.o": "557506b0c96cf2e73863876c02a431e58ff3ea721e2ba3d05e42d684f70890a6",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/src/CMakeFiles/benchmark.dir/statistics.cc.o": "aac17c8f4d7c9a01876e7c10321552844d638d60b4a4f5659199c74a609a636e",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/src/CMakeFiles/benchmark.dir/string_util.cc.o": "2bb16dd8b1cc06b7e344447a8a922aba17c5c7d776d7f31f0be9b443ea5a724d",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/src/CMakeFiles/benchmark.dir/sysinfo.cc.o": "add95ff0d54fc402832d5a7ca9aa4a2d6aedf196e343ba2704cfd7d6d3b45a00",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/src/CMakeFiles/benchmark.dir/timers.cc.o": "2a93659364995fd3daccc0b774c6b1205c67ec01528ebff8570973d8d90ee67c",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/build-attempt04/inner/build-record.json": "0578cb1788a9757ee9b4fa6430509047c5e1cffa356a41abc79bb9674f4aac7d",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/build_library_main.py": "989bec37ed7d1cea927e7d0eae6ef922a210e403b68241ec8bdbb8981467ab4f",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/validate_build.py": "cb08e4c7e798cf48b27330009e68f1c93ff4aa78b55419de67cc646d5a687a6a",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/analyze_complexity.py": "4ccd57d906c3fea7191f6819a6bf57e3aecdfa966b7eb0a11737752cdfc19c3f",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/collect.py": "69c34734e478c43d158ecb01d2e77cdff4d1ad0274424be647723fc7e6bdc393",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/build_compressed_queries.py": "6a479edf88c079fdd6ac6c0729c3da97d6fc8cb921cac8f409f08d8c01d4fdbb",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/build-attempt04/inner/attempt.json": "e0e1b0b729019df422a317684ddb0ca182fc685eece13cb030076098d2de9d44"
+    },
+    "native_library_execution": true,
+    "native_solver_execution": false,
+    "detached_native_groups_verified_empty": true
+  },
+  "outer_monitor_events": {
+    "87554": [
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 2104122541,
+        "previous_request_gap_ns": null,
+        "provider_started_monotonic_ns": 2104485750,
+        "provider_finished_monotonic_ns": 2104945333,
+        "outcome": "pass",
+        "returned_monotonic_ns": 2105002125,
+        "sampler_duration_ns": 879584
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 4113984500,
+        "previous_request_gap_ns": 2009861959,
+        "provider_started_monotonic_ns": 4114081833,
+        "provider_finished_monotonic_ns": 4114319458,
+        "outcome": "pass",
+        "returned_monotonic_ns": 4114448541,
+        "sampler_duration_ns": 464041
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 6118435416,
+        "previous_request_gap_ns": 2004450916,
+        "provider_started_monotonic_ns": 6118630041,
+        "provider_finished_monotonic_ns": 6118837166,
+        "outcome": "pass",
+        "returned_monotonic_ns": 6118864166,
+        "sampler_duration_ns": 428750
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 8126558625,
+        "previous_request_gap_ns": 2008123209,
+        "provider_started_monotonic_ns": 8126671000,
+        "provider_finished_monotonic_ns": 8126866958,
+        "outcome": "pass",
+        "returned_monotonic_ns": 8126880416,
+        "sampler_duration_ns": 321791
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 10128008708,
+        "previous_request_gap_ns": 2001450083,
+        "provider_started_monotonic_ns": 10128109416,
+        "provider_finished_monotonic_ns": 10128318083,
+        "outcome": "pass",
+        "returned_monotonic_ns": 10128338166,
+        "sampler_duration_ns": 329458
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 12137542333,
+        "previous_request_gap_ns": 2009533625,
+        "provider_started_monotonic_ns": 12137643416,
+        "provider_finished_monotonic_ns": 12137858625,
+        "outcome": "pass",
+        "returned_monotonic_ns": 12137873750,
+        "sampler_duration_ns": 331417
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 14138904375,
+        "previous_request_gap_ns": 2001362042,
+        "provider_started_monotonic_ns": 14139013458,
+        "provider_finished_monotonic_ns": 14139238666,
+        "outcome": "pass",
+        "returned_monotonic_ns": 14139255958,
+        "sampler_duration_ns": 351583
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 16139678625,
+        "previous_request_gap_ns": 2000774250,
+        "provider_started_monotonic_ns": 16139772125,
+        "provider_finished_monotonic_ns": 16140022708,
+        "outcome": "pass",
+        "returned_monotonic_ns": 16140055500,
+        "sampler_duration_ns": 376875
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 18150112333,
+        "previous_request_gap_ns": 2010433708,
+        "provider_started_monotonic_ns": 18150192250,
+        "provider_finished_monotonic_ns": 18150381666,
+        "outcome": "pass",
+        "returned_monotonic_ns": 18150395500,
+        "sampler_duration_ns": 283167
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 20150859416,
+        "previous_request_gap_ns": 2000747083,
+        "provider_started_monotonic_ns": 20150961083,
+        "provider_finished_monotonic_ns": 20151165791,
+        "outcome": "pass",
+        "returned_monotonic_ns": 20151182791,
+        "sampler_duration_ns": 323375
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 22155961958,
+        "previous_request_gap_ns": 2005102542,
+        "provider_started_monotonic_ns": 22156053666,
+        "provider_finished_monotonic_ns": 22156256375,
+        "outcome": "pass",
+        "returned_monotonic_ns": 22156271625,
+        "sampler_duration_ns": 309667
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 24157441833,
+        "previous_request_gap_ns": 2001479875,
+        "provider_started_monotonic_ns": 24157651916,
+        "provider_finished_monotonic_ns": 24157884083,
+        "outcome": "pass",
+        "returned_monotonic_ns": 24157962208,
+        "sampler_duration_ns": 520375
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 26158479208,
+        "previous_request_gap_ns": 2001037375,
+        "provider_started_monotonic_ns": 26158559208,
+        "provider_finished_monotonic_ns": 26158752666,
+        "outcome": "pass",
+        "returned_monotonic_ns": 26158764416,
+        "sampler_duration_ns": 285208
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 28168882125,
+        "previous_request_gap_ns": 2010402917,
+        "provider_started_monotonic_ns": 28169037583,
+        "provider_finished_monotonic_ns": 28169320583,
+        "outcome": "pass",
+        "returned_monotonic_ns": 28169399625,
+        "sampler_duration_ns": 517500
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 30170326000,
+        "previous_request_gap_ns": 2001443875,
+        "provider_started_monotonic_ns": 30170458375,
+        "provider_finished_monotonic_ns": 30170669750,
+        "outcome": "pass",
+        "returned_monotonic_ns": 30170736958,
+        "sampler_duration_ns": 410958
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 32174563500,
+        "previous_request_gap_ns": 2004237500,
+        "provider_started_monotonic_ns": 32174681416,
+        "provider_finished_monotonic_ns": 32174885458,
+        "outcome": "pass",
+        "returned_monotonic_ns": 32175540750,
+        "sampler_duration_ns": 977250
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 34177072666,
+        "previous_request_gap_ns": 2002509166,
+        "provider_started_monotonic_ns": 34177199416,
+        "provider_finished_monotonic_ns": 34177466500,
+        "outcome": "pass",
+        "returned_monotonic_ns": 34177515833,
+        "sampler_duration_ns": 443167
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 36184468750,
+        "previous_request_gap_ns": 2007396084,
+        "provider_started_monotonic_ns": 36184563583,
+        "provider_finished_monotonic_ns": 36184773333,
+        "outcome": "pass",
+        "returned_monotonic_ns": 36184813041,
+        "sampler_duration_ns": 344291
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 38193455000,
+        "previous_request_gap_ns": 2008986250,
+        "provider_started_monotonic_ns": 38193540833,
+        "provider_finished_monotonic_ns": 38193742208,
+        "outcome": "pass",
+        "returned_monotonic_ns": 38193756791,
+        "sampler_duration_ns": 301791
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 40194690500,
+        "previous_request_gap_ns": 2001235500,
+        "provider_started_monotonic_ns": 40195190875,
+        "provider_finished_monotonic_ns": 40195644208,
+        "outcome": "pass",
+        "returned_monotonic_ns": 40195704333,
+        "sampler_duration_ns": 1013833
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 42205791833,
+        "previous_request_gap_ns": 2011101333,
+        "provider_started_monotonic_ns": 42205879166,
+        "provider_finished_monotonic_ns": 42206086666,
+        "outcome": "pass",
+        "returned_monotonic_ns": 42206108416,
+        "sampler_duration_ns": 316583
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 44207223083,
+        "previous_request_gap_ns": 2001431250,
+        "provider_started_monotonic_ns": 44207355083,
+        "provider_finished_monotonic_ns": 44207645500,
+        "outcome": "pass",
+        "returned_monotonic_ns": 44207728583,
+        "sampler_duration_ns": 505500
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 46208867625,
+        "previous_request_gap_ns": 2001644542,
+        "provider_started_monotonic_ns": 46209070958,
+        "provider_finished_monotonic_ns": 46209286833,
+        "outcome": "pass",
+        "returned_monotonic_ns": 46209319875,
+        "sampler_duration_ns": 452250
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 48217757583,
+        "previous_request_gap_ns": 2008889958,
+        "provider_started_monotonic_ns": 48217925041,
+        "provider_finished_monotonic_ns": 48218284958,
+        "outcome": "pass",
+        "returned_monotonic_ns": 48218338000,
+        "sampler_duration_ns": 580417
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 50219100833,
+        "previous_request_gap_ns": 2001343250,
+        "provider_started_monotonic_ns": 50219346625,
+        "provider_finished_monotonic_ns": 50219617458,
+        "outcome": "pass",
+        "returned_monotonic_ns": 50219646750,
+        "sampler_duration_ns": 545917
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 52228542541,
+        "previous_request_gap_ns": 2009441708,
+        "provider_started_monotonic_ns": 52228809166,
+        "provider_finished_monotonic_ns": 52229229416,
+        "outcome": "pass",
+        "returned_monotonic_ns": 52229272791,
+        "sampler_duration_ns": 730250
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 54234644125,
+        "previous_request_gap_ns": 2006101584,
+        "provider_started_monotonic_ns": 54234831416,
+        "provider_finished_monotonic_ns": 54235118458,
+        "outcome": "pass",
+        "returned_monotonic_ns": 54235166500,
+        "sampler_duration_ns": 522375
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 56235726625,
+        "previous_request_gap_ns": 2001082500,
+        "provider_started_monotonic_ns": 56236000541,
+        "provider_finished_monotonic_ns": 56236282916,
+        "outcome": "pass",
+        "returned_monotonic_ns": 56236321125,
+        "sampler_duration_ns": 594500
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 58238568583,
+        "previous_request_gap_ns": 2002841958,
+        "provider_started_monotonic_ns": 58238738083,
+        "provider_finished_monotonic_ns": 58239024875,
+        "outcome": "pass",
+        "returned_monotonic_ns": 58239055916,
+        "sampler_duration_ns": 487333
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 60249121833,
+        "previous_request_gap_ns": 2010553250,
+        "provider_started_monotonic_ns": 60249212708,
+        "provider_finished_monotonic_ns": 60249435166,
+        "outcome": "pass",
+        "returned_monotonic_ns": 60249449416,
+        "sampler_duration_ns": 327583
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 62250775750,
+        "previous_request_gap_ns": 2001653917,
+        "provider_started_monotonic_ns": 62250939958,
+        "provider_finished_monotonic_ns": 62251207750,
+        "outcome": "pass",
+        "returned_monotonic_ns": 62251256291,
+        "sampler_duration_ns": 480541
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 64260942958,
+        "previous_request_gap_ns": 2010167208,
+        "provider_started_monotonic_ns": 64261128916,
+        "provider_finished_monotonic_ns": 64261365625,
+        "outcome": "pass",
+        "returned_monotonic_ns": 64261452625,
+        "sampler_duration_ns": 509667
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 66269248166,
+        "previous_request_gap_ns": 2008305208,
+        "provider_started_monotonic_ns": 66269358375,
+        "provider_finished_monotonic_ns": 66269583708,
+        "outcome": "pass",
+        "returned_monotonic_ns": 66269633583,
+        "sampler_duration_ns": 385417
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 68272234208,
+        "previous_request_gap_ns": 2002986042,
+        "provider_started_monotonic_ns": 68272390208,
+        "provider_finished_monotonic_ns": 68272587458,
+        "outcome": "pass",
+        "returned_monotonic_ns": 68272631500,
+        "sampler_duration_ns": 397292
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 70281652416,
+        "previous_request_gap_ns": 2009418208,
+        "provider_started_monotonic_ns": 70281843208,
+        "provider_finished_monotonic_ns": 70282144166,
+        "outcome": "pass",
+        "returned_monotonic_ns": 70282178208,
+        "sampler_duration_ns": 525792
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 72285463291,
+        "previous_request_gap_ns": 2003810875,
+        "provider_started_monotonic_ns": 72285625916,
+        "provider_finished_monotonic_ns": 72285905583,
+        "outcome": "pass",
+        "returned_monotonic_ns": 72285945833,
+        "sampler_duration_ns": 482542
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 74290122458,
+        "previous_request_gap_ns": 2004659167,
+        "provider_started_monotonic_ns": 74290292791,
+        "provider_finished_monotonic_ns": 74290603166,
+        "outcome": "pass",
+        "returned_monotonic_ns": 74290635166,
+        "sampler_duration_ns": 512708
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 76294102166,
+        "previous_request_gap_ns": 2003979708,
+        "provider_started_monotonic_ns": 76294200750,
+        "provider_finished_monotonic_ns": 76294436000,
+        "outcome": "pass",
+        "returned_monotonic_ns": 76294482625,
+        "sampler_duration_ns": 380459
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 78295919791,
+        "previous_request_gap_ns": 2001817625,
+        "provider_started_monotonic_ns": 78296084583,
+        "provider_finished_monotonic_ns": 78296375541,
+        "outcome": "pass",
+        "returned_monotonic_ns": 78296408125,
+        "sampler_duration_ns": 488334
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 80297865416,
+        "previous_request_gap_ns": 2001945625,
+        "provider_started_monotonic_ns": 80298020750,
+        "provider_finished_monotonic_ns": 80298228416,
+        "outcome": "pass",
+        "returned_monotonic_ns": 80298258708,
+        "sampler_duration_ns": 393292
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 82305026291,
+        "previous_request_gap_ns": 2007160875,
+        "provider_started_monotonic_ns": 82305217666,
+        "provider_finished_monotonic_ns": 82305516291,
+        "outcome": "pass",
+        "returned_monotonic_ns": 82305555625,
+        "sampler_duration_ns": 529334
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 84306574916,
+        "previous_request_gap_ns": 2001548625,
+        "provider_started_monotonic_ns": 84306745750,
+        "provider_finished_monotonic_ns": 84307038833,
+        "outcome": "pass",
+        "returned_monotonic_ns": 84307070458,
+        "sampler_duration_ns": 495542
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 86310200125,
+        "previous_request_gap_ns": 2003625209,
+        "provider_started_monotonic_ns": 86310290333,
+        "provider_finished_monotonic_ns": 86310514375,
+        "outcome": "pass",
+        "returned_monotonic_ns": 86310531791,
+        "sampler_duration_ns": 331666
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 88311049541,
+        "previous_request_gap_ns": 2000849416,
+        "provider_started_monotonic_ns": 88311172791,
+        "provider_finished_monotonic_ns": 88311391916,
+        "outcome": "pass",
+        "returned_monotonic_ns": 88311406583,
+        "sampler_duration_ns": 357042
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 89597650083,
+        "previous_request_gap_ns": 1286600542,
+        "provider_started_monotonic_ns": 89597750333,
+        "provider_finished_monotonic_ns": 89597924625,
+        "outcome": "pass",
+        "returned_monotonic_ns": 89597941833,
+        "sampler_duration_ns": 291750
+      },
+      {
+        "process_group": 87554,
+        "requested_monotonic_ns": 89598071625,
+        "previous_request_gap_ns": 421542,
+        "provider_started_monotonic_ns": 89598131041,
+        "provider_finished_monotonic_ns": 89598171500,
+        "outcome": "pass",
+        "returned_monotonic_ns": 89598190625,
+        "sampler_duration_ns": 119000
+      }
+    ]
+  },
+  "stdout": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/build-attempt04/stdout",
+  "stdout_sha256": "2e0eb1ba62be9a73a6da2990e5d72ce42bc543abb42606355cf1df0361d6e945",
+  "stderr": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/build-attempt04/stderr",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "finished_monotonic_ns": 90109621791,
+  "finished_utc": "2026-10-15T18:22:19.941883+00:00",
+  "elapsed_seconds": 90.010386875
+}

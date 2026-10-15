@@ -1,0 +1,9 @@
+# Independent source review: current complexity figures
+
+Source-only PASS after two small clarifications. Reviewer: `/root/multigraph_candidate`. No imports, syntax checks, mocks, rendering, library builds or native curves were run; no partial extension observations were read.
+
+Reviewed `plot_complexity.py` SHA-256 `f18ddc540b60ad1556e00b5961dd44683aa999f25e278df91e65d267993aa7fd` and `PLOT_PREPARATION.md` `71e8a20cccd8ca7fb5f34761d778fdb35c7f16e4943afb388fe59bb068da0505`, against the source-reviewed analyzer's field/aggregation contracts.
+
+The plotter verifies and reloads source-bound capture provenance, reuses the checked analyzer on every raw/library curve, and compares all canonical tables before plotting. This is correctly labelled reuse, not an independent numerical audit. Its 1,056 normalized points preserve every family, algorithm, graph/sampler realization, size and clock. Native ranges use all six calls; library ranges use three two-call means. Shared padded log-y limits cover every endpoint. The 288 model cells retain six models for each of 24 curves and two windows, with actual full-window Google CPU choices distinguished from custom upper-six choices. CPU selection/manual-coefficient/RMS limitations are accurate; no asymptotic or crossover claim follows from model labels.
+
+The reviewed corrections require the stored normalized median to equal median/N and explicitly identify G1 ascending versus G2 descending size order, including graph/order confounding, in standalone captions. All raw clock flags and complete numerical tables remain bound. Failure preserves the exclusive attempt; successful rendering would still be pending visual QA. Real schema acceptance, synthetic rendering/negative gates and original-resolution inspection of all five figures remain future release gates.

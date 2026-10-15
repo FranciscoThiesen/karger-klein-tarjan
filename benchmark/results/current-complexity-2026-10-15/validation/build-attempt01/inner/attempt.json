@@ -1,0 +1,165 @@
+{
+  "schema": "current_complexity_gate_attempt_v1",
+  "phase": "build",
+  "validation": "failed",
+  "invocation": [
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/build_library_main.py",
+    "build",
+    "--parent-freeze",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/freeze.json",
+    "--library-source",
+    "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt01",
+    "--build-directory",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt01",
+    "--git-resolve",
+    "github.com:443:20.29.134.23",
+    "--output",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/build-attempt01/inner",
+    "--released"
+  ],
+  "started_utc": "2026-10-15T18:12:22.825454+00:00",
+  "started_monotonic_ns": 84344625,
+  "attempted_commands": [
+    [
+      "/usr/bin/git",
+      "-c",
+      "http.curloptResolve=github.com:443:20.29.134.23",
+      "clone",
+      "--depth",
+      "1",
+      "--branch",
+      "v1.5.2",
+      "--single-branch",
+      "https://github.com/google/benchmark.git",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt01"
+    ],
+    [
+      "/usr/bin/arch",
+      "-arm64",
+      "/usr/local/bin/cmake",
+      "-S",
+      "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt01",
+      "-B",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt01",
+      "-G",
+      "Unix Makefiles",
+      "-DCMAKE_CXX_COMPILER=/usr/bin/clang++",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DCMAKE_OSX_ARCHITECTURES=arm64",
+      "-DCMAKE_OSX_SYSROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+      "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+      "-DBUILD_SHARED_LIBS=OFF",
+      "-DBENCHMARK_ENABLE_TESTING=ON",
+      "-DBENCHMARK_ENABLE_GTEST_TESTS=OFF",
+      "-DBENCHMARK_ENABLE_ASSEMBLY_TESTS=OFF",
+      "-DBENCHMARK_ENABLE_LTO=OFF",
+      "-DBENCHMARK_DOWNLOAD_DEPENDENCIES=OFF",
+      "-DBENCHMARK_ENABLE_INSTALL=OFF"
+    ]
+  ],
+  "native_library_or_solver_execution_authorized": true,
+  "performance_capture": false,
+  "all_owned_groups_verified_empty": false,
+  "recipe_sha256": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/build_library_main.py": "989bec37ed7d1cea927e7d0eae6ef922a210e403b68241ec8bdbb8981467ab4f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/validate_build.py": "b64ad6b129adf1ad4873636d5d9d803003d7f73bf9a9babff21db948a2a45601",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/analyze_complexity.py": "4ccd57d906c3fea7191f6819a6bf57e3aecdfa966b7eb0a11737752cdfc19c3f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/collect.py": "69c34734e478c43d158ecb01d2e77cdff4d1ad0274424be647723fc7e6bdc393",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/current_complexity.cpp": "ccc746954240cb7432cf137357b32f077994729df6fa01e092aadec1f53629a4",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/build_compressed_queries.py": "6a479edf88c079fdd6ac6c0729c3da97d6fc8cb921cac8f409f08d8c01d4fdbb"
+  },
+  "environment_policy": {
+    "removed": {
+      "CPATH": "/usr/local/include",
+      "LIBRARY_PATH": "/usr/local/lib"
+    },
+    "required_empty": {
+      "CPLUS_INCLUDE_PATH": null,
+      "C_INCLUDE_PATH": null,
+      "CFLAGS": null,
+      "CXXFLAGS": null,
+      "CPPFLAGS": null,
+      "LDFLAGS": null,
+      "CC": null,
+      "CXX": null,
+      "CMAKE_GENERATOR": null,
+      "CMAKE_TOOLCHAIN_FILE": null,
+      "CMAKE_POLICY_VERSION_MINIMUM": null,
+      "CMAKE_OSX_ARCHITECTURES": null,
+      "MACOSX_DEPLOYMENT_TARGET": null,
+      "APPVEYOR": null
+    },
+    "retained": {
+      "SDKROOT": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+      "DEVELOPER_DIR": null
+    }
+  },
+  "tool_versions": {
+    "cmake": "cmake version 3.30.5\n\nCMake suite maintained and supported by Kitware (kitware.com/cmake).\n",
+    "ctest": "ctest version 3.30.5\n\nCMake suite maintained and supported by Kitware (kitware.com/cmake).\n"
+  },
+  "tool_policy": {
+    "cmake_version": [
+      3,
+      30,
+      5
+    ],
+    "ctest_version": [
+      3,
+      30,
+      5
+    ],
+    "upstream_minimum": "3.5.1",
+    "policy_version_override": null,
+    "generator": "Unix Makefiles"
+  },
+  "command_intervals": [
+    {
+      "command": [
+        "/usr/bin/git",
+        "-c",
+        "http.curloptResolve=github.com:443:20.29.134.23",
+        "clone",
+        "--depth",
+        "1",
+        "--branch",
+        "v1.5.2",
+        "--single-branch",
+        "https://github.com/google/benchmark.git",
+        "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt01"
+      ],
+      "started_monotonic_ns": 799156083,
+      "finished_monotonic_ns": 2981259208
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/usr/local/bin/cmake",
+        "-S",
+        "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt01",
+        "-B",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt01",
+        "-G",
+        "Unix Makefiles",
+        "-DCMAKE_CXX_COMPILER=/usr/bin/clang++",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_OSX_ARCHITECTURES=arm64",
+        "-DCMAKE_OSX_SYSROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+        "-DBUILD_SHARED_LIBS=OFF",
+        "-DBENCHMARK_ENABLE_TESTING=ON",
+        "-DBENCHMARK_ENABLE_GTEST_TESTS=OFF",
+        "-DBENCHMARK_ENABLE_ASSEMBLY_TESTS=OFF",
+        "-DBENCHMARK_ENABLE_LTO=OFF",
+        "-DBENCHMARK_DOWNLOAD_DEPENDENCIES=OFF",
+        "-DBENCHMARK_ENABLE_INSTALL=OFF"
+      ],
+      "started_monotonic_ns": 3051693208,
+      "finished_monotonic_ns": 3060820166
+    }
+  ],
+  "error": "RuntimeError(\"command failed: 1: ['/usr/bin/arch', '-arm64', '/usr/local/bin/cmake', '-S', '/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt01', '-B', '/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt01', '-G', 'Unix Makefiles', '-DCMAKE_CXX_COMPILER=/usr/bin/clang++', '-DCMAKE_BUILD_TYPE=Release', '-DCMAKE_OSX_ARCHITECTURES=arm64', '-DCMAKE_OSX_SYSROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk', '-DCMAKE_EXPORT_COMPILE_COMMANDS=ON', '-DBUILD_SHARED_LIBS=OFF', '-DBENCHMARK_ENABLE_TESTING=ON', '-DBENCHMARK_ENABLE_GTEST_TESTS=OFF', '-DBENCHMARK_ENABLE_ASSEMBLY_TESTS=OFF', '-DBENCHMARK_ENABLE_LTO=OFF', '-DBENCHMARK_DOWNLOAD_DEPENDENCIES=OFF', '-DBENCHMARK_ENABLE_INSTALL=OFF']\")",
+  "finished_utc": "2026-10-15T18:12:25.802086+00:00",
+  "finished_monotonic_ns": 3060894708
+}

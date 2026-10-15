@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/build_library_main.py", line 204, in <module>
+    if __name__ == "__main__": main()
+  File "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/build_library_main.py", line 193, in main
+    (build if args.phase=="build" else smoke)(args,state)
+  File "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/build_library_main.py", line 111, in build
+    guarded(guard,command,stream,intervals,state,env=environment)
+  File "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/build_library_main.py", line 50, in guarded
+    if stderr is None: guard.run(command,stdout=stream,env=env)
+  File "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/build_compressed_queries.py", line 193, in run
+    require(not check or process.returncode == 0,f'command failed: {process.returncode}: {command}')
+  File "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/build_compressed_queries.py", line 41, in require
+    if not condition: raise RuntimeError(message)
+RuntimeError: command failed: 2: ['/usr/bin/arch', '-arm64', '/usr/local/lib/python3.10/site-packages/cmake/data/bin/cmake', '--build', '/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt02', '--parallel', '1']

@@ -1,0 +1,49 @@
+{
+  "groups": [
+    {
+      "command": [
+        "/usr/bin/git",
+        "-c",
+        "http.curloptResolve=github.com:443:20.29.134.23",
+        "clone",
+        "--depth",
+        "1",
+        "--branch",
+        "v1.5.2",
+        "--single-branch",
+        "https://github.com/google/benchmark.git",
+        "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt02"
+      ],
+      "process_group": 64499,
+      "observations": [
+        {
+          "utc": "2026-10-15T18:13:34.161901+00:00",
+          "monotonic_ns": 1888533875,
+          "process_group": 64499,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 1889295166,
+        "process_group": 64499,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T18:13:34.162634+00:00",
+          "monotonic_ns": 1889304541,
+          "process_group": 64499,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 1889533625,
+        "native_process_may_still_be_running": false
+      }
+    }
+  ]
+}

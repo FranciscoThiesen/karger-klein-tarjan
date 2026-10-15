@@ -1,0 +1,20 @@
+
+$ /usr/bin/git -c http.curloptResolve=github.com:443:20.29.134.23 clone --depth 1 --branch v1.5.2 --single-branch https://github.com/google/benchmark.git /Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt01
+Cloning into '/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt01'...
+Note: switching to '73d4d5e8d6d449fc8663765a42aa8aeeee844489'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+

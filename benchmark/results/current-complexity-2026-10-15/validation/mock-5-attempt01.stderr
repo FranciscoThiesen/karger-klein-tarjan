@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/launch-preparation/test_run_gate_attempt.py", line 10, in <module>
+    import run_gate_attempt as outer
+  File "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/launch-preparation/run_gate_attempt.py", line 18, in <module>
+    import validate_build as gate
+  File "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/validate_build.py", line 23, in <module>
+    require = analyzer.require
+AttributeError: module 'analyze_complexity' has no attribute 'require'

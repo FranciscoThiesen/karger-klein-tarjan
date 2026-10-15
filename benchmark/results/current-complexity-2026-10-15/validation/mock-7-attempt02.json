@@ -1,0 +1,40 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "benchmark/results/current-complexity-2026-10-15/validation/independent-audit-source/test_audit_complexity.py"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "started_utc": "2026-10-15T18:04:17.049155+00:00",
+  "started_monotonic_ns": 26886750,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/independent-audit-source/test_audit_complexity.py": "985bd6e391f77049e9a91dc36d25dab85560d73c6418e6e05afe2b2ac4bbc0b9"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 49256,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 49256,
+    "members": [],
+    "monotonic_ns": 745547458,
+    "utc": "2026-10-15T18:04:17.767787+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/independent-audit-source/test_audit_complexity.py": "985bd6e391f77049e9a91dc36d25dab85560d73c6418e6e05afe2b2ac4bbc0b9"
+  },
+  "finished_utc": "2026-10-15T18:04:17.768151+00:00",
+  "finished_monotonic_ns": 745934916,
+  "elapsed_seconds": 0.719048166,
+  "stdout": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/mock-7-attempt02.stdout",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/mock-7-attempt02.stderr",
+  "stderr_sha256": "6f5017340eddcf28af8bec7b07961cc9816138f840631458fbf94072e7377395"
+}

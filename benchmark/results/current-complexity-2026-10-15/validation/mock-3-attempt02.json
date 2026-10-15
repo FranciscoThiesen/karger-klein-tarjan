@@ -1,0 +1,40 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "benchmark/current_complexity/test_validate_build.py"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "started_utc": "2026-10-15T18:04:17.049182+00:00",
+  "started_monotonic_ns": 30526666,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/test_validate_build.py": "da901c7013ae0a590021a9de7bb4e64f26a3a68d020dfdfe078380e6189097a3"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 49254,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 49254,
+    "members": [],
+    "monotonic_ns": 339041916,
+    "utc": "2026-10-15T18:04:17.357664+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/test_validate_build.py": "da901c7013ae0a590021a9de7bb4e64f26a3a68d020dfdfe078380e6189097a3"
+  },
+  "finished_utc": "2026-10-15T18:04:17.357927+00:00",
+  "finished_monotonic_ns": 339312958,
+  "elapsed_seconds": 0.308786292,
+  "stdout": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/mock-3-attempt02.stdout",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/mock-3-attempt02.stderr",
+  "stderr_sha256": "aef85764bd822e268180f9cde50ee9e30289a6d02a009a1177c6f447d07cef62"
+}

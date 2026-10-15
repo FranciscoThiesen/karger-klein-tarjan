@@ -1,0 +1,39 @@
+--- before/validate_build.py
++++ after/validate_build.py
+@@ -240,7 +240,10 @@
+     for path, expected in record["library_object_sha256"].items(): bind(bound, path, expected)
+     # Archive contents/profile are independently recorded and rechecked; the
+     # final linked API smoke checks the actual archive, not merely these objects.
+-    exact(output(["/usr/bin/ar", "-t", record["library"]]).splitlines(), [Path(path).name for path in accepted.values()], "static archive member inventory")
++    # Apple ar includes its symbol-table metadata as the first member. Require
++    # the observed exact format, then still compare every actual object byte.
++    exact(output(["/usr/bin/ar", "-t", record["library"]]).splitlines(),
++          ["__.SYMDEF", *[Path(path).name for path in accepted.values()]], "static archive member inventory")
+     for path in accepted.values():
+         contents=output_bytes(["/usr/bin/ar","-p",record["library"],Path(path).name])
+         exact(hashlib.sha256(contents).hexdigest(),record["library_object_sha256"][path],"static archive member bytes differ from compiled object")
+--- before/test_validate_build.py
++++ after/test_validate_build.py
+@@ -107,7 +107,7 @@
+                         compile_commands_sha256=gate.analyzer.digest(compile_file),library_compile_commands=argv_list,
+                         library_object_sha256=hashes,library=str(build/"src/libbenchmark.a"))
+             def output(command):
+-                return "Mach-O 64-bit object arm64\n" if command[0]=="/usr/bin/file" else "a.cc.o\nb.cc.o\n"
++                return "Mach-O 64-bit object arm64\n" if command[0]=="/usr/bin/file" else "__.SYMDEF\na.cc.o\nb.cc.o\n"
+             with mock.patch.object(gate,"output",side_effect=output),mock.patch.object(gate,"output_bytes",side_effect=lambda command:command[-1][:-2].encode()):
+                 self.assertEqual(len(gate.library_objects(record,{})),2)
+                 changed=copy.deepcopy(entries);changed[0]["directory"]=str(build)
+@@ -127,6 +127,13 @@
+                 compile_file.write_text(json.dumps(changed)); altered={**record,"compile_commands_sha256":gate.analyzer.digest(compile_file)}
+                 with self.assertRaisesRegex(ValueError,"unreviewed"): gate.library_objects(altered,{})
+             compile_file.write_text(json.dumps(entries))
++            for members in ("a.cc.o\nb.cc.o\n", "__.SYMDEF\n__.SYMDEF\na.cc.o\nb.cc.o\n",
++                            "__.SYMDEF\na.cc.o\nb.cc.o\nextra.o\n"):
++                def wrong_archive(command):
++                    return output(command) if command[0]=="/usr/bin/file" else members
++                with mock.patch.object(gate,"output",side_effect=wrong_archive):
++                    with self.assertRaisesRegex(ValueError,"archive member inventory"):
++                        gate.library_objects(record,{})
+             with mock.patch.object(gate,"output",side_effect=output),mock.patch.object(gate,"output_bytes",return_value=b"wrong object"):
+                 with self.assertRaisesRegex(ValueError,"member bytes"): gate.library_objects(record,{})
+             with mock.patch.object(gate,"output",return_value="Mach-O 64-bit object x86_64\n"),self.assertRaises(ValueError):

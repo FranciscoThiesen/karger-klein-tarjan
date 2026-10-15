@@ -1,0 +1,20 @@
+# Build producer and final gate — source-review completion
+
+Independent source review completed on 2026-10-15. **PASS for source preparation only.** This receipt covers the final producer and validator sources below, superseding the earlier receipt's missing-producer status. No import, syntax check, fixture execution, acquisition, build, metadata-tool invocation, schema smoke or performance capture ran during review. No runtime readiness or current complexity result is established.
+
+| Source | SHA-256 |
+|---|---|
+| `validate_build.py` | `335db8375fa92955d6a2ac0a7bdc0627c5986a342d469a5e7f2f3441f802a001` |
+| `test_validate_build.py` | `87b8cc747ec27c4398f5b17284af95de512af413cc0b2ad3529df32c8472a512` |
+| `build_library_main.py` | `ebd70cec0f0c45333383407e5319d064eea8bfa35c7e09fe488530794c35ad7e` |
+| `test_build_library_main.py` | `f371c4442576887d97f3be6e99c37e2481adf96eb53d283c0a9fd686614ac66b` |
+| `BUILD_GATE_PLAN.md` | `3bbc90735ee14c19e754337606f5f9c59bfa6f05faff621f7f2e1e3b742d0392` |
+| `ANALYSIS_PREPARATION.md` | `e6f39638a6e0090bff09e91287c4f72f18ae850d0b42e8d19cfcd20fc9cb4a0a` |
+
+The producer preserves the eight original physical production objects. It uses exclusive attempt/source/build locations, exact pinned acquisition and library/main commands, inherited bounded native groups, and per-command elapsed intervals including cleanup. Build and diagnostic smoke are separate phases. The latter runs two final-binary curves, with 198 calls and 66 certificates, excluded from the declared 24-curve performance study. Failed phases retain invocation, attempted commands, intervals and failure status; empty-group success is asserted only after the full validator succeeds. A reviewed bounded archival outer invocation remains required, especially to preserve unknown detached-child state if the producer is interrupted.
+
+Initial main/recipe digests are now captured before any child, checked before every next child, retained in build/smoke receipts, checked within the receipt-failure scope and checked again before final phase success. This fixes the additional review finding that late source hashes could otherwise bind changed source to an earlier compilation. The three prepared producer groups cover exact command forwarding/deadlines, failed/exclusive attempts, missing release and source drift preventing a next child. Five validator fixture groups retain the earlier interval, archive-byte and smoke-read mutation negatives. None has run.
+
+The environment policy removes only the declared `CPATH`/`LIBRARY_PATH`, records prior values, rejects nonempty listed compiler/include/flag/CMake overrides, and retains the SDK-selection fields while checking the actual compiler/SDK against the parent. Matching stable CMake/CTest versions and the Unix Makefiles generator are bound. The source-declared minimum is supported by the pinned [Google Benchmark CMake source](https://raw.githubusercontent.com/google/benchmark/v1.5.2/CMakeLists.txt); the no-override policy agrees with [CMake's compatibility documentation](https://cmake.org/cmake/help/latest/command/cmake_minimum_required.html), and JUnit requires [CTest 3.21 or later](https://cmake.org/cmake/help/latest/manual/ctest.1.html#cmdoption-ctest-output-junit). These source checks do not prove actual local availability, successful configuration or compatibility with every accepted version.
+
+All original proof repairs remain present: typed observation/cleanup interval binding, actual static archive-member bytes matching recorded objects, and hashing the schema receipt before reading. Source-only limitations remain explicit: platform-generated flags/archive format and the exact Google Benchmark JSON schema must pass real validation; any discrepancy requires a preserved failed attempt and reviewed correction. The library, actual receipts, all eight prepared mock groups and every native/API/runtime gate remain pending. `ANALYSIS_PREPARATION.md` now states that both producer and validator source exist without implying execution.

@@ -1,0 +1,42 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "benchmark/results/current-complexity-2026-10-15/validation/check_readiness.py"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "started_utc": "2026-10-15T18:27:14.555667+00:00",
+  "started_monotonic_ns": 37005041,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/check_readiness.py": "64fbabfa467f004bf2857f4172ef8ea8638ddfec46f7bd1b03c605af6c7e133d",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/validate_build.py": "cb08e4c7e798cf48b27330009e68f1c93ff4aa78b55419de67cc646d5a687a6a"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 28089,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 28089,
+    "members": [],
+    "monotonic_ns": 870977625,
+    "utc": "2026-10-15T18:27:15.389627+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/check_readiness.py": "64fbabfa467f004bf2857f4172ef8ea8638ddfec46f7bd1b03c605af6c7e133d",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/validate_build.py": "cb08e4c7e798cf48b27330009e68f1c93ff4aa78b55419de67cc646d5a687a6a"
+  },
+  "finished_utc": "2026-10-15T18:27:15.389903+00:00",
+  "finished_monotonic_ns": 871264416,
+  "elapsed_seconds": 0.834259375,
+  "stdout": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/readiness-check-attempt01.stdout",
+  "stdout_sha256": "89cafb4c408c34e44aa5b17010ded0d34f80ca0b1fed727f46248f84ebc1354d",
+  "stderr": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/readiness-check-attempt01.stderr",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

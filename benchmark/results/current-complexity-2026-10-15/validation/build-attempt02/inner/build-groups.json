@@ -1,0 +1,230 @@
+{
+  "groups": [
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/usr/local/lib/python3.10/site-packages/cmake/data/bin/cmake",
+        "-S",
+        "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt02",
+        "-B",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt02",
+        "-G",
+        "Unix Makefiles",
+        "-DCMAKE_CXX_COMPILER=/usr/bin/clang++",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_OSX_ARCHITECTURES=arm64",
+        "-DCMAKE_OSX_SYSROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+        "-DBUILD_SHARED_LIBS=OFF",
+        "-DBENCHMARK_ENABLE_TESTING=ON",
+        "-DBENCHMARK_ENABLE_GTEST_TESTS=OFF",
+        "-DBENCHMARK_ENABLE_ASSEMBLY_TESTS=OFF",
+        "-DBENCHMARK_ENABLE_LTO=OFF",
+        "-DBENCHMARK_DOWNLOAD_DEPENDENCIES=OFF",
+        "-DBENCHMARK_ENABLE_INSTALL=OFF"
+      ],
+      "process_group": 64659,
+      "observations": [
+        {
+          "utc": "2026-10-15T18:13:36.251014+00:00",
+          "monotonic_ns": 3977669958,
+          "process_group": 64659,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 64659,
+              "rss_kib": 16592,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/cmake"
+            }
+          ],
+          "rss_kib": 16592
+        },
+        {
+          "utc": "2026-10-15T18:13:38.253375+00:00",
+          "monotonic_ns": 5980064625,
+          "process_group": 64659,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 65741,
+              "rss_kib": 5728,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/cmake"
+            },
+            {
+              "pid": 64659,
+              "rss_kib": 17424,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/cmake"
+            }
+          ],
+          "rss_kib": 23152
+        },
+        {
+          "utc": "2026-10-15T18:13:40.259855+00:00",
+          "monotonic_ns": 7986558875,
+          "process_group": 64659,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 64659,
+              "rss_kib": 17456,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/cmake"
+            }
+          ],
+          "rss_kib": 17456
+        },
+        {
+          "utc": "2026-10-15T18:13:42.092846+00:00",
+          "monotonic_ns": 9819558291,
+          "process_group": 64659,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 9819903708,
+        "process_group": 64659,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T18:13:42.093193+00:00",
+          "monotonic_ns": 9819908166,
+          "process_group": 64659,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 9820093833,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/usr/local/lib/python3.10/site-packages/cmake/data/bin/cmake",
+        "--build",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt02",
+        "--parallel",
+        "1"
+      ],
+      "process_group": 66295,
+      "observations": [
+        {
+          "utc": "2026-10-15T18:13:44.099880+00:00",
+          "monotonic_ns": 11826568791,
+          "process_group": 66295,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 66436,
+              "rss_kib": 155616,
+              "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang"
+            },
+            {
+              "pid": 66435,
+              "rss_kib": 16816,
+              "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang"
+            },
+            {
+              "pid": 66434,
+              "rss_kib": 2128,
+              "command": "/bin/bash"
+            },
+            {
+              "pid": 66307,
+              "rss_kib": 2144,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 66303,
+              "rss_kib": 1872,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 66298,
+              "rss_kib": 1936,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 66295,
+              "rss_kib": 10576,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/cmake"
+            }
+          ],
+          "rss_kib": 191088
+        },
+        {
+          "utc": "2026-10-15T18:13:46.103088+00:00",
+          "monotonic_ns": 13829823291,
+          "process_group": 66295,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 66793,
+              "rss_kib": 240,
+              "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang"
+            },
+            {
+              "pid": 66792,
+              "rss_kib": 2112,
+              "command": "/bin/bash"
+            },
+            {
+              "pid": 66307,
+              "rss_kib": 2144,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 66303,
+              "rss_kib": 1872,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 66298,
+              "rss_kib": 1936,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 66295,
+              "rss_kib": 10576,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/cmake"
+            }
+          ],
+          "rss_kib": 18880
+        },
+        {
+          "utc": "2026-10-15T18:13:46.743917+00:00",
+          "monotonic_ns": 14470656291,
+          "process_group": 66295,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 2,
+      "cleanup": {
+        "started_monotonic_ns": 14470986041,
+        "process_group": 66295,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 2,
+        "group_verification": {
+          "utc": "2026-10-15T18:13:46.744251+00:00",
+          "monotonic_ns": 14470992791,
+          "process_group": 66295,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 14471080416,
+        "native_process_may_still_be_running": false
+      }
+    }
+  ]
+}

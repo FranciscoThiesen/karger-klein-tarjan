@@ -1,0 +1,40 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "benchmark/current_complexity/test_collect.py"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "started_utc": "2026-10-15T18:01:34.593976+00:00",
+  "started_monotonic_ns": 23546416,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/test_collect.py": "71b09016017bec0aae5b0444b5ee33891b678f6dd9512cf7a4b8736c2ce4e814"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 47142,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 47142,
+    "members": [],
+    "monotonic_ns": 1874259791,
+    "utc": "2026-10-15T18:01:36.444669+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/test_collect.py": "71b09016017bec0aae5b0444b5ee33891b678f6dd9512cf7a4b8736c2ce4e814"
+  },
+  "finished_utc": "2026-10-15T18:01:36.445092+00:00",
+  "finished_monotonic_ns": 1874697666,
+  "elapsed_seconds": 1.85115125,
+  "stdout": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/mock-1-attempt01.stdout",
+  "stdout_sha256": "308d058ab1094d13af9cc39c789e7f7c5653811fd4df4e28cbe2a448cd720a44",
+  "stderr": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/mock-1-attempt01.stderr",
+  "stderr_sha256": "8d08cde834835b52a9dede2149a657fbaaf67ee9ef654a6261a7eef51aa3bada"
+}

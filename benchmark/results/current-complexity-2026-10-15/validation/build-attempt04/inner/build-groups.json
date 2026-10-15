@@ -1,0 +1,1334 @@
+{
+  "groups": [
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/usr/local/lib/python3.10/site-packages/cmake/data/bin/cmake",
+        "-S",
+        "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04",
+        "-B",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04",
+        "-G",
+        "Unix Makefiles",
+        "-DCMAKE_CXX_COMPILER=/usr/bin/clang++",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_CXX_FLAGS=-Wno-error=unused-but-set-variable",
+        "-DCMAKE_OSX_ARCHITECTURES=arm64",
+        "-DCMAKE_OSX_SYSROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+        "-DBUILD_SHARED_LIBS=OFF",
+        "-DBENCHMARK_ENABLE_TESTING=ON",
+        "-DBENCHMARK_ENABLE_GTEST_TESTS=OFF",
+        "-DBENCHMARK_ENABLE_ASSEMBLY_TESTS=OFF",
+        "-DBENCHMARK_ENABLE_LTO=OFF",
+        "-DBENCHMARK_DOWNLOAD_DEPENDENCIES=OFF",
+        "-DBENCHMARK_ENABLE_INSTALL=OFF"
+      ],
+      "process_group": 88233,
+      "observations": [
+        {
+          "utc": "2026-10-15T18:20:54.889736+00:00",
+          "monotonic_ns": 4941503375,
+          "process_group": 88233,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 88643,
+              "rss_kib": 35728,
+              "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang"
+            },
+            {
+              "pid": 88642,
+              "rss_kib": 16832,
+              "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang"
+            },
+            {
+              "pid": 88640,
+              "rss_kib": 1824,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 88639,
+              "rss_kib": 1792,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 88638,
+              "rss_kib": 9888,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/cmake"
+            },
+            {
+              "pid": 88233,
+              "rss_kib": 17568,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/cmake"
+            }
+          ],
+          "rss_kib": 83632
+        },
+        {
+          "utc": "2026-10-15T18:20:56.891967+00:00",
+          "monotonic_ns": 6943729583,
+          "process_group": 88233,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 88993,
+              "rss_kib": 5248,
+              "command": "/usr/bin/clang++"
+            },
+            {
+              "pid": 88991,
+              "rss_kib": 1808,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 88990,
+              "rss_kib": 1760,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 88989,
+              "rss_kib": 9872,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/cmake"
+            },
+            {
+              "pid": 88233,
+              "rss_kib": 17600,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/cmake"
+            }
+          ],
+          "rss_kib": 36288
+        },
+        {
+          "utc": "2026-10-15T18:20:58.077296+00:00",
+          "monotonic_ns": 8129076416,
+          "process_group": 88233,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 8129398541,
+        "process_group": 88233,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T18:20:58.077623+00:00",
+          "monotonic_ns": 8129407791,
+          "process_group": 88233,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 8129486041,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/usr/local/lib/python3.10/site-packages/cmake/data/bin/cmake",
+        "--build",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04",
+        "--parallel",
+        "1"
+      ],
+      "process_group": 89136,
+      "observations": [
+        {
+          "utc": "2026-10-15T18:21:00.082536+00:00",
+          "monotonic_ns": 10134285000,
+          "process_group": 89136,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 89237,
+              "rss_kib": 152512,
+              "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang"
+            },
+            {
+              "pid": 89236,
+              "rss_kib": 16816,
+              "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang"
+            },
+            {
+              "pid": 89235,
+              "rss_kib": 2128,
+              "command": "/bin/bash"
+            },
+            {
+              "pid": 89148,
+              "rss_kib": 2144,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 89143,
+              "rss_kib": 1984,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 89138,
+              "rss_kib": 1904,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 89136,
+              "rss_kib": 10592,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/cmake"
+            }
+          ],
+          "rss_kib": 188080
+        },
+        {
+          "utc": "2026-10-15T18:21:02.086744+00:00",
+          "monotonic_ns": 12138511125,
+          "process_group": 89136,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 89506,
+              "rss_kib": 38832,
+              "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang"
+            },
+            {
+              "pid": 89501,
+              "rss_kib": 16816,
+              "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang"
+            },
+            {
+              "pid": 89500,
+              "rss_kib": 2128,
+              "command": "/bin/bash"
+            },
+            {
+              "pid": 89148,
+              "rss_kib": 2208,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 89143,
+              "rss_kib": 1984,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 89138,
+              "rss_kib": 1904,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 89136,
+              "rss_kib": 10592,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/cmake"
+            }
+          ],
+          "rss_kib": 74464
+        },
+        {
+          "utc": "2026-10-15T18:21:04.089073+00:00",
+          "monotonic_ns": 14140832333,
+          "process_group": 89136,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 89573,
+              "rss_kib": 32848,
+              "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang"
+            },
+            {
+              "pid": 89572,
+              "rss_kib": 16816,
+              "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang"
+            },
+            {
+              "pid": 89571,
+              "rss_kib": 2112,
+              "command": "/bin/bash"
+            },
+            {
+              "pid": 89148,
+              "rss_kib": 2288,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 89143,
+              "rss_kib": 1984,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 89138,
+              "rss_kib": 1904,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 89136,
+              "rss_kib": 10592,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/cmake"
+            }
+          ],
+          "rss_kib": 68544
+        },
+        {
+          "utc": "2026-10-15T18:21:06.093938+00:00",
+          "monotonic_ns": 16145690625,
+          "process_group": 89136,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 89797,
+              "rss_kib": 38816,
+              "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang"
+            },
+            {
+              "pid": 89795,
+              "rss_kib": 16832,
+              "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang"
+            },
+            {
+              "pid": 89794,
+              "rss_kib": 2112,
+              "command": "/bin/bash"
+            },
+            {
+              "pid": 89148,
+              "rss_kib": 2320,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 89143,
+              "rss_kib": 1984,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 89138,
+              "rss_kib": 1904,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 89136,
+              "rss_kib": 10592,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/cmake"
+            }
+          ],
+          "rss_kib": 74560
+        },
+        {
+          "utc": "2026-10-15T18:21:08.100410+00:00",
+          "monotonic_ns": 18152157000,
+          "process_group": 89136,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 89951,
+              "rss_kib": 172608,
+              "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang"
+            },
+            {
+              "pid": 89943,
+              "rss_kib": 16816,
+              "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang"
+            },
+            {
+              "pid": 89938,
+              "rss_kib": 2128,
+              "command": "/bin/bash"
+            },
+            {
+              "pid": 89936,
+              "rss_kib": 1840,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 89143,
+              "rss_kib": 2080,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 89138,
+              "rss_kib": 1904,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 89136,
+              "rss_kib": 10592,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/cmake"
+            }
+          ],
+          "rss_kib": 207968
+        },
+        {
+          "utc": "2026-10-15T18:21:10.102559+00:00",
+          "monotonic_ns": 20154297666,
+          "process_group": 89136,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 90129,
+              "rss_kib": 608,
+              "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang"
+            },
+            {
+              "pid": 90128,
+              "rss_kib": 9872,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/cmake"
+            },
+            {
+              "pid": 90127,
+              "rss_kib": 2096,
+              "command": "/bin/bash"
+            },
+            {
+              "pid": 90119,
+              "rss_kib": 1888,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 89143,
+              "rss_kib": 2096,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 89138,
+              "rss_kib": 1904,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 89136,
+              "rss_kib": 10592,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/cmake"
+            }
+          ],
+          "rss_kib": 29056
+        },
+        {
+          "utc": "2026-10-15T18:21:12.110552+00:00",
+          "monotonic_ns": 22162285083,
+          "process_group": 89136,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 90485,
+              "rss_kib": 49280,
+              "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang"
+            },
+            {
+              "pid": 90484,
+              "rss_kib": 16848,
+              "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang"
+            },
+            {
+              "pid": 90483,
+              "rss_kib": 2112,
+              "command": "/bin/bash"
+            },
+            {
+              "pid": 90481,
+              "rss_kib": 1840,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 89143,
+              "rss_kib": 2144,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 89138,
+              "rss_kib": 1904,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 89136,
+              "rss_kib": 10592,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/cmake"
+            }
+          ],
+          "rss_kib": 84720
+        },
+        {
+          "utc": "2026-10-15T18:21:14.120857+00:00",
+          "monotonic_ns": 24172583375,
+          "process_group": 89136,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 90696,
+              "rss_kib": 42368,
+              "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang"
+            },
+            {
+              "pid": 90684,
+              "rss_kib": 16848,
+              "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang"
+            },
+            {
+              "pid": 90680,
+              "rss_kib": 2128,
+              "command": "/bin/bash"
+            },
+            {
+              "pid": 90665,
+              "rss_kib": 1872,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 89143,
+              "rss_kib": 2176,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 89138,
+              "rss_kib": 1904,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 89136,
+              "rss_kib": 10592,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/cmake"
+            }
+          ],
+          "rss_kib": 77888
+        },
+        {
+          "utc": "2026-10-15T18:21:16.121292+00:00",
+          "monotonic_ns": 26173011541,
+          "process_group": 89136,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 90856,
+              "rss_kib": 39456,
+              "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang"
+            },
+            {
+              "pid": 90855,
+              "rss_kib": 16848,
+              "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang"
+            },
+            {
+              "pid": 90854,
+              "rss_kib": 2112,
+              "command": "/bin/bash"
+            },
+            {
+              "pid": 90852,
+              "rss_kib": 1840,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 89143,
+              "rss_kib": 2192,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 89138,
+              "rss_kib": 1904,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 89136,
+              "rss_kib": 10592,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/cmake"
+            }
+          ],
+          "rss_kib": 74944
+        },
+        {
+          "utc": "2026-10-15T18:21:18.122144+00:00",
+          "monotonic_ns": 28173857875,
+          "process_group": 89136,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 91191,
+              "rss_kib": 1200,
+              "command": "/bin/bash"
+            },
+            {
+              "pid": 91187,
+              "rss_kib": 2112,
+              "command": "/bin/bash"
+            },
+            {
+              "pid": 91175,
+              "rss_kib": 1888,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 89143,
+              "rss_kib": 2208,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 89138,
+              "rss_kib": 1904,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 89136,
+              "rss_kib": 10592,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/cmake"
+            }
+          ],
+          "rss_kib": 19904
+        },
+        {
+          "utc": "2026-10-15T18:21:20.129176+00:00",
+          "monotonic_ns": 30180881958,
+          "process_group": 89136,
+          "validation": "unavailable",
+          "error": "ProcessLookupError(3, 'No such process')"
+        },
+        {
+          "utc": "2026-10-15T18:21:22.136077+00:00",
+          "monotonic_ns": 32187776500,
+          "process_group": 89136,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 92027,
+              "rss_kib": 55040,
+              "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang"
+            },
+            {
+              "pid": 92010,
+              "rss_kib": 16832,
+              "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang"
+            },
+            {
+              "pid": 92004,
+              "rss_kib": 2128,
+              "command": "/bin/bash"
+            },
+            {
+              "pid": 91988,
+              "rss_kib": 1840,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 89143,
+              "rss_kib": 2256,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 89138,
+              "rss_kib": 1904,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/make"
+            },
+            {
+              "pid": 89136,
+              "rss_kib": 10592,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/cmake"
+            }
+          ],
+          "rss_kib": 90592
+        },
+        {
+          "utc": "2026-10-15T18:21:22.703506+00:00",
+          "monotonic_ns": 32755204166,
+          "process_group": 89136,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 32755515791,
+        "process_group": 89136,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T18:21:22.703819+00:00",
+          "monotonic_ns": 32755521958,
+          "process_group": 89136,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 32755613125,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/usr/local/lib/python3.10/site-packages/cmake/data/bin/ctest",
+        "--test-dir",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04",
+        "--output-on-failure",
+        "--parallel",
+        "1",
+        "--timeout",
+        "30",
+        "--output-junit",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/library-tests.xml"
+      ],
+      "process_group": 92363,
+      "observations": [
+        {
+          "utc": "2026-10-15T18:21:24.710633+00:00",
+          "monotonic_ns": 34762291708,
+          "process_group": 92363,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 92366,
+              "rss_kib": 2576,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/test/benchmark_test"
+            },
+            {
+              "pid": 92363,
+              "rss_kib": 12288,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/ctest"
+            }
+          ],
+          "rss_kib": 14864
+        },
+        {
+          "utc": "2026-10-15T18:21:26.720291+00:00",
+          "monotonic_ns": 36771976625,
+          "process_group": 92363,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 92366,
+              "rss_kib": 5936,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/test/benchmark_test"
+            },
+            {
+              "pid": 92363,
+              "rss_kib": 12384,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/ctest"
+            }
+          ],
+          "rss_kib": 18320
+        },
+        {
+          "utc": "2026-10-15T18:21:28.728816+00:00",
+          "monotonic_ns": 38780495625,
+          "process_group": 92363,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 93130,
+              "rss_kib": 1680,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/test/filter_test"
+            },
+            {
+              "pid": 92363,
+              "rss_kib": 12656,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/ctest"
+            }
+          ],
+          "rss_kib": 14336
+        },
+        {
+          "utc": "2026-10-15T18:21:30.730439+00:00",
+          "monotonic_ns": 40782110458,
+          "process_group": 92363,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 93738,
+              "rss_kib": 1680,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/test/filter_test"
+            },
+            {
+              "pid": 92363,
+              "rss_kib": 12816,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/ctest"
+            }
+          ],
+          "rss_kib": 14496
+        },
+        {
+          "utc": "2026-10-15T18:21:32.732183+00:00",
+          "monotonic_ns": 42783847708,
+          "process_group": 92363,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 93837,
+              "rss_kib": 1680,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/test/filter_test"
+            },
+            {
+              "pid": 92363,
+              "rss_kib": 12896,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/ctest"
+            }
+          ],
+          "rss_kib": 14576
+        },
+        {
+          "utc": "2026-10-15T18:21:34.737129+00:00",
+          "monotonic_ns": 44788783375,
+          "process_group": 92363,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 94494,
+              "rss_kib": 1696,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/test/filter_test"
+            },
+            {
+              "pid": 92363,
+              "rss_kib": 12960,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/ctest"
+            }
+          ],
+          "rss_kib": 14656
+        },
+        {
+          "utc": "2026-10-15T18:21:36.742876+00:00",
+          "monotonic_ns": 46794525125,
+          "process_group": 92363,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 94569,
+              "rss_kib": 1664,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/test/filter_test"
+            },
+            {
+              "pid": 92363,
+              "rss_kib": 12976,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/ctest"
+            }
+          ],
+          "rss_kib": 14640
+        },
+        {
+          "utc": "2026-10-15T18:21:38.750219+00:00",
+          "monotonic_ns": 48801861666,
+          "process_group": 92363,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 94901,
+              "rss_kib": 1664,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/test/filter_test"
+            },
+            {
+              "pid": 92363,
+              "rss_kib": 12976,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/ctest"
+            }
+          ],
+          "rss_kib": 14640
+        },
+        {
+          "utc": "2026-10-15T18:21:40.758524+00:00",
+          "monotonic_ns": 50810159791,
+          "process_group": 92363,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 95250,
+              "rss_kib": 1680,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/test/filter_test"
+            },
+            {
+              "pid": 92363,
+              "rss_kib": 12976,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/ctest"
+            }
+          ],
+          "rss_kib": 14656
+        },
+        {
+          "utc": "2026-10-15T18:21:42.768144+00:00",
+          "monotonic_ns": 52819771666,
+          "process_group": 92363,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 95378,
+              "rss_kib": 1696,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/test/filter_test"
+            },
+            {
+              "pid": 92363,
+              "rss_kib": 12992,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/ctest"
+            }
+          ],
+          "rss_kib": 14688
+        },
+        {
+          "utc": "2026-10-15T18:21:44.775551+00:00",
+          "monotonic_ns": 54827171291,
+          "process_group": 92363,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 95450,
+              "rss_kib": 2048,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/test/options_test"
+            },
+            {
+              "pid": 92363,
+              "rss_kib": 13008,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/ctest"
+            }
+          ],
+          "rss_kib": 15056
+        },
+        {
+          "utc": "2026-10-15T18:21:46.786337+00:00",
+          "monotonic_ns": 56837955666,
+          "process_group": 92363,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 95642,
+              "rss_kib": 2064,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/test/basic_test"
+            },
+            {
+              "pid": 92363,
+              "rss_kib": 13040,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/ctest"
+            }
+          ],
+          "rss_kib": 15104
+        },
+        {
+          "utc": "2026-10-15T18:21:48.789831+00:00",
+          "monotonic_ns": 58841438958,
+          "process_group": 92363,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 95973,
+              "rss_kib": 32,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/test/skip_with_error_test"
+            },
+            {
+              "pid": 92363,
+              "rss_kib": 13056,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/ctest"
+            }
+          ],
+          "rss_kib": 13088
+        },
+        {
+          "utc": "2026-10-15T18:21:50.797066+00:00",
+          "monotonic_ns": 60848666666,
+          "process_group": 92363,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 96010,
+              "rss_kib": 1552,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/test/fixture_test"
+            },
+            {
+              "pid": 92363,
+              "rss_kib": 13056,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/ctest"
+            }
+          ],
+          "rss_kib": 14608
+        },
+        {
+          "utc": "2026-10-15T18:21:52.812367+00:00",
+          "monotonic_ns": 62863962666,
+          "process_group": 92363,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 96216,
+              "rss_kib": 1696,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/test/register_benchmark_test"
+            },
+            {
+              "pid": 92363,
+              "rss_kib": 13056,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/ctest"
+            }
+          ],
+          "rss_kib": 14752
+        },
+        {
+          "utc": "2026-10-15T18:21:54.822410+00:00",
+          "monotonic_ns": 64873999625,
+          "process_group": 92363,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 96699,
+              "rss_kib": 32,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/test/multiple_ranges_test"
+            },
+            {
+              "pid": 92363,
+              "rss_kib": 13104,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/ctest"
+            }
+          ],
+          "rss_kib": 13136
+        },
+        {
+          "utc": "2026-10-15T18:21:56.832872+00:00",
+          "monotonic_ns": 66884296750,
+          "process_group": 92363,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 96931,
+              "rss_kib": 1744,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/test/args_product_test"
+            },
+            {
+              "pid": 92363,
+              "rss_kib": 13136,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/ctest"
+            }
+          ],
+          "rss_kib": 14880
+        },
+        {
+          "utc": "2026-10-15T18:21:58.835883+00:00",
+          "monotonic_ns": 68887459125,
+          "process_group": 92363,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 96974,
+              "rss_kib": 1648,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/test/link_main_test"
+            },
+            {
+              "pid": 92363,
+              "rss_kib": 13136,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/ctest"
+            }
+          ],
+          "rss_kib": 14784
+        },
+        {
+          "utc": "2026-10-15T18:22:00.840822+00:00",
+          "monotonic_ns": 70892391333,
+          "process_group": 92363,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 97230,
+              "rss_kib": 32,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/test/templated_fixture_test"
+            },
+            {
+              "pid": 92363,
+              "rss_kib": 13232,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/ctest"
+            }
+          ],
+          "rss_kib": 13264
+        },
+        {
+          "utc": "2026-10-15T18:22:02.850967+00:00",
+          "monotonic_ns": 72902529333,
+          "process_group": 92363,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 97257,
+              "rss_kib": 2576,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/test/user_counters_test"
+            },
+            {
+              "pid": 92363,
+              "rss_kib": 13232,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/ctest"
+            }
+          ],
+          "rss_kib": 15808
+        },
+        {
+          "utc": "2026-10-15T18:22:04.852176+00:00",
+          "monotonic_ns": 74903734666,
+          "process_group": 92363,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 97407,
+              "rss_kib": 2064,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/test/internal_threading_test"
+            },
+            {
+              "pid": 92363,
+              "rss_kib": 13280,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/ctest"
+            }
+          ],
+          "rss_kib": 15344
+        },
+        {
+          "utc": "2026-10-15T18:22:06.858794+00:00",
+          "monotonic_ns": 76910346208,
+          "process_group": 92363,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 97540,
+              "rss_kib": 32,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/test/report_aggregates_only_test"
+            },
+            {
+              "pid": 92363,
+              "rss_kib": 13296,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/ctest"
+            }
+          ],
+          "rss_kib": 13328
+        },
+        {
+          "utc": "2026-10-15T18:22:08.861243+00:00",
+          "monotonic_ns": 78912785875,
+          "process_group": 92363,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 97726,
+              "rss_kib": 1776,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/test/display_aggregates_only_test"
+            },
+            {
+              "pid": 92363,
+              "rss_kib": 13312,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/ctest"
+            }
+          ],
+          "rss_kib": 15088
+        },
+        {
+          "utc": "2026-10-15T18:22:10.865509+00:00",
+          "monotonic_ns": 80917044583,
+          "process_group": 92363,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 98037,
+              "rss_kib": 2080,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/test/user_counters_thousands_test"
+            },
+            {
+              "pid": 92363,
+              "rss_kib": 13344,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/ctest"
+            }
+          ],
+          "rss_kib": 15424
+        },
+        {
+          "utc": "2026-10-15T18:22:12.876175+00:00",
+          "monotonic_ns": 82927598958,
+          "process_group": 92363,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 98127,
+              "rss_kib": 1824,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/test/memory_manager_test"
+            },
+            {
+              "pid": 92363,
+              "rss_kib": 13344,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/ctest"
+            }
+          ],
+          "rss_kib": 15168
+        },
+        {
+          "utc": "2026-10-15T18:22:14.885184+00:00",
+          "monotonic_ns": 84936706458,
+          "process_group": 92363,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 98415,
+              "rss_kib": 2512,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/test/complexity_test"
+            },
+            {
+              "pid": 92363,
+              "rss_kib": 13360,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/ctest"
+            }
+          ],
+          "rss_kib": 15872
+        },
+        {
+          "utc": "2026-10-15T18:22:16.895909+00:00",
+          "monotonic_ns": 86947428541,
+          "process_group": 92363,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 98415,
+              "rss_kib": 3504,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/test/complexity_test"
+            },
+            {
+              "pid": 92363,
+              "rss_kib": 13360,
+              "command": "/usr/local/lib/python3.10/site-packages/cmake/data/bin/ctest"
+            }
+          ],
+          "rss_kib": 16864
+        },
+        {
+          "utc": "2026-10-15T18:22:17.262543+00:00",
+          "monotonic_ns": 87314060000,
+          "process_group": 92363,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 87314368125,
+        "process_group": 92363,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T18:22:17.262853+00:00",
+          "monotonic_ns": 87314374166,
+          "process_group": 92363,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 87314458708,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/usr/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O3",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-I/Users/random_person/Desktop/kkt-eighth-sampling",
+        "-I/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/include",
+        "-c",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/current_complexity.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/current_complexity.o"
+      ],
+      "process_group": 98479,
+      "observations": [
+        {
+          "utc": "2026-10-15T18:22:18.803243+00:00",
+          "monotonic_ns": 88854717333,
+          "process_group": 98479,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 88855176250,
+        "process_group": 98479,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T18:22:18.803666+00:00",
+          "monotonic_ns": 88855182000,
+          "process_group": 98479,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 88855272500,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/usr/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O3",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-I/Users/random_person/Desktop/kkt-eighth-sampling",
+        "-I/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/include",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/eighth/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/current_complexity.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/src/libbenchmark.a",
+        "-lpthread",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/current_complexity"
+      ],
+      "process_group": 98646,
+      "observations": [
+        {
+          "utc": "2026-10-15T18:22:18.884565+00:00",
+          "monotonic_ns": 88936047875,
+          "process_group": 98646,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 88936562208,
+        "process_group": 98646,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T18:22:18.885053+00:00",
+          "monotonic_ns": 88936567500,
+          "process_group": 98646,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 88936673791,
+        "native_process_may_still_be_running": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "schema": "complexity_failed_attempt_empty_group_audit_v1",
+  "validation": "pass",
+  "failed_attempt_remains_failed": true,
+  "process_groups": [
+    54962,
+    54984,
+    55272
+  ],
+  "observations": [
+    {
+      "utc": "2026-10-15T18:13:15.436046+00:00",
+      "monotonic_ns": 111163125,
+      "process_group": 54962,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    {
+      "utc": "2026-10-15T18:13:15.436407+00:00",
+      "monotonic_ns": 111526666,
+      "process_group": 54984,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    {
+      "utc": "2026-10-15T18:13:15.436523+00:00",
+      "monotonic_ns": 111642541,
+      "process_group": 55272,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    }
+  ],
+  "monitor_events": {
+    "54962": [
+      {
+        "process_group": 54962,
+        "requested_monotonic_ns": 111163125,
+        "previous_request_gap_ns": null,
+        "provider_started_monotonic_ns": 111320166,
+        "provider_finished_monotonic_ns": 111506208,
+        "outcome": "pass",
+        "returned_monotonic_ns": 111522291,
+        "sampler_duration_ns": 359166
+      }
+    ],
+    "54984": [
+      {
+        "process_group": 54984,
+        "requested_monotonic_ns": 111526666,
+        "previous_request_gap_ns": null,
+        "provider_started_monotonic_ns": 111574291,
+        "provider_finished_monotonic_ns": 111623583,
+        "outcome": "pass",
+        "returned_monotonic_ns": 111638916,
+        "sampler_duration_ns": 112250
+      }
+    ],
+    "55272": [
+      {
+        "process_group": 55272,
+        "requested_monotonic_ns": 111642541,
+        "previous_request_gap_ns": null,
+        "provider_started_monotonic_ns": 111684791,
+        "provider_finished_monotonic_ns": 111716958,
+        "outcome": "pass",
+        "returned_monotonic_ns": 111731416,
+        "sampler_duration_ns": 88875
+      }
+    ]
+  },
+  "all_owned_groups_verified_empty": true,
+  "bound_sha256": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/build-attempt01/receipt.json": "82fe5f77f854df78b3be59b21d20f1e343eee5fadf870d9826551ddf6853d89c",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/build-attempt01/inner/acquisition-groups.json": "dcabc6b1a1797e78575705015d6dc73741a0be3d3495e7f479ab7f1594946b24",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/build-attempt01/inner/build-groups.json": "05ee343c4f3ff65a3ff6a190c8af3062b5cd78d98b9e5a4316f8b68b59289a9c"
+  }
+}

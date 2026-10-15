@@ -1,0 +1,9 @@
+Apple clang version 15.0.0 (clang-1500.3.9.4)
+Target: arm64-apple-darwin25.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+SDK: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk
+{"removed": {"CPATH": "/usr/local/include", "LIBRARY_PATH": "/usr/local/lib"}, "required_empty": {"CPLUS_INCLUDE_PATH": null, "C_INCLUDE_PATH": null, "CFLAGS": null, "CXXFLAGS": null, "CPPFLAGS": null, "LDFLAGS": null, "CC": null, "CXX": null, "CMAKE_GENERATOR": null, "CMAKE_TOOLCHAIN_FILE": null, "CMAKE_POLICY_VERSION_MINIMUM": null, "CMAKE_OSX_ARCHITECTURES": null, "MACOSX_DEPLOYMENT_TARGET": null, "APPVEYOR": null}, "retained": {"SDKROOT": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk", "DEVELOPER_DIR": null}}
+
+$ /usr/bin/arch -arm64 /usr/local/bin/cmake -S /Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt01 -B /Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt01 -G 'Unix Makefiles' -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DCMAKE_BUILD_TYPE=Release -DCMAKE_OSX_ARCHITECTURES=arm64 -DCMAKE_OSX_SYSROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DBUILD_SHARED_LIBS=OFF -DBENCHMARK_ENABLE_TESTING=ON -DBENCHMARK_ENABLE_GTEST_TESTS=OFF -DBENCHMARK_ENABLE_ASSEMBLY_TESTS=OFF -DBENCHMARK_ENABLE_LTO=OFF -DBENCHMARK_DOWNLOAD_DEPENDENCIES=OFF -DBENCHMARK_ENABLE_INSTALL=OFF
+arch: posix_spawnp: /usr/local/bin/cmake: Bad CPU type in executable

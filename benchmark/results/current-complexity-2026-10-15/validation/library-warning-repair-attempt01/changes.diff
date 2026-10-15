@@ -1,0 +1,122 @@
+--- before/validate_build.py
++++ after/validate_build.py
+@@ -39,6 +39,10 @@
+ PARENT_SHA = analyzer.PARENT_SHA
+ FLAGS = ["-std=c++17", "-O3", "-Wall", "-Wextra", "-march=native",
+          "-DKKT_EXPERIMENT_RETAIN_PARALLEL", "-DKKT_EXPERIMENT_EDGE_VIEW"]
++# Pinned v1.5.2 has an unused accumulator under Apple Clang 15's newer
++# diagnostic. Keep the warning visible; relax only its promotion to an error.
++# This applies to the upstream library/test build, never production objects.
++LIBRARY_WARNING_FLAG = "-Wno-error=unused-but-set-variable"
+ ORIGIN = "https://github.com/google/benchmark.git"
+ EMPTY_ENVIRONMENT = ("CPLUS_INCLUDE_PATH", "C_INCLUDE_PATH", "CFLAGS", "CXXFLAGS", "CPPFLAGS", "LDFLAGS",
+                      "CC", "CXX", "CMAKE_GENERATOR", "CMAKE_TOOLCHAIN_FILE", "CMAKE_POLICY_VERSION_MINIMUM",
+@@ -182,6 +186,7 @@
+     exact(record["tool_policy"],tool_policy(record["tool_versions"]),"different source-declared CMake policy")
+     configure = ["/usr/bin/arch", "-arm64", cmake, "-S", source, "-B", build,"-G","Unix Makefiles",
+                  "-DCMAKE_CXX_COMPILER=/usr/bin/clang++", "-DCMAKE_BUILD_TYPE=Release",
++                 "-DCMAKE_CXX_FLAGS="+LIBRARY_WARNING_FLAG,
+                  "-DCMAKE_OSX_ARCHITECTURES=arm64", "-DCMAKE_OSX_SYSROOT="+sdk,
+                  "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON", "-DBUILD_SHARED_LIBS=OFF",
+                  "-DBENCHMARK_ENABLE_TESTING=ON", "-DBENCHMARK_ENABLE_GTEST_TESTS=OFF",
+@@ -202,12 +207,12 @@
+     accepted = {}; selected = []
+     for entry in commands:
+         if entry["file"] not in expected_sources: continue
+-        exact(entry["directory"], str(build), "different library build directory")
++        exact(entry["directory"], str(build/"src"), "different library build directory")
+         argv = entry.get("arguments") or shlex.split(entry["command"])
+         exact(argv[0], "/usr/bin/clang++", "different library compiler")
+         name = Path(entry["file"]).name
+         obj = build/"src/CMakeFiles/benchmark.dir"/(name+".o")
+-        require(argv[-4:] == ["-o", str(obj.relative_to(build)), "-c", entry["file"]] or
++        require(argv[-4:] == ["-o", str(obj.relative_to(build/"src")), "-c", entry["file"]] or
+                 argv[-4:] == ["-o", str(obj), "-c", entry["file"]], "unexpected library compile output")
+         flags = argv[1:-4]
+         for pair in (("-arch", "arm64"), ("-isysroot", record["sdk"])):
+@@ -215,7 +220,10 @@
+             index=flags.index(pair[0]); exact(flags[index:index+2], list(pair), "wrong native library flag")
+         require(flags.count("-O3") == 1 and flags.count("-DNDEBUG") == 1 and flags.count("-std=c++11") == 1,
+                 "unexpected library optimization/language profile")
++        require(flags.count(LIBRARY_WARNING_FLAG) == 1,
++                "missing/duplicate exact library warning compatibility flag")
+         allowed = {"-O3", "-DNDEBUG", "-std=c++11", "-Wall", "-Wextra", "-Wshadow", "-Werror", "-Wshorten-64-to-32",
++                   LIBRARY_WARNING_FLAG,
+                    "-fstrict-aliasing", "-Wno-deprecated-declarations", "-Wno-deprecated", "-Wstrict-aliasing", "-Wthread-safety",
+                    "-DHAVE_STD_REGEX", "-DHAVE_GNU_POSIX_REGEX", "-DHAVE_POSIX_REGEX", "-DHAVE_STEADY_CLOCK", "-DHAVE_THREAD_SAFETY_ATTRIBUTES",
+                    "-arch", "arm64", "-isysroot", record["sdk"]}
+@@ -291,6 +299,7 @@
+         key=head.partition(":")[0]; require(key not in cache,"duplicate cache key"); cache[key]=value
+     for key,value in dict(CMAKE_HOME_DIRECTORY=record["library_source_root"],CMAKE_GENERATOR="Unix Makefiles",CMAKE_CXX_COMPILER="/usr/bin/clang++",
+                           CMAKE_BUILD_TYPE="Release",CMAKE_OSX_ARCHITECTURES="arm64",CMAKE_OSX_SYSROOT=record["sdk"],
++                          CMAKE_CXX_FLAGS=LIBRARY_WARNING_FLAG,
+                           CMAKE_EXPORT_COMPILE_COMMANDS="ON",BUILD_SHARED_LIBS="OFF",BENCHMARK_ENABLE_TESTING="ON",
+                           BENCHMARK_ENABLE_GTEST_TESTS="OFF",BENCHMARK_ENABLE_ASSEMBLY_TESTS="OFF",BENCHMARK_ENABLE_LTO="OFF",
+                           BENCHMARK_DOWNLOAD_DEPENDENCIES="OFF",BENCHMARK_ENABLE_INSTALL="OFF").items():
+--- before/test_validate_build.py
++++ after/test_validate_build.py
+@@ -55,6 +55,9 @@
+         self.assertEqual(build,["/usr/bin/arch","-arm64","/tools/cmake","--build","/build","--parallel","1"])
+         self.assertEqual(tests[-4:],["--timeout","30","--output-junit","/build/library-tests.xml"])
+         self.assertIsNone(record["tool_policy"]["policy_version_override"])
++        self.assertEqual([flag for flag in configure if flag.startswith("-DCMAKE_CXX_FLAGS=")],
++                         ["-DCMAKE_CXX_FLAGS=-Wno-error=unused-but-set-variable"])
++        self.assertNotIn(gate.LIBRARY_WARNING_FLAG,gate.FLAGS)
+         for version in ("3.20.6","5.0.0","4.1.0-rc1"):
+             with self.assertRaises(ValueError): gate.tool_policy({name:f"{name} version {version}\n" for name in ("cmake","ctest")})
+         environment=dict(removed={"CPATH":None,"LIBRARY_PATH":"/old"},
+@@ -96,8 +99,9 @@
+                 cpp=source/"src"/name; cpp.write_text("// synthetic\n")
+                 obj=build/"src/CMakeFiles/benchmark.dir"/(name+".o"); obj.parent.mkdir(parents=True,exist_ok=True); obj.write_bytes(name.encode())
+                 argv=["/usr/bin/clang++","-O3","-DNDEBUG","-std=c++11","-arch","arm64","-isysroot","/sdk",
+-                      "-I"+str(source/"src"),"-I"+str(source/"include"),"-o",str(obj.relative_to(build)),"-c",str(cpp)]
+-                entries.append(dict(directory=str(build),file=str(cpp),arguments=argv)); hashes[str(obj)]=gate.analyzer.digest(obj); argv_list.append(argv)
++                      "-Wno-error=unused-but-set-variable",
++                      "-I"+str(source/"src"),"-I"+str(source/"include"),"-o",str(obj.relative_to(build/"src")),"-c",str(cpp)]
++                entries.append(dict(directory=str(build/"src"),file=str(cpp),arguments=argv)); hashes[str(obj)]=gate.analyzer.digest(obj); argv_list.append(argv)
+             compile_file=build/"compile_commands.json"; compile_file.write_text(json.dumps(entries))
+             record=dict(library_source_root=str(source),library_build_directory=str(build),sdk="/sdk",
+                         compile_commands_sha256=gate.analyzer.digest(compile_file),library_compile_commands=argv_list,
+@@ -106,6 +110,19 @@
+                 return "Mach-O 64-bit object arm64\n" if command[0]=="/usr/bin/file" else "a.cc.o\nb.cc.o\n"
+             with mock.patch.object(gate,"output",side_effect=output),mock.patch.object(gate,"output_bytes",side_effect=lambda command:command[-1][:-2].encode()):
+                 self.assertEqual(len(gate.library_objects(record,{})),2)
++                changed=copy.deepcopy(entries);changed[0]["directory"]=str(build)
++                compile_file.write_text(json.dumps(changed))
++                altered={**record,"compile_commands_sha256":gate.analyzer.digest(compile_file)}
++                with self.assertRaisesRegex(ValueError,"build directory"):
++                    gate.library_objects(altered,{})
++                for bad in (None,"-Wno-error","-w"):
++                    changed=copy.deepcopy(entries)
++                    flags=changed[0]["arguments"];flags.remove(gate.LIBRARY_WARNING_FLAG)
++                    if bad is not None:flags.insert(1,bad)
++                    compile_file.write_text(json.dumps(changed))
++                    altered={**record,"compile_commands_sha256":gate.analyzer.digest(compile_file)}
++                    with self.assertRaisesRegex(ValueError,"warning compatibility"):
++                        gate.library_objects(altered,{})
+                 changed=copy.deepcopy(entries); changed[0]["arguments"].insert(1,"-fsanitize=address")
+                 compile_file.write_text(json.dumps(changed)); altered={**record,"compile_commands_sha256":gate.analyzer.digest(compile_file)}
+                 with self.assertRaisesRegex(ValueError,"unreviewed"): gate.library_objects(altered,{})
+--- before/BUILD_GATE_PLAN.md
++++ after/BUILD_GATE_PLAN.md
+@@ -1,4 +1,20 @@
+ # Real library, final-main and schema gates — source preparation
++
++Runtime compatibility update (2026-10-15): attempts01/02 are preserved. The
++installed `/usr/local/bin/cmake` and `ctest` are Python launchers with an
++Intel-only interpreter, so future invocations select their existing universal
++executables under `/usr/local/lib/python3.10/site-packages/cmake/data/bin` via
++an explicit PATH prefix. Attempt02 configured natively, then unchanged
++v1.5.2 `src/complexity.cc` failed because Apple Clang15 diagnoses an unused
++`sigma_gn` accumulator and upstream Release enables `-Werror`. Configure now
++adds exactly `-DCMAKE_CXX_FLAGS=-Wno-error=unused-but-set-variable` to the
++upstream library/test build. The warning stays visible; all other warning
++errors, production objects, main flags, limits and pinned source stay intact.
++The validator requires this exact flag once per library object and in the
++cache. It also checks the actual CMake compilation working directory `BUILD/src`
++and its relative `CMakeFiles/benchmark.dir/*.o` outputs; the earlier synthetic
++fixture had incorrectly assumed `BUILD`. Fresh attempts and the real schema
++smoke are still required; these compatibility changes are not successful gates.
+ 
+ No command below has run. No library is present or claimed validated. Root approved source preparation, including two diagnostic schema curves using the actual final binary; runtime, acquisition and performance each still require release. The fixed 24-curve matrix and seeds are unchanged.
+ 

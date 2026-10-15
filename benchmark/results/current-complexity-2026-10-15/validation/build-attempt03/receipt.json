@@ -1,0 +1,1117 @@
+{
+  "schema": "current_complexity_outer_gate_v1",
+  "validation": "failed",
+  "phase": "build",
+  "command": [
+    "/usr/bin/arch",
+    "-arm64",
+    "/usr/bin/python3",
+    "-B",
+    "-u",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/build_library_main.py",
+    "build",
+    "--parent-freeze",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/freeze.json",
+    "--library-source",
+    "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt03",
+    "--build-directory",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt03",
+    "--git-resolve",
+    "github.com:443:20.29.134.23",
+    "--output",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/build-attempt03/inner",
+    "--released"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "package": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity",
+  "started_monotonic_ns": 88373458,
+  "started_utc": "2026-10-15T18:16:50.790096+00:00",
+  "complete_interval_budget_seconds": 2100,
+  "deadline_scope": "launch through cleanup and full inner proof",
+  "cleanup_term_seconds": 30,
+  "cleanup_kill_seconds": 5,
+  "source_sha256": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/ANALYSIS_PREPARATION.md": "e6f39638a6e0090bff09e91287c4f72f18ae850d0b42e8d19cfcd20fc9cb4a0a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/BUILD_GATE_PLAN.md": "38bd2572cad662bf72735fae6dc132a2364e57ef8fc6d33c858180de29e78694",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/BUILD_PLAN.md": "d99f323e0c07fb7d29034cb78903f78037d19535482048202fdeea76e7d32d4a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/COLLECTOR_ANALYSIS_CONTRACT.md": "a9f6b4add1038928e35b19ef4a89327406b0353845057bd8f2cc10efaf5f849b",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/DESIGN.md": "aa085c47e0da1b0f0ce1c7979d10b5f8f75592c6f70d853bdb816bda0edb4a7f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/INDEPENDENT_ANALYSIS_SOURCE_REVIEW.md": "a78e0aea4ece9c831e0aa11a9cf307ee34a47ba1189cdcce6db1302b1c483f59",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/INDEPENDENT_BUILD_GATE_SOURCE_REVIEW.md": "fa79ad17a950ef28621b91a4afa7fcadb4d157fe51a551c08f3fdb3df4975432",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/INDEPENDENT_BUILD_PRODUCER_SOURCE_REVIEW.md": "60adf9852ddc6b33f6b6f62759cb424ea8738afed557ee2da492189cb802d173",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/INDEPENDENT_COLLECTOR_SOURCE_REVIEW.md": "7627a61db149060599970b8b4c5baeaadcecd54026ef40213f2a732b1c0d05eb",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/INDEPENDENT_PLOT_SOURCE_REVIEW.md": "5a2143662da67b90ac7caa507e87027d32efe934bba740f1a0ff63e4ffcf3bfd",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/INDEPENDENT_SOURCE_REVIEW.md": "dff4ba19e1353b430d01fd52e7b036d51a1147d7db6ed3ba82bde8042eceed9f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/PLOT_PREPARATION.md": "71e8a20cccd8ca7fb5f34761d778fdb35c7f16e4943afb388fe59bb068da0505",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/PROTOCOL.md": "ce9bcd7ff6d19d6b715d1e741c410f0260eaa0e771bd107e209269c6ba05434d",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/SEED_FRESHNESS.md": "a5c772325176cd6aaedd78e97832a6833bd7f57005f98ec2860ad7b3d51f0225",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/analyze_complexity.py": "4ccd57d906c3fea7191f6819a6bf57e3aecdfa966b7eb0a11737752cdfc19c3f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/build_library_main.py": "989bec37ed7d1cea927e7d0eae6ef922a210e403b68241ec8bdbb8981467ab4f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/collect.py": "69c34734e478c43d158ecb01d2e77cdff4d1ad0274424be647723fc7e6bdc393",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/current_complexity.cpp": "ccc746954240cb7432cf137357b32f077994729df6fa01e092aadec1f53629a4",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/plot_complexity.py": "f18ddc540b60ad1556e00b5961dd44683aa999f25e278df91e65d267993aa7fd",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/test_analyze_complexity.py": "67e519995e8f1db0d6ab5bf953417d0c67266aa190f6e32da047e3dbc8e7f255",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/test_build_library_main.py": "f371c4442576887d97f3be6e99c37e2481adf96eb53d283c0a9fd686614ac66b",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/test_collect.py": "71b09016017bec0aae5b0444b5ee33891b678f6dd9512cf7a4b8736c2ce4e814",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/test_validate_build.py": "564d5efde024d9477d6c6baa7f3995f88986e37dde0c8de419f815e0ad72813b",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/validate_build.py": "cd95015bccb96524a5f464197aacb931e2364e65c1542b74aa81637a01e6be88",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/launch-preparation/run_gate_attempt.py": "27241bdc69dceb635b22fb91f175f73adab600aae208f1f11e24b92317eed65c"
+  },
+  "input_sha256": {},
+  "performance_execution_authorized": false,
+  "native_library_execution_authorized": true,
+  "native_solver_execution_authorized": false,
+  "native_library_execution": null,
+  "native_solver_execution": null,
+  "outer_observations": [
+    {
+      "utc": "2026-10-15T18:16:52.802683+00:00",
+      "monotonic_ns": 2100939000,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26576,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26576
+    },
+    {
+      "utc": "2026-10-15T18:16:54.813240+00:00",
+      "monotonic_ns": 4111499416,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26592,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26592
+    },
+    {
+      "utc": "2026-10-15T18:16:56.818855+00:00",
+      "monotonic_ns": 6117105166,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26592,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26592
+    },
+    {
+      "utc": "2026-10-15T18:16:58.819526+00:00",
+      "monotonic_ns": 8117768291,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:17:00.825113+00:00",
+      "monotonic_ns": 10123347125,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:17:02.833653+00:00",
+      "monotonic_ns": 12131878166,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:17:04.841320+00:00",
+      "monotonic_ns": 14139536625,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:17:06.850814+00:00",
+      "monotonic_ns": 16149023458,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:17:08.852599+00:00",
+      "monotonic_ns": 18150800666,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:17:10.856718+00:00",
+      "monotonic_ns": 20154911041,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:17:12.857493+00:00",
+      "monotonic_ns": 22155679000,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:17:14.858672+00:00",
+      "monotonic_ns": 24156851166,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:17:16.859081+00:00",
+      "monotonic_ns": 26157252625,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:17:18.864267+00:00",
+      "monotonic_ns": 28162431166,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:17:20.865871+00:00",
+      "monotonic_ns": 30164025416,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:17:22.876560+00:00",
+      "monotonic_ns": 32174709125,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:17:24.878960+00:00",
+      "monotonic_ns": 34177101666,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:17:26.885376+00:00",
+      "monotonic_ns": 36183509208,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:17:28.887514+00:00",
+      "monotonic_ns": 38185637416,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:17:30.893823+00:00",
+      "monotonic_ns": 40191943166,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:17:32.900882+00:00",
+      "monotonic_ns": 42198995500,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:17:34.905241+00:00",
+      "monotonic_ns": 44203347166,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:17:36.909838+00:00",
+      "monotonic_ns": 46207937916,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:17:38.915738+00:00",
+      "monotonic_ns": 48213830041,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:17:40.921162+00:00",
+      "monotonic_ns": 50219248291,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:17:42.923280+00:00",
+      "monotonic_ns": 52221359041,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:17:44.931700+00:00",
+      "monotonic_ns": 54229771333,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:17:46.936618+00:00",
+      "monotonic_ns": 56234686333,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:17:48.945799+00:00",
+      "monotonic_ns": 58243858125,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:17:50.951927+00:00",
+      "monotonic_ns": 60249981750,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:17:52.960434+00:00",
+      "monotonic_ns": 62258477250,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:17:54.967305+00:00",
+      "monotonic_ns": 64265343666,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:17:56.969902+00:00",
+      "monotonic_ns": 66267935541,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:17:58.976976+00:00",
+      "monotonic_ns": 68275001458,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:18:00.987270+00:00",
+      "monotonic_ns": 70285290291,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:18:02.989966+00:00",
+      "monotonic_ns": 72287977833,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:18:04.991653+00:00",
+      "monotonic_ns": 74289657791,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:18:06.998243+00:00",
+      "monotonic_ns": 76296241041,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:18:09.007450+00:00",
+      "monotonic_ns": 78305442000,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:18:11.011540+00:00",
+      "monotonic_ns": 80309524666,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:18:13.013743+00:00",
+      "monotonic_ns": 82311723875,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 74263,
+          "rss_kib": 26624,
+          "command": "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 26624
+    },
+    {
+      "utc": "2026-10-15T18:18:14.904062+00:00",
+      "monotonic_ns": 84202036625,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    }
+  ],
+  "outer_group_verified_empty": true,
+  "detached_native_groups_verified_empty": false,
+  "detached_native_process_may_still_be_running": true,
+  "all_owned_groups_verified_empty": false,
+  "outer_process_group": 74263,
+  "wrapper_exit_observed_monotonic_ns": 84202332500,
+  "error": "ValueError('producer exited unsuccessfully')",
+  "outer_cleanup": {
+    "started_monotonic_ns": 84202464125,
+    "process_group": 74263,
+    "signals": [],
+    "native_exit_known": true,
+    "group_exit_known": true,
+    "returncode": 1,
+    "group_verification": {
+      "utc": "2026-10-15T18:18:14.904490+00:00",
+      "monotonic_ns": 84202467583,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    "finished_monotonic_ns": 84202586708,
+    "native_process_may_still_be_running": false
+  },
+  "exit_status": 1,
+  "outer_monitor_events": {
+    "74263": [
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 2100939000,
+        "previous_request_gap_ns": null,
+        "provider_started_monotonic_ns": 2101139916,
+        "provider_finished_monotonic_ns": 2101432541,
+        "outcome": "pass",
+        "returned_monotonic_ns": 2101452916,
+        "sampler_duration_ns": 513916
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 4111499416,
+        "previous_request_gap_ns": 2010560416,
+        "provider_started_monotonic_ns": 4111590250,
+        "provider_finished_monotonic_ns": 4111819833,
+        "outcome": "pass",
+        "returned_monotonic_ns": 4111838000,
+        "sampler_duration_ns": 338584
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 6117105166,
+        "previous_request_gap_ns": 2005605750,
+        "provider_started_monotonic_ns": 6117183500,
+        "provider_finished_monotonic_ns": 6117388583,
+        "outcome": "pass",
+        "returned_monotonic_ns": 6117405916,
+        "sampler_duration_ns": 300750
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 8117768291,
+        "previous_request_gap_ns": 2000663125,
+        "provider_started_monotonic_ns": 8117861875,
+        "provider_finished_monotonic_ns": 8118065625,
+        "outcome": "pass",
+        "returned_monotonic_ns": 8118081791,
+        "sampler_duration_ns": 313500
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 10123347125,
+        "previous_request_gap_ns": 2005578834,
+        "provider_started_monotonic_ns": 10123436500,
+        "provider_finished_monotonic_ns": 10123656250,
+        "outcome": "pass",
+        "returned_monotonic_ns": 10123671791,
+        "sampler_duration_ns": 324666
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 12131878166,
+        "previous_request_gap_ns": 2008531041,
+        "provider_started_monotonic_ns": 12131965166,
+        "provider_finished_monotonic_ns": 12132166416,
+        "outcome": "pass",
+        "returned_monotonic_ns": 12132182458,
+        "sampler_duration_ns": 304292
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 14139536625,
+        "previous_request_gap_ns": 2007658459,
+        "provider_started_monotonic_ns": 14139631625,
+        "provider_finished_monotonic_ns": 14139835625,
+        "outcome": "pass",
+        "returned_monotonic_ns": 14139849125,
+        "sampler_duration_ns": 312500
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 16149023458,
+        "previous_request_gap_ns": 2009486833,
+        "provider_started_monotonic_ns": 16149108375,
+        "provider_finished_monotonic_ns": 16149334833,
+        "outcome": "pass",
+        "returned_monotonic_ns": 16149351541,
+        "sampler_duration_ns": 328083
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 18150800666,
+        "previous_request_gap_ns": 2001777208,
+        "provider_started_monotonic_ns": 18150901500,
+        "provider_finished_monotonic_ns": 18151105250,
+        "outcome": "pass",
+        "returned_monotonic_ns": 18151122791,
+        "sampler_duration_ns": 322125
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 20154911041,
+        "previous_request_gap_ns": 2004110375,
+        "provider_started_monotonic_ns": 20155002250,
+        "provider_finished_monotonic_ns": 20155217333,
+        "outcome": "pass",
+        "returned_monotonic_ns": 20155232708,
+        "sampler_duration_ns": 321667
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 22155679000,
+        "previous_request_gap_ns": 2000767959,
+        "provider_started_monotonic_ns": 22155799291,
+        "provider_finished_monotonic_ns": 22156009916,
+        "outcome": "pass",
+        "returned_monotonic_ns": 22156029708,
+        "sampler_duration_ns": 350708
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 24156851166,
+        "previous_request_gap_ns": 2001172166,
+        "provider_started_monotonic_ns": 24156945750,
+        "provider_finished_monotonic_ns": 24157032458,
+        "outcome": "pass",
+        "returned_monotonic_ns": 24157051000,
+        "sampler_duration_ns": 199834
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 26157252625,
+        "previous_request_gap_ns": 2000401459,
+        "provider_started_monotonic_ns": 26157344958,
+        "provider_finished_monotonic_ns": 26157564250,
+        "outcome": "pass",
+        "returned_monotonic_ns": 26157579125,
+        "sampler_duration_ns": 326500
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 28162431166,
+        "previous_request_gap_ns": 2005178541,
+        "provider_started_monotonic_ns": 28162527000,
+        "provider_finished_monotonic_ns": 28162733583,
+        "outcome": "pass",
+        "returned_monotonic_ns": 28162748291,
+        "sampler_duration_ns": 317125
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 30164025416,
+        "previous_request_gap_ns": 2001594250,
+        "provider_started_monotonic_ns": 30164263958,
+        "provider_finished_monotonic_ns": 30164607333,
+        "outcome": "pass",
+        "returned_monotonic_ns": 30164647083,
+        "sampler_duration_ns": 621667
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 32174709125,
+        "previous_request_gap_ns": 2010683709,
+        "provider_started_monotonic_ns": 32174815375,
+        "provider_finished_monotonic_ns": 32175086708,
+        "outcome": "pass",
+        "returned_monotonic_ns": 32175109958,
+        "sampler_duration_ns": 400833
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 34177101666,
+        "previous_request_gap_ns": 2002392541,
+        "provider_started_monotonic_ns": 34177375625,
+        "provider_finished_monotonic_ns": 34177690625,
+        "outcome": "pass",
+        "returned_monotonic_ns": 34177733041,
+        "sampler_duration_ns": 631375
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 36183509208,
+        "previous_request_gap_ns": 2006407542,
+        "provider_started_monotonic_ns": 36183699750,
+        "provider_finished_monotonic_ns": 36184018041,
+        "outcome": "pass",
+        "returned_monotonic_ns": 36184065708,
+        "sampler_duration_ns": 556500
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 38185637416,
+        "previous_request_gap_ns": 2002128208,
+        "provider_started_monotonic_ns": 38185850458,
+        "provider_finished_monotonic_ns": 38186164500,
+        "outcome": "pass",
+        "returned_monotonic_ns": 38186208833,
+        "sampler_duration_ns": 571417
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 40191943166,
+        "previous_request_gap_ns": 2006305750,
+        "provider_started_monotonic_ns": 40192124583,
+        "provider_finished_monotonic_ns": 40192486541,
+        "outcome": "pass",
+        "returned_monotonic_ns": 40192527916,
+        "sampler_duration_ns": 584750
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 42198995500,
+        "previous_request_gap_ns": 2007052334,
+        "provider_started_monotonic_ns": 42199227833,
+        "provider_finished_monotonic_ns": 42199544500,
+        "outcome": "pass",
+        "returned_monotonic_ns": 42199594250,
+        "sampler_duration_ns": 598750
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 44203347166,
+        "previous_request_gap_ns": 2004351666,
+        "provider_started_monotonic_ns": 44203565625,
+        "provider_finished_monotonic_ns": 44203888583,
+        "outcome": "pass",
+        "returned_monotonic_ns": 44203963958,
+        "sampler_duration_ns": 616792
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 46207937916,
+        "previous_request_gap_ns": 2004590750,
+        "provider_started_monotonic_ns": 46208189416,
+        "provider_finished_monotonic_ns": 46208894000,
+        "outcome": "pass",
+        "returned_monotonic_ns": 46208940458,
+        "sampler_duration_ns": 1002542
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 48213830041,
+        "previous_request_gap_ns": 2005892125,
+        "provider_started_monotonic_ns": 48213989000,
+        "provider_finished_monotonic_ns": 48214257375,
+        "outcome": "pass",
+        "returned_monotonic_ns": 48214296875,
+        "sampler_duration_ns": 466834
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 50219248291,
+        "previous_request_gap_ns": 2005418250,
+        "provider_started_monotonic_ns": 50219442500,
+        "provider_finished_monotonic_ns": 50219750291,
+        "outcome": "pass",
+        "returned_monotonic_ns": 50219801333,
+        "sampler_duration_ns": 553042
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 52221359041,
+        "previous_request_gap_ns": 2002110750,
+        "provider_started_monotonic_ns": 52221548875,
+        "provider_finished_monotonic_ns": 52221869791,
+        "outcome": "pass",
+        "returned_monotonic_ns": 52221912041,
+        "sampler_duration_ns": 553000
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 54229771333,
+        "previous_request_gap_ns": 2008412292,
+        "provider_started_monotonic_ns": 54229987541,
+        "provider_finished_monotonic_ns": 54230427250,
+        "outcome": "pass",
+        "returned_monotonic_ns": 54230468708,
+        "sampler_duration_ns": 697375
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 56234686333,
+        "previous_request_gap_ns": 2004915000,
+        "provider_started_monotonic_ns": 56234766583,
+        "provider_finished_monotonic_ns": 56234963750,
+        "outcome": "pass",
+        "returned_monotonic_ns": 56234993500,
+        "sampler_duration_ns": 307167
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 58243858125,
+        "previous_request_gap_ns": 2009171792,
+        "provider_started_monotonic_ns": 58244079750,
+        "provider_finished_monotonic_ns": 58244457708,
+        "outcome": "pass",
+        "returned_monotonic_ns": 58244491750,
+        "sampler_duration_ns": 633625
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 60249981750,
+        "previous_request_gap_ns": 2006123625,
+        "provider_started_monotonic_ns": 60250072875,
+        "provider_finished_monotonic_ns": 60250292750,
+        "outcome": "pass",
+        "returned_monotonic_ns": 60250312208,
+        "sampler_duration_ns": 330458
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 62258477250,
+        "previous_request_gap_ns": 2008495500,
+        "provider_started_monotonic_ns": 62258772041,
+        "provider_finished_monotonic_ns": 62259186541,
+        "outcome": "pass",
+        "returned_monotonic_ns": 62259353625,
+        "sampler_duration_ns": 876375
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 64265343666,
+        "previous_request_gap_ns": 2006866416,
+        "provider_started_monotonic_ns": 64265525375,
+        "provider_finished_monotonic_ns": 64265819875,
+        "outcome": "pass",
+        "returned_monotonic_ns": 64265855125,
+        "sampler_duration_ns": 511459
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 66267935541,
+        "previous_request_gap_ns": 2002591875,
+        "provider_started_monotonic_ns": 66268122458,
+        "provider_finished_monotonic_ns": 66268348333,
+        "outcome": "pass",
+        "returned_monotonic_ns": 66268376000,
+        "sampler_duration_ns": 440459
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 68275001458,
+        "previous_request_gap_ns": 2007065917,
+        "provider_started_monotonic_ns": 68275191250,
+        "provider_finished_monotonic_ns": 68275567625,
+        "outcome": "pass",
+        "returned_monotonic_ns": 68275683708,
+        "sampler_duration_ns": 682250
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 70285290291,
+        "previous_request_gap_ns": 2010288833,
+        "provider_started_monotonic_ns": 70285428833,
+        "provider_finished_monotonic_ns": 70285715333,
+        "outcome": "pass",
+        "returned_monotonic_ns": 70285743500,
+        "sampler_duration_ns": 453209
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 72287977833,
+        "previous_request_gap_ns": 2002687542,
+        "provider_started_monotonic_ns": 72288145291,
+        "provider_finished_monotonic_ns": 72288427291,
+        "outcome": "pass",
+        "returned_monotonic_ns": 72288468958,
+        "sampler_duration_ns": 491125
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 74289657791,
+        "previous_request_gap_ns": 2001679958,
+        "provider_started_monotonic_ns": 74289861916,
+        "provider_finished_monotonic_ns": 74290259708,
+        "outcome": "pass",
+        "returned_monotonic_ns": 74290312750,
+        "sampler_duration_ns": 654959
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 76296241041,
+        "previous_request_gap_ns": 2006583250,
+        "provider_started_monotonic_ns": 76296412333,
+        "provider_finished_monotonic_ns": 76296744166,
+        "outcome": "pass",
+        "returned_monotonic_ns": 76296794666,
+        "sampler_duration_ns": 553625
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 78305442000,
+        "previous_request_gap_ns": 2009200959,
+        "provider_started_monotonic_ns": 78305625666,
+        "provider_finished_monotonic_ns": 78305918416,
+        "outcome": "pass",
+        "returned_monotonic_ns": 78305945625,
+        "sampler_duration_ns": 503625
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 80309524666,
+        "previous_request_gap_ns": 2004082666,
+        "provider_started_monotonic_ns": 80309712583,
+        "provider_finished_monotonic_ns": 80310179208,
+        "outcome": "pass",
+        "returned_monotonic_ns": 80310235833,
+        "sampler_duration_ns": 711167
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 82311723875,
+        "previous_request_gap_ns": 2002199209,
+        "provider_started_monotonic_ns": 82311810041,
+        "provider_finished_monotonic_ns": 82312024291,
+        "outcome": "pass",
+        "returned_monotonic_ns": 82312041833,
+        "sampler_duration_ns": 317958
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 84202036625,
+        "previous_request_gap_ns": 1890312750,
+        "provider_started_monotonic_ns": 84202128708,
+        "provider_finished_monotonic_ns": 84202300541,
+        "outcome": "pass",
+        "returned_monotonic_ns": 84202324333,
+        "sampler_duration_ns": 287708
+      },
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 84202467583,
+        "previous_request_gap_ns": 430958,
+        "provider_started_monotonic_ns": 84202529625,
+        "provider_finished_monotonic_ns": 84202565583,
+        "outcome": "pass",
+        "returned_monotonic_ns": 84202580958,
+        "sampler_duration_ns": 113375
+      }
+    ]
+  },
+  "stdout": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/build-attempt03/stdout",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/build-attempt03/stderr",
+  "stderr_sha256": "ac4972a5c4aac998bf30bd47ce6854ecb114e9fbfbd5369159e50823e754206b",
+  "finished_monotonic_ns": 84202850958,
+  "finished_utc": "2026-10-15T18:18:14.904873+00:00",
+  "elapsed_seconds": 84.1144775
+}

@@ -1,0 +1,78 @@
+{
+  "groups": [
+    {
+      "command": [
+        "/usr/bin/git",
+        "-c",
+        "http.curloptResolve=github.com:443:20.29.134.23",
+        "clone",
+        "--depth",
+        "1",
+        "--branch",
+        "v1.5.2",
+        "--single-branch",
+        "https://github.com/google/benchmark.git",
+        "/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt01"
+      ],
+      "process_group": 54984,
+      "observations": [
+        {
+          "utc": "2026-10-15T18:12:25.542608+00:00",
+          "monotonic_ns": 2801345000,
+          "process_group": 54984,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 55122,
+              "rss_kib": 4592,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/git"
+            },
+            {
+              "pid": 54986,
+              "rss_kib": 7120,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core/git-remote-http"
+            },
+            {
+              "pid": 54985,
+              "rss_kib": 3904,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/git"
+            },
+            {
+              "pid": 54984,
+              "rss_kib": 5264,
+              "command": "/Applications/Xcode.app/Contents/Developer/usr/bin/git"
+            }
+          ],
+          "rss_kib": 20880
+        },
+        {
+          "utc": "2026-10-15T18:12:25.721045+00:00",
+          "monotonic_ns": 2979836125,
+          "process_group": 54984,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 2980434000,
+        "process_group": 54984,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T18:12:25.721650+00:00",
+          "monotonic_ns": 2980444500,
+          "process_group": 54984,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 2980697291,
+        "native_process_may_still_be_running": false
+      }
+    }
+  ]
+}

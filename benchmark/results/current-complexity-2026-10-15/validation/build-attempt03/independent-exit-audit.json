@@ -1,0 +1,164 @@
+{
+  "schema": "complexity_failed_attempt_empty_group_audit_v1",
+  "validation": "pass",
+  "failed_attempt_remains_failed": true,
+  "process_groups": [
+    74263,
+    74268,
+    74277,
+    74858,
+    75335,
+    75666,
+    75668
+  ],
+  "observations": [
+    {
+      "utc": "2026-10-15T18:19:08.403733+00:00",
+      "monotonic_ns": 95789291,
+      "process_group": 74263,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    {
+      "utc": "2026-10-15T18:19:08.404053+00:00",
+      "monotonic_ns": 96110958,
+      "process_group": 74268,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    {
+      "utc": "2026-10-15T18:19:08.404107+00:00",
+      "monotonic_ns": 96165416,
+      "process_group": 74277,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    {
+      "utc": "2026-10-15T18:19:08.404157+00:00",
+      "monotonic_ns": 96214791,
+      "process_group": 74858,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    {
+      "utc": "2026-10-15T18:19:08.404232+00:00",
+      "monotonic_ns": 96289125,
+      "process_group": 75335,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    {
+      "utc": "2026-10-15T18:19:08.404291+00:00",
+      "monotonic_ns": 96349208,
+      "process_group": 75666,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    {
+      "utc": "2026-10-15T18:19:08.404339+00:00",
+      "monotonic_ns": 96396833,
+      "process_group": 75668,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    }
+  ],
+  "monitor_events": {
+    "74263": [
+      {
+        "process_group": 74263,
+        "requested_monotonic_ns": 95789291,
+        "previous_request_gap_ns": null,
+        "provider_started_monotonic_ns": 95924958,
+        "provider_finished_monotonic_ns": 96095041,
+        "outcome": "pass",
+        "returned_monotonic_ns": 96107208,
+        "sampler_duration_ns": 317917
+      }
+    ],
+    "74268": [
+      {
+        "process_group": 74268,
+        "requested_monotonic_ns": 96110958,
+        "previous_request_gap_ns": null,
+        "provider_started_monotonic_ns": 96137083,
+        "provider_finished_monotonic_ns": 96157375,
+        "outcome": "pass",
+        "returned_monotonic_ns": 96163375,
+        "sampler_duration_ns": 52417
+      }
+    ],
+    "74277": [
+      {
+        "process_group": 74277,
+        "requested_monotonic_ns": 96165416,
+        "previous_request_gap_ns": null,
+        "provider_started_monotonic_ns": 96187541,
+        "provider_finished_monotonic_ns": 96205750,
+        "outcome": "pass",
+        "returned_monotonic_ns": 96213250,
+        "sampler_duration_ns": 47834
+      }
+    ],
+    "74858": [
+      {
+        "process_group": 74858,
+        "requested_monotonic_ns": 96214791,
+        "previous_request_gap_ns": null,
+        "provider_started_monotonic_ns": 96246083,
+        "provider_finished_monotonic_ns": 96274791,
+        "outcome": "pass",
+        "returned_monotonic_ns": 96285375,
+        "sampler_duration_ns": 70584
+      }
+    ],
+    "75335": [
+      {
+        "process_group": 75335,
+        "requested_monotonic_ns": 96289125,
+        "previous_request_gap_ns": null,
+        "provider_started_monotonic_ns": 96322583,
+        "provider_finished_monotonic_ns": 96341375,
+        "outcome": "pass",
+        "returned_monotonic_ns": 96347000,
+        "sampler_duration_ns": 57875
+      }
+    ],
+    "75666": [
+      {
+        "process_group": 75666,
+        "requested_monotonic_ns": 96349208,
+        "previous_request_gap_ns": null,
+        "provider_started_monotonic_ns": 96372041,
+        "provider_finished_monotonic_ns": 96389541,
+        "outcome": "pass",
+        "returned_monotonic_ns": 96395250,
+        "sampler_duration_ns": 46042
+      }
+    ],
+    "75668": [
+      {
+        "process_group": 75668,
+        "requested_monotonic_ns": 96396833,
+        "previous_request_gap_ns": null,
+        "provider_started_monotonic_ns": 96421666,
+        "provider_finished_monotonic_ns": 96443125,
+        "outcome": "pass",
+        "returned_monotonic_ns": 96449250,
+        "sampler_duration_ns": 52417
+      }
+    ]
+  },
+  "all_owned_groups_verified_empty": true,
+  "bound_sha256": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/build-attempt03/receipt.json": "16eea33181f69dcd12ad95cf7322b1cf87f84696fa59c459c1920a5d059bc97c",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/build-attempt03/inner/acquisition-groups.json": "9aa430a2f4b6b2869847d5641d0e70d0393ef7acaa2f0f4a780e40eb554a41e3",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/build-attempt03/inner/build-groups.json": "62d60a15e7f06fba1feb225dc3e251b5415e72d6da71b2afcefc667615863aad"
+  }
+}

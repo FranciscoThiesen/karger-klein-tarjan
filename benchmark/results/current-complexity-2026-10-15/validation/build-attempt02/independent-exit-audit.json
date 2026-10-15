@@ -1,0 +1,101 @@
+{
+  "schema": "complexity_failed_attempt_empty_group_audit_v1",
+  "validation": "pass",
+  "failed_attempt_remains_failed": true,
+  "process_groups": [
+    64432,
+    64499,
+    64659,
+    66295
+  ],
+  "observations": [
+    {
+      "utc": "2026-10-15T18:14:18.599558+00:00",
+      "monotonic_ns": 93216583,
+      "process_group": 64432,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    {
+      "utc": "2026-10-15T18:14:18.599900+00:00",
+      "monotonic_ns": 93559916,
+      "process_group": 64499,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    {
+      "utc": "2026-10-15T18:14:18.599979+00:00",
+      "monotonic_ns": 93639125,
+      "process_group": 64659,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    {
+      "utc": "2026-10-15T18:14:18.600056+00:00",
+      "monotonic_ns": 93715833,
+      "process_group": 66295,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    }
+  ],
+  "monitor_events": {
+    "64432": [
+      {
+        "process_group": 64432,
+        "requested_monotonic_ns": 93216583,
+        "previous_request_gap_ns": null,
+        "provider_started_monotonic_ns": 93365833,
+        "provider_finished_monotonic_ns": 93542125,
+        "outcome": "pass",
+        "returned_monotonic_ns": 93555875,
+        "sampler_duration_ns": 339292
+      }
+    ],
+    "64499": [
+      {
+        "process_group": 64499,
+        "requested_monotonic_ns": 93559916,
+        "previous_request_gap_ns": null,
+        "provider_started_monotonic_ns": 93597750,
+        "provider_finished_monotonic_ns": 93627791,
+        "outcome": "pass",
+        "returned_monotonic_ns": 93637166,
+        "sampler_duration_ns": 77250
+      }
+    ],
+    "64659": [
+      {
+        "process_group": 64659,
+        "requested_monotonic_ns": 93639125,
+        "previous_request_gap_ns": null,
+        "provider_started_monotonic_ns": 93670916,
+        "provider_finished_monotonic_ns": 93700333,
+        "outcome": "pass",
+        "returned_monotonic_ns": 93712333,
+        "sampler_duration_ns": 73208
+      }
+    ],
+    "66295": [
+      {
+        "process_group": 66295,
+        "requested_monotonic_ns": 93715833,
+        "previous_request_gap_ns": null,
+        "provider_started_monotonic_ns": 93754708,
+        "provider_finished_monotonic_ns": 93775166,
+        "outcome": "pass",
+        "returned_monotonic_ns": 93781125,
+        "sampler_duration_ns": 65292
+      }
+    ]
+  },
+  "all_owned_groups_verified_empty": true,
+  "bound_sha256": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/build-attempt02/receipt.json": "a23d8376e0a2038a86cdfc3c64a49fe3c286aad14d773ec6042ccbfa89a5a475",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/build-attempt02/inner/acquisition-groups.json": "e7ee4f41aa68c794d5acea7404583ccdadc7c5a71846f8d3a9f3e3d99137ff32",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/build-attempt02/inner/build-groups.json": "271cc9c0b906364712f57256de94aa8f8dae3187c5c53476e464c666c1aea416"
+  }
+}

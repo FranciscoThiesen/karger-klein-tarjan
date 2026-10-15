@@ -1,0 +1,313 @@
+Apple clang version 15.0.0 (clang-1500.3.9.4)
+Target: arm64-apple-darwin25.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+SDK: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk
+{"removed": {"CPATH": "/usr/local/include", "LIBRARY_PATH": "/usr/local/lib"}, "required_empty": {"CPLUS_INCLUDE_PATH": null, "C_INCLUDE_PATH": null, "CFLAGS": null, "CXXFLAGS": null, "CPPFLAGS": null, "LDFLAGS": null, "CC": null, "CXX": null, "CMAKE_GENERATOR": null, "CMAKE_TOOLCHAIN_FILE": null, "CMAKE_POLICY_VERSION_MINIMUM": null, "CMAKE_OSX_ARCHITECTURES": null, "MACOSX_DEPLOYMENT_TARGET": null, "APPVEYOR": null}, "retained": {"SDKROOT": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk", "DEVELOPER_DIR": null}}
+
+$ /usr/bin/arch -arm64 /usr/local/lib/python3.10/site-packages/cmake/data/bin/cmake -S /Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04 -B /Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04 -G 'Unix Makefiles' -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS=-Wno-error=unused-but-set-variable -DCMAKE_OSX_ARCHITECTURES=arm64 -DCMAKE_OSX_SYSROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DBUILD_SHARED_LIBS=OFF -DBENCHMARK_ENABLE_TESTING=ON -DBENCHMARK_ENABLE_GTEST_TESTS=OFF -DBENCHMARK_ENABLE_ASSEMBLY_TESTS=OFF -DBENCHMARK_ENABLE_LTO=OFF -DBENCHMARK_DOWNLOAD_DEPENDENCIES=OFF -DBENCHMARK_ENABLE_INSTALL=OFF
+-- The CXX compiler identification is AppleClang 15.0.0.15000309
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Git: /usr/local/bin/git (found version "2.46.0")
+-- git Version: v1.5.2-dirty
+-- Version: 1.5.2
+-- Performing Test HAVE_CXX_FLAG_STD_CXX11
+-- Performing Test HAVE_CXX_FLAG_STD_CXX11 - Success
+-- Performing Test HAVE_CXX_FLAG_WALL
+-- Performing Test HAVE_CXX_FLAG_WALL - Success
+-- Performing Test HAVE_CXX_FLAG_WEXTRA
+-- Performing Test HAVE_CXX_FLAG_WEXTRA - Success
+-- Performing Test HAVE_CXX_FLAG_WSHADOW
+-- Performing Test HAVE_CXX_FLAG_WSHADOW - Success
+-- Performing Test HAVE_CXX_FLAG_WERROR
+-- Performing Test HAVE_CXX_FLAG_WERROR - Success
+-- Performing Test HAVE_CXX_FLAG_WSHORTEN_64_TO_32
+-- Performing Test HAVE_CXX_FLAG_WSHORTEN_64_TO_32 - Success
+-- Performing Test HAVE_CXX_FLAG_FSTRICT_ALIASING
+-- Performing Test HAVE_CXX_FLAG_FSTRICT_ALIASING - Success
+-- Performing Test HAVE_CXX_FLAG_WNO_DEPRECATED_DECLARATIONS
+-- Performing Test HAVE_CXX_FLAG_WNO_DEPRECATED_DECLARATIONS - Success
+-- Performing Test HAVE_CXX_FLAG_WNO_DEPRECATED
+-- Performing Test HAVE_CXX_FLAG_WNO_DEPRECATED - Success
+-- Performing Test HAVE_CXX_FLAG_WSTRICT_ALIASING
+-- Performing Test HAVE_CXX_FLAG_WSTRICT_ALIASING - Success
+-- Performing Test HAVE_CXX_FLAG_WD654
+-- Performing Test HAVE_CXX_FLAG_WD654 - Failed
+-- Performing Test HAVE_CXX_FLAG_WTHREAD_SAFETY
+-- Performing Test HAVE_CXX_FLAG_WTHREAD_SAFETY - Success
+-- Performing Test HAVE_THREAD_SAFETY_ATTRIBUTES
+-- Performing Test HAVE_THREAD_SAFETY_ATTRIBUTES
+-- Performing Test HAVE_THREAD_SAFETY_ATTRIBUTES -- failed to compile
+-- Performing Test HAVE_CXX_FLAG_COVERAGE
+-- Performing Test HAVE_CXX_FLAG_COVERAGE - Success
+-- Performing Test HAVE_STD_REGEX
+-- Performing Test HAVE_STD_REGEX
+-- Performing Test HAVE_STD_REGEX -- success
+-- Performing Test HAVE_GNU_POSIX_REGEX
+-- Performing Test HAVE_GNU_POSIX_REGEX
+-- Performing Test HAVE_GNU_POSIX_REGEX -- failed to compile
+-- Performing Test HAVE_POSIX_REGEX
+-- Performing Test HAVE_POSIX_REGEX
+-- Performing Test HAVE_POSIX_REGEX -- success
+-- Performing Test HAVE_STEADY_CLOCK
+-- Performing Test HAVE_STEADY_CLOCK
+-- Performing Test HAVE_STEADY_CLOCK -- success
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Performing Test BENCHMARK_HAS_O3_FLAG
+-- Performing Test BENCHMARK_HAS_O3_FLAG - Success
+-- Performing Test BENCHMARK_HAS_CXX03_FLAG
+-- Performing Test BENCHMARK_HAS_CXX03_FLAG - Success
+-- Performing Test BENCHMARK_HAS_WNO_ODR
+-- Performing Test BENCHMARK_HAS_WNO_ODR - Success
+-- Configuring done (5.0s)
+-- Generating done (0.1s)
+-- Build files have been written to: /Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04
+
+$ /usr/bin/arch -arm64 /usr/local/lib/python3.10/site-packages/cmake/data/bin/cmake --build /Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04 --parallel 1
+[  1%] Building CXX object src/CMakeFiles/benchmark.dir/benchmark.cc.o
+[  2%] Building CXX object src/CMakeFiles/benchmark.dir/benchmark_api_internal.cc.o
+[  4%] Building CXX object src/CMakeFiles/benchmark.dir/benchmark_name.cc.o
+[  5%] Building CXX object src/CMakeFiles/benchmark.dir/benchmark_register.cc.o
+[  7%] Building CXX object src/CMakeFiles/benchmark.dir/benchmark_runner.cc.o
+[  8%] Building CXX object src/CMakeFiles/benchmark.dir/colorprint.cc.o
+[  9%] Building CXX object src/CMakeFiles/benchmark.dir/commandlineflags.cc.o
+[ 11%] Building CXX object src/CMakeFiles/benchmark.dir/complexity.cc.o
+/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/src/complexity.cc:85:10: warning: variable 'sigma_gn' set but not used [-Wunused-but-set-variable]
+  double sigma_gn = 0.0;
+         ^
+1 warning generated.
+[ 12%] Building CXX object src/CMakeFiles/benchmark.dir/console_reporter.cc.o
+[ 14%] Building CXX object src/CMakeFiles/benchmark.dir/counter.cc.o
+[ 15%] Building CXX object src/CMakeFiles/benchmark.dir/csv_reporter.cc.o
+[ 16%] Building CXX object src/CMakeFiles/benchmark.dir/json_reporter.cc.o
+[ 18%] Building CXX object src/CMakeFiles/benchmark.dir/reporter.cc.o
+[ 19%] Building CXX object src/CMakeFiles/benchmark.dir/sleep.cc.o
+[ 21%] Building CXX object src/CMakeFiles/benchmark.dir/statistics.cc.o
+[ 22%] Building CXX object src/CMakeFiles/benchmark.dir/string_util.cc.o
+[ 23%] Building CXX object src/CMakeFiles/benchmark.dir/sysinfo.cc.o
+[ 25%] Building CXX object src/CMakeFiles/benchmark.dir/timers.cc.o
+[ 26%] Linking CXX static library libbenchmark.a
+[ 26%] Built target benchmark
+[ 28%] Building CXX object src/CMakeFiles/benchmark_main.dir/benchmark_main.cc.o
+[ 29%] Linking CXX static library libbenchmark_main.a
+[ 29%] Built target benchmark_main
+[ 30%] Building CXX object test/CMakeFiles/output_test_helper.dir/output_test_helper.cc.o
+[ 32%] Linking CXX static library liboutput_test_helper.a
+[ 32%] Built target output_test_helper
+[ 33%] Building CXX object test/CMakeFiles/benchmark_test.dir/benchmark_test.cc.o
+[ 35%] Linking CXX executable benchmark_test
+[ 35%] Built target benchmark_test
+[ 36%] Building CXX object test/CMakeFiles/filter_test.dir/filter_test.cc.o
+[ 38%] Linking CXX executable filter_test
+[ 38%] Built target filter_test
+[ 39%] Building CXX object test/CMakeFiles/options_test.dir/options_test.cc.o
+/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/test/options_test.cc:66:10: warning: variable 'actual_iterations' set but not used [-Wunused-but-set-variable]
+  size_t actual_iterations = 0;
+         ^
+1 warning generated.
+[ 40%] Linking CXX executable options_test
+[ 40%] Built target options_test
+[ 42%] Building CXX object test/CMakeFiles/basic_test.dir/basic_test.cc.o
+[ 43%] Linking CXX executable basic_test
+[ 43%] Built target basic_test
+[ 45%] Building CXX object test/CMakeFiles/diagnostics_test.dir/diagnostics_test.cc.o
+[ 46%] Linking CXX executable diagnostics_test
+[ 46%] Built target diagnostics_test
+[ 47%] Building CXX object test/CMakeFiles/skip_with_error_test.dir/skip_with_error_test.cc.o
+[ 49%] Linking CXX executable skip_with_error_test
+[ 49%] Built target skip_with_error_test
+[ 50%] Building CXX object test/CMakeFiles/donotoptimize_test.dir/donotoptimize_test.cc.o
+[ 52%] Linking CXX executable donotoptimize_test
+[ 52%] Built target donotoptimize_test
+[ 53%] Building CXX object test/CMakeFiles/fixture_test.dir/fixture_test.cc.o
+[ 54%] Linking CXX executable fixture_test
+[ 54%] Built target fixture_test
+[ 56%] Building CXX object test/CMakeFiles/register_benchmark_test.dir/register_benchmark_test.cc.o
+[ 57%] Linking CXX executable register_benchmark_test
+[ 57%] Built target register_benchmark_test
+[ 59%] Building CXX object test/CMakeFiles/map_test.dir/map_test.cc.o
+[ 60%] Linking CXX executable map_test
+[ 60%] Built target map_test
+[ 61%] Building CXX object test/CMakeFiles/multiple_ranges_test.dir/multiple_ranges_test.cc.o
+[ 63%] Linking CXX executable multiple_ranges_test
+[ 63%] Built target multiple_ranges_test
+[ 64%] Building CXX object test/CMakeFiles/args_product_test.dir/args_product_test.cc.o
+[ 66%] Linking CXX executable args_product_test
+[ 66%] Built target args_product_test
+[ 67%] Building CXX object test/CMakeFiles/link_main_test.dir/link_main_test.cc.o
+[ 69%] Linking CXX executable link_main_test
+[ 69%] Built target link_main_test
+[ 70%] Building CXX object test/CMakeFiles/reporter_output_test.dir/reporter_output_test.cc.o
+[ 71%] Linking CXX executable reporter_output_test
+[ 71%] Built target reporter_output_test
+[ 73%] Building CXX object test/CMakeFiles/templated_fixture_test.dir/templated_fixture_test.cc.o
+[ 74%] Linking CXX executable templated_fixture_test
+[ 74%] Built target templated_fixture_test
+[ 76%] Building CXX object test/CMakeFiles/user_counters_test.dir/user_counters_test.cc.o
+[ 77%] Linking CXX executable user_counters_test
+[ 77%] Built target user_counters_test
+[ 78%] Building CXX object test/CMakeFiles/internal_threading_test.dir/internal_threading_test.cc.o
+[ 80%] Linking CXX executable internal_threading_test
+[ 80%] Built target internal_threading_test
+[ 81%] Building CXX object test/CMakeFiles/report_aggregates_only_test.dir/report_aggregates_only_test.cc.o
+[ 83%] Linking CXX executable report_aggregates_only_test
+[ 83%] Built target report_aggregates_only_test
+[ 84%] Building CXX object test/CMakeFiles/display_aggregates_only_test.dir/display_aggregates_only_test.cc.o
+[ 85%] Linking CXX executable display_aggregates_only_test
+[ 85%] Built target display_aggregates_only_test
+[ 87%] Building CXX object test/CMakeFiles/user_counters_tabular_test.dir/user_counters_tabular_test.cc.o
+[ 88%] Linking CXX executable user_counters_tabular_test
+[ 88%] Built target user_counters_tabular_test
+[ 90%] Building CXX object test/CMakeFiles/user_counters_thousands_test.dir/user_counters_thousands_test.cc.o
+[ 91%] Linking CXX executable user_counters_thousands_test
+[ 91%] Built target user_counters_thousands_test
+[ 92%] Building CXX object test/CMakeFiles/memory_manager_test.dir/memory_manager_test.cc.o
+[ 94%] Linking CXX executable memory_manager_test
+[ 94%] Built target memory_manager_test
+[ 95%] Building CXX object test/CMakeFiles/cxx03_test.dir/cxx03_test.cc.o
+[ 97%] Linking CXX executable cxx03_test
+[ 97%] Built target cxx03_test
+[ 98%] Building CXX object test/CMakeFiles/complexity_test.dir/complexity_test.cc.o
+[100%] Linking CXX executable complexity_test
+[100%] Built target complexity_test
+
+$ /usr/bin/arch -arm64 /usr/local/lib/python3.10/site-packages/cmake/data/bin/ctest --test-dir /Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04 --output-on-failure --parallel 1 --timeout 30 --output-junit /Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/library-tests.xml
+Internal ctest changing into directory: /Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04
+Test project /Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04
+      Start  1: benchmark
+ 1/59 Test  #1: benchmark ..................................   Passed    4.62 sec
+      Start  2: filter_simple
+ 2/59 Test  #2: filter_simple ..............................   Passed    1.25 sec
+      Start  3: filter_simple_list_only
+ 3/59 Test  #3: filter_simple_list_only ....................   Passed    0.00 sec
+      Start  4: filter_simple_negative
+ 4/59 Test  #4: filter_simple_negative .....................   Passed    1.01 sec
+      Start  5: filter_simple_negative_list_only
+ 5/59 Test  #5: filter_simple_negative_list_only ...........   Passed    0.00 sec
+      Start  6: filter_suffix
+ 6/59 Test  #6: filter_suffix ..............................   Passed    1.01 sec
+      Start  7: filter_suffix_list_only
+ 7/59 Test  #7: filter_suffix_list_only ....................   Passed    0.00 sec
+      Start  8: filter_suffix_negative
+ 8/59 Test  #8: filter_suffix_negative .....................   Passed    1.00 sec
+      Start  9: filter_suffix_negative_list_only
+ 9/59 Test  #9: filter_suffix_negative_list_only ...........   Passed    0.00 sec
+      Start 10: filter_regex_all
+10/59 Test #10: filter_regex_all ...........................   Passed    1.00 sec
+      Start 11: filter_regex_all_list_only
+11/59 Test #11: filter_regex_all_list_only .................   Passed    0.00 sec
+      Start 12: filter_regex_all_negative
+12/59 Test #12: filter_regex_all_negative ..................   Passed    0.00 sec
+      Start 13: filter_regex_all_negative_list_only
+13/59 Test #13: filter_regex_all_negative_list_only ........   Passed    0.00 sec
+      Start 14: filter_regex_blank
+14/59 Test #14: filter_regex_blank .........................   Passed    1.00 sec
+      Start 15: filter_regex_blank_list_only
+15/59 Test #15: filter_regex_blank_list_only ...............   Passed    0.00 sec
+      Start 16: filter_regex_blank_negative
+16/59 Test #16: filter_regex_blank_negative ................   Passed    0.00 sec
+      Start 17: filter_regex_blank_negative_list_only
+17/59 Test #17: filter_regex_blank_negative_list_only ......   Passed    0.00 sec
+      Start 18: filter_regex_none
+18/59 Test #18: filter_regex_none ..........................   Passed    0.00 sec
+      Start 19: filter_regex_none_list_only
+19/59 Test #19: filter_regex_none_list_only ................   Passed    0.00 sec
+      Start 20: filter_regex_none_negative
+20/59 Test #20: filter_regex_none_negative .................   Passed    1.01 sec
+      Start 21: filter_regex_none_negative_list_only
+21/59 Test #21: filter_regex_none_negative_list_only .......   Passed    0.01 sec
+      Start 22: filter_regex_wildcard
+22/59 Test #22: filter_regex_wildcard ......................   Passed    1.02 sec
+      Start 23: filter_regex_wildcard_list_only
+23/59 Test #23: filter_regex_wildcard_list_only ............   Passed    0.01 sec
+      Start 24: filter_regex_wildcard_negative
+24/59 Test #24: filter_regex_wildcard_negative .............   Passed    1.01 sec
+      Start 25: filter_regex_wildcard_negative_list_only
+25/59 Test #25: filter_regex_wildcard_negative_list_only ...   Passed    0.01 sec
+      Start 26: filter_regex_begin
+26/59 Test #26: filter_regex_begin .........................   Passed    1.01 sec
+      Start 27: filter_regex_begin_list_only
+27/59 Test #27: filter_regex_begin_list_only ...............   Passed    0.00 sec
+      Start 28: filter_regex_begin_negative
+28/59 Test #28: filter_regex_begin_negative ................   Passed    1.02 sec
+      Start 29: filter_regex_begin_negative_list_only
+29/59 Test #29: filter_regex_begin_negative_list_only ......   Passed    0.01 sec
+      Start 30: filter_regex_begin2
+30/59 Test #30: filter_regex_begin2 ........................   Passed    1.01 sec
+      Start 31: filter_regex_begin2_list_only
+31/59 Test #31: filter_regex_begin2_list_only ..............   Passed    0.01 sec
+      Start 32: filter_regex_begin2_negative
+32/59 Test #32: filter_regex_begin2_negative ...............   Passed    1.01 sec
+      Start 33: filter_regex_begin2_negative_list_only
+33/59 Test #33: filter_regex_begin2_negative_list_only .....   Passed    0.01 sec
+      Start 34: filter_regex_end
+34/59 Test #34: filter_regex_end ...........................   Passed    1.01 sec
+      Start 35: filter_regex_end_list_only
+35/59 Test #35: filter_regex_end_list_only .................   Passed    0.00 sec
+      Start 36: filter_regex_end_negative
+36/59 Test #36: filter_regex_end_negative ..................   Passed    1.01 sec
+      Start 37: filter_regex_end_negative_list_only
+37/59 Test #37: filter_regex_end_negative_list_only ........   Passed    0.01 sec
+      Start 38: options_benchmarks
+38/59 Test #38: options_benchmarks .........................   Passed    2.54 sec
+      Start 39: basic_benchmark
+39/59 Test #39: basic_benchmark ............................   Passed    1.85 sec
+      Start 40: diagnostics_test
+40/59 Test #40: diagnostics_test ...........................   Passed    1.36 sec
+      Start 41: skip_with_error_test
+41/59 Test #41: skip_with_error_test .......................   Passed    1.39 sec
+      Start 42: donotoptimize_test
+42/59 Test #42: donotoptimize_test .........................   Passed    0.25 sec
+      Start 43: fixture_test
+43/59 Test #43: fixture_test ...............................   Passed    1.34 sec
+      Start 44: register_benchmark_test
+44/59 Test #44: register_benchmark_test ....................   Passed    1.27 sec
+      Start 45: map_test
+45/59 Test #45: map_test ...................................   Passed    1.49 sec
+      Start 46: multiple_ranges_test
+46/59 Test #46: multiple_ranges_test .......................   Passed    2.00 sec
+      Start 47: args_product_test
+47/59 Test #47: args_product_test ..........................   Passed    1.59 sec
+      Start 48: link_main_test
+48/59 Test #48: link_main_test .............................   Passed    1.28 sec
+      Start 49: reporter_output_test
+49/59 Test #49: reporter_output_test .......................   Passed    1.46 sec
+      Start 50: templated_fixture_test
+50/59 Test #50: templated_fixture_test .....................   Passed    1.40 sec
+      Start 51: user_counters_test
+51/59 Test #51: user_counters_test .........................   Passed    1.43 sec
+      Start 52: internal_threading_test
+52/59 Test #52: internal_threading_test ....................   Passed    3.12 sec
+      Start 53: report_aggregates_only_test
+53/59 Test #53: report_aggregates_only_test ................   Passed    1.32 sec
+      Start 54: display_aggregates_only_test
+54/59 Test #54: display_aggregates_only_test ...............   Passed    1.26 sec
+      Start 55: user_counters_tabular_test
+55/59 Test #55: user_counters_tabular_test .................   Passed    1.37 sec
+      Start 56: user_counters_thousands_test
+56/59 Test #56: user_counters_thousands_test ...............   Passed    1.26 sec
+      Start 57: memory_manager_test
+57/59 Test #57: memory_manager_test ........................   Passed    1.29 sec
+      Start 58: cxx03
+58/59 Test #58: cxx03 ......................................   Passed    1.46 sec
+      Start 59: complexity_benchmark
+59/59 Test #59: complexity_benchmark .......................   Passed    2.63 sec
+
+100% tests passed, 0 tests failed out of 59
+
+Total Test time (real) =  54.49 sec
+
+$ /usr/bin/arch -arm64 /usr/bin/clang++ -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -std=c++17 -O3 -Wall -Wextra -march=native -DKKT_EXPERIMENT_RETAIN_PARALLEL -DKKT_EXPERIMENT_EDGE_VIEW -I/Users/random_person/Desktop/kkt-eighth-sampling -I/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/include -c /Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/current_complexity.cpp -o /Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/current_complexity.o
+In file included from /Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/current_complexity.cpp:5:
+/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/retention_control.cpp:75:9: warning: unused function 'options' [-Wunused-function]
+Options options(int argc, char** argv) {
+        ^
+1 warning generated.
+
+$ /usr/bin/arch -arm64 /usr/bin/clang++ -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -std=c++17 -O3 -Wall -Wextra -march=native -DKKT_EXPERIMENT_RETAIN_PARALLEL -DKKT_EXPERIMENT_EDGE_VIEW -I/Users/random_person/Desktop/kkt-eighth-sampling -I/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt04/include /Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/boruvka/boruvka.o /Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/kruskal/kruskal.o /Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/prim/prim.o /Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/lca/lca.o /Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/union_find/union_find.o /Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/graph_utils/graph_utils.o /Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/verifier/verifier_v2.o /Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/eighth/kkt/kkt.o /Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/current_complexity.o /Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/src/libbenchmark.a -lpthread -L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib -Wl,-stack_size,0x20000000 -o /Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt04/current_complexity

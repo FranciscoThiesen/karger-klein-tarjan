@@ -1,0 +1,13 @@
+..F...
+======================================================================
+FAIL: test_hash_conflicts_and_mutation_between_read_and_final_proof (__main__.ArithmeticAuditTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/independent-audit-source/test_audit_complexity.py", line 168, in test_hash_conflicts_and_mutation_between_read_and_final_proof
+    audit.read_bound({},path,expected)
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.573s
+
+FAILED (failures=1)

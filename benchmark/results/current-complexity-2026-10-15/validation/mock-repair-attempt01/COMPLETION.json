@@ -1,0 +1,45 @@
+{
+  "schema": "current_complexity_mock_repair_completion_v1",
+  "validation": "pass",
+  "test_groups": 37,
+  "failed_attempts_preserved": true,
+  "records": [
+    {
+      "receipt": "benchmark/results/current-complexity-2026-10-15/validation/mock-1-attempt02.json",
+      "sha256": "63f1f950dd81d0ba60c12e266ef14f7c9913a5a85f04e0d79b1232b2ba405bb8",
+      "test_groups": 7
+    },
+    {
+      "receipt": "benchmark/results/current-complexity-2026-10-15/validation/mock-2-attempt02.json",
+      "sha256": "4bf0c96d88f287f209a89787daf78382e3d23e1a51cb768c6261acea54a94233",
+      "test_groups": 6
+    },
+    {
+      "receipt": "benchmark/results/current-complexity-2026-10-15/validation/mock-3-attempt02.json",
+      "sha256": "b865f01e6483d476b817d93457d3bb046da890820680efa94ff336dd177acdad",
+      "test_groups": 6
+    },
+    {
+      "receipt": "benchmark/results/current-complexity-2026-10-15/validation/mock-4-attempt02.json",
+      "sha256": "fa14cac8dab87062397ea8a1ccfb964890038a6008bed2ec9186727013107441",
+      "test_groups": 3
+    },
+    {
+      "receipt": "benchmark/results/current-complexity-2026-10-15/validation/mock-5-attempt02.json",
+      "sha256": "1ca945d1bc5a8112172eb0f64e178898e09a93470a1812786af3ecf1b1d61a44",
+      "test_groups": 4
+    },
+    {
+      "receipt": "benchmark/results/current-complexity-2026-10-15/validation/mock-6-attempt02.json",
+      "sha256": "4971eec13492f91aa3cccc44261eb1cfb82d15b1df4b5cd339be8b5ab2c5a43c",
+      "test_groups": 5
+    },
+    {
+      "receipt": "benchmark/results/current-complexity-2026-10-15/validation/mock-7-attempt02.json",
+      "sha256": "37ad25928ce7dbc33f56c42e09181fbc2a6c05cff7af239074be19fcd0d47a21",
+      "test_groups": 6
+    }
+  ],
+  "native_execution": false,
+  "recorded_utc": "2026-10-15T18:12:06.632547+00:00"
+}

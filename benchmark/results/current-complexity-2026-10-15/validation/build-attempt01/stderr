@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/build_library_main.py", line 204, in <module>
+    if __name__ == "__main__": main()
+  File "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/build_library_main.py", line 193, in main
+    (build if args.phase=="build" else smoke)(args,state)
+  File "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/build_library_main.py", line 111, in build
+    guarded(guard,command,stream,intervals,state,env=environment)
+  File "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/build_library_main.py", line 50, in guarded
+    if stderr is None: guard.run(command,stdout=stream,env=env)
+  File "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/build_compressed_queries.py", line 193, in run
+    require(not check or process.returncode == 0,f'command failed: {process.returncode}: {command}')
+  File "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/build_compressed_queries.py", line 41, in require
+    if not condition: raise RuntimeError(message)
+RuntimeError: command failed: 1: ['/usr/bin/arch', '-arm64', '/usr/local/bin/cmake', '-S', '/Users/random_person/Desktop/kkt-benchmark-dependencies/google-benchmark-v1.5.2-attempt01', '-B', '/Users/random_person/Desktop/kkt-eighth-sampling/bin/current-complexity/library-build-attempt01', '-G', 'Unix Makefiles', '-DCMAKE_CXX_COMPILER=/usr/bin/clang++', '-DCMAKE_BUILD_TYPE=Release', '-DCMAKE_OSX_ARCHITECTURES=arm64', '-DCMAKE_OSX_SYSROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk', '-DCMAKE_EXPORT_COMPILE_COMMANDS=ON', '-DBUILD_SHARED_LIBS=OFF', '-DBENCHMARK_ENABLE_TESTING=ON', '-DBENCHMARK_ENABLE_GTEST_TESTS=OFF', '-DBENCHMARK_ENABLE_ASSEMBLY_TESTS=OFF', '-DBENCHMARK_ENABLE_LTO=OFF', '-DBENCHMARK_DOWNLOAD_DEPENDENCIES=OFF', '-DBENCHMARK_ENABLE_INSTALL=OFF']

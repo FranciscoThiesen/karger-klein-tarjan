@@ -1,0 +1,41 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "failed",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "benchmark/current_complexity/test_build_library_main.py"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "started_utc": "2026-10-15T18:01:34.609818+00:00",
+  "started_monotonic_ns": 31769750,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/test_build_library_main.py": "f371c4442576887d97f3be6e99c37e2481adf96eb53d283c0a9fd686614ac66b"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 47147,
+  "exit_status": 1,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 47147,
+    "members": [],
+    "monotonic_ns": 251088333,
+    "utc": "2026-10-15T18:01:34.829113+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/test_build_library_main.py": "f371c4442576887d97f3be6e99c37e2481adf96eb53d283c0a9fd686614ac66b"
+  },
+  "error": "ValueError('validation, exit, group or source gate failed')",
+  "finished_utc": "2026-10-15T18:01:34.829302+00:00",
+  "finished_monotonic_ns": 251285666,
+  "elapsed_seconds": 0.219515916,
+  "stdout": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/mock-4-attempt01.stdout",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/mock-4-attempt01.stderr",
+  "stderr_sha256": "42799aff1f3b716f14a66f6ace27b3ba712c7e493013351ad0ae52f5cb06ab9e"
+}

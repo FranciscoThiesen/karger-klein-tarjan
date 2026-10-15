@@ -1,0 +1,32 @@
+{
+  "schema": "current_complexity_build_preflight_v1",
+  "validation": "pass",
+  "public_resolution": {
+    "command": [
+      "/usr/bin/dig",
+      "@1.1.1.1",
+      "github.com",
+      "A",
+      "+short",
+      "+time=3",
+      "+tries=1"
+    ],
+    "exit_status": 0,
+    "stdout": "20.29.134.23\n",
+    "stderr": ""
+  },
+  "git_resolve": "github.com:443:20.29.134.23",
+  "tls_verification_unchanged": true,
+  "cmake_version": "cmake version 3.30.5\n\nCMake suite maintained and supported by Kitware (kitware.com/cmake).\n",
+  "ctest_version": "ctest version 3.30.5\n\nCMake suite maintained and supported by Kitware (kitware.com/cmake).\n",
+  "mock_groups": 37,
+  "mock_receipts": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/mock-1-attempt02.json": "63f1f950dd81d0ba60c12e266ef14f7c9913a5a85f04e0d79b1232b2ba405bb8",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/mock-2-attempt02.json": "4bf0c96d88f287f209a89787daf78382e3d23e1a51cb768c6261acea54a94233",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/mock-3-attempt02.json": "b865f01e6483d476b817d93457d3bb046da890820680efa94ff336dd177acdad",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/mock-4-attempt02.json": "fa14cac8dab87062397ea8a1ccfb964890038a6008bed2ec9186727013107441",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/mock-5-attempt02.json": "1ca945d1bc5a8112172eb0f64e178898e09a93470a1812786af3ecf1b1d61a44",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/mock-6-attempt02.json": "4971eec13492f91aa3cccc44261eb1cfb82d15b1df4b5cd339be8b5ab2c5a43c",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/validation/mock-7-attempt02.json": "37ad25928ce7dbc33f56c42e09181fbc2a6c05cff7af239074be19fcd0d47a21"
+  }
+}

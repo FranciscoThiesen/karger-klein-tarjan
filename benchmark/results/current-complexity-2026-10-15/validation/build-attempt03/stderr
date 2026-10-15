@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/build_library_main.py", line 204, in <module>
+    if __name__ == "__main__": main()
+  File "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/build_library_main.py", line 193, in main
+    (build if args.phase=="build" else smoke)(args,state)
+  File "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/build_library_main.py", line 127, in build
+    gate.check_record(path)
+  File "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/validate_build.py", line 316, in check_record
+    library_objects(record,bound)
+  File "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/validate_build.py", line 243, in library_objects
+    exact(output(["/usr/bin/ar", "-t", record["library"]]).splitlines(), [Path(path).name for path in accepted.values()], "static archive member inventory")
+  File "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/validate_build.py", line 53, in exact
+    require(type(actual) is type(expected) and actual == expected, label)
+  File "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_complexity/analyze_complexity.py", line 66, in require
+    raise ValueError(message)
+ValueError: static archive member inventory
