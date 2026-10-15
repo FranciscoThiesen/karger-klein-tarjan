@@ -1,0 +1,49 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "benchmark/results/eighth-sampling-2026-10-15/work/plot_work.py",
+    "--capture",
+    "benchmark/results/eighth-sampling-2026-10-15/work/capture-attempt01.json",
+    "--audit",
+    "benchmark/results/eighth-sampling-2026-10-15/work/independent-counter-audit-attempt01/audit.json",
+    "--output",
+    "benchmark/results/eighth-sampling-2026-10-15/work/figures-attempt01",
+    "--released"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "started_utc": "2026-10-15T16:22:43.607786+00:00",
+  "started_monotonic_ns": 31864375,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/plot_work.py": "e43fecf0f6747fbee2f63a7c91a8aa7683f44db8eea3e830a1b6e5b5e5cf2888",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/capture-attempt01.json": "b7160f59fa2b953e9cd0b55f8bccb049512568ed758870bd57b43664806ee172"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 49252,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 49252,
+    "members": [],
+    "monotonic_ns": 2676811833,
+    "utc": "2026-10-15T16:22:46.252739+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/plot_work.py": "e43fecf0f6747fbee2f63a7c91a8aa7683f44db8eea3e830a1b6e5b5e5cf2888",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/capture-attempt01.json": "b7160f59fa2b953e9cd0b55f8bccb049512568ed758870bd57b43664806ee172"
+  },
+  "finished_utc": "2026-10-15T16:22:46.253207+00:00",
+  "finished_monotonic_ns": 2677288208,
+  "elapsed_seconds": 2.645423833,
+  "stdout": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/plot-controller-attempt01.stdout",
+  "stdout_sha256": "3fe45eae5d937a062434cc3712b1f725c19c040ac93c98d26ded72dfe6c0d057",
+  "stderr": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/plot-controller-attempt01.stderr",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

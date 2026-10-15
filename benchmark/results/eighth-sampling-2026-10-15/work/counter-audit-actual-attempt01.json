@@ -1,0 +1,48 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "benchmark/results/eighth-sampling-2026-10-15/work/audit_counters.py",
+    "--capture",
+    "benchmark/results/eighth-sampling-2026-10-15/work/capture-attempt01.json",
+    "--analysis-dir",
+    "benchmark/results/eighth-sampling-2026-10-15/work/analysis-attempt01",
+    "--output-dir",
+    "benchmark/results/eighth-sampling-2026-10-15/work/independent-counter-audit-attempt01"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "started_utc": "2026-10-15T16:22:04.944707+00:00",
+  "started_monotonic_ns": 20646125,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/audit_counters.py": "03f8b9af8a3445cebe0c7b5dbbca89ef6b69552fbfc4330418247c04abecb8eb",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/capture-attempt01.json": "b7160f59fa2b953e9cd0b55f8bccb049512568ed758870bd57b43664806ee172"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 49156,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 49156,
+    "members": [],
+    "monotonic_ns": 300888416,
+    "utc": "2026-10-15T16:22:05.224931+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/audit_counters.py": "03f8b9af8a3445cebe0c7b5dbbca89ef6b69552fbfc4330418247c04abecb8eb",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/capture-attempt01.json": "b7160f59fa2b953e9cd0b55f8bccb049512568ed758870bd57b43664806ee172"
+  },
+  "finished_utc": "2026-10-15T16:22:05.225366+00:00",
+  "finished_monotonic_ns": 301329500,
+  "elapsed_seconds": 0.280683375,
+  "stdout": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/counter-audit-actual-attempt01.stdout",
+  "stdout_sha256": "f9199d9fcc21ca84a4309c935f14d720540d997be04b8d8ef521eade11efd60b",
+  "stderr": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/counter-audit-actual-attempt01.stderr",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

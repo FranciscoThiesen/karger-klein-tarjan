@@ -1,0 +1,75 @@
+{
+  "schema": "eighth_sampling_work_controller_v1",
+  "validation": "pass",
+  "command": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "-B",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/collect.py",
+    "capture",
+    "--freeze",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/freeze.json",
+    "--output",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/capture-attempt01.json",
+    "--released"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "started_utc": "2026-10-15T16:03:33.825335+00:00",
+  "started_monotonic_ns": 318864291,
+  "source_sha256": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/run_capture_attempt.py": "cff7f2cff4e1feb3efcd3bcb5e90a2d06d16b65402b1d005def1bb2167f82b8b",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/collect.py": "4e3318902ca69e88a3e10098a402531eee1a3dd9d89a291cd4b2bba2a1b1419b",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/freeze.json": "e9b556e7d92bb0c73597a185112170ed649752957e64a484f44770887a331d04"
+  },
+  "deadline_seconds": 7200,
+  "native_solver_execution_authorized": true,
+  "native_solver_execution": true,
+  "performance_execution": false,
+  "all_owned_groups_verified_empty": true,
+  "outer_process_group": 48049,
+  "wrapper_exit_observed_monotonic_ns": 1080572098500,
+  "outer_cleanup": {
+    "started_monotonic_ns": 1080572217958,
+    "process_group": 48049,
+    "signals": [],
+    "native_exit_known": true,
+    "group_exit_known": true,
+    "returncode": 0,
+    "group_verification": {
+      "utc": "2026-10-15T16:21:34.107863+00:00",
+      "monotonic_ns": 1080572227791,
+      "process_group": 48049,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    "finished_monotonic_ns": 1080572544541,
+    "native_process_may_still_be_running": false
+  },
+  "exit_status": 0,
+  "checked_children": 48,
+  "checked_solver_outputs": 144,
+  "checked_replay_chains": 96,
+  "capture": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/capture-attempt01.json",
+  "capture_sha256": "b7160f59fa2b953e9cd0b55f8bccb049512568ed758870bd57b43664806ee172",
+  "finished_utc": "2026-10-15T16:21:34.405711+00:00",
+  "finished_monotonic_ns": 1080870089541,
+  "elapsed_seconds": 1080.55122525,
+  "outer_monitor_events": {
+    "48049": [
+      {
+        "process_group": 48049,
+        "requested_monotonic_ns": 1080572227791,
+        "previous_request_gap_ns": null,
+        "provider_started_monotonic_ns": 1080572369708,
+        "provider_finished_monotonic_ns": 1080572525416,
+        "outcome": "pass",
+        "returned_monotonic_ns": 1080572541208,
+        "sampler_duration_ns": 313417
+      }
+    ]
+  },
+  "stdout": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/capture-controller-attempt01.stdout",
+  "stdout_sha256": "082e21ef57425caef34a8d7640e38d334e45e70241e9f53d4fa350c0db371739",
+  "stderr": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/capture-controller-attempt01.stderr",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}
