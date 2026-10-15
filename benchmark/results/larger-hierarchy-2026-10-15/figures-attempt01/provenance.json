@@ -1,0 +1,333 @@
+{
+  "schema": "larger_hierarchy_figures_v1",
+  "validation": "pass",
+  "capture": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger.json",
+  "input_sha256": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger.json": "b295f44d38a45a381f32aef7dae5a64d7c8d659a6c0cc844c20b5a8bb9b32b23",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger.csv": "273b33301926e819fe2ebc9ad902087af090077f8dc37b11b42d04f55fb0a894",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/freeze.json": "d4600df2dee18c98d263a9bc043d2881c16a6cc253d9c99047aede4aaa334f27",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/freeze.json": "bd65da13058d3e9cfa58919a0fe5e02b8a46b1d0b8fe7f05801692d5a0866df9",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0001_leaf_hierarchy4_n65536_d32_p0_g11000009_s2203.csv": "7f803f581ac08a3dbe479143234b96a5ff5c24e7eebdf5d19c1713ec201a356b",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0001_leaf_hierarchy4_n65536_d32_p0_g11000009_s2203.log": "5d6f5cbb446fed3b121bb029f64baa6152334f209fb657465f0277d9050cdb35",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0001_leaf_hierarchy4_n65536_d32_p0_g11000009_s2203.rss.jsonl": "e82e9585f6ee12d34b5ab64eb76911828fc6294e9623dffaedf207148bc10338",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0002_leaf_shuffled4_n65536_d32_p0_g11000009_s2203.csv": "15323bec91f10f3ef4d12b8cbbbff821f186670b76d94166436d9b5f34732dcc",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0002_leaf_shuffled4_n65536_d32_p0_g11000009_s2203.log": "b017cbafcd25ab40c65dc9426d12bc31c514f8a7397be4a02dc5a3f28f50405a",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0002_leaf_shuffled4_n65536_d32_p0_g11000009_s2203.rss.jsonl": "1783f9ffe4eeb84f66771219c749174f50e21f72b3d5baffb56b1f6818b129d9",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0003_leaf_hierarchy4_n1048576_d32_p0_g11000009_s2203.csv": "ff7cb7f67f624d18516e9673bc64330011229d9ab50a24f52a872ea07bbfe5ea",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0003_leaf_hierarchy4_n1048576_d32_p0_g11000009_s2203.log": "4cc8ea4d695efe0dbd83b354b78824688b1712e2e47d5efe868ca365dc64d4ca",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0003_leaf_hierarchy4_n1048576_d32_p0_g11000009_s2203.rss.jsonl": "169ab52d69f921134213b7389ecf4924cb9ce45272284f848ace215f33d6e1f2",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0004_leaf_shuffled4_n1048576_d32_p0_g11000009_s2203.csv": "da4450eb9f613fb9a872f6e8b0e49f54db66981d7227ca96f3ae61178c381e35",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0004_leaf_shuffled4_n1048576_d32_p0_g11000009_s2203.log": "d30005592f68537f276449d81f20b8e4c9ef319ffe5c832a5849a2d8eb6cb1d0",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0004_leaf_shuffled4_n1048576_d32_p0_g11000009_s2203.rss.jsonl": "ce9f01563a27070efba33239be4ccd61b46f9e34f56e25f63030ba4fa574c4f1",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0005_leaf_hierarchy4_n4194304_d32_p0_g11000009_s2203.csv": "9477abb09f0f5085480d7ac11a60fde9d656b7d45e95e37ab8e17e1524422f49",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0005_leaf_hierarchy4_n4194304_d32_p0_g11000009_s2203.log": "38b07051e3cc040ea614f194ab5729eb0d992744b5c6cd3376b7bf02ca82f270",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0005_leaf_hierarchy4_n4194304_d32_p0_g11000009_s2203.rss.jsonl": "bb00f452eb4c15103136476e3fe322e65a03d776dc4137180d1ee4e0f62aba43",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0006_leaf_shuffled4_n4194304_d32_p0_g11000009_s2203.csv": "ce5c1eb185da72eec220a486a48084087237963a8a2b74afbd2054a5613f610b",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0006_leaf_shuffled4_n4194304_d32_p0_g11000009_s2203.log": "48ac9102de532aaab17e1c218605b329e0c809d18e0afe39990e718500483d45",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0006_leaf_shuffled4_n4194304_d32_p0_g11000009_s2203.rss.jsonl": "c3d4af12a2d736ea7cea9a6dddf8885f6f9be80e365d32fcf6a97110ff549cd8",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0007_leaf_shuffled4_n4194304_d32_p0_g11000027_s2203.csv": "72308f18b5eba67e8dbe660be34fdbdd6151b41431b700bfdbe95dd11910616e",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0007_leaf_shuffled4_n4194304_d32_p0_g11000027_s2203.log": "c8b093cfa111d6582acb534a4e079ada538d3c0bc386ae6d468afc685e57da08",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0007_leaf_shuffled4_n4194304_d32_p0_g11000027_s2203.rss.jsonl": "49c5322d9ad25781b239802aeab95bf35e4b2e062dd9b37ddfacbb3ca4138417",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0008_leaf_hierarchy4_n4194304_d32_p0_g11000027_s2203.csv": "e51327a71f70a13e9ba77f3c1418503ddf4ce1dc9531934e310edc8e90f97d4b",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0008_leaf_hierarchy4_n4194304_d32_p0_g11000027_s2203.log": "a233637878a05f8038d979dd3bfe7c69d1a2f9b1ea08c2f348f85c8144f335c9",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0008_leaf_hierarchy4_n4194304_d32_p0_g11000027_s2203.rss.jsonl": "5376553a390fea74fb329c2e5b92f63b248ac2b43958e45906845450ed35fd50",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0009_leaf_shuffled4_n1048576_d32_p0_g11000027_s2203.csv": "61dd7c5c20529b3c4ee74843fa093e29638d5ec5b825430152bdb061b362e55a",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0009_leaf_shuffled4_n1048576_d32_p0_g11000027_s2203.log": "9a174172823ed9569d5420dd4edfb0d0baa4dbff2ac55680ea149c83f798e0e9",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0009_leaf_shuffled4_n1048576_d32_p0_g11000027_s2203.rss.jsonl": "0d9435148f0b1555702e0063eb074905a8fc72d5f099ada2a285cce60c4a5e51",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0010_leaf_hierarchy4_n1048576_d32_p0_g11000027_s2203.csv": "4caabd0d4a76365cc4e900f476faef383259d7ae08a9f69564c4255095a428f9",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0010_leaf_hierarchy4_n1048576_d32_p0_g11000027_s2203.log": "aeeee03b95a375e0bd920af35cbdae3b77129877c265816eee839485515b2add",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0010_leaf_hierarchy4_n1048576_d32_p0_g11000027_s2203.rss.jsonl": "7f05d90c23a9860892bdd4b5cf3a416c5bb3e02aa1cadad2437421b1eab41fb9",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0011_leaf_shuffled4_n65536_d32_p0_g11000027_s2203.csv": "4dc96971f1a5a6413792d1998f16797819d1c482e2a824a3d6a8df951e489757",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0011_leaf_shuffled4_n65536_d32_p0_g11000027_s2203.log": "25d09aac08c8085901e0f2f648491eb95451703ea7253a7ebc43acfb23d84362",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0011_leaf_shuffled4_n65536_d32_p0_g11000027_s2203.rss.jsonl": "6737d5255a68433c4f0aa933db4ffffca21da07db6dfff28850c11c9e97cba4a",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0012_leaf_hierarchy4_n65536_d32_p0_g11000027_s2203.csv": "6c2f929f3aca0af26e5b056043e6f3c6906989cd68ed786dcd3582a32295eea7",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0012_leaf_hierarchy4_n65536_d32_p0_g11000027_s2203.log": "eb598347ec53dd54707714ea363239d6939e38f1a9556ce95689913cdec784e7",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/larger_cases/0012_leaf_hierarchy4_n65536_d32_p0_g11000027_s2203.rss.jsonl": "5a23dd632fe7eb2ff6d69c23381ecb4a78f696fbc307a88a5bb7b18598015441",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/run_mst_search.py": "843d65154d232bc12a946ad7d8793ab26840f7785507286a6e4d8ed09dfcad80",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/analyze_mst_search.py": "91d3fcad871444e9325c1465782365b5c3ed08fb2344aeeb62fbfc18254f5ba6",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/run_crossover.py": "1669d3b761e0d4c09c432382c3a2e8738c0031c1c9e6dc69cfcb7734809a052f",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/analyze_continuation.py": "7a0afa5fe802516cb5ec27a7d567a0875c66807aa4a04ce0ff752f0bc31b9168",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/crossover_clocks.py": "725d469933eaf5ead32a38bf52b9f32e46a7ee3d4e386777c257c1ab3929fc0b",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/run_crossover_baselines.py": "2291db9114448516fc5ffb6c4b0fd119d23741bcfa2275ad7f25996c3b73921e",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/run_multigraph_experiment.py": "f039d2523e212d9431ed9e062459a6eb3cf2e3ebf463c49d4d57097bcef4fd8e",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/recover_mst_search.py": "73f02f494f29b2f9183c9fc889dcda73444fe2ca4a240469a7d57dfec226058b",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/audit_attachment_recovery_power.py": "e7a72cc054c6cfbcb1c6d5c6686e2332864632a12e10b60a9d3f16b6a5ca0c61",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/audit_mst_search_power.py": "566530914ee74564c5d5ba640b700f5ecfccc5927ac5ed046cb6e3bbdbd225c5",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/run_retention_control.py": "f913b9b0721102489f17eafe9bc82d4886ef3bbfad9d9f2d4963ee84f5df4f85",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/run_edge_view_experiment.py": "67d018d74e6658988421b98ae613ce5e649b4f80e5436fc8776540d2298fd227",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/run_compressed_queries.py": "6e42a9f11e395960bbba9e96a9bdbce626987f80c26764db9f260236e07d72ba",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/run_larger_hierarchy.py": "7f49abf5147d33be7c2441ee0082cf2e0b9a1785437ef3d91236022a1684a8ad",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/plot_larger_hierarchy.py": "af8096760abdc1cfb75cf7c6b2aad0c8e3214186f5ae808e46b96770772710ff",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/plot_retention_control.py": "a19d4edf72aea875885aa3494ca268038d2654531b9e3c670b21355e2b7e635a"
+  },
+  "matplotlib_version": "3.9.4",
+  "checked_outputs": 504,
+  "timed_outputs": 432,
+  "warmup_outputs": 72,
+  "rows_removed": 0,
+  "rows_adjusted": 0,
+  "graph_realizations": 2,
+  "sampling_seeds": [
+    2203
+  ],
+  "trials_per_case": 12,
+  "flagged_calls_retained": 0,
+  "coverage": [
+    {
+      "figure": "ratios_wall",
+      "family": "leaf_hierarchy4",
+      "case_ids": [
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0",
+        "leaf_hierarchy4_n4194304_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 15,
+      "graph_median_points": 30,
+      "trial_range_endpoints": 30,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.26374425786517386,
+        2.7448079580977742
+      ]
+    },
+    {
+      "figure": "ratios_wall",
+      "family": "leaf_shuffled4",
+      "case_ids": [
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0",
+        "leaf_shuffled4_n4194304_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 15,
+      "graph_median_points": 30,
+      "trial_range_endpoints": 30,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.27601170116476426,
+        3.138935559235702
+      ]
+    },
+    {
+      "figure": "ratios_cpu",
+      "family": "leaf_hierarchy4",
+      "case_ids": [
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0",
+        "leaf_hierarchy4_n4194304_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 15,
+      "graph_median_points": 30,
+      "trial_range_endpoints": 30,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.26374425786517386,
+        2.7448079580977742
+      ]
+    },
+    {
+      "figure": "ratios_cpu",
+      "family": "leaf_shuffled4",
+      "case_ids": [
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0",
+        "leaf_shuffled4_n4194304_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 15,
+      "graph_median_points": 30,
+      "trial_range_endpoints": 30,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.27601170116476426,
+        3.138935559235702
+      ]
+    },
+    {
+      "figure": "times_wall",
+      "family": "leaf_hierarchy4",
+      "case_ids": [
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0",
+        "leaf_hierarchy4_n4194304_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 18,
+      "graph_median_points": 36,
+      "trial_range_endpoints": 36,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.037469012346148245,
+        97.8070523224149
+      ]
+    },
+    {
+      "figure": "times_wall",
+      "family": "leaf_shuffled4",
+      "case_ids": [
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0",
+        "leaf_shuffled4_n4194304_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 18,
+      "graph_median_points": 36,
+      "trial_range_endpoints": 36,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.029508416178455742,
+        75.70455364672341
+      ]
+    },
+    {
+      "figure": "times_cpu",
+      "family": "leaf_hierarchy4",
+      "case_ids": [
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0",
+        "leaf_hierarchy4_n4194304_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 18,
+      "graph_median_points": 36,
+      "trial_range_endpoints": 36,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.037469012346148245,
+        97.8070523224149
+      ]
+    },
+    {
+      "figure": "times_cpu",
+      "family": "leaf_shuffled4",
+      "case_ids": [
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0",
+        "leaf_shuffled4_n4194304_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 18,
+      "graph_median_points": 36,
+      "trial_range_endpoints": 36,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.029508416178455742,
+        75.70455364672341
+      ]
+    }
+  ],
+  "legends": {
+    "ratios_wall": [
+      "Compacting Bor\u016fvka",
+      "Retained-edge Bor\u016fvka",
+      "Kruskal",
+      "Prim",
+      "Original Bor\u016fvka",
+      "Two graph medians",
+      "Full trial range"
+    ],
+    "ratios_cpu": [
+      "Compacting Bor\u016fvka",
+      "Retained-edge Bor\u016fvka",
+      "Kruskal",
+      "Prim",
+      "Original Bor\u016fvka",
+      "Two graph medians",
+      "Full trial range"
+    ],
+    "times_wall": [
+      "KKT",
+      "Compacting Bor\u016fvka",
+      "Retained-edge Bor\u016fvka",
+      "Kruskal",
+      "Prim",
+      "Original Bor\u016fvka",
+      "Two graph medians",
+      "Full trial range"
+    ],
+    "times_cpu": [
+      "KKT",
+      "Compacting Bor\u016fvka",
+      "Retained-edge Bor\u016fvka",
+      "Kruskal",
+      "Prim",
+      "Original Bor\u016fvka",
+      "Two graph medians",
+      "Full trial range"
+    ]
+  },
+  "control_normalization": false,
+  "confidence_intervals": false,
+  "interpolated_crossover": false,
+  "matched_clock_axes": true,
+  "output_sha256": {
+    "ratios_wall.png": "3b0cf39b5140ba5392e74c03de59a31a98f060f18d4138122a53ece5ccd4c5b4",
+    "ratios_wall.svg": "5bec118de2f49210c79b1d24c1e7cdc136ef52417f98cfbc680067d6a7eda33f",
+    "ratios_wall.pdf": "e0a03cbf0d148baba7a640dab83cfcdfa7a4f20a58290e77e646e4057ddcb229",
+    "ratios_cpu.png": "ddb34a870ae121dc7284e3737e0ebb06e96f75b4fd7676f4f89b63d79a820c83",
+    "ratios_cpu.svg": "271f47ef62c0e141e4f5e983bca9543e1e3b08159949efd60f7605e267f6ddf9",
+    "ratios_cpu.pdf": "d41c85976ec62009b292ddfce103b43f8e8627e9d860fb41544d8026fdd9e028",
+    "times_wall.png": "203cc61aa29f5289aedcd3c6ebf079b0cafd3e2997a9df1a5f5e16ef986e790d",
+    "times_wall.svg": "50a9abf83bfc1b8eb2df08609306326c6023175bcdbe59c94d3b0054933ace83",
+    "times_wall.pdf": "a614c3878dbf34b3beaeb1e6f0f5923834cf4334be420ed0b8fa6820ecbf1260",
+    "times_cpu.png": "470a219bd682e9cd8e855c5d08921d08518d1a844391c69d6ca2780e744019f7",
+    "times_cpu.svg": "df49b92ebbda13013add8b4f7e919e546aa146abb1a1b86c5b3b44eb8333e77b",
+    "times_cpu.pdf": "781384e316d532255a093c88732094014dac6adf8f1e7873396760101a1d617d",
+    "plotted_values.json": "ecf69cb92685b1b7e30191fd649d0e6c3f9804183d0b11f6f60a59be234a19b5"
+  },
+  "visual_review": "pending: inspect all four PNGs before publication"
+}

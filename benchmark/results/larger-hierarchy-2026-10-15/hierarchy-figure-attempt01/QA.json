@@ -1,0 +1,22 @@
+{
+  "schema": "larger_study_figure_visual_qa_v1",
+  "validation": "pass",
+  "reviewer": "multigraph_design",
+  "original_resolution_inspection": true,
+  "panels_inspected": 2,
+  "pngs": [
+    {
+      "file": "hierarchy_expectation.png",
+      "width": 2767,
+      "height": 1330,
+      "sha256": "06ad1f1d6add74ddff9604a8d8a47296df0ce5042f7e3d515e4dc08a33ef0014"
+    }
+  ],
+  "notes": "All three size curves and their 15/19/21 discrete input rounds are retained; no fictitious terminal zero round is plotted. Axes, colors, markers, theoretical scope, legend and three-line caption are readable without clipping or overlap.",
+  "provenance_sha256": "8d820c1388a5084889efd179e15f597cb4268f97436c68809d0739a037ff7aa5",
+  "qa_script_sha256": "8b08b4ec4b57a8549c43b39afb4c3b32e27a5ed301e069ab9f829cc313a89f18",
+  "declared_inputs_rehashed": 10,
+  "declared_outputs_rehashed": 5,
+  "svg_pdf_generated_and_hashed": true,
+  "svg_pdf_separately_rasterized": false
+}

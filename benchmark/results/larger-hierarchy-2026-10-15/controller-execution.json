@@ -1,0 +1,25 @@
+{
+  "recorded_utc": "2026-10-15T13:44:20.716802+00:00",
+  "command": [
+    "python3",
+    "-B",
+    "-u",
+    "benchmark/run_larger_hierarchy.py",
+    "capture",
+    "--freeze",
+    "benchmark/results/larger-hierarchy-2026-10-15/freeze.json",
+    "--output",
+    "benchmark/results/larger-hierarchy-2026-10-15/larger.csv",
+    "--released"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-compressed-queries",
+  "tool_session_id": 88592,
+  "controller_exit_status": 0,
+  "exit_status_source": "Root write_stdin completion result after capture; not inferred from log text",
+  "capture_validation": "pass",
+  "native_groups": 12,
+  "all_native_groups_verified_empty": true,
+  "controller_log_sha256": "00125655fcb3801786e72f344ee0b539eb45d359ec85d055d0a4a0c42b2d77c3",
+  "capture_sha256": "b295f44d38a45a381f32aef7dae5a64d7c8d659a6c0cc844c20b5a8bb9b32b23",
+  "sleep_inhibition_verified": false
+}

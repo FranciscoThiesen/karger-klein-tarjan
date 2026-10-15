@@ -1,0 +1,159 @@
+{
+  "schema": "illustrative_sampling_witness_figure_v1",
+  "validation": "pass",
+  "source_sha256": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/plot_sampling_witness.py": "326eb5a51bf359ffa741c139d27bdc51be9d288478028698bd74a9fde0bc1489",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/SAMPLING_MECHANISM.md": "41541fc7d3598195113780f2c6d241aa91e7c5d1ffae769e0d15bc539c47422a"
+  },
+  "output_sha256": {
+    "sampling_witness.png": "ff6199cb5a1fabd05f43ee426d794960957ba59021787cd56c17adb16be41ad0",
+    "sampling_witness.svg": "43c590c8cc46b9959e0d0719973a5e8492f780c458b50710fa77ec9fc39e1f20",
+    "sampling_witness.pdf": "cb2c36c5cf6003f5ca640fec7ff9af73fabf43ca99bb6549d488d41475a7c54e",
+    "witness_edges.csv": "92a10cf2f57f7b58ee99f47c7b461cb37e8ae7ccbe48fc1d20effc677758952e",
+    "independent_checks.json": "04853351a63867bfdb3d8979da49dce943631d16cd76199addf3679c314b4d7b"
+  },
+  "measured_input_files": [],
+  "native_executed": false,
+  "positions": {
+    "0": [
+      6.123233995736766e-17,
+      1.0
+    ],
+    "1": [
+      0.7071067811865476,
+      0.7071067811865475
+    ],
+    "2": [
+      1.0,
+      0.0
+    ],
+    "3": [
+      0.7071067811865476,
+      -0.7071067811865475
+    ],
+    "4": [
+      6.123233995736766e-17,
+      -1.0
+    ],
+    "5": [
+      -0.7071067811865475,
+      -0.7071067811865476
+    ],
+    "6": [
+      -1.0,
+      -1.2246467991473532e-16
+    ],
+    "7": [
+      -0.7071067811865477,
+      0.7071067811865475
+    ]
+  },
+  "coverage": [
+    {
+      "panel": 0,
+      "vertices_drawn": 8,
+      "edge_ids_drawn": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12,
+        15,
+        16,
+        17,
+        19,
+        20,
+        21,
+        24,
+        26,
+        0,
+        13,
+        22,
+        27,
+        7,
+        25,
+        18,
+        1,
+        14,
+        23
+      ],
+      "weight_labels": [
+        1,
+        8,
+        5,
+        2,
+        9,
+        7,
+        3,
+        10,
+        6,
+        4
+      ]
+    },
+    {
+      "panel": 1,
+      "vertices_drawn": 8,
+      "edge_ids_drawn": [
+        0,
+        13,
+        22,
+        27,
+        1,
+        14,
+        23
+      ],
+      "weight_labels": [
+        1,
+        8,
+        2,
+        9,
+        3,
+        10,
+        4
+      ]
+    },
+    {
+      "panel": 2,
+      "vertices_drawn": 8,
+      "edge_ids_drawn": [
+        0,
+        13,
+        22,
+        27,
+        7,
+        25,
+        18,
+        1,
+        14,
+        23
+      ],
+      "weight_labels": [
+        1,
+        8,
+        5,
+        2,
+        9,
+        7,
+        3,
+        10,
+        6,
+        4
+      ]
+    }
+  ],
+  "python_executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+  "python_version": "3.9.6",
+  "matplotlib_version": "3.9.4",
+  "argv": [
+    "benchmark/plot_sampling_witness.py",
+    "--output",
+    "benchmark/results/larger-hierarchy-2026-10-15/sampling-witness-attempt01",
+    "--released"
+  ],
+  "visual_review": "pending: inspect all three panels before publication"
+}

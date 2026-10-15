@@ -1,0 +1,45 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "benchmark/plot_sampling_witness.py",
+    "--output",
+    "benchmark/results/larger-hierarchy-2026-10-15/sampling-witness-attempt01",
+    "--released"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-compressed-queries",
+  "started_utc": "2026-10-15T13:45:30.787107+00:00",
+  "started_monotonic_ns": 26014416,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/plot_sampling_witness.py": "326eb5a51bf359ffa741c139d27bdc51be9d288478028698bd74a9fde0bc1489",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/SAMPLING_MECHANISM.md": "41541fc7d3598195113780f2c6d241aa91e7c5d1ffae769e0d15bc539c47422a"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 35685,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 35685,
+    "members": [],
+    "monotonic_ns": 909279666,
+    "utc": "2026-10-15T13:45:31.670331+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/plot_sampling_witness.py": "326eb5a51bf359ffa741c139d27bdc51be9d288478028698bd74a9fde0bc1489",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/SAMPLING_MECHANISM.md": "41541fc7d3598195113780f2c6d241aa91e7c5d1ffae769e0d15bc539c47422a"
+  },
+  "finished_utc": "2026-10-15T13:45:31.670559+00:00",
+  "finished_monotonic_ns": 909512583,
+  "elapsed_seconds": 0.883498167,
+  "stdout": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/validation/sampling-witness-attempt01.stdout",
+  "stdout_sha256": "e9828aad641392d97605fd922337ad3bc242a4f425b4a42c1a0adeb5a404b701",
+  "stderr": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/validation/sampling-witness-attempt01.stderr",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

@@ -1,0 +1,42 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "benchmark/results/larger-hierarchy-2026-10-15/validation/test_independent_numerical_audit.py"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-compressed-queries",
+  "started_utc": "2026-10-15T13:45:15.308046+00:00",
+  "started_monotonic_ns": 36326916,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/validation/independent_numerical_audit.py": "f44cd2403c947a7b2d152371ab69b57d8c49440a81d0989e280b3ccf01753d36",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/validation/test_independent_numerical_audit.py": "53fe0d9b208809a8936b75d714a3c23f573452663f4da61095d34dab3d33665d"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 35652,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 35652,
+    "members": [],
+    "monotonic_ns": 495653541,
+    "utc": "2026-10-15T13:45:15.767358+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/validation/independent_numerical_audit.py": "f44cd2403c947a7b2d152371ab69b57d8c49440a81d0989e280b3ccf01753d36",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/validation/test_independent_numerical_audit.py": "53fe0d9b208809a8936b75d714a3c23f573452663f4da61095d34dab3d33665d"
+  },
+  "finished_utc": "2026-10-15T13:45:15.767582+00:00",
+  "finished_monotonic_ns": 495884166,
+  "elapsed_seconds": 0.45955725,
+  "stdout": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/validation/audit-mocks-attempt01.stdout",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/validation/audit-mocks-attempt01.stderr",
+  "stderr_sha256": "ba389be0ee4cbc4df09e508c99e662d9fac2732a85983eab5b92a85351289b0c"
+}

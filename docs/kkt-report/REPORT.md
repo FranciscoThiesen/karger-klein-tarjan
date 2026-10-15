@@ -64,6 +64,17 @@ also beat Prim. Original Borůvka wins every paired trial, so none makes KKT
 the overall winner. Both clocks, all losses, exact crossover classifications
 and reviewed figures are included. This does not alter the historical edition.
 
+**Larger-instance follow-up, 15 October:** the [134-million-edge extension](../../benchmark/results/larger-hierarchy-2026-10-15/README.md)
+validates all 504 outputs and finds a strong measured crossover against the
+original Borůvka on ordered leaf cores: KKT changes from 1.1% slower at
+1,048,576 vertices to 11.4% faster at 4,194,304, with both graph/clock medians
+meeting the declared 10% margin. Its narrow lead against retained-edge
+Borůvka reverses at the larger size, where KKT is 7.9% slower; Kruskal and Prim
+also remain faster. Six reviewed figures distinguish measured runtimes from
+theoretical chord retention and an independently checked sampling example.
+This establishes one implementation-specific finite bracket, not overall or
+asymptotic dominance. The historical edition below remains unchanged.
+
 This report asks three distinct questions: whether the original implementation faithfully realized KKT's local complexity bounds; whether the current implementation *measures* like linear time; and which graph structures make it competitive in practice. The answers come from source inspection, certified benchmark outputs, separate work counters, two complete new timing campaigns, and a controlled comparison with repeated compacting Borůvka steps.
 
 The main document is this Markdown file. The [HTML edition](report.html) adds a fully offline, interactive 3D graph explorer. The [standalone explorer](graph-explorer.html) exposes actual contraction and filtering results for seven complete small graphs. A paginated companion checks the requested 40-page limit.
