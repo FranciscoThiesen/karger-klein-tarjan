@@ -1,0 +1,8 @@
+
+.kkt-figure { margin: 2.2em 0; }
+.kkt-figure picture { display: block; }
+.kkt-figure img { display: block; width: 100%; height: auto; margin: 0; border: 0; border-radius: 6px; }
+.kkt-figure figcaption { margin: .85em .15em 0; font-size: .88em; line-height: 1.65; color: inherit; opacity: .86; }
+.kkt-table-scroll { overflow-x: auto; margin: 1.5em 0; }
+.kkt-table-scroll:focus { outline: 2px solid currentColor; outline-offset: 4px; }
+@media (max-width: 600px) { .kkt-figure { margin-inline: -12px; } }

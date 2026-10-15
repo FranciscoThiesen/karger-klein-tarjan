@@ -1,0 +1,42 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "docs/kkt-blog-2026-10-15/scripts/plot_results.py",
+    "--attempt",
+    "quantitative-attempt03"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "started_utc": "2026-10-15T23:24:13.573201+00:00",
+  "started_monotonic_ns": 29527666,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-blog-2026-10-15/scripts/plot_results.py": "310138cb381573e73e9f9e675d50abe00cb41cbfc482ce5e50610c86de8bca81"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 11159,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 11159,
+    "members": [],
+    "monotonic_ns": 1906897958,
+    "utc": "2026-10-15T23:24:15.450541+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-blog-2026-10-15/scripts/plot_results.py": "310138cb381573e73e9f9e675d50abe00cb41cbfc482ce5e50610c86de8bca81"
+  },
+  "finished_utc": "2026-10-15T23:24:15.450816+00:00",
+  "finished_monotonic_ns": 1907180791,
+  "elapsed_seconds": 1.877653125,
+  "stdout": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-blog-2026-10-15/validation/quant-render-attempt04.stdout",
+  "stdout_sha256": "f9b8c04b185e51d5f96c84e3eed706ac6968461368ed3cdcb8a7d5f4db8a588d",
+  "stderr": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-blog-2026-10-15/validation/quant-render-attempt04.stderr",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

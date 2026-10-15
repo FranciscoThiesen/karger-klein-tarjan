@@ -1,0 +1,16 @@
+{
+  "schema": "kkt_blog_fact_installation_v1",
+  "files": {
+    "docs/kkt-blog-2026-10-15/validation/verify_claims.py": {
+      "sha256": "11a2cfda323ee4a58ba51c8cf1460ba2702a9b26c546de82e894daad5940ebfc",
+      "preparation": "/tmp/kkt-blog-verify-claims.py",
+      "preparation_sha256": "99230ac84b865d8be543ddec0af1905ba881fe8b7783b3cd503f3195bb8c891d"
+    },
+    "docs/kkt-blog-2026-10-15/validation/FACT_SHEET.md": {
+      "sha256": "2222d2e3561c1b633d74d94762a962fb4d5eaa618637c3abe5e1691740cf07fa",
+      "preparation": "/tmp/kkt-blog-fact-sheet.md",
+      "preparation_sha256": "9986c456bd727c6530869d9715a1051fb8814983f78eaec01aea43d1cf9a0314"
+    }
+  },
+  "scope": "Archived original temporary sources; checker paths relocated only, then rerun against existing audited data. No new benchmark."
+}

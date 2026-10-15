@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-blog-2026-10-15/scripts/plot_results.py", line 320, in <module>
+    if __name__=='__main__':main()
+  File "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-blog-2026-10-15/scripts/plot_results.py", line 305, in main
+    e=Evidence();values,checks=data(e);e.recheck();output.mkdir(parents=True);tables.mkdir(parents=True)
+  File "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-blog-2026-10-15/scripts/plot_results.py", line 145, in data
+    require(len(values)==6 and int(r['N'])==33*int(r['n']),'complexity observation domain differs')
+  File "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-blog-2026-10-15/scripts/plot_results.py", line 29, in require
+    if not ok: raise ValueError(why)
+ValueError: complexity observation domain differs

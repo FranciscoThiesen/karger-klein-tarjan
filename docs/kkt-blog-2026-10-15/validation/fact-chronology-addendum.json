@@ -1,0 +1,7 @@
+{
+  "schema": "kkt_blog_fact_chronology_v1",
+  "validation": "pass",
+  "before_sha256": "2222d2e3561c1b633d74d94762a962fb4d5eaa618637c3abe5e1691740cf07fa",
+  "after_sha256": "7a2ec5904ac6e95f0250ed4e07da458d6ce0225e6b839a2bbc9991bc8c480753",
+  "correction": "Audited original means January2026 baseline, not the code measured in2022. Root-ID regression introduced693c6a5; median builder present805a330 June2020; RNG restart present93f6c54 September2020. Inspected all relevant git objects and2022ae02010 source. No numeric changes."
+}

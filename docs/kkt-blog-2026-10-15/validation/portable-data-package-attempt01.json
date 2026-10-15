@@ -1,0 +1,28 @@
+{
+  "schema": "kkt_blog_portable_data_package_v1",
+  "validation": "pass",
+  "archive": "docs/kkt-blog-2026-10-15/downloads/kkt-blog-data.zip",
+  "sha256": "8e2f468ca5b43b9c7eb766b6813cb1865aedec34d48f53cdf9768d24f616ee9c",
+  "bytes": 44911,
+  "members_sha256": {
+    "README.md": "bb2f73f8e2dd7c04af80eb0026d73d82b2075b26a966d717f4c975ab63a6f569",
+    "data/README.md": "d6a3aa19f5e2bbf12862317ac82f9a086a18fc0674b0c74eec1fe5cd1e22e312",
+    "data/complexity.csv": "7c36be005163f8de0bad5686e0940d2d6c9ab51340f47c47c4aac3e3c2d052a2",
+    "data/crossover.csv": "92d9f87e8f666eb578b75b6b77d0bda2e0cd827c535c66e86d37a9276951654c",
+    "data/endpoint_ratios.csv": "7bd8a425b28d93ff88daa21b95b477a45142a36dc754d978d9ac82b5948fead9",
+    "data/endpoints.csv": "e8c05a965640630629a0b2f0005ad9d3c937530c1f0fd4f1e2554efb1373fa29",
+    "data/google_choices.csv": "9cbe6c8fc5b423127407a8353d9e706639877fed2d41ad4ecb25679b1acd50af",
+    "data/partition.csv": "9350d9b0bcd8473a77991f35a3aa9df42ab811187483ce634f403856fe7c4308",
+    "data/reversal.csv": "de2a1954b7b815a6084509e1c22ac752e59097362546bcfe2adf3f685c670aa4",
+    "data/volume.csv": "05ef29a7f11ba400e299d52db3312a6e6860abb97de85d7695a8fd51e2c3bef0",
+    "plot_results.py": "fdb1e0b38ee633466d4b09f580d05fb02cd2a51ddb51232e6b72138f8aba0c23",
+    "provenance.json": "c213ec086890f087847656a4bfbd5312e20cc90af0ed37769d04e86184b258b9",
+    "replot_charts.py": "93068d38d8676610bdbe6ecda1d180126c5146ea2f5287e8524c725147f014d1",
+    "requirements.txt": "fd70c5b60168fd91d504345ec04061037fb9de084f7ec8fa53255486c9c94ab1"
+  },
+  "replot_comparison_sha256": "ea5c926d93bf3a6f7498ce6a8511efabbc64d874d0bec9f49aafd7aae84f0a51",
+  "portable_replot_guard_sha256": "dadd42c7f84cfc45073a1487885cc9f88fc6dda27fcb23ce747c8740bf53fcb0",
+  "native_solver_execution": false,
+  "original_machine_paths_in_portable_manifest": false,
+  "scope": "Portable exported tables and presentation code, not native rebuild or raw-audit replay."
+}

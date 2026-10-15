@@ -1,0 +1,40 @@
+{
+  "validation": "pass_with_declared_browser_limit",
+  "article_sha256": "3d3cb9a638461488d7494200128034f49ec2677f5350123fcd18392805fb1d64",
+  "evidence_sha256": "1b6c528bf11bd01b47678ecf26cfbf0157c3437069c8c179ad0b593e110047b4",
+  "preview_sha256": "cae21be8eddbee965fa5f0f0980ae30550b4642f4358c1a258ccb7c94163377d",
+  "publication_zip_sha256": "262c0f2db00568f6cb4f4d64e3c91053ca50cccc7d6d34ca6af0cacd9fbab186",
+  "word_count_approx": 3233,
+  "figure_pairs": 8,
+  "reviewed_pngs": {
+    "assets/concept-id-budget-mobile.png": "1ab59fa3be01e6e09c6c073d96c17c117b229a15c31bee8b233ba0b482850bad",
+    "assets/concept-id-budget.png": "8556053bc6279b83579137bef686c39b15f97bb92248bd70011588ff3b7f64be",
+    "assets/concept-sample-filter-mobile.png": "3ce1e3bc11fbd8ff66d0746b9009681632582104c459f2ae94ec25f5bd4a31cb",
+    "assets/concept-sample-filter.png": "e89d0873e93dc6d4e9b6b0d92f2e951cea5c2d315c796fe78fe4921d51dea295",
+    "assets/concept-weight-order-mobile.png": "d00badfa7f5443dfbac86b716d7eb6c62ad1f1af2acecca91853b8d9ec9f38e8",
+    "assets/concept-weight-order.png": "7a4423e74527525cad42c2e2111861596af9f6c0add9d6ec1e2643bbbe20ea1b",
+    "assets/quantitative-attempt04/quant-alternatives-mobile.png": "af190b94a47264a145c97b02924d2b1aa320b42178170966fac9f4e58d297f3d",
+    "assets/quantitative-attempt04/quant-alternatives.png": "590f57b81def2d8a1ed5efa2e2308303922adaddf57c4145588f98dd1e8d8542",
+    "assets/quantitative-attempt04/quant-complexity-mobile.png": "ccf7811ebcdd779a91b32b112498e4e97dcc5a1ff226d215898f87dca85081fc",
+    "assets/quantitative-attempt04/quant-complexity.png": "25b303890cca62beb6c7d2807cf565523a2ae404ee15bc0a9fa87b3f55c58a23",
+    "assets/quantitative-attempt04/quant-crossover-mobile.png": "c37c87d005d7bb9047db7d223e12ec9732d3af35ad65dbf8d9f47e4104f61a8f",
+    "assets/quantitative-attempt04/quant-crossover.png": "e33d729d8940c54ce159de9aeca305893c2af834588b411bd796fcb45b190b04",
+    "assets/quantitative-attempt04/quant-reversal-mobile.png": "69e1346c7179b24aa47935afbfc5cfd9768a8dd5c963eb2c0936baeca54d5115",
+    "assets/quantitative-attempt04/quant-reversal.png": "dcd1e056065b0e52f39d269d83d451bdc35d2e5f5f44c768b87ef53a4ff3c73e",
+    "assets/quantitative-attempt04/quant-work-mobile.png": "109476a95c7d68755f14091190525d67ad09c151adbe2ecd2cb8f910051d992c",
+    "assets/quantitative-attempt04/quant-work.png": "401027312bcb9bce9787015dc15f73e1323a2b295859090d1a95d0c42be6a9c4"
+  },
+  "scope": "Independent prose/history/arithmetic review, visual figure review, Kramdown/GFM rendering, local link checks, archive integrity and portable chart regeneration. No new native timing, browser visual acceptance, remote publication, or remote push.",
+  "receipts": {
+    "post-independent-review-attempt01.json": "2d73efe35b058e63e7d62441b06b358c4f8d3a79092f41e3ba5a2b1f06858fa7",
+    "independent-chart-source-review.json": "a9ab68e64c0f181666022a6f05f4ce2a1a4e2f87d64a3850a873f640b7db311d",
+    "independent-chart-arithmetic-attempt04.json": "e6278ba17a2a1f0fd9f20118f9411ddd4b72593e4e2af58d43dc9ada4383e252",
+    "concepts-qa.json": "978f48aaa01809d6675f28b004c8c5b787dc72511401f5b67703fcdfba250816",
+    "quant-visual-review-attempt01.json": "2a5bb22b0fd2227bd3f4abd38c4b615f71d71375e5ec726c3c32c2f669cd8254",
+    "portable-replot-comparison-attempt01.json": "ea5c926d93bf3a6f7498ce6a8511efabbc64d874d0bec9f49aafd7aae84f0a51",
+    "concept-package.json": "7c1fbbea01658955043d192aa0074d560528ebbf4dac1bfbc341e664ba182215",
+    "build.json": "1c1f16db37cde97c3b88c714b6002affe793a8c137fe378fa7e4ee7be6caacc5"
+  },
+  "browser_limitation": "Local-file navigation was previously rejected by automatic approval review. No alternative local/remote/headless route was used. Full page visual QA is unverified.",
+  "git_source_whitespace_check": "pass excluding generated SVGs and recognizing CSV CRLF; Matplotlib path whitespace and audited artifact bytes preserved"
+}

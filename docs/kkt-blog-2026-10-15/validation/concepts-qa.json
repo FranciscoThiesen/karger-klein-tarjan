@@ -1,0 +1,142 @@
+{
+  "schema": "kkt_blog_concepts_qa_v1",
+  "validation": "pass",
+  "created_utc": "2026-10-15T23:23:32.971683+00:00",
+  "source_sha256": "c1b137f2b703e2049db43f29c2912d075ca47586b5563fdaf9237527725a63fe",
+  "checks_sha256": "3949ca79e1d9664b44ba067163a8b731d15bc2032e3b0f01e23632de84c3afb2",
+  "assets": {
+    "concept-id-budget.svg": {
+      "sha256": "b418f09803ac458e03b28f99b0d9799149e540c593d42f6f7e8207199b7602a1",
+      "validation": "pass"
+    },
+    "concept-id-budget.png": {
+      "sha256": "8556053bc6279b83579137bef686c39b15f97bb92248bd70011588ff3b7f64be",
+      "validation": "pass",
+      "pixels": [
+        1440,
+        1180
+      ],
+      "visual_qa": "Owner inspected final original-resolution image: all text, graph edges, counts and proof labels readable; no clipping or overlap."
+    },
+    "concept-sample-filter.svg": {
+      "sha256": "00e1276c0df53141c48b493f763c9723fa2e2b43965d724b72c665d1919fcbc6",
+      "validation": "pass"
+    },
+    "concept-sample-filter.png": {
+      "sha256": "e89d0873e93dc6d4e9b6b0d92f2e951cea5c2d315c796fe78fe4921d51dea295",
+      "validation": "pass",
+      "pixels": [
+        1440,
+        1860
+      ],
+      "visual_qa": "Owner inspected final original-resolution image: all text, graph edges, counts and proof labels readable; no clipping or overlap."
+    },
+    "concept-weight-order.svg": {
+      "sha256": "aa74ab7bd4709f7b8e115a31e03a5cbc4f8b9e08cf8e3e220bf47d01667c5700",
+      "validation": "pass"
+    },
+    "concept-weight-order.png": {
+      "sha256": "7a4423e74527525cad42c2e2111861596af9f6c0add9d6ec1e2643bbbe20ea1b",
+      "validation": "pass",
+      "pixels": [
+        1440,
+        1580
+      ],
+      "visual_qa": "Owner inspected final original-resolution image: all text, graph edges, counts and proof labels readable; no clipping or overlap."
+    },
+    "concept-id-budget-mobile.svg": {
+      "sha256": "d314f5b32c40c58524e86549a900c631d58d31320e80deb562fab6a9e0452e7e",
+      "validation": "pass"
+    },
+    "concept-id-budget-mobile.png": {
+      "sha256": "1ab59fa3be01e6e09c6c073d96c17c117b229a15c31bee8b233ba0b482850bad",
+      "validation": "pass",
+      "pixels": [
+        720,
+        1800
+      ],
+      "visual_qa": "Owner inspected final original-resolution image: all text, graph edges, counts and proof labels readable; no clipping or overlap."
+    },
+    "concept-sample-filter-mobile.svg": {
+      "sha256": "05f90d115839f550dba950fe9ba65a69f93a6d5adad1d7b215359fbdb962715b",
+      "validation": "pass"
+    },
+    "concept-sample-filter-mobile.png": {
+      "sha256": "3ce1e3bc11fbd8ff66d0746b9009681632582104c459f2ae94ec25f5bd4a31cb",
+      "validation": "pass",
+      "pixels": [
+        720,
+        2460
+      ],
+      "visual_qa": "Owner inspected final original-resolution image: all text, graph edges, counts and proof labels readable; no clipping or overlap."
+    },
+    "concept-weight-order-mobile.svg": {
+      "sha256": "ac08c173150ce161a31f29b79e70dce8178125fc48ee471b0206dbd509495abf",
+      "validation": "pass"
+    },
+    "concept-weight-order-mobile.png": {
+      "sha256": "d00badfa7f5443dfbac86b716d7eb6c62ad1f1af2acecca91853b8d9ec9f38e8",
+      "validation": "pass",
+      "pixels": [
+        720,
+        2260
+      ],
+      "visual_qa": "Owner inspected final original-resolution image: all text, graph edges, counts and proof labels readable; no clipping or overlap."
+    }
+  },
+  "renderer_checks": "Every text bounding box lies within the logical canvas.",
+  "graph_checks": {
+    "full_sample_light_heavy": [
+      28,
+      7,
+      10,
+      18
+    ],
+    "sample_non_mst_edges": 3,
+    "ordered_components": [
+      32,
+      8,
+      4,
+      2,
+      1
+    ],
+    "ordered_crossing_records": [
+      52,
+      28,
+      24,
+      16,
+      0
+    ],
+    "permuted_components": [
+      32,
+      8,
+      1
+    ],
+    "permuted_crossing_records": [
+      52,
+      28,
+      0
+    ],
+    "exact_mst_cycle_certificates": true,
+    "identical_twin_topology_ids_order_weight_multiset": true
+  },
+  "peer_source_review": {
+    "reviewer": "multigraph_candidate",
+    "validation": "pass",
+    "scope": "Independent source/math review via agent message; no runtime or visual review by peer."
+  },
+  "last_render": {
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "docs/kkt-blog-2026-10-15/scripts/draw_concepts.py"
+    ],
+    "actual_exit_code": 0,
+    "tool_chunk_id": "e8f202"
+  },
+  "failed_layout_preserved": "validation/concepts-layout-attempt01",
+  "native_solver_execution": false,
+  "browser_validation": false,
+  "publishing": false,
+  "figure_scope": "Explicit constructed toys and historical bookkeeping schematic; not benchmark inputs, sampled empirical traces or timing results."
+}
