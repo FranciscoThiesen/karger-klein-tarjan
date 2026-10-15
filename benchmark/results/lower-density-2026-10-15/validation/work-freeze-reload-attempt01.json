@@ -1,0 +1,45 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "-c",
+    "\nimport hashlib, importlib.util, json\nfrom pathlib import Path\nroot=Path.cwd().resolve()\nwork=root/\"benchmark/results/lower-density-2026-10-15/work\"\nfreeze=work/\"freeze.json\"\nexpected_sha=\"ae32f7ffc4cd17c04885d04e6480528882e0b274e61025097206c087a7429ece\"\nassert hashlib.sha256(freeze.read_bytes()).hexdigest()==expected_sha\nspec=importlib.util.spec_from_file_location(\"independent_lower_work_readiness\",work/\"collect.py\")\nmodule=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)\nentry=module.parent.check_freeze\nvalue=module.check_freeze(freeze)\nassert module.parent.check_freeze is entry\nassert value[\"parent_work_freeze_sha256\"]==\"e9b556e7d92bb0c73597a185112170ed649752957e64a484f44770887a331d04\"\ncounts=dict(expected_children=60,expected_solver_outputs=180,counter_cells=11700,unmeasured_hash_cells=120,replay_chains=120,query_rows=60,topology_twins=30)\nfor key,expected in counts.items():assert type(value[key]) is int and value[key]==expected\ncases=[(f\"{family}_n{n}_d{density}_p0\",family,n,density) for density,sizes in ((16,(512,2048,8192,32768,131072,524288,2097152)),(8,(256,1024,4096,16384,65536,262144,1048576,4194304))) for n in sizes for family in (\"leaf_distance4\",\"leaf_shuffled4\")]\nexpected=[(\"eighth\",case,family,n,density,n*density,graph,3407) for graph,order in ((23000003,cases),(23000029,cases[::-1])) for case,family,n,density in order]\nactual=[tuple(row[key] for key in (\"variant\",\"case_id\",\"family\",\"n\",\"density\",\"m\",\"graph_seed\",\"kkt_seed\")) for row in value[\"schedule\"]]\nassert actual==expected and len(set(actual))==60\nassert set(value[\"variants\"])=={\"eighth\"}\nassert value[\"child_deadline_seconds\"]==1800\nassert len(value[\"counter_fields\"])==65 and len(value[\"selected_fields\"])==8\nassert not (work/\"capture-attempt01.json\").exists()\nassert hashlib.sha256(freeze.read_bytes()).hexdigest()==expected_sha\nprint(json.dumps(dict(validation=\"pass\",freeze=str(freeze),freeze_sha256=expected_sha,bound_files=len(value[\"bound_sha256\"]),parent_entrypoint_preserved=True,checked_schedule=60,fields=65,selected_fields=8,native_solver_execution=False,counts=counts),indent=2))\n"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "started_utc": "2026-10-15T20:51:25.633764+00:00",
+  "started_monotonic_ns": 28046750,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/collect.py": "783fb454e41492e54ebbf2a98884d3641669f84ac4aac2ae348a194471a5aa30",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/PROTOCOL.md": "3be1379fb6a2bd51d02cbba8fe6db156d9d6d70922cc8fb9dec4901b235ea6c2",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/freeze.json": "ae32f7ffc4cd17c04885d04e6480528882e0b274e61025097206c087a7429ece"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 3918,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 3918,
+    "members": [],
+    "monotonic_ns": 884234041,
+    "utc": "2026-10-15T20:51:26.489934+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/collect.py": "783fb454e41492e54ebbf2a98884d3641669f84ac4aac2ae348a194471a5aa30",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/PROTOCOL.md": "3be1379fb6a2bd51d02cbba8fe6db156d9d6d70922cc8fb9dec4901b235ea6c2",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/freeze.json": "ae32f7ffc4cd17c04885d04e6480528882e0b274e61025097206c087a7429ece"
+  },
+  "finished_utc": "2026-10-15T20:51:26.490305+00:00",
+  "finished_monotonic_ns": 884611583,
+  "elapsed_seconds": 0.856564833,
+  "stdout": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/work-freeze-reload-attempt01.stdout",
+  "stdout_sha256": "cc1ab6401a0d4eeed05aa178b52da29114fac6a1673682ca7a1e0e54928e126d",
+  "stderr": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/work-freeze-reload-attempt01.stderr",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

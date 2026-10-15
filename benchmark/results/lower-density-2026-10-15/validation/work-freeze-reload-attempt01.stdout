@@ -1,0 +1,20 @@
+{
+  "validation": "pass",
+  "freeze": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/freeze.json",
+  "freeze_sha256": "ae32f7ffc4cd17c04885d04e6480528882e0b274e61025097206c087a7429ece",
+  "bound_files": 1061,
+  "parent_entrypoint_preserved": true,
+  "checked_schedule": 60,
+  "fields": 65,
+  "selected_fields": 8,
+  "native_solver_execution": false,
+  "counts": {
+    "expected_children": 60,
+    "expected_solver_outputs": 180,
+    "counter_cells": 11700,
+    "unmeasured_hash_cells": 120,
+    "replay_chains": 120,
+    "query_rows": 60,
+    "topology_twins": 30
+  }
+}
