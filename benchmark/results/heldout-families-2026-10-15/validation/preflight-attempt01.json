@@ -1,0 +1,39 @@
+{
+  "command": [
+    "/usr/local/opt/python@3.14/bin/python3.14",
+    "-B",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/run_heldout_families.py",
+    "preflight",
+    "--parent-freeze",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/freeze.json",
+    "--manifest",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/manifest.csv",
+    "--protocol",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/PROTOCOL.md",
+    "--freeze",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/freeze.json"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-compressed-queries",
+  "preparation_commit": "10d08af0e0fa19610215f2ae6f3d3f020bb310c6",
+  "started_utc": "2026-10-15T11:03:48.897665+00:00",
+  "source_sha256": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/run_heldout_families.py": "e32beaceeb13ad8933cd461e0cab45c15a7a0b4bd4c9c5d58875f9290859cb4d",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/PROTOCOL.md": "64ed6f857b215300068d668756c3d4a69dcba4247bc0e6e6e0f7e5b029921fb9",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/manifest.csv": "57a424af3afc321814640bb9194340158a7fd98cc8bfc733fa01f2a776a828a7",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/freeze.json": "bd65da13058d3e9cfa58919a0fe5e02b8a46b1d0b8fe7f05801692d5a0866df9"
+  },
+  "native_solver_execution": false,
+  "status": "pass",
+  "process_group": 27394,
+  "exit_status": 0,
+  "owned_group_verified_empty": true,
+  "sources_unchanged": true,
+  "freeze": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/freeze.json",
+  "freeze_sha256": "6b120affb241e447ce5875645e7b746dfd1164a03aeabefffd4d42f5a01ba28f",
+  "finished_utc": "2026-10-15T11:03:49.478969+00:00",
+  "elapsed_seconds": 0.5769817498512566,
+  "stdout": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/validation/preflight-attempt01.stdout",
+  "stderr": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/validation/preflight-attempt01.stderr",
+  "stdout_sha256": "47d7f087c8c819e872a4241985abc4c40b34f6d8d6e016efd7a2ff793840031c",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}
