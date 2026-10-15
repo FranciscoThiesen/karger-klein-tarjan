@@ -1,0 +1,168 @@
+#!/usr/bin/env python3
+"""Plot the complete strictly validated eighth-sampling study after root release."""
+import argparse
+import json
+import math
+from pathlib import Path
+
+import run_eighth_sampling as study
+import plot_retention_control as style
+
+METRICS = {'wall': 'Steady elapsed time', 'cpu': 'Process CPU time'}
+GROUPS = (('leaf_hierarchy4', 32, 'Ordered core ranks · m/n = 32'),
+          ('leaf_shuffled4', 32, 'Shuffled core ranks · m/n = 32'),
+          ('gnm_random', 16, 'Random G(n,m) · m/n = 16'))
+KINDS = ('variant_gains', 'half_ratios', 'eighth_ratios', 'half_times', 'eighth_times')
+REALIZATIONS = tuple((graph, seed) for graph in study.GRAPH_SEEDS for seed in study.SAMPLING_SEEDS)
+
+
+def prepare(cases, tables):
+    require = study.require
+    require(study.VARIANTS == ('half','eighth') and len(study.GRAPH_SEEDS) == 2 and
+            len(study.SAMPLING_SEEDS) == 2 and len(REALIZATIONS) == 4, 'wrong paired design')
+    require(len(cases) == 6 and {(r['family'], r['n'], r['density'], r['intrusion_per_mille'])
+            for r in cases.values()} == study.EXPECTED_CASES, 'wrong plot matrix')
+    require({key: len(value) for key, value in tables.items()} == study.TABLE_COUNTS, 'incomplete plot tables')
+    result = {}
+    for kind in KINDS:
+        times = kind.endswith('_times')
+        name_field = 'algorithm' if times or kind == 'variant_gains' else 'competitor'
+        names = study.ALGORITHMS if name_field == 'algorithm' else study.ALGORITHMS[1:]
+        table = 'variant_comparisons' if kind == 'variant_gains' else ('summary' if times else 'comparisons')
+        selected = {name: [row for row in tables[name] if kind == 'variant_gains' or row['variant'] == kind.split('_')[0]]
+                    for name in (table, 'realization_' + table)}
+        pooled = style.indexed(selected[table], ('case_id', name_field, 'metric'))
+        realizations = style.indexed(selected['realization_' + table], ('case_id', name_field, 'metric', 'graph_seed', 'kkt_seed'))
+        expected = {(case, name, metric) for case in cases for name in names for metric in METRICS}
+        require(set(pooled) == expected and set(realizations) == {(*key, *identity) for key in expected for identity in REALIZATIONS},
+                'missing plot identity')
+        value_field = 'median_ns' if times else 'median_paired_ratio'
+        for key, row in pooled.items():
+            require(row['trials'] == 24, 'pooled plot point must include 24 trials')
+            values = [row[field] for field in (value_field, 'trial_min', 'trial_max', 'realization_min', 'realization_max')]
+            require(all(type(value) in (int, float) and math.isfinite(value) and value > 0 for value in values), 'invalid plot value')
+            medians = []
+            for identity in REALIZATIONS:
+                point = realizations[(*key, *identity)]
+                require(point['trials'] == 6 and row['trial_min'] <= point['trial_min'] <= point[value_field]
+                        <= point['trial_max'] <= row['trial_max'], 'realization outside full range')
+                medians.append(point[value_field])
+            require(min(medians) == row['realization_min'] and max(medians) == row['realization_max'] and
+                    row['trial_min'] <= row[value_field] <= row['trial_max'], 'range mismatch')
+        result[kind] = pooled, realizations, names, value_field
+    groups = []
+    for family, density, title in GROUPS:
+        selected = sorted((r for r in cases.values() if r['family'] == family and r['density'] == density), key=lambda r: r['n'])
+        require(len(selected) == 2, 'unplotted endpoint')
+        groups.append((title, selected))
+    return result, groups
+
+
+def render(cases, tables, info, output):
+    prepared, groups = prepare(cases, tables)
+    import matplotlib
+    matplotlib.use('Agg')
+    import matplotlib.pyplot as plt
+    from matplotlib.lines import Line2D
+    from matplotlib.ticker import FuncFormatter
+    plt.rcParams.update({'font.family': 'DejaVu Sans', 'font.size': 10, 'axes.spines.top': False,
+                         'axes.spines.right': False, 'svg.fonttype': 'none', 'pdf.fonttype': 42})
+    generated, coverage = [], []
+    for kind, (pooled, realizations, names, field) in prepared.items():
+        times = kind.endswith('_times'); scale = 1e9 if times else 1
+        bounds = {title: style.limits([pooled[(case['case_id'], name, clock)][endpoint] / scale
+                  for case in selected for name in names for clock in METRICS for endpoint in ('trial_min', 'trial_max')],
+                  () if times else (.9, 1.0)) for title, selected in groups}
+        for metric, clock_label in METRICS.items():
+            figure, axes = plt.subplots(1, 3, figsize=(17.5, 6.7))
+            for axis, (title, selected) in zip(axes, groups):
+                sizes = [case['n'] for case in selected]; all_values = []
+                for name in names:
+                    color = style.COLORS[name]
+                    points = [pooled[(case['case_id'], name, metric)] for case in selected]
+                    values, lower, upper = ([point[value] / scale for point in points]
+                                             for value in (field, 'trial_min', 'trial_max'))
+                    axis.vlines(sizes, lower, upper, color=color, linewidth=1.2, alpha=.28)
+                    for ri, identity in enumerate(REALIZATIONS):
+                        medians = [realizations[(case['case_id'], name, metric, *identity)][field] / scale for case in selected]
+                        axis.scatter(sizes, medians, marker=('^', 'v', '<', '>')[ri], color=color, s=27, alpha=.42, zorder=2)
+                        all_values.extend(medians)
+                    axis.plot(sizes, values, color=color, marker='o', markersize=4.5,
+                              linewidth=2.3 if name in ('kkt', 'multigraph_boruvka') else 1.6, zorder=3)
+                    all_values.extend([*values, *lower, *upper])
+                if not times:
+                    axis.axhline(1, color='#555555', linestyle='--', linewidth=1)
+                    axis.axhline(.9, color='#888888', linestyle=':', linewidth=1)
+                axis.set_xscale('log', base=2)
+                if kind != 'variant_gains': axis.set_yscale('log', base=2)
+                axis.set_xticks(sizes, [f'{n:,}' for n in sizes]); axis.set_xlim(min(sizes)/1.18, max(sizes)*1.18)
+                axis.set_ylim(*bounds[title]); axis.yaxis.set_major_formatter(FuncFormatter(lambda value, _: f'{value:g}'))
+                axis.set_title(title, loc='left', fontsize=11); axis.set_xlabel('Vertices n · logarithmic scale')
+                axis.set_ylabel('Seconds · logarithmic scale' if times else ('Eighth / half time' if kind == 'variant_gains' else 'KKT / comparator time · logarithmic scale'))
+                axis.grid(which='major', alpha=.16)
+                low, high = axis.get_ylim(); study.require(all(low <= value <= high for value in all_values), 'clipped trial endpoint')
+                coverage.append({'figure': kind+'_'+metric, 'group': title, 'case_ids': [r['case_id'] for r in selected],
+                    'algorithms': list(names), 'pooled_points': 2*len(names), 'realization_points': 8*len(names),
+                    'trial_range_endpoints': 4*len(names), 'all_points_in_bounds': True, 'y_limits': [low, high]})
+            title = ('Eighth / half: all six solvers' if kind == 'variant_gains' else
+                     kind.split('_')[0].title() + (' absolute solver times' if times else ' KKT against all five MST comparators'))
+            figure.suptitle(title+'\n'+clock_label, fontsize=16, y=.99)
+            handles = [Line2D([], [], color=style.COLORS[name], marker='o',
+                              label='KKT' if name == 'kkt' else style.LABELS[name]) for name in names]
+            handles += [Line2D([], [], color='#666666', marker='^', linestyle='none', alpha=.42, label='Four graph/sampler medians'),
+                        Line2D([], [], color='#777777', linewidth=2, alpha=.3, label='Full trial range')]
+            figure.legend(handles=handles, loc='lower center', bbox_to_anchor=(.5,.105), ncol=4, frameon=False, fontsize=9)
+            caption = ('Solid points pool all 24 trials; faint markers show four six-trial realizations. Two graphs × two sampling seeds; repetitions reuse each realization.\n'
+                       'All cases, controls, losses and trial ranges remain. No control normalization or historical pooling. Ranges are descriptive, not confidence intervals.\n'
+                       f'Lines connect tested endpoints without threshold interpolation. All {info["flagged_calls"]} flagged calls retained. Both policies use the same compressed verifier.\n'
+                       'Ratio charts: dashed 1.00 is parity; dotted 0.90 is a 10% lead. A crossover needs an earlier loss and a later strong lead on all four realizations and both clocks.')
+            figure.text(.5, .015, caption, ha='center', fontsize=8.4, linespacing=1.5)
+            figure.tight_layout(rect=(0,.28,1,.9), w_pad=2.5)
+            for extension in ('png','svg','pdf'):
+                path = output / f'{kind}_{metric}.{extension}'; figure.savefig(path, dpi=180, bbox_inches='tight'); generated.append(path)
+            plt.close(figure)
+    return generated, coverage, matplotlib.__version__
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--capture', type=Path, required=True); parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--released', action='store_true'); args = parser.parse_args()
+    study.require(args.released, 'plotting requires root release after timing')
+    output = args.output.resolve(); study.require(not output.exists(), 'refusing to overwrite plots')
+    info, cases, rows, _, _, inputs = study.load(args.capture)
+    study.require(len(rows) == 2016 and len(info['captures']) == 48, 'incomplete capture')
+    tables = study.aggregate(rows); prepare(cases, tables)
+    classifications = study.crossovers(tables,cases)
+    study.require(len(classifications) == 30, 'incomplete crossover classification table')
+    inputs = {**inputs, **study.helpers(), str(Path(__file__).resolve()): study.native.sha(__file__),
+              str(Path(style.__file__).resolve()): study.native.sha(style.__file__)}
+    output.mkdir(parents=True)
+    study.write_json(output/'plotted_values.json', {**tables,'strong_crossover_classifications':classifications}, exclusive=True)
+    generated, coverage, version = render(cases, tables, info, output)
+    study.require(len(coverage) == 30 and all(row['all_points_in_bounds'] for row in coverage), 'missing plot coverage')
+    limits = {(row['figure'],row['group']): row['y_limits'] for row in coverage}
+    for kind in KINDS:
+        for _,_,title in GROUPS: study.require(limits[(kind+'_wall',title)] == limits[(kind+'_cpu',title)], 'clock axes differ')
+    for path, digest in inputs.items(): study.analysis.hash_check(Path(path), digest)
+    generated.append(output/'plotted_values.json')
+    study.write_json(output/'provenance.json', {'schema':'eighth_sampling_figures_v1','validation':'pass',
+        'capture':str(args.capture.resolve()),'input_sha256':inputs,'matplotlib_version':version,
+        'checked_outputs':2016,'timed_outputs':1728,'warmup_outputs':288,'rows_removed':0,'rows_adjusted':0,
+        'flagged_calls_retained':info['flagged_calls'],'coverage':coverage,'control_normalization':False,
+        'confidence_intervals':False,'interpolated_crossover':False,'matched_clock_axes':True,
+        'strong_crossover_classifications':30,'graph_seeds':list(study.GRAPH_SEEDS),
+        'sampling_seeds':list(study.SAMPLING_SEEDS),'trials_per_case':24,'realizations_per_case':4,
+        'output_sha256':{path.name:study.native.sha(path) for path in generated},
+        'visual_review':'pending: inspect all ten PNGs before publication'},exclusive=True)
+    (output/'README.md').write_text('# Eighth-sampling figures\n\n'
+        'All 2,016 checked outputs are strictly revalidated before plotting. Ten figures show both clocks for all-six '
+        'eighth/half drift, both variants against all five comparators, and both variants’ absolute solver times. '
+        'Each PNG has SVG/PDF counterparts. Points pool 24 trials, four faint markers show six-trial realizations, '
+        'and spans retain every trial-range endpoint. Two graphs cross two sampler seeds; they are not four independent '
+        'graphs. No normalization, historical pooling, confidence intervals or interpolated crossover. '
+        'Canonical graph and sampling marginal summaries remain in plotted_values.json. Visual review is pending.\n')
+    print(json.dumps({'validation':'pass','figures':10,'output':str(output),'visual_review':'pending'}))
+
+
+if __name__ == '__main__': main()

@@ -1,0 +1,29 @@
+{
+  "recorded_utc": "2026-10-15T15:41:57.740742+00:00",
+  "invocation": {
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "-u",
+      "benchmark/run_eighth_sampling.py",
+      "capture",
+      "--freeze",
+      "benchmark/results/eighth-sampling-2026-10-15/freeze.json",
+      "--output",
+      "benchmark/results/eighth-sampling-2026-10-15/eighth.csv",
+      "--released"
+    ],
+    "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+    "created_utc": "2026-10-15T14:36:05.320165+00:00"
+  },
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "tool_session_id": 47060,
+  "controller_exit_status": 0,
+  "exit_status_source": "Root write_stdin completion result after capture; not inferred from log text",
+  "capture_validation": "pass",
+  "native_groups": 48,
+  "all_native_groups_verified_empty": true,
+  "controller_log_sha256": "91e5d53c508d47a3b3e4c7cebbcf289dc0a01ec72e0990e15de4be8079b3e7d5",
+  "capture_sha256": "016bea1dfad7ed26299b1f029995ef351c16d68287dea3946c0bd53c7e79d899",
+  "sleep_inhibition_verified": false
+}

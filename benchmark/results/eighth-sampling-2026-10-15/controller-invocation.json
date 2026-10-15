@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "-u",
+    "benchmark/run_eighth_sampling.py",
+    "capture",
+    "--freeze",
+    "benchmark/results/eighth-sampling-2026-10-15/freeze.json",
+    "--output",
+    "benchmark/results/eighth-sampling-2026-10-15/eighth.csv",
+    "--released"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "created_utc": "2026-10-15T14:36:05.320165+00:00"
+}

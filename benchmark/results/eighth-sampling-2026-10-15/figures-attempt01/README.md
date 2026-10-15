@@ -1,0 +1,3 @@
+# Eighth-sampling figures
+
+All 2,016 checked outputs are strictly revalidated before plotting. Ten figures show both clocks for all-six eighth/half drift, both variants against all five comparators, and both variants’ absolute solver times. Each PNG has SVG/PDF counterparts. Points pool 24 trials, four faint markers show six-trial realizations, and spans retain every trial-range endpoint. Two graphs cross two sampler seeds; they are not four independent graphs. No normalization, historical pooling, confidence intervals or interpolated crossover. Canonical graph and sampling marginal summaries remain in plotted_values.json. Visual review is pending.

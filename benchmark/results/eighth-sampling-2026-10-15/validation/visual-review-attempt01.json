@@ -1,0 +1,32 @@
+{
+  "schema": "eighth_sampling_visual_review_v1",
+  "validation": "pass",
+  "reviewed_utc": "2026-10-15T15:44:19.964437+00:00",
+  "reviewer": "root",
+  "method": "All ten PNG files inspected using view_image at original detail; numerical data separately independently audited.",
+  "images_sha256": {
+    "eighth_ratios_cpu.png": "ebac7da4edcffe2e9540606dd416b26cbc60bb7ac1ce1d94487e06685708d46c",
+    "eighth_ratios_wall.png": "8ad01cf2f6e7b379a6215d22fe4cfc0c1cb346729acb98b24486f578e5428b77",
+    "eighth_times_cpu.png": "cd13a47d8a5a455d124677fe1e0da6b3333a51bc9ad211817c35e45f248f2da1",
+    "eighth_times_wall.png": "53da40f2dde2f4c72930e8bbd120ff082f45fc46141a6277b9b8727d9a97983b",
+    "half_ratios_cpu.png": "f1ebe5ca082862d0d8f154fa94d28f293fa6aad588ae51297765d6eedef7c83f",
+    "half_ratios_wall.png": "41cd3983cd9a643d667fc173a7d1aa6d8bcd22c654a560205facbe9dc26648fb",
+    "half_times_cpu.png": "f2e049ccb620152ace3d73dc8459bdc69ccdfb996ee34e2532d8ea0194fc28ff",
+    "half_times_wall.png": "aa9d70915e1b91bdce17820bcf5067f54dad0bc07cfabcb7a5bf1d63db1659c5",
+    "variant_gains_cpu.png": "f213cedab394e1ac85f58ab02e20e17026b2b0e225804d813810ed287ad8233c",
+    "variant_gains_wall.png": "b7ca80a5de23f5d5ef6c9d676b15294e0faaff39e838d37992fed2d63f144748"
+  },
+  "checks": [
+    "all ten figures and thirty panels reviewed",
+    "five comparators and both policy references retained",
+    "all-six variant gains show unchanged-control drift without normalization",
+    "full trial ranges and four realization markers visible",
+    "wall and CPU charts have matching corresponding axis bounds",
+    "titles, units, legends and captions visible without clipping or overlap",
+    "absolute timings and losing comparisons retained"
+  ],
+  "limitations": [
+    "Standalone figure QA; embedding in a report needs page-scale legibility review.",
+    "Descriptive ranges are not confidence intervals; two sizes do not establish persistence."
+  ]
+}

@@ -1,0 +1,937 @@
+{
+  "schema": "eighth_sampling_figures_v1",
+  "validation": "pass",
+  "capture": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth.json",
+  "input_sha256": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth.json": "016bea1dfad7ed26299b1f029995ef351c16d68287dea3946c0bd53c7e79d899",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth.csv": "1749e6093f97b2d9e780dd174009316d8c710be780bbeb815adda7b40a769d96",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/freeze.json": "2be7556d15b58f3f65cc380ac22b67c57fdf8aea747d651b9d648c6a1aa59d2f",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/freeze.json": "bd65da13058d3e9cfa58919a0fe5e02b8a46b1d0b8fe7f05801692d5a0866df9",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0001_half_leaf_hierarchy4_n65536_d32_p0_g15000011_s2609.csv": "6c84f06c3b123330e171f317bf78f49680dbd00f4a77ca2c47df9f24380e7cdb",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0001_half_leaf_hierarchy4_n65536_d32_p0_g15000011_s2609.log": "d17cdb5cc9f0a39d698064dc3b5eabaceb66a41b663b474f1db8996888c03ceb",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0001_half_leaf_hierarchy4_n65536_d32_p0_g15000011_s2609.rss.jsonl": "14427833a3fee80f90f8f261a91a66ef1edfc8f81b87f704e1227592e7374dd7",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0002_eighth_leaf_hierarchy4_n65536_d32_p0_g15000011_s2609.csv": "478a394bab9110edbfbbeec18f04275f6385a1e141704470d858a0ee0524d3f9",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0002_eighth_leaf_hierarchy4_n65536_d32_p0_g15000011_s2609.log": "dc9d4310488e46f3fec2e55970368626df95d3c49865bc2f5fdba0cc92bedd43",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0002_eighth_leaf_hierarchy4_n65536_d32_p0_g15000011_s2609.rss.jsonl": "bf5f8787281abe291d13eff00351c6bb5ebc8ac735df45d8af46caa6dfe41fcc",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0003_half_leaf_shuffled4_n65536_d32_p0_g15000011_s2609.csv": "8af04bb0e3be57b06027d128d6c5bf6707ee29104e12b96202ab4c397845ac20",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0003_half_leaf_shuffled4_n65536_d32_p0_g15000011_s2609.log": "6ca015cee9adb98cc7b9ae031bd30d9861b79af6d8b4c5b8100429728adab3e7",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0003_half_leaf_shuffled4_n65536_d32_p0_g15000011_s2609.rss.jsonl": "eddb93f8c77f7b8a7ab4536ee41ac45c5d37a4d0d72b4f011907f1e658402e58",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0004_eighth_leaf_shuffled4_n65536_d32_p0_g15000011_s2609.csv": "b1be2d278a7d391db8e591b20b87208d4409a6a1684cd4f36b66ae3617be4542",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0004_eighth_leaf_shuffled4_n65536_d32_p0_g15000011_s2609.log": "d2eb750685a31c644ef12d505dec33f2438ca94ce9bc98ea8c9059c52b7bd801",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0004_eighth_leaf_shuffled4_n65536_d32_p0_g15000011_s2609.rss.jsonl": "5304e4a99a560f5c36b354261b577e4891d62ba1bdfac60aa3747a26e6851066",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0005_half_leaf_hierarchy4_n1048576_d32_p0_g15000011_s2609.csv": "6bf061922b1dbffbf83e15ee81cd533117c4b97147458c244f721b751696e2d4",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0005_half_leaf_hierarchy4_n1048576_d32_p0_g15000011_s2609.log": "5ac0f59a1e1cf0f5e4010ef23d917db4807373fc47196bb627f9a6f0d424df0c",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0005_half_leaf_hierarchy4_n1048576_d32_p0_g15000011_s2609.rss.jsonl": "ac5274189db69f4246480ac137121ee3fc6436eebece5ed53ea45dec299a5c32",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0006_eighth_leaf_hierarchy4_n1048576_d32_p0_g15000011_s2609.csv": "f7c39def46ac885815d19edb908c098a9afa0ded60617510d3c3844708f5c567",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0006_eighth_leaf_hierarchy4_n1048576_d32_p0_g15000011_s2609.log": "98ba4c3179b7db5e0885faa9280c1ff5601275485137bec8a2e556753d69f239",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0006_eighth_leaf_hierarchy4_n1048576_d32_p0_g15000011_s2609.rss.jsonl": "ea67a55b46c71f8a4e2c36aa1c264ba18a7d565d7c0a720e5cc4f0369bd15e15",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0007_half_leaf_shuffled4_n1048576_d32_p0_g15000011_s2609.csv": "294d0e552b3c7098716d80ac6d6c12be04d1e35ebdebcdc7fb38788e8068cae9",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0007_half_leaf_shuffled4_n1048576_d32_p0_g15000011_s2609.log": "05635c9be24e030c974ef9dac3a11e9b24b1d9bab9cfeea8c598ee8aae0667fb",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0007_half_leaf_shuffled4_n1048576_d32_p0_g15000011_s2609.rss.jsonl": "8793cd981a494ee4f09605d53f072f36171f6a1689d6ee91fc13ad1b1ffa42aa",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0008_eighth_leaf_shuffled4_n1048576_d32_p0_g15000011_s2609.csv": "3c1fc96270c9a7da5661d7e2735dea07aa86a148bf93d4257bb9a6dc5eb12901",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0008_eighth_leaf_shuffled4_n1048576_d32_p0_g15000011_s2609.log": "a54af7b22a95d1cbcad4752b6b351846043a4463691d30def34380e2b2a94b66",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0008_eighth_leaf_shuffled4_n1048576_d32_p0_g15000011_s2609.rss.jsonl": "38800a476c9a65575c87b5bbcf6afa83d36401b3637d500cf65bb27f7665830d",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0009_half_gnm_random_n4096_d16_p0_g15000011_s2609.csv": "cf8db600fbde1716db8965382ef04df01d7e6f5414685d83b7befa16fb6405dc",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0009_half_gnm_random_n4096_d16_p0_g15000011_s2609.log": "97ab82163ed9b36718cef2a0a8f0b27115f495ba2387d0596f70be72b8291794",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0009_half_gnm_random_n4096_d16_p0_g15000011_s2609.rss.jsonl": "d6b7b6301cd10878b259c12b42892d6f616ff3235278475a83f8b13eebc556d5",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0010_eighth_gnm_random_n4096_d16_p0_g15000011_s2609.csv": "4f8c4123c9859751197abd672f952306fdd765be8513a8fc66ce2e389d11a6a7",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0010_eighth_gnm_random_n4096_d16_p0_g15000011_s2609.log": "18a6afb7d93488b472ed239198d75e3bc4a96c370ba1fe5c709e9b2493ecac41",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0010_eighth_gnm_random_n4096_d16_p0_g15000011_s2609.rss.jsonl": "962b2e61766534c3e662c8d5e4e60a3a16bc97065556aed57860c9cda6a1f5ff",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0011_half_gnm_random_n1048576_d16_p0_g15000011_s2609.csv": "a1cb1135f7b39151b144b4b0be621d92c929d2e07d6914f292e114182856b1a2",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0011_half_gnm_random_n1048576_d16_p0_g15000011_s2609.log": "411591fa5f0c08de2295beec44baf05cff9ef11e68b8019c5187dd3512e8ddca",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0011_half_gnm_random_n1048576_d16_p0_g15000011_s2609.rss.jsonl": "11d05997d7fb311a90ea8f963652c5183b30fb3c33e5491e943530ce4e65a369",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0012_eighth_gnm_random_n1048576_d16_p0_g15000011_s2609.csv": "14d02b63d6ad1277ffb4786e1ab8204d8f10388a1d0d763a41db48cc6a652d0f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0012_eighth_gnm_random_n1048576_d16_p0_g15000011_s2609.log": "fb53d0979e29813fd729137954505bb59c3c07bcc3e55236b4b73e03665bd4f3",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0012_eighth_gnm_random_n1048576_d16_p0_g15000011_s2609.rss.jsonl": "db642b29f63c58fdab827ebbc2dd9723e2fce90a7391e6408a15461772b67ff1",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0013_eighth_leaf_hierarchy4_n65536_d32_p0_g15000011_s2617.csv": "bf55ba4f6f86579ed915888379be57557911ab9ce3e8deb348f1a0c1e7f5cc3d",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0013_eighth_leaf_hierarchy4_n65536_d32_p0_g15000011_s2617.log": "cceef1256396aca81c123deb4cd4a9f3393b0b57eeaccf04c4e27596a8ca6921",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0013_eighth_leaf_hierarchy4_n65536_d32_p0_g15000011_s2617.rss.jsonl": "32297123b88938bd21b5609e12ae3e751bf69a56648350f110cae7dc48cf4916",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0014_half_leaf_hierarchy4_n65536_d32_p0_g15000011_s2617.csv": "48389fc04f3887b0e28b8b122555d5d5d7ea15151e2f9dc7807e4b76f001be3f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0014_half_leaf_hierarchy4_n65536_d32_p0_g15000011_s2617.log": "e638e5da34e6ae99544ac1d5d50441b2c7e7e043dfb6d4456bae04c7315e2132",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0014_half_leaf_hierarchy4_n65536_d32_p0_g15000011_s2617.rss.jsonl": "876e102369e91671b3281d9efbb908f94a8b1af628ed986d469d5793190216bd",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0015_eighth_leaf_shuffled4_n65536_d32_p0_g15000011_s2617.csv": "0aa1d5c90d5250f775584ebc8a8ce38953286b48d97cf357bcd524386aea0b0e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0015_eighth_leaf_shuffled4_n65536_d32_p0_g15000011_s2617.log": "eb0d5b12124115c647837a971b0ee33527e23bc544e85cfc52899744b76ef753",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0015_eighth_leaf_shuffled4_n65536_d32_p0_g15000011_s2617.rss.jsonl": "58237f8790fe3907e1e4377ce20762a65a655f3395cb356a795747f5782b6e7b",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0016_half_leaf_shuffled4_n65536_d32_p0_g15000011_s2617.csv": "c9f37c554d0f1bd163da1b2a291241427731189cf83f0a844a4271b4a91bfc09",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0016_half_leaf_shuffled4_n65536_d32_p0_g15000011_s2617.log": "cf14ae49177ec74e0b14b7ef0470e00d8173f151b19f1ed36410ccb9fbdf6ef6",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0016_half_leaf_shuffled4_n65536_d32_p0_g15000011_s2617.rss.jsonl": "92aeab808e40fe747a2057c6e29ab1049972ea0cfe6f1d7941f5586893e0556b",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0017_eighth_leaf_hierarchy4_n1048576_d32_p0_g15000011_s2617.csv": "9c876580d47c0e71302f6e6e8e7d8240528d4580f13ad0895c8519d48c1fcc13",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0017_eighth_leaf_hierarchy4_n1048576_d32_p0_g15000011_s2617.log": "9e27372c849c764cc5a0c3b61b48be54994c99fd209ec08bc94c1e9e80e42c4c",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0017_eighth_leaf_hierarchy4_n1048576_d32_p0_g15000011_s2617.rss.jsonl": "ae9be09dfa806e50b1db11043887a343653b3889f2bffbfb3cf8d4b1b64d6ad2",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0018_half_leaf_hierarchy4_n1048576_d32_p0_g15000011_s2617.csv": "47c31e45c49a39407fbf6f664dd6fe8ae0f3c9ebe448ecf774d94e4782b0a702",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0018_half_leaf_hierarchy4_n1048576_d32_p0_g15000011_s2617.log": "b7ea55d88ee05eb886cfb0a01b823e74f709be0c1ec4b49b1b8ae26263ec9a60",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0018_half_leaf_hierarchy4_n1048576_d32_p0_g15000011_s2617.rss.jsonl": "d0fba93ff65cb3f7fa177d96716f218696ded6824a02411795e00b56f8f9f79a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0019_eighth_leaf_shuffled4_n1048576_d32_p0_g15000011_s2617.csv": "c3725797648512c8a154c94bf4eb675c430eb850796d3004fe08646c60641ea2",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0019_eighth_leaf_shuffled4_n1048576_d32_p0_g15000011_s2617.log": "0439a370122d2ca89c8b76be7a50d0649a37a3a98a0e425f9833260e627b8fee",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0019_eighth_leaf_shuffled4_n1048576_d32_p0_g15000011_s2617.rss.jsonl": "aa8b23f330003cd6517b7da3b8d2ed00b0f275183697a4d327e475fe6883453d",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0020_half_leaf_shuffled4_n1048576_d32_p0_g15000011_s2617.csv": "bb7bde155d7cc28b853e52c4a751ec147dfe6eedff157874a553957b46383c47",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0020_half_leaf_shuffled4_n1048576_d32_p0_g15000011_s2617.log": "e639dcb99117709ef6ad0f64a4c23dbdf54c78605c13eaaa1713257aee4ec389",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0020_half_leaf_shuffled4_n1048576_d32_p0_g15000011_s2617.rss.jsonl": "3372a6d328db418b972bc40472f76d6b3e201d8e004408aa0cc5871097a0c87a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0021_eighth_gnm_random_n4096_d16_p0_g15000011_s2617.csv": "c69b901673983913b7be4bf39ce5daeebcfad1db31d77eb213c320dc3aaa2921",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0021_eighth_gnm_random_n4096_d16_p0_g15000011_s2617.log": "fcf29daf8a9fc6714b96134a549ccbf8ed6e02f2b84a967149eb7404d6f662e5",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0021_eighth_gnm_random_n4096_d16_p0_g15000011_s2617.rss.jsonl": "bcaa9a65dccef5006043e4e2a9710cba4fe4c67c504bc6c3e30151ed4c2a0e46",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0022_half_gnm_random_n4096_d16_p0_g15000011_s2617.csv": "76bafa3762b7e8b23f60f22e2334a9fb7e90f0e6cc4c81cc5f2e44602b47abfa",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0022_half_gnm_random_n4096_d16_p0_g15000011_s2617.log": "9f8eb26ae7e89b530f48260ca68a4f948688d9ceda7479aa4b4c9872bdb5418f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0022_half_gnm_random_n4096_d16_p0_g15000011_s2617.rss.jsonl": "a5c98021ebd5e19cdd0fed24792f0e8e67d828a49c91c65ce17ea6529a2dceb5",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0023_eighth_gnm_random_n1048576_d16_p0_g15000011_s2617.csv": "bc3206c5ec3e92468ef07dd32267c93d07051e573914555b80b6b759560e3a00",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0023_eighth_gnm_random_n1048576_d16_p0_g15000011_s2617.log": "eb5a338fd0f51b96fb2ec94de89cf0f33592308fc4d4c0690b7b06f7f2352a0e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0023_eighth_gnm_random_n1048576_d16_p0_g15000011_s2617.rss.jsonl": "acc16c769977e717ff88b9b3992c0af2eb7c6007d2ad690d0c33fa7a993f3386",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0024_half_gnm_random_n1048576_d16_p0_g15000011_s2617.csv": "21b94077aa6476e46eda0e690a59b51892f3218ef8f056d2725f92fea282cdf0",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0024_half_gnm_random_n1048576_d16_p0_g15000011_s2617.log": "e4ee56405b84bcde547144573aaf378fc3451b3e43de683d71bf8b57e9df09b7",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0024_half_gnm_random_n1048576_d16_p0_g15000011_s2617.rss.jsonl": "e5a673b8ed3432d46236f54589dfc77b19f8d17bef19819281c607e638fb68e3",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0025_eighth_gnm_random_n1048576_d16_p0_g15000031_s2609.csv": "60c77336b74777ed81e0e92fc66b2fa68a709d43b8e770a61754220108d07437",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0025_eighth_gnm_random_n1048576_d16_p0_g15000031_s2609.log": "e2810d82f4d1123a08326a1cee6223559995d75cdc80d0f693a05f278c0c0518",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0025_eighth_gnm_random_n1048576_d16_p0_g15000031_s2609.rss.jsonl": "1c3ed84efcff44ab2a7539e54024975c9a42718797e4ffcdb9fb14aec04ae5bb",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0026_half_gnm_random_n1048576_d16_p0_g15000031_s2609.csv": "58724cfb15bf5828cd034690164522f2cc74f3422ca0d7e9c79274319de971c4",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0026_half_gnm_random_n1048576_d16_p0_g15000031_s2609.log": "805fe9ed00af93e83909e7c85b1c17258f2a9437255cf1dec7b44b372477b065",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0026_half_gnm_random_n1048576_d16_p0_g15000031_s2609.rss.jsonl": "b8b0e37c93b1af8ba5af9fbc5fbf1e0f80b73b339c105d4048bd7267910807db",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0027_eighth_gnm_random_n4096_d16_p0_g15000031_s2609.csv": "47408803bc564cc44248a44de47d73057c1a25ac833867ccf620d450b86e3018",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0027_eighth_gnm_random_n4096_d16_p0_g15000031_s2609.log": "74fb6bbf0602595e1ad6766ba08cb7b91b08a710b04e6529d844556171715da5",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0027_eighth_gnm_random_n4096_d16_p0_g15000031_s2609.rss.jsonl": "bab72730bf89d27d241e8f1e934edc67b9b0a2b85bb24f37a1d6a2ed795dd03c",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0028_half_gnm_random_n4096_d16_p0_g15000031_s2609.csv": "52ec8a6342fb376f874cf87f4566a9e9ff7c31a1362c6b0f3917220b3697a592",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0028_half_gnm_random_n4096_d16_p0_g15000031_s2609.log": "8b8585f5438e4d6df9b6d7be521cdcad5d35a3b2cb1c0e8afcc75b061011d933",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0028_half_gnm_random_n4096_d16_p0_g15000031_s2609.rss.jsonl": "22276036dafe1b9801496640815a3e98f1caf0e53b4a64757557723928de50b1",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0029_eighth_leaf_shuffled4_n1048576_d32_p0_g15000031_s2609.csv": "f0a67d911e2de393e31ac11254bbf07d70aef2ae6f34582467daeaa9b8e83855",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0029_eighth_leaf_shuffled4_n1048576_d32_p0_g15000031_s2609.log": "5f51676a04965c77fd429229f21b780e9e5778e843f6db60ee0f42648c6bd097",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0029_eighth_leaf_shuffled4_n1048576_d32_p0_g15000031_s2609.rss.jsonl": "68fedb3b8a15c10f58bd00752ebe92f8af908c90380e8705463a807e9ca6630d",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0030_half_leaf_shuffled4_n1048576_d32_p0_g15000031_s2609.csv": "71c1cd6baf16159fc05e3642d354a3b346c546ff7227728781a4022c1fc81b42",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0030_half_leaf_shuffled4_n1048576_d32_p0_g15000031_s2609.log": "b49aef9ca0d6f0ec5af6d67151a8733d3d1d25ef84d852375c7342d5c7f57561",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0030_half_leaf_shuffled4_n1048576_d32_p0_g15000031_s2609.rss.jsonl": "d7ba12b365eb09b07f1d8aa62351eb15227be9e2a8b021c79df5d54b6a550ddc",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0031_eighth_leaf_hierarchy4_n1048576_d32_p0_g15000031_s2609.csv": "580400eb893de2fae4c3ee10673bb7e7209280f5889ee57adf709b0a0cc762bd",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0031_eighth_leaf_hierarchy4_n1048576_d32_p0_g15000031_s2609.log": "ffd8949a3cc595445f2c5e01f45f5f857cb44c1eaf67e9f7607c4ffa39bced62",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0031_eighth_leaf_hierarchy4_n1048576_d32_p0_g15000031_s2609.rss.jsonl": "8e739687a46fe404884e1d675c4500b2ed3232df5a0a15404373cc41c5ec88d7",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0032_half_leaf_hierarchy4_n1048576_d32_p0_g15000031_s2609.csv": "b48054804a3ef5fbc5e3c8446e6513fea39ab19fb186c7d38fedac778741b402",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0032_half_leaf_hierarchy4_n1048576_d32_p0_g15000031_s2609.log": "07658786ceb0f31cdeaf7896b15de70dac7f37c7a61fb2c7b38bde0bca0ee22a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0032_half_leaf_hierarchy4_n1048576_d32_p0_g15000031_s2609.rss.jsonl": "e32ef78d657881777cbb543663736afd41a20e9161d63991c2efe35b75fb63e9",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0033_eighth_leaf_shuffled4_n65536_d32_p0_g15000031_s2609.csv": "6da018e57b45f64abce61fda35a494b6c95d7235742ea4054afcba958fa2ad95",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0033_eighth_leaf_shuffled4_n65536_d32_p0_g15000031_s2609.log": "455773e06f078577a62c618b4f05f8b685f0fecb329cedc884658363dfa58ab5",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0033_eighth_leaf_shuffled4_n65536_d32_p0_g15000031_s2609.rss.jsonl": "8ddc3ac28cf65c12c540d6b20fbce98a0b1ec9af03088b34e46294f54eb86ffa",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0034_half_leaf_shuffled4_n65536_d32_p0_g15000031_s2609.csv": "3ba2529955fc3381850a04565047165f186daf9f42532f4ed289db3bf55ed5fd",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0034_half_leaf_shuffled4_n65536_d32_p0_g15000031_s2609.log": "caf0e13c1e4c13cf59571fdbe18ea3f3cd14f3f004d2f40d3daf5d1dbb87e6fb",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0034_half_leaf_shuffled4_n65536_d32_p0_g15000031_s2609.rss.jsonl": "2a084bf252cb0dfb6704cccf62b25585dc825d54d30e37b872b2707a526cf098",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0035_eighth_leaf_hierarchy4_n65536_d32_p0_g15000031_s2609.csv": "9dbf3af207338ac04ee8064dca7450cddcedfc84ed50313a7b267a9409de507d",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0035_eighth_leaf_hierarchy4_n65536_d32_p0_g15000031_s2609.log": "3765f98f4f7e6c56cb12512c3635f3caa3b9296c0319924b0000b759b5183898",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0035_eighth_leaf_hierarchy4_n65536_d32_p0_g15000031_s2609.rss.jsonl": "1000aaf1960cac7546e90d3c67134a50956160d8fe75de3156ff9598ba100248",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0036_half_leaf_hierarchy4_n65536_d32_p0_g15000031_s2609.csv": "24e1458e4173e5b7daa31a00aaa2ae7f6530737cd98370269c679a0f0d2cd9f3",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0036_half_leaf_hierarchy4_n65536_d32_p0_g15000031_s2609.log": "eaa66ec9c6ae9ce81ed4cd72cdb253bb479ff334c7ad8bbf1c09140b9ef57219",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0036_half_leaf_hierarchy4_n65536_d32_p0_g15000031_s2609.rss.jsonl": "cdbe3660a7e20f0f2dfde8911bd28731c6ad410a583dd5e23aed8f8c2fec26a6",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0037_half_gnm_random_n1048576_d16_p0_g15000031_s2617.csv": "3eddd89b4c3906f36f55ff07986ddbf3fce871dda1a3000f9c74685252687de6",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0037_half_gnm_random_n1048576_d16_p0_g15000031_s2617.log": "fda9c5f6d92daea6f802a503f65a84de556f8b69419f7426a814221b3608149f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0037_half_gnm_random_n1048576_d16_p0_g15000031_s2617.rss.jsonl": "e3fe2935b080a815baad2e117bb3b4a6d944153afc7f53d712c137daee2e0d3c",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0038_eighth_gnm_random_n1048576_d16_p0_g15000031_s2617.csv": "475dd42638b170b5ac28cfc548edb0482142c01b950850f8d796c3bfaf5b6233",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0038_eighth_gnm_random_n1048576_d16_p0_g15000031_s2617.log": "d7122a6e9fdee1459ab582c0dc6d41871f4eccadd56e2da872b982e6f0200786",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0038_eighth_gnm_random_n1048576_d16_p0_g15000031_s2617.rss.jsonl": "61a9f801dbced3d48039467063742a3373c374254b08e18ea00e2d5c84ee61ff",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0039_half_gnm_random_n4096_d16_p0_g15000031_s2617.csv": "42f3e08b494871eca2d641255fe2029b625b388098de258663a65005dfe228c9",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0039_half_gnm_random_n4096_d16_p0_g15000031_s2617.log": "8e41145b537c083c74395a3363c0e14c828efe5b9cc82a75c8f610a65366c1a7",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0039_half_gnm_random_n4096_d16_p0_g15000031_s2617.rss.jsonl": "59ea70ba11c1bfa99da5e0ad588b935cfc7c8a5c7d3b7f6e4c66e877b7d9f7af",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0040_eighth_gnm_random_n4096_d16_p0_g15000031_s2617.csv": "b8d47d2e5247ced14dbafefea7cc83f7adb5d6c81b16c7668df1c634b3fe0693",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0040_eighth_gnm_random_n4096_d16_p0_g15000031_s2617.log": "c85c8d1a3bde68da6370139b4c564f0ea165ac4b8d743cd2f26589cfc0597d61",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0040_eighth_gnm_random_n4096_d16_p0_g15000031_s2617.rss.jsonl": "42b1a3d7eadd037b6ff8d1efc9935cf7427c06472a5c6228431d8582a69b5d7e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0041_half_leaf_shuffled4_n1048576_d32_p0_g15000031_s2617.csv": "d3fc3cab301e915256f87333a90897ded031cde548c5724183aa3e37678deefe",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0041_half_leaf_shuffled4_n1048576_d32_p0_g15000031_s2617.log": "c94e7bd925168dbf571b6e0e16d23607bd38666aef525c6e43aa16fc83c2b61f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0041_half_leaf_shuffled4_n1048576_d32_p0_g15000031_s2617.rss.jsonl": "5e906db8518b74740ace045be6618db04d06de41654680ea55eabebf51fd5b6d",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0042_eighth_leaf_shuffled4_n1048576_d32_p0_g15000031_s2617.csv": "63f970db7ba232b0fb867000b0e39fcd54078b09c35604c7eaea2dc2351db982",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0042_eighth_leaf_shuffled4_n1048576_d32_p0_g15000031_s2617.log": "c1f2f56654364083bd46a75990d98586b4b82a4a913177b8046a7798e10f59b8",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0042_eighth_leaf_shuffled4_n1048576_d32_p0_g15000031_s2617.rss.jsonl": "325a04fe046e0612d1b26b4b6ae92f0f537981f8e7b9d3bbe1807417cdb89d83",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0043_half_leaf_hierarchy4_n1048576_d32_p0_g15000031_s2617.csv": "ff769837b325e32e1d9c20b55fe22ed0869750fe89d84894c3e287a16e6bf22b",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0043_half_leaf_hierarchy4_n1048576_d32_p0_g15000031_s2617.log": "58fb0d3bab03561155692bb98f5725a12cb73413f9dd3ca5860dd90ea001a724",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0043_half_leaf_hierarchy4_n1048576_d32_p0_g15000031_s2617.rss.jsonl": "1191832d94e841a2808d61c233eafeaddfea4792494545c6dfeff08623c99347",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0044_eighth_leaf_hierarchy4_n1048576_d32_p0_g15000031_s2617.csv": "e1904d95536440af372853b2fd51e2fa56874cae9729f12ef5f0916fd6a13c2a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0044_eighth_leaf_hierarchy4_n1048576_d32_p0_g15000031_s2617.log": "ef25c90d92b06f23236f76d30f7fbac89f1e256b39939af4e4cd8771ca3112c3",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0044_eighth_leaf_hierarchy4_n1048576_d32_p0_g15000031_s2617.rss.jsonl": "c73e47d8a0e0abda352646c78346811590e2d6376f0f2ac9f413946d7f3897f1",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0045_half_leaf_shuffled4_n65536_d32_p0_g15000031_s2617.csv": "11577f32ae3b9e86f379af10a0a8c8a2cd6b7431b6bdde66637a723d2cd4569b",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0045_half_leaf_shuffled4_n65536_d32_p0_g15000031_s2617.log": "d4b5381a59acfa2098b0c77111b1e2ed27e6353d0a2315f6f02b9efc9c256400",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0045_half_leaf_shuffled4_n65536_d32_p0_g15000031_s2617.rss.jsonl": "93451e7b4ceeb391102dda5e93eabde1413edaf7af09c9043e6d27a1962c98ab",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0046_eighth_leaf_shuffled4_n65536_d32_p0_g15000031_s2617.csv": "a5a9e8b643de7f7a69d392fdc924cf2360b64ba1f5a838b41074772d2c11d4f3",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0046_eighth_leaf_shuffled4_n65536_d32_p0_g15000031_s2617.log": "3326daea27f828d86d3d36bde5c0e806f110cebea9470191d3c096c0f98b0c4e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0046_eighth_leaf_shuffled4_n65536_d32_p0_g15000031_s2617.rss.jsonl": "1397ded699a221462d4f40b33ae74981e91fc0ce57e4a408667bc75cac07d536",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0047_half_leaf_hierarchy4_n65536_d32_p0_g15000031_s2617.csv": "a4273fe87c732d68313337378acb167fcc23d0da4cd76235d4eb59ab1d4fb87d",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0047_half_leaf_hierarchy4_n65536_d32_p0_g15000031_s2617.log": "5df6ef1e5fba389e55ca8f7e7942d111ed9fcea7dbe29e55b742976ec36632c8",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0047_half_leaf_hierarchy4_n65536_d32_p0_g15000031_s2617.rss.jsonl": "020c9fbcf136b32e641a37fe43c2240ae39024bc12ea83d427dbc1fa635efdb8",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0048_eighth_leaf_hierarchy4_n65536_d32_p0_g15000031_s2617.csv": "ebd9936a6c5b2b37e84b6bed377a8243275a5b356cb1859f9d55e17915be1595",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0048_eighth_leaf_hierarchy4_n65536_d32_p0_g15000031_s2617.log": "b5bc4e1f8d9168f4aa5581048adfedcb7b2c939d18f2f816d80268eff31187f4",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/eighth_cases/0048_eighth_leaf_hierarchy4_n65536_d32_p0_g15000031_s2617.rss.jsonl": "71892f8588e15fa435e181602c52d269481ff57ae3787f29535d1222b80202f6",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_mst_search.py": "843d65154d232bc12a946ad7d8793ab26840f7785507286a6e4d8ed09dfcad80",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/analyze_mst_search.py": "91d3fcad871444e9325c1465782365b5c3ed08fb2344aeeb62fbfc18254f5ba6",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_crossover.py": "1669d3b761e0d4c09c432382c3a2e8738c0031c1c9e6dc69cfcb7734809a052f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/analyze_continuation.py": "7a0afa5fe802516cb5ec27a7d567a0875c66807aa4a04ce0ff752f0bc31b9168",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/crossover_clocks.py": "725d469933eaf5ead32a38bf52b9f32e46a7ee3d4e386777c257c1ab3929fc0b",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_crossover_baselines.py": "2291db9114448516fc5ffb6c4b0fd119d23741bcfa2275ad7f25996c3b73921e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_multigraph_experiment.py": "f039d2523e212d9431ed9e062459a6eb3cf2e3ebf463c49d4d57097bcef4fd8e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/recover_mst_search.py": "73f02f494f29b2f9183c9fc889dcda73444fe2ca4a240469a7d57dfec226058b",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/audit_attachment_recovery_power.py": "e7a72cc054c6cfbcb1c6d5c6686e2332864632a12e10b60a9d3f16b6a5ca0c61",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/audit_mst_search_power.py": "566530914ee74564c5d5ba640b700f5ecfccc5927ac5ed046cb6e3bbdbd225c5",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_retention_control.py": "f913b9b0721102489f17eafe9bc82d4886ef3bbfad9d9f2d4963ee84f5df4f85",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_edge_view_experiment.py": "67d018d74e6658988421b98ae613ce5e649b4f80e5436fc8776540d2298fd227",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_compressed_queries.py": "6e42a9f11e395960bbba9e96a9bdbce626987f80c26764db9f260236e07d72ba",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_eighth_sampling.py": "6a782a9802c44558d840860c31aff2586f980c662118a223f3da8a95b213fab1",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/plot_eighth_sampling.py": "5b044b15bd422a92d434b67b301c87f2c7a2e422622a9d534ead16ca233c1b66",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/plot_retention_control.py": "a19d4edf72aea875885aa3494ca268038d2654531b9e3c670b21355e2b7e635a"
+  },
+  "matplotlib_version": "3.9.4",
+  "checked_outputs": 2016,
+  "timed_outputs": 1728,
+  "warmup_outputs": 288,
+  "rows_removed": 0,
+  "rows_adjusted": 0,
+  "flagged_calls_retained": 0,
+  "coverage": [
+    {
+      "figure": "variant_gains_wall",
+      "group": "Ordered core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.6168464154913538,
+        1.1775044926104608
+      ]
+    },
+    {
+      "figure": "variant_gains_wall",
+      "group": "Shuffled core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.6115432106609372,
+        1.2278642880306287
+      ]
+    },
+    {
+      "figure": "variant_gains_wall",
+      "group": "Random G(n,m) \u00b7 m/n = 16",
+      "case_ids": [
+        "gnm_random_n4096_d16_p0",
+        "gnm_random_n1048576_d16_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.6549161464501075,
+        1.1859689384799912
+      ]
+    },
+    {
+      "figure": "variant_gains_cpu",
+      "group": "Ordered core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.6168464154913538,
+        1.1775044926104608
+      ]
+    },
+    {
+      "figure": "variant_gains_cpu",
+      "group": "Shuffled core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.6115432106609372,
+        1.2278642880306287
+      ]
+    },
+    {
+      "figure": "variant_gains_cpu",
+      "group": "Random G(n,m) \u00b7 m/n = 16",
+      "case_ids": [
+        "gnm_random_n4096_d16_p0",
+        "gnm_random_n1048576_d16_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.6549161464501075,
+        1.1859689384799912
+      ]
+    },
+    {
+      "figure": "half_ratios_wall",
+      "group": "Ordered core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 40,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.26185745268461885,
+        2.827460606418971
+      ]
+    },
+    {
+      "figure": "half_ratios_wall",
+      "group": "Shuffled core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 40,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.2765827959489832,
+        3.1252551893959706
+      ]
+    },
+    {
+      "figure": "half_ratios_wall",
+      "group": "Random G(n,m) \u00b7 m/n = 16",
+      "case_ids": [
+        "gnm_random_n4096_d16_p0",
+        "gnm_random_n1048576_d16_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 40,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.3177920576297106,
+        2.5318845520851156
+      ]
+    },
+    {
+      "figure": "half_ratios_cpu",
+      "group": "Ordered core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 40,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.26185745268461885,
+        2.827460606418971
+      ]
+    },
+    {
+      "figure": "half_ratios_cpu",
+      "group": "Shuffled core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 40,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.2765827959489832,
+        3.1252551893959706
+      ]
+    },
+    {
+      "figure": "half_ratios_cpu",
+      "group": "Random G(n,m) \u00b7 m/n = 16",
+      "case_ids": [
+        "gnm_random_n4096_d16_p0",
+        "gnm_random_n1048576_d16_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 40,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.3177920576297106,
+        2.5318845520851156
+      ]
+    },
+    {
+      "figure": "eighth_ratios_wall",
+      "group": "Ordered core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 40,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.18066016108521243,
+        1.970804298242461
+      ]
+    },
+    {
+      "figure": "eighth_ratios_wall",
+      "group": "Shuffled core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 40,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.19813310869477363,
+        2.1718727909920963
+      ]
+    },
+    {
+      "figure": "eighth_ratios_wall",
+      "group": "Random G(n,m) \u00b7 m/n = 16",
+      "case_ids": [
+        "gnm_random_n4096_d16_p0",
+        "gnm_random_n1048576_d16_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 40,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.23759154084468523,
+        1.9075568577269955
+      ]
+    },
+    {
+      "figure": "eighth_ratios_cpu",
+      "group": "Ordered core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 40,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.18066016108521243,
+        1.970804298242461
+      ]
+    },
+    {
+      "figure": "eighth_ratios_cpu",
+      "group": "Shuffled core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 40,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.19813310869477363,
+        2.1718727909920963
+      ]
+    },
+    {
+      "figure": "eighth_ratios_cpu",
+      "group": "Random G(n,m) \u00b7 m/n = 16",
+      "case_ids": [
+        "gnm_random_n4096_d16_p0",
+        "gnm_random_n1048576_d16_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 40,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.23759154084468523,
+        1.9075568577269955
+      ]
+    },
+    {
+      "figure": "half_times_wall",
+      "group": "Ordered core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.041410984390497556,
+        16.904609023181024
+      ]
+    },
+    {
+      "figure": "half_times_wall",
+      "group": "Shuffled core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.033156976819427544,
+        13.895255589727466
+      ]
+    },
+    {
+      "figure": "half_times_wall",
+      "group": "Random G(n,m) \u00b7 m/n = 16",
+      "case_ids": [
+        "gnm_random_n4096_d16_p0",
+        "gnm_random_n1048576_d16_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.0007288986323974066,
+        8.004056005657842
+      ]
+    },
+    {
+      "figure": "half_times_cpu",
+      "group": "Ordered core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.041410984390497556,
+        16.904609023181024
+      ]
+    },
+    {
+      "figure": "half_times_cpu",
+      "group": "Shuffled core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.033156976819427544,
+        13.895255589727466
+      ]
+    },
+    {
+      "figure": "half_times_cpu",
+      "group": "Random G(n,m) \u00b7 m/n = 16",
+      "case_ids": [
+        "gnm_random_n4096_d16_p0",
+        "gnm_random_n1048576_d16_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.0007288986323974066,
+        8.004056005657842
+      ]
+    },
+    {
+      "figure": "eighth_times_wall",
+      "group": "Ordered core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.04143232468329171,
+        17.036864529637832
+      ]
+    },
+    {
+      "figure": "eighth_times_wall",
+      "group": "Shuffled core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.032797552068318886,
+        13.628353257294846
+      ]
+    },
+    {
+      "figure": "eighth_times_wall",
+      "group": "Random G(n,m) \u00b7 m/n = 16",
+      "case_ids": [
+        "gnm_random_n4096_d16_p0",
+        "gnm_random_n1048576_d16_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.0007260730027909335,
+        8.091998578392474
+      ]
+    },
+    {
+      "figure": "eighth_times_cpu",
+      "group": "Ordered core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.04143232468329171,
+        17.036864529637832
+      ]
+    },
+    {
+      "figure": "eighth_times_cpu",
+      "group": "Shuffled core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.032797552068318886,
+        13.628353257294846
+      ]
+    },
+    {
+      "figure": "eighth_times_cpu",
+      "group": "Random G(n,m) \u00b7 m/n = 16",
+      "case_ids": [
+        "gnm_random_n4096_d16_p0",
+        "gnm_random_n1048576_d16_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.0007260730027909335,
+        8.091998578392474
+      ]
+    }
+  ],
+  "control_normalization": false,
+  "confidence_intervals": false,
+  "interpolated_crossover": false,
+  "matched_clock_axes": true,
+  "strong_crossover_classifications": 30,
+  "graph_seeds": [
+    15000011,
+    15000031
+  ],
+  "sampling_seeds": [
+    2609,
+    2617
+  ],
+  "trials_per_case": 24,
+  "realizations_per_case": 4,
+  "output_sha256": {
+    "variant_gains_wall.png": "b7ca80a5de23f5d5ef6c9d676b15294e0faaff39e838d37992fed2d63f144748",
+    "variant_gains_wall.svg": "ff072ce700ba474c342d603f301326aa83b731ade2e3723be5b570ecc065cf93",
+    "variant_gains_wall.pdf": "3ff6a327a6902dd950a625f57f1ae59030e154813556730cc3a3a89d758201a3",
+    "variant_gains_cpu.png": "f213cedab394e1ac85f58ab02e20e17026b2b0e225804d813810ed287ad8233c",
+    "variant_gains_cpu.svg": "19d16804b30c16c3bb385b36beff0319d9f5e6fc3ac4bd2c8abaa57b9a7006f3",
+    "variant_gains_cpu.pdf": "e95c72b8ccc8c69e51f04688ba241c3cc5186cf7ae20a84671fc34b109dba3e5",
+    "half_ratios_wall.png": "41cd3983cd9a643d667fc173a7d1aa6d8bcd22c654a560205facbe9dc26648fb",
+    "half_ratios_wall.svg": "18636eb5d5f757428140b84dc97d6a2bf595be21a4d7e648b031ac8884d8b1c4",
+    "half_ratios_wall.pdf": "30392299b273c12d95f170f8a81710689833330d60302d9690bb543c53cff245",
+    "half_ratios_cpu.png": "f1ebe5ca082862d0d8f154fa94d28f293fa6aad588ae51297765d6eedef7c83f",
+    "half_ratios_cpu.svg": "a43ac3888fd5db567272ac725d700fe2f8a686f1eabbedd93c193802de4eb84f",
+    "half_ratios_cpu.pdf": "40145923d0a3f4702c90afe738a026aac44b3fd02481862ce076c72c6e124be7",
+    "eighth_ratios_wall.png": "8ad01cf2f6e7b379a6215d22fe4cfc0c1cb346729acb98b24486f578e5428b77",
+    "eighth_ratios_wall.svg": "c8ca5f99da911142a20631da16c9ba6b4c5988bc14849219fc124ae4e0c756bc",
+    "eighth_ratios_wall.pdf": "3651a1c9b9e62723f8c50052fe741eb9428b3aab890842c6a3e82a09d070e6cd",
+    "eighth_ratios_cpu.png": "ebac7da4edcffe2e9540606dd416b26cbc60bb7ac1ce1d94487e06685708d46c",
+    "eighth_ratios_cpu.svg": "c006c5a55622b0013df4858456800ae50c95daf296b46fbdcf0bb188c52baacb",
+    "eighth_ratios_cpu.pdf": "90356b20cdaccaa9cb8022047c7e7836a2e5a6f91af706ce8aaff6aa78856c1d",
+    "half_times_wall.png": "aa9d70915e1b91bdce17820bcf5067f54dad0bc07cfabcb7a5bf1d63db1659c5",
+    "half_times_wall.svg": "d893a122c09d4f63891719794539d0380b7ba4c5e51d14a203f7b4daf52a519e",
+    "half_times_wall.pdf": "b99ab62508d649ade5d5276ae7b2522ec31e69cbf9b8d748429090d7dc329ec4",
+    "half_times_cpu.png": "f2e049ccb620152ace3d73dc8459bdc69ccdfb996ee34e2532d8ea0194fc28ff",
+    "half_times_cpu.svg": "40ebf130c65aab96b6920f4c1616af2e50cb3c01aa91a54ba9e64bee8705f3f7",
+    "half_times_cpu.pdf": "af123e900bfd63f9853dc6efed85fd3af0c05759ee870577fe5488143b15a97b",
+    "eighth_times_wall.png": "53da40f2dde2f4c72930e8bbd120ff082f45fc46141a6277b9b8727d9a97983b",
+    "eighth_times_wall.svg": "fa28740e3d71012608d4a3df2d1c317e31d1d79f8b2febff57361dd0ff6be1ee",
+    "eighth_times_wall.pdf": "7c8dd57ee7bcf41913472f135baf99564ccf57f29dc014b9efe3d1112694704a",
+    "eighth_times_cpu.png": "cd13a47d8a5a455d124677fe1e0da6b3333a51bc9ad211817c35e45f248f2da1",
+    "eighth_times_cpu.svg": "d4941fd531a81a9176418dfeac6ad8d47baceb3c22192b6d99ede1fe549ea3f6",
+    "eighth_times_cpu.pdf": "11f3524ce4780361b66dc4a1a4f789464ea46fab63e17deacd72d15421af64fe",
+    "plotted_values.json": "b8201ad853f1adae72fae4201d49e289a05852c02ba0feb8536ee380375c81ca"
+  },
+  "visual_review": "pending: inspect all ten PNGs before publication"
+}
