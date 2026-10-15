@@ -1,0 +1,94 @@
+{
+  "schema": "larger_owner_validation_v1",
+  "status": "pass",
+  "command": [
+    "/usr/local/opt/python@3.14/bin/python3.14",
+    "-B",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/test_larger_hierarchy.py"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-compressed-queries",
+  "started_utc": "2026-10-15T12:13:21.507635+00:00",
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/run_larger_hierarchy.py": "7f49abf5147d33be7c2441ee0082cf2e0b9a1785437ef3d91236022a1684a8ad",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/test_larger_hierarchy.py": "b21e3c4c424c5cfd4c00df5006b0d156be3c4400850ffcd2968b28660f10c0c9",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/PROTOCOL.md": "fdfd9ae5b786777095341a086d98a76f241c75dcb0ae2424f8651aa75e589523",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/manifest.csv": "b889fcaba1dd843ac16472a961284d40f4f99e3fc4f049e0e85d14c5fee28c27"
+  },
+  "native_solver_execution": false,
+  "process_group": 31476,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "utc": "2026-10-15T12:13:28.869919+00:00",
+    "monotonic_ns": 3624320763418916,
+    "process_group": 31476,
+    "validation": "pass",
+    "members": [],
+    "rss_kib": 0
+  },
+  "all_owned_groups_known_empty": true,
+  "test_groups": 11,
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/run_larger_hierarchy.py": "7f49abf5147d33be7c2441ee0082cf2e0b9a1785437ef3d91236022a1684a8ad",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/test_larger_hierarchy.py": "b21e3c4c424c5cfd4c00df5006b0d156be3c4400850ffcd2968b28660f10c0c9",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/PROTOCOL.md": "fdfd9ae5b786777095341a086d98a76f241c75dcb0ae2424f8651aa75e589523",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/manifest.csv": "b889fcaba1dd843ac16472a961284d40f4f99e3fc4f049e0e85d14c5fee28c27"
+  },
+  "finished_utc": "2026-10-15T12:13:28.871964+00:00",
+  "elapsed_seconds": 7.361317750066519,
+  "observations": [
+    {
+      "utc": "2026-10-15T12:13:23.524115+00:00",
+      "monotonic_ns": 3624315417571291,
+      "process_group": 31476,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 31476,
+          "rss_kib": 51268,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 51268
+    },
+    {
+      "utc": "2026-10-15T12:13:25.527999+00:00",
+      "monotonic_ns": 3624317421477083,
+      "process_group": 31476,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 31476,
+          "rss_kib": 51712,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 51712
+    },
+    {
+      "utc": "2026-10-15T12:13:27.538547+00:00",
+      "monotonic_ns": 3624319432037666,
+      "process_group": 31476,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 31476,
+          "rss_kib": 54868,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 54868
+    },
+    {
+      "utc": "2026-10-15T12:13:28.869446+00:00",
+      "monotonic_ns": 3624320762940833,
+      "process_group": 31476,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    }
+  ],
+  "stdout": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/validation/owner-mocks-attempt01.stdout",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/larger-hierarchy-2026-10-15/validation/owner-mocks-attempt01.stderr",
+  "stderr_sha256": "ceaee1d53bf7e98d59c6d32c3dee9e82187402c2da03f1ff2c5b8e4d0a63a7aa"
+}
