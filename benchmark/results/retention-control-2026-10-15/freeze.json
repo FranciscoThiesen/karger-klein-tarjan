@@ -1,0 +1,372 @@
+{
+  "schema": "retention_control_freeze_v1",
+  "created_utc": "2026-10-15T05:42:25.137255+00:00",
+  "revision": "1bc827dd9a91d051194683b8513c55952b550f56",
+  "working_directory": "/Users/random_person/Desktop/kkt-retention-control",
+  "platform": "macOS-26.6.2-x86_64-i386-64bit-Mach-O",
+  "machine": "x86_64",
+  "parent_freeze": "/Users/random_person/Desktop/kkt-contraction-experiment/benchmark/results/multigraph-2026-10-14/freeze.json",
+  "parent_freeze_sha256": "7269bc0c92e6decb6355fc8cd1e95f471dcdad2d463cc66a45306ac80d7edc9a",
+  "binary": "/Users/random_person/Desktop/kkt-retention-control/bin/retention-control/retention_control",
+  "binary_sha256": "4603d2a29ca9f924a5edb4be46a41f7314d150ee12f57d82fb1d404491f5c995",
+  "binary_profile": {
+    "file_description": "Mach-O 64-bit executable arm64",
+    "main_stack_bytes": 536870912,
+    "otool_load_commands": "/Users/random_person/Desktop/kkt-retention-control/bin/retention-control/retention_control:\nLoad command 0\n      cmd LC_SEGMENT_64\n  cmdsize 72\n  segname __PAGEZERO\n   vmaddr 0x0000000000000000\n   vmsize 0x0000000100000000\n  fileoff 0\n filesize 0\n  maxprot 0x00000000\n initprot 0x00000000\n   nsects 0\n    flags 0x0\nLoad command 1\n      cmd LC_SEGMENT_64\n  cmdsize 552\n  segname __TEXT\n   vmaddr 0x0000000100000000\n   vmsize 0x0000000000024000\n  fileoff 0\n filesize 147456\n  maxprot 0x00000005\n initprot 0x00000005\n   nsects 6\n    flags 0x0\nSection\n  sectname __text\n   segname __TEXT\n      addr 0x0000000100002184\n      size 0x000000000001ecd4\n    offset 8580\n     align 2^2 (4)\n    reloff 0\n    nreloc 0\n     flags 0x80000400\n reserved1 0\n reserved2 0\nSection\n  sectname __stubs\n   segname __TEXT\n      addr 0x0000000100020e58\n      size 0x00000000000002e8\n    offset 134744\n     align 2^2 (4)\n    reloff 0\n    nreloc 0\n     flags 0x80000408\n reserved1 0 (index into indirect symbol table)\n reserved2 12 (size of stubs)\nSection\n  sectname __const\n   segname __TEXT\n      addr 0x0000000100021140\n      size 0x0000000000000270\n    offset 135488\n     align 2^4 (16)\n    reloff 0\n    nreloc 0\n     flags 0x00000000\n reserved1 0\n reserved2 0\nSection\n  sectname __gcc_except_tab\n   segname __TEXT\n      addr 0x00000001000213b0\n      size 0x00000000000013e4\n    offset 136112\n     align 2^2 (4)\n    reloff 0\n    nreloc 0\n     flags 0x00000000\n reserved1 0\n reserved2 0\nSection\n  sectname __cstring\n   segname __TEXT\n      addr 0x0000000100022794\n      size 0x000000000000138c\n    offset 141204\n     align 2^0 (1)\n    reloff 0\n    nreloc 0\n     flags 0x00000002\n reserved1 0\n reserved2 0\nSection\n  sectname __unwind_info\n   segname __TEXT\n      addr 0x0000000100023b20\n      size 0x00000000000004e0\n    offset 146208\n     align 2^2 (4)\n    reloff 0\n    nreloc 0\n     flags 0x00000000\n reserved1 0\n reserved2 0\nLoad command 2\n      cmd LC_SEGMENT_64\n  cmdsize 232\n  segname __DATA_CONST\n   vmaddr 0x0000000100024000\n   vmsize 0x0000000000004000\n  fileoff 147456\n filesize 16384\n  maxprot 0x00000003\n initprot 0x00000003\n   nsects 2\n    flags 0x10\nSection\n  sectname __got\n   segname __DATA_CONST\n      addr 0x0000000100024000\n      size 0x00000000000002a8\n    offset 147456\n     align 2^3 (8)\n    reloff 0\n    nreloc 0\n     flags 0x00000006\n reserved1 62 (index into indirect symbol table)\n reserved2 0\nSection\n  sectname __const\n   segname __DATA_CONST\n      addr 0x00000001000242a8\n      size 0x00000000000001e0\n    offset 148136\n     align 2^3 (8)\n    reloff 0\n    nreloc 0\n     flags 0x00000000\n reserved1 0\n reserved2 0\nLoad command 3\n      cmd LC_SEGMENT_64\n  cmdsize 72\n  segname __LINKEDIT\n   vmaddr 0x0000000100028000\n   vmsize 0x000000000000c000\n  fileoff 163840\n filesize 33856\n  maxprot 0x00000001\n initprot 0x00000001\n   nsects 0\n    flags 0x0\nLoad command 4\n      cmd LC_DYLD_CHAINED_FIXUPS\n  cmdsize 16\n  dataoff 163840\n datasize 3296\nLoad command 5\n      cmd LC_DYLD_EXPORTS_TRIE\n  cmdsize 16\n  dataoff 167136\n datasize 2008\nLoad command 6\n     cmd LC_SYMTAB\n cmdsize 24\n  symoff 169432\n   nsyms 349\n  stroff 175608\n strsize 20416\nLoad command 7\n            cmd LC_DYSYMTAB\n        cmdsize 80\n      ilocalsym 0\n      nlocalsym 230\n     iextdefsym 230\n     nextdefsym 34\n      iundefsym 264\n      nundefsym 85\n         tocoff 0\n           ntoc 0\n      modtaboff 0\n        nmodtab 0\n   extrefsymoff 0\n    nextrefsyms 0\n indirectsymoff 175016\n  nindirectsyms 147\n      extreloff 0\n        nextrel 0\n      locreloff 0\n        nlocrel 0\nLoad command 8\n          cmd LC_LOAD_DYLINKER\n      cmdsize 32\n         name /usr/lib/dyld (offset 12)\nLoad command 9\n     cmd LC_UUID\n cmdsize 24\n    uuid E7F5239D-3F30-38A5-A17C-0AC45D667676\nLoad command 10\n      cmd LC_BUILD_VERSION\n  cmdsize 32\n platform 1\n    minos 14.5\n      sdk 14.5\n   ntools 1\n     tool 3\n  version 1053.12\nLoad command 11\n      cmd LC_SOURCE_VERSION\n  cmdsize 16\n  version 0.0\nLoad command 12\n       cmd LC_MAIN\n   cmdsize 24\n  entryoff 8580\n stacksize 536870912\nLoad command 13\n          cmd LC_LOAD_DYLIB\n      cmdsize 48\n         name /usr/lib/libc++.1.dylib (offset 24)\n   time stamp 2 Wed Dec 31 16:00:02 1969\n      current version 1700.255.5\ncompatibility version 1.0.0\nLoad command 14\n          cmd LC_LOAD_DYLIB\n      cmdsize 56\n         name /usr/lib/libSystem.B.dylib (offset 24)\n   time stamp 2 Wed Dec 31 16:00:02 1969\n      current version 1345.120.2\ncompatibility version 1.0.0\nLoad command 15\n      cmd LC_FUNCTION_STARTS\n  cmdsize 16\n  dataoff 169144\n datasize 288\nLoad command 16\n      cmd LC_DATA_IN_CODE\n  cmdsize 16\n  dataoff 169432\n datasize 0\nLoad command 17\n      cmd LC_CODE_SIGNATURE\n  cmdsize 16\n  dataoff 196032\n datasize 1664\n"
+  },
+  "build": {
+    "path": "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/validation/native-build-record.json",
+    "sha256": "251dc8f11be5f770b329a31f6e7d4435bddd6fb375abf71fce0ff3d0222f57e0",
+    "record": {
+      "schema": "retention_control_build_v1",
+      "created_utc": "2026-10-15T05:27:57.343352+00:00",
+      "revision": "36b8ea7fec475cdf5fd4f8011cd85c3c49eab54b",
+      "working_directory": "/Users/random_person/Desktop/kkt-retention-control",
+      "binary": "/Users/random_person/Desktop/kkt-retention-control/bin/retention-control/retention_control",
+      "binary_sha256": "4603d2a29ca9f924a5edb4be46a41f7314d150ee12f57d82fb1d404491f5c995",
+      "binary_profile": {
+        "file_description": "Mach-O 64-bit executable arm64",
+        "otool_load_commands": "/Users/random_person/Desktop/kkt-retention-control/bin/retention-control/retention_control:\nLoad command 0\n      cmd LC_SEGMENT_64\n  cmdsize 72\n  segname __PAGEZERO\n   vmaddr 0x0000000000000000\n   vmsize 0x0000000100000000\n  fileoff 0\n filesize 0\n  maxprot 0x00000000\n initprot 0x00000000\n   nsects 0\n    flags 0x0\nLoad command 1\n      cmd LC_SEGMENT_64\n  cmdsize 552\n  segname __TEXT\n   vmaddr 0x0000000100000000\n   vmsize 0x0000000000024000\n  fileoff 0\n filesize 147456\n  maxprot 0x00000005\n initprot 0x00000005\n   nsects 6\n    flags 0x0\nSection\n  sectname __text\n   segname __TEXT\n      addr 0x0000000100002184\n      size 0x000000000001ecd4\n    offset 8580\n     align 2^2 (4)\n    reloff 0\n    nreloc 0\n     flags 0x80000400\n reserved1 0\n reserved2 0\nSection\n  sectname __stubs\n   segname __TEXT\n      addr 0x0000000100020e58\n      size 0x00000000000002e8\n    offset 134744\n     align 2^2 (4)\n    reloff 0\n    nreloc 0\n     flags 0x80000408\n reserved1 0 (index into indirect symbol table)\n reserved2 12 (size of stubs)\nSection\n  sectname __const\n   segname __TEXT\n      addr 0x0000000100021140\n      size 0x0000000000000270\n    offset 135488\n     align 2^4 (16)\n    reloff 0\n    nreloc 0\n     flags 0x00000000\n reserved1 0\n reserved2 0\nSection\n  sectname __gcc_except_tab\n   segname __TEXT\n      addr 0x00000001000213b0\n      size 0x00000000000013e4\n    offset 136112\n     align 2^2 (4)\n    reloff 0\n    nreloc 0\n     flags 0x00000000\n reserved1 0\n reserved2 0\nSection\n  sectname __cstring\n   segname __TEXT\n      addr 0x0000000100022794\n      size 0x000000000000138c\n    offset 141204\n     align 2^0 (1)\n    reloff 0\n    nreloc 0\n     flags 0x00000002\n reserved1 0\n reserved2 0\nSection\n  sectname __unwind_info\n   segname __TEXT\n      addr 0x0000000100023b20\n      size 0x00000000000004e0\n    offset 146208\n     align 2^2 (4)\n    reloff 0\n    nreloc 0\n     flags 0x00000000\n reserved1 0\n reserved2 0\nLoad command 2\n      cmd LC_SEGMENT_64\n  cmdsize 232\n  segname __DATA_CONST\n   vmaddr 0x0000000100024000\n   vmsize 0x0000000000004000\n  fileoff 147456\n filesize 16384\n  maxprot 0x00000003\n initprot 0x00000003\n   nsects 2\n    flags 0x10\nSection\n  sectname __got\n   segname __DATA_CONST\n      addr 0x0000000100024000\n      size 0x00000000000002a8\n    offset 147456\n     align 2^3 (8)\n    reloff 0\n    nreloc 0\n     flags 0x00000006\n reserved1 62 (index into indirect symbol table)\n reserved2 0\nSection\n  sectname __const\n   segname __DATA_CONST\n      addr 0x00000001000242a8\n      size 0x00000000000001e0\n    offset 148136\n     align 2^3 (8)\n    reloff 0\n    nreloc 0\n     flags 0x00000000\n reserved1 0\n reserved2 0\nLoad command 3\n      cmd LC_SEGMENT_64\n  cmdsize 72\n  segname __LINKEDIT\n   vmaddr 0x0000000100028000\n   vmsize 0x000000000000c000\n  fileoff 163840\n filesize 33856\n  maxprot 0x00000001\n initprot 0x00000001\n   nsects 0\n    flags 0x0\nLoad command 4\n      cmd LC_DYLD_CHAINED_FIXUPS\n  cmdsize 16\n  dataoff 163840\n datasize 3296\nLoad command 5\n      cmd LC_DYLD_EXPORTS_TRIE\n  cmdsize 16\n  dataoff 167136\n datasize 2008\nLoad command 6\n     cmd LC_SYMTAB\n cmdsize 24\n  symoff 169432\n   nsyms 349\n  stroff 175608\n strsize 20416\nLoad command 7\n            cmd LC_DYSYMTAB\n        cmdsize 80\n      ilocalsym 0\n      nlocalsym 230\n     iextdefsym 230\n     nextdefsym 34\n      iundefsym 264\n      nundefsym 85\n         tocoff 0\n           ntoc 0\n      modtaboff 0\n        nmodtab 0\n   extrefsymoff 0\n    nextrefsyms 0\n indirectsymoff 175016\n  nindirectsyms 147\n      extreloff 0\n        nextrel 0\n      locreloff 0\n        nlocrel 0\nLoad command 8\n          cmd LC_LOAD_DYLINKER\n      cmdsize 32\n         name /usr/lib/dyld (offset 12)\nLoad command 9\n     cmd LC_UUID\n cmdsize 24\n    uuid E7F5239D-3F30-38A5-A17C-0AC45D667676\nLoad command 10\n      cmd LC_BUILD_VERSION\n  cmdsize 32\n platform 1\n    minos 14.5\n      sdk 14.5\n   ntools 1\n     tool 3\n  version 1053.12\nLoad command 11\n      cmd LC_SOURCE_VERSION\n  cmdsize 16\n  version 0.0\nLoad command 12\n       cmd LC_MAIN\n   cmdsize 24\n  entryoff 8580\n stacksize 536870912\nLoad command 13\n          cmd LC_LOAD_DYLIB\n      cmdsize 48\n         name /usr/lib/libc++.1.dylib (offset 24)\n   time stamp 2 Wed Dec 31 16:00:02 1969\n      current version 1700.255.5\ncompatibility version 1.0.0\nLoad command 14\n          cmd LC_LOAD_DYLIB\n      cmdsize 56\n         name /usr/lib/libSystem.B.dylib (offset 24)\n   time stamp 2 Wed Dec 31 16:00:02 1969\n      current version 1345.120.2\ncompatibility version 1.0.0\nLoad command 15\n      cmd LC_FUNCTION_STARTS\n  cmdsize 16\n  dataoff 169144\n datasize 288\nLoad command 16\n      cmd LC_DATA_IN_CODE\n  cmdsize 16\n  dataoff 169432\n datasize 0\nLoad command 17\n      cmd LC_CODE_SIGNATURE\n  cmdsize 16\n  dataoff 196032\n datasize 1664\n",
+        "main_stack_bytes": 536870912
+      },
+      "source_sha256": {
+        "benchmark/certificate_test.cpp": "881cbdef70884b01a6385e387ac982fd9c27474267b77c7ed9666f6116218b96",
+        "benchmark/common_test.cpp": "898001f033199698c7dd226e5f2806eb791cb1ca05e15d25d490b9610743723e",
+        "benchmark/common_work.cpp": "a415b2ad9d03bcea4ab0ec27b3c1133dcb6054e0c0de9da00bdcbdceb20937b3",
+        "benchmark/complexity_benchmark.cpp": "d07b19453999c5256957ca57293406d16416817a9bef0ad238fe6b57bdb14a5d",
+        "benchmark/continuation_search.cpp": "a22baee4ef88d1864377a3cbdeebd996a1cdd0bc3b8fb6cf5a325bd45d23c727",
+        "benchmark/continuation_test.cpp": "bf3c09495ec81dfb6031e5eb9df99d3018584968d771ed80e89f6622958320ed",
+        "benchmark/contraction_ablation.cpp": "b7557d8f009b573bf34f1933956fae4b713f53acbc51cacecfe010b997f7b91a",
+        "benchmark/core_attachment_test.cpp": "bc544fcba27f954ae210072279dfe81abf2ccd0eb3f948c9d72f3ca56eeee050",
+        "benchmark/crossover_baselines.cpp": "0d68c3eafa292f1756a1711ece00cad6e53cb79ac3ceb1d7a7e1570047761cee",
+        "benchmark/crossover_test.cpp": "a5cae62fddcbc2008b1848ced6a2ac624bd0b61cbb300aa7958f357228bef82b",
+        "benchmark/diverse_benchmark.cpp": "8d7ea8389883fa889fc366cf5919ed76597887219d7776b283e90f13cacf6c2e",
+        "benchmark/export_attachment_view.cpp": "e49446846c3c4b4f4eec2366defe37630e367975dcc96b92d87eb0ab3a924413",
+        "benchmark/export_graph_views.cpp": "102a56169ca90817a2b845f0ead464aaaad0e7923394c1bb5dbbe39ffe4a5bee",
+        "benchmark/mst_benchmark.cpp": "b2cfa5adec9608d15a846ce497786edc22620cf9eb691b946a6af00a184a8376",
+        "benchmark/mst_search.cpp": "f2fca672c18d6a91df2e95677339e9af88bc28efee89f929f796d815dac73e3d",
+        "benchmark/multigraph_work.cpp": "0cfce48d2d09c93c371d61c020a81e91557de93f1c5f7a39630b1dcddab519c3",
+        "benchmark/retention_control.cpp": "310db459ebf3d8743a750e7928bd035b82b2e38971de8820358b910579e3a2e9",
+        "benchmark/scaling_benchmark.cpp": "8e653cf585341be3ca421a21da4d369c0882d2d14143515321a6e716a38d20e6",
+        "benchmark/search_fixtures_test.cpp": "f0c08d3c85fa465f4c643223b8b3dd121975ef0b911258ce46c60b95ca113ebe",
+        "benchmark/search_work.cpp": "1a6394582edeb202ced73b8e900e701a6421edc909322e62f9665f8d35807b6a",
+        "benchmark/shape_work.cpp": "3412b067be3ca11e13d5051ceaa1fffbb7c1518a81d4fe26d5ac9c06477c76bd",
+        "benchmark/shapes_test.cpp": "9fdc8e8fa65bc2ab141f9e070256b6aecb27c988a9dca608fa0b1873f4faaa40",
+        "benchmark/work_sweep.cpp": "9a5b901d093a8d40e875bcc28e663961f5b7bd7ea1c252fa32982d9a0d733591",
+        "boruvka/boruvka.cpp": "0c22c1ce04861597d6bb039f6827c5d622da02260e6134911b03de943e32fa3d",
+        "graph_utils/graph_utils.cpp": "f271adc1dc8ce3fb7bf4763a7e8b42aecd8ae1084d57a5815163bbd4c56c3a07",
+        "kkt/kkt.cpp": "2df10cd75801f73c62b0e74df96714a7fb148de3aa434a7dba0d1fae01d38614",
+        "kruskal/kruskal.cpp": "fbb245d0a2f9b2f69c59c996bd966f1f76a8cd95c560ae26622f165f6c392d8c",
+        "lca/lca.cpp": "d21ea8d45c76eb2b782c08afbe25394b7da25b862dea28ddd1499c14877a46ca",
+        "prim/prim.cpp": "c4b8c2c6bc1c2f02a1b5101ad9f364fd14b943db9b74b04e50a22359f1a2e2ba",
+        "test/complexity_test.cpp": "f5184befed4ff1b3692a7e83948648ac54c895698cddddbfb19d461006e3d41e",
+        "test/contraction_test.cpp": "80a6f727e661eb1c5c654c1e82149e2750289d43253648ddaeb7d9f2b23195d9",
+        "test/kkt_test.cpp": "5170bacb1e4b30c7511d5cea95373a280485f353c8a58f47b98ed5b1d78e0980",
+        "test/mst_test.cpp": "8139414761c906edef27eb917fc713b0568ccfa79ea2087be1bee019a2c9e707",
+        "test/multigraph_contraction_test.cpp": "11149c244940d3a04eead92354ed791353ec556556db38ed7f1e97cf0ca9d8c2",
+        "test/regression_test.cpp": "dda424d498b064e9bc3da4fcf7a723997b3d7da1be41ab7818afa5f0a3cc970b",
+        "test/retention_control_test.cpp": "d4b43e7abf74171af96a63c4bd36564d73e5027d3d7776571b1edfb846dd2b1f",
+        "test/simple_test.cpp": "fbe9d34f07e910680d15c6d613574f60d123a2f6408da75108e4ebfebece6d7e",
+        "test/verifier_test.cpp": "19f729edc79326a66ce5a6997293ad2ded93fe06f0bb85be0de98c62eb272ee0",
+        "test/verifier_v2_test.cpp": "e32d284527d3dd854ad45bb8ac01d286a041c0d44895dd54c6e6be970c9702d0",
+        "union_find/union_find.cpp": "5ad5a4b4cb57cd66fa1a3a8003d33a95e84c2814f772eba27e0bcb771e317b37",
+        "verifier/verifier.cpp": "579e9f2c44373bbf0728b9781947169329c05a96b0f52e7c05e1f7ef2bd82735",
+        "verifier/verifier_v2.cpp": "650b83b0ab1c29673bfcbcf5ac5c2fa3f386e4d349c715310418d2df68809a29",
+        "benchmark/common_graph_fixtures.hpp": "a3454f6a6900983f71a65239fa636d3747172e33638151251490dfbe1e7afead",
+        "benchmark/component_moments.hpp": "11103da83a398746fe30755c477afb7c6fabdf3ada33ca600ec176770fc8cea6",
+        "benchmark/continuation_fixtures.hpp": "a88aa87fb6aeb9b5ed910f287f0ee9d8415fea085bf36d14ca58875874624d86",
+        "benchmark/core_attachment_fixtures.hpp": "d14a914695c73b38b05a329602fc41bbb4f27805bfa7d24bdbe483bfe3b36628",
+        "benchmark/crossover_fixtures.hpp": "660b914d959570f006f303c0bcf030b91568cc5ebfe2dbdcb8479422d28dd035",
+        "benchmark/extended_graph_fixtures.hpp": "58cd0239523a3e926cf6eb456592a00603ab36f2d1451b3bf7b698baf83f2aab",
+        "benchmark/graph_fixtures.hpp": "6d94c080b66b6f2538cbaa1758e82d87de4af25ca1d496ec8b8fed50c41dc98d",
+        "benchmark/mst_certificate.hpp": "5e9c37e73c6a1bb78f1bfe5dca361abe9a4ddc4ea2e155a323989b6b34838495",
+        "benchmark/retention_boruvka.hpp": "7a063ee9fffd172e090de18905d98e1da720b247e911591410fa2c48f59dad12",
+        "benchmark/search_fixtures.hpp": "186cfe198c1acee8b3355b7f2c6063896003b17396cb781ce9c09b01989fd24e",
+        "benchmark/work_metrics.hpp": "fc3e8b9e2afba1e12c1e2c47b9c79a7ef4772c3a0185d36ca80f85f25085d9ef",
+        "boruvka/boruvka.hpp": "d74a79372e99cc1a2e7b1f54a24be1858a271643c29715951da65a37602a9780",
+        "common/edge.hpp": "83b38d4622875bb311c967c771c13a888922c45b5e58d7ded61692692008b2ce",
+        "common/work_stats.hpp": "85f6aca4f517cccef93a01c22005808834e66dbbc6b9dba448bb6b7b4574c1d0",
+        "graph_utils/graph_utils.hpp": "160512be1b844c89cd6e621bbef40052305b8d0fe8e2679053577fd92c4b7584",
+        "kkt/experimental_multigraph_contraction.hpp": "c18798f5ef678dfa94abbb29213dfc886123a33961a2149ce1c9e6b32987f8c2",
+        "kkt/kkt.hpp": "db6d56d7741a2edaea19b535bcb6a969ba29964aaefb7da21d8935c746771cc2",
+        "kkt/random_sampling.hpp": "96aef2e4c275d711ce77ee503ae7f88ba8a8baf07adcc547e19302001a96000e",
+        "kruskal/kruskal.hpp": "b0561fc0787b78546cc883c9c7805e71bbd7d91ce31ddb88b17eefbf6ecce8dd",
+        "lca/lca.hpp": "69aac6fadf9f8310c7b8914de2d044cd2466b17464787a699919b987c1ee88f2",
+        "prim/prim.hpp": "4dc0e43e0d4e37169cf0b0a33dbcf03947c330535f98942ae1aa6c1897934fab",
+        "union_find/union_find.hpp": "77e646bc7cdece9ac3713ff5a62e19cb5305f69ba08d0c8bb77994de37b7ccee",
+        "verifier/median_table.hpp": "9aeb79481afe0e949347eb29045ad9f5dc6017d114fa7ce813e348adadfb382a",
+        "verifier/verifier.hpp": "f6d7778152bea28a94fcf306e31b9d075d17995011b4c963845dfb7be3af2e8f",
+        "verifier/verifier_v2.hpp": "26596a1890e526bd909209717ce86d327229387280f4773c52655861e82ffe20"
+      },
+      "build_recipe_sha256": {
+        "Makefile": "78443dde6f6b8d76dd58a205cad0d7586527126ca48a1cee485227ec168fa656",
+        "benchmark/retention_control.mk": "8b6bc904608e9e36cfa1668b63f661f26cfa5c21ec3a6a36f92653bc26655fe0"
+      },
+      "compiler_command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/usr/bin/clang++",
+        "--version"
+      ],
+      "compiler": "Apple clang version 15.0.0 (clang-1500.3.9.4)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+      "sdk": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+      "build_command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/usr/bin/make",
+        "-f",
+        "benchmark/retention_control.mk",
+        "-B",
+        "-j4",
+        "CXX=/usr/bin/clang++",
+        "BUILD_DIR=.build/retention-control",
+        "BIN_DIR=bin/retention-control",
+        "CXXFLAGS=-std=c++17 -O3 -Wall -Wextra -march=native -DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "retention-control",
+        "retention-control-test"
+      ],
+      "build_exit_status": 0,
+      "build_log": "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/validation/native-build-final.log",
+      "build_log_sha256": "262db6f295fb5c5384fbc7b18264b857fd8a6c6e897844829c1a41dc45d98ab4",
+      "object_sha256": {
+        "boruvka/boruvka.o": "1c58b8cb7c1a54989938eb3c2ec2a786ed2ef0ab2b4f257e99faf9107bfca674",
+        "graph_utils/graph_utils.o": "1e9aa75afc36902bf470d5fbe94964233b03df5f490d0e115feeaf9307744fe1",
+        "kkt/kkt.o": "ebcd836f4d82ab0e2a8d1147074d9ee878efc09a44e638913935068284e8f27c",
+        "kruskal/kruskal.o": "d0d23eadc6eb81a4285a69077e56d07d32f3b32673e0a53ee6cb8537c659c942",
+        "lca/lca.o": "c7d6f8f4c332846ccfe17ccd1435fbfb2780de00f477a060655fb3af309b406c",
+        "prim/prim.o": "4954cd12ab635f0eb57fc95e269f2f77dd4f7b98a7b6012667ca38fb5e0b2f8a",
+        "union_find/union_find.o": "fcc799fa111afbfdc0afe4e36f2a2db3acf37a061bd7b9d0022bd206046cb1ca",
+        "verifier/verifier_v2.o": "8b71c726de3e9adcb622c5d141fe95b84303046caeb800bf529ac3b7b5a5424b"
+      },
+      "parent_candidate_build_record": "/Users/random_person/Desktop/kkt-contraction-experiment/benchmark/results/multigraph-2026-10-14/validation/multigraph-build-record.json",
+      "parent_candidate_build_record_sha256": "7a1ca7953c0362acc2b5b99b3f737a922c5b2e5f6007e9cf2a04e156d6fd469e",
+      "all_eight_production_objects_equal_parent_candidate": true
+    }
+  },
+  "source_sha256": {
+    "benchmark/certificate_test.cpp": "881cbdef70884b01a6385e387ac982fd9c27474267b77c7ed9666f6116218b96",
+    "benchmark/common_test.cpp": "898001f033199698c7dd226e5f2806eb791cb1ca05e15d25d490b9610743723e",
+    "benchmark/common_work.cpp": "a415b2ad9d03bcea4ab0ec27b3c1133dcb6054e0c0de9da00bdcbdceb20937b3",
+    "benchmark/complexity_benchmark.cpp": "d07b19453999c5256957ca57293406d16416817a9bef0ad238fe6b57bdb14a5d",
+    "benchmark/continuation_search.cpp": "a22baee4ef88d1864377a3cbdeebd996a1cdd0bc3b8fb6cf5a325bd45d23c727",
+    "benchmark/continuation_test.cpp": "bf3c09495ec81dfb6031e5eb9df99d3018584968d771ed80e89f6622958320ed",
+    "benchmark/contraction_ablation.cpp": "b7557d8f009b573bf34f1933956fae4b713f53acbc51cacecfe010b997f7b91a",
+    "benchmark/core_attachment_test.cpp": "bc544fcba27f954ae210072279dfe81abf2ccd0eb3f948c9d72f3ca56eeee050",
+    "benchmark/crossover_baselines.cpp": "0d68c3eafa292f1756a1711ece00cad6e53cb79ac3ceb1d7a7e1570047761cee",
+    "benchmark/crossover_test.cpp": "a5cae62fddcbc2008b1848ced6a2ac624bd0b61cbb300aa7958f357228bef82b",
+    "benchmark/diverse_benchmark.cpp": "8d7ea8389883fa889fc366cf5919ed76597887219d7776b283e90f13cacf6c2e",
+    "benchmark/export_attachment_view.cpp": "e49446846c3c4b4f4eec2366defe37630e367975dcc96b92d87eb0ab3a924413",
+    "benchmark/export_graph_views.cpp": "102a56169ca90817a2b845f0ead464aaaad0e7923394c1bb5dbbe39ffe4a5bee",
+    "benchmark/mst_benchmark.cpp": "b2cfa5adec9608d15a846ce497786edc22620cf9eb691b946a6af00a184a8376",
+    "benchmark/mst_search.cpp": "f2fca672c18d6a91df2e95677339e9af88bc28efee89f929f796d815dac73e3d",
+    "benchmark/multigraph_work.cpp": "0cfce48d2d09c93c371d61c020a81e91557de93f1c5f7a39630b1dcddab519c3",
+    "benchmark/retention_control.cpp": "310db459ebf3d8743a750e7928bd035b82b2e38971de8820358b910579e3a2e9",
+    "benchmark/scaling_benchmark.cpp": "8e653cf585341be3ca421a21da4d369c0882d2d14143515321a6e716a38d20e6",
+    "benchmark/search_fixtures_test.cpp": "f0c08d3c85fa465f4c643223b8b3dd121975ef0b911258ce46c60b95ca113ebe",
+    "benchmark/search_work.cpp": "1a6394582edeb202ced73b8e900e701a6421edc909322e62f9665f8d35807b6a",
+    "benchmark/shape_work.cpp": "3412b067be3ca11e13d5051ceaa1fffbb7c1518a81d4fe26d5ac9c06477c76bd",
+    "benchmark/shapes_test.cpp": "9fdc8e8fa65bc2ab141f9e070256b6aecb27c988a9dca608fa0b1873f4faaa40",
+    "benchmark/work_sweep.cpp": "9a5b901d093a8d40e875bcc28e663961f5b7bd7ea1c252fa32982d9a0d733591",
+    "boruvka/boruvka.cpp": "0c22c1ce04861597d6bb039f6827c5d622da02260e6134911b03de943e32fa3d",
+    "graph_utils/graph_utils.cpp": "f271adc1dc8ce3fb7bf4763a7e8b42aecd8ae1084d57a5815163bbd4c56c3a07",
+    "kkt/kkt.cpp": "2df10cd75801f73c62b0e74df96714a7fb148de3aa434a7dba0d1fae01d38614",
+    "kruskal/kruskal.cpp": "fbb245d0a2f9b2f69c59c996bd966f1f76a8cd95c560ae26622f165f6c392d8c",
+    "lca/lca.cpp": "d21ea8d45c76eb2b782c08afbe25394b7da25b862dea28ddd1499c14877a46ca",
+    "prim/prim.cpp": "c4b8c2c6bc1c2f02a1b5101ad9f364fd14b943db9b74b04e50a22359f1a2e2ba",
+    "test/complexity_test.cpp": "f5184befed4ff1b3692a7e83948648ac54c895698cddddbfb19d461006e3d41e",
+    "test/contraction_test.cpp": "80a6f727e661eb1c5c654c1e82149e2750289d43253648ddaeb7d9f2b23195d9",
+    "test/kkt_test.cpp": "5170bacb1e4b30c7511d5cea95373a280485f353c8a58f47b98ed5b1d78e0980",
+    "test/mst_test.cpp": "8139414761c906edef27eb917fc713b0568ccfa79ea2087be1bee019a2c9e707",
+    "test/multigraph_contraction_test.cpp": "11149c244940d3a04eead92354ed791353ec556556db38ed7f1e97cf0ca9d8c2",
+    "test/regression_test.cpp": "dda424d498b064e9bc3da4fcf7a723997b3d7da1be41ab7818afa5f0a3cc970b",
+    "test/retention_control_test.cpp": "d4b43e7abf74171af96a63c4bd36564d73e5027d3d7776571b1edfb846dd2b1f",
+    "test/simple_test.cpp": "fbe9d34f07e910680d15c6d613574f60d123a2f6408da75108e4ebfebece6d7e",
+    "test/verifier_test.cpp": "19f729edc79326a66ce5a6997293ad2ded93fe06f0bb85be0de98c62eb272ee0",
+    "test/verifier_v2_test.cpp": "e32d284527d3dd854ad45bb8ac01d286a041c0d44895dd54c6e6be970c9702d0",
+    "union_find/union_find.cpp": "5ad5a4b4cb57cd66fa1a3a8003d33a95e84c2814f772eba27e0bcb771e317b37",
+    "verifier/verifier.cpp": "579e9f2c44373bbf0728b9781947169329c05a96b0f52e7c05e1f7ef2bd82735",
+    "verifier/verifier_v2.cpp": "650b83b0ab1c29673bfcbcf5ac5c2fa3f386e4d349c715310418d2df68809a29",
+    "benchmark/common_graph_fixtures.hpp": "a3454f6a6900983f71a65239fa636d3747172e33638151251490dfbe1e7afead",
+    "benchmark/component_moments.hpp": "11103da83a398746fe30755c477afb7c6fabdf3ada33ca600ec176770fc8cea6",
+    "benchmark/continuation_fixtures.hpp": "a88aa87fb6aeb9b5ed910f287f0ee9d8415fea085bf36d14ca58875874624d86",
+    "benchmark/core_attachment_fixtures.hpp": "d14a914695c73b38b05a329602fc41bbb4f27805bfa7d24bdbe483bfe3b36628",
+    "benchmark/crossover_fixtures.hpp": "660b914d959570f006f303c0bcf030b91568cc5ebfe2dbdcb8479422d28dd035",
+    "benchmark/extended_graph_fixtures.hpp": "58cd0239523a3e926cf6eb456592a00603ab36f2d1451b3bf7b698baf83f2aab",
+    "benchmark/graph_fixtures.hpp": "6d94c080b66b6f2538cbaa1758e82d87de4af25ca1d496ec8b8fed50c41dc98d",
+    "benchmark/mst_certificate.hpp": "5e9c37e73c6a1bb78f1bfe5dca361abe9a4ddc4ea2e155a323989b6b34838495",
+    "benchmark/retention_boruvka.hpp": "7a063ee9fffd172e090de18905d98e1da720b247e911591410fa2c48f59dad12",
+    "benchmark/search_fixtures.hpp": "186cfe198c1acee8b3355b7f2c6063896003b17396cb781ce9c09b01989fd24e",
+    "benchmark/work_metrics.hpp": "fc3e8b9e2afba1e12c1e2c47b9c79a7ef4772c3a0185d36ca80f85f25085d9ef",
+    "boruvka/boruvka.hpp": "d74a79372e99cc1a2e7b1f54a24be1858a271643c29715951da65a37602a9780",
+    "common/edge.hpp": "83b38d4622875bb311c967c771c13a888922c45b5e58d7ded61692692008b2ce",
+    "common/work_stats.hpp": "85f6aca4f517cccef93a01c22005808834e66dbbc6b9dba448bb6b7b4574c1d0",
+    "graph_utils/graph_utils.hpp": "160512be1b844c89cd6e621bbef40052305b8d0fe8e2679053577fd92c4b7584",
+    "kkt/experimental_multigraph_contraction.hpp": "c18798f5ef678dfa94abbb29213dfc886123a33961a2149ce1c9e6b32987f8c2",
+    "kkt/kkt.hpp": "db6d56d7741a2edaea19b535bcb6a969ba29964aaefb7da21d8935c746771cc2",
+    "kkt/random_sampling.hpp": "96aef2e4c275d711ce77ee503ae7f88ba8a8baf07adcc547e19302001a96000e",
+    "kruskal/kruskal.hpp": "b0561fc0787b78546cc883c9c7805e71bbd7d91ce31ddb88b17eefbf6ecce8dd",
+    "lca/lca.hpp": "69aac6fadf9f8310c7b8914de2d044cd2466b17464787a699919b987c1ee88f2",
+    "prim/prim.hpp": "4dc0e43e0d4e37169cf0b0a33dbcf03947c330535f98942ae1aa6c1897934fab",
+    "union_find/union_find.hpp": "77e646bc7cdece9ac3713ff5a62e19cb5305f69ba08d0c8bb77994de37b7ccee",
+    "verifier/median_table.hpp": "9aeb79481afe0e949347eb29045ad9f5dc6017d114fa7ce813e348adadfb382a",
+    "verifier/verifier.hpp": "f6d7778152bea28a94fcf306e31b9d075d17995011b4c963845dfb7be3af2e8f",
+    "verifier/verifier_v2.hpp": "26596a1890e526bd909209717ce86d327229387280f4773c52655861e82ffe20"
+  },
+  "python_source_sha256": {
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/run_mst_search.py": "843d65154d232bc12a946ad7d8793ab26840f7785507286a6e4d8ed09dfcad80",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/analyze_mst_search.py": "91d3fcad871444e9325c1465782365b5c3ed08fb2344aeeb62fbfc18254f5ba6",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/run_crossover.py": "1669d3b761e0d4c09c432382c3a2e8738c0031c1c9e6dc69cfcb7734809a052f",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/analyze_continuation.py": "7a0afa5fe802516cb5ec27a7d567a0875c66807aa4a04ce0ff752f0bc31b9168",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/crossover_clocks.py": "725d469933eaf5ead32a38bf52b9f32e46a7ee3d4e386777c257c1ab3929fc0b",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/run_crossover_baselines.py": "2291db9114448516fc5ffb6c4b0fd119d23741bcfa2275ad7f25996c3b73921e",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/run_multigraph_experiment.py": "f039d2523e212d9431ed9e062459a6eb3cf2e3ebf463c49d4d57097bcef4fd8e",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/recover_mst_search.py": "73f02f494f29b2f9183c9fc889dcda73444fe2ca4a240469a7d57dfec226058b",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/audit_attachment_recovery_power.py": "e7a72cc054c6cfbcb1c6d5c6686e2332864632a12e10b60a9d3f16b6a5ca0c61",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/audit_mst_search_power.py": "566530914ee74564c5d5ba640b700f5ecfccc5927ac5ed046cb6e3bbdbd225c5",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/run_retention_control.py": "f913b9b0721102489f17eafe9bc82d4886ef3bbfad9d9f2d4963ee84f5df4f85"
+  },
+  "build_recipe_sha256": {
+    "Makefile": "78443dde6f6b8d76dd58a205cad0d7586527126ca48a1cee485227ec168fa656",
+    "benchmark/retention_control.mk": "8b6bc904608e9e36cfa1668b63f661f26cfa5c21ec3a6a36f92653bc26655fe0"
+  },
+  "manifest": "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/manifest.csv",
+  "manifest_sha256": "2d083d60a7e1562b07a8184dd8808d157ce84e1755f1436c3bda68badaef0f56",
+  "protocol": "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/PROTOCOL.md",
+  "protocol_sha256": "1ffdbec28033256c722461ae9a4d96fabe0be3729f81472639eb9427475a995b",
+  "algorithms": [
+    "kkt",
+    "compacting_boruvka",
+    "multigraph_boruvka",
+    "kruskal",
+    "prim",
+    "boruvka"
+  ],
+  "graph_seeds": [
+    3000001,
+    3000029
+  ],
+  "sampling_seeds": [
+    809
+  ],
+  "repetitions": 6,
+  "warmups": 1,
+  "schedule": [
+    {
+      "case_id": "leaf_hierarchy4_n65536_d16_p0",
+      "graph_seed": 3000001,
+      "kkt_seed": 809
+    },
+    {
+      "case_id": "leaf_hierarchy4_n262144_d16_p0",
+      "graph_seed": 3000001,
+      "kkt_seed": 809
+    },
+    {
+      "case_id": "leaf_hierarchy4_n2097152_d16_p0",
+      "graph_seed": 3000001,
+      "kkt_seed": 809
+    },
+    {
+      "case_id": "leaf_distance4_n65536_d16_p0",
+      "graph_seed": 3000001,
+      "kkt_seed": 809
+    },
+    {
+      "case_id": "leaf_distance4_n262144_d16_p0",
+      "graph_seed": 3000001,
+      "kkt_seed": 809
+    },
+    {
+      "case_id": "leaf_distance4_n2097152_d16_p0",
+      "graph_seed": 3000001,
+      "kkt_seed": 809
+    },
+    {
+      "case_id": "gnm_random_n4096_d16_p0",
+      "graph_seed": 3000001,
+      "kkt_seed": 809
+    },
+    {
+      "case_id": "gnm_random_n1048576_d16_p0",
+      "graph_seed": 3000001,
+      "kkt_seed": 809
+    },
+    {
+      "case_id": "gnm_random_n4096_d128_p0",
+      "graph_seed": 3000001,
+      "kkt_seed": 809
+    },
+    {
+      "case_id": "gnm_random_n262144_d128_p0",
+      "graph_seed": 3000001,
+      "kkt_seed": 809
+    },
+    {
+      "case_id": "gnm_random_n262144_d128_p0",
+      "graph_seed": 3000029,
+      "kkt_seed": 809
+    },
+    {
+      "case_id": "gnm_random_n4096_d128_p0",
+      "graph_seed": 3000029,
+      "kkt_seed": 809
+    },
+    {
+      "case_id": "gnm_random_n1048576_d16_p0",
+      "graph_seed": 3000029,
+      "kkt_seed": 809
+    },
+    {
+      "case_id": "gnm_random_n4096_d16_p0",
+      "graph_seed": 3000029,
+      "kkt_seed": 809
+    },
+    {
+      "case_id": "leaf_distance4_n2097152_d16_p0",
+      "graph_seed": 3000029,
+      "kkt_seed": 809
+    },
+    {
+      "case_id": "leaf_distance4_n262144_d16_p0",
+      "graph_seed": 3000029,
+      "kkt_seed": 809
+    },
+    {
+      "case_id": "leaf_distance4_n65536_d16_p0",
+      "graph_seed": 3000029,
+      "kkt_seed": 809
+    },
+    {
+      "case_id": "leaf_hierarchy4_n2097152_d16_p0",
+      "graph_seed": 3000029,
+      "kkt_seed": 809
+    },
+    {
+      "case_id": "leaf_hierarchy4_n262144_d16_p0",
+      "graph_seed": 3000029,
+      "kkt_seed": 809
+    },
+    {
+      "case_id": "leaf_hierarchy4_n65536_d16_p0",
+      "graph_seed": 3000029,
+      "kkt_seed": 809
+    }
+  ],
+  "resource_rule": {
+    "rss_limit_kib": 41943040,
+    "poll_seconds": 2,
+    "sample_wait_limit_seconds": 5.0,
+    "measure": "Sum of libproc resident bytes rounded up per member to KiB over owned process group; sampled, not continuous peak",
+    "failure": "Stop above 40 GiB, after three consecutive unavailable observations, or immediately after a sampler timeout; retain all partial evidence. Unknown native/group exit blocks every subsequent child."
+  },
+  "semantics": {
+    "campaign": "six_solver_retention_control_v1",
+    "schedule": "Graph seed then case. Second graph seed reverses case order. Six timed repetitions balance each algorithm once in every position; algorithm=(order+repetition)%6.",
+    "timing_boundary": "Original tuple-input/native-result boundaries. KKT and both Boruvka continuations time problem conversion and temporary input destruction; returned-result validation/destruction are outside the interval. UTC/CPU envelopes are slightly wider than steady elapsed.",
+    "comparison": "Compare KKT with all five competitors within the same graph, starting KKT seed and repetition. Case median uses all twelve paired ratios; each graph also has its own six-trial median. No historical observations are pooled.",
+    "purpose": "Multigraph Boruvka uses the same retained-parallel contraction as candidate KKT; this separates repeated retained-edge contraction from KKT's sampling/filtering continuation. It is a whole-strategy comparison, not isolated phase timing.",
+    "clock_semantics": "Steady elapsed and process CPU remain separate. Clock flags are descriptive, never a reason to trim or correct data. UTC reversals remain in raw endpoints. Power-log correlation uses actual Sleep/Wake/DarkWake transitions; Wake Requests do not close sleep.",
+    "power_semantics": "No verified sleep inhibition is inferred. An absent logged overlap is not proof of an awake, quiet host. Power auditing is post-capture only and never launches pmset automatically.",
+    "certificate_scope": "Independent native reference certificate once per child, then exact unique-MST ID/tuple validation for every warmup and timed call."
+  }
+}
