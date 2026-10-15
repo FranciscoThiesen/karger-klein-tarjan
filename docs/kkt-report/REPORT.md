@@ -54,6 +54,16 @@ transition does not meet the prespecified 10% strong-crossover threshold;
 original Borůvka still wins every paired trial. Scalar sampling and the stronger
 baseline remain unchanged. The historical edition below is preserved.
 
+**Family follow-up, 15 October:** the [six-family held-out screen](../../benchmark/results/heldout-families-2026-10-15/README.md)
+certifies all 3,024 outputs across six sizes and retains all five controls.
+No strong crossover against retained-edge Borůvka appears. The closest case,
+an ancestry-ordered leaf core at one million vertices, has a paired ratio of
+0.996 with only seven of twelve trial wins on each clock. All six families
+cross strongly against the deduplicating compactor; selected spatial cases
+also beat Prim. Original Borůvka wins every paired trial, so none makes KKT
+the overall winner. Both clocks, all losses, exact crossover classifications
+and reviewed figures are included. This does not alter the historical edition.
+
 This report asks three distinct questions: whether the original implementation faithfully realized KKT's local complexity bounds; whether the current implementation *measures* like linear time; and which graph structures make it competitive in practice. The answers come from source inspection, certified benchmark outputs, separate work counters, two complete new timing campaigns, and a controlled comparison with repeated compacting Borůvka steps.
 
 The main document is this Markdown file. The [HTML edition](report.html) adds a fully offline, interactive 3D graph explorer. The [standalone explorer](graph-explorer.html) exposes actual contraction and filtering results for seven complete small graphs. A paginated companion checks the requested 40-page limit.

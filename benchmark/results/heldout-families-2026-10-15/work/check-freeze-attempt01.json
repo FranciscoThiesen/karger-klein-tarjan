@@ -1,0 +1,47 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "-c",
+    "import importlib.util,json; from pathlib import Path; path=Path(\"benchmark/results/heldout-families-2026-10-15/work/collect.py\").resolve(); spec=importlib.util.spec_from_file_location(\"heldout_work_readiness\",path); module=importlib.util.module_from_spec(spec); spec.loader.exec_module(module); frozen_path=path.parent/\"freeze.json\"; data=module.check_freeze(frozen_path); print(json.dumps({\"validation\":\"pass\",\"freeze\":str(frozen_path),\"freeze_sha256\":module.native.sha(frozen_path),\"expected_children\":data[\"expected_children\"],\"expected_solver_outputs\":data[\"expected_solver_outputs\"],\"expected_replay_chains\":data[\"expected_replay_chains\"],\"bound_files\":len(data[\"bound_sha256\"]),\"native_binary\":data[\"artifact\"][\"binary\"],\"native_binary_sha256\":module.native.sha(Path(data[\"artifact\"][\"binary\"])),\"native_solver_execution\":False},indent=2))"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-compressed-queries",
+  "started_utc": "2026-10-15T13:47:38.076471+00:00",
+  "started_monotonic_ns": 24806750,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/collect.py": "8f6742f286ffcc227908ace7710a5cebfb14a00e1d09a3cacaa3e026e002640a",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/test_collect.py": "1df1742374b62b83b3883996a25d8bbb828c82eb695a2c6f79e262d684bb51e1",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/PROTOCOL.md": "1323ab5fb3f4f1150ef8a086493f29c0a12ed53ea51b3f5a49c2920c0b9bbd23",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/freeze.json": "db107c2370735e7bdcec777320ea069374c8247d8d02ba67684528541561bcaf"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 37335,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 37335,
+    "members": [],
+    "monotonic_ns": 637796291,
+    "utc": "2026-10-15T13:47:38.689432+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/collect.py": "8f6742f286ffcc227908ace7710a5cebfb14a00e1d09a3cacaa3e026e002640a",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/test_collect.py": "1df1742374b62b83b3883996a25d8bbb828c82eb695a2c6f79e262d684bb51e1",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/PROTOCOL.md": "1323ab5fb3f4f1150ef8a086493f29c0a12ed53ea51b3f5a49c2920c0b9bbd23",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/freeze.json": "db107c2370735e7bdcec777320ea069374c8247d8d02ba67684528541561bcaf"
+  },
+  "finished_utc": "2026-10-15T13:47:38.689899+00:00",
+  "finished_monotonic_ns": 638272833,
+  "elapsed_seconds": 0.613466083,
+  "stdout": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/check-freeze-attempt01.stdout",
+  "stdout_sha256": "0fd7e76a3554f087c86727cf87ecb18e122c45517adf65d45d878b00aab75665",
+  "stderr": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/check-freeze-attempt01.stderr",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

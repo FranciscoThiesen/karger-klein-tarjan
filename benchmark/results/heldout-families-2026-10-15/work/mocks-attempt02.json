@@ -1,0 +1,48 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "benchmark/results/heldout-families-2026-10-15/work/test_collect.py"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-compressed-queries",
+  "started_utc": "2026-10-15T13:46:52.147965+00:00",
+  "started_monotonic_ns": 21137000,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/collect.py": "8f6742f286ffcc227908ace7710a5cebfb14a00e1d09a3cacaa3e026e002640a",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/test_collect.py": "1df1742374b62b83b3883996a25d8bbb828c82eb695a2c6f79e262d684bb51e1",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/PROTOCOL.md": "1323ab5fb3f4f1150ef8a086493f29c0a12ed53ea51b3f5a49c2920c0b9bbd23",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/work/collect.py": "6bba53051d5ce6565b6eaff43a9118f20d4eeb5491ac25686e2707c50233fda1",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/work/test_collect.py": "d18dc5da283f2ccc77f9779eec2b42664d972e259a39d10e5abb8fde3e7cb8f4"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 36749,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 36749,
+    "members": [],
+    "monotonic_ns": 2446512083,
+    "utc": "2026-10-15T13:46:54.573320+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/collect.py": "8f6742f286ffcc227908ace7710a5cebfb14a00e1d09a3cacaa3e026e002640a",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/test_collect.py": "1df1742374b62b83b3883996a25d8bbb828c82eb695a2c6f79e262d684bb51e1",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/PROTOCOL.md": "1323ab5fb3f4f1150ef8a086493f29c0a12ed53ea51b3f5a49c2920c0b9bbd23",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/work/collect.py": "6bba53051d5ce6565b6eaff43a9118f20d4eeb5491ac25686e2707c50233fda1",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/work/test_collect.py": "d18dc5da283f2ccc77f9779eec2b42664d972e259a39d10e5abb8fde3e7cb8f4"
+  },
+  "finished_utc": "2026-10-15T13:46:54.573730+00:00",
+  "finished_monotonic_ns": 2446929791,
+  "elapsed_seconds": 2.425792791,
+  "stdout": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/mocks-attempt02.stdout",
+  "stdout_sha256": "13e5448d07f6e722edd6f4e88b5f55d7fa5d6bf05f02a1e0d42efe3b8b10071d",
+  "stderr": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/mocks-attempt02.stderr",
+  "stderr_sha256": "02bb7475f6b83aa2d49518e09dc81f3f5741ae3697cba8c52c2cb19e06f92419"
+}

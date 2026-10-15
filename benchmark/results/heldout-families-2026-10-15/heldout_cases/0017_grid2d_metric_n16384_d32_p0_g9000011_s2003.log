@@ -1,0 +1,22 @@
+Running six-algorithm retention control grid2d_metric_n16384_d32_p0 graph_seed=9000011 kkt_seed=2003
+crossover_topology_attempts=1
+generation_seconds=0.0594464 reference_certificate_seconds=0.0918413
+reference_certificate_v1 {"case_id":"grid2d_metric_n16384_d32_p0","graph_seed":9000011,"kkt_seed":2003,"n":16384,"m":524288,"input_fingerprint":16654363510727473416,"topology_fingerprint":11347612754284743104,"validation":"pass"}
+        1.18 real         1.17 user         0.01 sys
+           131547136  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               11728  page reclaims
+                   1  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   1  voluntary context switches
+                   8  involuntary context switches
+         11554341239  instructions retired
+          4659888687  cycles elapsed
+           113410504  peak memory footprint

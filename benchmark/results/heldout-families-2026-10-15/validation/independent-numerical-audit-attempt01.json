@@ -1,0 +1,48 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "benchmark/results/heldout-families-2026-10-15/validation/independent_numerical_audit.py",
+    "--capture",
+    "benchmark/results/heldout-families-2026-10-15/heldout.json",
+    "--analysis-dir",
+    "benchmark/results/heldout-families-2026-10-15/analysis",
+    "--output-dir",
+    "benchmark/results/heldout-families-2026-10-15/validation/independent-numerical-audit"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-compressed-queries",
+  "started_utc": "2026-10-15T12:16:22.812515+00:00",
+  "started_monotonic_ns": 31652541,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/validation/independent_numerical_audit.py": "d13d201b08b4d959badd25a0d6ec039789b06c10b2bb081f501dc434891d69f8",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/freeze.json": "6b120affb241e447ce5875645e7b746dfd1164a03aeabefffd4d42f5a01ba28f"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 31643,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 31643,
+    "members": [],
+    "monotonic_ns": 588653208,
+    "utc": "2026-10-15T12:16:23.369509+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/validation/independent_numerical_audit.py": "d13d201b08b4d959badd25a0d6ec039789b06c10b2bb081f501dc434891d69f8",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/freeze.json": "6b120affb241e447ce5875645e7b746dfd1164a03aeabefffd4d42f5a01ba28f"
+  },
+  "finished_utc": "2026-10-15T12:16:23.369761+00:00",
+  "finished_monotonic_ns": 588916083,
+  "elapsed_seconds": 0.557263542,
+  "stdout": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/validation/independent-numerical-audit-attempt01.stdout",
+  "stdout_sha256": "b47104e4680fb22c848b15042b08ffd58cb2cb5a1a28f6ccd812dd88a0da1198",
+  "stderr": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/validation/independent-numerical-audit-attempt01.stderr",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}
