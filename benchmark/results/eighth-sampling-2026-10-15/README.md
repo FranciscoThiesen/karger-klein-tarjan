@@ -51,4 +51,9 @@ seeds and two sampler seeds: **48 children, 2,016 outputs, 4,608 paired clock
 ratios, 3,024 summary medians and 30 endpoint classifications**. All five
 comparators remain. Same numerical sampler seeds do not imply identical
 recursive forests across rates. Historical timings will not be pooled or used
-to normalize gains. Freeze and serial performance release remain pending.
+to normalize gains. The [prospective freeze](freeze.json), SHA-256
+`2be7556d15b58f3f65cc380ac22b67c57fdf8aea747d651b9d648c6a1aa59d2f`,
+passed [preflight](validation/preflight-attempt01.json) at revision
+`0fec3ee75d5065c776a55656a13e1062e13426c3`. The evidence merge did not change
+any native source. Serial performance release remains pending until all
+separate diagnostics, builds and plots have stopped.

@@ -1,0 +1,61 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "benchmark/run_eighth_sampling.py",
+    "preflight",
+    "--half-binary",
+    "bin/eighth-sampling/timing-build/half/retention_control",
+    "--eighth-binary",
+    "bin/eighth-sampling/timing-build/eighth/retention_control",
+    "--half-build-record",
+    "benchmark/results/eighth-sampling-2026-10-15/validation/timing-build-half-build-record.json",
+    "--eighth-build-record",
+    "benchmark/results/eighth-sampling-2026-10-15/validation/timing-build-eighth-build-record.json",
+    "--parent-freeze",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/freeze.json",
+    "--manifest",
+    "benchmark/results/eighth-sampling-2026-10-15/manifest.csv",
+    "--protocol",
+    "benchmark/results/eighth-sampling-2026-10-15/PROTOCOL.md",
+    "--freeze",
+    "benchmark/results/eighth-sampling-2026-10-15/freeze.json"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "started_utc": "2026-10-15T14:03:01.458333+00:00",
+  "started_monotonic_ns": 26889083,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_eighth_sampling.py": "6a782a9802c44558d840860c31aff2586f980c662118a223f3da8a95b213fab1",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/test_eighth_sampling.py": "5cdce0993d8b2736972dfe5a70da96417f5293f366439433ecff31cba6424b33",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/PROTOCOL.md": "f7aa1c91f2b2b5a725b0cd8891e331e7a7c756e388d85549cfbf4b7ebf2d14ea"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 41356,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 41356,
+    "members": [],
+    "monotonic_ns": 302099833,
+    "utc": "2026-10-15T14:03:01.733527+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_eighth_sampling.py": "6a782a9802c44558d840860c31aff2586f980c662118a223f3da8a95b213fab1",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/test_eighth_sampling.py": "5cdce0993d8b2736972dfe5a70da96417f5293f366439433ecff31cba6424b33",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/PROTOCOL.md": "f7aa1c91f2b2b5a725b0cd8891e331e7a7c756e388d85549cfbf4b7ebf2d14ea"
+  },
+  "finished_utc": "2026-10-15T14:03:01.733910+00:00",
+  "finished_monotonic_ns": 302495041,
+  "elapsed_seconds": 0.275605958,
+  "stdout": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/validation/preflight-attempt01.stdout",
+  "stdout_sha256": "470177e5a6cfdafae825ef1431673591dd246367477a4ddd70b5f95035a38fe9",
+  "stderr": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/validation/preflight-attempt01.stderr",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}
