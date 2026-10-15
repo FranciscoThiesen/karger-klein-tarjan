@@ -1,0 +1,28 @@
+{
+  "validation": "pass",
+  "reviewer": "multigraph_design",
+  "purpose": "Independent synthetic collector validation; no native solvers, builds, or performance timing.",
+  "command": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "-m",
+    "unittest",
+    "test_density_search",
+    "-v"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark",
+  "python": "3.9.6 (default, Mar 29 2024, 10:51:09) \n[Clang 15.0.0 (clang-1500.3.9.4)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "started_utc": "2026-10-15T07:31:33.200069+00:00",
+  "elapsed_seconds": 2.527119375,
+  "exit_status": 0,
+  "source_sha256": {
+    "benchmark/run_density_search.py": "bbae3bf88f817ddf8e06f032fd3bd211d8bbc8d70f6280db393819fc21d02021",
+    "benchmark/test_density_search.py": "3fe0a0ee7d62e11f991cdf477f3512bafad18c18bb02ded9bc905834a9aa635d",
+    "benchmark/plot_density_search.py": "4d8c7ba15084cfd9b5a8ba9a31f26d68273231f1a5769bfbe2f6e390d37d1ee1",
+    "benchmark/results/density-search-2026-10-15/PROTOCOL.md": "59750e0d5da4b30f8719eaf198fc0c7eacee7411edf56f21ec3160a50935c7fa",
+    "benchmark/results/density-search-2026-10-15/manifest.csv": "8d3d895414f9f4189961f376a8656d4ac289505427a47bf3a1839ccde489d932"
+  },
+  "source_unchanged": true,
+  "log": "benchmark/results/density-search-2026-10-15/validation/independent-mock-tests-attempt01.log",
+  "log_sha256": "76e6747368485746150bb1dd65d8eb299fcd483f20622885fdfd315ba6c788b8"
+}

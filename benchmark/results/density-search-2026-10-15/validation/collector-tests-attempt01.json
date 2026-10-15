@@ -1,0 +1,21 @@
+{
+  "schema": "density_collector_mock_tests_v1",
+  "command": [
+    "python3",
+    "-B",
+    "benchmark/test_density_search.py"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-edge-verifier-view",
+  "started_utc": "2026-10-15T07:30:22.538469+00:00",
+  "finished_utc": "2026-10-15T07:30:25.720867+00:00",
+  "elapsed_monotonic_ns": 3182057583,
+  "exit_status": 0,
+  "validation": "pass",
+  "native_builds_or_solver_executions": 0,
+  "source_sha256": {
+    "benchmark/run_density_search.py": "bbae3bf88f817ddf8e06f032fd3bd211d8bbc8d70f6280db393819fc21d02021",
+    "benchmark/test_density_search.py": "3fe0a0ee7d62e11f991cdf477f3512bafad18c18bb02ded9bc905834a9aa635d"
+  },
+  "log": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/density-search-2026-10-15/validation/collector-tests-attempt01.log",
+  "log_sha256": "d474509abe4540e7912827318fcc640dc27a350d87afc33f6beadbba15f02695"
+}
