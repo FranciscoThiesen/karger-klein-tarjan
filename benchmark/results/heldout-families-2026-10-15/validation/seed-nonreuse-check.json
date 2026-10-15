@@ -1,0 +1,40 @@
+{
+  "validation": "pass",
+  "command": [
+    "rg",
+    "-n",
+    "\\b(9000011|9000049|2003)\\b",
+    "benchmark",
+    "--glob",
+    "*.py",
+    "--glob",
+    "*PROTOCOL*",
+    "--glob",
+    "*freeze*.json",
+    "--glob",
+    "!**/heldout-families-2026-10-15/**",
+    "--glob",
+    "!run_heldout_families.py",
+    "--glob",
+    "!test_heldout_families.py"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-compressed-queries",
+  "checked_utc": "2026-10-15T11:00:41.831852+00:00",
+  "revision": "a07f047bd430e67d674b359f657353f230863eb3",
+  "exit_status": 1,
+  "stdout": "",
+  "stderr": "",
+  "graph_seeds": [
+    9000011,
+    9000049
+  ],
+  "sampling_seeds": [
+    2003
+  ],
+  "scope": "No matching literals in earlier benchmark Python sources, protocol documents or freeze JSONs in this worktree. Excludes the new held-out files; this is not a claim about every external experiment or RNG draw.",
+  "source_sha256": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/run_heldout_families.py": "e32beaceeb13ad8933cd461e0cab45c15a7a0b4bd4c9c5d58875f9290859cb4d",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/manifest.csv": "57a424af3afc321814640bb9194340158a7fd98cc8bfc733fa01f2a776a828a7",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/PROTOCOL.md": "64ed6f857b215300068d668756c3d4a69dcba4247bc0e6e6e0f7e5b029921fb9"
+  }
+}

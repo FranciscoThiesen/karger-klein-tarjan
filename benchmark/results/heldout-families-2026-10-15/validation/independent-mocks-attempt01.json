@@ -1,0 +1,42 @@
+{
+  "schema": "heldout_independent_validation_v1",
+  "status": "pass",
+  "command": [
+    "/usr/local/opt/python@3.14/bin/python3.14",
+    "-B",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/test_heldout_families.py"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-compressed-queries",
+  "started_utc": "2026-10-15T11:01:06.237261+00:00",
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/run_heldout_families.py": "e32beaceeb13ad8933cd461e0cab45c15a7a0b4bd4c9c5d58875f9290859cb4d",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/test_heldout_families.py": "463d4d505da4a6f05d071dd2926a19d4e4711c19aec1fd074494ad1d0d7b56ec",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/PROTOCOL.md": "64ed6f857b215300068d668756c3d4a69dcba4247bc0e6e6e0f7e5b029921fb9",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/manifest.csv": "57a424af3afc321814640bb9194340158a7fd98cc8bfc733fa01f2a776a828a7"
+  },
+  "native_solver_execution": false,
+  "independent_source_review": "PASS: installed collector/test differ from reviewed prospective preparation only in introductory docstrings; protocol/manifest and ninth malformed-output group reviewed.",
+  "process_group": 27133,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "utc": "2026-10-15T11:01:32.720972+00:00",
+    "monotonic_ns": 3620004573095666,
+    "process_group": 27133,
+    "validation": "pass",
+    "members": [],
+    "rss_kib": 0
+  },
+  "all_owned_groups_known_empty": true,
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/run_heldout_families.py": "e32beaceeb13ad8933cd461e0cab45c15a7a0b4bd4c9c5d58875f9290859cb4d",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/test_heldout_families.py": "463d4d505da4a6f05d071dd2926a19d4e4711c19aec1fd074494ad1d0d7b56ec",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/PROTOCOL.md": "64ed6f857b215300068d668756c3d4a69dcba4247bc0e6e6e0f7e5b029921fb9",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/manifest.csv": "57a424af3afc321814640bb9194340158a7fd98cc8bfc733fa01f2a776a828a7"
+  },
+  "elapsed_seconds": 26.484313999768347,
+  "finished_utc": "2026-10-15T11:01:32.724898+00:00",
+  "stdout": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/validation/independent-mocks-attempt01.stdout",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/validation/independent-mocks-attempt01.stderr",
+  "stderr_sha256": "851fdaaa3723cdc894d2e3ec28d88a76762ce888bb32047bc86a662eef372ef6"
+}
