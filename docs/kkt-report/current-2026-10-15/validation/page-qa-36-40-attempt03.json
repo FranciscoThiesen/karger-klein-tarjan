@@ -1,0 +1,86 @@
+{
+  "schema": "kkt_current_edition_page_qa_v1",
+  "validation": "pass",
+  "reviewer": "experiment_design",
+  "created_utc": "2026-10-15T21:32:12.962179+00:00",
+  "page_range": [
+    36,
+    40
+  ],
+  "total_pdf_pages": 40,
+  "input_sha256": {
+    "pdf-attempt03/report.pdf": "63731fc825c3b0e0db800c3dc162e159b2fcb0c0dad5aee1d5424433b6a3c323",
+    "pdf-attempt03/pdf_metadata.json": "32021735b8b25abec92a7a40e8bbd24d7c94e6d3bcaafe39a6118452247b62d6",
+    "html-attempt03/REPORT.md": "afe0941ab3883aab2e1f0ee414bd0fe521d014adb7c541e76a94be4093967062",
+    "html-attempt03/report.html": "a5261b738e018fa0d046b52b5112e468c58c422bbed2deff104eb0d4572b4d6b",
+    "html-attempt03/render_metadata.json": "bec9733b9a84f11cabef98cce6821f1b7b2f61b26c47a108ae13e0bb9be1fb63",
+    "raster-attempt03/receipt.json": "744b7922c3a32a43a2a5d979da621c9c1734a7fee304a0946953cd5e101a2853",
+    "validation/raster-comparison-attempt03.json": "771279f09e059e1b9cbd1a030afa21853c4dfa45d148587f08cda44bbe535c2a",
+    "validation/page-qa-31-40.json": "03ee586186dc3034a8537d7a088e1cbe3e21da13449382a8fafbfc2793610ef6"
+  },
+  "pages": [
+    {
+      "page": 36,
+      "raster": "raster-attempt03/page-36.png",
+      "sha256": "40e1095d1213ed28704aa82981bbcc5410755f0d59314b0f29f23a8f052971b7",
+      "viewed_at_original_resolution": true,
+      "readability": "pass",
+      "clipping": "pass",
+      "table_header": "pass",
+      "caption": "not_applicable",
+      "verdict": "pass",
+      "notes": "Repaired endpoint table now shows every complete n value and each U/Q percentage on one line. Headers and every body cell are clear; following counter/root-bound paragraphs are unclipped with normal continuation onto page 37."
+    },
+    {
+      "page": 37,
+      "raster": "raster-attempt03/page-37.png",
+      "sha256": "9343933c97c963bed04558559d1754ba752af89a14773665f63dbb0212dd41fa",
+      "viewed_at_original_resolution": true,
+      "readability": "pass",
+      "clipping": "pass",
+      "table_header": "not_applicable",
+      "caption": "not_applicable",
+      "verdict": "pass",
+      "notes": "Root-inference continuation, section heading and correctness/provenance text are readable and unclipped; no footer overlap."
+    },
+    {
+      "page": 38,
+      "raster": "raster-attempt03/page-38.png",
+      "sha256": "c9a551e71fcd3ddb4100a5d62e6259f07fc8e177019f306055654350a1ff529b",
+      "viewed_at_original_resolution": true,
+      "readability": "pass",
+      "clipping": "pass",
+      "table_header": "pass",
+      "caption": "not_applicable",
+      "verdict": "pass",
+      "notes": "Completed/pending outcomes table has readable headers and full rows. Theory and qualification paragraphs are intact with no clipping."
+    },
+    {
+      "page": 39,
+      "raster": "raster-attempt03/page-39.png",
+      "sha256": "6564987f2019ed31a709ca9154e2277533c4a4b8b80b25f33c83a1cda1c40530",
+      "viewed_at_original_resolution": true,
+      "readability": "pass",
+      "clipping": "pass",
+      "table_header": "pass",
+      "caption": "not_applicable",
+      "verdict": "pass",
+      "notes": "Supplementary gallery has clear column headers, row boundaries and complete captions/text. Final revision table starts with its header and first full row; it continues normally onto page 40."
+    },
+    {
+      "page": 40,
+      "raster": "raster-attempt03/page-40.png",
+      "sha256": "142323c2c6d7d505a6e40a1a08dc146a8359021aaae0465f46f149c10571dd92",
+      "viewed_at_original_resolution": true,
+      "readability": "pass",
+      "clipping": "pass",
+      "table_header": "pass",
+      "caption": "not_applicable",
+      "verdict": "pass",
+      "notes": "Revision table correctly repeats its header, all hashes and rows remain readable, and final provenance paragraphs are complete. No clipping or footer overlap."
+    }
+  ],
+  "method": "Every changed assigned PNG was independently viewed at original resolution using view_image. Earlier page36 finding is preserved; this receipt confirms its repair.",
+  "unchanged_pages": "Root raster-comparison receipt establishes pages1-35 byte-identical to attempt02; my preceding receipt covers31-35.",
+  "issues": []
+}

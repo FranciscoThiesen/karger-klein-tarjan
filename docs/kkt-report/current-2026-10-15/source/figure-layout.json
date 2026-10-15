@@ -1,0 +1,70 @@
+{
+  "schema": "kkt_pdf_figure_layout_v1",
+  "figures": {
+    "b013c5a958c3ba9731252f021230834fd098758823ee2c1158c27c69dfe4feb5": {
+      "nominal_width_inches": 7.1,
+      "minimum_label_pt": 8.5,
+      "basis": "Accepted larger-hierarchy retention-figures-paper-attempt02/paper_hierarchy_expectation.png; plot_mechanisms_paper_v2.py retention_render explicitly uses figsize=(7.1,8.6), minimum text 8.5pt, and savefig without tight-bbox resizing. Its provenance records figure_width_inches=7.1 and minimum_text_points=8.5; image digest is transcribed from PAPER_FIGURE_QA.json, not newly computed during timing."
+    },
+    "3a0e6e907ea0df0e32932153808b99cf9ee1e8dd17f9a9ca754bfb5440e7cd38": {
+      "nominal_width_inches": 7.1,
+      "minimum_label_pt": 8.5,
+      "basis": "Accepted larger-hierarchy witness-figures-paper-attempt01/paper_sampling_witness.png; plot_mechanisms_paper.py witness_render explicitly uses figsize=(7.1,9.0), minimum edge/legend/caption text 8.5pt, and savefig without tight-bbox resizing. Its provenance records figure_width_inches=7.1 and minimum_text_points=8.5; digest is transcribed from existing QA."
+    },
+    "f45050c03f5d308cb955fbe7ec985086805637b6c3beab77dbb73a237aff1203": {
+      "nominal_width_inches": 7.1,
+      "minimum_label_pt": 8.5,
+      "basis": "Accepted eighth-sampling figures-paper-attempt02/paper_variant_gains_wall.png; its provenance binds plot_mst_paper_v3.py. WIDTH=7.1, timing_render height=8.8, minimum ticks/legend/caption=8.5pt, save checks width and omits tight bbox. Provenance declares those dimensions; digest is transcribed from existing QA."
+    },
+    "6ed6f03eb3af8098ffbb9c09e285a63fc03d1fc089bd81744cf9d23ed0f51c7a": {
+      "nominal_width_inches": 7.1,
+      "minimum_label_pt": 8.5,
+      "basis": "Accepted eighth-sampling figures-paper-attempt02/paper_eighth_ratios_wall.png; provenance binds plot_mst_paper_v3.py, WIDTH=7.1 and timing_render height=8.8. Minimum ticks/legend/caption=8.5pt; save preserves physical canvas. Digest is transcribed from existing QA."
+    },
+    "4db0788c6d2b2dc33858a76531e6137e90bf1a540df443302dc95a670fedc47e": {
+      "nominal_width_inches": 7.1,
+      "minimum_label_pt": 8.5,
+      "basis": "Accepted eighth-sampling work/figures-paper-attempt01/paper_work_small.png; provenance binds plot_mst_paper.py work_render. WIDTH=7.1, height=9.0; legend/caption/exception text min8.5pt and field labels9pt. Save preserves physical canvas; digest is transcribed from existing QA."
+    },
+    "11a0c7e13c04e556acb734ca1f47c4abb5f3cd107c2b448b3e32b602c3516241": {
+      "nominal_width_inches": 7.1,
+      "minimum_label_pt": 8.5,
+      "basis": "Accepted eighth-sampling work/figures-paper-attempt01/paper_work_large.png; provenance binds plot_mst_paper.py work_render. WIDTH=7.1, height=9.0; minimum legend/caption/exception text8.5pt. Save preserves physical canvas; digest is transcribed from existing QA."
+    },
+    "6337b60e813b09fa9b33a113d3d632def58e8a989c151c382efbe321e9f99d0e": {
+      "nominal_width_inches": 7.1,
+      "minimum_label_pt": 8.5,
+      "basis": "Accepted eighth-extension figures-paper-attempt03/paper_ratios_wall.png; provenance binds plot_mst_paper_v4.py. WIDTH=7.1, height=8.8, minimum ticks/legend/caption=8.5pt, no tight-bbox resize. Digest is transcribed from existing QA."
+    },
+    "3e00c25d6bcaac8496812355f1d228b9d6e412db016d8168461ee3fe1b131596": {
+      "nominal_width_inches": 7.1,
+      "minimum_label_pt": 8.5,
+      "basis": "Accepted eighth-distance figures-paper-attempt01/paper_ratios_wall.png; plot_distance_paper.py WIDTH=7.1 and figsize=(WIDTH,8.8), minimum ticks/legend/caption=8.5pt. Source checks physical width and savefig omits tight bbox; provenance records figure_width_inches=7.1 and minimum_label_points=8.5. Digest is transcribed from existing QA."
+    },
+    "25a14db04d6365707988c1653a18862d99d099d2b13431cc492a51d5e335af22": {
+      "nominal_width_inches": 7.05,
+      "minimum_label_pt": 8.5,
+      "basis": "Accepted current-complexity paper-figures-attempt01/paper_normalized_native_process_cpu.png; source plot_complexity_paper_v2.py uses figsize=(7.05,9.0), minimum specified text8.5pt and no tight-bbox resize. Source and actual output are bound by render provenance and original-resolution QA; final PDF scale remains pending."
+    },
+    "4601e2b49423034330e5c6fa57204672f354724176a1ee59293aa527a5fff039": {
+      "nominal_width_inches": 7.05,
+      "minimum_label_pt": 8.5,
+      "basis": "Accepted current-complexity paper-figures-attempt01/paper_google_cpu_models_full11.png; source plot_complexity_paper_v2.py uses figsize=(7.05,9.0), minimum specified text8.5pt and no tight-bbox resize. Source and actual output are bound by render provenance and original-resolution QA; final PDF scale remains pending."
+    },
+    "f066ec9d711c80984dac59a420b8adfad6df2dc833a40de80a760f6a74f6741d": {
+      "nominal_width_inches": 7.05,
+      "minimum_label_pt": 8.5,
+      "basis": "Accepted current-complexity paper-figures-attempt01/paper_google_cpu_models_upper6.png; source plot_complexity_paper_v2.py uses figsize=(7.05,9.0), minimum specified text8.5pt and no tight-bbox resize. Source and actual output are bound by render provenance and original-resolution QA; final PDF scale remains pending."
+    },
+    "59665fb6d209b15b265cbf3ef16bf291f5423ab4c157842d09b5aa37bc8fb405": {
+      "nominal_width_inches": 7.1,
+      "minimum_label_pt": 8.5,
+      "basis": "Accepted lower-density paper-figures-attempt02/paper_d16_ratios_wall.png; plot_lower_density_paper_v2.py preserves 7.1\u00d78.8in canvas and minimum 8.5pt text without tight bbox; only bottom margin changes .24\u2192.28. Root and candidate reviewed all eight final paper PNGs; report integrator additionally viewed both selected wall pages at original resolution. Actual PNG digest checked against accepted digest; final PDF page QA pending."
+    },
+    "7aedcf4945e37967e0995bc2027ff932a9102a309230e9ec3488ad5d9fc164f1": {
+      "nominal_width_inches": 7.1,
+      "minimum_label_pt": 8.5,
+      "basis": "Accepted lower-density paper-figures-attempt02/paper_d8_ratios_wall.png; plot_lower_density_paper_v2.py preserves 7.1\u00d78.8in canvas and minimum 8.5pt text without tight bbox; only bottom margin changes .24\u2192.28. Root and candidate reviewed all eight final paper PNGs; report integrator additionally viewed both selected wall pages at original resolution. Actual PNG digest checked against accepted digest; final PDF page QA pending."
+    }
+  }
+}

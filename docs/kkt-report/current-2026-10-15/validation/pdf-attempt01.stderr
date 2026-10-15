@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/build_reportlab_pdf.py", line 353, in <module>
+    if __name__=='__main__':main()
+  File "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/build_reportlab_pdf.py", line 347, in main
+    try:render(args,receipt)
+  File "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/build_reportlab_pdf.py", line 321, in render
+    pages=page_gate(pdf)
+  File "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/build_reportlab_pdf.py", line 103, in page_gate
+    require(1<=count<=40,'Actual PDF must contain 1..40 pages, found '+str(count))
+  File "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/build_reportlab_pdf.py", line 31, in require
+    if not value: raise ValueError(message)
+ValueError: Actual PDF must contain 1..40 pages, found 42

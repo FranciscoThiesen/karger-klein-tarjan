@@ -1,0 +1,44 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/source/rasterize_final.py",
+    "--pdf-dir",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/pdf-attempt03",
+    "--output-dir",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/raster-attempt03"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "started_utc": "2026-10-15T21:31:19.774305+00:00",
+  "started_monotonic_ns": 26469541,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/source/rasterize_final.py": "ddac615ccdd9192b84596ce0b4de6bd2a845933a0c5ee9074ce1803932864655"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 6485,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 6485,
+    "members": [],
+    "monotonic_ns": 8361746750,
+    "utc": "2026-10-15T21:31:28.109594+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/source/rasterize_final.py": "ddac615ccdd9192b84596ce0b4de6bd2a845933a0c5ee9074ce1803932864655"
+  },
+  "finished_utc": "2026-10-15T21:31:28.109752+00:00",
+  "finished_monotonic_ns": 8361909791,
+  "elapsed_seconds": 8.33544025,
+  "stdout": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/validation/raster-attempt03.stdout",
+  "stdout_sha256": "91ab757149693d4edc4075ce8abbb7ff405ea0f2a22157875013e915615ab97d",
+  "stderr": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/validation/raster-attempt03.stderr",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

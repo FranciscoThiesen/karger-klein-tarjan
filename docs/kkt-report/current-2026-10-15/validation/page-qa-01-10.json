@@ -1,0 +1,75 @@
+{
+  "validation": "pass",
+  "reviewer": "root",
+  "method": "Each full page displayed via view_image with original detail; visual inspection, not text extraction",
+  "input_sha256": {
+    "pdf-attempt02/report.pdf": "3d89a413e09be8559f507293d57beb8ed3fdb484255b400a161ef7d8ecb76115",
+    "html-attempt02/REPORT.md": "9049b0c289d510e4ff1aeecff35a4d229edb590c928949e062029096e44f6f95",
+    "html-attempt02/report.html": "d7c02a5ffeb5bb30f63f6a0f9733f94bea1cc5991b8dae927d4498c56cfb0a82",
+    "raster-attempt02/receipt.json": "1d1023762c3b55a2cc201940bed32fd610240650415cc48cf49d25be0befc74e"
+  },
+  "pages": [
+    {
+      "page": 1,
+      "png_sha256": "6e2eb39e398a68516dc5ba13a99f74f02df609955489628d909d077053e8ca44",
+      "validation": "pass",
+      "note": "Title, results and first section readable; no clipped text."
+    },
+    {
+      "page": 2,
+      "png_sha256": "b46d0a42211b9f64d1b57658009675381ea9fe6d43efd7eb2917812e8f54f3f4",
+      "validation": "pass",
+      "note": "Implementation comparison table and long build flags wrap within margins."
+    },
+    {
+      "page": 3,
+      "png_sha256": "485a9222c5caafaf8a8077f53f50552a1ef7058994d31e309585f74185a37e63",
+      "validation": "pass",
+      "note": "Original defects, code identifiers and formulas readable; footer separated."
+    },
+    {
+      "page": 4,
+      "png_sha256": "336b88f78f251b1869f7fa5df179b2b7f712d88388a70d7b9cdcb6189d3fa9c8",
+      "validation": "pass",
+      "note": "Benchmark repairs and probability equations readable without missing glyphs."
+    },
+    {
+      "page": 5,
+      "png_sha256": "364f996ebdcb29206a9d6685020a47dc41c4a2e550e7d6874018fed5e71c7956",
+      "validation": "pass",
+      "note": "Historical fit table, alpha and exponent symbols readable."
+    },
+    {
+      "page": 6,
+      "png_sha256": "45119648d2dfa36fed61d5b7b9a7d610d83fa0db11bf427bf1da94968341f6d4",
+      "validation": "pass",
+      "note": "Current 24-curve choices and RMS table readable; intentional space before full-page figure."
+    },
+    {
+      "page": 7,
+      "png_sha256": "c4fd3687b76d8af16e1adc62c1b8675778040eb85af8c609c4f2ac21b3fd9ea9",
+      "validation": "pass",
+      "note": "All three normalized-time panels, ranges, legends, footnotes and caption readable."
+    },
+    {
+      "page": 8,
+      "png_sha256": "28889366626fd411a6fd239720c04a739f4e2df4b2f589168cc6049499cf269c",
+      "validation": "pass",
+      "note": "All 24 full-window model rows and six alternatives readable; legend and adjacent text clear."
+    },
+    {
+      "page": 9,
+      "png_sha256": "3e247260921bd2cf4f0415bea8e135d3ed47f3235199bd89d7b8caab5395145b",
+      "validation": "pass",
+      "note": "All 24 upper-window model rows and six alternatives readable; caption clear."
+    },
+    {
+      "page": 10,
+      "png_sha256": "593ffa276c61abf9d765a786e0c78be2405db1d31a6f285d321b33c88eb64126",
+      "validation": "pass",
+      "note": "Six-solver methods, prior art and crossover rule readable without overlap."
+    }
+  ],
+  "browser_qa": false,
+  "created_utc": "2026-10-15T21:27:44.153966+00:00"
+}

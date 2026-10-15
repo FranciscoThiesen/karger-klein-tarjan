@@ -1,0 +1,25 @@
+{
+  "schema": "kkt_publication_export_source_review_v1",
+  "validation": "pass",
+  "reviewer": "multigraph_design",
+  "created_utc": "2026-10-15T21:33:23.398485+00:00",
+  "source_sha256": {
+    "/tmp/kkt-publication-export-prep/export_publication.py": "cb249364698e1366b47ac4a59132df277ab9271121987b5684d21f43fa326c3d",
+    "/tmp/kkt-publication-export-prep/README.md": "90d32db87ec6e3c17a37f5326716480a1eeff8c59c84307abd7c8fe43cff6eee"
+  },
+  "scope": [
+    "Accepted final link receipt and explicitly included artifacts define the bounded inventory.",
+    "Only final Markdown/HTML primary links require complete relocated closure; supplementary limitations remain explicit.",
+    "Canonical path, source/copy hash, exclusive destination/receipt, native/private artifact exclusion and failure preservation were read.",
+    "Final Markdown inline and full-reference image classification rejects remote image dependencies while retaining ordinary remote citations.",
+    "Raw JSON/CSV/source machine paths are not traversed; native proof portability and browser validation remain false."
+  ],
+  "limitations": [
+    "Source review only: no helper import, export execution, fixture execution or new browser action.",
+    "Narrow Markdown grammar remains inherited; the added image classifier can conservatively reject unsupported or code-example-like forms.",
+    "No claim about final export success, anchor semantics, dynamic JavaScript dependencies or general Markdown/HTML parsing."
+  ],
+  "blocking_findings": [],
+  "native_solver_execution": false,
+  "export_executed_by_reviewer": false
+}

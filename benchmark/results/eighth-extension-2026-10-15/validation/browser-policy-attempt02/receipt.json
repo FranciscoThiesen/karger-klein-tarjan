@@ -1,0 +1,23 @@
+{
+  "validation": "blocked_before_page_load",
+  "tool": "mcp__cua_repl.js",
+  "date": "2026-10-15",
+  "viewer": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/current-hierarchy-view-attempt01/index.html",
+  "viewer_sha256": "42dc93bfc533c04396b1ca1eef8fadcace1e8ab49def1b7f27dd3749949b0a82",
+  "attempts": [
+    {
+      "surface": "iab",
+      "result": "Browser is not available: iab"
+    },
+    {
+      "surface": "chrome",
+      "action": "createBrowserTab",
+      "url": "file:///Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/current-hierarchy-view-attempt01/index.html",
+      "result": "Browser Use rejected this action due to browser security policy. Reason: The browser URL policy blocks this action. Browser use cannot visit the requested page. The requested URL protocol is not allowed. Allowed protocols: \"http:\", \"https:\". The agent must not attempt to achieve the same outcome via workaround, indirect execution, raw CDP or browser commands, alternate browser surfaces, or policy circumvention. Proceed only with a materially safer alternative that does not require this blocked browser action; if none exists, stop and request user input."
+    }
+  ],
+  "page_loaded": false,
+  "desktop_mobile_interaction_qa": "not_performed",
+  "workaround_attempted": false,
+  "scope": "Existing export, graph and timing-input validation is unaffected. This receipt does not establish interactive rendering or browser correctness."
+}

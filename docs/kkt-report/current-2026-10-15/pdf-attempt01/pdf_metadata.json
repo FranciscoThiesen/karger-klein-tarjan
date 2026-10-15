@@ -1,0 +1,22 @@
+{
+  "schema": "kkt_reportlab_pdf_v1",
+  "validation": "failed",
+  "command": [
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/build_reportlab_pdf.py",
+    "--edition",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/html-attempt01",
+    "--figure-layout",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/source/figure-layout.json",
+    "--output-dir",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/pdf-attempt01"
+  ],
+  "created_utc": "2026-10-15T21:22:09.103349+00:00",
+  "native_solver_execution": false,
+  "historical_files_modified": false,
+  "page_cap": 40,
+  "pdf_every_page_visual_qa": "pending",
+  "browser_interaction_qa": "not performed; unavailable browser is not replaced by PDF layout",
+  "viewer_interaction_qa": "pending separately",
+  "publication_link_completeness": "separate tracked/copied-link gate",
+  "error": "ValueError('Actual PDF must contain 1..40 pages, found 42')"
+}

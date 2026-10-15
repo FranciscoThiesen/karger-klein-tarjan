@@ -1,0 +1,325 @@
+{
+  "schema": "kkt_final_publication_qa_v1",
+  "validation": "pass_with_declared_browser_limitations",
+  "created_utc": "2026-10-15T21:32:49.268237+00:00",
+  "pdf_page_count": 40,
+  "pdf_page_size": "A4",
+  "all_pdf_pages_visually_reviewed": true,
+  "main_figures": 13,
+  "minimum_figure_label_pt": 8.5,
+  "body_font_pt": 10,
+  "table_font_pt": 8.5,
+  "input_sha256": {
+    "pdf-attempt03/report.pdf": "63731fc825c3b0e0db800c3dc162e159b2fcb0c0dad5aee1d5424433b6a3c323",
+    "pdf-attempt03/pdf_metadata.json": "32021735b8b25abec92a7a40e8bbd24d7c94e6d3bcaafe39a6118452247b62d6",
+    "html-attempt03/REPORT.md": "afe0941ab3883aab2e1f0ee414bd0fe521d014adb7c541e76a94be4093967062",
+    "html-attempt03/report.html": "a5261b738e018fa0d046b52b5112e468c58c422bbed2deff104eb0d4572b4d6b",
+    "html-attempt03/render_metadata.json": "bec9733b9a84f11cabef98cce6821f1b7b2f61b26c47a108ae13e0bb9be1fb63",
+    "source/REPORT-attempt03.md": "a1ec5dc7923d6356a70f02055b21bba145941eca98cbe1a5211de9e67ed5ec34",
+    "source/figure-layout.json": "445672e51e64cc74a43956463ac1e70aa91a6dfbc067b2fee13a6e42f58252e2",
+    "raster-attempt03/receipt.json": "744b7922c3a32a43a2a5d979da621c9c1734a7fee304a0946953cd5e101a2853",
+    "validation/publication-links-attempt02.json": "12cef2e9ba5ab30ee206cdf407a944294ebbdda931dae68ab6644994fd586d79",
+    "validation/raster-comparison-attempt03.json": "771279f09e059e1b9cbd1a030afa21853c4dfa45d148587f08cda44bbe535c2a"
+  },
+  "review_receipt_sha256": {
+    "page-qa-01-10.json": "e9eeb32f528075db4e81f3089245958645c3528e886578588f597875e902a5d4",
+    "page-qa-11-20.json": "e694b5a9878286e1c17894236f13b6d092056a3220ce38cc99babedce5302018",
+    "page-qa-21-30.json": "4bf6f21eb2844f3e95d221bc5c7e8be431643eb04bc20e7ec89f5bbddddab547",
+    "page-qa-31-40.json": "03ee586186dc3034a8537d7a088e1cbe3e21da13449382a8fafbfc2793610ef6",
+    "page-qa-36-40-attempt03.json": "2f5e30db37a2dae484379c591c0d9ccf5b98b34717a26522b2c7f8af3424d52e"
+  },
+  "page_coverage": [
+    {
+      "page": 1,
+      "sha256": "6e2eb39e398a68516dc5ba13a99f74f02df609955489628d909d077053e8ca44",
+      "review": "page-qa-01-10.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": true
+    },
+    {
+      "page": 2,
+      "sha256": "b46d0a42211b9f64d1b57658009675381ea9fe6d43efd7eb2917812e8f54f3f4",
+      "review": "page-qa-01-10.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": true
+    },
+    {
+      "page": 3,
+      "sha256": "485a9222c5caafaf8a8077f53f50552a1ef7058994d31e309585f74185a37e63",
+      "review": "page-qa-01-10.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": true
+    },
+    {
+      "page": 4,
+      "sha256": "336b88f78f251b1869f7fa5df179b2b7f712d88388a70d7b9cdcb6189d3fa9c8",
+      "review": "page-qa-01-10.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": true
+    },
+    {
+      "page": 5,
+      "sha256": "364f996ebdcb29206a9d6685020a47dc41c4a2e550e7d6874018fed5e71c7956",
+      "review": "page-qa-01-10.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": true
+    },
+    {
+      "page": 6,
+      "sha256": "45119648d2dfa36fed61d5b7b9a7d610d83fa0db11bf427bf1da94968341f6d4",
+      "review": "page-qa-01-10.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": true
+    },
+    {
+      "page": 7,
+      "sha256": "c4fd3687b76d8af16e1adc62c1b8675778040eb85af8c609c4f2ac21b3fd9ea9",
+      "review": "page-qa-01-10.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": true
+    },
+    {
+      "page": 8,
+      "sha256": "28889366626fd411a6fd239720c04a739f4e2df4b2f589168cc6049499cf269c",
+      "review": "page-qa-01-10.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": true
+    },
+    {
+      "page": 9,
+      "sha256": "3e247260921bd2cf4f0415bea8e135d3ed47f3235199bd89d7b8caab5395145b",
+      "review": "page-qa-01-10.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": true
+    },
+    {
+      "page": 10,
+      "sha256": "593ffa276c61abf9d765a786e0c78be2405db1d31a6f285d321b33c88eb64126",
+      "review": "page-qa-01-10.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": true
+    },
+    {
+      "page": 11,
+      "sha256": "0a25c86cf5665337c95e91ba47c6e10e253a08bf1a1af7a2be135c54ec543177",
+      "review": "page-qa-11-20.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": true
+    },
+    {
+      "page": 12,
+      "sha256": "de9914ae78749f839bfc16a12fd541ab93271e93067eefebfc73b67a7b2513b2",
+      "review": "page-qa-11-20.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": true
+    },
+    {
+      "page": 13,
+      "sha256": "53cdbb41f3fed80087904b6d9ae9bada007ec173264f325e7d9f0fe18896d720",
+      "review": "page-qa-11-20.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": true
+    },
+    {
+      "page": 14,
+      "sha256": "64fedba3371ed6c78891fed511cc920c8112cb2b621d0fb737f36b2cde630120",
+      "review": "page-qa-11-20.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": true
+    },
+    {
+      "page": 15,
+      "sha256": "2a25c4baa1fa42330b73331cd26404547c9e1a413f4da4d717767997ec66ac5e",
+      "review": "page-qa-11-20.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": true
+    },
+    {
+      "page": 16,
+      "sha256": "4b1fe544d20035eaf7392cc950958a2b384bd36e96bf6e74a5fad398502d25b8",
+      "review": "page-qa-11-20.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": true
+    },
+    {
+      "page": 17,
+      "sha256": "86baedc760543e973ad01bd7733ae0c56d75805c1dae28ddb906f8ccb7179568",
+      "review": "page-qa-11-20.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": true
+    },
+    {
+      "page": 18,
+      "sha256": "dfaece12b1e02aa91b9a96cb3bc9827b8291923a308cda876a783fe726f88e9a",
+      "review": "page-qa-11-20.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": true
+    },
+    {
+      "page": 19,
+      "sha256": "8af849680c6cc0db032596a635812760592331e6c6bf33d219242d6dce1983bf",
+      "review": "page-qa-11-20.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": true
+    },
+    {
+      "page": 20,
+      "sha256": "3d03b507e6925989720045150cf5bd037068bf7d87d179156262f9c284317e45",
+      "review": "page-qa-11-20.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": true
+    },
+    {
+      "page": 21,
+      "sha256": "7b799a756af7624dd884893346ea9ee33e42d434485df6f38194bed9bdd3fe2c",
+      "review": "page-qa-21-30.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": true
+    },
+    {
+      "page": 22,
+      "sha256": "8b736168ab969d24d0c8dd56ed9d6d0b5e74b0d4463dd87106373f5cbe3e0460",
+      "review": "page-qa-21-30.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": true
+    },
+    {
+      "page": 23,
+      "sha256": "adfc8bc766cf8898bdb8b87a350565b37f650a51427ecb38cc17e250ea938122",
+      "review": "page-qa-21-30.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": true
+    },
+    {
+      "page": 24,
+      "sha256": "1b7b4ec963e209d2125b336722416765ef60a920a3fc48b1bb83a8e25e3d4504",
+      "review": "page-qa-21-30.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": true
+    },
+    {
+      "page": 25,
+      "sha256": "9559fd38c439d1daa6369955221087a8e74d7914a2c1a89b3c86814cb1f8f8b7",
+      "review": "page-qa-21-30.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": true
+    },
+    {
+      "page": 26,
+      "sha256": "077d0f199a1faeb80811e7730d1e2808f3b2cc1e6e2c8158e862562e402c19ed",
+      "review": "page-qa-21-30.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": true
+    },
+    {
+      "page": 27,
+      "sha256": "ac94c7105dedb21608c0f44e7a080412537399ccf86849364ea6cb2c8cfe688d",
+      "review": "page-qa-21-30.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": true
+    },
+    {
+      "page": 28,
+      "sha256": "1e6204a7716e7b58f80b445ad27e2f4fce1bdac711c12ca4788b0b7f5cfcfefb",
+      "review": "page-qa-21-30.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": true
+    },
+    {
+      "page": 29,
+      "sha256": "26c68e9e2aba33af1ada874f2da0658eb3e87c002757dbf5f9376c2feea97726",
+      "review": "page-qa-21-30.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": true
+    },
+    {
+      "page": 30,
+      "sha256": "cf6be60961946d4ebe601f7bfe64078590cf70d64ad3a38286fa4b147b879c60",
+      "review": "page-qa-21-30.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": true
+    },
+    {
+      "page": 31,
+      "sha256": "60d68dd9ecdde82fb90ffcfab1c4bd9305c28e15e55533fd25b33658e3a1b846",
+      "review": "page-qa-31-40.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": true
+    },
+    {
+      "page": 32,
+      "sha256": "9238d546527ea553e646adf67dace439be376d14038a10f21e374fd88957798d",
+      "review": "page-qa-31-40.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": true
+    },
+    {
+      "page": 33,
+      "sha256": "056f558059dec972fc1eb929da5e977a22f4174b95553c79ff6e1f24cd4cdedd",
+      "review": "page-qa-31-40.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": true
+    },
+    {
+      "page": 34,
+      "sha256": "f77cb48f1bd99eac721c9f8cefb73d8b8ddaa9e1fbd5040be63ccc7747004c98",
+      "review": "page-qa-31-40.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": true
+    },
+    {
+      "page": 35,
+      "sha256": "052e8f0f0f138817914fc679c20567bb9ea06c643ea59505ca9f62f7647e2137",
+      "review": "page-qa-31-40.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": true
+    },
+    {
+      "page": 36,
+      "sha256": "40e1095d1213ed28704aa82981bbcc5410755f0d59314b0f29f23a8f052971b7",
+      "review": "page-qa-36-40-attempt03.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": false
+    },
+    {
+      "page": 37,
+      "sha256": "9343933c97c963bed04558559d1754ba752af89a14773665f63dbb0212dd41fa",
+      "review": "page-qa-36-40-attempt03.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": false
+    },
+    {
+      "page": 38,
+      "sha256": "c9a551e71fcd3ddb4100a5d62e6259f07fc8e177019f306055654350a1ff529b",
+      "review": "page-qa-36-40-attempt03.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": false
+    },
+    {
+      "page": 39,
+      "sha256": "6564987f2019ed31a709ca9154e2277533c4a4b8b80b25f33c83a1cda1c40530",
+      "review": "page-qa-36-40-attempt03.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": false
+    },
+    {
+      "page": 40,
+      "sha256": "142323c2c6d7d505a6e40a1a08dc146a8359021aaae0465f46f149c10571dd92",
+      "review": "page-qa-36-40-attempt03.json",
+      "reviewed_pixels_identical_to_final": true,
+      "reused_unchanged_page": false
+    }
+  ],
+  "checked_local_links": 238,
+  "local_file_link_completeness": true,
+  "browser_html_visual_qa": false,
+  "interactive_viewer_visual_qa": false,
+  "browser_limit": "Chrome Browser Use security policy rejected local file navigation before loading. No workaround attempted. Static PDF visual acceptance and data validation do not establish browser interaction acceptance.",
+  "native_solver_execution": false,
+  "native_proof_portability": false,
+  "earlier_failures_retained": [
+    "42-page attempt01",
+    "40-page attempt02 numeric table wrapping"
+  ],
+  "source_repair": "Three shorter column headings on one table; all numerical values, fonts and figures unchanged."
+}

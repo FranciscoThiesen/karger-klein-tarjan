@@ -1,0 +1,588 @@
+{
+  "schema": "kkt_current_report_render_v1",
+  "validation": "rendered_pending_visual_qa",
+  "command": [
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/build_current_report.py",
+    "--source",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/source/REPORT-attempt03.md",
+    "--asset-base",
+    "/Users/random_person/Desktop/kkt-eighth-sampling",
+    "--repo-root",
+    "/Users/random_person/Desktop/kkt-eighth-sampling",
+    "--output-dir",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/html-attempt03"
+  ],
+  "created_utc": "2026-10-15T21:31:08.890299+00:00",
+  "native_solver_execution": false,
+  "historical_files_modified": false,
+  "visual_acceptance_is_separate": true,
+  "source": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/source/REPORT-attempt03.md",
+  "source_sha256": "a1ec5dc7923d6356a70f02055b21bba145941eca98cbe1a5211de9e67ed5ec34",
+  "input_sha256": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/source/REPORT-attempt03.md": "a1ec5dc7923d6356a70f02055b21bba145941eca98cbe1a5211de9e67ed5ec34",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/build_current_report.py": "ad0a30727f7c6434ada8d97836b6be038c9a0dfae769fac2a848db3e2cfc9663",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/build_eighth_sampling.py": "74041b6606105f26eb3e44190bc5e656afdade9602a04508e43523590aaa4561",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/validation/timing-build-eighth-build-record.json": "b92649550abce0c07011b72dc74ad813ec9086513a43bf1ce0b71eb76eae9b47",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/freeze.json": "2be7556d15b58f3f65cc380ac22b67c57fdf8aea747d651b9d648c6a1aa59d2f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/figures/complexity_normalized.png": "20c659354fa0963e3867bdaa8414c426552132460007b637b603f05ee9da1363",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/paper-figures-attempt01/paper_normalized_native_process_cpu.png": "25a14db04d6365707988c1653a18862d99d099d2b13431cc492a51d5e335af22",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/paper-figures-attempt01/paper_google_cpu_models_full11.png": "4601e2b49423034330e5c6fa57204672f354724176a1ee59293aa527a5fff039",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/paper-figures-attempt01/paper_google_cpu_models_upper6.png": "f066ec9d711c80984dac59a420b8adfad6df2dc833a40de80a760f6a74f6741d",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/compressed-query-2026-10-15/query-compression.png": "4cafe104555a7fcd9ebd48028f177c43d3d843febca6409d13e2ac14a550e1ce",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/retention-figures-paper-attempt02/paper_hierarchy_expectation.png": "b013c5a958c3ba9731252f021230834fd098758823ee2c1158c27c69dfe4feb5",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/witness-figures-paper-attempt01/paper_sampling_witness.png": "3a0e6e907ea0df0e32932153808b99cf9ee1e8dd17f9a9ca754bfb5440e7cd38",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/figures-attempt01/ratios_wall.png": "3b0cf39b5140ba5392e74c03de59a31a98f060f18d4138122a53ece5ccd4c5b4",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/figures-attempt01/ratios_cpu.png": "ddb34a870ae121dc7284e3737e0ebb06e96f75b4fd7676f4f89b63d79a820c83",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/figures-attempt01/times_wall.png": "203cc61aa29f5289aedcd3c6ebf079b0cafd3e2997a9df1a5f5e16ef986e790d",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/figures-attempt01/times_cpu.png": "470a219bd682e9cd8e855c5d08921d08518d1a844391c69d6ca2780e744019f7",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/figures-paper-attempt02/paper_variant_gains_wall.png": "f45050c03f5d308cb955fbe7ec985086805637b6c3beab77dbb73a237aff1203",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/figures-paper-attempt02/paper_eighth_ratios_wall.png": "6ed6f03eb3af8098ffbb9c09e285a63fc03d1fc089bd81744cf9d23ed0f51c7a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/figures-paper-attempt01/paper_work_small.png": "4db0788c6d2b2dc33858a76531e6137e90bf1a540df443302dc95a670fedc47e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/figures-paper-attempt01/paper_work_large.png": "11a0c7e13c04e556acb734ca1f47c4abb5f3cd107c2b448b3e32b602c3516241",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/figures-paper-attempt03/paper_ratios_wall.png": "6337b60e813b09fa9b33a113d3d632def58e8a989c151c382efbe321e9f99d0e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/figures-paper-attempt03/paper_times_wall.png": "d59c4c0021ecafb601a8847bb4792e772daddefbac6dc59f2a30ae6689b0ff4d",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/figures-paper-attempt03/paper_times_cpu.png": "9d9658da1f219f9167ba603ba0c22f64474daf663ae57624b04d67589f9c4263",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/figures-paper-attempt01/paper_ratios_wall.png": "3e00c25d6bcaac8496812355f1d228b9d6e412db016d8168461ee3fe1b131596",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/paper-figures-attempt02/paper_d16_ratios_wall.png": "59665fb6d209b15b265cbf3ef16bf291f5423ab4c157842d09b5aa37bc8fb405",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/paper-figures-attempt02/paper_d8_ratios_wall.png": "7aedcf4945e37967e0995bc2027ff932a9102a309230e9ec3488ad5d9fc164f1",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/README.md": "d6a5b88b6338a41c52987e3d15d832268f3067e977aec9cef7e8180559a06891",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/figures-attempt01/README.md": "f966f2cd9bc9d281af59bb4963b25baa83206a3fa8c6fb6424a40d453005126b",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/paper-figures-attempt01/README.md": "22a9d597a34b60b88a8cb2ebef2fcb33a37a247c87c97ac28d14e74bd087cd2a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/analysis-attempt01/model_fits.csv": "6701592c12ec880b430c0782c48124dcb303023c61eaa3aa45a86cae91a155b6",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/figures-attempt01/README.md": "9b7bd617f2c9bf42cb9acc6a6b5b7ff35e8ab335f14e9f6b1d642290513ee9e9",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/figures-paper-attempt02/paper_variant_gains_cpu.png": "b5d745ffc152d47e41a81d23da930877b2e39ca59c9d7bceb02c80c8cd1277df",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/figures-paper-attempt02/paper_eighth_ratios_cpu.png": "526974293ab4f235c3163bfb6944d7500415bcda2a3c9f6066acf8a7e8fa7eea",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/figures-attempt01/work_ratios.png": "69371d66309f4a7901bc5e3ca819edfc6c0cb411b24ecf66bc1217a683caa103",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/figures-paper-attempt03/paper_ratios_cpu.png": "9ae4ebd46b65ee887b94ed89a24bca4a70f5ca914b4909a75b6f4135be976053",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/figures-paper-attempt01/paper_ratios_cpu.png": "b32f06ee76665ee6d26a80d7a199043c2fda89d751447803894cae6f62832658",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/figures-paper-attempt01/paper_times_wall.png": "de53b12fd6e631014a4c32da71231e02d20f392b51c7c00693fca13311e3eccb",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/figures-paper-attempt01/paper_times_cpu.png": "3721a656418d41f81325c2c40e748d3003c322a5040e001f1c1fde160fa57d78",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/REPORT.md": "d8bb42c145e8dc4af129184e02de73b160846792e76838aec647a65f24b8bb67",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/common-2026-10-11/README.md": "87974806242fa8ac264cab86dfcb382381e45f86724506cb1a90d8710093a830",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/FIXED_SAMPLING_PROBABILITY.md": "22b9d45f52e715c985fdbe4f8f86ffedf2b59b7f6af053d54c50dfdd3ccfe246",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/multigraph-2026-10-14/README.md": "54f82d955adb8b71631340aa72a9826f7f35e2ed7fcb4caf5c989ea8216b752f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/retention-control-2026-10-15/README.md": "bd75a6d9348e7b0650d33e22e0f31cda7515648a621b1aca88f80be7c4c57f15",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/edge-view-2026-10-15/README.md": "82ca22dec988eebd620f1f7978da246970ce5481693923ad04d44f8b0c07438c",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/density-search-2026-10-15/README.md": "4e63711f7df03c400a617700a6acb2176eaa9991518b800d7fc780631aa4749a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/packed-sampling-2026-10-15/README.md": "c3b71c7c47ea5907c451098df7c4244f25304ca35026076691cd21ff2b62847d",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/compressed-query-2026-10-15/README.md": "47f7a5a4a6da6b166cc1b38c00636349720d1e8cf633a853a6eb808cef8ff231",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/README.md": "5cffe0ae4b5c4bd07f8c44ad73daeda593d750216715af92f5cfeddd2c05334a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/README.md": "f3741a731e7aebcbb2cd27f65f3f5cc95e5dbbe3df9f869277ccadaeb5a511d4",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/crossover-2026-10-13/graph-views-final/README.md": "61cfdf19c37179c04fdffac35d6b3cadd1aca52a85e12f87bba295b6004e2452",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/README.md": "4d685810689d4eaedf2ca835f1534d82b100f3498e22aa87c08955b2f1431541",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/BASELINE_MECHANISM.md": "f90016c0ba59e08ec7e7b63c13a69922a870e3849db6b74165fa273234f494a0",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/README.md": "46f73c1266c7eec1c5cd405bf0eaff7092d4b60f14ba4fd4ac9f210116d65bc8",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/analysis/comparisons.csv": "d71f4056c2b2efd44332ed98fdce1e62e491668dc0ab8a97108914796f7bb82b",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/analysis/strong_crossover_classifications.csv": "43a8904b4ae42fa18f89fcb925aea0ecd50146bac88778312a46a4996193404e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/README.md": "15759c3097f66b7175bec303ae10fa54b21979e156236c8a85a0530317477578",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/browser_validation.json": "80376d7b9e1f407d52af4bd05e8d3eef604f2bb553dbc520f3556c27cbb378ba",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/README.md": "7089041605707ac5a96b62b9e7c34bdfeb5538f527a151819ef0991a35756ab6",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/MECHANISM_REVIEW.md": "857c1d924e670a6e1204eeb65e10ebd85d692a0c4850982dfe05df5250972308",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/prim/prim.cpp": "c4b8c2c6bc1c2f02a1b5101ad9f364fd14b943db9b74b04e50a22359f1a2e2ba",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/analysis/comparisons.csv": "8c3b4f724bb1148785ae179cc19fd1037e924849a18799a94bacb0cc6a4c3930",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/README.md": "ae83e5b009ea04ce6b72ad79b0eb46134f3a9f8bbd09e96d5f1292868ef7670a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/analysis/comparisons.csv": "2369ebffe6a225cb5b4e43ba73e208a0bcc4177121375764ec324cb8fdf7cc0e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/source-archives/packed-sampling-4bb476e/experimental_packed_sampling.hpp": "7d62427b6192aa598f1fd04e78f6fec960ab2c7ea29ea2da434fcd3718915c37",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/source-archives/packed-sampling-4bb476e/COPY_RECEIPT.json": "6e30154ce3ae44223794745233d749e0423479e074d0c25e97f0036bdfd0733e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/current-hierarchy-view-attempt01/index.html": "42dc93bfc533c04396b1ca1eef8fadcace1e8ab49def1b7f27dd3749949b0a82",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/validation/root-view-readiness-attempt01.json": "23ecc0c765d5836ce36744e5098683352a166d9857e3ece851d522d18412fa47",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/README.md": "40925dd6ae8d5425432c3d52494206739f8d3862b6b8186c729ecb440cc3ddaa",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/analysis-attempt01/comparisons.csv": "0f573c4d53b0ee91b9c34278f1429ac6dcb590ac6ec179b681d253534fb3ad5c",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/analysis-attempt01/crossover_points.csv": "39865aefb4f143a3dd926de04c58071d53007257e6c9ffe49021a1782a884fb9",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/analysis-attempt01/crossover_brackets.csv": "d94a3bbfcf362e934e5f5cd8abed0692c3bdea33d6d59afbe48822d2c3c34529",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/validation/browser-policy-attempt02/README.md": "0c545ba81fda1089c57e48340ad832bf9dcea355af28c85609737525f584edf2",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/README.md": "7a55f91e582c4a11dd41544d875761d06f0dba4c4f42325b4468a2dc170c347a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/analysis-attempt01/work.csv": "d344a2c999b8966830bfafaf9bcc57611801eed5da01c85ab5e87f062d61a78a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/analysis-attempt01/rounds.csv": "be1ff442a07b79f2258df978163ae2383c1e1295f159e51b4a31784728430d51",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/analysis-attempt01/query_work.csv": "bd067faeb6fbb8696a4cce08c4c9fe0c5303473ceeec102c407b60a3d0dccdd1",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/partition-analysis-attempt01/partition.csv": "35240f0c95d5987d8da124e5441d5933ff1481da33a08b733a2bc6446189d863",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/figures-attempt01/README.md": "19a20d4f1f877a34aea9c37b649895fdd7b9a408a40d2a498550fa86a764c969",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/root-inference-attempt01/root_inference.csv": "8cf0c5dad998bf8fc66da2afb481a6acdc94082dc1c37b19cc73ed27759993e1"
+  },
+  "equation_translations": [
+    {
+      "source_tex": "A\\geq\\frac{c}{1-p},\\qquad B\\geq2c+\\frac{A}{2p}.",
+      "offline_text": "A \u2265 c / (1 \u2212 p),     B \u2265 2c + A / (2p)."
+    },
+    {
+      "source_tex": "U\\leq\\min\\left(Q,\\sum_v\\operatorname{depth}(v)\\right)\\leq\\min(Q,Bh).",
+      "offline_text": "U \u2264 min(Q, \u03a3\u1d65 depth(v)) \u2264 min(Q, B\u00b7h)."
+    },
+    {
+      "source_tex": "I_b=(c/b)\\binom b2-(c-c/b).",
+      "offline_text": "I_b = (c / b) \u00b7 choose(b, 2) \u2212 (c \u2212 c / b)."
+    }
+  ],
+  "figures": [
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/paper-figures-attempt01/paper_normalized_native_process_cpu.png",
+      "sha256": "25a14db04d6365707988c1653a18862d99d099d2b13431cc492a51d5e335af22",
+      "asset": "assets/25a14db04d636570-paper_normalized_native_process_cpu.png"
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/paper-figures-attempt01/paper_google_cpu_models_full11.png",
+      "sha256": "4601e2b49423034330e5c6fa57204672f354724176a1ee59293aa527a5fff039",
+      "asset": "assets/4601e2b494230343-paper_google_cpu_models_full11.png"
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/paper-figures-attempt01/paper_google_cpu_models_upper6.png",
+      "sha256": "f066ec9d711c80984dac59a420b8adfad6df2dc833a40de80a760f6a74f6741d",
+      "asset": "assets/f066ec9d711c8098-paper_google_cpu_models_upper6.png"
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/retention-figures-paper-attempt02/paper_hierarchy_expectation.png",
+      "sha256": "b013c5a958c3ba9731252f021230834fd098758823ee2c1158c27c69dfe4feb5",
+      "asset": "assets/b013c5a958c3ba97-paper_hierarchy_expectation.png"
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/witness-figures-paper-attempt01/paper_sampling_witness.png",
+      "sha256": "3a0e6e907ea0df0e32932153808b99cf9ee1e8dd17f9a9ca754bfb5440e7cd38",
+      "asset": "assets/3a0e6e907ea0df0e-paper_sampling_witness.png"
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/figures-paper-attempt02/paper_variant_gains_wall.png",
+      "sha256": "f45050c03f5d308cb955fbe7ec985086805637b6c3beab77dbb73a237aff1203",
+      "asset": "assets/f45050c03f5d308c-paper_variant_gains_wall.png"
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/figures-paper-attempt02/paper_eighth_ratios_wall.png",
+      "sha256": "6ed6f03eb3af8098ffbb9c09e285a63fc03d1fc089bd81744cf9d23ed0f51c7a",
+      "asset": "assets/6ed6f03eb3af8098-paper_eighth_ratios_wall.png"
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/figures-paper-attempt01/paper_work_small.png",
+      "sha256": "4db0788c6d2b2dc33858a76531e6137e90bf1a540df443302dc95a670fedc47e",
+      "asset": "assets/4db0788c6d2b2dc3-paper_work_small.png"
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/figures-paper-attempt01/paper_work_large.png",
+      "sha256": "11a0c7e13c04e556acb734ca1f47c4abb5f3cd107c2b448b3e32b602c3516241",
+      "asset": "assets/11a0c7e13c04e556-paper_work_large.png"
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/figures-paper-attempt03/paper_ratios_wall.png",
+      "sha256": "6337b60e813b09fa9b33a113d3d632def58e8a989c151c382efbe321e9f99d0e",
+      "asset": "assets/6337b60e813b09fa-paper_ratios_wall.png"
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/figures-paper-attempt01/paper_ratios_wall.png",
+      "sha256": "3e00c25d6bcaac8496812355f1d228b9d6e412db016d8168461ee3fe1b131596",
+      "asset": "assets/3e00c25d6bcaac84-paper_ratios_wall.png"
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/paper-figures-attempt02/paper_d16_ratios_wall.png",
+      "sha256": "59665fb6d209b15b265cbf3ef16bf291f5423ab4c157842d09b5aa37bc8fb405",
+      "asset": "assets/59665fb6d209b15b-paper_d16_ratios_wall.png"
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/paper-figures-attempt02/paper_d8_ratios_wall.png",
+      "sha256": "7aedcf4945e37967e0995bc2027ff932a9102a309230e9ec3488ad5d9fc164f1",
+      "asset": "assets/7aedcf4945e37967-paper_d8_ratios_wall.png"
+    }
+  ],
+  "local_evidence_links": [
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/build_eighth_sampling.py",
+      "href": "../../../../benchmark/build_eighth_sampling.py",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/validation/timing-build-eighth-build-record.json",
+      "href": "../../../../benchmark/results/eighth-sampling-2026-10-15/validation/timing-build-eighth-build-record.json",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/freeze.json",
+      "href": "../../../../benchmark/results/eighth-sampling-2026-10-15/freeze.json",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/figures/complexity_normalized.png",
+      "href": "../../figures/complexity_normalized.png",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/compressed-query-2026-10-15/query-compression.png",
+      "href": "../../../../benchmark/results/compressed-query-2026-10-15/query-compression.png",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/figures-attempt01/ratios_wall.png",
+      "href": "../../../../benchmark/results/larger-hierarchy-2026-10-15/figures-attempt01/ratios_wall.png",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/figures-attempt01/ratios_cpu.png",
+      "href": "../../../../benchmark/results/larger-hierarchy-2026-10-15/figures-attempt01/ratios_cpu.png",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/figures-attempt01/times_wall.png",
+      "href": "../../../../benchmark/results/larger-hierarchy-2026-10-15/figures-attempt01/times_wall.png",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/figures-attempt01/times_cpu.png",
+      "href": "../../../../benchmark/results/larger-hierarchy-2026-10-15/figures-attempt01/times_cpu.png",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/figures-paper-attempt03/paper_times_wall.png",
+      "href": "../../../../benchmark/results/eighth-extension-2026-10-15/figures-paper-attempt03/paper_times_wall.png",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/figures-paper-attempt03/paper_times_cpu.png",
+      "href": "../../../../benchmark/results/eighth-extension-2026-10-15/figures-paper-attempt03/paper_times_cpu.png",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/README.md",
+      "href": "../../../../benchmark/results/lower-density-2026-10-15/README.md",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/figures-attempt01/README.md",
+      "href": "../../../../benchmark/results/current-complexity-2026-10-15/figures-attempt01/README.md",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/paper-figures-attempt01/README.md",
+      "href": "../../../../benchmark/results/current-complexity-2026-10-15/paper-figures-attempt01/README.md",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/analysis-attempt01/model_fits.csv",
+      "href": "../../../../benchmark/results/current-complexity-2026-10-15/analysis-attempt01/model_fits.csv",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/figures/complexity_normalized.png",
+      "href": "../../figures/complexity_normalized.png",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/compressed-query-2026-10-15/query-compression.png",
+      "href": "../../../../benchmark/results/compressed-query-2026-10-15/query-compression.png",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/figures-attempt01/ratios_wall.png",
+      "href": "../../../../benchmark/results/larger-hierarchy-2026-10-15/figures-attempt01/ratios_wall.png",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/figures-attempt01/ratios_cpu.png",
+      "href": "../../../../benchmark/results/larger-hierarchy-2026-10-15/figures-attempt01/ratios_cpu.png",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/figures-attempt01/times_wall.png",
+      "href": "../../../../benchmark/results/larger-hierarchy-2026-10-15/figures-attempt01/times_wall.png",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/figures-attempt01/times_cpu.png",
+      "href": "../../../../benchmark/results/larger-hierarchy-2026-10-15/figures-attempt01/times_cpu.png",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/figures-attempt01/README.md",
+      "href": "../../../../benchmark/results/eighth-sampling-2026-10-15/figures-attempt01/README.md",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/figures-paper-attempt02/paper_variant_gains_cpu.png",
+      "href": "../../../../benchmark/results/eighth-sampling-2026-10-15/figures-paper-attempt02/paper_variant_gains_cpu.png",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/figures-paper-attempt02/paper_eighth_ratios_cpu.png",
+      "href": "../../../../benchmark/results/eighth-sampling-2026-10-15/figures-paper-attempt02/paper_eighth_ratios_cpu.png",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/figures-attempt01/work_ratios.png",
+      "href": "../../../../benchmark/results/eighth-sampling-2026-10-15/work/figures-attempt01/work_ratios.png",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/figures-paper-attempt03/paper_ratios_cpu.png",
+      "href": "../../../../benchmark/results/eighth-extension-2026-10-15/figures-paper-attempt03/paper_ratios_cpu.png",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/figures-paper-attempt03/paper_times_wall.png",
+      "href": "../../../../benchmark/results/eighth-extension-2026-10-15/figures-paper-attempt03/paper_times_wall.png",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/figures-paper-attempt03/paper_times_cpu.png",
+      "href": "../../../../benchmark/results/eighth-extension-2026-10-15/figures-paper-attempt03/paper_times_cpu.png",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/figures-paper-attempt01/paper_ratios_cpu.png",
+      "href": "../../../../benchmark/results/eighth-distance-2026-10-15/figures-paper-attempt01/paper_ratios_cpu.png",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/figures-paper-attempt01/paper_times_wall.png",
+      "href": "../../../../benchmark/results/eighth-distance-2026-10-15/figures-paper-attempt01/paper_times_wall.png",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/figures-paper-attempt01/paper_times_cpu.png",
+      "href": "../../../../benchmark/results/eighth-distance-2026-10-15/figures-paper-attempt01/paper_times_cpu.png",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/REPORT.md",
+      "href": "../../REPORT.md",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/common-2026-10-11/README.md",
+      "href": "../../../../benchmark/results/common-2026-10-11/README.md",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/FIXED_SAMPLING_PROBABILITY.md",
+      "href": "../../FIXED_SAMPLING_PROBABILITY.md",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/multigraph-2026-10-14/README.md",
+      "href": "../../../../benchmark/results/multigraph-2026-10-14/README.md",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/retention-control-2026-10-15/README.md",
+      "href": "../../../../benchmark/results/retention-control-2026-10-15/README.md",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/edge-view-2026-10-15/README.md",
+      "href": "../../../../benchmark/results/edge-view-2026-10-15/README.md",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/density-search-2026-10-15/README.md",
+      "href": "../../../../benchmark/results/density-search-2026-10-15/README.md",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/packed-sampling-2026-10-15/README.md",
+      "href": "../../../../benchmark/results/packed-sampling-2026-10-15/README.md",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/compressed-query-2026-10-15/README.md",
+      "href": "../../../../benchmark/results/compressed-query-2026-10-15/README.md",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/README.md",
+      "href": "../../../../benchmark/results/heldout-families-2026-10-15/README.md",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/README.md",
+      "href": "../../../../benchmark/results/heldout-families-2026-10-15/work-spatial-v2/README.md",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/crossover-2026-10-13/graph-views-final/README.md",
+      "href": "../../../../benchmark/results/crossover-2026-10-13/graph-views-final/README.md",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/README.md",
+      "href": "../../../../benchmark/results/larger-hierarchy-2026-10-15/README.md",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/BASELINE_MECHANISM.md",
+      "href": "../../../../benchmark/results/larger-hierarchy-2026-10-15/BASELINE_MECHANISM.md",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/README.md",
+      "href": "../../../../benchmark/results/eighth-sampling-2026-10-15/README.md",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/analysis/comparisons.csv",
+      "href": "../../../../benchmark/results/eighth-sampling-2026-10-15/analysis/comparisons.csv",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/analysis/strong_crossover_classifications.csv",
+      "href": "../../../../benchmark/results/eighth-sampling-2026-10-15/analysis/strong_crossover_classifications.csv",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/README.md",
+      "href": "../../../../benchmark/results/eighth-extension-2026-10-15/README.md",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/browser_validation.json",
+      "href": "../../browser_validation.json",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/README.md",
+      "href": "../../../../benchmark/results/eighth-sampling-2026-10-15/work/README.md",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/MECHANISM_REVIEW.md",
+      "href": "../../../../benchmark/results/eighth-sampling-2026-10-15/work/MECHANISM_REVIEW.md",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/prim/prim.cpp",
+      "href": "../../../../prim/prim.cpp",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/analysis/comparisons.csv",
+      "href": "../../../../benchmark/results/eighth-extension-2026-10-15/analysis/comparisons.csv",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/README.md",
+      "href": "../../../../benchmark/results/eighth-distance-2026-10-15/README.md",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/analysis/comparisons.csv",
+      "href": "../../../../benchmark/results/eighth-distance-2026-10-15/analysis/comparisons.csv",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/source-archives/packed-sampling-4bb476e/experimental_packed_sampling.hpp",
+      "href": "../../source-archives/packed-sampling-4bb476e/experimental_packed_sampling.hpp",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/source-archives/packed-sampling-4bb476e/COPY_RECEIPT.json",
+      "href": "../../source-archives/packed-sampling-4bb476e/COPY_RECEIPT.json",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/current-hierarchy-view-attempt01/index.html",
+      "href": "../../../../benchmark/results/eighth-extension-2026-10-15/current-hierarchy-view-attempt01/index.html",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/validation/root-view-readiness-attempt01.json",
+      "href": "../../../../benchmark/results/eighth-extension-2026-10-15/validation/root-view-readiness-attempt01.json",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/README.md",
+      "href": "../../../../benchmark/results/current-complexity-2026-10-15/README.md",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/README.md",
+      "href": "../../../../benchmark/results/lower-density-2026-10-15/README.md",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/analysis-attempt01/comparisons.csv",
+      "href": "../../../../benchmark/results/lower-density-2026-10-15/analysis-attempt01/comparisons.csv",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/analysis-attempt01/crossover_points.csv",
+      "href": "../../../../benchmark/results/lower-density-2026-10-15/analysis-attempt01/crossover_points.csv",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/analysis-attempt01/crossover_brackets.csv",
+      "href": "../../../../benchmark/results/lower-density-2026-10-15/analysis-attempt01/crossover_brackets.csv",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/validation/browser-policy-attempt02/README.md",
+      "href": "../../../../benchmark/results/eighth-extension-2026-10-15/validation/browser-policy-attempt02/README.md",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/README.md",
+      "href": "../../../../benchmark/results/lower-density-2026-10-15/work/README.md",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/analysis-attempt01/work.csv",
+      "href": "../../../../benchmark/results/lower-density-2026-10-15/work/analysis-attempt01/work.csv",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/analysis-attempt01/rounds.csv",
+      "href": "../../../../benchmark/results/lower-density-2026-10-15/work/analysis-attempt01/rounds.csv",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/analysis-attempt01/query_work.csv",
+      "href": "../../../../benchmark/results/lower-density-2026-10-15/work/analysis-attempt01/query_work.csv",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/partition-analysis-attempt01/partition.csv",
+      "href": "../../../../benchmark/results/lower-density-2026-10-15/work/partition-analysis-attempt01/partition.csv",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/figures-attempt01/README.md",
+      "href": "../../../../benchmark/results/lower-density-2026-10-15/work/figures-attempt01/README.md",
+      "location_inside_repository": true
+    },
+    {
+      "source": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/root-inference-attempt01/root_inference.csv",
+      "href": "../../../../benchmark/results/lower-density-2026-10-15/work/root-inference-attempt01/root_inference.csv",
+      "location_inside_repository": true
+    }
+  ],
+  "external_local_dependencies": [],
+  "linked_viewers": [],
+  "viewer_proof_validation": "separate prerequisite, not performed by renderer",
+  "print_hyphens": {
+    "scope": "HTML text nodes and their character references; PDF inherits HTML",
+    "source_codepoints": "U+2010 through U+2015",
+    "replacement": "U+002D",
+    "replacement_count": 73,
+    "math_minus_U2212_preserved": true,
+    "markdown_attributes_and_figure_bytes_unchanged": true
+  },
+  "all_evidence_paths_inside_repository": true,
+  "evidence_bundle_portability_verified": false,
+  "publication_file_tracking_check": "pending: each linked file must be tracked or explicitly copied into the edition",
+  "native_build_proof_portability": "not established by relative report links; original-machine paths may remain",
+  "embedded_figures": 13,
+  "markdown_library_version": "3.9",
+  "browser_interaction_qa": "pending",
+  "pdf_every_page_visual_qa": "pending",
+  "page_cap": 40,
+  "pdf_pages": null,
+  "output_sha256": {
+    "REPORT.md": "afe0941ab3883aab2e1f0ee414bd0fe521d014adb7c541e76a94be4093967062",
+    "report.html": "a5261b738e018fa0d046b52b5112e468c58c422bbed2deff104eb0d4572b4d6b",
+    "assets/6337b60e813b09fa-paper_ratios_wall.png": "6337b60e813b09fa9b33a113d3d632def58e8a989c151c382efbe321e9f99d0e",
+    "assets/b013c5a958c3ba97-paper_hierarchy_expectation.png": "b013c5a958c3ba9731252f021230834fd098758823ee2c1158c27c69dfe4feb5",
+    "assets/3e00c25d6bcaac84-paper_ratios_wall.png": "3e00c25d6bcaac8496812355f1d228b9d6e412db016d8168461ee3fe1b131596",
+    "assets/4601e2b494230343-paper_google_cpu_models_full11.png": "4601e2b49423034330e5c6fa57204672f354724176a1ee59293aa527a5fff039",
+    "assets/25a14db04d636570-paper_normalized_native_process_cpu.png": "25a14db04d6365707988c1653a18862d99d099d2b13431cc492a51d5e335af22",
+    "assets/f45050c03f5d308c-paper_variant_gains_wall.png": "f45050c03f5d308cb955fbe7ec985086805637b6c3beab77dbb73a237aff1203",
+    "assets/f066ec9d711c8098-paper_google_cpu_models_upper6.png": "f066ec9d711c80984dac59a420b8adfad6df2dc833a40de80a760f6a74f6741d",
+    "assets/4db0788c6d2b2dc3-paper_work_small.png": "4db0788c6d2b2dc33858a76531e6137e90bf1a540df443302dc95a670fedc47e",
+    "assets/11a0c7e13c04e556-paper_work_large.png": "11a0c7e13c04e556acb734ca1f47c4abb5f3cd107c2b448b3e32b602c3516241",
+    "assets/59665fb6d209b15b-paper_d16_ratios_wall.png": "59665fb6d209b15b265cbf3ef16bf291f5423ab4c157842d09b5aa37bc8fb405",
+    "assets/7aedcf4945e37967-paper_d8_ratios_wall.png": "7aedcf4945e37967e0995bc2027ff932a9102a309230e9ec3488ad5d9fc164f1",
+    "assets/6ed6f03eb3af8098-paper_eighth_ratios_wall.png": "6ed6f03eb3af8098ffbb9c09e285a63fc03d1fc089bd81744cf9d23ed0f51c7a",
+    "assets/3a0e6e907ea0df0e-paper_sampling_witness.png": "3a0e6e907ea0df0e32932153808b99cf9ee1e8dd17f9a9ca754bfb5440e7cd38"
+  }
+}

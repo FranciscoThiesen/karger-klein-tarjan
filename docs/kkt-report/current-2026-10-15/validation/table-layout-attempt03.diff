@@ -1,0 +1,11 @@
+--- /tmp/kkt-final-edition-source-attempt02.md
++++ /tmp/kkt-final-edition-source-attempt03.md
+@@ -500,7 +500,7 @@
+ 
+ The following largest-size ranges retain both graph seeds. Every row has m=33,554,432. Retained-B input volume is the sum of edge counts over its full contraction chain; KKT input volume sums contraction inputs across its entire recursion. These are named logical counts, not interchangeable units of CPU cost. Q and U are also cumulative over the solve's verifier-tree calls.
+ 
+-| d / weights | n | Retained-B rounds | Retained-B input/m | KKT contraction input/m | U/Q |
++| d / weights | n | B rounds | Retained B input/m | KKT input/m | U/Q |
+ |---|---:|---:|---:|---:|---:|
+ | 16 / distance | 2,097,152 | 20 | 17.9059–17.9066 | 2.4031–2.4037 | 3.5913–3.5941% |
+ | 16 / shuffled | 2,097,152 | 8–9 | 7.3141–7.9232 | 2.2889–2.2895 | 0.9110–0.9203% |

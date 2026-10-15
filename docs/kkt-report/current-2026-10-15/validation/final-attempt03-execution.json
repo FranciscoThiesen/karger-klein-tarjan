@@ -1,0 +1,36 @@
+{
+  "validation": "pass",
+  "stages": {
+    "html": {
+      "actual_exit": 0,
+      "tool_chunk": "37184b",
+      "receipt_sha256": "fb0547e31c95bbfb54d574743782efd3962466e613e75eda7cf41e1707a4040e",
+      "owned_groups_verified_empty": true,
+      "elapsed_seconds": 0.283476084
+    },
+    "pdf": {
+      "session_id": 91322,
+      "actual_exit": 0,
+      "tool_chunk": "6d07de",
+      "receipt_sha256": "4fb6d7b4e32d2bcc95452249fbe447c751c4480598584f5b161d31bc86644fc6",
+      "owned_groups_verified_empty": true,
+      "elapsed_seconds": 2.083948792
+    },
+    "raster": {
+      "session_id": 44364,
+      "actual_exit": 0,
+      "tool_chunk": "da636d",
+      "receipt_sha256": "cda510ba3efb9d45749f3c3ffa4e09318b96ee82c999e9bd5d0b67bb1cd5babf",
+      "owned_groups_verified_empty": true,
+      "elapsed_seconds": 8.33544025
+    },
+    "link-check": {
+      "actual_exit": 0,
+      "tool_chunk": "9fe853",
+      "receipt_sha256": "588481a0bca0fb7a7690d2207fa63624d303150b2d778f4180ec7f8979355338",
+      "owned_groups_verified_empty": true,
+      "elapsed_seconds": 0.528068834
+    }
+  },
+  "native_solver_execution": false
+}

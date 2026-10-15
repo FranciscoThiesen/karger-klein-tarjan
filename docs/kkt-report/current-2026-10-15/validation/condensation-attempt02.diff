@@ -1,0 +1,242 @@
+--- /tmp/kkt-final-edition-source-prep.md
++++ /tmp/kkt-final-edition-source-attempt02.md
+@@ -2,19 +2,19 @@
+ 
+ **Evidence cutoff: 15 October 2026.** This edition covers the completed implementation experiments, hierarchy and distance size ladders, current Google Benchmark campaign, and lower-density timing and untimed work studies. Their full captures passed strict reanalysis and independent numerical or counter audits. No partial campaign is used as evidence. Historical Markdown, HTML and PDF editions remain unchanged.
+ 
+-The original implementation had defects that prevented its operations from matching the local accounting behind KKT's expected-linear bound. Those defects were repaired. Subsequent experiments also found substantial reductions in constants. However, being much faster than the original KKT program is different from being the fastest MST implementation on a particular graph.
++Repairs restored local accounting missing from the original implementation, and later experiments reduced constants. A faster KKT implementation still need not be the fastest MST solver on a given graph.
+ 
+ The lower-density follow-up now finds the requested **sustained strong crossover against retained-edge Borůvka** on distance-ranked attachments at m=16n: **(512,8,192]**, maintained through every measured size up to 2,097,152. Its largest-size wall/CPU ratio is **0.708792/0.708792**. The density 8 ladder reverses to mixed graph results at 4M; shuffled twins lose throughout. Kruskal beats all largest endpoints, so this is a specific useful KKT family, not an all-solver or universal asymptotic victory.
+ 
+-The completed hierarchy size extension confirms a practical retained-edge Borůvka lead for private-eighth-sampling KKT on ordered attachment graphs: narrow at **1,024 vertices**, strong at every measured size from **4,096 through 4,194,304**. Wall ratios are **0.67130 at 1M and 0.84144 at 4M**. The margin weakens at the largest size, where only nine of twelve trials win despite strong graph medians. The smallest point already wins, so this is not an observed losing-to-winning crossover against retained B. Shuffled twins lose to retained B throughout, and no case makes KKT the fastest of all six solvers by the declared medians.
+-
+-The new distance-ranked attachment campaign adds a second favorable synthetic weight arrangement: **0.68067 wall and 0.68042 CPU** against retained B at 1M, with all 72 distance-ranked trial pairs winning on both clocks. It again starts with a narrow 1K lead, so no retained-B loss-to-win crossover is observed. Its topology-identical shuffled twins lose every retained-B pair. Weight organization, not graph shape alone, selects these favorable cases; the broader spatial/random losses remain part of the evidence.
+-
+-The preceding half-policy size extension remains an essential caution. Its KKT/retained-B ratios were **1.1181, 0.9674 and 1.0786** at 65,536, 1,048,576 and 4,194,304 vertices: a narrow intermediate lead disappeared. Against original Borůvka, that same study found **1.6442, 1.0111 and 0.8861**, a strong bracket against that comparator. The separate eighth extension now reaches 4M with the strong but variable median lead described above. Different policies and campaigns cannot be spliced into one curve; the half-policy reversal remains part of the evidence.
+-
+-The requested complexity estimator was used historically: **Google Benchmark**, rather than GoogleTest, supplies that feature. Its earlier results do not support a universal statement of linear measured runtime. Five later historical family fits have finite-window exponents between 1.113 and 1.185, and none receives the built-in linear label. Those measurements precede the current retained-edge, direct-input and compressed-query experimental path. The completed current-executable study also selects N log N for every KKT curve; none receives a linear label. This finite runtime observation remains separate from the expected operation bound.
+-
+-These conclusions are about exact implementations, inputs and measurement boundaries. The report does not infer an astronomical universal crossover from Big-O, extrapolate a three-point curve indefinitely, or treat a local implementation study as an independently published verdict about whether KKT belongs on an encyclopedic list of galactic algorithms.
++Private-eighth KKT leads retained-edge Borůvka on ordered attachments: narrowly at **1,024 vertices**, strongly at every measured size from **4,096 through 4,194,304**. Wall ratios are **0.67130 at 1M and 0.84144 at 4M**; at 4M only nine of twelve trials win. Because the smallest point already leads, no loss-to-win crossover is observed. Shuffled twins lose throughout, and no case makes KKT fastest of all six solvers by the declared medians.
++
++Distance-ranked attachments provide a second favorable synthetic arrangement: **0.68067 wall and 0.68042 CPU** against retained B at 1M, with all 72 pairs winning both clocks. Again, an initial narrow 1K lead prevents an observed retained-B crossover. Topology-identical shuffled twins lose every pair: weight organization matters, and spatial/random losses remain.
++
++The earlier half-policy ratios at 65,536, 1,048,576 and 4,194,304 were **1.1181, 0.9674 and 1.0786** against retained B: an intermediate lead reversed. Against original B they were **1.6442, 1.0111 and 0.8861**, a strong bracket for that comparator. These distinct policies/campaigns cannot be spliced into one curve.
++
++**Google Benchmark**, rather than GoogleTest, supplies the requested complexity estimator. Historical family exponents of 1.113–1.185 and the current executable's universally selected N log N labels provide no linear-runtime confirmation. Neither finite result refutes the expected linear-operation bound.
++
++These are implementation- and workload-specific measurements, not universal crossover predictions or an independently published verdict on an encyclopedic “galactic algorithm” classification.
+ 
+ ## 1. Which implementation, input size and problem?
+ 
+@@ -102,7 +102,7 @@
+ 
+ GoogleTest supplies correctness and structural checks. Google Benchmark supplies the requested complexity fit through `SetComplexityN(n+m)` and `Complexity(oAuto)`. The repository pins version 1.5.2. Its implementation selects a model using CPU measurements and then fits real/manual measurements to that selected model. Automatic choices come from a small zero-intercept menu: constant, log N, N, N log N, N² and N³. The printed normalized RMS describes residual fit quality; a selected label is not a complexity proof. [Pinned Google Benchmark implementation](https://raw.githubusercontent.com/google/benchmark/v1.5.2/src/complexity.cc).
+ 
+-The historical diagnostics additionally fit exported manual times independently, including a free power cN^α and restricted windows. The later five-family run used infrastructure revision `c9ed4ca`, with production KKT unchanged from `2d4fbf1`, and checked the algorithms/boundary against `1a3fc3c`. It contains nine doubling sizes through 262,144, three graph seeds, two algorithms and three batches of three calls: 810 records representing 2,430 calls. Its Bazel O3/NDEBUG profile is separate from the later native comparison profile.
++Historical diagnostics also fitted manual times to cN^α and restricted windows. The five-family run used infrastructure `c9ed4ca`, unchanged production `2d4fbf1` and algorithm/boundary checks against `1a3fc3c`: nine doubling sizes through 262,144, three graphs, two algorithms and three batches of three calls, totaling 810 records/2,430 calls. Its Bazel O3/NDEBUG profile differs from the later native profile.
+ 
+ | Historical family | Full-window α | Upper-window α | Counted work/N, first → last | Built-in KKT label |
+ |---|---:|---:|---:|---|
+@@ -112,13 +112,13 @@
+ | 90% attached leaves | 1.115 | 1.102 | 11.43 → 14.05 | N log N |
+ | Degree-eight regular | 1.157 | 1.167 | 24.68 → 32.45 | N log N |
+ 
+-None received N. The clique example is particularly instructive: a free-power exponent of 1.185 accompanies the menu's N² choice. Earlier diagnostics found a star exponent near 1.001, sparse random 1.175 and denser random 1.379. These are finite summaries for named revisions and generators. They neither refute an expected upper bound nor prove that observed superlinearity will persist indefinitely.
++None received N: the clique's free-power exponent 1.185 accompanies an N² menu choice. Earlier exponents were about 1.001 for a star, 1.175 for sparse random and 1.379 for denser random. These finite fits neither refute an expected bound nor establish persistent superlinearity.
+ 
+ [Historical normalized-time figure](/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/figures/complexity_normalized.png): the earlier repaired source, not the current experimental executable. It remains in the supplementary gallery below.
+ 
+-The small-cover and clique work proxies are almost flat per N while their measured time/N rises. That is evidence that these counted events alone do not explain timing. It is not a measurement of cache misses or allocator time. Other families also increase work per input, so finite structural changes matter: small dense quotients can deduplicate almost completely while larger fixed-degree inputs retain many more distinct component pairs.
+-
+-The historical registration order was fixed, and its ratio summaries differ from the rotating paired studies. Startup load averages were nontrivial; they are not CPU-utilization percentages. Short-window fits, intercepts, memory effects and host history can all affect the selected model. The analysis retains these limitations and all observations instead of silently treating a convenient fitted label as the answer.
++Almost-flat small-cover/clique work per N accompanies rising time/N; these counters do not explain timing or measure cache/allocator costs. Other families increase work per input: small dense quotients deduplicate far more than larger fixed-degree quotients.
++
++Historical fixed registration order and ratio statistics differ from the later rotating studies. Nontrivial startup load averages are not CPU-utilization percentages. Windows, intercepts, memory effects and host history limit all fitted labels; no observations are removed.
+ 
+ ### Current experimental executable: all choices are N log N
+ 
+@@ -153,53 +153,43 @@
+ 
+ ## 5. A fair practical comparison needs six implementations
+ 
+-The later studies keep KKT, Kruskal, Prim and three Borůvka implementations. Original Borůvka scans its original tuple graph while updating component information. Deduplicating compacting Borůvka repeatedly rebuilds a simple quotient. Retained-edge Borůvka repeats exactly the cheaper retained-parallel contraction used by experimental KKT, with comparable selected-ID accumulation and final result construction.
+-
+-That third Borůvka is the decisive control. Otherwise a KKT gain from avoiding expensive deduplication could be credited to random sampling. Giving both methods the same contraction asks whether KKT's *whole continuation* repays its extra sampling, recursion, forest construction and verifier work. It still does not prove that every possible Borůvka, Prim or Kruskal implementation is fully optimized.
+-
+-The [Prim source][prim-source] also makes a worst-case label easy to overinterpret. It keeps at most one tentative `std::set` entry per vertex. Adjacency construction and its 2m edge-record scan are linear; set updates occur only on successful tentative improvements. If there are u improvements, a useful upper bound is O(m+(n+u) log n), with u≤m. On the ordered cheap core path, visited core vertices form an interval and the next core vertex is reached through a path edge. Chords are still checked, but only actual improvements update the set. We did not measure u or its CPU cost. This source distinction explains why an O(m log n) worst-case bound does not force a finite observed crossover against Prim.
+-
+-Practical sampled-forest filtering also predates this implementation. Katriel, Sanders and Träff's 2003 **I-Max-Filter** chooses p=√(n/m), balancing sampled edges pm against the n/p filtering bound. It uses Prim's vertex order and interval-maximum tables, with expected O(m+n log n) time; it is a different algorithm from KKT. Their experiments include uniform random weights, vertex-index distances, stretched geometric graphs and inputs requiring many Prim priority-queue updates. Filtering helps dense inputs difficult for Prim, while random weights can favor Prim. These are results for their implementation and machines, not measurements of ours. The square-root density balance in our adaptive-rate proposal is therefore prior art, and neither their study nor our six-solver comparison establishes superiority over all practical MST algorithms. [Author-hosted paper, sections 1–3](https://ae.iti.kit.edu/documents/people/sanders/papers/filter.pdf).
+-
+-All solvers start from the same tuple edge list. For KKT and the two ID-returning continuations, the interval includes conversion to their internal input and destruction of the temporary input. Output construction is timed, while returned-result checking and destruction are outside. Tuple-returning algorithms retain their actual APIs. Generation, reference certification and validation are outside every interval. An application already maintaining another graph representation might obtain a different ranking, especially for Prim.
+-
+-Current six-solver children perform one checked warmup and six timed repetitions per solver. Rotation gives each algorithm every timed position once. Case ratios are medians of paired trial ratios, not ratios of separate runtime medians. With two graphs and one sampler there are twelve ratios per case; with two graphs and two samplers there are twenty-four. Six repetitions on one realization reuse its graph and sampled forest. They are not six independently sampled graphs.
+-
+-Both wall and process CPU clocks are retained. They help identify disagreement but are not replications on two machines. Full trial ranges and graph/realization medians remain descriptive rather than confidence intervals. Reversing schedule and variant order counterbalances some ordering, yet seed and order remain confounded with host history. Identical control objects can also have different timings across binary launches. Their drift is reported without subtracting it from KKT or normalizing results.
+-
+-The later prespecified strong-crossover rule is deliberately demanding. At an earlier measured size, every graph/realization median on both clocks must exceed one. At a later size all must be at most 0.90, and that strong lead must hold at every still-larger measured size. Otherwise a result may be a narrow lead, a loss, mixed, or already ahead without an observed losing endpoint. Exact rational arithmetic protects threshold decisions from rounding.
+-
+-This reports a bracket between observations, not a located transition. A last-point win has no demonstrated persistence beyond it. A narrow lead that disappears at the next size is a reversal. An earlier reversal does not forbid a different later qualifying bracket, but it cannot be erased from the plot. Complete comparator tables are as important as the most favorable curve.
++The six solvers are KKT, Kruskal, Prim and three Borůvkas. Original B scans the original tuple graph; dedup B rebuilds a simple quotient; retained B repeats KKT's cheaper retained-parallel step with comparable ID accumulation/result construction. This shared-kernel control tests whether sampling, recursion and verification repay their cost. A win against deduplication alone cannot answer that question; these controls are not proofs of optimal engineering.
++
++The [Prim source][prim-source] keeps at most one tentative `std::set` entry per vertex and scans 2m adjacency records. Only successful improvements update the set: O(m+(n+u) log n), u≤m. In the hierarchy with its forced cheap path, visited core vertices form an interval; chords are checked without necessarily improving candidates. We did not measure u or its CPU cost. Prim's worst-case O(m log n) label therefore does not force a finite crossover.
++
++Katriel, Sanders and Träff's 2003 **I-Max-Filter** already balances pm and n/p with p=√(n/m). This different, expected O(m+n log n) algorithm uses Prim order and interval maxima. Its random, vertex-distance, stretched-geometric and Prim-update-heavy experiments show filtering helping difficult dense inputs while random weights can favor Prim. Those machines/results are not ours; the square-root balance is prior art, and neither study establishes superiority over all MST implementations. [Author-hosted paper, sections 1–3](https://ae.iti.kit.edu/documents/people/sanders/papers/filter.pdf).
++
++All start from the same tuple list. KKT and the two ID-returning continuations include internal conversion, temporary-input destruction and output construction; returned-result checking/destruction are outside. Tuple-returning solvers retain their APIs. Generation, certification and validation are untimed. Another application's input representation could change rankings, especially Prim's.
++
++Each six-solver child has one checked warmup and six timed repetitions, rotating every solver through every position. Case medians use paired ratios, never ratios of separate medians. Two graphs/one sampler give twelve ratios; two graphs/two samplers give twenty-four. Repetitions reuse graphs and samples, not independent draws.
++
++Wall/CPU clocks and full ranges are retained, not treated as independent machines or confidence intervals. Reversed schedules counterbalance order but leave seed/order/host-history confounding. Unchanged-control drift is reported without subtracting it from KKT or normalizing results.
++
++The prespecified strong-crossover rule requires every graph/realization median on both clocks to exceed one earlier, then be ≤0.90 later and at every remaining measured size. Exact fractions decide thresholds. Otherwise outcomes may be narrow, mixed, losing or already leading without a losing endpoint. A bracket is not an interpolated transition; a final-point win establishes no later persistence. Reversals remain visible even if another bracket later qualifies. All comparator columns remain.
+ 
+ ## 6. Four later reductions in constants, kept separate
+ 
+ ### Retain parallels when deduplication buys little
+ 
+-The experimental contraction retains every crossing record in physical input order, while preserving safe selections, component numbering, loop removal and isolate removal. It avoids the reference's buckets and linked traversal, reserves the exact crossing count, and uses at most three input-edge scans rather than up to four. The public simple-quotient contraction remains unchanged.
+-
+-In the [ten-case retention screen][retention-screen], all 100 paired KKT trials improved on both clocks. The two large ordered families used about 48% of reference KKT's time. At one such root, deduplication removed only about 0.07% of the nearly sixteen million crossing records. Paying for it bought little immediate reduction. However, keeping parallels also changes output order, assigns random draws to different edges and can change subsequent recursion. The measurement covers that entire variant.
+-
+-The fresh [six-solver control][retention-control] then gave Borůvka the same cheaper step. Retained-edge Borůvka beat KKT in all 120 pairs on both clocks. At 2,097,152 vertices and density 16, ordered KKT took about 1.120× its time despite taking only 0.381× the deduplicating compactor's time. This is the most important correction to the initial favorable interpretation: shared infrastructure improved a simpler continuation too.
++Retaining crossing records in input order preserves safe selections, numbering and loop/isolate removal while replacing buckets/linked traversal with exact reservation and at most three scans rather than four. Public simple-quotient contraction is unchanged. In the [ten-case screen][retention-screen], all 100 KKT pairs improved on both clocks; large ordered times were about 48% of reference. One root's deduplication removed only 0.07% of nearly sixteen million crossing records. This variant also changes output order, draw-to-edge assignment and potentially recursion.
++
++The [fresh shared-step control][retention-control] reversed the interpretation: retained B won all 120 pairs on both clocks. At n=2,097,152, density 16, ordered KKT/retained B was 1.120 despite KKT/dedup B being 0.381. A cheaper contraction benefits simpler continuations too.
+ 
+ ### Read existing Edge records directly
+ 
+-KKT previously copied the reduced graph into tuples immediately before verification. A typed overload lets the verifier read its existing Edge vector. The [fresh paired experiment][edge-study] improved all ten case medians by 2.9–6.8%, with 115 of 120 trial wins on each clock. Retained-edge Borůvka still won all 120 direct comparisons.
+-
+-The refactored verifier object was shared by both binaries; only the KKT call-site object differed. Instrumented gates kept 63 counters identical and reduced both edge visits and materializations by exactly the verifier-input edge count. This is stronger evidence of a specific copy removal than a timing improvement alone. It still does not make the fresh tuple reference identical to the earlier historical executable.
++The [Edge overload][edge-study] removes the pre-verifier tuple copy. Only the KKT call-site object differs; both binaries share the refactored verifier. Gates preserve 63 counters and reduce visits/materializations by exactly the verifier-input edge count. Ten medians improve 2.9–6.8%, with 115/120 wins per clock; retained B still wins 120/120. The fresh tuple reference is not the earlier historical binary.
+ 
+ ### Consume all bits in each private random word
+ 
+-Scalar half sampling uses one MT19937 word for each edge and tests one bit. Packed half sampling uses the 32 bits in order, retaining physical edge order and discarding an unused suffix at each call boundary. A nonempty call on r records uses exactly ceil(r/32) words. Public sampling and the half-size reserve remain unchanged.
+-
+-The separate [packed study][packed-study] improved all six case medians by 8.1–17.7%, with all 144 paired trials faster on both clocks. Unchanged-control case ratios spanned only about 0.9926–1.0112, although that does not eliminate confounding. The small ordered case beat retained-edge Borůvka in all 24 trials; its pooled ratio was 0.8957. One realization median exceeded 0.90, so it was a narrow lead under the declared rule. At the larger endpoint the ratio became 1.0048: no growing-size crossover. Its publication evidence and [tested helper archive][packed-helper] now reside in this repository under a [copy receipt][packed-copy]; its original native binaries and machine-bound build dependencies were not copied.
+-
+-Identical seed numbers produce different private samples under these policies. Work diagnostics found recursive sampling volume lower in 13 pairs and higher in 11, with median packed/scalar ratio 0.999378. Aggregate engine-word bounds, rather than directly observed totals, lay around 0.02760–0.03243 of the scalar counts. This supports much lower engine consumption without a consistent collapse of recursive edge volume. It does not establish a 32-fold solver gain or allocate the observed CPU reduction to RNG alone. Packed sampling was measured with the uncompressed verifier; its gain must not be multiplied into the next result.
++Packed half sampling consumes 32 bits per MT19937 word in edge order, discarding unused suffixes at call boundaries: ceil(r/32) words for a nonempty r-edge call. Public sampling and half-size reservation stay unchanged, but equal seeds yield different private samples.
++
++The [packed study][packed-study] improves six medians 8.1–17.7% and all 144 pairs on both clocks; control case ratios 0.9926–1.0112 do not eliminate confounding. Small ordered KKT wins 24/24 retained-B trials with pooled ratio 0.8957, but one realization exceeds 0.90, making the declared lead narrow. The larger ratio 1.0048 gives no size crossover. Its [tested helper][packed-helper] and evidence are locally archived under the [copy receipt][packed-copy]; native binaries/machine dependencies were not copied.
++
++Recursive sample volume falls in 13 pairs, rises in 11, and has median ratio 0.999378. Aggregate engine-word *bounds*, not observed totals, are 0.02760–0.03243 of scalar counts. This shows lower engine consumption without systematic recursive-volume collapse, not 32× solver improvement or CPU attribution. Its uncompressed-verifier gains cannot be multiplied into the next experiment.
+ 
+ ### Share repeated verifier requests
+ 
+-For a query edge inside one sampled-forest component, its lowest common ancestor splits the path into endpoint-to-ancestor requests. A lower vertex and an ancestor depth identify one path segment. Many different edges request the same segment. The compressed candidate computes each distinct answer once, then reconstructs exactly the same per-edge heavy marks.
+-
+-The [compressed-query experiment][compressed-study] shared seven production objects, including KKT, and changed only the verifier object. At the million-vertex endpoints it improved by 8.4–14.6%. All three small-case medians regressed by 2.6–7.5%. Ordered KKT/retained-B changed from 1.1167 to 0.9707, a narrow transition rather than the required 10% lead. Original Borůvka still won every direct pair. The losses are part of this implementation result, not inconvenient noise.
++Compression answers repeated lower-vertex/ancestor-depth path requests once, preserving each heavy mark. The [experiment][compressed-study] changes only the verifier object, sharing seven others including KKT. Million-vertex gains are 8.4–14.6%; all three small medians regress 2.6–7.5%. Ordered KKT/retained B changes 1.1167→0.9707, a narrow transition, not a 10% lead. Original B wins every direct pair.
+ 
+ | Isolated experiment | KKT implementation effect | Stronger-control conclusion |
+ |---|---|---|
+@@ -208,31 +198,25 @@
+ | Packed half sampling | Six medians improve 8.1–17.7%; 144/144 trial wins | Small hierarchy lead weakens to large parity |
+ | Compressed requests | Large gains 8.4–14.6%; every small median regresses | Narrow hierarchy transition; later size reversal |
+ 
+-These are independently useful improvements with different equivalence guarantees. Their percentages are not factors of one measured cumulative speedup.
++Different equivalence guarantees and fresh references preclude multiplying these percentages into one cumulative speedup.
+ 
+ ## 7. Why query compression helps without solving the whole problem
+ 
+-Let Q count logical proper-ancestor endpoint requests in one connected verifier-tree call, including duplicates, and U count distinct pairs of lower vertex and ancestor depth. If the reduced tree has B vertices and height h, each vertex can request only its own proper ancestor depths:
++In one connected verifier-tree call, Q counts proper-ancestor endpoint requests including duplicates; U counts distinct lower-vertex/depth pairs. A reduced tree with B vertices and height h gives
+ 
+ \[
+ U\leq\min\left(Q,\sum_v\operatorname{depth}(v)\right)\leq\min(Q,Bh).
+ \]
+ 
+-Production query endpoints are the original r vertices of that component, which become equal-depth leaves. With m₀ non-loop query edges inside the component, Q=2m₀ and U≤min(Q,rh). This is a bound on a particular verifier call, not one on the original input graph's average degree. Cross-component edges and loops do not contribute those two proper requests. If Q=0, U=0 and U/Q is undefined.
+-
+-The implementation stores an immutable local-request mask R[v] and a separate propagated mask D[v]. R identifies answers needed at v; D also carries descendant requests required by the traversal. Confusing them would either lose required path state or create answers at the wrong vertex. The same traversal expressions and child order compute one value per set bit of R. A final edge scan retrieves two values by popcount rank and applies the unchanged strict heavy-edge comparison.
+-
+-The [query-sharing illustration](/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/compressed-query-2026-10-15/query-compression.png) depicts 24 logical endpoint requests answered by four distinct results. It is a constructed explanatory fixture, retained in the supplementary gallery.
+-
+-The direct oracle checks position-based marks, duplicate and negative IDs, extreme weights, disconnected forests, loops and malformed lookups. Full-solver gates additionally check the actual selected verifier object. Equivalent answers preserve the forest and filtering decisions by source reasoning and checked deterministic outputs; the study does not claim to have recorded every intermediate forest trace.
+-
+-For each completed solve in the paired work study, cumulative U/Q was only **0.2696–0.8738%**, with descriptive median 0.5194%. These are ratios of sums over that solve's verifier-tree calls, not a per-call distribution or global deduplication of requests. Yet path-query visits did not fall to half a percent. In the following identities Q and U are those cumulative sums, M sums query edges, T counts connected calls, and BΣ sums reduced-tree vertices. Exact accounting gives reference visits 4Q versus compressed 2Q+U: construction and lookup still process logical requests. Initialized slots decrease by M+Q−U+T, verifier-edge visits by M, and verifier-vertex visits increase by BΣ. All 61 other fields match, with the four changed-field identities checked separately.
+-
+-Median compressed/reference ratios were about **0.4236 for initialized slots, 0.5013 for query visits and 0.6673 for verifier-edge visits**; verifier-vertex visits roughly doubled. Logical slots are heterogeneous elements, not bytes. The cached LCA array also survives longer, replacing the old per-edge maxima during traversal; local masks, offsets, compact values, recursion and allocator capacity remain relevant. A smaller answer table does not by itself establish lower peak RSS.
+-
+-Compression removes duplicate answer computation and some scattered writes. It adds depth work and indexed lookups; answer intervals are not globally sequential in traversal order. Better locality is plausible, but no successful hardware profile isolates it. Even the slower small cases have over 99% duplicate requests, proving that redundancy percentage alone does not predict a timing win.
+-
+-The competitor matters as much as KKT's local savings. In the compressed study's million-vertex hierarchy, retained-edge Borůvka took 19 rounds and about 17.4846–17.4849 original-edge volumes of contraction inputs. On the shuffled twins it took eight rounds and 7.3168–7.5177 volumes. Shuffled queries actually shared more answers, yet KKT/retained-B was about 1.62 instead of 0.97. Here, the improved verifier did not overcome the competing continuation's much smaller repeated-contraction volume.
++Production endpoints are r equal-depth leaves: m₀ non-loop within-component query edges give Q=2m₀ and U≤min(Q,rh). This is per verifier call, not original-graph average degree. Loops/cross-component edges contribute no such pair; Q=U=0 makes U/Q undefined.
++
++Immutable R[v] marks local answers; propagated D[v] also carries descendant requests needed by traversal. The original traversal/order computes one answer per R bit, then a graph scan uses popcount ranks and the unchanged strict heavy comparison. Merging R and D would be incorrect. The constructed [sharing illustration](/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/compressed-query-2026-10-15/query-compression.png) has 24 requests/four answers. Independent positional/forest-path gates cover duplicate/negative IDs, extreme weights, loops, disconnected forests, malformed lookups and actual dispatch. Equivalent outputs and source reasoning preserve filtering; not every intermediate forest was recorded. Details remain in the [complete study][compressed-study].
++
++Per completed solve, cumulative U/Q is **0.2696–0.8738%**, median 0.5194%: ratios of sums, not per-call distributions or global request deduplication. Here Q,U, query edges M, connected calls T and reduced vertices BΣ are summed over that solve's connected verifier-tree calls. Exact accounting is 4Q→2Q+U query visits; initialized slots fall by M+Q−U+T, verifier-edge visits by M, and verifier-vertex visits rise by BΣ. The four identities hold; 61 other fields match. Median compressed/reference ratios are **0.4236 initialized slots, 0.5013 query visits, 0.6673 verifier-edge visits**, with roughly doubled verifier-vertex visits.
++
++These heterogeneous slots are not bytes. Cached LCAs survive longer, replacing per-edge maxima during traversal; local masks, offsets, answers, recursion and capacity still matter. Duplicate computation/scatter decreases, but depth work/lookups increase and answer accesses are not globally sequential. No hardware profile establishes locality or peak-RSS savings; even regressing small cases have over 99% duplicate requests.
++
++In the compressed half-policy study, the million-vertex hierarchy makes retained B perform 19 rounds and 17.4846–17.4849 original-edge input volumes, versus eight rounds/7.3168–7.5177 for shuffled twins. Shuffled queries share more, yet KKT/retained B is 1.62 rather than 0.97. Less competitor contraction work can outweigh greater KKT request reuse.
+ 
+ ## 8. Weight arrangements that make repeated contraction expensive
+ 
+@@ -312,9 +296,7 @@
+ 
+ ## 10. Half sampling at four million vertices: one crossover and one reversal
+ 
+-The [larger hierarchy study][larger-study] reuses the exact compressed-query, scalar-half executable at n=65,536, 1,048,576 and 4,194,304, with m=32n. Its two weight twins and two fresh graphs produce twelve children, 504 validated outputs and 432 timed calls. All 720 paired clock ratios, 396 summary rows, thirty point states, thirty endpoint pairs and ten outcomes agree with an independent raw audit.
+-
+-The full [half-policy wall comparisons](/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/figures-attempt01/ratios_wall.png) remain linked rather than repeated as a page-sized figure. All five comparators, both weight twins and every measured size remain in the table and gallery.
++The [larger study][larger-study] reuses compressed-query scalar-half KKT at n=65,536, 1,048,576 and 4,194,304, m=32n. Two twins/two fresh graphs give twelve children, 504 certified outputs and 432 timed calls. Independent audit agrees on 720 clock ratios, 396 summaries, thirty point states, thirty endpoint pairs and ten outcomes. The complete table and [wall plot](/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/figures-attempt01/ratios_wall.png) retain all comparators and sizes.
+ 
+ | Family / n | / dedup B, wall/CPU | / retained B | / Kruskal | / Prim | / original B |
+ |---|---:|---:|---:|---:|---:|
+@@ -325,11 +307,9 @@
+ | Shuffled 1,048,576 | .3386/.3386 | 1.5199/1.5199 | 1.3048/1.3047 | 1.5310/1.5309 | 1.5613/1.5612 |
+ | Shuffled 4,194,304 | .3994/.3991 | 1.5337/1.5342 | 1.6799/1.6796 | 1.3598/1.3586 | 1.2785/1.2778 |
+ 
+-Hierarchy versus retained B is **loss → narrow lead → loss**. At 1M KKT wins eleven of twelve trial pairs, with graph/clock medians 0.96375–0.97358. At 4M it wins none, with medians 1.07229–1.08749. Treating the intermediate sign change as the beginning of eventual dominance would have been premature.
+-
+-Hierarchy versus original B is **loss → loss → strong lead**. All four graph/clock medians exceed one at 1M and lie between 0.88254 and 0.88614 at 4M. The declared bracket is therefore **(1,048,576,4,194,304]**. All twelve largest trial pairs favor KKT, although not every individual trial has a ten-percent margin. There is no measured point beyond the upper endpoint, and no interpolated crossing is claimed.
+-
+-The other eight outcomes remain visible: both families already strongly lead dedup B at every size; shuffled retained B and both families' Kruskal/Prim comparisons lose throughout; shuffled original B also loses throughout. Across 72 pairs per comparator and clock, KKT wins 72 against dedup B, eleven against retained B, zero against Kruskal, zero against Prim and fifteen against original B. No input becomes an all-six-solver winner.
++Hierarchy/retained B is **loss → narrow lead → loss**: eleven of twelve 1M trial wins, medians 0.96375–0.97358, become zero wins at 4M, medians 1.07229–1.08749. Hierarchy/original B is **loss → loss → strong lead**: all four medians exceed one at 1M and reach 0.88254–0.88614 at 4M, establishing **(1,048,576,4,194,304]**. All twelve largest trials win, not all by 10%; no larger observation or interpolated transition is claimed.
++
++The other eight outcomes remain: both twins strongly beat dedup B throughout; shuffled retained/original B and both twins' Kruskal/Prim comparisons lose throughout. Across 72 pairs per comparator/clock, wins are 72/11/0/0/15 against dedup B/retained B/Kruskal/Prim/original B. There is no all-six winner.
+ 
+ [Half-policy CPU comparisons](/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/figures-attempt01/ratios_cpu.png) preserve the complete second clock, including the retained-B reversal.
+ 
+@@ -337,7 +317,7 @@
+ 
+ [Half-policy absolute wall times](/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/figures-attempt01/times_wall.png) retain all six solvers.
+ 
+-The earlier direct-Edge [density screen][density-study] also warns against an easy density explanation. It reached 67 million edges at density 64, yet retained B won all 96 pairs on both clocks; ordered KKT was 4.2–12.0% slower and shuffled KKT 73.7–88.6% slower. Those data use an earlier verifier and separate seeds, so they are not pooled with this larger study. Together they motivate testing specific implementation costs, rather than increasing density until a desired plot appears.
++The earlier direct-Edge [density screen][density-study] reached 67 million edges at density 64, yet retained B won 96/96 pairs on both clocks: ordered KKT was 4.2–12.0% slower, shuffled 73.7–88.6% slower. Different verifier/seeds preclude pooling; density alone did not deliver a win.
+ 
+ [Half-policy absolute CPU times](/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/figures-attempt01/times_cpu.png) use matching wall/CPU panel bounds.
+ 
+@@ -537,19 +517,17 @@
+ 
+ ## 12. Correctness, reproducibility and the remaining empirical limits
+ 
+-Each performance input receives an independent MST certificate: source membership, unique IDs, acyclic connectivity and cycle optimality. Every timed call and warmup must reproduce its exact unique-MST IDs; tuple-returning solvers also have endpoints and weights checked. This certifies the measured outputs. It does not prove support for every malformed input, arbitrary tied-weight convention or integer domain outside the declared contract.
+-
+-Native and sanitizer suites exercise the implementation changes separately. Positional verifier oracles use independent forest-path walks. Contraction tests reconstruct selected components and quotients independently. Sampling gates check prescribed words, partial blocks, private dispatch and public-stream preservation. Wrong-policy and wrong-linked-object negatives ensure that a test cannot pass merely because both paths accidentally ran the reference. Final uninstrumented object sets are validated separately from instrumented correctness builds.
+-
+-The recent timing profile is native arm64 on Apple M3 Max with 128 GiB, macOS 26.6.2, Apple Clang 15, C++17, O3, native tuning, assertions and a 512 MiB main stack. Clang 22 ASan/UBSan checks are a separate correctness profile. Controller architecture is not inferred to be binary architecture: the native artifact is inspected. No cross-machine generalization is measured.
+-
+-Protocols, cases, seeds, boundaries and binaries are frozen before capture. Receipts bind source, build recipes, logs, physical objects, binaries, commands and parent proofs. Raw integer endpoints, every result, clock flags and failed attempts remain. Independent numerical audits reconstruct the ratios and summaries without importing collector aggregation. Negative tests mutate identities and numeric values separately, so they exercise arithmetic rather than only file hashes.
++Independent certificates check source membership, unique IDs, acyclic connectivity and cycle optimality. Every timed/warmup result must match exact unique-MST IDs, plus tuple endpoints/weights where returned. This certifies measured outputs, not undeclared malformed inputs, tie conventions or integer domains.
++
++Separate native/sanitizer gates use independent forest paths and contraction reconstructions; sampling tests cover words, partial blocks, dispatch and public-stream preservation. Wrong-policy/object negatives reject accidental reference dispatch. Final uninstrumented objects are checked separately. Recent timing uses inspected arm64 artifacts on Apple M3 Max/128 GiB, macOS 26.6.2, Apple Clang 15, C++17/O3/native tuning/assertions and 512 MiB stack; Clang 22 ASan/UBSan is a distinct correctness profile. No cross-machine claim follows.
++
++Pre-capture freezes bind cases, seeds, boundaries, source, recipes, objects, commands, binaries and parent proofs. All raw endpoints/results, flags and failed attempts remain. Independent ratio/summary audits avoid collector aggregation; separate identity and numeric mutations test more than hashes. The current Google audit's narrower exclusions are stated in section 4.
+ 
+ Resource monitoring bounds whole owned process groups and requires affirmative empty-group observations after native exit. The larger half-policy capture took **82.4218 minutes** and peaked at **29.7508 GiB sampled group RSS**. Held-out timing took **54.1279 minutes** and sampled at most **8.2377 GiB**. The paired eighth campaign took **65.3455 minutes**, peaked at **8.33675 GiB**, and completed all 48 empty groups with no unavailable RSS observations or clock flags. The completed eighth hierarchy extension took **86.6785 minutes**, peaked at **28.1561 GiB sampled group RSS**, and verified all 28 groups empty with zero unavailable observations or clock flags. The distance campaign took **15.1378 minutes**, sampled **7.4441 GiB** at most across 490 observations, and verified all 24 groups empty with zero unavailable samples or clock flags. The lower-density native campaign took **41.590633 minutes**, peaked at **7.451889 GiB sampled owned-group RSS**, and retained two unavailable observations among 1,341 RSS requests. All sixty native groups and the outer group were verified empty; there were zero clock flags. These are campaign/resource observations, not algorithm runtimes or continuous solver-specific memory peaks. Caffeinate attempts failed; successful power-log queries and absent logged overlap do not prove sleep inhibition, stable thermals or an idle host.
+ 
+-Failures were kept rather than relabeled as successful evidence. The old held-out diagnostic frontend rejected spatial families before generation. Its separate repair only expanded the family allowlist, linking the same eight production objects; the fresh full matrix reused none of the earlier partial outputs. A first link failed from injected cross-architecture search paths and was preserved before a recorded environment correction. Earlier plot attempts with missing or inaccurate legends are likewise archived; corrected visuals retain the same plotted values.
+-
+-These practices make results reviewable and reduce avoidable error. They do not remove small seed counts, ordering confounds, fixed host conditions or unmeasured hardware effects. Work counters omit allocator internals, implicit vector relocation, hash collisions and instructions. Final-set insertion work that was not instrumented is recorded as unmeasured, not zero. A mechanism is strongest where source reasoning, independent counts and timing agree, with each retaining its own scope.
++The rejected spatial diagnostic, injected cross-architecture link failure and inaccurate-legend plots remain archived. The spatial repair expands only the frontend allowlist, retaining eight production objects; its fresh matrix reuses no partial output. Corrected plots preserve plotted values.
++
++Small seed counts, order/host confounding and unmeasured hardware effects remain. Counters omit allocator internals, vector relocation, collisions and instructions; uninstrumented final-set insertions are null, not zero. Source, counts and timing retain distinct scopes.
+ 
+ ## 13. What remains open at this cutoff
+ 

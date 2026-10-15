@@ -1,0 +1,16 @@
+{
+  "validation": "pass",
+  "copies": [
+    {
+      "source": "/tmp/kkt-final-edition-raster-prep.py",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/source/rasterize_final.py",
+      "sha256": "ddac615ccdd9192b84596ce0b4de6bd2a845933a0c5ee9074ce1803932864655"
+    },
+    {
+      "source": "/tmp/kkt-current-report-publish-prep/pack_publication.py",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/source/pack_publication.py",
+      "sha256": "62beab835ebea55f858e8b2649b8ff3aeab8cee38fac099b6213ac6e8beb28bf"
+    }
+  ],
+  "scope": "Byte-identical copies of previously reviewed publication helpers; final report source/layout and render remain pending."
+}

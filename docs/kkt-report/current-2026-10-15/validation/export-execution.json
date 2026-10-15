@@ -1,0 +1,24 @@
+{
+  "validation": "pass",
+  "actual_exit_code": 0,
+  "tool_chunk": "ca27f4",
+  "owned_groups_verified_empty": true,
+  "elapsed_seconds": 0.765602042,
+  "export_receipt_sha256": "0499a6deabe1dd288dc336ed85faf4c7db70856b67bd9434a69d4a9c9737d592",
+  "guard_receipt_sha256": "aeead0f9cbfb2b4690823b8cf03a00a35ee566adb1e91cb836dd1e15989b89c8",
+  "copied_files": 634,
+  "verified_relocated_links": 305,
+  "supplementary_link_limitations": 480,
+  "excluded_declared_files": [
+    {
+      "path": "benchmark/results/packed-sampling-2026-10-15/paired-power-audit/pmset.stderr",
+      "reason": "private power log"
+    },
+    {
+      "path": "benchmark/results/packed-sampling-2026-10-15/paired-power-audit/query.json",
+      "reason": "private power log"
+    }
+  ],
+  "scope": "Main report Markdown/HTML, navigation README and viewer static-resource closure; not all nested supplementary links or portable native proofs. Complete evidence remains in the repository.",
+  "browser_interaction_verified": false
+}

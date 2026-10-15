@@ -1,0 +1,13 @@
+{
+  "validation": "pass",
+  "scope": "Exactly one compact lower-work table header line changed to improve auto column widths; no renderer/font/value/image/prose/reference changes. Actual PDF/render QA remains required.",
+  "before": "/tmp/kkt-final-edition-source-attempt02.md",
+  "before_sha256": "f8d3b9c5bc0877bc3dad76e2ce00a45d558c5e7ac09e5ee954f75e6c07899fb9",
+  "after": "/tmp/kkt-final-edition-source-attempt03.md",
+  "after_sha256": "a1ec5dc7923d6356a70f02055b21bba145941eca98cbe1a5211de9e67ed5ec34",
+  "old_header": "| d / weights | n | Retained-B rounds | Retained-B input/m | KKT contraction input/m | U/Q |",
+  "new_header": "| d / weights | n | B rounds | Retained B input/m | KKT input/m | U/Q |",
+  "all_other_bytes_preserved": true,
+  "new_native_execution": false,
+  "new_render_execution": false
+}

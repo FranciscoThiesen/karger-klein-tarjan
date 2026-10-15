@@ -1,0 +1,150 @@
+{
+  "schema": "kkt_current_edition_page_qa_v1",
+  "validation": "needs_repair",
+  "reviewer": "experiment_design",
+  "created_utc": "2026-10-15T21:30:33.433796+00:00",
+  "page_range": [
+    31,
+    40
+  ],
+  "total_pdf_pages": 40,
+  "input_sha256": {
+    "pdf-attempt02/report.pdf": "3d89a413e09be8559f507293d57beb8ed3fdb484255b400a161ef7d8ecb76115",
+    "pdf-attempt02/pdf_metadata.json": "03c7e2a48adde09d159a83838107b84bd87193b7e1964252f9879215722df566",
+    "html-attempt02/REPORT.md": "9049b0c289d510e4ff1aeecff35a4d229edb590c928949e062029096e44f6f95",
+    "html-attempt02/report.html": "d7c02a5ffeb5bb30f63f6a0f9733f94bea1cc5991b8dae927d4498c56cfb0a82",
+    "html-attempt02/render_metadata.json": "8ea4e9c803d03f5954c109404742daf4c43b16ce8f786f30add8f175551cc0be",
+    "raster-attempt02/receipt.json": "1d1023762c3b55a2cc201940bed32fd610240650415cc48cf49d25be0befc74e"
+  },
+  "pages": [
+    {
+      "page": 31,
+      "raster": "raster-attempt02/page-31.png",
+      "sha256": "60d68dd9ecdde82fb90ffcfab1c4bd9305c28e15e55533fd25b33658e3a1b846",
+      "viewed_at_original_resolution": true,
+      "readability": "pass",
+      "clipping": "pass",
+      "table_header": "not_applicable",
+      "caption": "pass",
+      "verdict": "pass",
+      "notes": "Two stacked d32 family panels: axes, all five controls, graph medians, full ranges, legend and caption are readable and unclipped. Body continuation is normal."
+    },
+    {
+      "page": 32,
+      "raster": "raster-attempt02/page-32.png",
+      "sha256": "9238d546527ea553e646adf67dace439be376d14038a10f21e374fd88957798d",
+      "viewed_at_original_resolution": true,
+      "readability": "pass",
+      "clipping": "pass",
+      "table_header": "pass",
+      "caption": "not_applicable",
+      "verdict": "pass",
+      "notes": "Readable continuation and lower-density explanation. Outcome table begins with clear header and 15 rows; continuation onto page 33 is intentional."
+    },
+    {
+      "page": 33,
+      "raster": "raster-attempt02/page-33.png",
+      "sha256": "056f558059dec972fc1eb929da5e977a22f4174b95553c79ff6e1f24cd4cdedd",
+      "viewed_at_original_resolution": true,
+      "readability": "pass",
+      "clipping": "pass",
+      "table_header": "pass",
+      "caption": "not_applicable",
+      "verdict": "pass",
+      "notes": "Outcome table header repeats correctly; remaining five rows and largest-size both-clock comparison table are readable. Blank lower region accommodates the next full figure without lost content."
+    },
+    {
+      "page": 34,
+      "raster": "raster-attempt02/page-34.png",
+      "sha256": "f77cb48f1bd99eac721c9f8cefb73d8b8ddaa9e1fbd5040be63ccc7747004c98",
+      "viewed_at_original_resolution": true,
+      "readability": "pass",
+      "clipping": "pass",
+      "table_header": "not_applicable",
+      "caption": "pass",
+      "verdict": "pass",
+      "notes": "d16 stacked panels retain seven size ticks, every comparator, graph medians and full ranges. Legend, caption and following body text do not overlap."
+    },
+    {
+      "page": 35,
+      "raster": "raster-attempt02/page-35.png",
+      "sha256": "052e8f0f0f138817914fc679c20567bb9ea06c643ea59505ca9f62f7647e2137",
+      "viewed_at_original_resolution": true,
+      "readability": "pass",
+      "clipping": "pass",
+      "table_header": "not_applicable",
+      "caption": "pass",
+      "verdict": "pass",
+      "notes": "d8 stacked panels retain eight size ticks and all five comparators. All labels, legend, caption and body text are readable and unclipped."
+    },
+    {
+      "page": 36,
+      "raster": "raster-attempt02/page-36.png",
+      "sha256": "f938d6a20e9977a244f28bd6aa4c17fa94baeaa3d0595f285b548111aa4a4026",
+      "viewed_at_original_resolution": true,
+      "readability": "needs_numeric_table_repair",
+      "clipping": "pass",
+      "table_header": "pass",
+      "caption": "not_applicable",
+      "verdict": "needs_repair",
+      "notes": "Body and exact counter/root-bound text are readable. Endpoint table n column splits 2,097,152 and 4,194,304 before the final digit; U/Q percent signs wrap alone. Data is visible but awkward numeric wrapping requires a narrow table-layout repair."
+    },
+    {
+      "page": 37,
+      "raster": "raster-attempt02/page-37.png",
+      "sha256": "132fa066959b4d3ff5d3cced3faee9510aa344d927e3102cff42786f8d39d14a",
+      "viewed_at_original_resolution": true,
+      "readability": "pass",
+      "clipping": "pass",
+      "table_header": "not_applicable",
+      "caption": "not_applicable",
+      "verdict": "pass",
+      "notes": "Root inference and correctness/provenance limitations are readable, with no clipping or orphaned heading."
+    },
+    {
+      "page": 38,
+      "raster": "raster-attempt02/page-38.png",
+      "sha256": "b1160b838e10a7b5ef5821e23586c1d99c44fc05a9b9d8f372994f139cf3cb78",
+      "viewed_at_original_resolution": true,
+      "readability": "pass",
+      "clipping": "pass",
+      "table_header": "pass",
+      "caption": "not_applicable",
+      "verdict": "pass",
+      "notes": "Completed/pending investigation table is readable with complete headers and rows; no clipping. Dense-theory paragraph is fully visible."
+    },
+    {
+      "page": 39,
+      "raster": "raster-attempt02/page-39.png",
+      "sha256": "4324ccfb292324f79e1200f0a15636c064aacc5a22dc18ab7919213555fc1a31",
+      "viewed_at_original_resolution": true,
+      "readability": "pass",
+      "clipping": "pass",
+      "table_header": "pass",
+      "caption": "not_applicable",
+      "verdict": "pass",
+      "notes": "Evidence notes and complete supplementary gallery table have clear headers, links and row boundaries. Continued final paragraph crosses to page 40 normally."
+    },
+    {
+      "page": 40,
+      "raster": "raster-attempt02/page-40.png",
+      "sha256": "6670ea8140519a9847cb3f0c376117fd1baa55d688d5bda9d5403b9c3d6f0e3d",
+      "viewed_at_original_resolution": true,
+      "readability": "pass",
+      "clipping": "pass",
+      "table_header": "pass",
+      "caption": "not_applicable",
+      "verdict": "pass",
+      "notes": "Evidence/revision table and closing provenance paragraphs are complete and readable. Long hashes wrap without clipping; final footer is visible."
+    }
+  ],
+  "method": "Every assigned PNG was visually inspected at original resolution using view_image; no browser or native solver execution.",
+  "issues": [
+    {
+      "page": 36,
+      "severity": "readability",
+      "detail": "Body and exact counter/root-bound text are readable. Endpoint table n column splits 2,097,152 and 4,194,304 before the final digit; U/Q percent signs wrap alone. Data is visible but awkward numeric wrapping requires a narrow table-layout repair.",
+      "recommendation": "Adjust endpoint table column widths or use explicitly defined 2M/4M vertex labels; keep U/Q units in header so percentages do not wrap alone."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "html": {
+    "session": null,
+    "actual_exit": 0,
+    "tool_chunk": "15dc31",
+    "guard_receipt": "html-attempt01.json",
+    "receipt_sha256": "46cff61fd512a60054de2bcb4957a26c863400972877180a7ff3bb0d801ff1a9",
+    "owned_groups_verified_empty": true
+  },
+  "pdf": {
+    "session": 71028,
+    "actual_exit": 1,
+    "tool_chunk": "47aa61",
+    "guard_receipt": "pdf-attempt01.json",
+    "failure": "Actual PDF 42 pages exceeds 40-page cap; preserved; source condensation required",
+    "receipt_sha256": "8fa758f2b4aede0fdf4b48af38e04ee20d8355ee0601f8655e3c9cf7251c1682",
+    "owned_groups_verified_empty": true
+  },
+  "native_execution": false
+}

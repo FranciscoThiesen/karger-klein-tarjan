@@ -1,0 +1,48 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/build_reportlab_pdf.py",
+    "--edition",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/html-attempt02",
+    "--figure-layout",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/source/figure-layout.json",
+    "--output-dir",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/pdf-attempt02"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "started_utc": "2026-10-15T21:26:21.610158+00:00",
+  "started_monotonic_ns": 19712541,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/build_reportlab_pdf.py": "b670b09cfef6e903ec3f739f52fe91c8e8da5446f124b27e8c4e37f70283ad73",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/source/figure-layout.json": "445672e51e64cc74a43956463ac1e70aa91a6dfbc067b2fee13a6e42f58252e2"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 6144,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 6144,
+    "members": [],
+    "monotonic_ns": 2106500000,
+    "utc": "2026-10-15T21:26:23.696927+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/build_reportlab_pdf.py": "b670b09cfef6e903ec3f739f52fe91c8e8da5446f124b27e8c4e37f70283ad73",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/source/figure-layout.json": "445672e51e64cc74a43956463ac1e70aa91a6dfbc067b2fee13a6e42f58252e2"
+  },
+  "finished_utc": "2026-10-15T21:26:23.697170+00:00",
+  "finished_monotonic_ns": 2106749958,
+  "elapsed_seconds": 2.087037417,
+  "stdout": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/validation/pdf-attempt02.stdout",
+  "stdout_sha256": "aaeddb1e5f264f14424ffed3d900d1d01242ed91cadf7d843efe1d5ee85a349a",
+  "stderr": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/validation/pdf-attempt02.stderr",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

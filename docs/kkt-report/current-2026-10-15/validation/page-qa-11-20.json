@@ -1,0 +1,192 @@
+{
+  "schema": "kkt_final_pdf_page_visual_qa_v1",
+  "validation": "pass",
+  "reviewer": "multigraph_candidate",
+  "created_utc": "2026-10-15T21:28:21.736328+00:00",
+  "edition": "attempt02",
+  "pdf_pages_from_render_metadata": 40,
+  "reviewed_pages": [
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "method": "Every assigned page opened with tools.view_image detail=original. Visual inspection of clipping, overlap, table headers/row splits, body/figure/caption/axis readability, equations, links and footer/page numbering; not a text-extraction-only check.",
+  "pages": [
+    {
+      "page": 11,
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/raster-attempt02/page-11.png",
+      "sha256": "0a25c86cf5665337c95e91ba47c6e10e253a08bf1a1af7a2be135c54ec543177",
+      "pixels": [
+        993,
+        1404
+      ],
+      "validation": "pass",
+      "view_detail": "original",
+      "visual_inspection_performed": true,
+      "notes": "All four implementation subsections and the complete three-column summary table fit. Table header/rows, percentages, links and footer are readable without clipping.",
+      "blocking_issues": []
+    },
+    {
+      "page": 12,
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/raster-attempt02/page-12.png",
+      "sha256": "de9914ae78749f839bfc16a12fd541ab93271e93067eefebfc73b67a7b2513b2",
+      "pixels": [
+        993,
+        1404
+      ],
+      "validation": "pass",
+      "view_detail": "original",
+      "visual_inspection_performed": true,
+      "notes": "Query-bound display and cumulative accounting expressions are legible. R/D notation, Unicode inequalities and arrows render correctly. Section8 heading stays with explanatory text.",
+      "blocking_issues": []
+    },
+    {
+      "page": 13,
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/raster-attempt02/page-13.png",
+      "sha256": "53cdbb41f3fed80087904b6d9ae9bada007ec173264f325e7d9f0fe18896d720",
+      "pixels": [
+        993,
+        1404
+      ],
+      "validation": "pass",
+      "view_detail": "original",
+      "visual_inspection_performed": true,
+      "notes": "Hierarchy internal-pair formula and surrounding definitions are legible. This short text page leaves intentional whitespace before the next full-page figure; no content is clipped.",
+      "blocking_issues": []
+    },
+    {
+      "page": 14,
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/raster-attempt02/page-14.png",
+      "sha256": "64fedba3371ed6c78891fed511cc920c8112cb2b621d0fb737f36b2cde630120",
+      "pixels": [
+        993,
+        1404
+      ],
+      "validation": "pass",
+      "view_detail": "original",
+      "visual_inspection_performed": true,
+      "notes": "Both theoretical panels, axes, all defined round endpoints, three-item legend and theoretical-not-measured captions are readable. Figure footer and following explanatory text do not collide.",
+      "blocking_issues": []
+    },
+    {
+      "page": 15,
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/raster-attempt02/page-15.png",
+      "sha256": "2a25c4baa1fa42330b73331cd26404547c9e1a413f4da4d717767997ec66ac5e",
+      "pixels": [
+        993,
+        1404
+      ],
+      "validation": "pass",
+      "view_detail": "original",
+      "visual_inspection_performed": true,
+      "notes": "The asymptotic qualified argument and ratio-of-expectations notation are legible. Text/links remain within margins; whitespace precedes the following full-page witness.",
+      "blocking_issues": []
+    },
+    {
+      "page": 16,
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/raster-attempt02/page-16.png",
+      "sha256": "4b1fe544d20035eaf7392cc950958a2b384bd36e96bf6e74a5fad398502d25b8",
+      "pixels": [
+        993,
+        1404
+      ],
+      "validation": "pass",
+      "view_detail": "original",
+      "visual_inspection_performed": true,
+      "notes": "All three graph stages, vertex/weight labels, colored edge types, legend and both explanatory captions are readable. No graph/title/legend overlap; body continuation reaches the next page normally.",
+      "blocking_issues": []
+    },
+    {
+      "page": 17,
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/raster-attempt02/page-17.png",
+      "sha256": "86baedc760543e973ad01bd7733ae0c56d75805c1dae28ddb906f8ccb7179568",
+      "pixels": [
+        993,
+        1404
+      ],
+      "validation": "pass",
+      "view_detail": "original",
+      "visual_inspection_performed": true,
+      "notes": "Common-family prose and the first four table rows are readable. Table splits at a row boundary; last-column throughout wraps within the word but remains legible and does not overflow.",
+      "blocking_issues": []
+    },
+    {
+      "page": 18,
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/raster-attempt02/page-18.png",
+      "sha256": "dfaece12b1e02aa91b9a96cb3bc9827b8291923a308cda876a783fe726f88e9a",
+      "pixels": [
+        993,
+        1404
+      ],
+      "validation": "pass",
+      "view_detail": "original",
+      "visual_inspection_performed": true,
+      "notes": "The continued table repeats its full header and finishes two rows. The six-row numeric ratio table has readable headers/decimals and no clipping. Remaining text/links and footer are intact.",
+      "blocking_issues": []
+    },
+    {
+      "page": 19,
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/raster-attempt02/page-19.png",
+      "sha256": "8af849680c6cc0db032596a635812760592331e6c6bf33d219242d6dce1983bf",
+      "pixels": [
+        993,
+        1404
+      ],
+      "validation": "pass",
+      "view_detail": "original",
+      "visual_inspection_performed": true,
+      "notes": "Half-policy six-row all-comparator table fits with clear columns and header. Reversal/bracket text, absolute times and links are readable, without overlap or clipped equations.",
+      "blocking_issues": []
+    },
+    {
+      "page": 20,
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/raster-attempt02/page-20.png",
+      "sha256": "3d03b507e6925989720045150cf5bd037068bf7d87d179156262f9c284317e45",
+      "pixels": [
+        993,
+        1404
+      ],
+      "validation": "pass",
+      "view_detail": "original",
+      "visual_inspection_performed": true,
+      "notes": "Private sampling predicates, case/clock table, all six ratios and drift qualification are readable. Heading and body align correctly; whitespace before the next figure is harmless.",
+      "blocking_issues": []
+    }
+  ],
+  "input_sha256": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/pdf-attempt02/report.pdf": "3d89a413e09be8559f507293d57beb8ed3fdb484255b400a161ef7d8ecb76115",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/source/REPORT-attempt02.md": "f8d3b9c5bc0877bc3dad76e2ce00a45d558c5e7ac09e5ee954f75e6c07899fb9",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/html-attempt02/REPORT.md": "9049b0c289d510e4ff1aeecff35a4d229edb590c928949e062029096e44f6f95",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/html-attempt02/report.html": "d7c02a5ffeb5bb30f63f6a0f9733f94bea1cc5991b8dae927d4498c56cfb0a82",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/pdf-attempt02/pdf_metadata.json": "03c7e2a48adde09d159a83838107b84bd87193b7e1964252f9879215722df566",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/html-attempt02/render_metadata.json": "8ea4e9c803d03f5954c109404742daf4c43b16ce8f786f30add8f175551cc0be",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/raster-attempt02/receipt.json": "1d1023762c3b55a2cc201940bed32fd610240650415cc48cf49d25be0befc74e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/raster-attempt02/page-11.png": "0a25c86cf5665337c95e91ba47c6e10e253a08bf1a1af7a2be135c54ec543177",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/raster-attempt02/page-12.png": "de9914ae78749f839bfc16a12fd541ab93271e93067eefebfc73b67a7b2513b2",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/raster-attempt02/page-13.png": "53cdbb41f3fed80087904b6d9ae9bada007ec173264f325e7d9f0fe18896d720",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/raster-attempt02/page-14.png": "64fedba3371ed6c78891fed511cc920c8112cb2b621d0fb737f36b2cde630120",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/raster-attempt02/page-15.png": "2a25c4baa1fa42330b73331cd26404547c9e1a413f4da4d717767997ec66ac5e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/raster-attempt02/page-16.png": "4b1fe544d20035eaf7392cc950958a2b384bd36e96bf6e74a5fad398502d25b8",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/raster-attempt02/page-17.png": "86baedc760543e973ad01bd7733ae0c56d75805c1dae28ddb906f8ccb7179568",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/raster-attempt02/page-18.png": "dfaece12b1e02aa91b9a96cb3bc9827b8291923a308cda876a783fe726f88e9a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/raster-attempt02/page-19.png": "8af849680c6cc0db032596a635812760592331e6c6bf33d219242d6dce1983bf",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/raster-attempt02/page-20.png": "3d03b507e6925989720045150cf5bd037068bf7d87d179156262f9c284317e45"
+  },
+  "raster_hashes_match_producer": true,
+  "blocking_issues": [],
+  "nonblocking_notes": [
+    "Pages13 and15 are short text pages before full-page illustrations; content remains intact.",
+    "A narrow final table column on pages17\u201318 wraps throughout inside the word. It remains readable with no overflow, and repeated continuation headers retain context."
+  ],
+  "scope": "Visual QA of pages11\u201320 only. Does not claim browser interaction, viewer validation or another raw numerical audit. Other page ranges are assigned to separate reviewers.",
+  "native_solver_execution": false,
+  "browser_execution": false,
+  "source_or_artifact_edits": false
+}

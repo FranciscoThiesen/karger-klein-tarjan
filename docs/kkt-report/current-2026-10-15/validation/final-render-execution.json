@@ -1,0 +1,30 @@
+{
+  "validation": "pass",
+  "stages": {
+    "html": {
+      "actual_exit": 0,
+      "tool_chunk": "2fa5cb",
+      "receipt_sha256": "1f723df74163dda937eba0490294765f78c42e6155038f4da9d87da475a09ab5",
+      "owned_groups_verified_empty": true,
+      "elapsed_seconds": 0.281650708
+    },
+    "pdf": {
+      "session_id": 84283,
+      "actual_exit": 0,
+      "tool_chunk": "81effd",
+      "receipt_sha256": "b1207be3da512900c00ed398178182dfd44e6c8d6ec42238d63781c728e15613",
+      "owned_groups_verified_empty": true,
+      "elapsed_seconds": 2.087037417
+    },
+    "raster": {
+      "session_id": 67065,
+      "actual_exit": 0,
+      "tool_chunk": "0f4c99",
+      "receipt_sha256": "1ec0e91584a881969e3fa1c042271a0022d6041eff1c357039cec4f4e647820f",
+      "owned_groups_verified_empty": true,
+      "elapsed_seconds": 8.483463375
+    }
+  },
+  "pdf_pages": 40,
+  "native_solver_execution": false
+}

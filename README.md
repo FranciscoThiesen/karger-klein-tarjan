@@ -48,8 +48,18 @@ Alternatively, use Bazel:
 
 ### How to run benchmarks
 
-The [in-depth KKT report](docs/kkt-report/REPORT.md) explains the original
-complexity defects, current Google Benchmark fits, and repeated comparisons
+The [15 October investigation](docs/kkt-report/current-2026-10-15/README.md)
+collects the implementation repairs, current Google Benchmark fits, six-solver
+comparisons, graph visualizations and audited work counts. The distance-ranked
+family at m=16n crosses from a loss to a sustained strong lead over retained-edge
+compacting Borůvka between 512 and 8,192 vertices, reaching a KKT/Borůvka time
+ratio of 0.709 at 2,097,152 vertices. Shuffled controls lose, the density-8 lead
+reverses at its largest size, and Kruskal wins all four largest endpoints.
+These are measured implementation-specific results; the current complexity
+curves receive N log N fits, not confirmation of linear runtime.
+
+The [earlier in-depth KKT report](docs/kkt-report/REPORT.md) explains the original
+complexity defects, historical Google Benchmark fits, and repeated comparisons
 across 11 new graph variants and two unchanged controls. Its [offline HTML edition](docs/kkt-report/report.html)
 includes an interactive 3D explorer of certified contraction and filtering
 results. The [raw evidence and protocol](benchmark/results/common-2026-10-11/README.md)
@@ -70,7 +80,7 @@ families show smaller, inconsistent gains. The report explains the hierarchy's
 repeated edge scans, retains the failed baseline stack run, and shows that
 Kruskal and original Borůvka win the three selected classical comparisons.
 
-The [latest implementation investigation](benchmark/results/practical-2026-10-10/README.md)
+The [earlier implementation investigation](benchmark/results/practical-2026-10-10/README.md)
 records six accepted optimizations, a rejected experiment, fresh complexity
 diagnostics, and repeated comparisons with Kruskal, Prim, and Borůvka.
 It retains the original fixtures, correctness gates, and all measured losses;

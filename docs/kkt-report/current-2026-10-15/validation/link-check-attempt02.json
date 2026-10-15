@@ -1,0 +1,58 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/source/pack_publication.py",
+    "verify-links",
+    "--repo-root",
+    "/Users/random_person/Desktop/kkt-eighth-sampling",
+    "--document",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/html-attempt03/REPORT.md",
+    "--document",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/html-attempt03/report.html",
+    "--document",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/packed-sampling-2026-10-15/README.md",
+    "--copy-receipt",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/source-archives/packed-sampling-4bb476e/COPY_RECEIPT.json",
+    "--render-metadata",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/html-attempt03/render_metadata.json",
+    "--included",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/current-hierarchy-view-attempt01/index.html",
+    "--receipt",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/validation/publication-links-attempt02.json",
+    "--released"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "started_utc": "2026-10-15T21:31:25.298602+00:00",
+  "started_monotonic_ns": 19085291,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/source/pack_publication.py": "62beab835ebea55f858e8b2649b8ff3aeab8cee38fac099b6213ac6e8beb28bf"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 6495,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 6495,
+    "members": [],
+    "monotonic_ns": 546967250,
+    "utc": "2026-10-15T21:31:25.826469+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/source/pack_publication.py": "62beab835ebea55f858e8b2649b8ff3aeab8cee38fac099b6213ac6e8beb28bf"
+  },
+  "finished_utc": "2026-10-15T21:31:25.826650+00:00",
+  "finished_monotonic_ns": 547154125,
+  "elapsed_seconds": 0.528068834,
+  "stdout": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/validation/link-check-attempt02.stdout",
+  "stdout_sha256": "ac341b520b56c86d1a55952d715577301d82294f8b4191273392cc4acb1ec4f9",
+  "stderr": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/current-2026-10-15/validation/link-check-attempt02.stderr",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

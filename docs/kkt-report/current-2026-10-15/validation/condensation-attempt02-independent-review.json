@@ -1,0 +1,54 @@
+{
+  "schema": "independent_final_edition_condensation_review_v1",
+  "validation": "pass",
+  "reviewer": "multigraph_candidate",
+  "created_utc": "2026-10-15T21:26:07.926887+00:00",
+  "input_sha256": {
+    "/tmp/kkt-final-edition-source-prep.md": "045a1b548b7d09e871936508391a0f99748fd789a02c39ca5bedf3ab45a5f4df",
+    "/tmp/kkt-final-edition-source-attempt02.md": "f8d3b9c5bc0877bc3dad76e2ce00a45d558c5e7ac09e5ee954f75e6c07899fb9",
+    "/tmp/kkt-final-edition-condensation-attempt02.diff": "a96a0b6b2d4edb32776b597d55926dd1b6027228c3d8b11344bedfebb2451d06"
+  },
+  "exact_unified_diff_checked": true,
+  "unchanged_table_lines": 163,
+  "unchanged_image_targets": [
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/paper-figures-attempt01/paper_normalized_native_process_cpu.png",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/paper-figures-attempt01/paper_google_cpu_models_full11.png",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/current-complexity-2026-10-15/paper-figures-attempt01/paper_google_cpu_models_upper6.png",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/retention-figures-paper-attempt02/paper_hierarchy_expectation.png",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/larger-hierarchy-2026-10-15/witness-figures-paper-attempt01/paper_sampling_witness.png",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/figures-paper-attempt02/paper_variant_gains_wall.png",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/figures-paper-attempt02/paper_eighth_ratios_wall.png",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/figures-paper-attempt01/paper_work_small.png",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/figures-paper-attempt01/paper_work_large.png",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/figures-paper-attempt03/paper_ratios_wall.png",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/figures-paper-attempt01/paper_ratios_wall.png",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/paper-figures-attempt02/paper_d16_ratios_wall.png",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/paper-figures-attempt02/paper_d8_ratios_wall.png"
+  ],
+  "unchanged_image_count": 13,
+  "reference_definitions_byte_identical": true,
+  "inline_target_sets_unchanged": true,
+  "font_style_overrides_unchanged": true,
+  "unchanged_major_sections_sha256": {
+    "theory_and_input_conditions": "d9b4363453199fd72547976a34546b9b35cd92c417f5a358e6c79efef7003b73",
+    "current_google": "e74ea67201ee823ddd57cadd35a01265fb736a0c7686ffcb0289eadfb4224344",
+    "hierarchy_theory": "7c9b3756ff33a54de784837555105698661c2899b6273b28240e9e334c1b92d7",
+    "all_current_sampling_extensions_and_root_proof": "67e4ed627f95b8074736cb100a98cafde4b241bde8e1a8484722b8679629494a"
+  },
+  "manual_review": [
+    "Reviewed each condensation hunk: the paired ratios, losses/reversals, strongest shared-kernel control and all-six limitations remain.",
+    "Sampling-stream changes, finite benchmark scopes, primitive-cost/randomness assumptions, no multiplication of independent experiment gains, and no CPU attribution remain.",
+    "Current Google four-clock/full11-versus-upper6 semantics and independent-audit exclusions are unchanged.",
+    "The complete lower-density timing/work section, all20 outcomes, root-path inequalities and no isolated-count/CPU claim are unchanged.",
+    "Prim interval reasoning is now explicitly scoped to the hierarchy with its forced cheap path; this is a warranted clarification, not a new result.",
+    "Table and image equality protects all numeric tables, all5 comparator columns, full loss cases, and figure font contents. No renderer or image source was edited by this review."
+  ],
+  "word_counts_whitespace": {
+    "original": 14332,
+    "condensed": 12935,
+    "saved": 1397
+  },
+  "scope": "Focused source-diff review, not a new raw-data audit or PDF visual pass. The actual first PDF had42 pages; revised page count<=40 and page-scale visual QA remain pending.",
+  "native_execution": false,
+  "source_edits": false
+}
