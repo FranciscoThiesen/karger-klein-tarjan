@@ -1,0 +1,178 @@
+{
+  "validation": "pass",
+  "readme_sha256": "46f73c1266c7eec1c5cd405bf0eaff7092d4b60f14ba4fd4ac9f210116d65bc8",
+  "checked_direct_table_cells": 30,
+  "checked_variant_table_cells": 18,
+  "checked_endpoint_classes": 30,
+  "strong_brackets": 4,
+  "kkt_variant_wins_per_clock": 144,
+  "direct_wins_each_clock": [
+    120,
+    48,
+    101,
+    48,
+    48
+  ],
+  "hierarchy": [
+    {
+      "n": 65536,
+      "wall_ratio": 0.7891099189189242,
+      "realization_range": [
+        0.7652915524794488,
+        0.7960917123321527
+      ]
+    },
+    {
+      "n": 1048576,
+      "wall_ratio": 0.664766186831349,
+      "realization_range": [
+        0.6611820124568052,
+        0.6769690528179954
+      ]
+    }
+  ],
+  "work_freeze_sha256": "e9b556e7d92bb0c73597a185112170ed649752957e64a484f44770887a331d04",
+  "work_bound_files_checked": 483,
+  "work_receipts": [
+    {
+      "name": "mocks-attempt01",
+      "exit_status": 0,
+      "empty_group": 47222
+    },
+    {
+      "name": "counter-audit-mocks-attempt01",
+      "exit_status": 0,
+      "empty_group": 47248
+    },
+    {
+      "name": "prepare-attempt01",
+      "exit_status": 0,
+      "empty_group": 47259
+    },
+    {
+      "name": "freeze-proof-attempt01",
+      "exit_status": 0,
+      "empty_group": 47274
+    }
+  ],
+  "no_all_six_case_winner": true,
+  "input_sha256": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/README.md": "46f73c1266c7eec1c5cd405bf0eaff7092d4b60f14ba4fd4ac9f210116d65bc8",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/analysis/comparisons.csv": "d71f4056c2b2efd44332ed98fdce1e62e491668dc0ab8a97108914796f7bb82b",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/analysis/variant_comparisons.csv": "2e437f788d99a985be227421d2566748af51a828ae02da30273fa88a8ea0332b",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/analysis/realization_comparisons.csv": "faebba63ec1fd8ab79a2f338929f256eae887a3040c613da3664f4d3a5201edd",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/analysis/summary.csv": "2f6da1cb32e1cd4303db0cca143e53640992c17807d5a52d9fe409d851eba78c",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/analysis/paired_ratios.csv": "93ebe1e1ecb760851d64f5d1ffacc76b9e9795089ff1ad33aa1ab581024bc182",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/analysis/variant_pairs.csv": "ddfce34c0bbbccd3e1c112a3a3079b347bd7fa99b9578bd79ba72c1fb7a001ce",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/analysis/strong_crossover_classifications.csv": "43a8904b4ae42fa18f89fcb925aea0ecd50146bac88778312a46a4996193404e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/validation/independent-numerical-audit-attempt01/audit.json": "47a860dd25dcb504339f94da1f026db8778b01016b3b6bcdd9cc7965a9fc137e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/mocks-attempt01.json": "6a536df084f1061a44d9239571934911445ed29af9416ba58e5179c03e34c0e2",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/counter-audit-mocks-attempt01.json": "b8e9f22960afde7a8c8ebdb683a84a722f27cb81d9ca550f2ed1ac2e0e3cb708",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/prepare-attempt01.json": "2f3f412d92b192ec5ab07ec931301483628ef3c53591b225506aa91faf0517c2",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/freeze-proof-attempt01.json": "a3ec22de2fc3006d454d3edb90f4fd31d207cfdbf194fbd5af43fd2c91b45513"
+  },
+  "reviewer": "/root/experiment_design",
+  "native_solver_execution": false,
+  "original_resolution_visual_review": "pass",
+  "visual_findings": [
+    "All ten figures and thirty panels inspected at original resolution.",
+    "Axes, legends, captions and all endpoints remain legible; no clipping or blocking overlap found.",
+    "All losses, full trial ranges and four realization markers retained; neutral KKT legend and comparator colors consistent.",
+    "Matched wall/CPU axes and explicit two-endpoint/noninterpolation caveats present.",
+    "No chart re-rendering or edits; report-scale layout QA remains separate."
+  ],
+  "scope": "Independent README-versus-canonical table/hash check and visual QA, supplementing completed raw Fraction audit; this receipt does not replace raw audit.",
+  "figure_artifacts": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/figures-attempt01/variant_gains_wall.png": {
+      "sha256": "b7ca80a5de23f5d5ef6c9d676b15294e0faaff39e838d37992fed2d63f144748",
+      "dimensions": [
+        3127,
+        1215
+      ],
+      "inspection_detail": "original",
+      "visual_validation": "pass"
+    },
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/figures-attempt01/variant_gains_cpu.png": {
+      "sha256": "f213cedab394e1ac85f58ab02e20e17026b2b0e225804d813810ed287ad8233c",
+      "dimensions": [
+        3127,
+        1215
+      ],
+      "inspection_detail": "original",
+      "visual_validation": "pass"
+    },
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/figures-attempt01/half_ratios_wall.png": {
+      "sha256": "41cd3983cd9a643d667fc173a7d1aa6d8bcd22c654a560205facbe9dc26648fb",
+      "dimensions": [
+        3127,
+        1215
+      ],
+      "inspection_detail": "original",
+      "visual_validation": "pass"
+    },
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/figures-attempt01/half_ratios_cpu.png": {
+      "sha256": "f1ebe5ca082862d0d8f154fa94d28f293fa6aad588ae51297765d6eedef7c83f",
+      "dimensions": [
+        3127,
+        1215
+      ],
+      "inspection_detail": "original",
+      "visual_validation": "pass"
+    },
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/figures-attempt01/eighth_ratios_wall.png": {
+      "sha256": "8ad01cf2f6e7b379a6215d22fe4cfc0c1cb346729acb98b24486f578e5428b77",
+      "dimensions": [
+        3127,
+        1215
+      ],
+      "inspection_detail": "original",
+      "visual_validation": "pass"
+    },
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/figures-attempt01/eighth_ratios_cpu.png": {
+      "sha256": "ebac7da4edcffe2e9540606dd416b26cbc60bb7ac1ce1d94487e06685708d46c",
+      "dimensions": [
+        3127,
+        1215
+      ],
+      "inspection_detail": "original",
+      "visual_validation": "pass"
+    },
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/figures-attempt01/half_times_wall.png": {
+      "sha256": "aa9d70915e1b91bdce17820bcf5067f54dad0bc07cfabcb7a5bf1d63db1659c5",
+      "dimensions": [
+        3130,
+        1215
+      ],
+      "inspection_detail": "original",
+      "visual_validation": "pass"
+    },
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/figures-attempt01/half_times_cpu.png": {
+      "sha256": "f2e049ccb620152ace3d73dc8459bdc69ccdfb996ee34e2532d8ea0194fc28ff",
+      "dimensions": [
+        3130,
+        1215
+      ],
+      "inspection_detail": "original",
+      "visual_validation": "pass"
+    },
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/figures-attempt01/eighth_times_wall.png": {
+      "sha256": "53da40f2dde2f4c72930e8bbd120ff082f45fc46141a6277b9b8727d9a97983b",
+      "dimensions": [
+        3130,
+        1215
+      ],
+      "inspection_detail": "original",
+      "visual_validation": "pass"
+    },
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/figures-attempt01/eighth_times_cpu.png": {
+      "sha256": "cd13a47d8a5a455d124677fe1e0da6b3333a51bc9ad211817c35e45f248f2da1",
+      "dimensions": [
+        3130,
+        1215
+      ],
+      "inspection_detail": "original",
+      "visual_validation": "pass"
+    }
+  },
+  "recorded_utc": "2026-10-15T15:55:27.658539+00:00"
+}

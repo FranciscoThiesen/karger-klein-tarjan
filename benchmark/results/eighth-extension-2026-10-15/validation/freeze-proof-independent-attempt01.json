@@ -1,0 +1,47 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "-c",
+    "import hashlib,json,sys\nfrom pathlib import Path\nsys.path.insert(0,str(Path('benchmark').resolve()))\nimport run_eighth_extension as e\np=Path('benchmark/results/eighth-extension-2026-10-15/freeze.json').resolve(strict=True)\nh=hashlib.sha256(p.read_bytes()).hexdigest()\nassert h=='aa2f9ae7385105eb7185b864a1f46387f8a02ebe8b967f041d3d0cef5ffa7bc5'\nf,c=e.check_freeze(p)\nassert len(c)==14 and len(f['schedule'])==28\nassert f['candidate_variant']=='eighth' and f['graph_seeds']==[17000011,17000047] and f['sampling_seeds']==[2801]\nassert f['repetitions']==6 and f['warmups']==1\nassert f['schedule']==e.schedule(c)\nassert hashlib.sha256(p.read_bytes()).hexdigest()==h\nprint(json.dumps({'validation':'pass','freeze':str(p),'freeze_sha256':h,'cases':len(c),'children':len(f['schedule']),'expected_outputs':1176,'parent_freeze':f['parent_freeze'],'parent_freeze_sha256':f['parent_freeze_sha256'],'binary':f['binary'],'binary_sha256':f['binary_sha256'],'native_solver_execution':False},indent=2))"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "started_utc": "2026-10-15T15:56:13.694822+00:00",
+  "started_monotonic_ns": 25056416,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_eighth_extension.py": "8b1332ce7bff2f0cca09188c98c74d1adb0e486e107acb0a1cd99691afdde3d4",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/PROTOCOL.md": "7e7a5ef1d4d6e52a631c10d834b27c90518d4121aae216803cb9c7cc4ff06ebe",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/manifest.csv": "b950d44ffd0c01e47b26a6e54064aad3349ecd0c3a6b956c21be6e7f8351084a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/freeze.json": "aa2f9ae7385105eb7185b864a1f46387f8a02ebe8b967f041d3d0cef5ffa7bc5"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 47813,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 47813,
+    "members": [],
+    "monotonic_ns": 191092083,
+    "utc": "2026-10-15T15:56:13.860842+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_eighth_extension.py": "8b1332ce7bff2f0cca09188c98c74d1adb0e486e107acb0a1cd99691afdde3d4",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/PROTOCOL.md": "7e7a5ef1d4d6e52a631c10d834b27c90518d4121aae216803cb9c7cc4ff06ebe",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/manifest.csv": "b950d44ffd0c01e47b26a6e54064aad3349ecd0c3a6b956c21be6e7f8351084a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/freeze.json": "aa2f9ae7385105eb7185b864a1f46387f8a02ebe8b967f041d3d0cef5ffa7bc5"
+  },
+  "finished_utc": "2026-10-15T15:56:13.861145+00:00",
+  "finished_monotonic_ns": 191400458,
+  "elapsed_seconds": 0.166344042,
+  "stdout": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/validation/freeze-proof-independent-attempt01.stdout",
+  "stdout_sha256": "3806d0a44830b02609d4f67f4f83caa72dad70fff791663a85036f1348924e9f",
+  "stderr": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/validation/freeze-proof-independent-attempt01.stderr",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

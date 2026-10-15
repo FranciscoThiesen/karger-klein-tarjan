@@ -1,0 +1,57 @@
+{
+  "schema": "eighth_extension_independent_readiness_v1",
+  "validation": "pass",
+  "reviewer": "/root/experiment_design",
+  "recorded_utc": "2026-10-15T15:56:42.485585+00:00",
+  "native_solver_execution": false,
+  "mock_test_groups": 11,
+  "gate_receipts": [
+    {
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/validation/collector-mocks-independent-attempt01.json",
+      "sha256": "017176a712f6ed72bf737af87e3cebfc0b29d67063dc25742d3ebb459d1670ac",
+      "elapsed_seconds": 13.150864709,
+      "process_group": 47790,
+      "actual_exit_status": 0,
+      "owned_group_empty": true
+    },
+    {
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/validation/freeze-proof-independent-attempt01.json",
+      "sha256": "fb51d201b6c2612267c4a817bf29554fc569f6288365eca511c16ac8d220776c",
+      "elapsed_seconds": 0.166344042,
+      "process_group": 47813,
+      "actual_exit_status": 0,
+      "owned_group_empty": true
+    }
+  ],
+  "full_freeze_proof": {
+    "validation": "pass",
+    "freeze": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/freeze.json",
+    "freeze_sha256": "aa2f9ae7385105eb7185b864a1f46387f8a02ebe8b967f041d3d0cef5ffa7bc5",
+    "cases": 14,
+    "children": 28,
+    "expected_outputs": 1176,
+    "parent_freeze": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/freeze.json",
+    "parent_freeze_sha256": "2be7556d15b58f3f65cc380ac22b67c57fdf8aea747d651b9d648c6a1aa59d2f",
+    "binary": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/timing-build/eighth/retention_control",
+    "binary_sha256": "954068775a83e1c42db62ffb6777c398dc05fd5792c60d2f293df6532130951a",
+    "native_solver_execution": false
+  },
+  "input_sha256": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_eighth_extension.py": "8b1332ce7bff2f0cca09188c98c74d1adb0e486e107acb0a1cd99691afdde3d4",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/test_eighth_extension.py": "07d2f5eb40b54bff4c8c19de7718ea71c75b75f5309599524711f94ea6299d8d",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/PROTOCOL.md": "7e7a5ef1d4d6e52a631c10d834b27c90518d4121aae216803cb9c7cc4ff06ebe",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/manifest.csv": "b950d44ffd0c01e47b26a6e54064aad3349ecd0c3a6b956c21be6e7f8351084a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/freeze.json": "aa2f9ae7385105eb7185b864a1f46387f8a02ebe8b967f041d3d0cef5ffa7bc5"
+  },
+  "source_review": [
+    "Read complete installed protocol and exact fourteen-row manifest: seven fixed sizes, both weight twins, both fresh graph seeds and one sampler seed.",
+    "Reviewed complete parent proof: literal parent freeze SHA, unchanged full parent checker, both parent variants and ancestors, exact inherited eighth binary, source/recipe/helper bindings; no parent seed override.",
+    "Reviewed serial capture and strict reload: forty-two-row balanced calls, all certificates and fingerprints, fourteen topology twins, forty-GiB guard, sampler poison and unavailable stops, post-exit empty group, bounded cleanup with prior unknown retained.",
+    "Reviewed all five controls on both clocks, complete table counts, exact Fraction graph medians, all seventy points/two hundred ten endpoint pairs/ten summaries, sustained lead at every larger measured point and no historical pooling."
+  ],
+  "limitations": [
+    "Protocol source-declaration preamble records original preparation status; these separate receipts document subsequent mocked validation and prospective freeze.",
+    "No native extension input has been run by this reviewer; native execution requires root scheduling release."
+  ],
+  "all_owned_runtime_helpers_exited": true
+}
