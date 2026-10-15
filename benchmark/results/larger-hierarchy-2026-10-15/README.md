@@ -2,8 +2,8 @@
 
 **Mock validation passed; performance remains unexecuted.** The owner ran all
 eleven mocked groups successfully on the first attempt after the separate
-72-child held-out capture completed. No larger-screen freeze or native solver
-call exists yet. The package was originally prepared while that capture was
+72-child held-out capture completed. The prospective freeze passed after declaration commit `2fa464d`; no native
+solver call has started yet. The package was originally prepared while that capture was
 active, without reading its partial results. It neither modifies that protocol
 nor depends on its outcome.
 
@@ -28,8 +28,10 @@ monitor failures/poison, interrupted cleanup, repeated SIGTERM suppression,
 handler restoration and stopping before another child. The owner run passed
 in 6.968 seconds with exit status zero and its owned process group verified
 empty. [Attempt 01](validation/owner-mocks-attempt01.json) preserves the exact
-command, unchanged source hashes, stdout/stderr and exit proof. Independent
-execution is pending; [source review](INDEPENDENT_SOURCE_REVIEW.md) passed.
+command, unchanged source hashes, stdout/stderr and exit proof. The
+[independent first attempt](validation/independent-mocks-attempt01.json) also
+passed all eleven groups with unchanged source hashes and an empty owned
+process group; [source review](INDEPENDENT_SOURCE_REVIEW.md) passed.
 
 The [readiness check](validation/readiness-attempt01.json) also passed the full
 unchanged compressed parent proof, exact candidate binary/profile binding,
@@ -73,3 +75,9 @@ Expected complete outputs: 12 children, 504 checked rows, 720 paired clock ratio
 30 endpoint pairs and 10 family/control summaries. No shortened matrix, domain
 extension, solver omission, peak-memory guarantee or runtime prediction is
 part of the preparation.
+
+The [preflight receipt](validation/preflight-attempt01.json) records exit zero
+and an empty owned group. The [freeze](freeze.json) has SHA-256
+`d4600df2dee18c98d263a9bc043d2881c16a6cc253d9c99047aede4aaa334f27`;
+it binds the complete inherited native proof and all twelve planned children.
+Root will separately release performance after all nonperformance jobs exit.
