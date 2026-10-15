@@ -1,0 +1,636 @@
+{
+  "groups": [
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/usr/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O3",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-I.",
+        "-c",
+        "boruvka/boruvka.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/boruvka/boruvka.o"
+      ],
+      "process_group": 39089,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:49:47.922264+00:00",
+          "monotonic_ns": 3630099819971125,
+          "process_group": 39089,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3630099823920166,
+        "process_group": 39089,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:49:47.926002+00:00",
+          "monotonic_ns": 3630099823931833,
+          "process_group": 39089,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3630099824120708,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/usr/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O3",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-I.",
+        "-c",
+        "kruskal/kruskal.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/kruskal/kruskal.o"
+      ],
+      "process_group": 39098,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:49:48.283393+00:00",
+          "monotonic_ns": 3630100181312375,
+          "process_group": 39098,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3630100181922541,
+        "process_group": 39098,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:49:48.283997+00:00",
+          "monotonic_ns": 3630100181930166,
+          "process_group": 39098,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3630100182098791,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/usr/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O3",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-I.",
+        "-c",
+        "prim/prim.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/prim/prim.o"
+      ],
+      "process_group": 39106,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:49:48.689381+00:00",
+          "monotonic_ns": 3630100587297458,
+          "process_group": 39106,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3630100587883916,
+        "process_group": 39106,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:49:48.689955+00:00",
+          "monotonic_ns": 3630100587889541,
+          "process_group": 39106,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3630100588028500,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/usr/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O3",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-I.",
+        "-c",
+        "lca/lca.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/lca/lca.o"
+      ],
+      "process_group": 39114,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:49:49.089261+00:00",
+          "monotonic_ns": 3630100987173458,
+          "process_group": 39114,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3630100988278666,
+        "process_group": 39114,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:49:49.090353+00:00",
+          "monotonic_ns": 3630100988288041,
+          "process_group": 39114,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3630100988450583,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/usr/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O3",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-I.",
+        "-c",
+        "union_find/union_find.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/union_find/union_find.o"
+      ],
+      "process_group": 39120,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:49:49.401965+00:00",
+          "monotonic_ns": 3630101299884916,
+          "process_group": 39120,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3630101300453583,
+        "process_group": 39120,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:49:49.402521+00:00",
+          "monotonic_ns": 3630101300458875,
+          "process_group": 39120,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3630101300616541,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/usr/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O3",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-I.",
+        "-c",
+        "graph_utils/graph_utils.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/graph_utils/graph_utils.o"
+      ],
+      "process_group": 39127,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:49:49.821063+00:00",
+          "monotonic_ns": 3630101718985041,
+          "process_group": 39127,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3630101719588166,
+        "process_group": 39127,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:49:49.821656+00:00",
+          "monotonic_ns": 3630101719594625,
+          "process_group": 39127,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3630101719741125,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/usr/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O3",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-I.",
+        "-DKKT_EXPERIMENT_COMPRESSED_QUERIES",
+        "-c",
+        "verifier/verifier_v2.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/verifier/verifier_v2.o"
+      ],
+      "process_group": 39135,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:49:50.473996+00:00",
+          "monotonic_ns": 3630102371922458,
+          "process_group": 39135,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3630102372529583,
+        "process_group": 39135,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:49:50.474593+00:00",
+          "monotonic_ns": 3630102372534875,
+          "process_group": 39135,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3630102372686375,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/usr/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O3",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-I.",
+        "-c",
+        "kkt/kkt.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/half/kkt/kkt.o"
+      ],
+      "process_group": 39147,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:49:51.004937+00:00",
+          "monotonic_ns": 3630102902859458,
+          "process_group": 39147,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3630102903596083,
+        "process_group": 39147,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:49:51.005658+00:00",
+          "monotonic_ns": 3630102903602458,
+          "process_group": 39147,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3630102903750625,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/usr/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O3",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-I.",
+        "-DKKT_EXPERIMENT_EIGHTH_SAMPLING",
+        "-c",
+        "kkt/kkt.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/eighth/kkt/kkt.o"
+      ],
+      "process_group": 39156,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:49:51.645827+00:00",
+          "monotonic_ns": 3630103543752250,
+          "process_group": 39156,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3630103544658583,
+        "process_group": 39156,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:49:51.646720+00:00",
+          "monotonic_ns": 3630103544666625,
+          "process_group": 39156,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3630103544946875,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/usr/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O3",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-I.",
+        "-c",
+        "benchmark/retention_control.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/benchmark/retention_control.o"
+      ],
+      "process_group": 39175,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:49:53.052683+00:00",
+          "monotonic_ns": 3630104950593875,
+          "process_group": 39175,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3630104951725875,
+        "process_group": 39175,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:49:53.053783+00:00",
+          "monotonic_ns": 3630104951735500,
+          "process_group": 39175,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3630104951924791,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/usr/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O3",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/half/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/benchmark/retention_control.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/timing-build/half/retention_control"
+      ],
+      "process_group": 39199,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:49:53.172558+00:00",
+          "monotonic_ns": 3630105070491166,
+          "process_group": 39199,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3630105071089833,
+        "process_group": 39199,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:49:53.173145+00:00",
+          "monotonic_ns": 3630105071097708,
+          "process_group": 39199,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3630105071242875,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/usr/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O3",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/eighth/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/timing-build/shared/benchmark/retention_control.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/timing-build/eighth/retention_control"
+      ],
+      "process_group": 39206,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:49:53.388701+00:00",
+          "monotonic_ns": 3630105286636166,
+          "process_group": 39206,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3630105287308041,
+        "process_group": 39206,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:49:53.389361+00:00",
+          "monotonic_ns": 3630105287314791,
+          "process_group": 39206,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3630105287452250,
+        "native_process_may_still_be_running": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,1549 @@
+{
+  "schema": "eighth_build_controller_v1",
+  "validation": "pass",
+  "phase": "sanitizer-correctness",
+  "command": [
+    "/usr/local/opt/python@3.14/bin/python3.14",
+    "-B",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/build_eighth_sampling.py",
+    "--profile",
+    "sanitizer-correctness",
+    "--output",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/validation",
+    "--parent-freeze",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/freeze.json"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "started_utc": "2026-10-15T13:47:38.077052+00:00",
+  "started_monotonic_ns": 3629969974299666,
+  "command_deadline_seconds": 300,
+  "cleanup_term_seconds": 30,
+  "cleanup_kill_seconds": 5,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/Makefile": "78443dde6f6b8d76dd58a205cad0d7586527126ca48a1cee485227ec168fa656",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/analyze_continuation.py": "7a0afa5fe802516cb5ec27a7d567a0875c66807aa4a04ce0ff752f0bc31b9168",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/analyze_mst_search.py": "91d3fcad871444e9325c1465782365b5c3ed08fb2344aeeb62fbfc18254f5ba6",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/audit_attachment_recovery_power.py": "e7a72cc054c6cfbcb1c6d5c6686e2332864632a12e10b60a9d3f16b6a5ca0c61",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/audit_mst_search_power.py": "566530914ee74564c5d5ba640b700f5ecfccc5927ac5ed046cb6e3bbdbd225c5",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/build_compressed_queries.py": "6a479edf88c079fdd6ac6c0729c3da97d6fc8cb921cac8f409f08d8c01d4fdbb",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/build_eighth_sampling.py": "74041b6606105f26eb3e44190bc5e656afdade9602a04508e43523590aaa4561",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/certificate_test.cpp": "881cbdef70884b01a6385e387ac982fd9c27474267b77c7ed9666f6116218b96",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/common_graph_fixtures.hpp": "a3454f6a6900983f71a65239fa636d3747172e33638151251490dfbe1e7afead",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/common_test.cpp": "898001f033199698c7dd226e5f2806eb791cb1ca05e15d25d490b9610743723e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/common_work.cpp": "a415b2ad9d03bcea4ab0ec27b3c1133dcb6054e0c0de9da00bdcbdceb20937b3",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/complexity_benchmark.cpp": "d07b19453999c5256957ca57293406d16416817a9bef0ad238fe6b57bdb14a5d",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/component_moments.hpp": "11103da83a398746fe30755c477afb7c6fabdf3ada33ca600ec176770fc8cea6",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/continuation_fixtures.hpp": "a88aa87fb6aeb9b5ed910f287f0ee9d8415fea085bf36d14ca58875874624d86",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/continuation_search.cpp": "a22baee4ef88d1864377a3cbdeebd996a1cdd0bc3b8fb6cf5a325bd45d23c727",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/continuation_test.cpp": "bf3c09495ec81dfb6031e5eb9df99d3018584968d771ed80e89f6622958320ed",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/contraction_ablation.cpp": "b7557d8f009b573bf34f1933956fae4b713f53acbc51cacecfe010b997f7b91a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/core_attachment_fixtures.hpp": "d14a914695c73b38b05a329602fc41bbb4f27805bfa7d24bdbe483bfe3b36628",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/core_attachment_test.cpp": "bc544fcba27f954ae210072279dfe81abf2ccd0eb3f948c9d72f3ca56eeee050",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/crossover_baselines.cpp": "0d68c3eafa292f1756a1711ece00cad6e53cb79ac3ceb1d7a7e1570047761cee",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/crossover_clocks.py": "725d469933eaf5ead32a38bf52b9f32e46a7ee3d4e386777c257c1ab3929fc0b",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/crossover_fixtures.hpp": "660b914d959570f006f303c0bcf030b91568cc5ebfe2dbdcb8479422d28dd035",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/crossover_test.cpp": "a5cae62fddcbc2008b1848ced6a2ac624bd0b61cbb300aa7958f357228bef82b",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/diverse_benchmark.cpp": "8d7ea8389883fa889fc366cf5919ed76597887219d7776b283e90f13cacf6c2e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/export_attachment_view.cpp": "e49446846c3c4b4f4eec2366defe37630e367975dcc96b92d87eb0ab3a924413",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/export_graph_views.cpp": "102a56169ca90817a2b845f0ead464aaaad0e7923394c1bb5dbbe39ffe4a5bee",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/extended_graph_fixtures.hpp": "58cd0239523a3e926cf6eb456592a00603ab36f2d1451b3bf7b698baf83f2aab",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/graph_fixtures.hpp": "6d94c080b66b6f2538cbaa1758e82d87de4af25ca1d496ec8b8fed50c41dc98d",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/mst_benchmark.cpp": "b2cfa5adec9608d15a846ce497786edc22620cf9eb691b946a6af00a184a8376",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/mst_certificate.hpp": "5e9c37e73c6a1bb78f1bfe5dca361abe9a4ddc4ea2e155a323989b6b34838495",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/mst_search.cpp": "f2fca672c18d6a91df2e95677339e9af88bc28efee89f929f796d815dac73e3d",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/multigraph_work.cpp": "0cfce48d2d09c93c371d61c020a81e91557de93f1c5f7a39630b1dcddab519c3",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/recover_mst_search.py": "73f02f494f29b2f9183c9fc889dcda73444fe2ca4a240469a7d57dfec226058b",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/validation/run_build_phase.py": "77b625cc97b5acc1a3abac9ce05900fc3806d1f37b73679e5390f5dfeb6011f9",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/validation/validate_final_objects.py": "39b83af3203ae2f583a6ea7aad98e1627b436a3a5cae08b8320ae8e0474c7ee7",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/retention_boruvka.hpp": "7a063ee9fffd172e090de18905d98e1da720b247e911591410fa2c48f59dad12",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/retention_control.cpp": "310db459ebf3d8743a750e7928bd035b82b2e38971de8820358b910579e3a2e9",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/retention_control.mk": "8b6bc904608e9e36cfa1668b63f661f26cfa5c21ec3a6a36f92653bc26655fe0",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_compressed_queries.py": "6e42a9f11e395960bbba9e96a9bdbce626987f80c26764db9f260236e07d72ba",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_crossover.py": "1669d3b761e0d4c09c432382c3a2e8738c0031c1c9e6dc69cfcb7734809a052f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_crossover_baselines.py": "2291db9114448516fc5ffb6c4b0fd119d23741bcfa2275ad7f25996c3b73921e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_edge_view_experiment.py": "67d018d74e6658988421b98ae613ce5e649b4f80e5436fc8776540d2298fd227",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_eighth_sampling.py": "6a782a9802c44558d840860c31aff2586f980c662118a223f3da8a95b213fab1",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_mst_search.py": "843d65154d232bc12a946ad7d8793ab26840f7785507286a6e4d8ed09dfcad80",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_multigraph_experiment.py": "f039d2523e212d9431ed9e062459a6eb3cf2e3ebf463c49d4d57097bcef4fd8e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_retention_control.py": "f913b9b0721102489f17eafe9bc82d4886ef3bbfad9d9f2d4963ee84f5df4f85",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/scaling_benchmark.cpp": "8e653cf585341be3ca421a21da4d369c0882d2d14143515321a6e716a38d20e6",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/search_fixtures.hpp": "186cfe198c1acee8b3355b7f2c6063896003b17396cb781ce9c09b01989fd24e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/search_fixtures_test.cpp": "f0c08d3c85fa465f4c643223b8b3dd121975ef0b911258ce46c60b95ca113ebe",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/search_work.cpp": "1a6394582edeb202ced73b8e900e701a6421edc909322e62f9665f8d35807b6a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/shape_work.cpp": "3412b067be3ca11e13d5051ceaa1fffbb7c1518a81d4fe26d5ac9c06477c76bd",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/shapes_test.cpp": "9fdc8e8fa65bc2ab141f9e070256b6aecb27c988a9dca608fa0b1873f4faaa40",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/test_eighth_build.py": "b357725e52fc7ed20170dbbd6bab74c908f1e6ae75f2e08996afde4b2ae9c53a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/test_eighth_controller.py": "eddc16dcecd92330ee75e2456d22b15c99e58d50a36b0e74525adeced9f8a6b2",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/test_eighth_sampling.py": "5cdce0993d8b2736972dfe5a70da96417f5293f366439433ecff31cba6424b33",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/work_metrics.hpp": "fc3e8b9e2afba1e12c1e2c47b9c79a7ef4772c3a0185d36ca80f85f25085d9ef",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/work_sweep.cpp": "9a5b901d093a8d40e875bcc28e663961f5b7bd7ea1c252fa32982d9a0d733591",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/boruvka/boruvka.cpp": "0c22c1ce04861597d6bb039f6827c5d622da02260e6134911b03de943e32fa3d",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/boruvka/boruvka.hpp": "d74a79372e99cc1a2e7b1f54a24be1858a271643c29715951da65a37602a9780",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/common/edge.hpp": "83b38d4622875bb311c967c771c13a888922c45b5e58d7ded61692692008b2ce",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/common/work_stats.hpp": "85f6aca4f517cccef93a01c22005808834e66dbbc6b9dba448bb6b7b4574c1d0",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/graph_utils/graph_utils.cpp": "f271adc1dc8ce3fb7bf4763a7e8b42aecd8ae1084d57a5815163bbd4c56c3a07",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/graph_utils/graph_utils.hpp": "160512be1b844c89cd6e621bbef40052305b8d0fe8e2679053577fd92c4b7584",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/kkt/experimental_eighth_sampling.hpp": "dc58872c0f6c8542ce67d8c9f3a1c5c5c4fd9f2b1e5ae9c1bb65b5e6c70293bd",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/kkt/experimental_multigraph_contraction.hpp": "c18798f5ef678dfa94abbb29213dfc886123a33961a2149ce1c9e6b32987f8c2",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/kkt/kkt.cpp": "f5681b0384fb26ee6af5a23e4f7109b990393d831fc6ceb5385ce43643f5fd9a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/kkt/kkt.hpp": "db6d56d7741a2edaea19b535bcb6a969ba29964aaefb7da21d8935c746771cc2",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/kkt/random_sampling.hpp": "96aef2e4c275d711ce77ee503ae7f88ba8a8baf07adcc547e19302001a96000e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/kruskal/kruskal.cpp": "fbb245d0a2f9b2f69c59c996bd966f1f76a8cd95c560ae26622f165f6c392d8c",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/kruskal/kruskal.hpp": "b0561fc0787b78546cc883c9c7805e71bbd7d91ce31ddb88b17eefbf6ecce8dd",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/lca/lca.cpp": "d21ea8d45c76eb2b782c08afbe25394b7da25b862dea28ddd1499c14877a46ca",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/lca/lca.hpp": "69aac6fadf9f8310c7b8914de2d044cd2466b17464787a699919b987c1ee88f2",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/prim/prim.cpp": "c4b8c2c6bc1c2f02a1b5101ad9f364fd14b943db9b74b04e50a22359f1a2e2ba",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/prim/prim.hpp": "4dc0e43e0d4e37169cf0b0a33dbcf03947c330535f98942ae1aa6c1897934fab",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/test/complexity_test.cpp": "f5184befed4ff1b3692a7e83948648ac54c895698cddddbfb19d461006e3d41e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/test/compressed_query_test.cpp": "cebcda548fcc260d29f29ea2a638351d51bfb90813e5b8b446f5934acc196cb4",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/test/contraction_test.cpp": "80a6f727e661eb1c5c654c1e82149e2750289d43253648ddaeb7d9f2b23195d9",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/test/edge_verifier_view_test.cpp": "d73a2632c85fd9d8213165c61fbe3db1de1c271836babb718fe5dc3424a7bcb3",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/test/eighth_sampling_integration_test.cpp": "b323122c31b1a09f31915f4e246f3b57655337e358d06921c5f8c449bb79270a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/test/eighth_sampling_test.cpp": "f7d4cb33d5359f15b525a8572d76bfde619df7fffd03712dc4bf84e69c7e5fae",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/test/kkt_test.cpp": "5170bacb1e4b30c7511d5cea95373a280485f353c8a58f47b98ed5b1d78e0980",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/test/mst_test.cpp": "8139414761c906edef27eb917fc713b0568ccfa79ea2087be1bee019a2c9e707",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/test/multigraph_contraction_test.cpp": "11149c244940d3a04eead92354ed791353ec556556db38ed7f1e97cf0ca9d8c2",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/test/regression_test.cpp": "dda424d498b064e9bc3da4fcf7a723997b3d7da1be41ab7818afa5f0a3cc970b",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/test/retention_control_test.cpp": "d4b43e7abf74171af96a63c4bd36564d73e5027d3d7776571b1edfb846dd2b1f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/test/simple_test.cpp": "fbe9d34f07e910680d15c6d613574f60d123a2f6408da75108e4ebfebece6d7e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/test/verifier_test.cpp": "19f729edc79326a66ce5a6997293ad2ded93fe06f0bb85be0de98c62eb272ee0",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/test/verifier_v2_test.cpp": "e32d284527d3dd854ad45bb8ac01d286a041c0d44895dd54c6e6be970c9702d0",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/union_find/union_find.cpp": "5ad5a4b4cb57cd66fa1a3a8003d33a95e84c2814f772eba27e0bcb771e317b37",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/union_find/union_find.hpp": "77e646bc7cdece9ac3713ff5a62e19cb5305f69ba08d0c8bb77994de37b7ccee",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/verifier/experimental_compressed_queries.hpp": "3a60df765b5d48add30c3b4429ad501ae7c87de9d8d780151ca5afcb48aa8b60",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/verifier/median_table.hpp": "9aeb79481afe0e949347eb29045ad9f5dc6017d114fa7ce813e348adadfb382a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/verifier/verifier.cpp": "579e9f2c44373bbf0728b9781947169329c05a96b0f52e7c05e1f7ef2bd82735",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/verifier/verifier.hpp": "f6d7778152bea28a94fcf306e31b9d075d17995011b4c963845dfb7be3af2e8f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/verifier/verifier_v2.cpp": "5bfcae5761ad40ff0c587985e8bcf600f54e9223815a22e58428c8ef0948a6eb",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/verifier/verifier_v2.hpp": "c01b7dea8a634d5325927d6a470467264e220da34369e794d03e4ab23c94d460"
+  },
+  "outer_observations": [
+    {
+      "utc": "2026-10-15T13:47:40.100690+00:00",
+      "monotonic_ns": 3629971998087375,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 45312,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 45312
+    },
+    {
+      "utc": "2026-10-15T13:47:42.114198+00:00",
+      "monotonic_ns": 3629974011619666,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 45084,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 45084
+    },
+    {
+      "utc": "2026-10-15T13:47:44.115112+00:00",
+      "monotonic_ns": 3629976012545250,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 45040,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 45040
+    },
+    {
+      "utc": "2026-10-15T13:47:46.122140+00:00",
+      "monotonic_ns": 3629978019580708,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 46852,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 46852
+    },
+    {
+      "utc": "2026-10-15T13:47:48.127341+00:00",
+      "monotonic_ns": 3629980024788916,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 51780,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 51780
+    },
+    {
+      "utc": "2026-10-15T13:47:50.137860+00:00",
+      "monotonic_ns": 3629982035316833,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 52876,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 52876
+    },
+    {
+      "utc": "2026-10-15T13:47:52.139448+00:00",
+      "monotonic_ns": 3629984036910708,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 57564,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 57564
+    },
+    {
+      "utc": "2026-10-15T13:47:54.143047+00:00",
+      "monotonic_ns": 3629986040519583,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 59472,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 59472
+    },
+    {
+      "utc": "2026-10-15T13:47:56.144325+00:00",
+      "monotonic_ns": 3629988041805541,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37665,
+          "rss_kib": 3900,
+          "command": "/usr/bin/otool"
+        },
+        {
+          "pid": 37336,
+          "rss_kib": 59564,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 63464
+    },
+    {
+      "utc": "2026-10-15T13:47:58.154775+00:00",
+      "monotonic_ns": 3629990052262750,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 60960,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 60960
+    },
+    {
+      "utc": "2026-10-15T13:48:00.156515+00:00",
+      "monotonic_ns": 3629992054011583,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 61620,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 61620
+    },
+    {
+      "utc": "2026-10-15T13:48:02.167044+00:00",
+      "monotonic_ns": 3629994064544291,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 65516,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 65516
+    },
+    {
+      "utc": "2026-10-15T13:48:04.171430+00:00",
+      "monotonic_ns": 3629996068941250,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 64928,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 64928
+    },
+    {
+      "utc": "2026-10-15T13:48:06.176322+00:00",
+      "monotonic_ns": 3629998073842166,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 64928,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 64928
+    },
+    {
+      "utc": "2026-10-15T13:48:08.178986+00:00",
+      "monotonic_ns": 3630000076509583,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 74200,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 74200
+    },
+    {
+      "utc": "2026-10-15T13:48:10.180180+00:00",
+      "monotonic_ns": 3630002077716250,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 76352,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 76352
+    },
+    {
+      "utc": "2026-10-15T13:48:12.190642+00:00",
+      "monotonic_ns": 3630004088185708,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 76740,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 76740
+    },
+    {
+      "utc": "2026-10-15T13:48:14.201139+00:00",
+      "monotonic_ns": 3630006098690541,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 76744,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 76744
+    },
+    {
+      "utc": "2026-10-15T13:48:16.211038+00:00",
+      "monotonic_ns": 3630008108597958,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 76696,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 76696
+    },
+    {
+      "utc": "2026-10-15T13:48:18.221166+00:00",
+      "monotonic_ns": 3630010118734583,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 76700,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 76700
+    },
+    {
+      "utc": "2026-10-15T13:48:20.231021+00:00",
+      "monotonic_ns": 3630012128596500,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 76704,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 76704
+    },
+    {
+      "utc": "2026-10-15T13:48:22.241522+00:00",
+      "monotonic_ns": 3630014139105708,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 76188,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 76188
+    },
+    {
+      "utc": "2026-10-15T13:48:24.250312+00:00",
+      "monotonic_ns": 3630016147903916,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 76208,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 76208
+    },
+    {
+      "utc": "2026-10-15T13:48:26.253918+00:00",
+      "monotonic_ns": 3630018151518625,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 76564,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 76564
+    },
+    {
+      "utc": "2026-10-15T13:48:28.260867+00:00",
+      "monotonic_ns": 3630020158474875,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 76572,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 76572
+    },
+    {
+      "utc": "2026-10-15T13:48:30.269371+00:00",
+      "monotonic_ns": 3630022166986041,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 76572,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 76572
+    },
+    {
+      "utc": "2026-10-15T13:48:32.279090+00:00",
+      "monotonic_ns": 3630024176714000,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 76576,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 76576
+    },
+    {
+      "utc": "2026-10-15T13:48:34.288682+00:00",
+      "monotonic_ns": 3630026186316000,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 76576,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 76576
+    },
+    {
+      "utc": "2026-10-15T13:48:36.293897+00:00",
+      "monotonic_ns": 3630028191538833,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 76584,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 76584
+    },
+    {
+      "utc": "2026-10-15T13:48:38.294661+00:00",
+      "monotonic_ns": 3630030192309708,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 76596,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 76596
+    },
+    {
+      "utc": "2026-10-15T13:48:40.295409+00:00",
+      "monotonic_ns": 3630032193065083,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 76608,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 76608
+    },
+    {
+      "utc": "2026-10-15T13:48:42.301053+00:00",
+      "monotonic_ns": 3630034198716375,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 76608,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 76608
+    },
+    {
+      "utc": "2026-10-15T13:48:44.308173+00:00",
+      "monotonic_ns": 3630036205837416,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 76204,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 76204
+    },
+    {
+      "utc": "2026-10-15T13:48:46.319052+00:00",
+      "monotonic_ns": 3630038216732166,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 76160,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 76160
+    },
+    {
+      "utc": "2026-10-15T13:48:48.329543+00:00",
+      "monotonic_ns": 3630040227230750,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 80708,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 80708
+    },
+    {
+      "utc": "2026-10-15T13:48:50.336767+00:00",
+      "monotonic_ns": 3630042234462458,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 81080,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 81080
+    },
+    {
+      "utc": "2026-10-15T13:48:52.337414+00:00",
+      "monotonic_ns": 3630044235117708,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 81116,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 81116
+    },
+    {
+      "utc": "2026-10-15T13:48:54.347895+00:00",
+      "monotonic_ns": 3630046245607916,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 81116,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 81116
+    },
+    {
+      "utc": "2026-10-15T13:48:56.357438+00:00",
+      "monotonic_ns": 3630048255159458,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 81120,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 81120
+    },
+    {
+      "utc": "2026-10-15T13:48:58.359116+00:00",
+      "monotonic_ns": 3630050256846166,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 81132,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 81132
+    },
+    {
+      "utc": "2026-10-15T13:49:00.366077+00:00",
+      "monotonic_ns": 3630052263809875,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 80572,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 80572
+    },
+    {
+      "utc": "2026-10-15T13:49:02.377678+00:00",
+      "monotonic_ns": 3630054275421125,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 80604,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 80604
+    },
+    {
+      "utc": "2026-10-15T13:49:04.388204+00:00",
+      "monotonic_ns": 3630056285955208,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 80944,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 80944
+    },
+    {
+      "utc": "2026-10-15T13:49:06.395119+00:00",
+      "monotonic_ns": 3630058292879041,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 81000,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 81000
+    },
+    {
+      "utc": "2026-10-15T13:49:08.405563+00:00",
+      "monotonic_ns": 3630060303332083,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 81020,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 81020
+    },
+    {
+      "utc": "2026-10-15T13:49:10.406327+00:00",
+      "monotonic_ns": 3630062304103291,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 81028,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 81028
+    },
+    {
+      "utc": "2026-10-15T13:49:12.416819+00:00",
+      "monotonic_ns": 3630064314603916,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 81028,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 81028
+    },
+    {
+      "utc": "2026-10-15T13:49:14.427325+00:00",
+      "monotonic_ns": 3630066325117083,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 81028,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 81028
+    },
+    {
+      "utc": "2026-10-15T13:49:16.437797+00:00",
+      "monotonic_ns": 3630068335596166,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 81032,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 81032
+    },
+    {
+      "utc": "2026-10-15T13:49:18.438633+00:00",
+      "monotonic_ns": 3630070336441375,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 81036,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 81036
+    },
+    {
+      "utc": "2026-10-15T13:49:20.440791+00:00",
+      "monotonic_ns": 3630072338606958,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 81044,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 81044
+    },
+    {
+      "utc": "2026-10-15T13:49:22.446668+00:00",
+      "monotonic_ns": 3630074344491916,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 37336,
+          "rss_kib": 80780,
+          "command": "/usr/local/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python"
+        }
+      ],
+      "rss_kib": 80780
+    },
+    {
+      "utc": "2026-10-15T13:49:23.787451+00:00",
+      "monotonic_ns": 3630075685280958,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    }
+  ],
+  "native_solver_execution_authorized": true,
+  "performance_execution_authorized": false,
+  "work_driver_execution_authorized": false,
+  "all_owned_groups_verified_empty": true,
+  "native_solver_execution": true,
+  "outer_process_group": 37336,
+  "outer_wrapper_exit_observed_monotonic_ns": 3630075685647833,
+  "exit_status": 0,
+  "outer_cleanup": {
+    "started_monotonic_ns": 3630075685823083,
+    "process_group": 37336,
+    "signals": [],
+    "native_exit_known": true,
+    "group_exit_known": true,
+    "returncode": 0,
+    "group_verification": {
+      "utc": "2026-10-15T13:49:23.787998+00:00",
+      "monotonic_ns": 3630075685833750,
+      "process_group": 37336,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    "finished_monotonic_ns": 3630075685992791,
+    "native_process_may_still_be_running": false
+  },
+  "inner_proof": {
+    "validation": "pass",
+    "groups": 64,
+    "native_test_executions": 24,
+    "receipt_sha256": {
+      "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/validation/sanitizer-correctness-half-build-record.json": "e592b882815d353c42ea6fd5e1715a13830d822ddf57a9893b28d41b43cc97f9",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/validation/sanitizer-correctness-eighth-build-record.json": "45a3d189f86ac609743e9fa222a47ea8224fa55503530a851f1f8dab84c71efc",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/validation/sanitizer-correctness-tests.json": "1ea84aa99f695adead6094386cf55655310aacd19e78e3bfe3169375a9d98d39",
+      "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/validation/sanitizer-correctness-owned-groups.json": "1cf936167c4adc292e51e42b9d142d79bd4179261e2c1f655569c59d5385c12f"
+    }
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/Makefile": "78443dde6f6b8d76dd58a205cad0d7586527126ca48a1cee485227ec168fa656",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/analyze_continuation.py": "7a0afa5fe802516cb5ec27a7d567a0875c66807aa4a04ce0ff752f0bc31b9168",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/analyze_mst_search.py": "91d3fcad871444e9325c1465782365b5c3ed08fb2344aeeb62fbfc18254f5ba6",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/audit_attachment_recovery_power.py": "e7a72cc054c6cfbcb1c6d5c6686e2332864632a12e10b60a9d3f16b6a5ca0c61",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/audit_mst_search_power.py": "566530914ee74564c5d5ba640b700f5ecfccc5927ac5ed046cb6e3bbdbd225c5",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/build_compressed_queries.py": "6a479edf88c079fdd6ac6c0729c3da97d6fc8cb921cac8f409f08d8c01d4fdbb",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/build_eighth_sampling.py": "74041b6606105f26eb3e44190bc5e656afdade9602a04508e43523590aaa4561",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/certificate_test.cpp": "881cbdef70884b01a6385e387ac982fd9c27474267b77c7ed9666f6116218b96",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/common_graph_fixtures.hpp": "a3454f6a6900983f71a65239fa636d3747172e33638151251490dfbe1e7afead",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/common_test.cpp": "898001f033199698c7dd226e5f2806eb791cb1ca05e15d25d490b9610743723e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/common_work.cpp": "a415b2ad9d03bcea4ab0ec27b3c1133dcb6054e0c0de9da00bdcbdceb20937b3",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/complexity_benchmark.cpp": "d07b19453999c5256957ca57293406d16416817a9bef0ad238fe6b57bdb14a5d",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/component_moments.hpp": "11103da83a398746fe30755c477afb7c6fabdf3ada33ca600ec176770fc8cea6",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/continuation_fixtures.hpp": "a88aa87fb6aeb9b5ed910f287f0ee9d8415fea085bf36d14ca58875874624d86",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/continuation_search.cpp": "a22baee4ef88d1864377a3cbdeebd996a1cdd0bc3b8fb6cf5a325bd45d23c727",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/continuation_test.cpp": "bf3c09495ec81dfb6031e5eb9df99d3018584968d771ed80e89f6622958320ed",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/contraction_ablation.cpp": "b7557d8f009b573bf34f1933956fae4b713f53acbc51cacecfe010b997f7b91a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/core_attachment_fixtures.hpp": "d14a914695c73b38b05a329602fc41bbb4f27805bfa7d24bdbe483bfe3b36628",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/core_attachment_test.cpp": "bc544fcba27f954ae210072279dfe81abf2ccd0eb3f948c9d72f3ca56eeee050",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/crossover_baselines.cpp": "0d68c3eafa292f1756a1711ece00cad6e53cb79ac3ceb1d7a7e1570047761cee",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/crossover_clocks.py": "725d469933eaf5ead32a38bf52b9f32e46a7ee3d4e386777c257c1ab3929fc0b",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/crossover_fixtures.hpp": "660b914d959570f006f303c0bcf030b91568cc5ebfe2dbdcb8479422d28dd035",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/crossover_test.cpp": "a5cae62fddcbc2008b1848ced6a2ac624bd0b61cbb300aa7958f357228bef82b",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/diverse_benchmark.cpp": "8d7ea8389883fa889fc366cf5919ed76597887219d7776b283e90f13cacf6c2e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/export_attachment_view.cpp": "e49446846c3c4b4f4eec2366defe37630e367975dcc96b92d87eb0ab3a924413",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/export_graph_views.cpp": "102a56169ca90817a2b845f0ead464aaaad0e7923394c1bb5dbbe39ffe4a5bee",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/extended_graph_fixtures.hpp": "58cd0239523a3e926cf6eb456592a00603ab36f2d1451b3bf7b698baf83f2aab",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/graph_fixtures.hpp": "6d94c080b66b6f2538cbaa1758e82d87de4af25ca1d496ec8b8fed50c41dc98d",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/mst_benchmark.cpp": "b2cfa5adec9608d15a846ce497786edc22620cf9eb691b946a6af00a184a8376",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/mst_certificate.hpp": "5e9c37e73c6a1bb78f1bfe5dca361abe9a4ddc4ea2e155a323989b6b34838495",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/mst_search.cpp": "f2fca672c18d6a91df2e95677339e9af88bc28efee89f929f796d815dac73e3d",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/multigraph_work.cpp": "0cfce48d2d09c93c371d61c020a81e91557de93f1c5f7a39630b1dcddab519c3",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/recover_mst_search.py": "73f02f494f29b2f9183c9fc889dcda73444fe2ca4a240469a7d57dfec226058b",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/validation/run_build_phase.py": "77b625cc97b5acc1a3abac9ce05900fc3806d1f37b73679e5390f5dfeb6011f9",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/validation/validate_final_objects.py": "39b83af3203ae2f583a6ea7aad98e1627b436a3a5cae08b8320ae8e0474c7ee7",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/retention_boruvka.hpp": "7a063ee9fffd172e090de18905d98e1da720b247e911591410fa2c48f59dad12",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/retention_control.cpp": "310db459ebf3d8743a750e7928bd035b82b2e38971de8820358b910579e3a2e9",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/retention_control.mk": "8b6bc904608e9e36cfa1668b63f661f26cfa5c21ec3a6a36f92653bc26655fe0",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_compressed_queries.py": "6e42a9f11e395960bbba9e96a9bdbce626987f80c26764db9f260236e07d72ba",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_crossover.py": "1669d3b761e0d4c09c432382c3a2e8738c0031c1c9e6dc69cfcb7734809a052f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_crossover_baselines.py": "2291db9114448516fc5ffb6c4b0fd119d23741bcfa2275ad7f25996c3b73921e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_edge_view_experiment.py": "67d018d74e6658988421b98ae613ce5e649b4f80e5436fc8776540d2298fd227",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_eighth_sampling.py": "6a782a9802c44558d840860c31aff2586f980c662118a223f3da8a95b213fab1",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_mst_search.py": "843d65154d232bc12a946ad7d8793ab26840f7785507286a6e4d8ed09dfcad80",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_multigraph_experiment.py": "f039d2523e212d9431ed9e062459a6eb3cf2e3ebf463c49d4d57097bcef4fd8e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_retention_control.py": "f913b9b0721102489f17eafe9bc82d4886ef3bbfad9d9f2d4963ee84f5df4f85",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/scaling_benchmark.cpp": "8e653cf585341be3ca421a21da4d369c0882d2d14143515321a6e716a38d20e6",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/search_fixtures.hpp": "186cfe198c1acee8b3355b7f2c6063896003b17396cb781ce9c09b01989fd24e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/search_fixtures_test.cpp": "f0c08d3c85fa465f4c643223b8b3dd121975ef0b911258ce46c60b95ca113ebe",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/search_work.cpp": "1a6394582edeb202ced73b8e900e701a6421edc909322e62f9665f8d35807b6a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/shape_work.cpp": "3412b067be3ca11e13d5051ceaa1fffbb7c1518a81d4fe26d5ac9c06477c76bd",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/shapes_test.cpp": "9fdc8e8fa65bc2ab141f9e070256b6aecb27c988a9dca608fa0b1873f4faaa40",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/test_eighth_build.py": "b357725e52fc7ed20170dbbd6bab74c908f1e6ae75f2e08996afde4b2ae9c53a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/test_eighth_controller.py": "eddc16dcecd92330ee75e2456d22b15c99e58d50a36b0e74525adeced9f8a6b2",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/test_eighth_sampling.py": "5cdce0993d8b2736972dfe5a70da96417f5293f366439433ecff31cba6424b33",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/work_metrics.hpp": "fc3e8b9e2afba1e12c1e2c47b9c79a7ef4772c3a0185d36ca80f85f25085d9ef",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/work_sweep.cpp": "9a5b901d093a8d40e875bcc28e663961f5b7bd7ea1c252fa32982d9a0d733591",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/boruvka/boruvka.cpp": "0c22c1ce04861597d6bb039f6827c5d622da02260e6134911b03de943e32fa3d",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/boruvka/boruvka.hpp": "d74a79372e99cc1a2e7b1f54a24be1858a271643c29715951da65a37602a9780",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/common/edge.hpp": "83b38d4622875bb311c967c771c13a888922c45b5e58d7ded61692692008b2ce",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/common/work_stats.hpp": "85f6aca4f517cccef93a01c22005808834e66dbbc6b9dba448bb6b7b4574c1d0",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/graph_utils/graph_utils.cpp": "f271adc1dc8ce3fb7bf4763a7e8b42aecd8ae1084d57a5815163bbd4c56c3a07",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/graph_utils/graph_utils.hpp": "160512be1b844c89cd6e621bbef40052305b8d0fe8e2679053577fd92c4b7584",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/kkt/experimental_eighth_sampling.hpp": "dc58872c0f6c8542ce67d8c9f3a1c5c5c4fd9f2b1e5ae9c1bb65b5e6c70293bd",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/kkt/experimental_multigraph_contraction.hpp": "c18798f5ef678dfa94abbb29213dfc886123a33961a2149ce1c9e6b32987f8c2",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/kkt/kkt.cpp": "f5681b0384fb26ee6af5a23e4f7109b990393d831fc6ceb5385ce43643f5fd9a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/kkt/kkt.hpp": "db6d56d7741a2edaea19b535bcb6a969ba29964aaefb7da21d8935c746771cc2",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/kkt/random_sampling.hpp": "96aef2e4c275d711ce77ee503ae7f88ba8a8baf07adcc547e19302001a96000e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/kruskal/kruskal.cpp": "fbb245d0a2f9b2f69c59c996bd966f1f76a8cd95c560ae26622f165f6c392d8c",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/kruskal/kruskal.hpp": "b0561fc0787b78546cc883c9c7805e71bbd7d91ce31ddb88b17eefbf6ecce8dd",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/lca/lca.cpp": "d21ea8d45c76eb2b782c08afbe25394b7da25b862dea28ddd1499c14877a46ca",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/lca/lca.hpp": "69aac6fadf9f8310c7b8914de2d044cd2466b17464787a699919b987c1ee88f2",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/prim/prim.cpp": "c4b8c2c6bc1c2f02a1b5101ad9f364fd14b943db9b74b04e50a22359f1a2e2ba",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/prim/prim.hpp": "4dc0e43e0d4e37169cf0b0a33dbcf03947c330535f98942ae1aa6c1897934fab",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/test/complexity_test.cpp": "f5184befed4ff1b3692a7e83948648ac54c895698cddddbfb19d461006e3d41e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/test/compressed_query_test.cpp": "cebcda548fcc260d29f29ea2a638351d51bfb90813e5b8b446f5934acc196cb4",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/test/contraction_test.cpp": "80a6f727e661eb1c5c654c1e82149e2750289d43253648ddaeb7d9f2b23195d9",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/test/edge_verifier_view_test.cpp": "d73a2632c85fd9d8213165c61fbe3db1de1c271836babb718fe5dc3424a7bcb3",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/test/eighth_sampling_integration_test.cpp": "b323122c31b1a09f31915f4e246f3b57655337e358d06921c5f8c449bb79270a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/test/eighth_sampling_test.cpp": "f7d4cb33d5359f15b525a8572d76bfde619df7fffd03712dc4bf84e69c7e5fae",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/test/kkt_test.cpp": "5170bacb1e4b30c7511d5cea95373a280485f353c8a58f47b98ed5b1d78e0980",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/test/mst_test.cpp": "8139414761c906edef27eb917fc713b0568ccfa79ea2087be1bee019a2c9e707",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/test/multigraph_contraction_test.cpp": "11149c244940d3a04eead92354ed791353ec556556db38ed7f1e97cf0ca9d8c2",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/test/regression_test.cpp": "dda424d498b064e9bc3da4fcf7a723997b3d7da1be41ab7818afa5f0a3cc970b",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/test/retention_control_test.cpp": "d4b43e7abf74171af96a63c4bd36564d73e5027d3d7776571b1edfb846dd2b1f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/test/simple_test.cpp": "fbe9d34f07e910680d15c6d613574f60d123a2f6408da75108e4ebfebece6d7e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/test/verifier_test.cpp": "19f729edc79326a66ce5a6997293ad2ded93fe06f0bb85be0de98c62eb272ee0",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/test/verifier_v2_test.cpp": "e32d284527d3dd854ad45bb8ac01d286a041c0d44895dd54c6e6be970c9702d0",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/union_find/union_find.cpp": "5ad5a4b4cb57cd66fa1a3a8003d33a95e84c2814f772eba27e0bcb771e317b37",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/union_find/union_find.hpp": "77e646bc7cdece9ac3713ff5a62e19cb5305f69ba08d0c8bb77994de37b7ccee",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/verifier/experimental_compressed_queries.hpp": "3a60df765b5d48add30c3b4429ad501ae7c87de9d8d780151ca5afcb48aa8b60",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/verifier/median_table.hpp": "9aeb79481afe0e949347eb29045ad9f5dc6017d114fa7ce813e348adadfb382a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/verifier/verifier.cpp": "579e9f2c44373bbf0728b9781947169329c05a96b0f52e7c05e1f7ef2bd82735",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/verifier/verifier.hpp": "f6d7778152bea28a94fcf306e31b9d075d17995011b4c963845dfb7be3af2e8f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/verifier/verifier_v2.cpp": "5bfcae5761ad40ff0c587985e8bcf600f54e9223815a22e58428c8ef0948a6eb",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/verifier/verifier_v2.hpp": "c01b7dea8a634d5325927d6a470467264e220da34369e794d03e4ab23c94d460"
+  },
+  "finished_utc": "2026-10-15T13:49:23.807167+00:00",
+  "finished_monotonic_ns": 3630075705011416,
+  "elapsed_seconds": 105.73071175,
+  "outer_monitor_events": {
+    "37336": [
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3629971998087375,
+        "previous_request_gap_ns": null,
+        "provider_started_monotonic_ns": 3629971999329500,
+        "provider_finished_monotonic_ns": 3629972001069750,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3629972001394541,
+        "sampler_duration_ns": 3307166
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3629974011619666,
+        "previous_request_gap_ns": 2013532291,
+        "provider_started_monotonic_ns": 3629974011826916,
+        "provider_finished_monotonic_ns": 3629974012065666,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3629974012101000,
+        "sampler_duration_ns": 481334
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3629976012545250,
+        "previous_request_gap_ns": 2000925584,
+        "provider_started_monotonic_ns": 3629976012740125,
+        "provider_finished_monotonic_ns": 3629976012999958,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3629976013035541,
+        "sampler_duration_ns": 490291
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3629978019580708,
+        "previous_request_gap_ns": 2007035458,
+        "provider_started_monotonic_ns": 3629978019788416,
+        "provider_finished_monotonic_ns": 3629978020075416,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3629978020116583,
+        "sampler_duration_ns": 535875
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3629980024788916,
+        "previous_request_gap_ns": 2005208208,
+        "provider_started_monotonic_ns": 3629980024974291,
+        "provider_finished_monotonic_ns": 3629980025196000,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3629980025233708,
+        "sampler_duration_ns": 444792
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3629982035316833,
+        "previous_request_gap_ns": 2010527917,
+        "provider_started_monotonic_ns": 3629982035518416,
+        "provider_finished_monotonic_ns": 3629982035768250,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3629982035802500,
+        "sampler_duration_ns": 485667
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3629984036910708,
+        "previous_request_gap_ns": 2001593875,
+        "provider_started_monotonic_ns": 3629984037118166,
+        "provider_finished_monotonic_ns": 3629984037374583,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3629984037417583,
+        "sampler_duration_ns": 506875
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3629986040519583,
+        "previous_request_gap_ns": 2003608875,
+        "provider_started_monotonic_ns": 3629986040677416,
+        "provider_finished_monotonic_ns": 3629986040902916,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3629986040960166,
+        "sampler_duration_ns": 440583
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3629988041805541,
+        "previous_request_gap_ns": 2001285958,
+        "provider_started_monotonic_ns": 3629988041940541,
+        "provider_finished_monotonic_ns": 3629988042150708,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3629988042182375,
+        "sampler_duration_ns": 376834
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3629990052262750,
+        "previous_request_gap_ns": 2010457209,
+        "provider_started_monotonic_ns": 3629990052443041,
+        "provider_finished_monotonic_ns": 3629990052699083,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3629990052737375,
+        "sampler_duration_ns": 474625
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3629992054011583,
+        "previous_request_gap_ns": 2001748833,
+        "provider_started_monotonic_ns": 3629992054182541,
+        "provider_finished_monotonic_ns": 3629992054418166,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3629992054450458,
+        "sampler_duration_ns": 438875
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3629994064544291,
+        "previous_request_gap_ns": 2010532708,
+        "provider_started_monotonic_ns": 3629994064780500,
+        "provider_finished_monotonic_ns": 3629994065023000,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3629994065063333,
+        "sampler_duration_ns": 519042
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3629996068941250,
+        "previous_request_gap_ns": 2004396959,
+        "provider_started_monotonic_ns": 3629996069120208,
+        "provider_finished_monotonic_ns": 3629996069352458,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3629996069389000,
+        "sampler_duration_ns": 447750
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3629998073842166,
+        "previous_request_gap_ns": 2004900916,
+        "provider_started_monotonic_ns": 3629998074041333,
+        "provider_finished_monotonic_ns": 3629998074239291,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3629998074284583,
+        "sampler_duration_ns": 442417
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630000076509583,
+        "previous_request_gap_ns": 2002667417,
+        "provider_started_monotonic_ns": 3630000076737500,
+        "provider_finished_monotonic_ns": 3630000076983666,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630000077021083,
+        "sampler_duration_ns": 511500
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630002077716250,
+        "previous_request_gap_ns": 2001206667,
+        "provider_started_monotonic_ns": 3630002077886791,
+        "provider_finished_monotonic_ns": 3630002078078041,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630002078108166,
+        "sampler_duration_ns": 391916
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630004088185708,
+        "previous_request_gap_ns": 2010469458,
+        "provider_started_monotonic_ns": 3630004088367833,
+        "provider_finished_monotonic_ns": 3630004088593416,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630004088625666,
+        "sampler_duration_ns": 439958
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630006098690541,
+        "previous_request_gap_ns": 2010504833,
+        "provider_started_monotonic_ns": 3630006098861958,
+        "provider_finished_monotonic_ns": 3630006099103375,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630006099136416,
+        "sampler_duration_ns": 445875
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630008108597958,
+        "previous_request_gap_ns": 2009907417,
+        "provider_started_monotonic_ns": 3630008108808916,
+        "provider_finished_monotonic_ns": 3630008109056958,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630008109095750,
+        "sampler_duration_ns": 497792
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630010118734583,
+        "previous_request_gap_ns": 2010136625,
+        "provider_started_monotonic_ns": 3630010118908625,
+        "provider_finished_monotonic_ns": 3630010119093416,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630010119130250,
+        "sampler_duration_ns": 395667
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630012128596500,
+        "previous_request_gap_ns": 2009861917,
+        "provider_started_monotonic_ns": 3630012128764250,
+        "provider_finished_monotonic_ns": 3630012128999000,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630012129031791,
+        "sampler_duration_ns": 435291
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630014139105708,
+        "previous_request_gap_ns": 2010509208,
+        "provider_started_monotonic_ns": 3630014139247791,
+        "provider_finished_monotonic_ns": 3630014139459416,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630014139489416,
+        "sampler_duration_ns": 383708
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630016147903916,
+        "previous_request_gap_ns": 2008798208,
+        "provider_started_monotonic_ns": 3630016148078958,
+        "provider_finished_monotonic_ns": 3630016148314291,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630016148349541,
+        "sampler_duration_ns": 445625
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630018151518625,
+        "previous_request_gap_ns": 2003614709,
+        "provider_started_monotonic_ns": 3630018151692833,
+        "provider_finished_monotonic_ns": 3630018151931916,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630018151966916,
+        "sampler_duration_ns": 448291
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630020158474875,
+        "previous_request_gap_ns": 2006956250,
+        "provider_started_monotonic_ns": 3630020158641666,
+        "provider_finished_monotonic_ns": 3630020158863041,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630020158895625,
+        "sampler_duration_ns": 420750
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630022166986041,
+        "previous_request_gap_ns": 2008511166,
+        "provider_started_monotonic_ns": 3630022167169458,
+        "provider_finished_monotonic_ns": 3630022167391083,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630022167426958,
+        "sampler_duration_ns": 440917
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630024176714000,
+        "previous_request_gap_ns": 2009727959,
+        "provider_started_monotonic_ns": 3630024176871916,
+        "provider_finished_monotonic_ns": 3630024177094583,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630024177126833,
+        "sampler_duration_ns": 412833
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630026186316000,
+        "previous_request_gap_ns": 2009602000,
+        "provider_started_monotonic_ns": 3630026186480375,
+        "provider_finished_monotonic_ns": 3630026186657541,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630026186694166,
+        "sampler_duration_ns": 378166
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630028191538833,
+        "previous_request_gap_ns": 2005222833,
+        "provider_started_monotonic_ns": 3630028191698583,
+        "provider_finished_monotonic_ns": 3630028191939458,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630028191971708,
+        "sampler_duration_ns": 432875
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630030192309708,
+        "previous_request_gap_ns": 2000770875,
+        "provider_started_monotonic_ns": 3630030192485500,
+        "provider_finished_monotonic_ns": 3630030192721208,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630030192760541,
+        "sampler_duration_ns": 450833
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630032193065083,
+        "previous_request_gap_ns": 2000755375,
+        "provider_started_monotonic_ns": 3630032193232041,
+        "provider_finished_monotonic_ns": 3630032193466000,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630032193496208,
+        "sampler_duration_ns": 431125
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630034198716375,
+        "previous_request_gap_ns": 2005651292,
+        "provider_started_monotonic_ns": 3630034198887125,
+        "provider_finished_monotonic_ns": 3630034199114125,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630034199150916,
+        "sampler_duration_ns": 434541
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630036205837416,
+        "previous_request_gap_ns": 2007121041,
+        "provider_started_monotonic_ns": 3630036206137083,
+        "provider_finished_monotonic_ns": 3630036206574541,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630036206636333,
+        "sampler_duration_ns": 798917
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630038216732166,
+        "previous_request_gap_ns": 2010894750,
+        "provider_started_monotonic_ns": 3630038216887458,
+        "provider_finished_monotonic_ns": 3630038217126125,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630038217153583,
+        "sampler_duration_ns": 421417
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630040227230750,
+        "previous_request_gap_ns": 2010498584,
+        "provider_started_monotonic_ns": 3630040227392125,
+        "provider_finished_monotonic_ns": 3630040227548333,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630040227574625,
+        "sampler_duration_ns": 343875
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630042234462458,
+        "previous_request_gap_ns": 2007231708,
+        "provider_started_monotonic_ns": 3630042234632625,
+        "provider_finished_monotonic_ns": 3630042234782166,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630042234812500,
+        "sampler_duration_ns": 350042
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630044235117708,
+        "previous_request_gap_ns": 2000655250,
+        "provider_started_monotonic_ns": 3630044235293541,
+        "provider_finished_monotonic_ns": 3630044235522500,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630044235554000,
+        "sampler_duration_ns": 436292
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630046245607916,
+        "previous_request_gap_ns": 2010490208,
+        "provider_started_monotonic_ns": 3630046245761333,
+        "provider_finished_monotonic_ns": 3630046245969416,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630046245999583,
+        "sampler_duration_ns": 391667
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630048255159458,
+        "previous_request_gap_ns": 2009551542,
+        "provider_started_monotonic_ns": 3630048255304916,
+        "provider_finished_monotonic_ns": 3630048255550000,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630048255579708,
+        "sampler_duration_ns": 420250
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630050256846166,
+        "previous_request_gap_ns": 2001686708,
+        "provider_started_monotonic_ns": 3630050257010208,
+        "provider_finished_monotonic_ns": 3630050257188333,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630050257219791,
+        "sampler_duration_ns": 373625
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630052263809875,
+        "previous_request_gap_ns": 2006963709,
+        "provider_started_monotonic_ns": 3630052264843083,
+        "provider_finished_monotonic_ns": 3630052265194541,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630052265331125,
+        "sampler_duration_ns": 1521250
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630054275421125,
+        "previous_request_gap_ns": 2011611250,
+        "provider_started_monotonic_ns": 3630054275599916,
+        "provider_finished_monotonic_ns": 3630054275846666,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630054275880375,
+        "sampler_duration_ns": 459250
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630056285955208,
+        "previous_request_gap_ns": 2010534083,
+        "provider_started_monotonic_ns": 3630056286135791,
+        "provider_finished_monotonic_ns": 3630056286292000,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630056286324208,
+        "sampler_duration_ns": 369000
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630058292879041,
+        "previous_request_gap_ns": 2006923833,
+        "provider_started_monotonic_ns": 3630058293054625,
+        "provider_finished_monotonic_ns": 3630058293239166,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630058293271416,
+        "sampler_duration_ns": 392375
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630060303332083,
+        "previous_request_gap_ns": 2010453042,
+        "provider_started_monotonic_ns": 3630060303499291,
+        "provider_finished_monotonic_ns": 3630060303649208,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630060303678125,
+        "sampler_duration_ns": 346042
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630062304103291,
+        "previous_request_gap_ns": 2000771208,
+        "provider_started_monotonic_ns": 3630062304252166,
+        "provider_finished_monotonic_ns": 3630062304483708,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630062304530625,
+        "sampler_duration_ns": 427334
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630064314603916,
+        "previous_request_gap_ns": 2010500625,
+        "provider_started_monotonic_ns": 3630064314769166,
+        "provider_finished_monotonic_ns": 3630064315007125,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630064315040666,
+        "sampler_duration_ns": 436750
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630066325117083,
+        "previous_request_gap_ns": 2010513167,
+        "provider_started_monotonic_ns": 3630066325273750,
+        "provider_finished_monotonic_ns": 3630066325492208,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630066325528458,
+        "sampler_duration_ns": 411375
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630068335596166,
+        "previous_request_gap_ns": 2010479083,
+        "provider_started_monotonic_ns": 3630068335778000,
+        "provider_finished_monotonic_ns": 3630068336003250,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630068336031958,
+        "sampler_duration_ns": 435792
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630070336441375,
+        "previous_request_gap_ns": 2000845209,
+        "provider_started_monotonic_ns": 3630070336605375,
+        "provider_finished_monotonic_ns": 3630070336804583,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630070336837166,
+        "sampler_duration_ns": 395791
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630072338606958,
+        "previous_request_gap_ns": 2002165583,
+        "provider_started_monotonic_ns": 3630072338757208,
+        "provider_finished_monotonic_ns": 3630072338987708,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630072339021708,
+        "sampler_duration_ns": 414750
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630074344491916,
+        "previous_request_gap_ns": 2005884958,
+        "provider_started_monotonic_ns": 3630074344695541,
+        "provider_finished_monotonic_ns": 3630074344859333,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630074344901000,
+        "sampler_duration_ns": 409084
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630075685280958,
+        "previous_request_gap_ns": 1340789042,
+        "provider_started_monotonic_ns": 3630075685437250,
+        "provider_finished_monotonic_ns": 3630075685593583,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630075685625166,
+        "sampler_duration_ns": 344208
+      },
+      {
+        "process_group": 37336,
+        "requested_monotonic_ns": 3630075685833750,
+        "previous_request_gap_ns": 552792,
+        "provider_started_monotonic_ns": 3630075685903041,
+        "provider_finished_monotonic_ns": 3630075685962750,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3630075685981500,
+        "sampler_duration_ns": 147750
+      }
+    ]
+  },
+  "stdout": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/validation/sanitizer-controller-attempt01.stdout",
+  "stdout_sha256": "6ed71313c4a5762b4838d4c7b34c8b0e1f246cb1ace830f4c066e111d3e4de28",
+  "stderr": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/validation/sanitizer-controller-attempt01.stderr",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

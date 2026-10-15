@@ -1,0 +1,3715 @@
+{
+  "groups": [
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-c",
+        "boruvka/boruvka.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/boruvka/boruvka.o"
+      ],
+      "process_group": 37363,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:47:39.507497+00:00",
+          "monotonic_ns": 3629971404675083,
+          "process_group": 37363,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629971409190166,
+        "process_group": 37363,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:47:39.511783+00:00",
+          "monotonic_ns": 3629971409200625,
+          "process_group": 37363,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629971409450166,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-c",
+        "kruskal/kruskal.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/kruskal/kruskal.o"
+      ],
+      "process_group": 37374,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:47:40.207229+00:00",
+          "monotonic_ns": 3629972104633916,
+          "process_group": 37374,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629972105251458,
+        "process_group": 37374,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:47:40.207836+00:00",
+          "monotonic_ns": 3629972105259583,
+          "process_group": 37374,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629972105431208,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-c",
+        "prim/prim.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/prim/prim.o"
+      ],
+      "process_group": 37384,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:47:40.845864+00:00",
+          "monotonic_ns": 3629972743267041,
+          "process_group": 37384,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629972743820541,
+        "process_group": 37384,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:47:40.846400+00:00",
+          "monotonic_ns": 3629972743826375,
+          "process_group": 37384,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629972743979083,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-c",
+        "lca/lca.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/lca/lca.o"
+      ],
+      "process_group": 37399,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:47:41.381293+00:00",
+          "monotonic_ns": 3629973278700291,
+          "process_group": 37399,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629973279358750,
+        "process_group": 37399,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:47:41.381936+00:00",
+          "monotonic_ns": 3629973279364083,
+          "process_group": 37399,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629973279520291,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-c",
+        "union_find/union_find.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/union_find/union_find.o"
+      ],
+      "process_group": 37405,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:47:41.736734+00:00",
+          "monotonic_ns": 3629973634143416,
+          "process_group": 37405,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629973634731083,
+        "process_group": 37405,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:47:41.737308+00:00",
+          "monotonic_ns": 3629973634737416,
+          "process_group": 37405,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629973634894125,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-c",
+        "graph_utils/graph_utils.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/graph_utils/graph_utils.o"
+      ],
+      "process_group": 37413,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:47:42.369940+00:00",
+          "monotonic_ns": 3629974267333250,
+          "process_group": 37413,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629974268127500,
+        "process_group": 37413,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:47:42.370704+00:00",
+          "monotonic_ns": 3629974268135500,
+          "process_group": 37413,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629974268303291,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-DKKT_EXPERIMENT_COMPRESSED_QUERIES",
+        "-c",
+        "verifier/verifier_v2.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/verifier/verifier_v2.o"
+      ],
+      "process_group": 37420,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:47:43.719974+00:00",
+          "monotonic_ns": 3629975617366208,
+          "process_group": 37420,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629975618515916,
+        "process_group": 37420,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:47:43.721086+00:00",
+          "monotonic_ns": 3629975618523083,
+          "process_group": 37420,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629975618730375,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-c",
+        "kkt/kkt.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/half/kkt/kkt.o"
+      ],
+      "process_group": 37440,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:47:44.690786+00:00",
+          "monotonic_ns": 3629976588190291,
+          "process_group": 37440,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629976588840500,
+        "process_group": 37440,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:47:44.691405+00:00",
+          "monotonic_ns": 3629976588846208,
+          "process_group": 37440,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629976589009375,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-DKKT_EXPERIMENT_EIGHTH_SAMPLING",
+        "-c",
+        "kkt/kkt.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/eighth/kkt/kkt.o"
+      ],
+      "process_group": 37451,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:47:45.628500+00:00",
+          "monotonic_ns": 3629977525910250,
+          "process_group": 37451,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629977526555875,
+        "process_group": 37451,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:47:45.629117+00:00",
+          "monotonic_ns": 3629977526562250,
+          "process_group": 37451,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629977526708708,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-c",
+        "test/compressed_query_test.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/test/compressed_query_test.o"
+      ],
+      "process_group": 37464,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:47:47.002979+00:00",
+          "monotonic_ns": 3629978900390750,
+          "process_group": 37464,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629978901252125,
+        "process_group": 37464,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:47:47.003808+00:00",
+          "monotonic_ns": 3629978901257750,
+          "process_group": 37464,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629978901400666,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/half/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/test/compressed_query_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/compressed_query_test"
+      ],
+      "process_group": 37485,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:47:47.182499+00:00",
+          "monotonic_ns": 3629979079910958,
+          "process_group": 37485,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629979080630083,
+        "process_group": 37485,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:47:47.183185+00:00",
+          "monotonic_ns": 3629979080635916,
+          "process_group": 37485,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629979080774583,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/eighth/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/test/compressed_query_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/compressed_query_test"
+      ],
+      "process_group": 37494,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:47:47.463901+00:00",
+          "monotonic_ns": 3629979361304125,
+          "process_group": 37494,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629979362270166,
+        "process_group": 37494,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:47:47.464827+00:00",
+          "monotonic_ns": 3629979362278083,
+          "process_group": 37494,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629979362467083,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-c",
+        "test/edge_verifier_view_test.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/test/edge_verifier_view_test.o"
+      ],
+      "process_group": 37502,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:47:49.104497+00:00",
+          "monotonic_ns": 3629981001924875,
+          "process_group": 37502,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629981002583083,
+        "process_group": 37502,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:47:49.105131+00:00",
+          "monotonic_ns": 3629981002589416,
+          "process_group": 37502,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629981002738916,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/half/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/test/edge_verifier_view_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/edge_verifier_view_test"
+      ],
+      "process_group": 37522,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:47:49.232333+00:00",
+          "monotonic_ns": 3629981129761250,
+          "process_group": 37522,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629981130517875,
+        "process_group": 37522,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:47:49.233065+00:00",
+          "monotonic_ns": 3629981130523708,
+          "process_group": 37522,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629981130680291,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/eighth/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/test/edge_verifier_view_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/edge_verifier_view_test"
+      ],
+      "process_group": 37531,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:47:49.503590+00:00",
+          "monotonic_ns": 3629981400987791,
+          "process_group": 37531,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629981402028833,
+        "process_group": 37531,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:47:49.504577+00:00",
+          "monotonic_ns": 3629981402037208,
+          "process_group": 37531,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629981402224583,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-c",
+        "test/multigraph_contraction_test.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/test/multigraph_contraction_test.o"
+      ],
+      "process_group": 37536,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:47:51.608469+00:00",
+          "monotonic_ns": 3629983505894375,
+          "process_group": 37536,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629983506660500,
+        "process_group": 37536,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:47:51.609199+00:00",
+          "monotonic_ns": 3629983506667208,
+          "process_group": 37536,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629983506826875,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/half/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/test/multigraph_contraction_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/multigraph_contraction_test"
+      ],
+      "process_group": 37559,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:47:51.790265+00:00",
+          "monotonic_ns": 3629983687642583,
+          "process_group": 37559,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629983688986166,
+        "process_group": 37559,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:47:51.791528+00:00",
+          "monotonic_ns": 3629983688996458,
+          "process_group": 37559,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629983689195958,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/eighth/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/test/multigraph_contraction_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/multigraph_contraction_test"
+      ],
+      "process_group": 37567,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:47:52.084506+00:00",
+          "monotonic_ns": 3629983981895833,
+          "process_group": 37567,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629983983201458,
+        "process_group": 37567,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:47:52.085742+00:00",
+          "monotonic_ns": 3629983983211500,
+          "process_group": 37567,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629983983428833,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-c",
+        "test/regression_test.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/test/regression_test.o"
+      ],
+      "process_group": 37572,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:47:53.800443+00:00",
+          "monotonic_ns": 3629985697875166,
+          "process_group": 37572,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629985698571125,
+        "process_group": 37572,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:47:53.801105+00:00",
+          "monotonic_ns": 3629985698581833,
+          "process_group": 37572,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629985698751083,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/half/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/test/regression_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/regression_test"
+      ],
+      "process_group": 37605,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:47:53.929397+00:00",
+          "monotonic_ns": 3629985826824750,
+          "process_group": 37605,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629985827483875,
+        "process_group": 37605,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:47:53.930012+00:00",
+          "monotonic_ns": 3629985827489500,
+          "process_group": 37605,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629985827665625,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/eighth/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/test/regression_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/regression_test"
+      ],
+      "process_group": 37613,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:47:54.203155+00:00",
+          "monotonic_ns": 3629986100579916,
+          "process_group": 37613,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629986101471708,
+        "process_group": 37613,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:47:54.204001+00:00",
+          "monotonic_ns": 3629986101479416,
+          "process_group": 37613,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629986101644458,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-c",
+        "test/contraction_test.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/test/contraction_test.o"
+      ],
+      "process_group": 37625,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:47:55.674486+00:00",
+          "monotonic_ns": 3629987571918125,
+          "process_group": 37625,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629987572670250,
+        "process_group": 37625,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:47:55.675194+00:00",
+          "monotonic_ns": 3629987572677458,
+          "process_group": 37625,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629987572873208,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/half/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/test/contraction_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/contraction_test"
+      ],
+      "process_group": 37652,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:47:55.848434+00:00",
+          "monotonic_ns": 3629987745844041,
+          "process_group": 37652,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629987746682041,
+        "process_group": 37652,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:47:55.849204+00:00",
+          "monotonic_ns": 3629987746689041,
+          "process_group": 37652,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629987746842541,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/eighth/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/test/contraction_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/contraction_test"
+      ],
+      "process_group": 37662,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:47:56.076163+00:00",
+          "monotonic_ns": 3629987973601666,
+          "process_group": 37662,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629987974321458,
+        "process_group": 37662,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:47:56.076840+00:00",
+          "monotonic_ns": 3629987974326416,
+          "process_group": 37662,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629987974467750,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-c",
+        "test/simple_test.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/test/simple_test.o"
+      ],
+      "process_group": 37668,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:47:56.895232+00:00",
+          "monotonic_ns": 3629988792649041,
+          "process_group": 37668,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629988793381458,
+        "process_group": 37668,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:47:56.895898+00:00",
+          "monotonic_ns": 3629988793387500,
+          "process_group": 37668,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629988793543500,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/half/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/test/simple_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/simple_test"
+      ],
+      "process_group": 37682,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:47:57.073842+00:00",
+          "monotonic_ns": 3629988971285458,
+          "process_group": 37682,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629988972505916,
+        "process_group": 37682,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:47:57.075026+00:00",
+          "monotonic_ns": 3629988972515083,
+          "process_group": 37682,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629988972688750,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/eighth/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/test/simple_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/simple_test"
+      ],
+      "process_group": 37687,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:47:57.314171+00:00",
+          "monotonic_ns": 3629989211634833,
+          "process_group": 37687,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629989212217583,
+        "process_group": 37687,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:47:57.314732+00:00",
+          "monotonic_ns": 3629989212222958,
+          "process_group": 37687,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629989212365875,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-c",
+        "benchmark/core_attachment_test.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/benchmark/core_attachment_test.o"
+      ],
+      "process_group": 37706,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:47:59.456924+00:00",
+          "monotonic_ns": 3629991354403458,
+          "process_group": 37706,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 37706,
+              "rss_kib": 324464,
+              "command": "/opt/homebrew/Cellar/llvm/22.1.8/bin/clang-22"
+            }
+          ],
+          "rss_kib": 324464
+        },
+        {
+          "utc": "2026-10-15T13:48:00.566691+00:00",
+          "monotonic_ns": 3629992464186458,
+          "process_group": 37706,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629992464626625,
+        "process_group": 37706,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:48:00.567128+00:00",
+          "monotonic_ns": 3629992464632291,
+          "process_group": 37706,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629992464766041,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/half/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/benchmark/core_attachment_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/core_attachment_test"
+      ],
+      "process_group": 37750,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:48:00.748423+00:00",
+          "monotonic_ns": 3629992645864375,
+          "process_group": 37750,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629992647064041,
+        "process_group": 37750,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:48:00.749571+00:00",
+          "monotonic_ns": 3629992647075250,
+          "process_group": 37750,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629992647274583,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/eighth/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/benchmark/core_attachment_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/core_attachment_test"
+      ],
+      "process_group": 37759,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:48:00.997346+00:00",
+          "monotonic_ns": 3629992894831291,
+          "process_group": 37759,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629992895459000,
+        "process_group": 37759,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:48:00.997959+00:00",
+          "monotonic_ns": 3629992895464416,
+          "process_group": 37759,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629992895610708,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-c",
+        "benchmark/certificate_test.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/benchmark/certificate_test.o"
+      ],
+      "process_group": 37766,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:48:01.974605+00:00",
+          "monotonic_ns": 3629993872084625,
+          "process_group": 37766,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629993873088208,
+        "process_group": 37766,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:48:01.975588+00:00",
+          "monotonic_ns": 3629993873096958,
+          "process_group": 37766,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629993873294375,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/half/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/benchmark/certificate_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/certificate_test"
+      ],
+      "process_group": 37776,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:48:02.155009+00:00",
+          "monotonic_ns": 3629994052481083,
+          "process_group": 37776,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629994053245041,
+        "process_group": 37776,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:48:02.155743+00:00",
+          "monotonic_ns": 3629994053251666,
+          "process_group": 37776,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629994053402416,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/eighth/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/benchmark/certificate_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/certificate_test"
+      ],
+      "process_group": 37781,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:48:02.437888+00:00",
+          "monotonic_ns": 3629994335354166,
+          "process_group": 37781,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629994336655833,
+        "process_group": 37781,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:48:02.439155+00:00",
+          "monotonic_ns": 3629994336665583,
+          "process_group": 37781,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629994336891916,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-c",
+        "test/eighth_sampling_test.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/test/eighth_sampling_test.o"
+      ],
+      "process_group": 37787,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:48:03.031294+00:00",
+          "monotonic_ns": 3629994928780125,
+          "process_group": 37787,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629994929516125,
+        "process_group": 37787,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:48:03.032011+00:00",
+          "monotonic_ns": 3629994929523041,
+          "process_group": 37787,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629994929681208,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/half/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/test/eighth_sampling_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/eighth_sampling_test"
+      ],
+      "process_group": 37795,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:48:03.215379+00:00",
+          "monotonic_ns": 3629995112846041,
+          "process_group": 37795,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629995113909083,
+        "process_group": 37795,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:48:03.216403+00:00",
+          "monotonic_ns": 3629995113917125,
+          "process_group": 37795,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629995114098166,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/eighth/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/test/eighth_sampling_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/eighth_sampling_test"
+      ],
+      "process_group": 37803,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:48:03.507413+00:00",
+          "monotonic_ns": 3629995404881083,
+          "process_group": 37803,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629995406125583,
+        "process_group": 37803,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:48:03.508631+00:00",
+          "monotonic_ns": 3629995406145708,
+          "process_group": 37803,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629995406372416,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-c",
+        "test/eighth_sampling_integration_test.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/half/test/eighth_sampling_integration_test.o"
+      ],
+      "process_group": 37812,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:48:04.815598+00:00",
+          "monotonic_ns": 3629996713071000,
+          "process_group": 37812,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629996713776708,
+        "process_group": 37812,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:48:04.816263+00:00",
+          "monotonic_ns": 3629996713783083,
+          "process_group": 37812,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629996713942791,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/half/test/eighth_sampling_integration_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/eighth_sampling_integration_test"
+      ],
+      "process_group": 37828,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:48:04.952767+00:00",
+          "monotonic_ns": 3629996850263166,
+          "process_group": 37828,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629996850885708,
+        "process_group": 37828,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:48:04.953370+00:00",
+          "monotonic_ns": 3629996850891125,
+          "process_group": 37828,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629996851050791,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-DKKT_EXPERIMENT_EIGHTH_SAMPLING",
+        "-c",
+        "test/eighth_sampling_integration_test.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/eighth/test/eighth_sampling_integration_test.o"
+      ],
+      "process_group": 37833,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:48:06.232040+00:00",
+          "monotonic_ns": 3629998129539500,
+          "process_group": 37833,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629998130297875,
+        "process_group": 37833,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:48:06.232779+00:00",
+          "monotonic_ns": 3629998130304833,
+          "process_group": 37833,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629998130462583,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/shared/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/.build/eighth-sampling/sanitizer-correctness/eighth/test/eighth_sampling_integration_test.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/eighth_sampling_integration_test"
+      ],
+      "process_group": 37870,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:48:06.419387+00:00",
+          "monotonic_ns": 3629998316884250,
+          "process_group": 37870,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629998317808000,
+        "process_group": 37870,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:48:06.420291+00:00",
+          "monotonic_ns": 3629998317816208,
+          "process_group": 37870,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629998318260958,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/compressed_query_test",
+        "compressed"
+      ],
+      "process_group": 37888,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:48:07.509882+00:00",
+          "monotonic_ns": 3629999407387625,
+          "process_group": 37888,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3629999408132333,
+        "process_group": 37888,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:48:07.510607+00:00",
+          "monotonic_ns": 3629999408138083,
+          "process_group": 37888,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629999408309375,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/compressed_query_test",
+        "reference"
+      ],
+      "process_group": 37910,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:48:08.066939+00:00",
+          "monotonic_ns": 3629999964450041,
+          "process_group": 37910,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 1,
+      "cleanup": {
+        "started_monotonic_ns": 3629999965092791,
+        "process_group": 37910,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 1,
+        "group_verification": {
+          "utc": "2026-10-15T13:48:08.067565+00:00",
+          "monotonic_ns": 3629999965098625,
+          "process_group": 37910,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3629999965271500,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/edge_verifier_view_test"
+      ],
+      "process_group": 37936,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:48:09.187056+00:00",
+          "monotonic_ns": 3630001084572666,
+          "process_group": 37936,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3630001085273875,
+        "process_group": 37936,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:48:09.187745+00:00",
+          "monotonic_ns": 3630001085282625,
+          "process_group": 37936,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3630001085402250,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/multigraph_contraction_test"
+      ],
+      "process_group": 37947,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:48:11.215071+00:00",
+          "monotonic_ns": 3630003112598958,
+          "process_group": 37947,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 37947,
+              "rss_kib": 613024,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/multigraph_contraction_test"
+            }
+          ],
+          "rss_kib": 613024
+        },
+        {
+          "utc": "2026-10-15T13:48:13.218766+00:00",
+          "monotonic_ns": 3630005116313708,
+          "process_group": 37947,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 37947,
+              "rss_kib": 776944,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/multigraph_contraction_test"
+            }
+          ],
+          "rss_kib": 776944
+        },
+        {
+          "utc": "2026-10-15T13:48:15.219641+00:00",
+          "monotonic_ns": 3630007117197083,
+          "process_group": 37947,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 37947,
+              "rss_kib": 777328,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/multigraph_contraction_test"
+            }
+          ],
+          "rss_kib": 777328
+        },
+        {
+          "utc": "2026-10-15T13:48:17.228551+00:00",
+          "monotonic_ns": 3630009126114583,
+          "process_group": 37947,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 37947,
+              "rss_kib": 840176,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/multigraph_contraction_test"
+            }
+          ],
+          "rss_kib": 840176
+        },
+        {
+          "utc": "2026-10-15T13:48:19.239066+00:00",
+          "monotonic_ns": 3630011136637583,
+          "process_group": 37947,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 37947,
+              "rss_kib": 919856,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/multigraph_contraction_test"
+            }
+          ],
+          "rss_kib": 919856
+        },
+        {
+          "utc": "2026-10-15T13:48:20.902868+00:00",
+          "monotonic_ns": 3630012800442250,
+          "process_group": 37947,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3630012800926541,
+        "process_group": 37947,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:48:20.903351+00:00",
+          "monotonic_ns": 3630012800935750,
+          "process_group": 37947,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3630012801089000,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/regression_test"
+      ],
+      "process_group": 38103,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:48:21.705759+00:00",
+          "monotonic_ns": 3630013603304458,
+          "process_group": 38103,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3630013604287208,
+        "process_group": 38103,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:48:21.706711+00:00",
+          "monotonic_ns": 3630013604298250,
+          "process_group": 38103,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3630013604486083,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/contraction_test"
+      ],
+      "process_group": 38104,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:48:22.212349+00:00",
+          "monotonic_ns": 3630014109906291,
+          "process_group": 38104,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3630014110590625,
+        "process_group": 38104,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:48:22.213007+00:00",
+          "monotonic_ns": 3630014110596458,
+          "process_group": 38104,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3630014110759875,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/simple_test"
+      ],
+      "process_group": 38105,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:48:22.779507+00:00",
+          "monotonic_ns": 3630014677056583,
+          "process_group": 38105,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3630014678324791,
+        "process_group": 38105,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:48:22.780742+00:00",
+          "monotonic_ns": 3630014678334250,
+          "process_group": 38105,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3630014678533708,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/core_attachment_test"
+      ],
+      "process_group": 38116,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:48:24.799429+00:00",
+          "monotonic_ns": 3630016697009125,
+          "process_group": 38116,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 38116,
+              "rss_kib": 573264,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/core_attachment_test"
+            }
+          ],
+          "rss_kib": 573264
+        },
+        {
+          "utc": "2026-10-15T13:48:26.810138+00:00",
+          "monotonic_ns": 3630018707739541,
+          "process_group": 38116,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 38116,
+              "rss_kib": 572208,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/core_attachment_test"
+            }
+          ],
+          "rss_kib": 572208
+        },
+        {
+          "utc": "2026-10-15T13:48:28.820646+00:00",
+          "monotonic_ns": 3630020718257125,
+          "process_group": 38116,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 38116,
+              "rss_kib": 637216,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/core_attachment_test"
+            }
+          ],
+          "rss_kib": 637216
+        },
+        {
+          "utc": "2026-10-15T13:48:30.831107+00:00",
+          "monotonic_ns": 3630022728725375,
+          "process_group": 38116,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 38116,
+              "rss_kib": 712512,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/core_attachment_test"
+            }
+          ],
+          "rss_kib": 712512
+        },
+        {
+          "utc": "2026-10-15T13:48:32.839162+00:00",
+          "monotonic_ns": 3630024736788583,
+          "process_group": 38116,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 38116,
+              "rss_kib": 673328,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/core_attachment_test"
+            }
+          ],
+          "rss_kib": 673328
+        },
+        {
+          "utc": "2026-10-15T13:48:34.849667+00:00",
+          "monotonic_ns": 3630026747300541,
+          "process_group": 38116,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 38116,
+              "rss_kib": 705024,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/core_attachment_test"
+            }
+          ],
+          "rss_kib": 705024
+        },
+        {
+          "utc": "2026-10-15T13:48:36.851661+00:00",
+          "monotonic_ns": 3630028749303541,
+          "process_group": 38116,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 38116,
+              "rss_kib": 633376,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/core_attachment_test"
+            }
+          ],
+          "rss_kib": 633376
+        },
+        {
+          "utc": "2026-10-15T13:48:38.862197+00:00",
+          "monotonic_ns": 3630030759847125,
+          "process_group": 38116,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 38116,
+              "rss_kib": 648992,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/core_attachment_test"
+            }
+          ],
+          "rss_kib": 648992
+        },
+        {
+          "utc": "2026-10-15T13:48:40.863504+00:00",
+          "monotonic_ns": 3630032761162416,
+          "process_group": 38116,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 38116,
+              "rss_kib": 706464,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/core_attachment_test"
+            }
+          ],
+          "rss_kib": 706464
+        },
+        {
+          "utc": "2026-10-15T13:48:42.865998+00:00",
+          "monotonic_ns": 3630034763664125,
+          "process_group": 38116,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 38116,
+              "rss_kib": 707968,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/core_attachment_test"
+            }
+          ],
+          "rss_kib": 707968
+        },
+        {
+          "utc": "2026-10-15T13:48:43.487292+00:00",
+          "monotonic_ns": 3630035384953125,
+          "process_group": 38116,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3630035385648666,
+        "process_group": 38116,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:48:43.487993+00:00",
+          "monotonic_ns": 3630035385667625,
+          "process_group": 38116,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3630035385896708,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/certificate_test"
+      ],
+      "process_group": 38358,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:48:43.989256+00:00",
+          "monotonic_ns": 3630035886909000,
+          "process_group": 38358,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3630035887480750,
+        "process_group": 38358,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:48:43.989810+00:00",
+          "monotonic_ns": 3630035887487041,
+          "process_group": 38358,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3630035887632875,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/eighth_sampling_test"
+      ],
+      "process_group": 38363,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:48:44.492710+00:00",
+          "monotonic_ns": 3630036390348750,
+          "process_group": 38363,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3630036391327958,
+        "process_group": 38363,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:48:44.493657+00:00",
+          "monotonic_ns": 3630036391335541,
+          "process_group": 38363,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3630036391524666,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/eighth_sampling_integration_test",
+        "half"
+      ],
+      "process_group": 38364,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:48:45.082472+00:00",
+          "monotonic_ns": 3630036980126125,
+          "process_group": 38364,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3630036980826750,
+        "process_group": 38364,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:48:45.083152+00:00",
+          "monotonic_ns": 3630036980832666,
+          "process_group": 38364,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3630036980990833,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/half/eighth_sampling_integration_test",
+        "eighth"
+      ],
+      "process_group": 38370,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:48:45.302718+00:00",
+          "monotonic_ns": 3630037200376916,
+          "process_group": 38370,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 1,
+      "cleanup": {
+        "started_monotonic_ns": 3630037201018166,
+        "process_group": 38370,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 1,
+        "group_verification": {
+          "utc": "2026-10-15T13:48:45.303342+00:00",
+          "monotonic_ns": 3630037201023833,
+          "process_group": 38370,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3630037201150666,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/compressed_query_test",
+        "compressed"
+      ],
+      "process_group": 38373,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:48:46.030567+00:00",
+          "monotonic_ns": 3630037928229958,
+          "process_group": 38373,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3630037928804625,
+        "process_group": 38373,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:48:46.031126+00:00",
+          "monotonic_ns": 3630037928810750,
+          "process_group": 38373,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3630037928964958,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/compressed_query_test",
+        "reference"
+      ],
+      "process_group": 38388,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:48:46.577601+00:00",
+          "monotonic_ns": 3630038475267750,
+          "process_group": 38388,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 1,
+      "cleanup": {
+        "started_monotonic_ns": 3630038475910625,
+        "process_group": 38388,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 1,
+        "group_verification": {
+          "utc": "2026-10-15T13:48:46.578228+00:00",
+          "monotonic_ns": 3630038475915625,
+          "process_group": 38388,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3630038476063625,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/edge_verifier_view_test"
+      ],
+      "process_group": 38398,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:48:47.705233+00:00",
+          "monotonic_ns": 3630039602896375,
+          "process_group": 38398,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3630039603860500,
+        "process_group": 38398,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:48:47.706177+00:00",
+          "monotonic_ns": 3630039603868416,
+          "process_group": 38398,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3630039604061250,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/multigraph_contraction_test"
+      ],
+      "process_group": 38415,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:48:49.734144+00:00",
+          "monotonic_ns": 3630041631823458,
+          "process_group": 38415,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 38415,
+              "rss_kib": 613312,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/multigraph_contraction_test"
+            }
+          ],
+          "rss_kib": 613312
+        },
+        {
+          "utc": "2026-10-15T13:48:51.744900+00:00",
+          "monotonic_ns": 3630043642601041,
+          "process_group": 38415,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 38415,
+              "rss_kib": 776832,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/multigraph_contraction_test"
+            }
+          ],
+          "rss_kib": 776832
+        },
+        {
+          "utc": "2026-10-15T13:48:53.754527+00:00",
+          "monotonic_ns": 3630045652237958,
+          "process_group": 38415,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 38415,
+              "rss_kib": 777168,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/multigraph_contraction_test"
+            }
+          ],
+          "rss_kib": 777168
+        },
+        {
+          "utc": "2026-10-15T13:48:55.758069+00:00",
+          "monotonic_ns": 3630047655787208,
+          "process_group": 38415,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 38415,
+              "rss_kib": 850144,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/multigraph_contraction_test"
+            }
+          ],
+          "rss_kib": 850144
+        },
+        {
+          "utc": "2026-10-15T13:48:57.768605+00:00",
+          "monotonic_ns": 3630049666330583,
+          "process_group": 38415,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 38415,
+              "rss_kib": 920256,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/multigraph_contraction_test"
+            }
+          ],
+          "rss_kib": 920256
+        },
+        {
+          "utc": "2026-10-15T13:48:59.277845+00:00",
+          "monotonic_ns": 3630051175563916,
+          "process_group": 38415,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3630051176351166,
+        "process_group": 38415,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:48:59.278626+00:00",
+          "monotonic_ns": 3630051176363625,
+          "process_group": 38415,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3630051176530291,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/regression_test"
+      ],
+      "process_group": 38548,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:49:00.087695+00:00",
+          "monotonic_ns": 3630051985410458,
+          "process_group": 38548,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3630051986581000,
+        "process_group": 38548,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:49:00.088856+00:00",
+          "monotonic_ns": 3630051986594375,
+          "process_group": 38548,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3630051987535708,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/contraction_test"
+      ],
+      "process_group": 38558,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:49:00.587625+00:00",
+          "monotonic_ns": 3630052485345708,
+          "process_group": 38558,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3630052486074250,
+        "process_group": 38558,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:49:00.588338+00:00",
+          "monotonic_ns": 3630052486080125,
+          "process_group": 38558,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3630052486321208,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/simple_test"
+      ],
+      "process_group": 38573,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:49:01.149693+00:00",
+          "monotonic_ns": 3630053047407500,
+          "process_group": 38573,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3630053048151458,
+        "process_group": 38573,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:49:01.150414+00:00",
+          "monotonic_ns": 3630053048159041,
+          "process_group": 38573,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3630053048319583,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/core_attachment_test"
+      ],
+      "process_group": 38590,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:49:03.167297+00:00",
+          "monotonic_ns": 3630055065028375,
+          "process_group": 38590,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 38590,
+              "rss_kib": 549680,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/core_attachment_test"
+            }
+          ],
+          "rss_kib": 549680
+        },
+        {
+          "utc": "2026-10-15T13:49:05.178108+00:00",
+          "monotonic_ns": 3630057075863541,
+          "process_group": 38590,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 38590,
+              "rss_kib": 561824,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/core_attachment_test"
+            }
+          ],
+          "rss_kib": 561824
+        },
+        {
+          "utc": "2026-10-15T13:49:07.188673+00:00",
+          "monotonic_ns": 3630059086436916,
+          "process_group": 38590,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 38590,
+              "rss_kib": 639504,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/core_attachment_test"
+            }
+          ],
+          "rss_kib": 639504
+        },
+        {
+          "utc": "2026-10-15T13:49:09.190297+00:00",
+          "monotonic_ns": 3630061088068083,
+          "process_group": 38590,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 38590,
+              "rss_kib": 686080,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/core_attachment_test"
+            }
+          ],
+          "rss_kib": 686080
+        },
+        {
+          "utc": "2026-10-15T13:49:11.195917+00:00",
+          "monotonic_ns": 3630063093696583,
+          "process_group": 38590,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 38590,
+              "rss_kib": 659168,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/core_attachment_test"
+            }
+          ],
+          "rss_kib": 659168
+        },
+        {
+          "utc": "2026-10-15T13:49:13.206443+00:00",
+          "monotonic_ns": 3630065104230375,
+          "process_group": 38590,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 38590,
+              "rss_kib": 701472,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/core_attachment_test"
+            }
+          ],
+          "rss_kib": 701472
+        },
+        {
+          "utc": "2026-10-15T13:49:15.216949+00:00",
+          "monotonic_ns": 3630067114744916,
+          "process_group": 38590,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 38590,
+              "rss_kib": 635872,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/core_attachment_test"
+            }
+          ],
+          "rss_kib": 635872
+        },
+        {
+          "utc": "2026-10-15T13:49:17.217709+00:00",
+          "monotonic_ns": 3630069115512333,
+          "process_group": 38590,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 38590,
+              "rss_kib": 637232,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/core_attachment_test"
+            }
+          ],
+          "rss_kib": 637232
+        },
+        {
+          "utc": "2026-10-15T13:49:19.221503+00:00",
+          "monotonic_ns": 3630071119315000,
+          "process_group": 38590,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 38590,
+              "rss_kib": 677696,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/core_attachment_test"
+            }
+          ],
+          "rss_kib": 677696
+        },
+        {
+          "utc": "2026-10-15T13:49:21.227054+00:00",
+          "monotonic_ns": 3630073124873666,
+          "process_group": 38590,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 38590,
+              "rss_kib": 727296,
+              "command": "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/core_attachment_test"
+            }
+          ],
+          "rss_kib": 727296
+        },
+        {
+          "utc": "2026-10-15T13:49:21.436142+00:00",
+          "monotonic_ns": 3630073333960125,
+          "process_group": 38590,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3630073334382000,
+        "process_group": 38590,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:49:21.436566+00:00",
+          "monotonic_ns": 3630073334392291,
+          "process_group": 38590,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3630073334518416,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/certificate_test"
+      ],
+      "process_group": 38842,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:49:21.992528+00:00",
+          "monotonic_ns": 3630073890308458,
+          "process_group": 38842,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3630073891439083,
+        "process_group": 38842,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:49:21.993618+00:00",
+          "monotonic_ns": 3630073891446708,
+          "process_group": 38842,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3630073891655833,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/eighth_sampling_test"
+      ],
+      "process_group": 38851,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:49:22.506710+00:00",
+          "monotonic_ns": 3630074404517375,
+          "process_group": 38851,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3630074405186625,
+        "process_group": 38851,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:49:22.507362+00:00",
+          "monotonic_ns": 3630074405192458,
+          "process_group": 38851,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3630074405359000,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/eighth_sampling_integration_test",
+        "eighth"
+      ],
+      "process_group": 38855,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:49:23.011136+00:00",
+          "monotonic_ns": 3630074908947708,
+          "process_group": 38855,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 3630074909602500,
+        "process_group": 38855,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T13:49:23.011777+00:00",
+          "monotonic_ns": 3630074909609625,
+          "process_group": 38855,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3630074909771416,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-eighth-sampling/bin/eighth-sampling/sanitizer-correctness/eighth/eighth_sampling_integration_test",
+        "half"
+      ],
+      "process_group": 38861,
+      "observations": [
+        {
+          "utc": "2026-10-15T13:49:23.219560+00:00",
+          "monotonic_ns": 3630075117357583,
+          "process_group": 38861,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 1,
+      "cleanup": {
+        "started_monotonic_ns": 3630075117987041,
+        "process_group": 38861,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 1,
+        "group_verification": {
+          "utc": "2026-10-15T13:49:23.220160+00:00",
+          "monotonic_ns": 3630075117993000,
+          "process_group": 38861,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 3630075118141291,
+        "native_process_may_still_be_running": false
+      }
+    }
+  ]
+}

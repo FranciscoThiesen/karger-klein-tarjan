@@ -1,0 +1,18 @@
+{
+  "validation": "pass",
+  "installed_utc": "2026-10-15T13:45:43.411783+00:00",
+  "base_revision": "fbdf4a8571104302ea21464026e86a2257e2add0",
+  "branch": "codex/kkt-eighth-sampling",
+  "worktree": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "parent_freeze": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/freeze.json",
+  "native_source_checksums": {
+    "kkt/kkt.hpp": "db6d56d7741a2edaea19b535bcb6a969ba29964aaefb7da21d8935c746771cc2",
+    "kkt/random_sampling.hpp": "96aef2e4c275d711ce77ee503ae7f88ba8a8baf07adcc547e19302001a96000e",
+    "kkt/experimental_eighth_sampling.hpp": "dc58872c0f6c8542ce67d8c9f3a1c5c5c4fd9f2b1e5ae9c1bb65b5e6c70293bd",
+    "kkt/experimental_multigraph_contraction.hpp": "c18798f5ef678dfa94abbb29213dfc886123a33961a2149ce1c9e6b32987f8c2",
+    "kkt/kkt.cpp": "f5681b0384fb26ee6af5a23e4f7109b990393d831fc6ceb5385ce43643f5fd9a",
+    "kkt/BUILD": "545198d828aed022f33b525544a22f8efb693a2931102d4fb6297f556fc6a765",
+    "kkt/notes.md": "df68d1add1d895824adad3a13c98e23bc3dc756bc979c27e7cf193d5134c469b"
+  },
+  "note": "Source-only installation. No mocks, compile, native correctness or performance has executed."
+}

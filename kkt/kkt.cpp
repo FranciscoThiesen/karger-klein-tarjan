@@ -1,5 +1,6 @@
 #include "kkt.hpp"
 #include "random_sampling.hpp"
+#include "experimental_eighth_sampling.hpp"
 #ifdef KKT_EXPERIMENT_RETAIN_PARALLEL
 #include "experimental_multigraph_contraction.hpp"
 #endif
@@ -239,7 +240,8 @@ static problem remove_isolated_vertices(problem&& P)
     return remove_isolated_vertices_owned(std::move(P));
 }
 
-// Random sampling consumes one draw per edge, preserving input order.
+// Scalar sampling consumes one draw per edge, preserving input order.
+// Only the opt-in private path changes the acceptance probability to 1/8.
 // Only a temporary recursive sample substitutes parent-graph positions for IDs;
 // the public sampling wrapper retains its caller's IDs and legacy metadata.
 template <bool use_parent_positions>
@@ -250,8 +252,14 @@ static problem sample_edges(const problem& P, std::mt19937& rng)
     KKT_WORK_ADD(sampling_calls, 1);
     KKT_WORK_ADD(sampling_edge_visits, P.graph_edges.size());
 
+#ifdef KKT_EXPERIMENT_EIGHTH_SAMPLING
+    constexpr bool use_eighth = use_parent_positions;
+#else
+    constexpr bool use_eighth = false;
+#endif
     for (size_t position = 0; position < P.graph_edges.size(); ++position) {
-        if (rng() & 1u) {
+        if (kkt_detail::accept_scalar_sample_word<use_eighth>(
+                static_cast<std::uint32_t>(rng()))) {
             const Edge& e = P.graph_edges[position];
             const int id = use_parent_positions ? static_cast<int>(position) : e.id;
             H.emplace_back(e.from, e.to, e.cost, id);
