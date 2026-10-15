@@ -1,0 +1,43 @@
+{
+  "utc": "2026-10-15T04:50:52.419642+00:00",
+  "observations": [
+    {
+      "command": [
+        "/usr/sbin/sysctl",
+        "hw.memsize",
+        "hw.logicalcpu",
+        "machdep.cpu.brand_string",
+        "vm.swapusage"
+      ],
+      "exit_status": 0,
+      "stdout": "hw.memsize: 137438953472\nhw.logicalcpu: 16\nmachdep.cpu.brand_string: Apple M3 Max\nvm.swapusage: total = 6144.00M  used = 4626.19M  free = 1517.81M  (encrypted)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/sw_vers"
+      ],
+      "exit_status": 0,
+      "stdout": "ProductName:\t\tmacOS\nProductVersion:\t\t26.6.2\nBuildVersion:\t\t25G83\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/arch"
+      ],
+      "exit_status": 0,
+      "stdout": "i386",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/bin/pmset",
+        "-g",
+        "therm"
+      ],
+      "exit_status": 0,
+      "stdout": "Error:Failed to get thermal warning level with error code 0xe00002bc\nError: Failed to get performance warning level with error code 0xe00002bc\nError: No CPU power status with error code 0xe00002bc\n",
+      "stderr": ""
+    }
+  ]
+}
