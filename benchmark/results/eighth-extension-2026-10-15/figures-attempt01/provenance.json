@@ -1,0 +1,414 @@
+{
+  "schema": "eighth_extension_figures_v1",
+  "validation": "pass",
+  "capture": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension.json",
+  "input_sha256": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension.json": "fede327424f7657ca13003fadd0f71e3d5e3711f757e9f1c94f85d256aa3183b",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension.csv": "f68b0e9dd40894dadef0c4d79ea08cd6b1261a882512436754cabe5fc0400b83",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/freeze.json": "aa2f9ae7385105eb7185b864a1f46387f8a02ebe8b967f041d3d0cef5ffa7bc5",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/freeze.json": "2be7556d15b58f3f65cc380ac22b67c57fdf8aea747d651b9d648c6a1aa59d2f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0001_leaf_hierarchy4_n1024_d32_p0_g17000011_s2801.csv": "a57fc971f46dfae3e59535e1a0ac6818c6d4a93fbead9d08648076d2098c5034",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0001_leaf_hierarchy4_n1024_d32_p0_g17000011_s2801.log": "e74f6c43f99430e5744102bf9f90569c5a2337583a85213e0055abbf1f648b32",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0001_leaf_hierarchy4_n1024_d32_p0_g17000011_s2801.rss.jsonl": "b0a17278bc667609f5ae8db59cda360d2777bd0dde4d1c73cee9186edd457828",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0002_leaf_shuffled4_n1024_d32_p0_g17000011_s2801.csv": "16c0113eb1db50d16fcbbdfd9b1a37af4f3dd1b5b4cdd9ab95fb8c73ff73faad",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0002_leaf_shuffled4_n1024_d32_p0_g17000011_s2801.log": "379c75192f47f9fe7aa687d820b3db2ba694d3558c782625a17e7254bbd7bf1a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0002_leaf_shuffled4_n1024_d32_p0_g17000011_s2801.rss.jsonl": "2cf4c193efe2d335318cdab7ae9320c073de5d54602311717a2c8cfaec47144c",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0003_leaf_hierarchy4_n4096_d32_p0_g17000011_s2801.csv": "d091829ef1b1a958306a94540f0333ef4a675310314e5fbdcd52f21702a1ffa6",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0003_leaf_hierarchy4_n4096_d32_p0_g17000011_s2801.log": "043aaae821cc0d261ad7ebc7ccdce62c39e91664e15ea4edd851993130374b2c",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0003_leaf_hierarchy4_n4096_d32_p0_g17000011_s2801.rss.jsonl": "6dc56eb328142b35ccf34f8518e4ae90d6bcd7f2c352b668ce6241e69932c581",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0004_leaf_shuffled4_n4096_d32_p0_g17000011_s2801.csv": "25be7ad3949f909a0b49ccc58f02fa1fd1e284e8866304dbbdf601b1af559cd0",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0004_leaf_shuffled4_n4096_d32_p0_g17000011_s2801.log": "41151d2bdd9836ed096d6f9750ef8fa5762cf5498923c7f2d13d102bfa91853d",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0004_leaf_shuffled4_n4096_d32_p0_g17000011_s2801.rss.jsonl": "409203efcc2a4789f951583142166ac7a070ff9220a241b0f83b11a5e8280536",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0005_leaf_hierarchy4_n16384_d32_p0_g17000011_s2801.csv": "70d0f2d9afabb1239b6c278949e90b01db98654c98564ed7d281c0758a960746",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0005_leaf_hierarchy4_n16384_d32_p0_g17000011_s2801.log": "484c468c85c81d8809cd73637907c8c5cf131ece6cb33320634e7a7cbadf72d2",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0005_leaf_hierarchy4_n16384_d32_p0_g17000011_s2801.rss.jsonl": "97db870ab7147a969a8c76ed12215db8d489e34af1ceb6444362278c2d13d987",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0006_leaf_shuffled4_n16384_d32_p0_g17000011_s2801.csv": "fba2201d37a5b6a277dc4e847d70fc8534ed5cbd19eadafb84b72d6fb9611c59",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0006_leaf_shuffled4_n16384_d32_p0_g17000011_s2801.log": "d5bd3a62a2fb8d37f0560c0bca7d9033f0b39e7d2d06c772035c8c96f6df5e3b",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0006_leaf_shuffled4_n16384_d32_p0_g17000011_s2801.rss.jsonl": "e56a8b786f75c3a6233086ae0151ab7aa551611ffbeb344c0841a93b10daabaf",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0007_leaf_hierarchy4_n65536_d32_p0_g17000011_s2801.csv": "f2523a93896fe8fbe3ea593143af58800299f6ebe07c85a1e62b4c7f33f44164",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0007_leaf_hierarchy4_n65536_d32_p0_g17000011_s2801.log": "ce0b3ef30cd8bcfb100af33d6d71d4a7a38494ae4feadcd91383333e326b7c5d",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0007_leaf_hierarchy4_n65536_d32_p0_g17000011_s2801.rss.jsonl": "c3b55218eeb1a42a21fe26c2604af5627a2cbb25ed8532abde42d753b597b462",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0008_leaf_shuffled4_n65536_d32_p0_g17000011_s2801.csv": "427ba9b6446348b7533c97e67970e44bb4972581789d234eee82ba02c3c8edc1",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0008_leaf_shuffled4_n65536_d32_p0_g17000011_s2801.log": "f97fc71ac3e2731329bbfe9a03f3fa7b2932017f2d9b3cb26d82301bc1f00abf",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0008_leaf_shuffled4_n65536_d32_p0_g17000011_s2801.rss.jsonl": "6a9ca43e2800bc6f989938bf57976b464c6780b87bfd4bf1b9ea0fc8bda78347",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0009_leaf_hierarchy4_n262144_d32_p0_g17000011_s2801.csv": "70d083aa46d9cccfcbec55d8f948dba859e79b43592b483c175cf16cfa502b73",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0009_leaf_hierarchy4_n262144_d32_p0_g17000011_s2801.log": "dbaa5c702773b2c50a2b350742eb131019207ad39e57c821c2e253072464e426",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0009_leaf_hierarchy4_n262144_d32_p0_g17000011_s2801.rss.jsonl": "fbd9fff395720ca09595842983872deef0d873662d2373d11314cf6bf667ce4a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0010_leaf_shuffled4_n262144_d32_p0_g17000011_s2801.csv": "f9fcd4b99d3df24c5bf1b073a1445b019c762c96054cd40fc101cea490cda5e3",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0010_leaf_shuffled4_n262144_d32_p0_g17000011_s2801.log": "9edbb51be88aef1601389c212894e2bef1ff438d6f75fe5c0354e28dfceae459",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0010_leaf_shuffled4_n262144_d32_p0_g17000011_s2801.rss.jsonl": "e32f399ebe78b29b939599497429066799d30b4552facd493c847ba75fea6b63",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0011_leaf_hierarchy4_n1048576_d32_p0_g17000011_s2801.csv": "1b52699d7babbca8bc7e8f0ce1ac1d7c90ab5fed14625f76255f52ee878e53ab",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0011_leaf_hierarchy4_n1048576_d32_p0_g17000011_s2801.log": "d4c4717321d827c722a6f67a4cc674648444546feec8dec925be77467fa00faf",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0011_leaf_hierarchy4_n1048576_d32_p0_g17000011_s2801.rss.jsonl": "0f968895e4e93003a0bd36749dd3cb0a7ce0a05291bf2d4d79d1619d01c0d40c",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0012_leaf_shuffled4_n1048576_d32_p0_g17000011_s2801.csv": "054b6b46ccaceabbadb72f0cc2042daa28e52aa348aaab49960f5fdcc21271a2",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0012_leaf_shuffled4_n1048576_d32_p0_g17000011_s2801.log": "6a16b25e340046db8f7a651ebb664e343e26cdb0048f292b58bc4719b4c19786",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0012_leaf_shuffled4_n1048576_d32_p0_g17000011_s2801.rss.jsonl": "7e980e43d2b7093c49d9890ff134772c4e62f036b48ad38c817fdbfd875f4af5",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0013_leaf_hierarchy4_n4194304_d32_p0_g17000011_s2801.csv": "4810f951c1a30fa82294b29a9158ac56f1457a3b1a37155074b0f5bbcc959df3",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0013_leaf_hierarchy4_n4194304_d32_p0_g17000011_s2801.log": "85a18864910f2298dca65db6d468800d8725618de0e98133c33fbc6563c37cad",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0013_leaf_hierarchy4_n4194304_d32_p0_g17000011_s2801.rss.jsonl": "e8a998dbe2e0abacc435e70274da0ea353b1486e4a12c866d887500473e28525",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0014_leaf_shuffled4_n4194304_d32_p0_g17000011_s2801.csv": "2d5781e59ada374d059437316f9cbca78ad3931429eaab0ab4c9a62f157aa6e2",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0014_leaf_shuffled4_n4194304_d32_p0_g17000011_s2801.log": "e295850b59ff72621b4859ec9a3cdf0a18b8ebd368270b89bd2ee634331432a8",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0014_leaf_shuffled4_n4194304_d32_p0_g17000011_s2801.rss.jsonl": "c762e6adde3686c91202910c04d6048247d2bf9dd7ffae48ab443b73afb3608b",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0015_leaf_shuffled4_n4194304_d32_p0_g17000047_s2801.csv": "3f35a5c525abf56df45cfecef3bc6a5fa19bff03a7402af46494efc85824186d",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0015_leaf_shuffled4_n4194304_d32_p0_g17000047_s2801.log": "43462589d1835e1e10da2f84a633e807c8674e1a34f4000fd2caa1b3ee122ec7",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0015_leaf_shuffled4_n4194304_d32_p0_g17000047_s2801.rss.jsonl": "189a8d099a4b7f3dc888c159b9f3ea2289d2125b7e5fc6f74e44eb4c90ad72ad",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0016_leaf_hierarchy4_n4194304_d32_p0_g17000047_s2801.csv": "b8481c9a1e29775596431ab451d3d52988d6ff5273d33050242f6d7946a6cd19",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0016_leaf_hierarchy4_n4194304_d32_p0_g17000047_s2801.log": "4c5da9dd27b1a65f89be07cda2319ff612a4b06a61ac07353a16971e68de1524",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0016_leaf_hierarchy4_n4194304_d32_p0_g17000047_s2801.rss.jsonl": "7bf8f9ee43d9f0d0143b3b3b0c767ab1d7432b5faee6df3a78c34beec77a3e1f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0017_leaf_shuffled4_n1048576_d32_p0_g17000047_s2801.csv": "29b12bb360155197ebaaf7905a12a4e080721e41377e64af8be57452064d3bc6",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0017_leaf_shuffled4_n1048576_d32_p0_g17000047_s2801.log": "9e25a8774190d90a194dd0523889a4a9e9ba693f783fdaf86821c5386bf6bdcc",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0017_leaf_shuffled4_n1048576_d32_p0_g17000047_s2801.rss.jsonl": "ea359c7fcce08e46cc431b3e34393901922995d967b1e3657a75c4f9afd9e26a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0018_leaf_hierarchy4_n1048576_d32_p0_g17000047_s2801.csv": "2107ccaf99f9731901bfb8348197a7c3c229b063726de7f2efc7efaee221810c",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0018_leaf_hierarchy4_n1048576_d32_p0_g17000047_s2801.log": "62d49ca2042c022a840a70defb036f4bb98e2b6712d3ba9c0378106d16b19c1b",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0018_leaf_hierarchy4_n1048576_d32_p0_g17000047_s2801.rss.jsonl": "54f3c56878afe3caa93088b4e77c6bd4385dac81a8cbc3a288f3b6e2edd5b1e8",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0019_leaf_shuffled4_n262144_d32_p0_g17000047_s2801.csv": "d2818af9c2ac073913189ff02395216ee8fd26af88f9e202de0bca67a92ef8e3",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0019_leaf_shuffled4_n262144_d32_p0_g17000047_s2801.log": "d6c3c4fc9a06c129c55ba90d00df3ae0a734879d62a9db64217d228536d5554f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0019_leaf_shuffled4_n262144_d32_p0_g17000047_s2801.rss.jsonl": "58ab22ab65aaf3a0c7c31ad40d39981a35d98a65ab67995f318e99113c79b306",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0020_leaf_hierarchy4_n262144_d32_p0_g17000047_s2801.csv": "4486295492f32ed4d547bca18c43b9a0c0d6b3b5b7883541da6fd7e43181a2b5",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0020_leaf_hierarchy4_n262144_d32_p0_g17000047_s2801.log": "17afd6ce0e9cf754baad5f01c5503c4f55199304fe18ed8214f2df815299fca6",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0020_leaf_hierarchy4_n262144_d32_p0_g17000047_s2801.rss.jsonl": "2f0ba112450960326aaa214aa03ac49114d059a105f14cf0a788aced8db22400",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0021_leaf_shuffled4_n65536_d32_p0_g17000047_s2801.csv": "471138310904f1d3911752cd6f1ad27471d05e09c94ce1a78bcea8e7f3c6e6bc",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0021_leaf_shuffled4_n65536_d32_p0_g17000047_s2801.log": "350d9a412a5ff83867beee27d908bd518bad34121150394426c4742d5b64e362",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0021_leaf_shuffled4_n65536_d32_p0_g17000047_s2801.rss.jsonl": "12c7d49ecec965ebb80eb3e2e644d0471b51e0aab260654617a46bb4f055f9b6",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0022_leaf_hierarchy4_n65536_d32_p0_g17000047_s2801.csv": "9d343426eba1ac8d891f95d959008bb6c87f026a6d0c5f64952174d0cccb3ce7",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0022_leaf_hierarchy4_n65536_d32_p0_g17000047_s2801.log": "ae093352cde97e3ea2527c64e5d9cced48a9c00a844178efb2900b173badfbe2",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0022_leaf_hierarchy4_n65536_d32_p0_g17000047_s2801.rss.jsonl": "13a59d9dcf1563c139afd205ac9abca75738e0d5d4f5795281ece285e2dae6fb",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0023_leaf_shuffled4_n16384_d32_p0_g17000047_s2801.csv": "a0e8fc0aceb7ec88e821fb5a331b56cc81f88caffdd4cdb033e2ac07ee029551",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0023_leaf_shuffled4_n16384_d32_p0_g17000047_s2801.log": "c7177f666f181e43d5df363d5a73cc7d4bf88bf3f53b072cf8a4f61c4c2ccbe9",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0023_leaf_shuffled4_n16384_d32_p0_g17000047_s2801.rss.jsonl": "1ba3fb4ee54224fdd26a57f02846c15749f058bab8d474436cb16b6651f2c75e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0024_leaf_hierarchy4_n16384_d32_p0_g17000047_s2801.csv": "bdf77616c4eaf7e08a225e05ec1d3b0dc5dea86b05d57badb6d09d32f9cac58f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0024_leaf_hierarchy4_n16384_d32_p0_g17000047_s2801.log": "a600e2365d39fcb2dbf3dc6b7c402606efb4375509d58eec8c314437a9a6ff51",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0024_leaf_hierarchy4_n16384_d32_p0_g17000047_s2801.rss.jsonl": "c0bcd2cd4c4bd855b6e36b965e36455f2ab22757d2515125306c351f4e24f9f8",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0025_leaf_shuffled4_n4096_d32_p0_g17000047_s2801.csv": "7129c88614d839beaa6bf3a5bd74e7e5eda37f215a971520fc63ae5124352319",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0025_leaf_shuffled4_n4096_d32_p0_g17000047_s2801.log": "86948cae2a69d45dad415d30d60dab3c1dc62edf708b4b3b35c4880958a3c1d5",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0025_leaf_shuffled4_n4096_d32_p0_g17000047_s2801.rss.jsonl": "e67ac48281a04d19bdfb37af99692cafb315e1f6ea0d9cda544ec5bfdf1d4782",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0026_leaf_hierarchy4_n4096_d32_p0_g17000047_s2801.csv": "2a5bd77471204c78262093ed2c80e248c29da4ee28568466cd6d7e84346ffe83",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0026_leaf_hierarchy4_n4096_d32_p0_g17000047_s2801.log": "9375fe143536502b7ef1cdf02bc49dd36de3b52da114fe7d81236c3ce4e79125",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0026_leaf_hierarchy4_n4096_d32_p0_g17000047_s2801.rss.jsonl": "900e273fd2eec914f1b986e3d87dedb841726c4dcec263e10d9ea41a600124c2",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0027_leaf_shuffled4_n1024_d32_p0_g17000047_s2801.csv": "68f96c9e545ef59cb5d7824cf52838657f7aa8260da783077f1bb4cccc7d632e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0027_leaf_shuffled4_n1024_d32_p0_g17000047_s2801.log": "f63d2d88b099b2b4aa44c5d6f0be8f044ab322daffcf0ecdd54f0dda5f41c140",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0027_leaf_shuffled4_n1024_d32_p0_g17000047_s2801.rss.jsonl": "c3891cf07f02e9c62a7feaab1879550a5b6a65db733a155fbbc71643d6daf0af",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0028_leaf_hierarchy4_n1024_d32_p0_g17000047_s2801.csv": "b1b7fc733836b41ff00a6d978536ae5e9ad4db23d233205b619807b8575925a5",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0028_leaf_hierarchy4_n1024_d32_p0_g17000047_s2801.log": "c07b9aa1af6bb773c57b56d880a12af74a0d9a1976632f264ce840a842d7339e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension_cases/0028_leaf_hierarchy4_n1024_d32_p0_g17000047_s2801.rss.jsonl": "ee7331ccace0941ccd6caa93ea10c43247e23f4632bcbb76d4245293b87142ef",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_mst_search.py": "843d65154d232bc12a946ad7d8793ab26840f7785507286a6e4d8ed09dfcad80",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/analyze_mst_search.py": "91d3fcad871444e9325c1465782365b5c3ed08fb2344aeeb62fbfc18254f5ba6",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_crossover.py": "1669d3b761e0d4c09c432382c3a2e8738c0031c1c9e6dc69cfcb7734809a052f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/analyze_continuation.py": "7a0afa5fe802516cb5ec27a7d567a0875c66807aa4a04ce0ff752f0bc31b9168",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/crossover_clocks.py": "725d469933eaf5ead32a38bf52b9f32e46a7ee3d4e386777c257c1ab3929fc0b",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_crossover_baselines.py": "2291db9114448516fc5ffb6c4b0fd119d23741bcfa2275ad7f25996c3b73921e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_multigraph_experiment.py": "f039d2523e212d9431ed9e062459a6eb3cf2e3ebf463c49d4d57097bcef4fd8e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/recover_mst_search.py": "73f02f494f29b2f9183c9fc889dcda73444fe2ca4a240469a7d57dfec226058b",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/audit_attachment_recovery_power.py": "e7a72cc054c6cfbcb1c6d5c6686e2332864632a12e10b60a9d3f16b6a5ca0c61",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/audit_mst_search_power.py": "566530914ee74564c5d5ba640b700f5ecfccc5927ac5ed046cb6e3bbdbd225c5",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_retention_control.py": "f913b9b0721102489f17eafe9bc82d4886ef3bbfad9d9f2d4963ee84f5df4f85",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_edge_view_experiment.py": "67d018d74e6658988421b98ae613ce5e649b4f80e5436fc8776540d2298fd227",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_compressed_queries.py": "6e42a9f11e395960bbba9e96a9bdbce626987f80c26764db9f260236e07d72ba",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_eighth_sampling.py": "6a782a9802c44558d840860c31aff2586f980c662118a223f3da8a95b213fab1",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_eighth_extension.py": "8b1332ce7bff2f0cca09188c98c74d1adb0e486e107acb0a1cd99691afdde3d4",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/plot_eighth_extension.py": "ab5a62038a018f0a91bbdba1d8c4c92b16176cde47b8b22bb5828a2e62a8fede",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/plot_retention_control.py": "a19d4edf72aea875885aa3494ca268038d2654531b9e3c670b21355e2b7e635a"
+  },
+  "matplotlib_version": "3.9.4",
+  "checked_outputs": 1176,
+  "timed_outputs": 1008,
+  "warmup_outputs": 168,
+  "rows_removed": 0,
+  "rows_adjusted": 0,
+  "graph_realizations": 2,
+  "sampling_seeds": [
+    2801
+  ],
+  "trials_per_case": 12,
+  "flagged_calls_retained": 0,
+  "coverage": [
+    {
+      "figure": "ratios_wall",
+      "family": "leaf_hierarchy4",
+      "case_ids": [
+        "leaf_hierarchy4_n1024_d32_p0",
+        "leaf_hierarchy4_n4096_d32_p0",
+        "leaf_hierarchy4_n16384_d32_p0",
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n262144_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0",
+        "leaf_hierarchy4_n4194304_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 35,
+      "graph_median_points": 70,
+      "trial_range_endpoints": 70,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.17620737076734466,
+        3.696029573395583
+      ]
+    },
+    {
+      "figure": "ratios_wall",
+      "family": "leaf_shuffled4",
+      "case_ids": [
+        "leaf_shuffled4_n1024_d32_p0",
+        "leaf_shuffled4_n4096_d32_p0",
+        "leaf_shuffled4_n16384_d32_p0",
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n262144_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0",
+        "leaf_shuffled4_n4194304_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 35,
+      "graph_median_points": 70,
+      "trial_range_endpoints": 70,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.19418811016967522,
+        3.458352859088924
+      ]
+    },
+    {
+      "figure": "ratios_cpu",
+      "family": "leaf_hierarchy4",
+      "case_ids": [
+        "leaf_hierarchy4_n1024_d32_p0",
+        "leaf_hierarchy4_n4096_d32_p0",
+        "leaf_hierarchy4_n16384_d32_p0",
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n262144_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0",
+        "leaf_hierarchy4_n4194304_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 35,
+      "graph_median_points": 70,
+      "trial_range_endpoints": 70,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.17620737076734466,
+        3.696029573395583
+      ]
+    },
+    {
+      "figure": "ratios_cpu",
+      "family": "leaf_shuffled4",
+      "case_ids": [
+        "leaf_shuffled4_n1024_d32_p0",
+        "leaf_shuffled4_n4096_d32_p0",
+        "leaf_shuffled4_n16384_d32_p0",
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n262144_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0",
+        "leaf_shuffled4_n4194304_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 35,
+      "graph_median_points": 70,
+      "trial_range_endpoints": 70,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.19418811016967522,
+        3.458352859088924
+      ]
+    },
+    {
+      "figure": "times_wall",
+      "family": "leaf_hierarchy4",
+      "case_ids": [
+        "leaf_hierarchy4_n1024_d32_p0",
+        "leaf_hierarchy4_n4096_d32_p0",
+        "leaf_hierarchy4_n16384_d32_p0",
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n262144_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0",
+        "leaf_hierarchy4_n4194304_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 42,
+      "graph_median_points": 84,
+      "trial_range_endpoints": 84,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.00021897838030820522,
+        194.8725540766091
+      ]
+    },
+    {
+      "figure": "times_wall",
+      "family": "leaf_shuffled4",
+      "case_ids": [
+        "leaf_shuffled4_n1024_d32_p0",
+        "leaf_shuffled4_n4096_d32_p0",
+        "leaf_shuffled4_n16384_d32_p0",
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n262144_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0",
+        "leaf_shuffled4_n4194304_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 42,
+      "graph_median_points": 84,
+      "trial_range_endpoints": 84,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.0001525305451627331,
+        138.26057828960208
+      ]
+    },
+    {
+      "figure": "times_cpu",
+      "family": "leaf_hierarchy4",
+      "case_ids": [
+        "leaf_hierarchy4_n1024_d32_p0",
+        "leaf_hierarchy4_n4096_d32_p0",
+        "leaf_hierarchy4_n16384_d32_p0",
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n262144_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0",
+        "leaf_hierarchy4_n4194304_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 42,
+      "graph_median_points": 84,
+      "trial_range_endpoints": 84,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.00021897838030820522,
+        194.8725540766091
+      ]
+    },
+    {
+      "figure": "times_cpu",
+      "family": "leaf_shuffled4",
+      "case_ids": [
+        "leaf_shuffled4_n1024_d32_p0",
+        "leaf_shuffled4_n4096_d32_p0",
+        "leaf_shuffled4_n16384_d32_p0",
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n262144_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0",
+        "leaf_shuffled4_n4194304_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 42,
+      "graph_median_points": 84,
+      "trial_range_endpoints": 84,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.0001525305451627331,
+        138.26057828960208
+      ]
+    }
+  ],
+  "legends": {
+    "ratios_wall": [
+      "Compacting Bor\u016fvka",
+      "Retained-edge Bor\u016fvka",
+      "Kruskal",
+      "Prim",
+      "Original Bor\u016fvka",
+      "Two graph medians",
+      "Full trial range"
+    ],
+    "ratios_cpu": [
+      "Compacting Bor\u016fvka",
+      "Retained-edge Bor\u016fvka",
+      "Kruskal",
+      "Prim",
+      "Original Bor\u016fvka",
+      "Two graph medians",
+      "Full trial range"
+    ],
+    "times_wall": [
+      "KKT (private p=1/8)",
+      "Compacting Bor\u016fvka",
+      "Retained-edge Bor\u016fvka",
+      "Kruskal",
+      "Prim",
+      "Original Bor\u016fvka",
+      "Two graph medians",
+      "Full trial range"
+    ],
+    "times_cpu": [
+      "KKT (private p=1/8)",
+      "Compacting Bor\u016fvka",
+      "Retained-edge Bor\u016fvka",
+      "Kruskal",
+      "Prim",
+      "Original Bor\u016fvka",
+      "Two graph medians",
+      "Full trial range"
+    ]
+  },
+  "control_normalization": false,
+  "confidence_intervals": false,
+  "interpolated_crossover": false,
+  "matched_clock_axes": true,
+  "output_sha256": {
+    "ratios_wall.png": "9b22151b403f7e43d0868d6b44f33a6925d2a57059ecb1dc18f89be07a56159c",
+    "ratios_wall.svg": "4ea9699e0c2957179ebe058b460693b1d042cf26b72201d0947406a31d70a070",
+    "ratios_wall.pdf": "7f987788a5493abbdbe78c6d3ca1b213020bfb4070742cd0bfff91e6f68b1593",
+    "ratios_cpu.png": "488a7c9d3c79fa2ee06811093f6c5c951c6b29b7b4c6fed1424b8d06015fafd2",
+    "ratios_cpu.svg": "c907af3518c7a4f1011678ec45d96951300f444c9b5f316a5ad4d784e9d55f4d",
+    "ratios_cpu.pdf": "e83419c06c5dff8fc9ad6805d3358c8e913440e8a116b60e02dda82f9a1fc57b",
+    "times_wall.png": "b6ae81cc7953cd817478c71fd4a08a25a72944493c10851705b3dfba56741500",
+    "times_wall.svg": "071052be0f1b844c515ac886d2fcad1d9eef0a14641d92b9d60fae202c1b359e",
+    "times_wall.pdf": "4bf0727426984428ddd4a80f17a6627030d65cc39c638d4a3b116b91c84a5deb",
+    "times_cpu.png": "20ee7bce4e2aca1673edf17d418c31a2445c1f363dcb80c9b60b4667f4df906e",
+    "times_cpu.svg": "1d4e4739695f0b225aac18f4d8e5be97f0c9e8eb1d127266663309925ddf526c",
+    "times_cpu.pdf": "533ca856c38cbbfb56045afab515e128c816722695f2040c0e7251ea564bdcdc",
+    "plotted_values.json": "3c0d426351b232e8969d7baabe629b67abd67c51202f4c61c4346d1ce85d7de0"
+  },
+  "visual_review": "pending: inspect all four PNGs before publication"
+}

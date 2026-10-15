@@ -1,0 +1,32 @@
+{
+  "schema": "eighth_extension_controller_v1",
+  "validation": "running",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "-u",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_eighth_extension.py",
+    "capture",
+    "--freeze",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/freeze.json",
+    "--output",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension.csv",
+    "--released"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "started_utc": "2026-10-15T16:29:49.197294+00:00",
+  "started_monotonic_ns": 129803125,
+  "source_sha256": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/validation/launch-preparation/run_capture_attempt.py": "b324da2ad530e404b74e550579c9bf4e34630cc2281b784a5b94119a6b188116",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_eighth_extension.py": "8b1332ce7bff2f0cca09188c98c74d1adb0e486e107acb0a1cd99691afdde3d4",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/freeze.json": "aa2f9ae7385105eb7185b864a1f46387f8a02ebe8b967f041d3d0cef5ffa7bc5",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/machine-before.json": "fc031eddeb67a4ed2e830984234a8badd4101bdb4d0936cd8d9d2c7cfb231c13"
+  },
+  "deadline_seconds": 51000,
+  "deadline_scope": "overall collector only; no per-child wall deadline is asserted",
+  "native_solver_execution_authorized": true,
+  "native_solver_execution": true,
+  "performance_execution": true,
+  "sleep_inhibition_verified": false,
+  "all_owned_groups_verified_empty": false
+}

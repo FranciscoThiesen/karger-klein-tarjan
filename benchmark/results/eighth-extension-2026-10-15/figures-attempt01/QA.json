@@ -1,0 +1,37 @@
+{
+  "schema": "eighth_extension_visual_qa_v1",
+  "validation": "pass",
+  "reviewer": "/root/multigraph_design",
+  "review_type": "four PNGs viewed, original resolution plus separate CPU full-view confirmation",
+  "figures": {
+    "ratios_wall.png": "9b22151b403f7e43d0868d6b44f33a6925d2a57059ecb1dc18f89be07a56159c",
+    "ratios_cpu.png": "488a7c9d3c79fa2ee06811093f6c5c951c6b29b7b4c6fed1424b8d06015fafd2",
+    "times_wall.png": "b6ae81cc7953cd817478c71fd4a08a25a72944493c10851705b3dfba56741500",
+    "times_cpu.png": "20ee7bce4e2aca1673edf17d418c31a2445c1f363dcb80c9b60b4667f4df906e"
+  },
+  "figure_provenance_sha256": "23fd32de964b7386c888db4484481b1faa1b2a36367e3d9adac8e7350b48dfa3",
+  "input_and_output_hashes_rechecked": true,
+  "panels_reviewed": 8,
+  "checks": [
+    "all seven sizes",
+    "all five paired controls and all six absolute series",
+    "neutral KKT label with private p=1/8",
+    "wall/CPU matched axes",
+    "legends and descriptive ranges",
+    "parity and strong threshold captions",
+    "no clipped labels or endpoints",
+    "ordered4M full variability retained"
+  ],
+  "publication_page_scale_review": "pending",
+  "root_second_review": {
+    "validation": "pass",
+    "reviewer": "/root",
+    "figures": [
+      "ratios_wall.png",
+      "ratios_cpu.png",
+      "times_wall.png",
+      "times_cpu.png"
+    ],
+    "method": "All four PNGs visually inspected; CPU figures rechecked in full image views after transcript display ambiguity. No clipped axes, labels, legends or trial ranges. Publication scale remains pending."
+  }
+}

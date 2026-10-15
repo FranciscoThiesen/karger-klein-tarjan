@@ -1,0 +1,80 @@
+{
+  "schema": "eighth_extension_controller_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "-u",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_eighth_extension.py",
+    "capture",
+    "--freeze",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/freeze.json",
+    "--output",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension.csv",
+    "--released"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "started_utc": "2026-10-15T16:29:49.197294+00:00",
+  "started_monotonic_ns": 129803125,
+  "source_sha256": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/validation/launch-preparation/run_capture_attempt.py": "b324da2ad530e404b74e550579c9bf4e34630cc2281b784a5b94119a6b188116",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_eighth_extension.py": "8b1332ce7bff2f0cca09188c98c74d1adb0e486e107acb0a1cd99691afdde3d4",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/freeze.json": "aa2f9ae7385105eb7185b864a1f46387f8a02ebe8b967f041d3d0cef5ffa7bc5",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/machine-before.json": "fc031eddeb67a4ed2e830984234a8badd4101bdb4d0936cd8d9d2c7cfb231c13"
+  },
+  "deadline_seconds": 51000,
+  "deadline_scope": "overall collector only; no per-child wall deadline is asserted",
+  "native_solver_execution_authorized": true,
+  "native_solver_execution": true,
+  "performance_execution": true,
+  "sleep_inhibition_verified": false,
+  "all_owned_groups_verified_empty": true,
+  "outer_process_group": 49719,
+  "wrapper_exit_observed_monotonic_ns": 5201049382791,
+  "outer_cleanup": {
+    "started_monotonic_ns": 5201049499166,
+    "process_group": 49719,
+    "signals": [],
+    "native_exit_known": true,
+    "group_exit_known": true,
+    "returncode": 0,
+    "group_verification": {
+      "utc": "2026-10-15T17:56:30.062094+00:00",
+      "monotonic_ns": 5201049511458,
+      "process_group": 49719,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    "finished_monotonic_ns": 5201049876291,
+    "native_process_may_still_be_running": false
+  },
+  "exit_status": 0,
+  "checked_children": 28,
+  "checked_solver_outputs": 1176,
+  "checked_timed_outputs": 1008,
+  "checked_warmup_outputs": 168,
+  "capture": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension.json",
+  "capture_sha256": "fede327424f7657ca13003fadd0f71e3d5e3711f757e9f1c94f85d256aa3183b",
+  "finished_utc": "2026-10-15T17:56:30.259407+00:00",
+  "finished_monotonic_ns": 5201246841500,
+  "elapsed_seconds": 5201.117038375,
+  "outer_monitor_events": {
+    "49719": [
+      {
+        "process_group": 49719,
+        "requested_monotonic_ns": 5201049511458,
+        "previous_request_gap_ns": null,
+        "provider_started_monotonic_ns": 5201049671875,
+        "provider_finished_monotonic_ns": 5201049855333,
+        "outcome": "pass",
+        "returned_monotonic_ns": 5201049871375,
+        "sampler_duration_ns": 359917
+      }
+    ]
+  },
+  "stdout": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/controller-attempt01.stdout",
+  "stdout_sha256": "1acfa0377a4a296152947fc048cc67b15025c3f509886258fe45aa9f4440b54c",
+  "stderr": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/controller-attempt01.stderr",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

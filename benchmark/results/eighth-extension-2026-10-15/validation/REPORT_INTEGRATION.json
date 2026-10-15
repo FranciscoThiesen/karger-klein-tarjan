@@ -1,0 +1,45 @@
+{
+  "schema": "eighth_extension_report_integration_v1",
+  "validation": "pass",
+  "scope": "canonical-table extraction, exact trial-level all-controls check and prose integration; not another native or independent numerical audit",
+  "source_sha256": {
+    "/tmp/write_extension_report.py": "237f2cd0968a0824819ff8f0ead051c119fd744664d9d1852fae03f86759291e",
+    "/tmp/integrate_extension_report.py": "977a273a01ba7e0c69e5973913e3cdbd1b84b7320be412bc592e7d629efbe558"
+  },
+  "inputs": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/validation/independent-numerical-audit-attempt01/audit.json": "5f4cc96f91096d0fb2e63ed9b7beb521378f89a609ac29f986b863d793069c58",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/analysis/comparisons.csv": "8c3b4f724bb1148785ae179cc19fd1037e924849a18799a94bacb0cc6a4c3930",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/analysis/summary.csv": "4487e383a174e92e18b1e3a162e8e8f625b0a3ad69adbf328a6d41aeb0e4b700",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/analysis/paired_ratios.csv": "0597c2869a28410f16110167ee588d9db80e2783cac1a883691fedd7ce239eb6",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/analysis/crossover_summary.csv": "2d715a4d7966baefd79c5bd93e9965fa99e5066f2fbfbb041a0eeeba95ac3d45",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/analysis/resources.csv": "80a97c0b49ef40787dfd5608685d7cfc88e2807fb42ea7d06eea6a3dc4a77f01",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/extension.json": "fede327424f7657ca13003fadd0f71e3d5e3711f757e9f1c94f85d256aa3183b"
+  },
+  "preserved_readiness": {
+    "path": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/PRECAPTURE_STATUS.md",
+    "sha256": "0cc1d67d326546f0eb42b36343344e8f6f135421564051197fe0f683659d13a2"
+  },
+  "preserved_draft": {
+    "path": "/tmp/kkt-current-report-before-extension-2026-10-15.md",
+    "sha256": "db194eb6b59c232210fe6171d2625ba49ef4cb763a16f1e55eec79d9ccd8a465"
+  },
+  "current_readme": {
+    "path": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/README.md",
+    "sha256": "15759c3097f66b7175bec303ae10fa54b21979e156236c8a85a0530317477578"
+  },
+  "current_draft": {
+    "path": "/tmp/kkt-current-report-draft.md",
+    "sha256": "d3d55ba9fc2b533329aae5dc71f970b6458269da0751874d445a2dd4dd920148"
+  },
+  "diff": {
+    "path": "/tmp/kkt-current-report-extension-update.diff",
+    "sha256": "3675c3ea0ee07ef13a53fbefa4e8483030fda1dc9395c448b9e40f1c0fa06834"
+  },
+  "no_native_execution": true,
+  "no_frozen_input_changes": true,
+  "independent_editorial_review": "pending",
+  "post_integration_scope_fix_snapshot": {
+    "path": "/tmp/kkt-current-report-extension-before-open-question-fix.md",
+    "sha256": "38c72bc9925371dfecd0951530224fa15b5134acb47721a468943003891f1f81"
+  }
+}

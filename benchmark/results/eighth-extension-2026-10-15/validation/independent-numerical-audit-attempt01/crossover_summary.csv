@@ -1,0 +1,11 @@
+family,density,competitor,strong_crossover,qualifying_brackets,primary_lower_n,primary_upper_n,smallest_state,largest_state,strong_lead_at_every_measured_size,loss_at_every_measured_size
+leaf_hierarchy4,32,compacting_boruvka,True,5,1024,16384,loss,strong_lead,False,False
+leaf_hierarchy4,32,multigraph_boruvka,False,0,,,narrow_lead,strong_lead,False,False
+leaf_hierarchy4,32,kruskal,False,0,,,strong_lead,loss,False,False
+leaf_hierarchy4,32,prim,False,0,,,loss,loss,False,True
+leaf_hierarchy4,32,boruvka,True,8,65536,1048576,loss,strong_lead,False,False
+leaf_shuffled4,32,compacting_boruvka,True,8,4096,65536,loss,strong_lead,False,False
+leaf_shuffled4,32,multigraph_boruvka,False,0,,,loss,loss,False,True
+leaf_shuffled4,32,kruskal,False,0,,,strong_lead,loss,False,False
+leaf_shuffled4,32,prim,False,0,,,loss,narrow_lead,False,False
+leaf_shuffled4,32,boruvka,False,0,,,loss,narrow_lead,False,False

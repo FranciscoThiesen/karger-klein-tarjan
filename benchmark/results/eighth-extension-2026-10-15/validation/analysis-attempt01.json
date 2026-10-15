@@ -1,0 +1,47 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "benchmark/run_eighth_extension.py",
+    "analyze",
+    "--capture",
+    "benchmark/results/eighth-extension-2026-10-15/extension.json",
+    "--output-dir",
+    "benchmark/results/eighth-extension-2026-10-15/analysis",
+    "--power-log",
+    "benchmark/results/eighth-extension-2026-10-15/extension-power-audit/pmset.log"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "started_utc": "2026-10-15T17:57:19.154766+00:00",
+  "started_monotonic_ns": 21619125,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_eighth_extension.py": "8b1332ce7bff2f0cca09188c98c74d1adb0e486e107acb0a1cd99691afdde3d4"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 38172,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 38172,
+    "members": [],
+    "monotonic_ns": 536925958,
+    "utc": "2026-10-15T17:57:19.670054+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_eighth_extension.py": "8b1332ce7bff2f0cca09188c98c74d1adb0e486e107acb0a1cd99691afdde3d4"
+  },
+  "finished_utc": "2026-10-15T17:57:19.670297+00:00",
+  "finished_monotonic_ns": 537175708,
+  "elapsed_seconds": 0.515556583,
+  "stdout": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/validation/analysis-attempt01.stdout",
+  "stdout_sha256": "84a2c4b46357c1c29001ab5b4d0df03a4bdf29c93b8ed983fc5fc922cf3cd5c8",
+  "stderr": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/validation/analysis-attempt01.stderr",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}
