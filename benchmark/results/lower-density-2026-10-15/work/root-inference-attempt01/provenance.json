@@ -1,0 +1,24 @@
+{
+  "validation": "pass",
+  "rows": 60,
+  "input_sha256": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/infer_root_partition.py": "228dab798a878bf0f6a8dc6f56052af3433447c80d6c9bb28a48a3b54073f4dc",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/partition-analysis-attempt01/provenance.json": "8cac2bc252c96b99923b96bcf4bdbb44f88f953f9f9f5d00bcbba96e6ba216e1",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/analyze_verifier_partition.py": "5e8f9c263e2e904c2a0261d74d5402511df3011a93a3512f74f628de984d8237",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/independent-counter-audit-attempt01/audit.json": "8f5553d1b85e612f927df83d3cd607aaa526fd506f813f74139e4849b00d9757",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/analysis-attempt01/work.csv": "d344a2c999b8966830bfafaf9bcc57611801eed5da01c85ab5e87f062d61a78a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/verifier/verifier_v2.cpp": "5bfcae5761ad40ff0c587985e8bcf600f54e9223815a22e58428c8ef0948a6eb",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/kkt/kkt.cpp": "f5681b0384fb26ee6af5a23e4f7109b990393d831fc6ceb5385ce43643f5fd9a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/common/work_stats.hpp": "85f6aca4f517cccef93a01c22005808834e66dbbc6b9dba448bb6b7b4574c1d0",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/partition-analysis-attempt01/partition.csv": "35240f0c95d5987d8da124e5441d5933ff1481da33a08b733a2bc6446189d863"
+  },
+  "output_sha256": {
+    "root_inference.csv": "8cf0c5dad998bf8fc66da2afb481a6acdc94082dc1c37b19cc73ed27759993e1"
+  },
+  "classifications": {
+    "connected": 59,
+    "nonempty_disconnected": 1,
+    "undetermined": 0
+  },
+  "scope": "Root-path inference only when forced by cumulative integer bounds; no component-count, per-call trace or CPU-time claim."
+}

@@ -1,0 +1,14 @@
+{
+  "validation": "review_checker_failed",
+  "native_execution": false,
+  "actual_tool_exit_status": 1,
+  "actual_tool_completion_chunk": "c18156",
+  "error": "README selector matched the later three-column absolute Initialized slots row as a five-column normalized endpoint row.",
+  "classification_check_completed_before_failure": {
+    "raw_rows": 60,
+    "connected": 59,
+    "nonempty_disconnected": 1,
+    "undetermined": 0
+  },
+  "review_outcome": "No final PASS receipt was written. Restrict the auxiliary normalized endpoint selector to five columns, then rerun the focused review."
+}

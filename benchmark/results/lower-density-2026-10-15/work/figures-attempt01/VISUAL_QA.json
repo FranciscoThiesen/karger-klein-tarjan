@@ -1,0 +1,122 @@
+{
+  "schema": "lower_density_work_figure_visual_qa_v1",
+  "validation": "pass",
+  "reviewer": "multigraph_candidate",
+  "reviewed_utc": "2026-10-15T21:13:06.282943+00:00",
+  "method": "All six PNGs opened with view_image detail=original; labels, legends, ticks, ranges, series and captions inspected.",
+  "figures": [
+    {
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/figures-attempt01/counts_leaf_distance4_d16.png",
+      "sha256": "e9e06febfa316107bfedfdfebb3eb8b3099ea69eb62183ba2814d345620e2610",
+      "width_pixels": 1952,
+      "height_pixels": 2560,
+      "view_detail": "original",
+      "validation": "pass",
+      "checks": [
+        "complete labels and size ticks",
+        "no clipping or overlapping text",
+        "legend and full graph ranges visible",
+        "zero controls retained where applicable",
+        "no runtime or CPU attribution"
+      ]
+    },
+    {
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/figures-attempt01/counts_leaf_shuffled4_d16.png",
+      "sha256": "158257be74d56f577252e91be948c1ca39e3f18bbc4f810db6ea233674adb3b6",
+      "width_pixels": 1952,
+      "height_pixels": 2560,
+      "view_detail": "original",
+      "validation": "pass",
+      "checks": [
+        "complete labels and size ticks",
+        "no clipping or overlapping text",
+        "legend and full graph ranges visible",
+        "zero controls retained where applicable",
+        "no runtime or CPU attribution"
+      ]
+    },
+    {
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/figures-attempt01/counts_leaf_distance4_d8.png",
+      "sha256": "6facdc8da1ae5fd350e47d4e297b58449ce82ed2b4efc391536d4b5c959dcbe5",
+      "width_pixels": 1952,
+      "height_pixels": 2560,
+      "view_detail": "original",
+      "validation": "pass",
+      "checks": [
+        "complete labels and size ticks",
+        "no clipping or overlapping text",
+        "legend and full graph ranges visible",
+        "zero controls retained where applicable",
+        "no runtime or CPU attribution"
+      ]
+    },
+    {
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/figures-attempt01/counts_leaf_shuffled4_d8.png",
+      "sha256": "fa44e3f4959c51a63c7624b2e8586fe87850a18730d51385a3e4a34702b5aada",
+      "width_pixels": 1952,
+      "height_pixels": 2560,
+      "view_detail": "original",
+      "validation": "pass",
+      "checks": [
+        "complete labels and size ticks",
+        "no clipping or overlapping text",
+        "legend and full graph ranges visible",
+        "zero controls retained where applicable",
+        "no runtime or CPU attribution"
+      ]
+    },
+    {
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/figures-attempt01/comparator_rounds.png",
+      "sha256": "db487d7e807eccf2d0aae584e56ebae5f710142eee1dc1fb0b979a877dec94b0",
+      "width_pixels": 1952,
+      "height_pixels": 1520,
+      "view_detail": "original",
+      "validation": "pass",
+      "checks": [
+        "complete labels and size ticks",
+        "no clipping or overlapping text",
+        "legend and full graph ranges visible",
+        "zero controls retained where applicable",
+        "no runtime or CPU attribution"
+      ]
+    },
+    {
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/figures-attempt01/query_compression.png",
+      "sha256": "be0debe92c4aa86a898186af640c68c911304d94595586abf5cd73f55e59ab6d",
+      "width_pixels": 1952,
+      "height_pixels": 1520,
+      "view_detail": "original",
+      "validation": "pass",
+      "checks": [
+        "complete labels and size ticks",
+        "no clipping or overlapping text",
+        "legend and full graph ranges visible",
+        "zero controls retained where applicable",
+        "no runtime or CPU attribution"
+      ]
+    }
+  ],
+  "render_guard": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/work-plots-attempt01.json",
+  "render_guard_sha256": "4bca75a452bc9068b274a1ab22500b51ec22bb0d01f5e25893dc3c0e8b70a86c",
+  "render_actual_tool_session": 76757,
+  "render_actual_tool_exit_status": 0,
+  "render_actual_tool_completion_chunk": "b616ed",
+  "owned_groups_verified_empty": true,
+  "native_solver_execution": false,
+  "performance_claim": false,
+  "render_provenance": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/figures-attempt01/provenance.json",
+  "render_provenance_sha256": "12a789c1e94160a84d8203519520bbc79992677b16b2e4974aa27e85c8a116d8",
+  "readme_sha256": "19a20d4f1f877a34aea9c37b649895fdd7b9a408a40d2a498550fa86a764c969",
+  "output_hash_inventory_rechecked": true,
+  "canonical_plotted_counts": {
+    "counter_observations": 1440,
+    "round_observations": 120,
+    "query_observations": 60
+  },
+  "notes": [
+    "Overlapping comparator round curves and zero control series are expected; all underlying observations remain.",
+    "Counter figures retain the larger graph-specific verifier spread at the d=8 distance endpoint.",
+    "Original provenance is unchanged; this receipt completes its pending visual review.",
+    "Assembled-page QA is outside this supplementary PNG review."
+  ]
+}

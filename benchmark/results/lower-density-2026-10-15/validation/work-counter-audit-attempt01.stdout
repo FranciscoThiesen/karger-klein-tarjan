@@ -1,0 +1,18 @@
+{
+  "schema": "independent_lower_density_work_counter_audit_v1",
+  "validation": "pass",
+  "counter_cells": 11700,
+  "solver_rows": 180,
+  "counter_fields": 65,
+  "unmeasured_hash_counter_cells": 120,
+  "replay_chains": 120,
+  "replay_round_rows": 1236,
+  "cumulative_query_rows": 60,
+  "topology_twins": 30,
+  "exact_normalizations": 11700,
+  "engine_words_exact": true,
+  "aggregation_reused": false,
+  "native_execution": false,
+  "strict_collector_imported_for_provenance": true,
+  "scope": "Independent raw numeric/schema/schedule/twin/table reconstruction. Certificates, lifecycle and native build proof are supplied by the unchanged strict collector; no runtime inference."
+}

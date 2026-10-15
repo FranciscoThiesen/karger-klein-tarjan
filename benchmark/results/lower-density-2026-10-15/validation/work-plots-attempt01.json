@@ -1,0 +1,47 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "benchmark/results/lower-density-2026-10-15/work/plot_work.py",
+    "--capture",
+    "benchmark/results/lower-density-2026-10-15/work/capture-attempt01.json",
+    "--analysis-dir",
+    "benchmark/results/lower-density-2026-10-15/work/analysis-attempt01",
+    "--output-dir",
+    "benchmark/results/lower-density-2026-10-15/work/figures-attempt01",
+    "--released"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "started_utc": "2026-10-15T21:09:35.047796+00:00",
+  "started_monotonic_ns": 23618333,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/plot_work.py": "5f9ef7d15367d7edef28752a009cc4bf5061edba1c23f6a9609576fad1132e6e"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 4900,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 4900,
+    "members": [],
+    "monotonic_ns": 8047548625,
+    "utc": "2026-10-15T21:09:43.071717+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/plot_work.py": "5f9ef7d15367d7edef28752a009cc4bf5061edba1c23f6a9609576fad1132e6e"
+  },
+  "finished_utc": "2026-10-15T21:09:43.071920+00:00",
+  "finished_monotonic_ns": 8047760083,
+  "elapsed_seconds": 8.02414175,
+  "stdout": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/work-plots-attempt01.stdout",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/work-plots-attempt01.stderr",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

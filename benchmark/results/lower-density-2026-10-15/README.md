@@ -168,11 +168,16 @@ at n/8 vertices and (d−7/8)n edges: cheap stars merge first, then the forced
 lowest-tier sibling pairs. Parallel crossing records remain. This makes edge
 volume, sampling/filtering and the continuation important even after a large
 vertex reduction. Deduplication has different construction costs and subsequent
-edge volumes. The separate [untimed companion](work/PROTOCOL.md) must finish
-its full capture and independent counter audit before this report attributes
-measured work differences. No such counter result is claimed here. Even then,
-logical visits cannot measure CPU instructions, cache misses, bandwidth or a
-fraction of elapsed time explained.
+edge volumes. The separate [completed untimed companion](work/README.md) now
+certifies all 60 matching inputs and 180 solver outputs, with all 11,700
+counter cells and 120 full comparator replays independently audited. It
+measures the growing ordered-family contraction volume and the shorter
+shuffled continuations. At distance d8/4M, exact counter bounds also distinguish
+a connected root verifier on graph 23000003 from a disconnected root on graph
+23000029; cumulative partition visits differ by 67,347,598. Logical visits
+still cannot measure CPU instructions, cache misses, bandwidth or the fraction
+of elapsed time explained. This mechanism evidence changes none of the timing
+ratios or crossover classifications above.
 
 Each ladder is a valid fixed-parameter family: m=dn and n+m=(d+1)n. Relative
 core occupancy nevertheless falls with size. At the smallest valid power of

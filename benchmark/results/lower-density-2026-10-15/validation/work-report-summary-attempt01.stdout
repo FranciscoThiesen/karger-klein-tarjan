@@ -1,0 +1,20 @@
+{
+  "validation": "pass",
+  "scope": "Descriptive logical counts only; no runtime or CPU attribution.",
+  "case_counter_ranges": 5850,
+  "paired_counter_statuses": 7800,
+  "continuation_cases": 30,
+  "state_counts": {
+    "lower": 475,
+    "higher": 6897,
+    "equal": 308,
+    "unmeasured": 120
+  },
+  "ratio_status_counts": {
+    "defined": 1320,
+    "both_zero": 308,
+    "zero_denominator": 6052,
+    "unmeasured": 120
+  },
+  "query_zero_denominators": 0
+}

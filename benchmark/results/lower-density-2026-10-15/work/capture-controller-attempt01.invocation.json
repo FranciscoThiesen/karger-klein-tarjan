@@ -1,0 +1,33 @@
+{
+  "schema": "lower_density_work_controller_v1",
+  "validation": "running",
+  "command": [
+    "/usr/bin/arch",
+    "-arm64",
+    "/usr/bin/python3",
+    "-B",
+    "-u",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/collect.py",
+    "capture",
+    "--freeze",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/freeze.json",
+    "--output",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/capture-attempt01.json",
+    "--released"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "started_utc": "2026-10-15T20:58:09.529139+00:00",
+  "started_monotonic_ns": 762369166,
+  "source_sha256": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/run_capture_attempt.py": "7e16cc1b9edcfdb905c95bcda2dc9fca8cd833cea76f0d9955683c8da82b612e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/collect.py": "783fb454e41492e54ebbf2a98884d3641669f84ac4aac2ae348a194471a5aa30",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/freeze.json": "ae32f7ffc4cd17c04885d04e6480528882e0b274e61025097206c087a7429ece"
+  },
+  "deadline_seconds": 108600,
+  "per_child_native_exit_deadline_seconds": 1800,
+  "native_solver_execution_authorized": true,
+  "native_solver_execution": true,
+  "performance_execution": false,
+  "all_owned_groups_verified_empty": false,
+  "detached_native_process_may_still_be_running": false
+}

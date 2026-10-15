@@ -1,0 +1,10 @@
+{
+  "validation": "pass",
+  "rows": 60,
+  "classifications": {
+    "connected": 59,
+    "nonempty_disconnected": 1,
+    "undetermined": 0
+  },
+  "scope": "Root-path inference only when forced by cumulative integer bounds; no component-count, per-call trace or CPU-time claim."
+}

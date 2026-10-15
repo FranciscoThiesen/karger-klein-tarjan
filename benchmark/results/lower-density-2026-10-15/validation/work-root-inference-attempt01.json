@@ -1,0 +1,42 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "benchmark/results/lower-density-2026-10-15/work/infer_root_partition.py",
+    "--output-dir",
+    "benchmark/results/lower-density-2026-10-15/work/root-inference-attempt01"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "started_utc": "2026-10-15T21:17:31.879361+00:00",
+  "started_monotonic_ns": 29632416,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/infer_root_partition.py": "228dab798a878bf0f6a8dc6f56052af3433447c80d6c9bb28a48a3b54073f4dc"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 5366,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 5366,
+    "members": [],
+    "monotonic_ns": 96674583,
+    "utc": "2026-10-15T21:17:31.946388+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/infer_root_partition.py": "228dab798a878bf0f6a8dc6f56052af3433447c80d6c9bb28a48a3b54073f4dc"
+  },
+  "finished_utc": "2026-10-15T21:17:31.946554+00:00",
+  "finished_monotonic_ns": 96845125,
+  "elapsed_seconds": 0.067212709,
+  "stdout": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/work-root-inference-attempt01.stdout",
+  "stdout_sha256": "6eb5a514fff9bfb33084b3c55eb8d323e917bf5fd857daca3f1c1fee599d49d1",
+  "stderr": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/work-root-inference-attempt01.stderr",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

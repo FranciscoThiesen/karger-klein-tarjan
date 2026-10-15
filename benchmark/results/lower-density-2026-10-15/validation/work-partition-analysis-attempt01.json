@@ -1,0 +1,42 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "benchmark/results/lower-density-2026-10-15/work/analyze_verifier_partition.py",
+    "--output-dir",
+    "benchmark/results/lower-density-2026-10-15/work/partition-analysis-attempt01"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "started_utc": "2026-10-15T21:13:03.265059+00:00",
+  "started_monotonic_ns": 24458708,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/analyze_verifier_partition.py": "5e8f9c263e2e904c2a0261d74d5402511df3011a93a3512f74f628de984d8237"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 5164,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 5164,
+    "members": [],
+    "monotonic_ns": 88039333,
+    "utc": "2026-10-15T21:13:03.328625+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/work/analyze_verifier_partition.py": "5e8f9c263e2e904c2a0261d74d5402511df3011a93a3512f74f628de984d8237"
+  },
+  "finished_utc": "2026-10-15T21:13:03.328805+00:00",
+  "finished_monotonic_ns": 88225458,
+  "elapsed_seconds": 0.06376675,
+  "stdout": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/work-partition-analysis-attempt01.stdout",
+  "stdout_sha256": "75bce792cd3e7917c1b23fad356618814f8c92df229cac6c9c7ba1b1dc316d59",
+  "stderr": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/validation/work-partition-analysis-attempt01.stderr",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}
