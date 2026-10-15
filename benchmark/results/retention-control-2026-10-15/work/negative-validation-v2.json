@@ -1,0 +1,18 @@
+{
+  "validation": "pass",
+  "negative_raw_output_checks": [
+    "wrong_fingerprint",
+    "zero_means_unmeasured",
+    "trace_changed",
+    "counter_changed",
+    "missing_algorithm",
+    "missing_counter",
+    "negative_counter",
+    "wrong_seed"
+  ],
+  "gate_children": 4,
+  "collector_sha256": "a9d0649348b59bea3502d297760bdec290315b3f1a7207f3d8981f216a289b72",
+  "retained_failed_attempt": "capture.json",
+  "failure_explanation": "Manifest-only intrusion_per_mille was erroneously required in native JSON; exclude it. No native or timed sources changed. Earlier raw child passes corrected output/resource/certificate checks, but is not pooled into the fresh complete capture.",
+  "failed_attempt_group_exit_verified": true
+}

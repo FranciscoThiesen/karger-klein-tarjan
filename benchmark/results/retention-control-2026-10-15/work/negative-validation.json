@@ -1,0 +1,15 @@
+{
+  "validation": "pass",
+  "negative_raw_output_checks": [
+    "wrong_fingerprint",
+    "zero_means_unmeasured",
+    "trace_changed",
+    "counter_changed",
+    "missing_algorithm",
+    "missing_counter",
+    "negative_counter",
+    "wrong_seed"
+  ],
+  "gate_children": 4,
+  "collector_sha256": "2586afe3b50ebf92b33b2a310ef3a9d61be49865a5efef0ad159ace792a3e748"
+}

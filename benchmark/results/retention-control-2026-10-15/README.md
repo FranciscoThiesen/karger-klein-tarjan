@@ -141,10 +141,16 @@ real-world networks have their merge hierarchy. The earlier
 [actual graph views](../search-2026-10-13/attachment-views-d16/README.md) illustrate
 the construction; they do not depict the million-vertex timing inputs in full.
 
-A separate, untimed counter investigation is being collected for all three
-continuations. Its counts will be reported independently of these elapsed-time
-measurements. They must not be treated as calibrated instruction counts or as
-proof that any single memory operation caused the observed difference.
+The completed [untimed counter investigation](work/README.md) certifies all
+60 solver outputs on the same twenty graphs. On the largest hierarchy inputs,
+KKT's cumulative contraction input is 3.733 times the original edge count,
+versus 17.907 for retained-edge Boruvka across twenty rounds (two-seed medians).
+KKT also incurs 14.115 path-query visits and 9.469 initialized slots per original
+edge. These heterogeneous events have different costs: even their unweighted
+sum can favor KKT while runtime favors Boruvka. Counts establish different work
+composition, not a calibrated CPU-cost decomposition or measured cache effect.
+The supplementary report retains all cases, per-round traces, and a failed
+collector attempt followed by a corrected, fresh complete capture.
 
 ## What this says about complexity and the next repair
 

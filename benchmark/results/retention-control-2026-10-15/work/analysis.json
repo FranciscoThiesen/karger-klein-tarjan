@@ -1,0 +1,37 @@
+{
+  "schema": "retention_control_work_analysis_v1",
+  "validation": "pass",
+  "children": 20,
+  "algorithm_outputs": 60,
+  "replayed_rounds": 520,
+  "all_input_fingerprints_match_timed_control": true,
+  "all_final_ids_match_independent_certificate": true,
+  "all_replay_aggregates_equal_exact_helper_counters": true,
+  "all_owned_groups_verified_empty": true,
+  "unmeasured_fields": {
+    "compacting_boruvka": [
+      "hash_insert_items"
+    ],
+    "multigraph_boruvka": [
+      "hash_insert_items"
+    ]
+  },
+  "performance_claims_from_this_driver": false,
+  "analysis_python": "/usr/local/opt/python@3.10/bin/python3.10",
+  "matplotlib_version": "3.9.2",
+  "input_sha256": {
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/work/capture-v2.json": "43658a84716cb810d4df6ddc2affe478c478f52d342a06666d21a8e424c4ed75",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/work/collect.py": "a9d0649348b59bea3502d297760bdec290315b3f1a7207f3d8981f216a289b72",
+    "/Users/random_person/Desktop/kkt-retention-control/benchmark/results/retention-control-2026-10-15/work/analyze.py": "7f26faa43b28bd4067f49b12d1f8351cfef6acbf7b53738fa83d7cc6468b1293"
+  },
+  "output_sha256": {
+    "raw_work.csv": "9f033c83923f3d56c399bc44c016180efd2c8b645f6c4170b55a90811a3a02d2",
+    "rounds.csv": "4f3b45f3e625e19f20a8b92231ea7344054745c44ff67ff2d199d09983355749",
+    "case_counter_summary.csv": "0c1e9b4f0c875e28e43cfbffd589bef55354948ccad82394b09a03385d5176f7",
+    "mechanism_summary.csv": "f62288fcb8cebe5c6b2982733880d6259668d00ba8ce1926e7576f415966027b",
+    "resources.csv": "5edb7a41f63e75c412930094423d5eb10b14423dab1ce6107aea94ed4de5ba7b",
+    "WORK_TABLE.md": "41c0ec1f5e26ff535e98b1f90bffe1ca8fa0bec829e40be48960ef58c2a354f5",
+    "contraction_work.svg": "5659eef6c97fdc9bf84eef6492144120a0270b593478b7278681c577f746384e",
+    "contraction_work.png": "fd06eabdfae531635622069d8dd1b3154fe7cc32967bd2a82cba4253689cfc9f"
+  }
+}

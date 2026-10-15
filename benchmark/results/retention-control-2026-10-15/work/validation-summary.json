@@ -1,0 +1,25 @@
+{
+  "validation": "pass",
+  "created_utc": "2026-10-15T06:34:22.870698+00:00",
+  "children": 20,
+  "certified_solver_outputs": 60,
+  "replayed_rounds": 520,
+  "source_preservation": "all frozen source and helper hashes unchanged",
+  "native_process_may_still_be_running": false,
+  "all_owned_groups_verified_empty": true,
+  "rss_observations": 249,
+  "rss_unavailable": 0,
+  "sampled_peak_rss_kib": 7291528,
+  "visual_review": {
+    "file": "contraction_work.png",
+    "status": "pass",
+    "checks": "Both panels, labels, numerical ranges, legend and footer inspected; no clipping or obscured data."
+  },
+  "artifacts": {
+    "README.md": "b604a9918c6f2e7d5f4efdf6c296149faaf4cab546c912002ba5425e658fbdc0",
+    "analysis.json": "4693d62441af86884c8f3986b7e82fa6c338f275dca7fd8f67119bbe931ba4d7",
+    "negative-validation-v2.json": "bf2f0ac47bde875ac24427422c08bedfeaf5234812d8afaba40e37d9f950ff14",
+    "contraction_work.png": "fd06eabdfae531635622069d8dd1b3154fe7cc32967bd2a82cba4253689cfc9f",
+    "contraction_work.svg": "5659eef6c97fdc9bf84eef6492144120a0270b593478b7278681c577f746384e"
+  }
+}
