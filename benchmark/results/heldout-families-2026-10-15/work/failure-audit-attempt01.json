@@ -1,0 +1,33 @@
+{
+  "schema": "heldout_failed_work_audit_v1",
+  "validation": "pass",
+  "capture_validation": "failed",
+  "completed_children": 2,
+  "attempted_children": 3,
+  "reason": "Diagnostic frontend rejects grid2d_metric before generation or solver execution.",
+  "all_launched_owned_groups_verified_empty": true,
+  "owned_groups": [
+    40384,
+    40385,
+    40386,
+    40383
+  ],
+  "current_members": [],
+  "current_observation_utc": "2026-10-15T13:56:21.290560+00:00",
+  "current_observation_monotonic_ns": 457042000,
+  "process_query_command": [
+    "/bin/ps",
+    "-axo",
+    "pid=,pgid="
+  ],
+  "process_query_exit_status": 0,
+  "source_sha256": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/audit_failed_attempt01.py": "f76da1540c431ff4bf3ac86075927233d863ea252f7ac40ea197f3d661149ee4",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/collect.py": "8f6742f286ffcc227908ace7710a5cebfb14a00e1d09a3cacaa3e026e002640a",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/capture-attempt01.json": "f2cf2ce5a90d059680205b74e0d63bc38e706f8ea9c7b47dff68c9933fbcbc1c",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/capture-controller-attempt01.json": "6f2468528478e787664b0eee9db612ba18f59dc3f4c28cc5c90773f3cd98cf54"
+  },
+  "native_solver_execution": false,
+  "failed_capture_relabelled": false,
+  "retry_launched": false
+}

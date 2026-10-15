@@ -1,0 +1,46 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "benchmark/results/heldout-families-2026-10-15/work-spatial-v2/test_collect.py"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-compressed-queries",
+  "started_utc": "2026-10-15T14:14:46.282997+00:00",
+  "started_monotonic_ns": 33670791,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/collect.py": "f720a86e39934a7a97a0ea1e2498c8362791949924a63a402122a382d1eba012",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/test_collect.py": "8f6f145412ad3c9eaaddb1c7e2a5cd4f7b1c32150ca4aa94aac4def1dbdd7b37",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/PROTOCOL.md": "5e7773d136f642845ebda7e61e665d8ff33eef87100bcc7c371a6aa2793616ff",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/build_driver.py": "a4b3399bc43a4fc06ec4f2b03a21e0fe286b55684c31bf8824558a140820bd6d"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 42142,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 42142,
+    "members": [],
+    "monotonic_ns": 7361601166,
+    "utc": "2026-10-15T14:14:53.610928+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/collect.py": "f720a86e39934a7a97a0ea1e2498c8362791949924a63a402122a382d1eba012",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/test_collect.py": "8f6f145412ad3c9eaaddb1c7e2a5cd4f7b1c32150ca4aa94aac4def1dbdd7b37",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/PROTOCOL.md": "5e7773d136f642845ebda7e61e665d8ff33eef87100bcc7c371a6aa2793616ff",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/build_driver.py": "a4b3399bc43a4fc06ec4f2b03a21e0fe286b55684c31bf8824558a140820bd6d"
+  },
+  "finished_utc": "2026-10-15T14:14:53.611258+00:00",
+  "finished_monotonic_ns": 7361938666,
+  "elapsed_seconds": 7.328267875,
+  "stdout": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/independent-mocks-attempt01.stdout",
+  "stdout_sha256": "5168ec884fe10d09d1ed3a5326efbe47938a24d6ea4beb26dca78b8c7115cc77",
+  "stderr": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/independent-mocks-attempt01.stderr",
+  "stderr_sha256": "28cb8cbfcb9cf72e70e51500bfe138e3a8be80f27c8acc857d8951b30cba046b"
+}

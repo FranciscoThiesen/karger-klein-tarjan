@@ -1,0 +1,66 @@
+{
+  "schema": "heldout_spatial_build_controller_v1",
+  "validation": "failed",
+  "command": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "-B",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/build_driver.py",
+    "--released-small-gates"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-compressed-queries",
+  "source_sha256": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/run_build_attempt.py": "1307b1df0243988e4d05895346bcce9a7d6dfe08c79707ed0763dcec1fe043ff",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/build_driver.py": "fc0d7e81d51c22b0fe37638d8a5811682aa210b3964a4b273bf01ccd372e1306",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/driver.cpp": "73cb49b5053f9e8ed59d9dba43e1f383b28d7cfc87fa66f60da79019eb7d31e4",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/freeze.json": "db107c2370735e7bdcec777320ea069374c8247d8d02ba67684528541561bcaf"
+  },
+  "started_utc": "2026-10-15T14:07:04.766161+00:00",
+  "started_monotonic_ns": 73735166,
+  "deadline_seconds": 180,
+  "native_execution_authorized": true,
+  "performance_execution": false,
+  "all_owned_groups_verified_empty": false,
+  "outer_process_group": 41788,
+  "wrapper_exit_observed_monotonic_ns": 1508071333,
+  "error": "RuntimeError('frontend build/gate failed')",
+  "outer_cleanup": {
+    "started_monotonic_ns": 1508208333,
+    "process_group": 41788,
+    "signals": [],
+    "native_exit_known": true,
+    "group_exit_known": true,
+    "returncode": 1,
+    "group_verification": {
+      "utc": "2026-10-15T14:07:06.200640+00:00",
+      "monotonic_ns": 1508214416,
+      "process_group": 41788,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    "finished_monotonic_ns": 1508525833,
+    "native_process_may_still_be_running": false
+  },
+  "exit_status": 1,
+  "finished_utc": "2026-10-15T14:07:06.200950+00:00",
+  "finished_monotonic_ns": 1508536541,
+  "elapsed_seconds": 1.434801375,
+  "outer_monitor_events": {
+    "41788": [
+      {
+        "process_group": 41788,
+        "requested_monotonic_ns": 1508214416,
+        "previous_request_gap_ns": null,
+        "provider_started_monotonic_ns": 1508364916,
+        "provider_finished_monotonic_ns": 1508500916,
+        "outcome": "pass",
+        "returned_monotonic_ns": 1508519375,
+        "sampler_duration_ns": 304959
+      }
+    ]
+  },
+  "stdout": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/build-controller-attempt01.stdout",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/build-controller-attempt01.stderr",
+  "stderr_sha256": "cedcf56683996dccb2dff74699413edee11da6bbb9b40cf03c80b17f44cbd5a7"
+}

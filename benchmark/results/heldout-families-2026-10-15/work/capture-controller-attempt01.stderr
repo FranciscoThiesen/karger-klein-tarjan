@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/collect.py", line 319, in <module>
+    elif args.action == 'capture': capture(args)
+  File "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/collect.py", line 233, in capture
+    if failure: raise failure
+  File "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/collect.py", line 217, in capture
+    require(process.returncode == 0,'diagnostic child failed')
+  File "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/analyze_continuation.py", line 36, in require
+    raise ValueError(message)
+ValueError: diagnostic child failed
