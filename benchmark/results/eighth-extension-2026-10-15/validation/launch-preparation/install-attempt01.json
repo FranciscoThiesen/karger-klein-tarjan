@@ -1,0 +1,36 @@
+{
+  "schema": "extension_launch_and_work_plot_install_v1",
+  "validation": "pass",
+  "recorded_utc": "2026-10-15T16:12:29.915319+00:00",
+  "sources": [
+    {
+      "source": "/tmp/kkt-eighth-extension-launch-prep/run_capture_attempt.py",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/validation/launch-preparation/run_capture_attempt.py",
+      "sha256": "b324da2ad530e404b74e550579c9bf4e34630cc2281b784a5b94119a6b188116"
+    },
+    {
+      "source": "/tmp/kkt-eighth-extension-launch-prep/machine_power.py",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/validation/launch-preparation/machine_power.py",
+      "sha256": "be4b52a9401a3d051e78ea9490585f16c21a34594d8bdeeab0a819bdb9ad4ab8"
+    },
+    {
+      "source": "/tmp/kkt-eighth-extension-launch-prep/HANDOFF.md",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/validation/launch-preparation/HANDOFF.md",
+      "sha256": "a7c122252c32d366ef04ffadfcc6bb8ee252ac8cf9b1aa55c5c972180d7a74b7"
+    },
+    {
+      "source": "/tmp/kkt-eighth-extension-launch-prep/INDEPENDENT_SOURCE_REVIEW.md",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/validation/launch-preparation/INDEPENDENT_SOURCE_REVIEW.md",
+      "sha256": "a7be19dd140b71afe0de3f6d80cfdfb0dec746467538a92fd9b35c5603b877a7"
+    },
+    {
+      "source": "/tmp/plot_eighth_work_prepared.py",
+      "destination": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/work/plot_work.py",
+      "sha256": "e43fecf0f6747fbee2f63a7c91a8aa7683f44db8eea3e830a1b6e5b5e5cf2888"
+    }
+  ],
+  "native_execution": false,
+  "prepared_sources_imported": false,
+  "source_only_review": "PASS before installation; no work counter outputs read",
+  "runtime_validation": "pending"
+}
