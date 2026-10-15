@@ -1,0 +1,418 @@
+{
+  "validation": "pass",
+  "checked_outputs": 2520,
+  "table_counts": {
+    "paired_ratios": 3600,
+    "comparisons": 300,
+    "graph_comparisons": 600,
+    "summary": 360,
+    "graph_summary": 720,
+    "crossover_points": 150,
+    "crossover_brackets": 490,
+    "crossover_summary": 20
+  },
+  "within_variant_wins": [
+    {
+      "density": 16,
+      "competitor": "compacting_boruvka",
+      "metric": "wall",
+      "individual_pairs": 168,
+      "individual_wins": 107
+    },
+    {
+      "density": 16,
+      "competitor": "compacting_boruvka",
+      "metric": "cpu",
+      "individual_pairs": 168,
+      "individual_wins": 107
+    },
+    {
+      "density": 16,
+      "competitor": "multigraph_boruvka",
+      "metric": "wall",
+      "individual_pairs": 168,
+      "individual_wins": 72
+    },
+    {
+      "density": 16,
+      "competitor": "multigraph_boruvka",
+      "metric": "cpu",
+      "individual_pairs": 168,
+      "individual_wins": 72
+    },
+    {
+      "density": 16,
+      "competitor": "kruskal",
+      "metric": "wall",
+      "individual_pairs": 168,
+      "individual_wins": 115
+    },
+    {
+      "density": 16,
+      "competitor": "kruskal",
+      "metric": "cpu",
+      "individual_pairs": 168,
+      "individual_wins": 115
+    },
+    {
+      "density": 16,
+      "competitor": "prim",
+      "metric": "wall",
+      "individual_pairs": 168,
+      "individual_wins": 91
+    },
+    {
+      "density": 16,
+      "competitor": "prim",
+      "metric": "cpu",
+      "individual_pairs": 168,
+      "individual_wins": 91
+    },
+    {
+      "density": 16,
+      "competitor": "boruvka",
+      "metric": "wall",
+      "individual_pairs": 168,
+      "individual_wins": 47
+    },
+    {
+      "density": 16,
+      "competitor": "boruvka",
+      "metric": "cpu",
+      "individual_pairs": 168,
+      "individual_wins": 47
+    },
+    {
+      "density": 8,
+      "competitor": "compacting_boruvka",
+      "metric": "wall",
+      "individual_pairs": 192,
+      "individual_wins": 106
+    },
+    {
+      "density": 8,
+      "competitor": "compacting_boruvka",
+      "metric": "cpu",
+      "individual_pairs": 192,
+      "individual_wins": 106
+    },
+    {
+      "density": 8,
+      "competitor": "multigraph_boruvka",
+      "metric": "wall",
+      "individual_pairs": 192,
+      "individual_wins": 55
+    },
+    {
+      "density": 8,
+      "competitor": "multigraph_boruvka",
+      "metric": "cpu",
+      "individual_pairs": 192,
+      "individual_wins": 55
+    },
+    {
+      "density": 8,
+      "competitor": "kruskal",
+      "metric": "wall",
+      "individual_pairs": 192,
+      "individual_wins": 46
+    },
+    {
+      "density": 8,
+      "competitor": "kruskal",
+      "metric": "cpu",
+      "individual_pairs": 192,
+      "individual_wins": 46
+    },
+    {
+      "density": 8,
+      "competitor": "prim",
+      "metric": "wall",
+      "individual_pairs": 192,
+      "individual_wins": 164
+    },
+    {
+      "density": 8,
+      "competitor": "prim",
+      "metric": "cpu",
+      "individual_pairs": 192,
+      "individual_wins": 164
+    },
+    {
+      "density": 8,
+      "competitor": "boruvka",
+      "metric": "wall",
+      "individual_pairs": 192,
+      "individual_wins": 89
+    },
+    {
+      "density": 8,
+      "competitor": "boruvka",
+      "metric": "cpu",
+      "individual_pairs": 192,
+      "individual_wins": 89
+    }
+  ],
+  "crossover_summary": [
+    {
+      "family": "leaf_distance4",
+      "density": 16,
+      "competitor": "compacting_boruvka",
+      "strong_crossover": true,
+      "qualifying_brackets": 8,
+      "primary_lower_n": 2048,
+      "primary_upper_n": 32768,
+      "smallest_state": "loss",
+      "largest_state": "strong_lead",
+      "strong_lead_at_every_measured_size": false,
+      "loss_at_every_measured_size": false
+    },
+    {
+      "family": "leaf_distance4",
+      "density": 16,
+      "competitor": "multigraph_boruvka",
+      "strong_crossover": true,
+      "qualifying_brackets": 5,
+      "primary_lower_n": 512,
+      "primary_upper_n": 8192,
+      "smallest_state": "loss",
+      "largest_state": "strong_lead",
+      "strong_lead_at_every_measured_size": false,
+      "loss_at_every_measured_size": false
+    },
+    {
+      "family": "leaf_distance4",
+      "density": 16,
+      "competitor": "kruskal",
+      "strong_crossover": false,
+      "qualifying_brackets": 0,
+      "primary_lower_n": null,
+      "primary_upper_n": null,
+      "smallest_state": "loss",
+      "largest_state": "loss",
+      "strong_lead_at_every_measured_size": false,
+      "loss_at_every_measured_size": false
+    },
+    {
+      "family": "leaf_distance4",
+      "density": 16,
+      "competitor": "prim",
+      "strong_crossover": true,
+      "qualifying_brackets": 8,
+      "primary_lower_n": 2048,
+      "primary_upper_n": 32768,
+      "smallest_state": "loss",
+      "largest_state": "strong_lead",
+      "strong_lead_at_every_measured_size": false,
+      "loss_at_every_measured_size": false
+    },
+    {
+      "family": "leaf_distance4",
+      "density": 16,
+      "competitor": "boruvka",
+      "strong_crossover": true,
+      "qualifying_brackets": 8,
+      "primary_lower_n": 32768,
+      "primary_upper_n": 524288,
+      "smallest_state": "loss",
+      "largest_state": "strong_lead",
+      "strong_lead_at_every_measured_size": false,
+      "loss_at_every_measured_size": false
+    },
+    {
+      "family": "leaf_shuffled4",
+      "density": 16,
+      "competitor": "compacting_boruvka",
+      "strong_crossover": true,
+      "qualifying_brackets": 9,
+      "primary_lower_n": 8192,
+      "primary_upper_n": 131072,
+      "smallest_state": "loss",
+      "largest_state": "strong_lead",
+      "strong_lead_at_every_measured_size": false,
+      "loss_at_every_measured_size": false
+    },
+    {
+      "family": "leaf_shuffled4",
+      "density": 16,
+      "competitor": "multigraph_boruvka",
+      "strong_crossover": false,
+      "qualifying_brackets": 0,
+      "primary_lower_n": null,
+      "primary_upper_n": null,
+      "smallest_state": "loss",
+      "largest_state": "loss",
+      "strong_lead_at_every_measured_size": false,
+      "loss_at_every_measured_size": true
+    },
+    {
+      "family": "leaf_shuffled4",
+      "density": 16,
+      "competitor": "kruskal",
+      "strong_crossover": false,
+      "qualifying_brackets": 0,
+      "primary_lower_n": null,
+      "primary_upper_n": null,
+      "smallest_state": "narrow_lead",
+      "largest_state": "loss",
+      "strong_lead_at_every_measured_size": false,
+      "loss_at_every_measured_size": false
+    },
+    {
+      "family": "leaf_shuffled4",
+      "density": 16,
+      "competitor": "prim",
+      "strong_crossover": true,
+      "qualifying_brackets": 4,
+      "primary_lower_n": 131072,
+      "primary_upper_n": 2097152,
+      "smallest_state": "loss",
+      "largest_state": "strong_lead",
+      "strong_lead_at_every_measured_size": false,
+      "loss_at_every_measured_size": false
+    },
+    {
+      "family": "leaf_shuffled4",
+      "density": 16,
+      "competitor": "boruvka",
+      "strong_crossover": true,
+      "qualifying_brackets": 6,
+      "primary_lower_n": 524288,
+      "primary_upper_n": 2097152,
+      "smallest_state": "loss",
+      "largest_state": "strong_lead",
+      "strong_lead_at_every_measured_size": false,
+      "loss_at_every_measured_size": false
+    },
+    {
+      "family": "leaf_distance4",
+      "density": 8,
+      "competitor": "compacting_boruvka",
+      "strong_crossover": true,
+      "qualifying_brackets": 9,
+      "primary_lower_n": 4096,
+      "primary_upper_n": 262144,
+      "smallest_state": "loss",
+      "largest_state": "strong_lead",
+      "strong_lead_at_every_measured_size": false,
+      "loss_at_every_measured_size": false
+    },
+    {
+      "family": "leaf_distance4",
+      "density": 8,
+      "competitor": "multigraph_boruvka",
+      "strong_crossover": false,
+      "qualifying_brackets": 0,
+      "primary_lower_n": null,
+      "primary_upper_n": null,
+      "smallest_state": "loss",
+      "largest_state": "mixed_or_tied",
+      "strong_lead_at_every_measured_size": false,
+      "loss_at_every_measured_size": false
+    },
+    {
+      "family": "leaf_distance4",
+      "density": 8,
+      "competitor": "kruskal",
+      "strong_crossover": false,
+      "qualifying_brackets": 0,
+      "primary_lower_n": null,
+      "primary_upper_n": null,
+      "smallest_state": "loss",
+      "largest_state": "loss",
+      "strong_lead_at_every_measured_size": false,
+      "loss_at_every_measured_size": true
+    },
+    {
+      "family": "leaf_distance4",
+      "density": 8,
+      "competitor": "prim",
+      "strong_crossover": true,
+      "qualifying_brackets": 6,
+      "primary_lower_n": 256,
+      "primary_upper_n": 4096,
+      "smallest_state": "loss",
+      "largest_state": "strong_lead",
+      "strong_lead_at_every_measured_size": false,
+      "loss_at_every_measured_size": false
+    },
+    {
+      "family": "leaf_distance4",
+      "density": 8,
+      "competitor": "boruvka",
+      "strong_crossover": true,
+      "qualifying_brackets": 12,
+      "primary_lower_n": 4096,
+      "primary_upper_n": 65536,
+      "smallest_state": "loss",
+      "largest_state": "strong_lead",
+      "strong_lead_at_every_measured_size": false,
+      "loss_at_every_measured_size": false
+    },
+    {
+      "family": "leaf_shuffled4",
+      "density": 8,
+      "competitor": "compacting_boruvka",
+      "strong_crossover": true,
+      "qualifying_brackets": 12,
+      "primary_lower_n": 16384,
+      "primary_upper_n": 262144,
+      "smallest_state": "loss",
+      "largest_state": "strong_lead",
+      "strong_lead_at_every_measured_size": false,
+      "loss_at_every_measured_size": false
+    },
+    {
+      "family": "leaf_shuffled4",
+      "density": 8,
+      "competitor": "multigraph_boruvka",
+      "strong_crossover": false,
+      "qualifying_brackets": 0,
+      "primary_lower_n": null,
+      "primary_upper_n": null,
+      "smallest_state": "loss",
+      "largest_state": "loss",
+      "strong_lead_at_every_measured_size": false,
+      "loss_at_every_measured_size": true
+    },
+    {
+      "family": "leaf_shuffled4",
+      "density": 8,
+      "competitor": "kruskal",
+      "strong_crossover": false,
+      "qualifying_brackets": 0,
+      "primary_lower_n": null,
+      "primary_upper_n": null,
+      "smallest_state": "loss",
+      "largest_state": "loss",
+      "strong_lead_at_every_measured_size": false,
+      "loss_at_every_measured_size": false
+    },
+    {
+      "family": "leaf_shuffled4",
+      "density": 8,
+      "competitor": "prim",
+      "strong_crossover": true,
+      "qualifying_brackets": 5,
+      "primary_lower_n": 256,
+      "primary_upper_n": 16384,
+      "smallest_state": "loss",
+      "largest_state": "strong_lead",
+      "strong_lead_at_every_measured_size": false,
+      "loss_at_every_measured_size": false
+    },
+    {
+      "family": "leaf_shuffled4",
+      "density": 8,
+      "competitor": "boruvka",
+      "strong_crossover": true,
+      "qualifying_brackets": 10,
+      "primary_lower_n": 65536,
+      "primary_upper_n": 1048576,
+      "smallest_state": "loss",
+      "largest_state": "strong_lead",
+      "strong_lead_at_every_measured_size": false,
+      "loss_at_every_measured_size": false
+    }
+  ]
+}

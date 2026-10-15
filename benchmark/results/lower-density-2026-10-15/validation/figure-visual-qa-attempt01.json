@@ -1,0 +1,94 @@
+{
+  "schema": "lower_density_visual_qa_v1",
+  "created_utc": "2026-10-15T20:52:48.432940+00:00",
+  "validation": "paper_layout_failed",
+  "standalone_figures_passed": 4,
+  "paper_figures_layout_failed": 8,
+  "native_execution": false,
+  "checked": [
+    {
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/figures-attempt01/ratios_cpu.png",
+      "sha256": "0e4b2426d23e093ef7133e66655e3d9d077fb7668212bbf1bd1d9af4ccc09809",
+      "inspection": "original-resolution tools.view_image",
+      "validation": "pass",
+      "finding": "labels, all series, endpoints, ranges, legends and captions visible; no clipping or overlap observed"
+    },
+    {
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/figures-attempt01/ratios_wall.png",
+      "sha256": "ca7a750997a4c3b51fc65b43d2016f3b0357bf7e2454bac700bf84275c4c350c",
+      "inspection": "original-resolution tools.view_image",
+      "validation": "pass",
+      "finding": "labels, all series, endpoints, ranges, legends and captions visible; no clipping or overlap observed"
+    },
+    {
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/figures-attempt01/times_cpu.png",
+      "sha256": "f9768b687cc2ee0780cbe33b425eef4639004f561debfaa878240ea1e81ebec7",
+      "inspection": "original-resolution tools.view_image",
+      "validation": "pass",
+      "finding": "labels, all series, endpoints, ranges, legends and captions visible; no clipping or overlap observed"
+    },
+    {
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/figures-attempt01/times_wall.png",
+      "sha256": "738eb570263b52e6165a33ce0f238f4d59546ec3e93f6fcc2012a6a187a97ec9",
+      "inspection": "original-resolution tools.view_image",
+      "validation": "pass",
+      "finding": "labels, all series, endpoints, ranges, legends and captions visible; no clipping or overlap observed"
+    },
+    {
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/paper-figures-attempt01/paper_d16_ratios_cpu.png",
+      "sha256": "06e9613a1d26e13bd83628f3f5632c5b300897c9df07f886ab326f388b75dc4b",
+      "inspection": "original-resolution tools.view_image",
+      "validation": "layout_failed_data_pass",
+      "finding": "bottom x-axis label intersects first legend row; source data/bounds/coverage valid"
+    },
+    {
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/paper-figures-attempt01/paper_d16_ratios_wall.png",
+      "sha256": "a9f5723522617c07211f16228aead6241801b51c5279c6b7ce21ad54554fa3cc",
+      "inspection": "original-resolution tools.view_image",
+      "validation": "layout_failed_data_pass",
+      "finding": "bottom x-axis label intersects first legend row; source data/bounds/coverage valid"
+    },
+    {
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/paper-figures-attempt01/paper_d16_times_cpu.png",
+      "sha256": "f6cfe97a9e74f60875fd84625400afb542b752e43f7aedb5471fef0a3e915535",
+      "inspection": "original-resolution tools.view_image",
+      "validation": "layout_failed_data_pass",
+      "finding": "bottom x-axis label intersects first legend row; source data/bounds/coverage valid"
+    },
+    {
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/paper-figures-attempt01/paper_d16_times_wall.png",
+      "sha256": "925312404d6bbd4841aed9bf5fb6212af02f8fd93761c7f0c5870f76614570c1",
+      "inspection": "original-resolution tools.view_image",
+      "validation": "layout_failed_data_pass",
+      "finding": "bottom x-axis label intersects first legend row; source data/bounds/coverage valid"
+    },
+    {
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/paper-figures-attempt01/paper_d8_ratios_cpu.png",
+      "sha256": "e7d57643e5ef1b7c2d03a6e0215f710001db979ccb10740d126708d70760d25d",
+      "inspection": "original-resolution tools.view_image",
+      "validation": "layout_failed_data_pass",
+      "finding": "bottom x-axis label intersects first legend row; source data/bounds/coverage valid"
+    },
+    {
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/paper-figures-attempt01/paper_d8_ratios_wall.png",
+      "sha256": "06e9a40db2cf60d8db2a11e44c505d26d9158890a964dbaa40d57413d7e5124c",
+      "inspection": "original-resolution tools.view_image",
+      "validation": "layout_failed_data_pass",
+      "finding": "bottom x-axis label intersects first legend row; source data/bounds/coverage valid"
+    },
+    {
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/paper-figures-attempt01/paper_d8_times_cpu.png",
+      "sha256": "ab4b838dbc124229b11f638ea8716bd8954f60d33c87ff01f9cffe63d344c8b8",
+      "inspection": "original-resolution tools.view_image",
+      "validation": "layout_failed_data_pass",
+      "finding": "bottom x-axis label intersects first legend row; source data/bounds/coverage valid"
+    },
+    {
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/paper-figures-attempt01/paper_d8_times_wall.png",
+      "sha256": "7fc0fa8fd2d0b80eeafd6df292d4520b67929060379d86824a86f98bf82511d1",
+      "inspection": "original-resolution tools.view_image",
+      "validation": "layout_failed_data_pass",
+      "finding": "bottom x-axis label intersects first legend row; source data/bounds/coverage valid"
+    }
+  ]
+}

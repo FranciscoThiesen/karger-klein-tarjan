@@ -1,0 +1,11 @@
+--- plot_lower_density_paper.py
++++ plot_lower_density_paper_v2.py
+@@ -205,7 +205,7 @@
+                 figure, axes = plt.subplots(2, 1, figsize=(WIDTH, HEIGHT))
+                 # Endpoint labels point inward; 25-degree labels retain all seven/eight
+                 # ticks without squeezing the 8.5-point minimum or changing data.
+-                figure.subplots_adjust(left=.17, right=.96, bottom=.24, top=.90, hspace=.73)
++                figure.subplots_adjust(left=.17, right=.96, bottom=.28, top=.90, hspace=.73)
+                 for axis, (family, _, title, selected) in zip(axes, density_groups):
+                     sizes = [case['n'] for case in selected]
+                     plotted = []

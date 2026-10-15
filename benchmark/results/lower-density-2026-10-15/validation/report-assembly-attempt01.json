@@ -1,0 +1,30 @@
+{
+  "schema": "lower_density_report_assembly_v1",
+  "validation": "pass",
+  "created_utc": "2026-10-15T20:56:52.387380+00:00",
+  "report": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/README.md",
+  "report_sha256": "42cc7b5c5d584825deffa25b8611d7211c5c6f32ee3a01b51c3a3402d15e7868",
+  "before_sha256": "9e9e02669ec1a23d61c2870993107db5ec74dac6264f6aed4e20153c5a0bf645",
+  "source_sha256": {
+    "benchmark/results/lower-density-2026-10-15/analysis-attempt01/crossover_summary.csv": "b65ca45325664e9eb253dd290dd72b99b4eb266916d54537999049a98aa0256b",
+    "benchmark/results/lower-density-2026-10-15/analysis-attempt01/crossover_points.csv": "39865aefb4f143a3dd926de04c58071d53007257e6c9ffe49021a1782a884fb9",
+    "benchmark/results/lower-density-2026-10-15/analysis-attempt01/comparisons.csv": "0f573c4d53b0ee91b9c34278f1429ac6dcb590ac6ec179b681d253534fb3ad5c",
+    "benchmark/results/lower-density-2026-10-15/analysis-attempt01/summary.csv": "e1bb96a680472be03a429aaa9b46e495eeab3f4e64efc05448635a1c8e50a34c",
+    "benchmark/results/lower-density-2026-10-15/analysis-attempt01/resources.csv": "3261667cdcb4dd96995290a40355ee5e13465b89b76c62af3bf5f562921c335a",
+    "benchmark/results/lower-density-2026-10-15/freeze.json": "0c49ed1d046d402ebccb6978ef5f9cdea02865758a1578a43003b189025aa520",
+    "benchmark/results/lower-density-2026-10-15/lower-density.json": "265d504ecaa76b1deb72a00cad47fb9dcc41c843cb7cd7cab2cb67173f63af3c",
+    "benchmark/results/lower-density-2026-10-15/independent-audit-attempt01/audit.json": "3e12167d525c47bf18dea67cc10247d454942d091de1bcc4e353524f4ca5a8d4",
+    "benchmark/results/lower-density-2026-10-15/PRECAPTURE_STATUS.md": "9dcdd4c6c6bb2dcb75af1c848540b9fdc9bad644e79c73cffaa22e8ffb872241",
+    "benchmark/results/lower-density-2026-10-15/validation/figure-visual-qa-attempt02.json": "e83115c3b2aae0e328a1d05c6c1597fe05bbb25b5b6ab6ced4983ac22ad54dce"
+  },
+  "comparison_outcomes": 20,
+  "strong_comparison_outcomes": 13,
+  "all_endpoint_pairs": 490,
+  "qualifying_endpoint_pairs": 102,
+  "all_control_pooled_lead_cases": 0,
+  "accepted_standalone_figures": 4,
+  "accepted_paper_figures": 8,
+  "native_execution": false,
+  "counter_findings_included": false,
+  "precapture_status_unchanged": true
+}

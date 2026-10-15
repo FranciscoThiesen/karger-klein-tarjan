@@ -1,0 +1,222 @@
+{
+  "schema": "lower_density_visual_qa_v1",
+  "validation": "pass",
+  "created_utc": "2026-10-15T20:54:57.375653+00:00",
+  "reviewer": "/root/multigraph_candidate",
+  "standalone_figures": 4,
+  "paper_figures": 8,
+  "checked": [
+    {
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/figures-attempt01/ratios_cpu.png",
+      "sha256": "0e4b2426d23e093ef7133e66655e3d9d077fb7668212bbf1bd1d9af4ccc09809",
+      "width_pixels": 2767,
+      "height_pixels": 2111,
+      "inspection": "tools.view_image detail=original; entire figure reviewed",
+      "validation": "pass",
+      "checks": [
+        "all series and measured size ticks visible",
+        "all trial ranges and both graph markers retained",
+        "axis labels, legends and captions legible without overlap",
+        "no visible clipping",
+        "ratio parity and 0.90 lines present where applicable"
+      ]
+    },
+    {
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/figures-attempt01/ratios_wall.png",
+      "sha256": "ca7a750997a4c3b51fc65b43d2016f3b0357bf7e2454bac700bf84275c4c350c",
+      "width_pixels": 2767,
+      "height_pixels": 2111,
+      "inspection": "tools.view_image detail=original; entire figure reviewed",
+      "validation": "pass",
+      "checks": [
+        "all series and measured size ticks visible",
+        "all trial ranges and both graph markers retained",
+        "axis labels, legends and captions legible without overlap",
+        "no visible clipping",
+        "ratio parity and 0.90 lines present where applicable"
+      ]
+    },
+    {
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/figures-attempt01/times_cpu.png",
+      "sha256": "f9768b687cc2ee0780cbe33b425eef4639004f561debfaa878240ea1e81ebec7",
+      "width_pixels": 2767,
+      "height_pixels": 2111,
+      "inspection": "tools.view_image detail=original; entire figure reviewed",
+      "validation": "pass",
+      "checks": [
+        "all series and measured size ticks visible",
+        "all trial ranges and both graph markers retained",
+        "axis labels, legends and captions legible without overlap",
+        "no visible clipping",
+        "ratio parity and 0.90 lines present where applicable"
+      ]
+    },
+    {
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/figures-attempt01/times_wall.png",
+      "sha256": "738eb570263b52e6165a33ce0f238f4d59546ec3e93f6fcc2012a6a187a97ec9",
+      "width_pixels": 2767,
+      "height_pixels": 2111,
+      "inspection": "tools.view_image detail=original; entire figure reviewed",
+      "validation": "pass",
+      "checks": [
+        "all series and measured size ticks visible",
+        "all trial ranges and both graph markers retained",
+        "axis labels, legends and captions legible without overlap",
+        "no visible clipping",
+        "ratio parity and 0.90 lines present where applicable"
+      ]
+    },
+    {
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/paper-figures-attempt02/paper_d16_ratios_cpu.png",
+      "sha256": "38d9a18b2db9dca97178c65b23c0eb5ecf391f913c5304de7035f1980f7b3605",
+      "width_pixels": 1562,
+      "height_pixels": 1936,
+      "inspection": "tools.view_image detail=original; entire figure reviewed",
+      "validation": "pass",
+      "checks": [
+        "all series and measured size ticks visible",
+        "all trial ranges and both graph markers retained",
+        "axis labels, legends and captions legible without overlap",
+        "no visible clipping",
+        "ratio parity and 0.90 lines present where applicable"
+      ]
+    },
+    {
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/paper-figures-attempt02/paper_d16_ratios_wall.png",
+      "sha256": "59665fb6d209b15b265cbf3ef16bf291f5423ab4c157842d09b5aa37bc8fb405",
+      "width_pixels": 1562,
+      "height_pixels": 1936,
+      "inspection": "tools.view_image detail=original; entire figure reviewed",
+      "validation": "pass",
+      "checks": [
+        "all series and measured size ticks visible",
+        "all trial ranges and both graph markers retained",
+        "axis labels, legends and captions legible without overlap",
+        "no visible clipping",
+        "ratio parity and 0.90 lines present where applicable"
+      ]
+    },
+    {
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/paper-figures-attempt02/paper_d16_times_cpu.png",
+      "sha256": "1a71cf4d725c23bf836156aad6587aacb2aa22577666f45d646db1f7fdc6c3bf",
+      "width_pixels": 1562,
+      "height_pixels": 1936,
+      "inspection": "tools.view_image detail=original; entire figure reviewed",
+      "validation": "pass",
+      "checks": [
+        "all series and measured size ticks visible",
+        "all trial ranges and both graph markers retained",
+        "axis labels, legends and captions legible without overlap",
+        "no visible clipping",
+        "ratio parity and 0.90 lines present where applicable"
+      ]
+    },
+    {
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/paper-figures-attempt02/paper_d16_times_wall.png",
+      "sha256": "b077db43b1c445d0cf4582aaf0b999d57bc25c9c682110aa6b1052a3b8ed4c6b",
+      "width_pixels": 1562,
+      "height_pixels": 1936,
+      "inspection": "tools.view_image detail=original; entire figure reviewed",
+      "validation": "pass",
+      "checks": [
+        "all series and measured size ticks visible",
+        "all trial ranges and both graph markers retained",
+        "axis labels, legends and captions legible without overlap",
+        "no visible clipping",
+        "ratio parity and 0.90 lines present where applicable"
+      ]
+    },
+    {
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/paper-figures-attempt02/paper_d8_ratios_cpu.png",
+      "sha256": "96028bc1a4b7d36ee485866dfb629fb6790362fd5085f4a68e4376fca7f45f09",
+      "width_pixels": 1562,
+      "height_pixels": 1936,
+      "inspection": "tools.view_image detail=original; entire figure reviewed",
+      "validation": "pass",
+      "checks": [
+        "all series and measured size ticks visible",
+        "all trial ranges and both graph markers retained",
+        "axis labels, legends and captions legible without overlap",
+        "no visible clipping",
+        "ratio parity and 0.90 lines present where applicable"
+      ]
+    },
+    {
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/paper-figures-attempt02/paper_d8_ratios_wall.png",
+      "sha256": "7aedcf4945e37967e0995bc2027ff932a9102a309230e9ec3488ad5d9fc164f1",
+      "width_pixels": 1562,
+      "height_pixels": 1936,
+      "inspection": "tools.view_image detail=original; entire figure reviewed",
+      "validation": "pass",
+      "checks": [
+        "all series and measured size ticks visible",
+        "all trial ranges and both graph markers retained",
+        "axis labels, legends and captions legible without overlap",
+        "no visible clipping",
+        "ratio parity and 0.90 lines present where applicable"
+      ]
+    },
+    {
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/paper-figures-attempt02/paper_d8_times_cpu.png",
+      "sha256": "f93b7aea08df49611840de427a3426673c3d21f9fbc95526f7b9cd02cff50a7f",
+      "width_pixels": 1562,
+      "height_pixels": 1936,
+      "inspection": "tools.view_image detail=original; entire figure reviewed",
+      "validation": "pass",
+      "checks": [
+        "all series and measured size ticks visible",
+        "all trial ranges and both graph markers retained",
+        "axis labels, legends and captions legible without overlap",
+        "no visible clipping",
+        "ratio parity and 0.90 lines present where applicable"
+      ]
+    },
+    {
+      "path": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/paper-figures-attempt02/paper_d8_times_wall.png",
+      "sha256": "eca2a370f9758e26e2613014228f3de284e49ece7be728def577a8eb21f6b75d",
+      "width_pixels": 1562,
+      "height_pixels": 1936,
+      "inspection": "tools.view_image detail=original; entire figure reviewed",
+      "validation": "pass",
+      "checks": [
+        "all series and measured size ticks visible",
+        "all trial ranges and both graph markers retained",
+        "axis labels, legends and captions legible without overlap",
+        "no visible clipping",
+        "ratio parity and 0.90 lines present where applicable"
+      ]
+    }
+  ],
+  "actual_render_wrapper_exit_statuses": [
+    0,
+    0,
+    0
+  ],
+  "all_owned_groups_verified_empty": true,
+  "final_group_query": {
+    "command": [
+      "/bin/ps",
+      "-axo",
+      "pid=,pgid="
+    ],
+    "exit_status": 0,
+    "groups": [
+      3849,
+      3903,
+      4001
+    ],
+    "members": []
+  },
+  "paper_attempt01": "data passed; visual failure retained: bottom x label and legend overlap",
+  "paper_repair": "separate v2 adapter increases only subplot bottom margin .24 to .28",
+  "paper_points_before_after_identical": true,
+  "plotted_values_before_after_identical": true,
+  "canonical_pooled_points": 660,
+  "graph_median_points": 1320,
+  "trial_range_endpoints": 1320,
+  "crossover_points": 150,
+  "crossover_brackets": 490,
+  "crossover_outcomes": 20,
+  "native_execution": false,
+  "page_embedding_qa": "separate final report page review remains necessary"
+}

@@ -1,0 +1,26 @@
+{
+  "validation": "pass",
+  "reviewer": "root",
+  "method": "All eight PNG files viewed at original resolution through view_image.",
+  "files_sha256": {
+    "paper_d16_ratios_wall.png": "59665fb6d209b15b265cbf3ef16bf291f5423ab4c157842d09b5aa37bc8fb405",
+    "paper_d16_ratios_cpu.png": "38d9a18b2db9dca97178c65b23c0eb5ecf391f913c5304de7035f1980f7b3605",
+    "paper_d16_times_wall.png": "b077db43b1c445d0cf4582aaf0b999d57bc25c9c682110aa6b1052a3b8ed4c6b",
+    "paper_d16_times_cpu.png": "1a71cf4d725c23bf836156aad6587aacb2aa22577666f45d646db1f7fdc6c3bf",
+    "paper_d8_ratios_wall.png": "7aedcf4945e37967e0995bc2027ff932a9102a309230e9ec3488ad5d9fc164f1",
+    "paper_d8_ratios_cpu.png": "96028bc1a4b7d36ee485866dfb629fb6790362fd5085f4a68e4376fca7f45f09",
+    "paper_d8_times_wall.png": "eca2a370f9758e26e2613014228f3de284e49ece7be728def577a8eb21f6b75d",
+    "paper_d8_times_cpu.png": "f93b7aea08df49611840de427a3426673c3d21f9fbc95526f7b9cd02cff50a7f"
+  },
+  "checks": [
+    "All panels, seven/eight size labels, legends and captions readable and unclipped.",
+    "The bottom-axis label is separated from the legend after the presentation-only bottom-margin repair.",
+    "All five comparison controls or all six absolute-time series are present.",
+    "Parity and strong-lead reference lines, graph medians and full ranges remain visible.",
+    "The density-8 reversal and shuffled losses are visible."
+  ],
+  "limits": [
+    "Standalone figure review only; assembled PDF page-scale review remains pending.",
+    "Numerical correctness relies on separate strict reload, independent raw-data audit and exact plot-data equality gates."
+  ]
+}

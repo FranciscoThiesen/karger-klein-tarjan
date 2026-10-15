@@ -1,0 +1,15 @@
+{
+  "schema": "lower_density_paper_layout_repair_v1",
+  "created_utc": "2026-10-15T20:52:48.432940+00:00",
+  "validation": "source_prepared",
+  "reason": "all eight first-attempt paper PNGs overlap bottom x label with legend",
+  "before_source": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/plot_lower_density_paper.py",
+  "before_sha256": "73f753f7e4d851ef6923ed19fbaba5f9eb7e6fb3f54000e42e5ebd818a4533a9",
+  "after_source": "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/plot_lower_density_paper_v2.py",
+  "after_sha256": "28080115b208d8b05c2c298de6cbcaace52250d438748f80f161b67ffad890fd",
+  "only_change": "increase subplot bottom margin from 0.24 to 0.28; retain all data/axes/labels/fonts/provenance logic",
+  "original_outputs_preserved": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/paper-figures-attempt01",
+  "new_output": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/lower-density-2026-10-15/paper-figures-attempt02",
+  "native_execution": false,
+  "rendering_pending": true
+}

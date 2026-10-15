@@ -1,0 +1,21 @@
+Running six-algorithm retention control leaf_distance4_n4096_d8_p0 graph_seed=23000003 kkt_seed=3407
+generation_seconds=0.00208338 reference_certificate_seconds=0.00444704
+reference_certificate_v1 {"case_id":"leaf_distance4_n4096_d8_p0","graph_seed":23000003,"kkt_seed":3407,"n":4096,"m":32768,"input_fingerprint":5645321579681624494,"topology_fingerprint":9899474294640432934,"validation":"pass"}
+        0.08 real         0.07 user         0.00 sys
+            10518528  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                 809  page reclaims
+                   1  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   0  voluntary context switches
+                  11  involuntary context switches
+           880481628  instructions retired
+           294928503  cycles elapsed
+             9945448  peak memory footprint
