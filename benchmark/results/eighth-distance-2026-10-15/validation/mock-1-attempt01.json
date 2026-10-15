@@ -1,0 +1,40 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "benchmark/test_eighth_distance.py"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "started_utc": "2026-10-15T18:14:21.369776+00:00",
+  "started_monotonic_ns": 27208083,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/test_eighth_distance.py": "db525a17997e755bb9c8aec67cc0ef596b6690dfce51b1ac6d1410567c348a82"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 69396,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 69396,
+    "members": [],
+    "monotonic_ns": 15252842708,
+    "utc": "2026-10-15T18:14:36.595308+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/test_eighth_distance.py": "db525a17997e755bb9c8aec67cc0ef596b6690dfce51b1ac6d1410567c348a82"
+  },
+  "finished_utc": "2026-10-15T18:14:36.595669+00:00",
+  "finished_monotonic_ns": 15253214166,
+  "elapsed_seconds": 15.226006083,
+  "stdout": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/validation/mock-1-attempt01.stdout",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/validation/mock-1-attempt01.stderr",
+  "stderr_sha256": "b90e16e21d76f33047a5866992356882ea7439025f779c3bde899a007b2345e1"
+}
