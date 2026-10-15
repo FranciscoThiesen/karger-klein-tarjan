@@ -1,0 +1,22 @@
+{
+  "schema": "multigraph_followup_runner_validation_v1",
+  "command": [
+    "/usr/local/opt/python@3.14/bin/python3.14",
+    "-B",
+    "benchmark/test_multigraph_followup.py"
+  ],
+  "scope": "Synthetic Python only; no native solver built or executed; includes unchanged parent helper inventory gate",
+  "supersedes_validation_only": "followup-runner-tests.json",
+  "started_utc": "2026-10-15T05:28:13.033707+00:00",
+  "finished_utc": "2026-10-15T05:28:17.209898+00:00",
+  "exit_status": 0,
+  "validation": "pass",
+  "test_groups": 7,
+  "log": "/Users/random_person/Desktop/kkt-contraction-experiment/benchmark/results/multigraph-2026-10-14/validation/followup-runner-final-tests.log",
+  "log_sha256": "d716cea0b04483e200aa9d63070b03e0ab064143b88469f6e42081753bf9249f",
+  "source_sha256": {
+    "benchmark/run_multigraph_followup.py": "1c20a347d244a5e3309f0880a5f03c03af6c019be5ca823e63aa2e15a459b188",
+    "benchmark/test_multigraph_followup.py": "b3f4eaaad1a0b8d2eaf168974635f7093de8c790cce7b2d72e8014289fc8aef7",
+    "benchmark/run_multigraph_experiment.py": "f039d2523e212d9431ed9e062459a6eb3cf2e3ebf463c49d4d57097bcef4fd8e"
+  }
+}

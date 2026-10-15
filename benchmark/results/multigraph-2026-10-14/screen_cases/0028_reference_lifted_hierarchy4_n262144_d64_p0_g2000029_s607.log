@@ -1,0 +1,21 @@
+Running five-algorithm MST search lifted_hierarchy4_n262144_d64_p0 graph_seed=2000029 kkt_seed=607
+generation_seconds=0.391442 reference_certificate_seconds=6.46703
+reference_certificate_v1 {"case_id":"lifted_hierarchy4_n262144_d64_p0","graph_seed":2000029,"kkt_seed":607,"n":262144,"m":16777216,"input_fingerprint":11318169846511431254,"topology_fingerprint":358481999620602285,"validation":"pass"}
+       50.18 real        49.77 user         0.39 sys
+          2385920000  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              242858  page reclaims
+                   1  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   0  voluntary context switches
+                  12  involuntary context switches
+        169400573232  instructions retired
+        193638406648  cycles elapsed
+          1418020232  peak memory footprint

@@ -1,0 +1,21 @@
+{
+  "schema": "multigraph_followup_runner_validation_v1",
+  "command": [
+    "/usr/local/opt/python@3.14/bin/python3.14",
+    "-B",
+    "benchmark/test_multigraph_followup.py"
+  ],
+  "scope": "Synthetic Python only; no native solver built or executed",
+  "started_utc": "2026-10-15T05:23:40.008262+00:00",
+  "finished_utc": "2026-10-15T05:23:44.068749+00:00",
+  "exit_status": 0,
+  "validation": "pass",
+  "test_groups": 6,
+  "log": "/Users/random_person/Desktop/kkt-contraction-experiment/benchmark/results/multigraph-2026-10-14/validation/followup-runner-tests.log",
+  "log_sha256": "c770b7391a0276d761ec2f108f543db51c0e6b06952d7020541cfeb63216e391",
+  "source_sha256": {
+    "benchmark/run_multigraph_followup.py": "e3daeedc76297457a3fa33382d3cd2ab205309d9ecf3b52127bf33eb9f1fd5f4",
+    "benchmark/test_multigraph_followup.py": "dc997d769fcecfa8c1d8ed0cfa36bec26a04e5d4b8cfbf0d121ea39b684c4ec2",
+    "benchmark/run_multigraph_experiment.py": "f039d2523e212d9431ed9e062459a6eb3cf2e3ebf463c49d4d57097bcef4fd8e"
+  }
+}

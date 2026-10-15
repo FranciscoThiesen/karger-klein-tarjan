@@ -19,6 +19,13 @@ explanations and a separately labeled recovery of interrupted campaign B;
 the original B execution remains failed. The newer evidence does not change
 the historical measurements below.
 
+**Experimental follow-up, 14 October:** an opt-in
+[multigraph contraction study](../../benchmark/results/multigraph-2026-10-14/README.md)
+cuts KKT time by about 52% on the large ordered attachment cases in its fresh
+two-seed screen. It retains all controls, classical-solver losses, correctness
+gates and separate work counters. Default KKT is unchanged; additional size
+replication and a Borůvka control using the same cheaper contraction are pending.
+
 This report asks three distinct questions: whether the original implementation faithfully realized KKT's local complexity bounds; whether the current implementation *measures* like linear time; and which graph structures make it competitive in practice. The answers come from source inspection, certified benchmark outputs, separate work counters, two complete new timing campaigns, and a controlled comparison with repeated compacting Borůvka steps.
 
 The main document is this Markdown file. The [HTML edition](report.html) adds a fully offline, interactive 3D graph explorer. The [standalone explorer](graph-explorer.html) exposes actual contraction and filtering results for seven complete small graphs. A paginated companion checks the requested 40-page limit.

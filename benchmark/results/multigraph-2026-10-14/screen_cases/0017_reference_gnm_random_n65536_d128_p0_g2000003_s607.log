@@ -1,0 +1,22 @@
+Running five-algorithm MST search gnm_random_n65536_d128_p0 graph_seed=2000003 kkt_seed=607
+crossover_topology_attempts=1
+generation_seconds=1.50403 reference_certificate_seconds=1.76071
+reference_certificate_v1 {"case_id":"gnm_random_n65536_d128_p0","graph_seed":2000003,"kkt_seed":607,"n":65536,"m":8388608,"input_fingerprint":3498476445692428685,"topology_fingerprint":2042299366764764665,"validation":"pass"}
+       21.00 real        20.82 user         0.16 sys
+          1603764224  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              128211  page reclaims
+                   1  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   0  voluntary context switches
+                  41  involuntary context switches
+         80330918508  instructions retired
+         80920670494  cycles elapsed
+          1352369688  peak memory footprint

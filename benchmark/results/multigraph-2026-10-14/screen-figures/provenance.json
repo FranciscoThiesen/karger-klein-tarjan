@@ -1,0 +1,35 @@
+{
+  "schema": "multigraph_figures_v1",
+  "validation": "pass",
+  "input_sha256": {
+    "/Users/random_person/Desktop/kkt-contraction-experiment/benchmark/results/multigraph-2026-10-14/screen-analysis/provenance.json": "4da636bb401fa83db6658440d1966bd0fe1ca9a208c83161d0d7df8c80200631",
+    "/Users/random_person/Desktop/kkt-contraction-experiment/benchmark/results/multigraph-2026-10-14/screen-analysis/variant_comparisons.csv": "e4fd331fceeafe40eec287f546e7bc5f52cb1e848bc087aff40c184c0565b37d",
+    "/Users/random_person/Desktop/kkt-contraction-experiment/benchmark/results/multigraph-2026-10-14/screen-analysis/reference/comparisons.csv": "ff9606786f421eaeebef0fe97a3d7097e021c0b856254d29d3fb8bdd32897e9d",
+    "/Users/random_person/Desktop/kkt-contraction-experiment/benchmark/results/multigraph-2026-10-14/screen-analysis/multigraph/comparisons.csv": "8c3a107f6c2cec8a278a46c05ea6e8698747e64b71a2aafdeecc01cb3c5c5e03"
+  },
+  "script_sha256": "d3425518fc13620708a900679b10198d07c2576b2bf7c20860708a378aeba63b",
+  "matplotlib_version": "3.9.4",
+  "cases": [
+    "leaf_hierarchy4_n65536_d16_p0",
+    "leaf_hierarchy4_n1048576_d16_p0",
+    "leaf_distance4_n65536_d16_p0",
+    "leaf_distance4_n1048576_d16_p0",
+    "leaf_shuffled4_n262144_d16_p0",
+    "leaf_random4_n262144_d16_p0",
+    "lifted_hierarchy4_n262144_d64_p0",
+    "lifted_random4_n262144_d64_p0",
+    "gnm_random_n65536_d128_p0",
+    "gnm_random_n262144_d16_p0"
+  ],
+  "rows_removed": 0,
+  "rows_adjusted": 0,
+  "output_sha256": {
+    "implementation_ratios.png": "bce06f553945c37a61a45312de7fa0679d28344cde9532b7c9e0cdeee08015d7",
+    "implementation_ratios.svg": "5a022c6be9f3338d90adb562690bec0c49d3dd7c680cf1f128c6650ac459c04d",
+    "implementation_ratios.pdf": "527f9cc4c476f33505c58ae1661cdbef357f54131927d7e718745da2d229b8f6",
+    "all_solver_ratios.png": "0018237a9c5b00344a62f673de621443bdf5858c7d0176a9b00d62467e548c1b",
+    "all_solver_ratios.svg": "0e6fe099ce49c9b75645423b8b25c752cf1f5c529f950d65e2fc6f933ff0ae96",
+    "all_solver_ratios.pdf": "a40a962634b0beb27266325bf8641601c394ef2b2ee5d86149d8149aa8d6f0f8"
+  },
+  "visual_review": "pending"
+}

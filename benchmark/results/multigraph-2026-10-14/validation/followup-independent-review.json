@@ -1,0 +1,32 @@
+{
+  "schema": "multigraph_followup_independent_review_v1",
+  "utc": "2026-10-15T05:28:20.087076+00:00",
+  "validation": "pass",
+  "command": [
+    "/usr/local/opt/python@3.14/bin/python3.14",
+    "-B",
+    "benchmark/test_multigraph_followup.py"
+  ],
+  "exit_status": 0,
+  "log": "/Users/random_person/Desktop/kkt-contraction-experiment/benchmark/results/multigraph-2026-10-14/validation/followup-independent-review-tests.log",
+  "log_sha256": "10c9b718bd818d0ed73226e112e3dbec561ef08016f3aba3a5a67911a37a1131",
+  "reviewed_source_sha256": {
+    "/Users/random_person/Desktop/kkt-contraction-experiment/benchmark/run_multigraph_followup.py": "1c20a347d244a5e3309f0880a5f03c03af6c019be5ca823e63aa2e15a459b188",
+    "/Users/random_person/Desktop/kkt-contraction-experiment/benchmark/test_multigraph_followup.py": "b3f4eaaad1a0b8d2eaf168974635f7093de8c790cce7b2d72e8014289fc8aef7"
+  },
+  "unchanged_parent_helpers": true,
+  "parent_freeze_sha256": "7269bc0c92e6decb6355fc8cd1e95f471dcdad2d463cc66a45306ac80d7edc9a",
+  "review_scope": [
+    "Scoped engine configuration restores on success, nested scopes, and errors",
+    "Current parent helper inventory must equal frozen parent before followup preflight or launch",
+    "Exact native binaries, build records, source inventory, Makefile, arm64/512MiB profile reused",
+    "Ten cases; fresh graph seeds3000001/3000029 and sampling809;40children/1200outputs",
+    "Both case and variant order reversed for second graph seed",
+    "Original and followup analyzers remain independent",
+    "All review tests synthetic; no native executable launched"
+  ],
+  "findings_resolved": [
+    "Enforce frozen parent helper inventory before append-only adapter inventory"
+  ],
+  "remaining_blockers": []
+}

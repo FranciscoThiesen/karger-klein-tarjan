@@ -1,0 +1,11 @@
+{
+  "schema": "kkt_caffeinate_native_attempt_v1",
+  "observed_assertions_local_time": "2026-10-14 22:19:10 -0700",
+  "command": ["/usr/bin/arch", "-arm64", "/usr/bin/caffeinate", "-i", "-s", "-t", "7200"],
+  "exit_status": 1,
+  "stderr": "Failed to create PreventUserIdleSystemSleep assertion\n",
+  "assertions_command": ["/usr/bin/arch", "-arm64", "/usr/bin/pmset", "-g", "assertions"],
+  "assertions_exit_status": 0,
+  "assertions_output": "2026-10-14 22:19:10 -0700 \nNo assertions.\nKernel Assertions: 0x100=MAGICWAKE\n   id=591  level=255 0x100=MAGICWAKE creat=  mod= description=en0 owner=IOSkywalkNetworkBSDClient\n",
+  "sleep_inhibition_verified": false
+}
