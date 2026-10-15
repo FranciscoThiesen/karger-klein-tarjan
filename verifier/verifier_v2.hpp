@@ -5,6 +5,8 @@
 #include <vector>
 #include <unordered_set>
 
+struct Edge;
+
 using namespace std;
 
 namespace verifier_detail {
@@ -14,6 +16,12 @@ namespace verifier_detail {
 // never used as array indices; edges between forest components stay light.
 vector<unsigned char> heavy_edge_marks(
     const vector<tuple<int, int, int, int>>& graph,
+    const vector<tuple<int, int, int, int>>& forest, int n);
+
+// Read the existing KKT edge storage directly. The forest and positional
+// result use the same contract as the tuple overload; neither input changes.
+vector<unsigned char> heavy_edge_marks(
+    const vector<Edge>& graph,
     const vector<tuple<int, int, int, int>>& forest, int n);
 
 }  // namespace verifier_detail

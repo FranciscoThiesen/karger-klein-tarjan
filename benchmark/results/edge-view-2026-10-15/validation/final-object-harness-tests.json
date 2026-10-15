@@ -1,0 +1,121 @@
+{
+  "status": "pass",
+  "performance_executed": false,
+  "build_commands": [
+    [
+      "/usr/bin/arch",
+      "-arm64",
+      "/usr/bin/clang++",
+      "-isysroot",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+      "-std=c++17",
+      "-O3",
+      "-Wall",
+      "-Wextra",
+      "-march=native",
+      "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+      "-I.",
+      "-c",
+      "test/retention_control_test.cpp",
+      "-o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/test/retention_control_test.o"
+    ],
+    [
+      "/usr/bin/arch",
+      "-arm64",
+      "/usr/bin/clang++",
+      "-isysroot",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+      "-std=c++17",
+      "-O3",
+      "-Wall",
+      "-Wextra",
+      "-march=native",
+      "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+      "-I.",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/boruvka/boruvka.o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/kruskal/kruskal.o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/prim/prim.o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/lca/lca.o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/union_find/union_find.o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/graph_utils/graph_utils.o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/verifier/verifier_v2.o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/tuple/kkt/kkt.o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/test/retention_control_test.o",
+      "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+      "-Wl,-stack_size,0x20000000",
+      "-o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/bin/edge-verifier/timing-build/tuple/retention_control_test"
+    ],
+    [
+      "/usr/bin/arch",
+      "-arm64",
+      "/usr/bin/clang++",
+      "-isysroot",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+      "-std=c++17",
+      "-O3",
+      "-Wall",
+      "-Wextra",
+      "-march=native",
+      "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+      "-I.",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/boruvka/boruvka.o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/kruskal/kruskal.o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/prim/prim.o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/lca/lca.o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/union_find/union_find.o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/graph_utils/graph_utils.o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/verifier/verifier_v2.o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/edge/kkt/kkt.o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/test/retention_control_test.o",
+      "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+      "-Wl,-stack_size,0x20000000",
+      "-o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/bin/edge-verifier/timing-build/edge/retention_control_test"
+    ]
+  ],
+  "build_log": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/final-object-harness-build.log",
+  "build_log_sha256": "92e0516c89d55062e783304066a74de70227b1123f531a98c47bd12c95bc3c12",
+  "build_record_sha256": {
+    "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/timing-build-tuple-build-record.json": "948df14fa0753493bdbf1240c66e83b9578fb8bd5c20de765c1e3c20f5716588",
+    "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/timing-build-edge-build-record.json": "001a9dc1ddc60936f0c123a146e6d95b3765c232a8d8093837e4223ed05c7c58"
+  },
+  "script_sha256": "2682613a1c8c8ca0b64c4695a3ca1fd457a8fac4c4dd2c664fd39b8f1b9f5988",
+  "tests": [
+    {
+      "variant": "tuple",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/bin/edge-verifier/timing-build/tuple/retention_control_test"
+      ],
+      "exit_status": 0,
+      "binary": "/Users/random_person/Desktop/kkt-edge-verifier-view/bin/edge-verifier/timing-build/tuple/retention_control_test",
+      "binary_sha256": "ed5da48aa048a5d1d0e402c42bda53ba9044c3afee90325059a9b869fbc25b3d",
+      "file_description": "Mach-O 64-bit executable arm64",
+      "otool_load_commands": "/Users/random_person/Desktop/kkt-edge-verifier-view/bin/edge-verifier/timing-build/tuple/retention_control_test:\nLoad command 0\n      cmd LC_SEGMENT_64\n  cmdsize 72\n  segname __PAGEZERO\n   vmaddr 0x0000000000000000\n   vmsize 0x0000000100000000\n  fileoff 0\n filesize 0\n  maxprot 0x00000000\n initprot 0x00000000\n   nsects 0\n    flags 0x0\nLoad command 1\n      cmd LC_SEGMENT_64\n  cmdsize 552\n  segname __TEXT\n   vmaddr 0x0000000100000000\n   vmsize 0x000000000002c000\n  fileoff 0\n filesize 180224\n  maxprot 0x00000005\n initprot 0x00000005\n   nsects 6\n    flags 0x0\nSection\n  sectname __text\n   segname __TEXT\n      addr 0x0000000100003d34\n      size 0x0000000000024e98\n    offset 15668\n     align 2^2 (4)\n    reloff 0\n    nreloc 0\n     flags 0x80000400\n reserved1 0\n reserved2 0\nSection\n  sectname __stubs\n   segname __TEXT\n      addr 0x0000000100028bcc\n      size 0x0000000000000270\n    offset 166860\n     align 2^2 (4)\n    reloff 0\n    nreloc 0\n     flags 0x80000408\n reserved1 0 (index into indirect symbol table)\n reserved2 12 (size of stubs)\nSection\n  sectname __gcc_except_tab\n   segname __TEXT\n      addr 0x0000000100028e3c\n      size 0x0000000000001868\n    offset 167484\n     align 2^2 (4)\n    reloff 0\n    nreloc 0\n     flags 0x00000000\n reserved1 0\n reserved2 0\nSection\n  sectname __cstring\n   segname __TEXT\n      addr 0x000000010002a6a4\n      size 0x00000000000010a9\n    offset 173732\n     align 2^0 (1)\n    reloff 0\n    nreloc 0\n     flags 0x00000002\n reserved1 0\n reserved2 0\nSection\n  sectname __const\n   segname __TEXT\n      addr 0x000000010002b750\n      size 0x000000000000035a\n    offset 178000\n     align 2^4 (16)\n    reloff 0\n    nreloc 0\n     flags 0x00000000\n reserved1 0\n reserved2 0\nSection\n  sectname __unwind_info\n   segname __TEXT\n      addr 0x000000010002baac\n      size 0x0000000000000550\n    offset 178860\n     align 2^2 (4)\n    reloff 0\n    nreloc 0\n     flags 0x00000000\n reserved1 0\n reserved2 0\nLoad command 2\n      cmd LC_SEGMENT_64\n  cmdsize 232\n  segname __DATA_CONST\n   vmaddr 0x000000010002c000\n   vmsize 0x0000000000004000\n  fileoff 180224\n filesize 16384\n  maxprot 0x00000003\n initprot 0x00000003\n   nsects 2\n    flags 0x10\nSection\n  sectname __got\n   segname __DATA_CONST\n      addr 0x000000010002c000\n      size 0x0000000000000248\n    offset 180224\n     align 2^3 (8)\n    reloff 0\n    nreloc 0\n     flags 0x00000006\n reserved1 52 (index into indirect symbol table)\n reserved2 0\nSection\n  sectname __const\n   segname __DATA_CONST\n      addr 0x000000010002c248\n      size 0x0000000000000230\n    offset 180808\n     align 2^3 (8)\n    reloff 0\n    nreloc 0\n     flags 0x00000000\n reserved1 0\n reserved2 0\nLoad command 3\n      cmd LC_SEGMENT_64\n  cmdsize 152\n  segname __DATA\n   vmaddr 0x0000000100030000\n   vmsize 0x0000000000004000\n  fileoff 0\n filesize 0\n  maxprot 0x00000003\n initprot 0x00000003\n   nsects 1\n    flags 0x0\nSection\n  sectname __bss\n   segname __DATA\n      addr 0x0000000100030000\n      size 0x0000000000000030\n    offset 0\n     align 2^3 (8)\n    reloff 0\n    nreloc 0\n     flags 0x00000001\n reserved1 0\n reserved2 0\nLoad command 4\n      cmd LC_SEGMENT_64\n  cmdsize 72\n  segname __LINKEDIT\n   vmaddr 0x0000000100034000\n   vmsize 0x000000000000c000\n  fileoff 196608\n filesize 35928\n  maxprot 0x00000001\n initprot 0x00000001\n   nsects 0\n    flags 0x0\nLoad command 5\n      cmd LC_DYLD_CHAINED_FIXUPS\n  cmdsize 16\n  dataoff 196608\n datasize 2768\nLoad command 6\n      cmd LC_DYLD_EXPORTS_TRIE\n  cmdsize 16\n  dataoff 199376\n datasize 2088\nLoad command 7\n     cmd LC_SYMTAB\n cmdsize 24\n  symoff 201784\n   nsyms 365\n  stroff 208128\n strsize 22440\nLoad command 8\n            cmd LC_DYSYMTAB\n        cmdsize 80\n      ilocalsym 0\n      nlocalsym 257\n     iextdefsym 257\n     nextdefsym 35\n      iundefsym 292\n      nundefsym 73\n         tocoff 0\n           ntoc 0\n      modtaboff 0\n        nmodtab 0\n   extrefsymoff 0\n    nextrefsyms 0\n indirectsymoff 207624\n  nindirectsyms 125\n      extreloff 0\n        nextrel 0\n      locreloff 0\n        nlocrel 0\nLoad command 9\n          cmd LC_LOAD_DYLINKER\n      cmdsize 32\n         name /usr/lib/dyld (offset 12)\nLoad command 10\n     cmd LC_UUID\n cmdsize 24\n    uuid 35A2FE40-DCD0-37CC-A53C-DC81D748DD1F\nLoad command 11\n      cmd LC_BUILD_VERSION\n  cmdsize 32\n platform 1\n    minos 14.5\n      sdk 14.5\n   ntools 1\n     tool 3\n  version 1053.12\nLoad command 12\n      cmd LC_SOURCE_VERSION\n  cmdsize 16\n  version 0.0\nLoad command 13\n       cmd LC_MAIN\n   cmdsize 24\n  entryoff 75880\n stacksize 536870912\nLoad command 14\n          cmd LC_LOAD_DYLIB\n      cmdsize 48\n         name /usr/lib/libc++.1.dylib (offset 24)\n   time stamp 2 Wed Dec 31 16:00:02 1969\n      current version 1700.255.5\ncompatibility version 1.0.0\nLoad command 15\n          cmd LC_LOAD_DYLIB\n      cmdsize 56\n         name /usr/lib/libSystem.B.dylib (offset 24)\n   time stamp 2 Wed Dec 31 16:00:02 1969\n      current version 1345.120.2\ncompatibility version 1.0.0\nLoad command 16\n      cmd LC_FUNCTION_STARTS\n  cmdsize 16\n  dataoff 201464\n datasize 320\nLoad command 17\n      cmd LC_DATA_IN_CODE\n  cmdsize 16\n  dataoff 201784\n datasize 0\nLoad command 18\n      cmd LC_CODE_SIGNATURE\n  cmdsize 16\n  dataoff 230576\n datasize 1960\n",
+      "stdout": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/final-object-tuple-harness.stdout",
+      "stdout_sha256": "c78a19429e336daea96bb1b58a22d01debc03646d8990bf98e560bf3cea765bf",
+      "stderr": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/final-object-tuple-harness.stderr",
+      "stderr_sha256": "40a49d6baa7e54af623b4503a0e28ae43814a6bd6bb7a578ef033175feb3e7d0"
+    },
+    {
+      "variant": "edge",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/bin/edge-verifier/timing-build/edge/retention_control_test"
+      ],
+      "exit_status": 0,
+      "binary": "/Users/random_person/Desktop/kkt-edge-verifier-view/bin/edge-verifier/timing-build/edge/retention_control_test",
+      "binary_sha256": "2d11c544bfc4f64dda55d0cc7f10169c98ec086274ce174a702269bc7c19c3d6",
+      "file_description": "Mach-O 64-bit executable arm64",
+      "otool_load_commands": "/Users/random_person/Desktop/kkt-edge-verifier-view/bin/edge-verifier/timing-build/edge/retention_control_test:\nLoad command 0\n      cmd LC_SEGMENT_64\n  cmdsize 72\n  segname __PAGEZERO\n   vmaddr 0x0000000000000000\n   vmsize 0x0000000100000000\n  fileoff 0\n filesize 0\n  maxprot 0x00000000\n initprot 0x00000000\n   nsects 0\n    flags 0x0\nLoad command 1\n      cmd LC_SEGMENT_64\n  cmdsize 552\n  segname __TEXT\n   vmaddr 0x0000000100000000\n   vmsize 0x000000000002c000\n  fileoff 0\n filesize 180224\n  maxprot 0x00000005\n initprot 0x00000005\n   nsects 6\n    flags 0x0\nSection\n  sectname __text\n   segname __TEXT\n      addr 0x0000000100003da0\n      size 0x0000000000024e3c\n    offset 15776\n     align 2^2 (4)\n    reloff 0\n    nreloc 0\n     flags 0x80000400\n reserved1 0\n reserved2 0\nSection\n  sectname __stubs\n   segname __TEXT\n      addr 0x0000000100028bdc\n      size 0x0000000000000270\n    offset 166876\n     align 2^2 (4)\n    reloff 0\n    nreloc 0\n     flags 0x80000408\n reserved1 0 (index into indirect symbol table)\n reserved2 12 (size of stubs)\nSection\n  sectname __gcc_except_tab\n   segname __TEXT\n      addr 0x0000000100028e4c\n      size 0x0000000000001858\n    offset 167500\n     align 2^2 (4)\n    reloff 0\n    nreloc 0\n     flags 0x00000000\n reserved1 0\n reserved2 0\nSection\n  sectname __cstring\n   segname __TEXT\n      addr 0x000000010002a6a4\n      size 0x00000000000010a9\n    offset 173732\n     align 2^0 (1)\n    reloff 0\n    nreloc 0\n     flags 0x00000002\n reserved1 0\n reserved2 0\nSection\n  sectname __const\n   segname __TEXT\n      addr 0x000000010002b750\n      size 0x000000000000035a\n    offset 178000\n     align 2^4 (16)\n    reloff 0\n    nreloc 0\n     flags 0x00000000\n reserved1 0\n reserved2 0\nSection\n  sectname __unwind_info\n   segname __TEXT\n      addr 0x000000010002baac\n      size 0x0000000000000550\n    offset 178860\n     align 2^2 (4)\n    reloff 0\n    nreloc 0\n     flags 0x00000000\n reserved1 0\n reserved2 0\nLoad command 2\n      cmd LC_SEGMENT_64\n  cmdsize 232\n  segname __DATA_CONST\n   vmaddr 0x000000010002c000\n   vmsize 0x0000000000004000\n  fileoff 180224\n filesize 16384\n  maxprot 0x00000003\n initprot 0x00000003\n   nsects 2\n    flags 0x10\nSection\n  sectname __got\n   segname __DATA_CONST\n      addr 0x000000010002c000\n      size 0x0000000000000248\n    offset 180224\n     align 2^3 (8)\n    reloff 0\n    nreloc 0\n     flags 0x00000006\n reserved1 52 (index into indirect symbol table)\n reserved2 0\nSection\n  sectname __const\n   segname __DATA_CONST\n      addr 0x000000010002c248\n      size 0x0000000000000230\n    offset 180808\n     align 2^3 (8)\n    reloff 0\n    nreloc 0\n     flags 0x00000000\n reserved1 0\n reserved2 0\nLoad command 3\n      cmd LC_SEGMENT_64\n  cmdsize 152\n  segname __DATA\n   vmaddr 0x0000000100030000\n   vmsize 0x0000000000004000\n  fileoff 0\n filesize 0\n  maxprot 0x00000003\n initprot 0x00000003\n   nsects 1\n    flags 0x0\nSection\n  sectname __bss\n   segname __DATA\n      addr 0x0000000100030000\n      size 0x0000000000000030\n    offset 0\n     align 2^3 (8)\n    reloff 0\n    nreloc 0\n     flags 0x00000001\n reserved1 0\n reserved2 0\nLoad command 4\n      cmd LC_SEGMENT_64\n  cmdsize 72\n  segname __LINKEDIT\n   vmaddr 0x0000000100034000\n   vmsize 0x000000000000c000\n  fileoff 196608\n filesize 35928\n  maxprot 0x00000001\n initprot 0x00000001\n   nsects 0\n    flags 0x0\nLoad command 5\n      cmd LC_DYLD_CHAINED_FIXUPS\n  cmdsize 16\n  dataoff 196608\n datasize 2768\nLoad command 6\n      cmd LC_DYLD_EXPORTS_TRIE\n  cmdsize 16\n  dataoff 199376\n datasize 2088\nLoad command 7\n     cmd LC_SYMTAB\n cmdsize 24\n  symoff 201784\n   nsyms 365\n  stroff 208128\n strsize 22440\nLoad command 8\n            cmd LC_DYSYMTAB\n        cmdsize 80\n      ilocalsym 0\n      nlocalsym 257\n     iextdefsym 257\n     nextdefsym 35\n      iundefsym 292\n      nundefsym 73\n         tocoff 0\n           ntoc 0\n      modtaboff 0\n        nmodtab 0\n   extrefsymoff 0\n    nextrefsyms 0\n indirectsymoff 207624\n  nindirectsyms 125\n      extreloff 0\n        nextrel 0\n      locreloff 0\n        nlocrel 0\nLoad command 9\n          cmd LC_LOAD_DYLINKER\n      cmdsize 32\n         name /usr/lib/dyld (offset 12)\nLoad command 10\n     cmd LC_UUID\n cmdsize 24\n    uuid 394464E0-150D-3EAA-A99F-431811A13877\nLoad command 11\n      cmd LC_BUILD_VERSION\n  cmdsize 32\n platform 1\n    minos 14.5\n      sdk 14.5\n   ntools 1\n     tool 3\n  version 1053.12\nLoad command 12\n      cmd LC_SOURCE_VERSION\n  cmdsize 16\n  version 0.0\nLoad command 13\n       cmd LC_MAIN\n   cmdsize 24\n  entryoff 75896\n stacksize 536870912\nLoad command 14\n          cmd LC_LOAD_DYLIB\n      cmdsize 48\n         name /usr/lib/libc++.1.dylib (offset 24)\n   time stamp 2 Wed Dec 31 16:00:02 1969\n      current version 1700.255.5\ncompatibility version 1.0.0\nLoad command 15\n          cmd LC_LOAD_DYLIB\n      cmdsize 56\n         name /usr/lib/libSystem.B.dylib (offset 24)\n   time stamp 2 Wed Dec 31 16:00:02 1969\n      current version 1345.120.2\ncompatibility version 1.0.0\nLoad command 16\n      cmd LC_FUNCTION_STARTS\n  cmdsize 16\n  dataoff 201464\n datasize 320\nLoad command 17\n      cmd LC_DATA_IN_CODE\n  cmdsize 16\n  dataoff 201784\n datasize 0\nLoad command 18\n      cmd LC_CODE_SIGNATURE\n  cmdsize 16\n  dataoff 230576\n datasize 1960\n",
+      "stdout": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/final-object-edge-harness.stdout",
+      "stdout_sha256": "c78a19429e336daea96bb1b58a22d01debc03646d8990bf98e560bf3cea765bf",
+      "stderr": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/final-object-edge-harness.stderr",
+      "stderr_sha256": "40a49d6baa7e54af623b4503a0e28ae43814a6bd6bb7a578ef033175feb3e7d0"
+    }
+  ]
+}

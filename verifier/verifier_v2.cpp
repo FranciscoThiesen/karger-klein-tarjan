@@ -4,6 +4,7 @@
 
 #include "verifier_v2.hpp"
 #include "median_table.hpp"
+#include "../common/edge.hpp"
 #include "../common/work_stats.hpp"
 // #include "../boruvka/boruvka.hpp"
 // #include "../graph_utils/graph_utils.hpp"
@@ -279,6 +280,18 @@ struct tree_path_maxima
 // It returns whether that spanning tree is a minimum spanning tree or not.
 //
 // Complexity: O(n + m)
+namespace {
+
+// Query records can be tuples or KKT's Edge storage. Static overloads keep
+// both paths allocation-free without assuming compatible object layouts.
+int query_from(const tuple<int, int, int, int>& edge) { return get<0>(edge); }
+int query_to(const tuple<int, int, int, int>& edge) { return get<1>(edge); }
+int query_cost(const tuple<int, int, int, int>& edge) { return get<2>(edge); }
+int query_from(const Edge& edge) { return edge.from; }
+int query_to(const Edge& edge) { return edge.to; }
+int query_cost(const Edge& edge) { return edge.cost; }
+
+template <typename QueryEdge>
 struct test_graph
 {
 	// vamos transformar o conjunto de arestas no formato necessario para rodar
@@ -297,10 +310,10 @@ struct test_graph
 	// 6 - Vetor de arestas do grafo original
 	int root, total_nodes;
 	vector<int> child, sibling, weight;
-	const vector<tuple<int, int, int, int>>& G;
+	const vector<QueryEdge>& G;
 	LCA lca;
 
-	test_graph(const vector<tuple<int, int, int, int>>& edges,
+	test_graph(const vector<QueryEdge>& edges,
 			   const vector<tuple<int, int, int, int>>& spanning_tree,
 			   const int n) : G(edges)
 	{
@@ -345,7 +358,7 @@ struct test_graph
 			KKT_WORK_ADD(initialized_slots, ancestors.size());
 			KKT_WORK_ADD(verifier_edge_visits, G.size());
 			for (int i = 0; i < M; ++i) {
-				const int from = get<0>(G[i]), to = get<1>(G[i]);
+				const int from = query_from(G[i]), to = query_to(G[i]);
 				const int ancestor = ancestors[i] = lca.query(from, to);
 				if (ancestor != from) {
 					++query_offsets[from + 1];
@@ -365,7 +378,7 @@ struct test_graph
 			KKT_WORK_ADD(initialized_slots, next_query.size());
 			KKT_WORK_ADD(verifier_edge_visits, G.size());
 			for (int i = 0; i < M; ++i) {
-				const int from = get<0>(G[i]), to = get<1>(G[i]);
+				const int from = query_from(G[i]), to = query_to(G[i]);
 				const int ancestor = ancestors[i];
 				if (ancestor != from) {
 					queries[next_query[from]++] = {ancestor, i};
@@ -390,17 +403,16 @@ struct test_graph
 		{
 			// A self-loop produced no ancestor query in the previous layout;
 			// preserve its unmarked result instead of reading an empty path.
-			if (get<0>(G[i]) != get<1>(G[i]) && sol[i] < get<2>(G[i]))
+			if (query_from(G[i]) != query_to(G[i]) && sol[i] < query_cost(G[i]))
 				heavy_marks[i] = 1;
 		}
 		return heavy_marks;
 	}
 };
 
-namespace {
-
+template <typename QueryEdge>
 vector<unsigned char>
-	verify_tree_marks(const vector<tuple<int, int, int, int>>& graph,
+	verify_tree_marks(const vector<QueryEdge>& graph,
 					  const vector<tuple<int, int, int, int>>& spanning_tree,
 					  const int n)
 {
@@ -411,7 +423,7 @@ vector<unsigned char>
 	KKT_WORK_ADD(verifier_tree_calls, 1);
 	KKT_WORK_ADD(verifier_tree_vertices, n);
 	KKT_WORK_ADD(verifier_tree_edges, graph.size());
-	auto verifier = test_graph(graph, spanning_tree, n);
+	auto verifier = test_graph<QueryEdge>(graph, spanning_tree, n);
 	return verifier.compute_heavy_marks();
 }
 
@@ -439,8 +451,11 @@ unordered_set<int>
 	return heavy_edge_ids(graph, verify_tree_marks(graph, spanning_tree, n));
 }
 
+namespace {
+
+template <typename QueryEdge>
 vector<unsigned char>
-	verifier_detail::heavy_edge_marks(const vector<tuple<int, int, int, int>>& graph,
+	heavy_edge_marks_impl(const vector<QueryEdge>& graph,
 									 const vector<tuple<int, int, int, int>>& general_graph,
 									 const int n)
 {
@@ -549,8 +564,9 @@ vector<unsigned char>
 	KKT_WORK_ADD(verifier_edge_visits, graph.size());
 	for (size_t position = 0; position < graph.size(); ++position)
 	{
-		int from, to, cost;
-		tie(from, to, cost, ignore) = graph[position];
+		const int from = query_from(graph[position]);
+		const int to = query_to(graph[position]);
+		const int cost = query_cost(graph[position]);
 
 		if (connected_component_id[from] == connected_component_id[to])
 		{
@@ -579,6 +595,22 @@ vector<unsigned char>
 	}
 
 	return heavy_marks;
+}
+
+}  // namespace
+
+vector<unsigned char> verifier_detail::heavy_edge_marks(
+	const vector<tuple<int, int, int, int>>& graph,
+	const vector<tuple<int, int, int, int>>& forest, const int n)
+{
+	return heavy_edge_marks_impl(graph, forest, n);
+}
+
+vector<unsigned char> verifier_detail::heavy_edge_marks(
+	const vector<Edge>& graph,
+	const vector<tuple<int, int, int, int>>& forest, const int n)
+{
+	return heavy_edge_marks_impl(graph, forest, n);
 }
 
 unordered_set<int>

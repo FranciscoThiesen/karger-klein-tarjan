@@ -1,0 +1,204 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "variant": "tuple",
+      "test": "edge_verifier_view_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/bin/edge-verifier/sanitizer-correctness/tuple/edge_verifier_view_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "29340d86e9f1f7e551c5cf56c2ba38b36d5ba3fff21560dc382d49693b0579b9",
+      "stdout": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/sanitizer-correctness-tuple-edge_verifier_view_test.stdout",
+      "stdout_sha256": "d3f5db98fd2d87c0d96ea9d107d7bfbbdb3072348d8b2aa9af598c20aa4e5bec",
+      "stderr": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/sanitizer-correctness-tuple-edge_verifier_view_test.stderr",
+      "stderr_sha256": "3c849bfdd4f9dd7ef1cbdf8178aa97569f7dbf9f295a03769cd1ad6b3b15afa1"
+    },
+    {
+      "variant": "tuple",
+      "test": "multigraph_contraction_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/bin/edge-verifier/sanitizer-correctness/tuple/multigraph_contraction_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "ba10c8f83c919e0b31bb0c5a7aca8525e23313f5cecddf453bd76b6b3b20cbbc",
+      "stdout": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/sanitizer-correctness-tuple-multigraph_contraction_test.stdout",
+      "stdout_sha256": "73d0bdf13bf5c47d302b2825ef5921a4736d34160950772f5875733591f63020",
+      "stderr": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/sanitizer-correctness-tuple-multigraph_contraction_test.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "variant": "tuple",
+      "test": "regression_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/bin/edge-verifier/sanitizer-correctness/tuple/regression_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "1fdf9f2811e13dd362988522fcc8d7b87b9b4d2ccf45a4da8786bb88b89dcbf5",
+      "stdout": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/sanitizer-correctness-tuple-regression_test.stdout",
+      "stdout_sha256": "ceb1244312ac6700ed3f6c27a774e6780d06e3de4251c55a74b240be0ce59673",
+      "stderr": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/sanitizer-correctness-tuple-regression_test.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "variant": "tuple",
+      "test": "contraction_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/bin/edge-verifier/sanitizer-correctness/tuple/contraction_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "958e58d3eb038e658f8dff2269c07f584327d73bedc1e1be6eeece69f0bc1b2b",
+      "stdout": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/sanitizer-correctness-tuple-contraction_test.stdout",
+      "stdout_sha256": "05a683bc160ad41d441b986d9935c4cd760018ac2aafa6de1dc5561b89272bba",
+      "stderr": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/sanitizer-correctness-tuple-contraction_test.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "variant": "tuple",
+      "test": "simple_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/bin/edge-verifier/sanitizer-correctness/tuple/simple_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "9ebd8b402c00c35cf052a1c48eb58a239f57b3463b8bbaf39bf37b7810104c75",
+      "stdout": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/sanitizer-correctness-tuple-simple_test.stdout",
+      "stdout_sha256": "5d48380038a8069a95022a025f93ff4061bd0e9b3e8caa1ae5beeeb8d2d42fad",
+      "stderr": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/sanitizer-correctness-tuple-simple_test.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "variant": "tuple",
+      "test": "core_attachment_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/bin/edge-verifier/sanitizer-correctness/tuple/core_attachment_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "e9f5aac40641f5c9f558d9e0fff6fb58b719c96575a20ee4fb2297c5b6f785c5",
+      "stdout": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/sanitizer-correctness-tuple-core_attachment_test.stdout",
+      "stdout_sha256": "733333ae0f9a48b7fdaad44ed281d9dd8edd7e1ea57029ec2074750ff73fb230",
+      "stderr": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/sanitizer-correctness-tuple-core_attachment_test.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "variant": "edge",
+      "test": "edge_verifier_view_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/bin/edge-verifier/sanitizer-correctness/edge/edge_verifier_view_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "87cbc4112e2a9791bd15d001bc9f40cd431d9f48b3eef43b6eff67a6d71fe112",
+      "stdout": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/sanitizer-correctness-edge-edge_verifier_view_test.stdout",
+      "stdout_sha256": "33ce3dc5cd7323c3e34fd0ec56a50b1342296fccd75a812ea010445ade6eb45e",
+      "stderr": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/sanitizer-correctness-edge-edge_verifier_view_test.stderr",
+      "stderr_sha256": "3c849bfdd4f9dd7ef1cbdf8178aa97569f7dbf9f295a03769cd1ad6b3b15afa1"
+    },
+    {
+      "variant": "edge",
+      "test": "multigraph_contraction_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/bin/edge-verifier/sanitizer-correctness/edge/multigraph_contraction_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "ec6903e8e5dcc333ee8b478e45d84c4641e2c52d22a98db6be1f4f2e97c56576",
+      "stdout": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/sanitizer-correctness-edge-multigraph_contraction_test.stdout",
+      "stdout_sha256": "73d0bdf13bf5c47d302b2825ef5921a4736d34160950772f5875733591f63020",
+      "stderr": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/sanitizer-correctness-edge-multigraph_contraction_test.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "variant": "edge",
+      "test": "regression_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/bin/edge-verifier/sanitizer-correctness/edge/regression_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "10440f24155387e037d9cfee74b141973508abf45e7d68662aa631634551d938",
+      "stdout": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/sanitizer-correctness-edge-regression_test.stdout",
+      "stdout_sha256": "ceb1244312ac6700ed3f6c27a774e6780d06e3de4251c55a74b240be0ce59673",
+      "stderr": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/sanitizer-correctness-edge-regression_test.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "variant": "edge",
+      "test": "contraction_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/bin/edge-verifier/sanitizer-correctness/edge/contraction_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "b68a934747a25e3fa11211d9dc85df30b2d8c5e90aa084c7cb239b577d9b0d39",
+      "stdout": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/sanitizer-correctness-edge-contraction_test.stdout",
+      "stdout_sha256": "05a683bc160ad41d441b986d9935c4cd760018ac2aafa6de1dc5561b89272bba",
+      "stderr": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/sanitizer-correctness-edge-contraction_test.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "variant": "edge",
+      "test": "simple_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/bin/edge-verifier/sanitizer-correctness/edge/simple_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "d3164f8e85a1ac61b69297e9312daa7f09bf51c3ef90d131bf31bf8791ec568f",
+      "stdout": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/sanitizer-correctness-edge-simple_test.stdout",
+      "stdout_sha256": "5d48380038a8069a95022a025f93ff4061bd0e9b3e8caa1ae5beeeb8d2d42fad",
+      "stderr": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/sanitizer-correctness-edge-simple_test.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "variant": "edge",
+      "test": "core_attachment_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/bin/edge-verifier/sanitizer-correctness/edge/core_attachment_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "e4e224c13aa5d8a5d99501f273012300c29201b513f7239e21feeef9491a4406",
+      "stdout": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/sanitizer-correctness-edge-core_attachment_test.stdout",
+      "stdout_sha256": "733333ae0f9a48b7fdaad44ed281d9dd8edd7e1ea57029ec2074750ff73fb230",
+      "stderr": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/sanitizer-correctness-edge-core_attachment_test.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "paired_work": {
+    "status": "pass",
+    "pairs": 1344,
+    "fields_per_pair": 65,
+    "verifier_positive_pairs": 552,
+    "saved_kkt_edge_visits": 55776,
+    "saved_edge_materializations": 55776,
+    "identical_input_fingerprints_and_sorted_mst_ids": true,
+    "all_other_fields_identical": true,
+    "tuple_records": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/sanitizer-correctness-tuple-edge_verifier_view_test.stdout",
+    "tuple_records_sha256": "d3f5db98fd2d87c0d96ea9d107d7bfbbdb3072348d8b2aa9af598c20aa4e5bec",
+    "edge_records": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/sanitizer-correctness-edge-edge_verifier_view_test.stdout",
+    "edge_records_sha256": "33ce3dc5cd7323c3e34fd0ec56a50b1342296fccd75a812ea010445ade6eb45e",
+    "wrong_dispatch_negative_gate": "rejected"
+  },
+  "sanitizer_options": {
+    "ASAN_OPTIONS": "detect_leaks=1:abort_on_error=1",
+    "UBSAN_OPTIONS": "halt_on_error=1:print_stacktrace=1"
+  }
+}

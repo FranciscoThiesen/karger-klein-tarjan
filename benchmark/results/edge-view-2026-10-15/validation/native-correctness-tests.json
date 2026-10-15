@@ -1,0 +1,201 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "variant": "tuple",
+      "test": "edge_verifier_view_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/bin/edge-verifier/native-correctness/tuple/edge_verifier_view_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "57c4c33f9b31508cbdb2caa5e0fc7a21ec8d587db82da080752d98ab2f37e433",
+      "stdout": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/native-correctness-tuple-edge_verifier_view_test.stdout",
+      "stdout_sha256": "d3f5db98fd2d87c0d96ea9d107d7bfbbdb3072348d8b2aa9af598c20aa4e5bec",
+      "stderr": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/native-correctness-tuple-edge_verifier_view_test.stderr",
+      "stderr_sha256": "3c849bfdd4f9dd7ef1cbdf8178aa97569f7dbf9f295a03769cd1ad6b3b15afa1"
+    },
+    {
+      "variant": "tuple",
+      "test": "multigraph_contraction_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/bin/edge-verifier/native-correctness/tuple/multigraph_contraction_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "c27486869418f14409a910fbc969cf1ab811e31a64668e36566ab8baf74142cf",
+      "stdout": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/native-correctness-tuple-multigraph_contraction_test.stdout",
+      "stdout_sha256": "73d0bdf13bf5c47d302b2825ef5921a4736d34160950772f5875733591f63020",
+      "stderr": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/native-correctness-tuple-multigraph_contraction_test.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "variant": "tuple",
+      "test": "regression_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/bin/edge-verifier/native-correctness/tuple/regression_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "37f78556507ed1ae13ea71bbd2fb45191424b4575795ff9ca7396e8c67842ce3",
+      "stdout": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/native-correctness-tuple-regression_test.stdout",
+      "stdout_sha256": "ceb1244312ac6700ed3f6c27a774e6780d06e3de4251c55a74b240be0ce59673",
+      "stderr": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/native-correctness-tuple-regression_test.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "variant": "tuple",
+      "test": "contraction_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/bin/edge-verifier/native-correctness/tuple/contraction_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "1942b7581e16d3ac99798fad2c9f4beba1963b7f51b146f43fb565b9f933a51f",
+      "stdout": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/native-correctness-tuple-contraction_test.stdout",
+      "stdout_sha256": "05a683bc160ad41d441b986d9935c4cd760018ac2aafa6de1dc5561b89272bba",
+      "stderr": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/native-correctness-tuple-contraction_test.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "variant": "tuple",
+      "test": "simple_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/bin/edge-verifier/native-correctness/tuple/simple_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "8c58975ddd63f905d64811cc9158ee9ce397bb88a3019a8b4b48a67371b3be47",
+      "stdout": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/native-correctness-tuple-simple_test.stdout",
+      "stdout_sha256": "5d48380038a8069a95022a025f93ff4061bd0e9b3e8caa1ae5beeeb8d2d42fad",
+      "stderr": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/native-correctness-tuple-simple_test.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "variant": "tuple",
+      "test": "core_attachment_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/bin/edge-verifier/native-correctness/tuple/core_attachment_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "140db30b9168e37377a5beece303b1b69ff7d963bf5aedcf5f875f409809ca63",
+      "stdout": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/native-correctness-tuple-core_attachment_test.stdout",
+      "stdout_sha256": "733333ae0f9a48b7fdaad44ed281d9dd8edd7e1ea57029ec2074750ff73fb230",
+      "stderr": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/native-correctness-tuple-core_attachment_test.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "variant": "edge",
+      "test": "edge_verifier_view_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/bin/edge-verifier/native-correctness/edge/edge_verifier_view_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "1dba1457c40bf0dba3bd6b758bb580f968029e27b409f289c57cb786915e00b9",
+      "stdout": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/native-correctness-edge-edge_verifier_view_test.stdout",
+      "stdout_sha256": "33ce3dc5cd7323c3e34fd0ec56a50b1342296fccd75a812ea010445ade6eb45e",
+      "stderr": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/native-correctness-edge-edge_verifier_view_test.stderr",
+      "stderr_sha256": "3c849bfdd4f9dd7ef1cbdf8178aa97569f7dbf9f295a03769cd1ad6b3b15afa1"
+    },
+    {
+      "variant": "edge",
+      "test": "multigraph_contraction_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/bin/edge-verifier/native-correctness/edge/multigraph_contraction_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "d7f96ef7b68d7c8573daea92d7f5f43da7bcbd55276fe48ba1341f8b4fbd939d",
+      "stdout": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/native-correctness-edge-multigraph_contraction_test.stdout",
+      "stdout_sha256": "73d0bdf13bf5c47d302b2825ef5921a4736d34160950772f5875733591f63020",
+      "stderr": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/native-correctness-edge-multigraph_contraction_test.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "variant": "edge",
+      "test": "regression_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/bin/edge-verifier/native-correctness/edge/regression_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "8b4bb69ac0aedf8e6c2599e56268d9653860e621c339cf641870dbff904262d5",
+      "stdout": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/native-correctness-edge-regression_test.stdout",
+      "stdout_sha256": "ceb1244312ac6700ed3f6c27a774e6780d06e3de4251c55a74b240be0ce59673",
+      "stderr": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/native-correctness-edge-regression_test.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "variant": "edge",
+      "test": "contraction_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/bin/edge-verifier/native-correctness/edge/contraction_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "972457e1646f98a1b53c0fe874ae289bcce6bf5de369a7f197dd26669c8f0646",
+      "stdout": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/native-correctness-edge-contraction_test.stdout",
+      "stdout_sha256": "05a683bc160ad41d441b986d9935c4cd760018ac2aafa6de1dc5561b89272bba",
+      "stderr": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/native-correctness-edge-contraction_test.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "variant": "edge",
+      "test": "simple_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/bin/edge-verifier/native-correctness/edge/simple_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "47d7fc45d82889738babb5c9bc3ba643ffb3ef35c9acf816d8dc3c6b4a99ee36",
+      "stdout": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/native-correctness-edge-simple_test.stdout",
+      "stdout_sha256": "5d48380038a8069a95022a025f93ff4061bd0e9b3e8caa1ae5beeeb8d2d42fad",
+      "stderr": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/native-correctness-edge-simple_test.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "variant": "edge",
+      "test": "core_attachment_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/bin/edge-verifier/native-correctness/edge/core_attachment_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "1ddeb88ae2359f7dbf1d83e7fd2cd16ff61f051966d16fdc97c778d9be11e2a5",
+      "stdout": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/native-correctness-edge-core_attachment_test.stdout",
+      "stdout_sha256": "733333ae0f9a48b7fdaad44ed281d9dd8edd7e1ea57029ec2074750ff73fb230",
+      "stderr": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/native-correctness-edge-core_attachment_test.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "paired_work": {
+    "status": "pass",
+    "pairs": 1344,
+    "fields_per_pair": 65,
+    "verifier_positive_pairs": 552,
+    "saved_kkt_edge_visits": 55776,
+    "saved_edge_materializations": 55776,
+    "identical_input_fingerprints_and_sorted_mst_ids": true,
+    "all_other_fields_identical": true,
+    "tuple_records": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/native-correctness-tuple-edge_verifier_view_test.stdout",
+    "tuple_records_sha256": "d3f5db98fd2d87c0d96ea9d107d7bfbbdb3072348d8b2aa9af598c20aa4e5bec",
+    "edge_records": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/native-correctness-edge-edge_verifier_view_test.stdout",
+    "edge_records_sha256": "33ce3dc5cd7323c3e34fd0ec56a50b1342296fccd75a812ea010445ade6eb45e",
+    "wrong_dispatch_negative_gate": "rejected"
+  },
+  "sanitizer_options": {}
+}

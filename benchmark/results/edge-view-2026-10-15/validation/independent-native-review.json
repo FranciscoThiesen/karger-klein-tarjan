@@ -1,0 +1,34 @@
+{
+  "schema": "edge_view_independent_native_review_v1",
+  "created_utc": "2026-10-15T06:24:18.673140+00:00",
+  "validation": "pass",
+  "source_review": "Root reviewed all three production diffs; agent multigraph_design separately reviewed typed query access and test oracle. No unrelated lifetime or filtering change.",
+  "seven_shared_object_files_and_hashes_identical": true,
+  "only_kkt_object_differs": true,
+  "harness_object_identical": true,
+  "source_binary_object_and_build_log_hashes_recomputed": true,
+  "native_profile": "arm64, 512 MiB stack",
+  "test_records_checked": [
+    {
+      "file": "native-correctness-tests.json",
+      "sha256": "42b05407109f3535be7f003659392c80d51c0f3d42b52fb1b9ec937af8464b6d",
+      "tests": 12
+    },
+    {
+      "file": "sanitizer-correctness-tests.json",
+      "sha256": "62fd850967509a8d6fe1242330d114f582006c0071bead304829589ea322ef58",
+      "tests": 12
+    },
+    {
+      "file": "final-object-harness-tests.json",
+      "sha256": "39e213dffca176137b6aeacd9ea793e541afa5becf30457bbbb9003f6b6dc4fd",
+      "tests": 2
+    }
+  ],
+  "binary_sha256": {
+    "tuple": "bd04b1c1813f1f5db67803d9d6213f28889c7bd781606239ab8daa0718aae141",
+    "edge": "2e2e89b7e8465e563886deff0bf2a9e62d9f08aee27a60dfd433895e8eb3318f"
+  },
+  "native_solver_executed_by_review": false,
+  "limitation": "The tuple verifier was refactored; this does not assert binary identity to the parent control."
+}

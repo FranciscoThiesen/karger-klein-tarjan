@@ -355,6 +355,9 @@ static void kkt_internal(problem& P, std::mt19937& rng, vector<int>& result)
     KKT_WORK_ADD(edge_materializations, H_MSF.size());
 
     // Find F-heavy edges
+#ifdef KKT_EXPERIMENT_EDGE_VIEW
+    const auto heavy_marks = verifier_detail::heavy_edge_marks(G.graph_edges, H_MSF, G.num_vertices);
+#else
     vector<tuple<int, int, int, int>> G_tuples;
     G_tuples.reserve(G.graph_edges.size());
     KKT_WORK_ADD(kkt_edge_visits, G.graph_edges.size());
@@ -364,6 +367,7 @@ static void kkt_internal(problem& P, std::mt19937& rng, vector<int>& result)
     }
 
     const auto heavy_marks = verifier_detail::heavy_edge_marks(G_tuples, H_MSF, G.num_vertices);
+#endif
 
     // Filter out heavy edges
     vector<Edge> relevant_edges;
