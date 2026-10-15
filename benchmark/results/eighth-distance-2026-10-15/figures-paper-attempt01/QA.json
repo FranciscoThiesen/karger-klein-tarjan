@@ -1,0 +1,25 @@
+{
+  "schema": "eighth_distance_paper_visual_review_v1",
+  "validation": "pass",
+  "reviewer": "multigraph_design",
+  "detail": "original",
+  "images": {
+    "paper_ratios_wall.png": "3e00c25d6bcaac8496812355f1d228b9d6e412db016d8168461ee3fe1b131596",
+    "paper_ratios_cpu.png": "b32f06ee76665ee6d26a80d7a199043c2fda89d751447803894cae6f62832658",
+    "paper_times_wall.png": "de53b12fd6e631014a4c32da71231e02d20f392b51c7c00693fca13311e3eccb",
+    "paper_times_cpu.png": "3721a656418d41f81325c2c40e748d3003c322a5040e001f1c1fde160fa57d78"
+  },
+  "root_second_visual_review": "pass: parent message reports all four original-resolution PNGs inspected",
+  "all_bound_inputs_outputs_rechecked_before_quiet_capture": true,
+  "archival_receipt": "../validation/paper-plots-attempt01.json",
+  "actual_exit_status": 0,
+  "elapsed_seconds": 2.349081167,
+  "owned_group_verified_empty": true,
+  "plotted_values_sha256": "cf6eb9257720c2a2ee598751ef90abbb9c6a0a66915592e1194f697cfa830df6",
+  "canonical_data_byte_identical_to_standalone": true,
+  "pooled_summaries": 264,
+  "graph_medians": 528,
+  "trial_range_endpoints": 528,
+  "native_solver_execution": false,
+  "final_pdf_page_scale_qa": "pending"
+}

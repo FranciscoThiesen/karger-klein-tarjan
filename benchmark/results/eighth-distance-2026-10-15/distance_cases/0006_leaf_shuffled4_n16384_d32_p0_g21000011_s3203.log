@@ -1,0 +1,21 @@
+Running six-algorithm retention control leaf_shuffled4_n16384_d32_p0 graph_seed=21000011 kkt_seed=3203
+generation_seconds=0.039332 reference_certificate_seconds=0.0899386
+reference_certificate_v1 {"case_id":"leaf_shuffled4_n16384_d32_p0","graph_seed":21000011,"kkt_seed":3203,"n":16384,"m":524288,"input_fingerprint":14803310204813624032,"topology_fingerprint":7634632024232098028,"validation":"pass"}
+        0.92 real         0.90 user         0.01 sys
+           111853568  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                8764  page reclaims
+                   1  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   0  voluntary context switches
+                  66  involuntary context switches
+          8744253572  instructions retired
+          3308329713  cycles elapsed
+            91144624  peak memory footprint

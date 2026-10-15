@@ -1,0 +1,51 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "docs/kkt-report/publication-tools/plot_distance_paper.py",
+    "--capture",
+    "benchmark/results/eighth-distance-2026-10-15/distance.json",
+    "--source-plot",
+    "benchmark/plot_eighth_distance.py",
+    "--standalone",
+    "benchmark/results/eighth-distance-2026-10-15/figures-attempt01",
+    "--audit",
+    "benchmark/results/eighth-distance-2026-10-15/validation/independent-numerical-audit-attempt01/audit.json",
+    "--output",
+    "benchmark/results/eighth-distance-2026-10-15/figures-paper-attempt01",
+    "--released"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "started_utc": "2026-10-15T18:55:24.787566+00:00",
+  "started_monotonic_ns": 21693333,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/plot_distance_paper.py": "f1dd86f18e45579a847950716bb187969f246572415560e5c48e64cb63c5bd51"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 33744,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 33744,
+    "members": [],
+    "monotonic_ns": 2370527375,
+    "utc": "2026-10-15T18:55:27.136387+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/docs/kkt-report/publication-tools/plot_distance_paper.py": "f1dd86f18e45579a847950716bb187969f246572415560e5c48e64cb63c5bd51"
+  },
+  "finished_utc": "2026-10-15T18:55:27.136613+00:00",
+  "finished_monotonic_ns": 2370774500,
+  "elapsed_seconds": 2.349081167,
+  "stdout": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/validation/paper-plots-attempt01.stdout",
+  "stdout_sha256": "9efe464e50fa311e3e342f57ad50ab967f891078ac9bf4c2decdc739c19a4095",
+  "stderr": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/validation/paper-plots-attempt01.stderr",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

@@ -1,0 +1,394 @@
+{
+  "schema": "eighth_distance_figures_v1",
+  "validation": "pass",
+  "capture": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance.json",
+  "input_sha256": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance.json": "91f574fc4b37dcaa0533a627a8e33af3f97134317c8f76f828ca767345644862",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance.csv": "4c13e81c5923db4c8c2d2e89eab471f9a012be6883e49e9a8607ea397f80e286",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/freeze.json": "3c8866b681c8133dc839dfe55a5e148c93353ee75ce1dc82499aebbed53f338a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-sampling-2026-10-15/freeze.json": "2be7556d15b58f3f65cc380ac22b67c57fdf8aea747d651b9d648c6a1aa59d2f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0001_leaf_distance4_n1024_d32_p0_g21000011_s3203.csv": "88d35c30d05b4242e132430f4ac2bae61a0d55f0fd8452e7bc9e2a53c2159b23",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0001_leaf_distance4_n1024_d32_p0_g21000011_s3203.log": "14a56c141b9caccc2f872a27ef3e66c6c47894168dce793958251f0a701595b6",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0001_leaf_distance4_n1024_d32_p0_g21000011_s3203.rss.jsonl": "e77f2941ead87a277db4f6d8c04c2c55aac6c812fd750db400d9e2223fb30ceb",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0002_leaf_shuffled4_n1024_d32_p0_g21000011_s3203.csv": "265942b20584dfef50e423db6f898a7c1e4258952ea2e302457295412950f766",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0002_leaf_shuffled4_n1024_d32_p0_g21000011_s3203.log": "c9593acc66e4853cf170a964820587debc2433581fe015eb5db3f0f824d24563",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0002_leaf_shuffled4_n1024_d32_p0_g21000011_s3203.rss.jsonl": "6a9091cd41abe988728c74f7b3dcf3c4f99ad6b5f33096c8bede0c4c3c56405d",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0003_leaf_distance4_n4096_d32_p0_g21000011_s3203.csv": "9e8c9ac3fefa31f6a373ed33aa4603a370a73ab793c2c51bfeef4d38c7348482",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0003_leaf_distance4_n4096_d32_p0_g21000011_s3203.log": "ce8ba2e637653f14f3c40946a81af3679af0bf80fe94dcc3b58333b6e6c89f74",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0003_leaf_distance4_n4096_d32_p0_g21000011_s3203.rss.jsonl": "872b27bc4f4c153baaf29f5ef604659506d6500620954cadc32d97e66abee7fd",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0004_leaf_shuffled4_n4096_d32_p0_g21000011_s3203.csv": "92fbb05afc44aaeb8e215997c4bffaae132fff5ffa634d3ebb35b2fad3541c20",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0004_leaf_shuffled4_n4096_d32_p0_g21000011_s3203.log": "f2b2ea5a65f2edf2cfa30dc7beb7c4aa6440bbf0aa0e548e789e62decb2a0aec",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0004_leaf_shuffled4_n4096_d32_p0_g21000011_s3203.rss.jsonl": "1b243ef5d22606d9fc3e3852244f7c6f586ef3dcf9258d043e07fc9681a459b4",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0005_leaf_distance4_n16384_d32_p0_g21000011_s3203.csv": "2285789ea5a2421cf4b9c5292f6dcac1e1d255c63197a2214535acc681e35a1f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0005_leaf_distance4_n16384_d32_p0_g21000011_s3203.log": "175f4e80d4fae22106b9e065527095c82468878001a9950c1507a4ed7117e1d2",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0005_leaf_distance4_n16384_d32_p0_g21000011_s3203.rss.jsonl": "9c20a80bd25e80bd0b3801266e677e8fd7f0cabbb68dd7c207ab24ed5a516402",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0006_leaf_shuffled4_n16384_d32_p0_g21000011_s3203.csv": "2d2d7e877ff2d16c54d675bceeda7d38c5f5c5f39dd2426e90e20840d057b2aa",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0006_leaf_shuffled4_n16384_d32_p0_g21000011_s3203.log": "d69ebefcdc34cc430e517ba9b21b40ba95144616661bfb5d546fadf13e5733bb",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0006_leaf_shuffled4_n16384_d32_p0_g21000011_s3203.rss.jsonl": "748298717346633a1c36b715ebc45594ad46cdc6e28ab9c8f9dc632ec268f75b",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0007_leaf_distance4_n65536_d32_p0_g21000011_s3203.csv": "1bf76a14d109704817400472e2938cc5e80b781ff0c23e2f5d0f675f6c07709a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0007_leaf_distance4_n65536_d32_p0_g21000011_s3203.log": "3fb36549c726262adb88239f3960aa76a3dcec6ae00ffdf165512680f203e334",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0007_leaf_distance4_n65536_d32_p0_g21000011_s3203.rss.jsonl": "5f5bb3dd1a255ab4483c3be987784adab8334a0c815028a16b2320b9529084fc",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0008_leaf_shuffled4_n65536_d32_p0_g21000011_s3203.csv": "7398e199d7a2815bffefeadf895418544173ee7cc801fa92e44e003df72056fc",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0008_leaf_shuffled4_n65536_d32_p0_g21000011_s3203.log": "a4984c6a7d41bdac13d653df15b8c15cbb7c7849a70d7188f8d65ec1d4c337fd",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0008_leaf_shuffled4_n65536_d32_p0_g21000011_s3203.rss.jsonl": "f3702a45e14b86cf529f0b51790ddcba95f34cb305135194bcc239ccf0f43020",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0009_leaf_distance4_n262144_d32_p0_g21000011_s3203.csv": "9c1af283214c4a5f44c7a7bff17bf87de7f4f319226e5a73798440a4994f69b2",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0009_leaf_distance4_n262144_d32_p0_g21000011_s3203.log": "1f8ac9f97ff7b7cf9dc4934012e0ef0bffa10f6c8eb99bea2045d8ce076cf80a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0009_leaf_distance4_n262144_d32_p0_g21000011_s3203.rss.jsonl": "5b4130767a4e1d3df5b2b1c3dc0e11da9c739a0049e73da20db71226a66af615",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0010_leaf_shuffled4_n262144_d32_p0_g21000011_s3203.csv": "4bcafc162c9b19239ba041d7dbc7ac4f7150672eec6e2888398e47d2e138a142",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0010_leaf_shuffled4_n262144_d32_p0_g21000011_s3203.log": "589b76edc7913a73992341cda366591426f2e6c10861266408816b8e9c43ef30",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0010_leaf_shuffled4_n262144_d32_p0_g21000011_s3203.rss.jsonl": "047bee973520c42bea9f243e14abc494c9117364f677c1730a9a5162c35d1178",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0011_leaf_distance4_n1048576_d32_p0_g21000011_s3203.csv": "030fcafa703e0f9280f5954fa8f3573828f493aa37740513274ffe78d6a96771",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0011_leaf_distance4_n1048576_d32_p0_g21000011_s3203.log": "dee8ab0fa0a3ca6e6d0fc273d076cb8078b24eadfc8b12ee23712f61accc39c0",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0011_leaf_distance4_n1048576_d32_p0_g21000011_s3203.rss.jsonl": "b0129885f306c1dd01deff426d1fc3a9cc0cb919d85a137b97115b57c0abb527",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0012_leaf_shuffled4_n1048576_d32_p0_g21000011_s3203.csv": "4982f0e0cec7930c503d5453191a0b9433032fdac9ebb4574c72b834b7faf579",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0012_leaf_shuffled4_n1048576_d32_p0_g21000011_s3203.log": "2595dbe8762624c9a2d921d305a4ac0526394ffda5fa48fdd473a07b0c58cf89",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0012_leaf_shuffled4_n1048576_d32_p0_g21000011_s3203.rss.jsonl": "c2a8c2b8c46976e2815abdae79c761d2bb33ece7cee7da12b4809d4c7d534e2d",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0013_leaf_shuffled4_n1048576_d32_p0_g21000041_s3203.csv": "4be833880847ffb4d8e5fdd5aacf21b1d957b2800d317b77a9e96ef877a8955a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0013_leaf_shuffled4_n1048576_d32_p0_g21000041_s3203.log": "f8223ea4f55e63fcbd1e90ac07f24c5213b1eb259d6965732359c1caea33cc41",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0013_leaf_shuffled4_n1048576_d32_p0_g21000041_s3203.rss.jsonl": "233d88c09fda0be5ad86b51b0cbe2cc9b57cfb3f90b0e2765f25501b66d660da",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0014_leaf_distance4_n1048576_d32_p0_g21000041_s3203.csv": "759c57b09c14aa43f2666117fd87f1ed0019e9a09d2f18d09e698fc4c717a134",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0014_leaf_distance4_n1048576_d32_p0_g21000041_s3203.log": "c8a94ad7a5c1a4fb91420f88a5554630545ba8a591ccf1e21ade6f7e2917671c",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0014_leaf_distance4_n1048576_d32_p0_g21000041_s3203.rss.jsonl": "b8e0462faf885a3a374621c06696acf9d59f6c444285dbbd8452978f384c0f69",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0015_leaf_shuffled4_n262144_d32_p0_g21000041_s3203.csv": "1315706bb7dc7c49218b25b5ae1b511ab88217e4d33feb74e725f91d3fb6fd40",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0015_leaf_shuffled4_n262144_d32_p0_g21000041_s3203.log": "c699f98c93734fd8c98ab7883ed585290a6bc219e1498bc5769d3e392d4061bd",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0015_leaf_shuffled4_n262144_d32_p0_g21000041_s3203.rss.jsonl": "d71bf967eddbc662ad248435ec735cf7ce855c6a6a3f038d6ccac0b23c6bb5af",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0016_leaf_distance4_n262144_d32_p0_g21000041_s3203.csv": "299b14b678521aef788f7e14c5fd3ac22cad0e8a5d66e47f36994e66ca9feff2",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0016_leaf_distance4_n262144_d32_p0_g21000041_s3203.log": "935f45f255b45242f097a565ed729c9e6784fa157d4e61a9c8aac8b00f23cf11",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0016_leaf_distance4_n262144_d32_p0_g21000041_s3203.rss.jsonl": "632cd597c8d9d50977d6c49655c9930aedbc460f86387133be37bf5b4f721b73",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0017_leaf_shuffled4_n65536_d32_p0_g21000041_s3203.csv": "19f7fd86aebee427886ffe22fed194329be5d40cf92cde7fa87d6e3a72bab65c",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0017_leaf_shuffled4_n65536_d32_p0_g21000041_s3203.log": "0eafacd3b194fa0eadb3a25cf5faf8011f42ea38eefb97bf111d2ec280afc326",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0017_leaf_shuffled4_n65536_d32_p0_g21000041_s3203.rss.jsonl": "f7427c0b06abba9d54dd8af32ab6417600ad482a2c71cd532892d6104c381cb0",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0018_leaf_distance4_n65536_d32_p0_g21000041_s3203.csv": "eb3957f31f901aec3af68307b4cf9aa3efadd901bf0209746a6e645c9f7e9df9",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0018_leaf_distance4_n65536_d32_p0_g21000041_s3203.log": "531a662eb2e2aad671c4a9e38769fa57fa857eb54ebd30d2de13b948c9475da3",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0018_leaf_distance4_n65536_d32_p0_g21000041_s3203.rss.jsonl": "c9a396c7688bcb022ca77e3cf3adc0e6c624ca847eb4eacf2795256040ca6b30",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0019_leaf_shuffled4_n16384_d32_p0_g21000041_s3203.csv": "3e9e4994ddff7bbbecd09279557cbe908961b10ba82c05270cd4db194a6bfc44",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0019_leaf_shuffled4_n16384_d32_p0_g21000041_s3203.log": "9db6ad5ea3e59a52d856929452ba645b195eeb1b2959d3fdbe24754fd6652f0c",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0019_leaf_shuffled4_n16384_d32_p0_g21000041_s3203.rss.jsonl": "31d22556df42f5f06a3073608d7bd49d83aec72863d3ce9a37485ad57ec753e2",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0020_leaf_distance4_n16384_d32_p0_g21000041_s3203.csv": "ef4d4af99d37ff98e6878e0bb1627567d7cd1d3e962ae01301f00cea854bec40",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0020_leaf_distance4_n16384_d32_p0_g21000041_s3203.log": "ee1027b1e9d870fbe191be365cfdb3c428595c14fb205e8733dbf1d28b69b1c0",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0020_leaf_distance4_n16384_d32_p0_g21000041_s3203.rss.jsonl": "6ad2509f3867266ca55faf0b5cf055cf0f15871943cb4f7ae231e5a5bf9d53b3",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0021_leaf_shuffled4_n4096_d32_p0_g21000041_s3203.csv": "0091ef7bd60762f8e913223406cc6a14a65bac0a554c13b00f68a846acbeccdd",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0021_leaf_shuffled4_n4096_d32_p0_g21000041_s3203.log": "b9c635c2684568553fe7fc4e3e9f214db06d6ec6edc3156356ab64a6cb429854",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0021_leaf_shuffled4_n4096_d32_p0_g21000041_s3203.rss.jsonl": "23cabbb0668ace113448fee8925f7204333a7ba4dfa5d3a736e9528b2b88c945",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0022_leaf_distance4_n4096_d32_p0_g21000041_s3203.csv": "dd9d53fc2190123dbf0feeb6bd06026c94d2ff1ed81f42fe0a6dfb70448bb9b9",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0022_leaf_distance4_n4096_d32_p0_g21000041_s3203.log": "9ae181627a03765a1098b7bc61948698775d31836a18efd86b528840240027be",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0022_leaf_distance4_n4096_d32_p0_g21000041_s3203.rss.jsonl": "4180e29571295d09e8ddc7e5030ee563819c959cc675a2e058f109e741d1c3cb",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0023_leaf_shuffled4_n1024_d32_p0_g21000041_s3203.csv": "4f1438119cfc643274397ab470ac909ffdeb0dba611728539fd71989f2ba2480",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0023_leaf_shuffled4_n1024_d32_p0_g21000041_s3203.log": "5a6d24f6da0ceb32d674fb84d9706c70a52fca35d9214054ddf1ac0fa1e28f48",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0023_leaf_shuffled4_n1024_d32_p0_g21000041_s3203.rss.jsonl": "3f533632788d854efaa05cae5cafeb7e0fe5679973ec26b0636d2112bdfdd0bc",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0024_leaf_distance4_n1024_d32_p0_g21000041_s3203.csv": "04ee639c8a65ecae5eda686696b9381a66fb228255c2e73ac376dd6c836b5321",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0024_leaf_distance4_n1024_d32_p0_g21000041_s3203.log": "5f5ebbfc1dd23992822ae8373682ab9536609f40bfdc24f788fd63b03f1d78a7",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-distance-2026-10-15/distance_cases/0024_leaf_distance4_n1024_d32_p0_g21000041_s3203.rss.jsonl": "3330fd7301aea8113416cb02c130deaced55e4ab0c0e285856f48f269406ff75",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_mst_search.py": "843d65154d232bc12a946ad7d8793ab26840f7785507286a6e4d8ed09dfcad80",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/analyze_mst_search.py": "91d3fcad871444e9325c1465782365b5c3ed08fb2344aeeb62fbfc18254f5ba6",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_crossover.py": "1669d3b761e0d4c09c432382c3a2e8738c0031c1c9e6dc69cfcb7734809a052f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/analyze_continuation.py": "7a0afa5fe802516cb5ec27a7d567a0875c66807aa4a04ce0ff752f0bc31b9168",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/crossover_clocks.py": "725d469933eaf5ead32a38bf52b9f32e46a7ee3d4e386777c257c1ab3929fc0b",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_crossover_baselines.py": "2291db9114448516fc5ffb6c4b0fd119d23741bcfa2275ad7f25996c3b73921e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_multigraph_experiment.py": "f039d2523e212d9431ed9e062459a6eb3cf2e3ebf463c49d4d57097bcef4fd8e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/recover_mst_search.py": "73f02f494f29b2f9183c9fc889dcda73444fe2ca4a240469a7d57dfec226058b",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/audit_attachment_recovery_power.py": "e7a72cc054c6cfbcb1c6d5c6686e2332864632a12e10b60a9d3f16b6a5ca0c61",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/audit_mst_search_power.py": "566530914ee74564c5d5ba640b700f5ecfccc5927ac5ed046cb6e3bbdbd225c5",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_retention_control.py": "f913b9b0721102489f17eafe9bc82d4886ef3bbfad9d9f2d4963ee84f5df4f85",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_edge_view_experiment.py": "67d018d74e6658988421b98ae613ce5e649b4f80e5436fc8776540d2298fd227",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_compressed_queries.py": "6e42a9f11e395960bbba9e96a9bdbce626987f80c26764db9f260236e07d72ba",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_eighth_sampling.py": "6a782a9802c44558d840860c31aff2586f980c662118a223f3da8a95b213fab1",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/run_eighth_distance.py": "7c582ef62bc4af5567b509f16fe9c1950b53f1b31621b8dfda1de7f11b2ff4d2",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/plot_eighth_distance.py": "f31d9ea676d5d9dbbe489ddd73fc51a6ccfe0ae6d5583c3019d025e5035e716e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/plot_retention_control.py": "a19d4edf72aea875885aa3494ca268038d2654531b9e3c670b21355e2b7e635a"
+  },
+  "matplotlib_version": "3.9.4",
+  "checked_outputs": 1008,
+  "timed_outputs": 864,
+  "warmup_outputs": 144,
+  "rows_removed": 0,
+  "rows_adjusted": 0,
+  "graph_realizations": 2,
+  "sampling_seeds": [
+    3203
+  ],
+  "trials_per_case": 12,
+  "flagged_calls_retained": 0,
+  "coverage": [
+    {
+      "figure": "ratios_wall",
+      "family": "leaf_distance4",
+      "case_ids": [
+        "leaf_distance4_n1024_d32_p0",
+        "leaf_distance4_n4096_d32_p0",
+        "leaf_distance4_n16384_d32_p0",
+        "leaf_distance4_n65536_d32_p0",
+        "leaf_distance4_n262144_d32_p0",
+        "leaf_distance4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 30,
+      "graph_median_points": 60,
+      "trial_range_endpoints": 60,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.1642357870314235,
+        2.089923720863416
+      ]
+    },
+    {
+      "figure": "ratios_wall",
+      "family": "leaf_shuffled4",
+      "case_ids": [
+        "leaf_shuffled4_n1024_d32_p0",
+        "leaf_shuffled4_n4096_d32_p0",
+        "leaf_shuffled4_n16384_d32_p0",
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n262144_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 30,
+      "graph_median_points": 60,
+      "trial_range_endpoints": 60,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.18840291542634713,
+        4.1734210613554446
+      ]
+    },
+    {
+      "figure": "ratios_cpu",
+      "family": "leaf_distance4",
+      "case_ids": [
+        "leaf_distance4_n1024_d32_p0",
+        "leaf_distance4_n4096_d32_p0",
+        "leaf_distance4_n16384_d32_p0",
+        "leaf_distance4_n65536_d32_p0",
+        "leaf_distance4_n262144_d32_p0",
+        "leaf_distance4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 30,
+      "graph_median_points": 60,
+      "trial_range_endpoints": 60,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.1642357870314235,
+        2.089923720863416
+      ]
+    },
+    {
+      "figure": "ratios_cpu",
+      "family": "leaf_shuffled4",
+      "case_ids": [
+        "leaf_shuffled4_n1024_d32_p0",
+        "leaf_shuffled4_n4096_d32_p0",
+        "leaf_shuffled4_n16384_d32_p0",
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n262144_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 30,
+      "graph_median_points": 60,
+      "trial_range_endpoints": 60,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.18840291542634713,
+        4.1734210613554446
+      ]
+    },
+    {
+      "figure": "times_wall",
+      "family": "leaf_distance4",
+      "case_ids": [
+        "leaf_distance4_n1024_d32_p0",
+        "leaf_distance4_n4096_d32_p0",
+        "leaf_distance4_n16384_d32_p0",
+        "leaf_distance4_n65536_d32_p0",
+        "leaf_distance4_n262144_d32_p0",
+        "leaf_distance4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 36,
+      "graph_median_points": 72,
+      "trial_range_endpoints": 72,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.00030380520572705863,
+        26.53149532971279
+      ]
+    },
+    {
+      "figure": "times_wall",
+      "family": "leaf_shuffled4",
+      "case_ids": [
+        "leaf_shuffled4_n1024_d32_p0",
+        "leaf_shuffled4_n4096_d32_p0",
+        "leaf_shuffled4_n16384_d32_p0",
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n262144_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 36,
+      "graph_median_points": 72,
+      "trial_range_endpoints": 72,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.0001309940526217673,
+        21.042205292845246
+      ]
+    },
+    {
+      "figure": "times_cpu",
+      "family": "leaf_distance4",
+      "case_ids": [
+        "leaf_distance4_n1024_d32_p0",
+        "leaf_distance4_n4096_d32_p0",
+        "leaf_distance4_n16384_d32_p0",
+        "leaf_distance4_n65536_d32_p0",
+        "leaf_distance4_n262144_d32_p0",
+        "leaf_distance4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 36,
+      "graph_median_points": 72,
+      "trial_range_endpoints": 72,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.00030380520572705863,
+        26.53149532971279
+      ]
+    },
+    {
+      "figure": "times_cpu",
+      "family": "leaf_shuffled4",
+      "case_ids": [
+        "leaf_shuffled4_n1024_d32_p0",
+        "leaf_shuffled4_n4096_d32_p0",
+        "leaf_shuffled4_n16384_d32_p0",
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n262144_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 36,
+      "graph_median_points": 72,
+      "trial_range_endpoints": 72,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.0001309940526217673,
+        21.042205292845246
+      ]
+    }
+  ],
+  "legends": {
+    "ratios_wall": [
+      "Compacting Bor\u016fvka",
+      "Retained-edge Bor\u016fvka",
+      "Kruskal",
+      "Prim",
+      "Original Bor\u016fvka",
+      "Two graph medians",
+      "Full trial range"
+    ],
+    "ratios_cpu": [
+      "Compacting Bor\u016fvka",
+      "Retained-edge Bor\u016fvka",
+      "Kruskal",
+      "Prim",
+      "Original Bor\u016fvka",
+      "Two graph medians",
+      "Full trial range"
+    ],
+    "times_wall": [
+      "KKT (private p=1/8)",
+      "Compacting Bor\u016fvka",
+      "Retained-edge Bor\u016fvka",
+      "Kruskal",
+      "Prim",
+      "Original Bor\u016fvka",
+      "Two graph medians",
+      "Full trial range"
+    ],
+    "times_cpu": [
+      "KKT (private p=1/8)",
+      "Compacting Bor\u016fvka",
+      "Retained-edge Bor\u016fvka",
+      "Kruskal",
+      "Prim",
+      "Original Bor\u016fvka",
+      "Two graph medians",
+      "Full trial range"
+    ]
+  },
+  "control_normalization": false,
+  "confidence_intervals": false,
+  "interpolated_crossover": false,
+  "matched_clock_axes": true,
+  "output_sha256": {
+    "ratios_wall.png": "37111bd208ff6c27492b8e2f93cecdc18e2b264f7748cb9da5c5c28c370c5b8e",
+    "ratios_wall.svg": "de2201862d9e43c89b3fc916351626337ca42e403279fdb17d7d5154463649ed",
+    "ratios_wall.pdf": "77f2638edce551ae2ac60487d8eb3b31ed9de1b88b7a415804a19241667371f8",
+    "ratios_cpu.png": "bcf3888d096ec986593b72d26be41425a4aa7f95757c5cfca6f5c2423fe25537",
+    "ratios_cpu.svg": "558457130f0d29fa03e6d0f5c8d579e215fa1027012bcdf7a2b874b821021ceb",
+    "ratios_cpu.pdf": "b9f72bf4e20389c46374fdf6bb72ef8ad2031c39ae8ce1cd5b8c2f6680260386",
+    "times_wall.png": "efb01d634de99ffce093844e69d3a42f38e59def6663d54a7826075fb447695d",
+    "times_wall.svg": "29929c7cee11099131bd35fed4364e1a67d5f73be7b912b79ab00a445ee35a2d",
+    "times_wall.pdf": "366dd00d8507291356cf17456ba1cd8ef0a9a843897a79d81c2a57c1ccb95242",
+    "times_cpu.png": "707a1056bbe6c03d9d9c1fe00b48612f1a308afd433f564ac67486612ae49019",
+    "times_cpu.svg": "b750b26fa1d07015494968eb730b4b9efda775a400564e3b697ab158ca215c68",
+    "times_cpu.pdf": "1863fe1cceafa31859d0cb817e01ac5501845d057179f8c0deda75881e154090",
+    "plotted_values.json": "cf6eb9257720c2a2ee598751ef90abbb9c6a0a66915592e1194f697cfa830df6"
+  },
+  "visual_review": "pending: inspect all four PNGs before publication"
+}
