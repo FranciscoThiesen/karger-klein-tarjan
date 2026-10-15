@@ -1,0 +1,68 @@
+{
+  "validation": "pass",
+  "outputs": 672,
+  "pairs": 960,
+  "strong_crossovers": [],
+  "individual_wins": [
+    {
+      "comparator": "compacting_boruvka",
+      "metric": "wall",
+      "individual_wins": 94,
+      "individual_pairs": 96
+    },
+    {
+      "comparator": "compacting_boruvka",
+      "metric": "cpu",
+      "individual_wins": 94,
+      "individual_pairs": 96
+    },
+    {
+      "comparator": "multigraph_boruvka",
+      "metric": "wall",
+      "individual_wins": 0,
+      "individual_pairs": 96
+    },
+    {
+      "comparator": "multigraph_boruvka",
+      "metric": "cpu",
+      "individual_wins": 0,
+      "individual_pairs": 96
+    },
+    {
+      "comparator": "kruskal",
+      "metric": "wall",
+      "individual_wins": 9,
+      "individual_pairs": 96
+    },
+    {
+      "comparator": "kruskal",
+      "metric": "cpu",
+      "individual_wins": 9,
+      "individual_pairs": 96
+    },
+    {
+      "comparator": "prim",
+      "metric": "wall",
+      "individual_wins": 0,
+      "individual_pairs": 96
+    },
+    {
+      "comparator": "prim",
+      "metric": "cpu",
+      "individual_wins": 0,
+      "individual_pairs": 96
+    },
+    {
+      "comparator": "boruvka",
+      "metric": "wall",
+      "individual_wins": 0,
+      "individual_pairs": 96
+    },
+    {
+      "comparator": "boruvka",
+      "metric": "cpu",
+      "individual_wins": 0,
+      "individual_pairs": 96
+    }
+  ]
+}

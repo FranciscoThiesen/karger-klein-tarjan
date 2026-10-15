@@ -92,8 +92,10 @@ the removed tuple vector used `reserve`, not value-initializing `resize`.
 
 The resulting runtime reduction is measured here; it is not inferred from an
 unweighted sum of heterogeneous counters. The remaining overhead needs further
-investigation. A separate density search is prepared with ordered and shuffled
-core weights. A [KKT-only profiling attempt](profile/README.md) failed because
+investigation. The subsequent [density search](../density-search-2026-10-15/README.md)
+with ordered and shuffled core weights is complete; it finds no crossover
+against retained-edge Borůvka through 67 million edges.
+A [KKT-only profiling attempt](profile/README.md) failed because
 macOS could not read thread state; it released zero KKT calls and establishes
 no hotspot result. The [query-storage proposal](NEXT_QUERY_STORAGE_EXPERIMENT.md)
 also remains unimplemented and unmeasured.

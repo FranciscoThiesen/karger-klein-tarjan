@@ -1,0 +1,22 @@
+{
+  "schema": "independent_density_audit_execution_v1",
+  "command": [
+    "python3",
+    "-B",
+    "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/density-search-2026-10-15/validation/independent_numerical_audit.py",
+    "--capture",
+    "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/density-search-2026-10-15/search.json",
+    "--analysis-dir",
+    "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/density-search-2026-10-15/analysis"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-edge-verifier-view",
+  "started_utc": "2026-10-15T08:23:12.879480+00:00",
+  "finished_utc": "2026-10-15T08:23:13.189626+00:00",
+  "elapsed_monotonic_ns": 309495500,
+  "exit_status": 0,
+  "validation": "pass",
+  "native_execution": false,
+  "script_sha256": "34dd29ca0a741e8fd96ced7cbc56044891991cc97cd43d3d8f608a7c85950dae",
+  "log": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/density-search-2026-10-15/validation/independent-audit-attempt01.log",
+  "log_sha256": "9a534214635d2d0121e883f45aa4e76f4d9d80c58a698070ce36704581ca76ec"
+}
