@@ -1,0 +1,28 @@
+{
+  "schema": "packed_work_preparation_v1",
+  "status": "pass",
+  "command": [
+    "python3",
+    "-B",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/work/collect.py",
+    "prepare",
+    "--timing-capture",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired.json",
+    "--freeze",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/work/freeze.json"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-packed-sampling",
+  "collector_sha256": "77ba37a4a5d3d6fa7262b92f25ff624b42d90000f8a511c23bd01b7f2cfc5994",
+  "started_utc": "2026-10-15T09:55:43.362270+00:00",
+  "native_execution": false,
+  "timeout_seconds": 180,
+  "process_group": 20544,
+  "exit_status": 0,
+  "owned_group_known_empty": true,
+  "elapsed_seconds": 0.7315767090767622,
+  "finished_utc": "2026-10-15T09:55:44.096145+00:00",
+  "log": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/work/prepare-attempt01.log",
+  "log_sha256": "4c88157ea269d234b3100eaa1d5b6fd3cf345ec23c0d118c832dab75813d6397",
+  "freeze": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/work/freeze.json",
+  "freeze_sha256": "003c6c8090a7b2fe6176fb940f96f25a3187d7a502236edd9846163d246def45"
+}

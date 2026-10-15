@@ -1,0 +1,19 @@
+{
+  "status": "pass",
+  "performance_executed": false,
+  "same_native_source_inventory": true,
+  "shared_seven_objects_and_harness": true,
+  "all_recorded_hashes_match": true,
+  "owned_group_counts": {
+    "benchmark/results/packed-sampling-2026-10-15/validation/final-object-harness-owned-groups.json": 5,
+    "benchmark/results/packed-sampling-2026-10-15/validation/timing-build-owned-groups.json": 12,
+    "benchmark/results/packed-sampling-2026-10-15/validation/native-correctness-owned-groups.json": 52,
+    "benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-owned-groups.json": 52,
+    "benchmark/results/packed-sampling-2026-10-15/work/owned-groups.json": 11
+  },
+  "owned_groups_confirmed_empty": 132,
+  "timing_binary_sha256": {
+    "scalar": "9b53b74751bf4ff68383b36989223bc3ffa5a070b61fc1eba763429e264d1ac2",
+    "packed": "89aceec1793323d0d6756c5cc191ac2f1f8a77e69324ade1d7d53abaca51974b"
+  }
+}

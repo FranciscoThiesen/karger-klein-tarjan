@@ -1,0 +1,925 @@
+{
+  "schema": "packed_sampling_figures_v1",
+  "validation": "pass",
+  "capture": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired.json",
+  "input_sha256": {
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired.json": "bd8db21ad6e857c5c1f0d2370fe85c9444d5b666211b46733522e32e2c936252",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired.csv": "45d5fe1ee577a01e6b6be1996be3b266d1f2ad8f999e325b7e7dcc5f3621c632",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/freeze.json": "a7c42edbf1dc13c46385ba020c641b0fe3a520c8b8328d573e5a128c90158f10",
+    "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/freeze.json": "f976a7d61650f5aaf8e7221c7684461e36bcb51492347f45a56497b6b1cee306",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0001_scalar_leaf_hierarchy4_n65536_d32_p0_g7000003_s1601.csv": "a5ef3fb6b9751fbd49b47d07989ea8511e31b0639c6320ce62b79137ce4a54ed",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0001_scalar_leaf_hierarchy4_n65536_d32_p0_g7000003_s1601.log": "4f226a793ae434818e6c020ef7215e53f55e88617bfc702dc705789be3a71a8d",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0001_scalar_leaf_hierarchy4_n65536_d32_p0_g7000003_s1601.rss.jsonl": "2c9586d18832d691e3501071681f1bd9f240c7bfec15cfc2307a41920a3d04d3",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0002_packed_leaf_hierarchy4_n65536_d32_p0_g7000003_s1601.csv": "5b9109cead909a877f175995810c8e0251f80fa279a0b4f3fb75e6926a91afd8",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0002_packed_leaf_hierarchy4_n65536_d32_p0_g7000003_s1601.log": "b42efc3ab13db975e459346d0f5f2be760cd6efe426cda097a1da7080226b265",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0002_packed_leaf_hierarchy4_n65536_d32_p0_g7000003_s1601.rss.jsonl": "53f680d21c758fd2be8d0d6e23eab7655214eb49fbd18cde70c8a342a6913087",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0003_scalar_leaf_shuffled4_n65536_d32_p0_g7000003_s1601.csv": "3e30782d307e160213f42efe8ad206db0c2440564f61868ac0af528454011375",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0003_scalar_leaf_shuffled4_n65536_d32_p0_g7000003_s1601.log": "0dd1dd2d95e9d956d9a2546dcdd68c58436f27ab0ed6c5924ed7d362e5ea1639",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0003_scalar_leaf_shuffled4_n65536_d32_p0_g7000003_s1601.rss.jsonl": "070ece69100ffbaf6362a7d6ae8ab05f862dbbe4c482a464aef1694eb45031de",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0004_packed_leaf_shuffled4_n65536_d32_p0_g7000003_s1601.csv": "2db7cb69748bc77a72af4dbda0cff548aa107e1189b7c21f4ab592a4d465ea71",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0004_packed_leaf_shuffled4_n65536_d32_p0_g7000003_s1601.log": "a940b8c6b216f023b4e58c5efd4da4eab66bd6683df8264d0aef4c139704bdc1",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0004_packed_leaf_shuffled4_n65536_d32_p0_g7000003_s1601.rss.jsonl": "2eace85ba4ddeb4b71cb65913b392f24f6ba9e7033317e68a0029bd2fd802b08",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0005_scalar_leaf_hierarchy4_n1048576_d32_p0_g7000003_s1601.csv": "7dd346228c7d439345ca07f33a60ba3ec90d5f907a6a82dca0059ebe8e71984d",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0005_scalar_leaf_hierarchy4_n1048576_d32_p0_g7000003_s1601.log": "131e85e8466db52cbba507f66804ae04533c38666f66b395b3325e6e16026e39",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0005_scalar_leaf_hierarchy4_n1048576_d32_p0_g7000003_s1601.rss.jsonl": "e729a70eab731a15299116f2a0059d1ccf26ea83cb8455065938ad0f18330da3",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0006_packed_leaf_hierarchy4_n1048576_d32_p0_g7000003_s1601.csv": "e618daf169ce43d6c008fecc60eb949a954fdf7e927a00a510741df5a50b1c6a",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0006_packed_leaf_hierarchy4_n1048576_d32_p0_g7000003_s1601.log": "3359330c2aafe798bea1e46eb020355eaf7788e0926461df3281dcb1cbaed222",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0006_packed_leaf_hierarchy4_n1048576_d32_p0_g7000003_s1601.rss.jsonl": "88e793b547f0ca57273cf7f656d6e5a44b8b377e48adcc3b211280b26f20ed49",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0007_scalar_leaf_shuffled4_n1048576_d32_p0_g7000003_s1601.csv": "01927c61b39b42456aac69f8350a12dbe0a3c32d7215fcb420bc2a6fd828be5d",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0007_scalar_leaf_shuffled4_n1048576_d32_p0_g7000003_s1601.log": "22599b9ef0f443fc89e0b999d38eefed6863721efdf83608fabe1215605c0e6a",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0007_scalar_leaf_shuffled4_n1048576_d32_p0_g7000003_s1601.rss.jsonl": "ca350900883c99a1d8215b7c7112506619504b0dffd61e097d89f6387705e571",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0008_packed_leaf_shuffled4_n1048576_d32_p0_g7000003_s1601.csv": "b8b5e08bf23cba5712bd8d150c01882ca476cc55067b2f7ffb5e578273d6dd0b",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0008_packed_leaf_shuffled4_n1048576_d32_p0_g7000003_s1601.log": "884b2053296f55c8988cb1bd6cf0e36f5907f9253d7c23988d4ffed981a4082f",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0008_packed_leaf_shuffled4_n1048576_d32_p0_g7000003_s1601.rss.jsonl": "b55a73cfbc860166cad6622c52ee3696e7d4a5a205557ba02878087808380f95",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0009_scalar_gnm_random_n4096_d16_p0_g7000003_s1601.csv": "c0165ee03a083617624e6676c3b69d8839a5572dc2d9af21a9453f3580b498e5",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0009_scalar_gnm_random_n4096_d16_p0_g7000003_s1601.log": "0dd3157ad3917beb4c128f8f685401c24ae37d3d697d58ccf7a6044e1a7267eb",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0009_scalar_gnm_random_n4096_d16_p0_g7000003_s1601.rss.jsonl": "b1e3ae2b90e327ae125d7b81459403e3613bfe0301454cf312e398fe1bbfaf0b",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0010_packed_gnm_random_n4096_d16_p0_g7000003_s1601.csv": "6bc9762eda19ea9e5d0b4a33f33ca084f4b9531441fb6b39faace3dd02c4db4f",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0010_packed_gnm_random_n4096_d16_p0_g7000003_s1601.log": "bc053f36eb0dd31a8934cef91f3365117647b3c5d3cde174083dd6efb8e5313a",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0010_packed_gnm_random_n4096_d16_p0_g7000003_s1601.rss.jsonl": "f528a65fa7cf045c0b35bbaa2ebcd6adc530fb28bd1adaaf3716c58e0168817f",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0011_scalar_gnm_random_n1048576_d16_p0_g7000003_s1601.csv": "87051042c143440ed10d1e967ff9ba36f3bd591213e0daa6fd722dceff76bbdc",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0011_scalar_gnm_random_n1048576_d16_p0_g7000003_s1601.log": "7f43b046ca1e8f07f64d8e3b73a362db64405b07b26bfdd127e6a59e8c372287",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0011_scalar_gnm_random_n1048576_d16_p0_g7000003_s1601.rss.jsonl": "07783fbfd24e0fbb7181bda6e2046837637144df3ea0b0ccc406e83436ee9443",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0012_packed_gnm_random_n1048576_d16_p0_g7000003_s1601.csv": "8be43053db53a41268ef07b071a10de2fa46bdce0593372f097e39fc646bac97",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0012_packed_gnm_random_n1048576_d16_p0_g7000003_s1601.log": "38f210d8415464353519fa647bf8441bfdce6941412b1f835594503075d86a70",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0012_packed_gnm_random_n1048576_d16_p0_g7000003_s1601.rss.jsonl": "514dfc01e27aa9970ec6163f80a3b80b5f5e51bacc3278656bfa1b937d256043",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0013_packed_leaf_hierarchy4_n65536_d32_p0_g7000003_s1613.csv": "9e981d8af914d373ef0faec81f6588064c8e5e3728f0f4a6ceb08ab349e1c394",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0013_packed_leaf_hierarchy4_n65536_d32_p0_g7000003_s1613.log": "883f3691ac0c542e85f2d36adce8f868ea66df200c063e3768962c19e82192ea",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0013_packed_leaf_hierarchy4_n65536_d32_p0_g7000003_s1613.rss.jsonl": "c1bf214b87de60cfbe57c70f6cec7b7e67ff2e9715533e6c439eb74428db2a20",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0014_scalar_leaf_hierarchy4_n65536_d32_p0_g7000003_s1613.csv": "49d11615be5a5f20eca7ba0b404abf3d5b22782595912b1de4af8c0e99a90b74",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0014_scalar_leaf_hierarchy4_n65536_d32_p0_g7000003_s1613.log": "f11ffeb87b794e68515e7b8d8bf655d48370868ac6b753ae39a8a4e7e9e2409e",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0014_scalar_leaf_hierarchy4_n65536_d32_p0_g7000003_s1613.rss.jsonl": "4217ab2a703f12b189a98ae6fab046691db93ba07181c3d170687b70b35493a8",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0015_packed_leaf_shuffled4_n65536_d32_p0_g7000003_s1613.csv": "a639be3bbfc9078955e1038496e000c642a6888f6b878ec0e0c730604dc49d82",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0015_packed_leaf_shuffled4_n65536_d32_p0_g7000003_s1613.log": "9faefec4dfc93ce690934792294fd5702ae4b94ccc07f974428bb06207b5f0b8",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0015_packed_leaf_shuffled4_n65536_d32_p0_g7000003_s1613.rss.jsonl": "cb71c8d8929318b826f53451dd570f0feacd6e8f549b58c6800e527dd3b67d38",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0016_scalar_leaf_shuffled4_n65536_d32_p0_g7000003_s1613.csv": "d7caa36dc55d9a69c7fe06cbd5e28a5f413043e58ec97d07171aa14fda89929f",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0016_scalar_leaf_shuffled4_n65536_d32_p0_g7000003_s1613.log": "3b920137cd1f0ebe337175cd7af8ca32c5b4fb5e972812429594049d5cdb9fef",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0016_scalar_leaf_shuffled4_n65536_d32_p0_g7000003_s1613.rss.jsonl": "d8a54e206f0b8352f371bf1533964d7b9582a3827ff5e4f6458dc0d63e3f4a60",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0017_packed_leaf_hierarchy4_n1048576_d32_p0_g7000003_s1613.csv": "2ee9b28ed1cff18e426cfbddc7c45500d5a7c2f66d2cff80df349d58d33e2d2a",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0017_packed_leaf_hierarchy4_n1048576_d32_p0_g7000003_s1613.log": "9a2cf7d81137c5e228b78113560b0e475c4b21ed3e62db72f4a3a4fed84b50d1",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0017_packed_leaf_hierarchy4_n1048576_d32_p0_g7000003_s1613.rss.jsonl": "76e1d62eebec5c92031483aa531dc2afb660cf2e8514bb93f1709018cae08b08",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0018_scalar_leaf_hierarchy4_n1048576_d32_p0_g7000003_s1613.csv": "41b460851078e526dd72ba7ce1d17b94fffa4cfeda51bcab5d45c18b7c71d2e2",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0018_scalar_leaf_hierarchy4_n1048576_d32_p0_g7000003_s1613.log": "9056dc69fa2f9882bcfd743f329cefa250bb305135fd6093e73fea8ad3b7d590",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0018_scalar_leaf_hierarchy4_n1048576_d32_p0_g7000003_s1613.rss.jsonl": "ee8ddc3c1e5af5686258ffc4e13cff3787fdfd46182b193d655c7ea5fc07a069",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0019_packed_leaf_shuffled4_n1048576_d32_p0_g7000003_s1613.csv": "ac1732dd3f8e0726de6bfd8b034a40872c13887120a500501244ef79fcd546c6",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0019_packed_leaf_shuffled4_n1048576_d32_p0_g7000003_s1613.log": "273df231cd9d09ed2a7d87dd54448a9cf6b078326f69739bf5d87f47dc66d8d4",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0019_packed_leaf_shuffled4_n1048576_d32_p0_g7000003_s1613.rss.jsonl": "789ec07921ff38d7d29b6731213667c74df616c662b73b95fd25496a0c40d1d0",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0020_scalar_leaf_shuffled4_n1048576_d32_p0_g7000003_s1613.csv": "dbb05623e6af47e410372211c5da4ea9d2182df3f809f0f2fddb236953452f9b",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0020_scalar_leaf_shuffled4_n1048576_d32_p0_g7000003_s1613.log": "e4a4ed55942eb5587d0fe625cb58941e8a84022e0ed0bae5e504929d82b2ab29",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0020_scalar_leaf_shuffled4_n1048576_d32_p0_g7000003_s1613.rss.jsonl": "84df4c341547c11453acee6d2dd94b840992c78b89ed318e34f0179c51280b27",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0021_packed_gnm_random_n4096_d16_p0_g7000003_s1613.csv": "6b4f0368d1e0634b817edaa5e3f1f311f6f0e6552c6f8a7a94eca5de2ac1dc91",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0021_packed_gnm_random_n4096_d16_p0_g7000003_s1613.log": "c864702f8fca5d913f56fca012f311cf84ed2c645538ce7e05ee75e4d7d9ae36",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0021_packed_gnm_random_n4096_d16_p0_g7000003_s1613.rss.jsonl": "7fd7e86eebf2d33f62e0d44c269f72c39b650b95876eb490eb68977312baf07f",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0022_scalar_gnm_random_n4096_d16_p0_g7000003_s1613.csv": "02c057bc82c37fce8a76b610f1a199a607179eb926cefbd66080379ce96fc5e2",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0022_scalar_gnm_random_n4096_d16_p0_g7000003_s1613.log": "f3e5e4ecdc7daaed6195b25dbb625334dc449e25919e9a59df644da0fc2d4049",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0022_scalar_gnm_random_n4096_d16_p0_g7000003_s1613.rss.jsonl": "ba9860c833a01601b98d6b228996983d3f69352aa12c28cb3b24d46293289107",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0023_packed_gnm_random_n1048576_d16_p0_g7000003_s1613.csv": "9054cfe08a6f6903abf1684ff41618398bb6d3190b08caf5e6093afa556f08e8",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0023_packed_gnm_random_n1048576_d16_p0_g7000003_s1613.log": "157fd559ac056b2a9739aac276f3022f20dbe73a27894c8200698c3a5346d5fe",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0023_packed_gnm_random_n1048576_d16_p0_g7000003_s1613.rss.jsonl": "2c6c2032fff73c5ea7ac7bfbedf5a69adcffcabab4c97b7c3b029f8de44ad4c5",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0024_scalar_gnm_random_n1048576_d16_p0_g7000003_s1613.csv": "f7796cccda0caaa784c8cf82f49943ff6c24c03c2bb176f13c15092b06af8d0e",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0024_scalar_gnm_random_n1048576_d16_p0_g7000003_s1613.log": "29dc3735565971ab98ef99015c8cdfd4ac83b8e84dd32f248ab55cbbb7cb9248",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0024_scalar_gnm_random_n1048576_d16_p0_g7000003_s1613.rss.jsonl": "7b98cfcc242cc60783e60af248ba348b52d0983928dae5169bee7a3138bd69f2",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0025_packed_gnm_random_n1048576_d16_p0_g7000017_s1601.csv": "92addb667bdd4df4edc16637737e7e47100177b9c98a51767452da496aae1008",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0025_packed_gnm_random_n1048576_d16_p0_g7000017_s1601.log": "23cae9335ed3588b7cdf3712ecb35bc499db92f3d8cb9e7641dc0ee4cf88a5d1",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0025_packed_gnm_random_n1048576_d16_p0_g7000017_s1601.rss.jsonl": "6fc982dbb13141f002a6c4542843ebda3ac1c4281b4b5c124e1b6f45c0248738",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0026_scalar_gnm_random_n1048576_d16_p0_g7000017_s1601.csv": "80f98fd640d89c17e561eb2040740f3593336e299470abe7b0b0ec3a3536ec34",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0026_scalar_gnm_random_n1048576_d16_p0_g7000017_s1601.log": "386b50e0fa99ebda3a6fb55d990ac98dbd1be2d4bcc5b57bee2c25e990051bf3",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0026_scalar_gnm_random_n1048576_d16_p0_g7000017_s1601.rss.jsonl": "eb2bb2b2abb5c064730b4a06e06892ba261e756384be358d020c5981583500c4",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0027_packed_gnm_random_n4096_d16_p0_g7000017_s1601.csv": "1489fa5f59e713b3f48955760e54b1dbf070fb52826f8b27c1d6bb82e89129dd",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0027_packed_gnm_random_n4096_d16_p0_g7000017_s1601.log": "531ae95cc7f6bb75121197526eaf14e3c70a6d02d161fde3fe55d63dec2af5e5",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0027_packed_gnm_random_n4096_d16_p0_g7000017_s1601.rss.jsonl": "bcc6c8d16d1d3b614c4e1305f7b6b618d457650651de5f7abfb951213f8cd9ac",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0028_scalar_gnm_random_n4096_d16_p0_g7000017_s1601.csv": "e06cdcc6f87166569455fe60ec2fbca519af4279861db5cc3b62839eca72ef34",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0028_scalar_gnm_random_n4096_d16_p0_g7000017_s1601.log": "3179b0d9f97e908d1891c4f3211bc8e5600ee76a181c6c0e9db2d2ac4b25e0ac",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0028_scalar_gnm_random_n4096_d16_p0_g7000017_s1601.rss.jsonl": "2827e8bda9c40bb767796a35d7aba9a371cf5fa3f791638dc2add7d19ff375f5",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0029_packed_leaf_shuffled4_n1048576_d32_p0_g7000017_s1601.csv": "5fb53b58c206aebbb946533832eda0bcca8b7634cff4eac1a9459306d9667276",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0029_packed_leaf_shuffled4_n1048576_d32_p0_g7000017_s1601.log": "818eaedc4855340bc630b329917cd2dd524420396c6cf63fbde80089fa2ccca4",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0029_packed_leaf_shuffled4_n1048576_d32_p0_g7000017_s1601.rss.jsonl": "7754f7107194b3ea54381ddb52c382831959b61bae80f1433794897208edf51c",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0030_scalar_leaf_shuffled4_n1048576_d32_p0_g7000017_s1601.csv": "89a0c4fecd8e8e3a73815f52a484f43bb1d1aed868bdf7226f20773348e58938",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0030_scalar_leaf_shuffled4_n1048576_d32_p0_g7000017_s1601.log": "20a3ce28c005603dc8220ec7dc3492d9e00f5ef622ed2260352cec40ac1a8ec0",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0030_scalar_leaf_shuffled4_n1048576_d32_p0_g7000017_s1601.rss.jsonl": "b86165639c84760c88221abe5d5f61cbbadc2aa6703eb28ea32eadc76a5f4b2f",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0031_packed_leaf_hierarchy4_n1048576_d32_p0_g7000017_s1601.csv": "d0aa43a52360399b29a086c785981b30f6daa609a6931c0d420f9a184f6ad942",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0031_packed_leaf_hierarchy4_n1048576_d32_p0_g7000017_s1601.log": "fba5e06823981d19286bbe62115472b719672a99ef4f92fc6f26304064f45279",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0031_packed_leaf_hierarchy4_n1048576_d32_p0_g7000017_s1601.rss.jsonl": "d0396e4f6ef38a0c845b2e2c156bafa65966c1738d3328176d5aead054df8c44",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0032_scalar_leaf_hierarchy4_n1048576_d32_p0_g7000017_s1601.csv": "bc1732507c2ca55cc838f94bac5f350c504b1f0fe3e321a11750bb3df8f807c3",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0032_scalar_leaf_hierarchy4_n1048576_d32_p0_g7000017_s1601.log": "040d927e0964dcbdcaa85516242e64b77e790ef859edbaf74d1cd226155af443",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0032_scalar_leaf_hierarchy4_n1048576_d32_p0_g7000017_s1601.rss.jsonl": "3d2ccc25fd809ccafdcbd93e5eeb62494944b9edac4cede1231795cb94876c36",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0033_packed_leaf_shuffled4_n65536_d32_p0_g7000017_s1601.csv": "b8d5461490bfcc4787f52c6967e74b11202c26feb41e02c6dacde250053d6f63",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0033_packed_leaf_shuffled4_n65536_d32_p0_g7000017_s1601.log": "2d9dc8925137c506ea97211f83ce276bd95a42378360abe277ae2461b724d557",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0033_packed_leaf_shuffled4_n65536_d32_p0_g7000017_s1601.rss.jsonl": "3216c32cedc54b6b1304067f8e421ae60f91c0da9aa813bc1d8430ac45526e1f",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0034_scalar_leaf_shuffled4_n65536_d32_p0_g7000017_s1601.csv": "6bb0f7dd1da7f29d9b9e595e06bda1014f05d56de697b9e070b42a93f26e413b",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0034_scalar_leaf_shuffled4_n65536_d32_p0_g7000017_s1601.log": "22de8766f2e309355db86a6b0103c6eae049f503579b2f7906851b0a0f34e246",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0034_scalar_leaf_shuffled4_n65536_d32_p0_g7000017_s1601.rss.jsonl": "abc1172e5f5ec7ad3bd729435377611c6fdfa8e7a1eca2c509dcc59757cf9ea1",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0035_packed_leaf_hierarchy4_n65536_d32_p0_g7000017_s1601.csv": "dcf2c4ceef28ee6d429dfedf9423f32f1b45e2dec9e43dab60af80a94fa68bce",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0035_packed_leaf_hierarchy4_n65536_d32_p0_g7000017_s1601.log": "ab448d0319adc2ca0ff396992835c30ee5a7fb97aeb578db976547fbe925dbc3",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0035_packed_leaf_hierarchy4_n65536_d32_p0_g7000017_s1601.rss.jsonl": "0c3c9edd369f1fb2cb89a164abb8411b06c7961c3ccd1d6db0e431fd425a2b3f",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0036_scalar_leaf_hierarchy4_n65536_d32_p0_g7000017_s1601.csv": "b8277519c952a14789b528571599520c2bdf7408bee954c392617b4ac93860bb",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0036_scalar_leaf_hierarchy4_n65536_d32_p0_g7000017_s1601.log": "8a364d28467b613f847c6a1fb462177be85a5dcbcad823b535ac97c1d18a0a22",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0036_scalar_leaf_hierarchy4_n65536_d32_p0_g7000017_s1601.rss.jsonl": "ee20539d16a9bc90e520ab1ecbd3c0a78c1b5bdec76330ed13fcca13f732befb",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0037_scalar_gnm_random_n1048576_d16_p0_g7000017_s1613.csv": "f191a4091da724abd56e3ef6df443e2339a7f003c0fdb8087d0bb47911b572d5",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0037_scalar_gnm_random_n1048576_d16_p0_g7000017_s1613.log": "5f437048307782af267744f998cbd81b2abd12bbcba79fe192efd33c3484ea58",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0037_scalar_gnm_random_n1048576_d16_p0_g7000017_s1613.rss.jsonl": "ecca41664a65253cd7f4987c2a7d2440506378c90e8f297e9c94e91fee2d7724",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0038_packed_gnm_random_n1048576_d16_p0_g7000017_s1613.csv": "66d017847a074a217c0afa64ce21289f3457aef637325bdd3db31385f3dcf510",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0038_packed_gnm_random_n1048576_d16_p0_g7000017_s1613.log": "1c105094da7701ccdc2020de8a6a5a7856c18b5d7162f253d6164fc2e6f0b9ec",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0038_packed_gnm_random_n1048576_d16_p0_g7000017_s1613.rss.jsonl": "983798d2a617e848edcca9e7e14cccc597ab0ce2b479d053494b7e305ddcc204",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0039_scalar_gnm_random_n4096_d16_p0_g7000017_s1613.csv": "5cae56383790ddfaa46db9f1dcf62554782f701bff5ea44483b8e85ac4fa72a3",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0039_scalar_gnm_random_n4096_d16_p0_g7000017_s1613.log": "50d226e24c562df69b171225d68af38fb9afa4049e93f72be14e6d362933fef5",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0039_scalar_gnm_random_n4096_d16_p0_g7000017_s1613.rss.jsonl": "57ef802c6a3a39d4bd2f72cfc6414bac4e09a686aa2e233f9aa4e473dadefa06",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0040_packed_gnm_random_n4096_d16_p0_g7000017_s1613.csv": "ac14980fcfc50d0c0e2fb1f97e927c68e5f9ebe3499c36feba35858106d1c2de",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0040_packed_gnm_random_n4096_d16_p0_g7000017_s1613.log": "939ea4d5d677565fd2cde91b7fe66233f69ed534fbe01f2e242560baa650c3fb",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0040_packed_gnm_random_n4096_d16_p0_g7000017_s1613.rss.jsonl": "1d71ad87d28b7d3a2dfe56a504dcd5a600b83eb8026b24c81cba64264b26556d",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0041_scalar_leaf_shuffled4_n1048576_d32_p0_g7000017_s1613.csv": "fe96960490f85ff1f990f4c3ab9f9cfa526e7ffe81898f136cfac89a7c8d1943",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0041_scalar_leaf_shuffled4_n1048576_d32_p0_g7000017_s1613.log": "0884db3805cb0b2b43697ecc10e0c97db845da75d4a85c0d0846634ddf4882a6",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0041_scalar_leaf_shuffled4_n1048576_d32_p0_g7000017_s1613.rss.jsonl": "9bb6c0389c3d745412f88d37e42f2f56dc600e660dfc6560dacfa67cd069fec2",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0042_packed_leaf_shuffled4_n1048576_d32_p0_g7000017_s1613.csv": "b4031e4bbf27cc13d06ac07453cbca0ea17fd9c8d9029e579be377be3bda7301",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0042_packed_leaf_shuffled4_n1048576_d32_p0_g7000017_s1613.log": "60a9b5e10d9858502e4c3710300d4cc37771c44826309d17551d9600082b9467",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0042_packed_leaf_shuffled4_n1048576_d32_p0_g7000017_s1613.rss.jsonl": "a5c48af4bc27586570fdb9f28196108e224b66606e8a7d92866f3d285df68e11",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0043_scalar_leaf_hierarchy4_n1048576_d32_p0_g7000017_s1613.csv": "f5a4e31ca8eeb76e442225c9c818abad0ba888be6468e7ce5c4069605f7f77af",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0043_scalar_leaf_hierarchy4_n1048576_d32_p0_g7000017_s1613.log": "57ddc3180ecf359a553e233797197e6d89e85ab43c11e9db6d3bc0a103bb9086",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0043_scalar_leaf_hierarchy4_n1048576_d32_p0_g7000017_s1613.rss.jsonl": "c59f2671fde86fbbc23a5bf72e7dab7cf4d77412fc6d75d9b3e49b6c893779d4",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0044_packed_leaf_hierarchy4_n1048576_d32_p0_g7000017_s1613.csv": "054f159b6ffea78c506f0c133f8cb366ab72121016aba10e25ff8876aa839ce5",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0044_packed_leaf_hierarchy4_n1048576_d32_p0_g7000017_s1613.log": "992022f981e2f3d65d7db2722815fcc7c61a04e8788d90fad19d53beefd4ec8b",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0044_packed_leaf_hierarchy4_n1048576_d32_p0_g7000017_s1613.rss.jsonl": "9738389f0fa69c48a94d2e2f1b6d46ca1acfb5cf5eea997b275ffc01ca72f569",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0045_scalar_leaf_shuffled4_n65536_d32_p0_g7000017_s1613.csv": "73e6d5feb7cc2e559874d253883e226f150fe1c68692098a47af2837f17b4ae7",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0045_scalar_leaf_shuffled4_n65536_d32_p0_g7000017_s1613.log": "40176a8bcb5f10930e10bc8c1239e3013156b86ecd8152fafc1f04c22461a874",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0045_scalar_leaf_shuffled4_n65536_d32_p0_g7000017_s1613.rss.jsonl": "9789c88bc05c11b8af20ec0bd0567b6af297967553d4a12bcb5086cc14306b17",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0046_packed_leaf_shuffled4_n65536_d32_p0_g7000017_s1613.csv": "bc735cbae7ddfb46008fbdec9b648b7ceeebbf62b13b4d7dcbb94aa4322cf517",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0046_packed_leaf_shuffled4_n65536_d32_p0_g7000017_s1613.log": "bd9ba5e6cfe13daf8f51b2f873920f9d29459bee797a0c78ec3ba36381b6d7d7",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0046_packed_leaf_shuffled4_n65536_d32_p0_g7000017_s1613.rss.jsonl": "88285da31183e722423a91b033c166c5850bb56ecdeceb198d9424158fdcdf95",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0047_scalar_leaf_hierarchy4_n65536_d32_p0_g7000017_s1613.csv": "6f5a983d344480309df6201b3462e33e4a214b582a10ce45606dbf8bd4f72310",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0047_scalar_leaf_hierarchy4_n65536_d32_p0_g7000017_s1613.log": "59f45cb591b1693026ebe787ca19f2b92421b5680d17205827b3592f1e852270",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0047_scalar_leaf_hierarchy4_n65536_d32_p0_g7000017_s1613.rss.jsonl": "e71bf3d0a17a809566a72e732e7649824686e392362e4072436ce0b20be70393",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0048_packed_leaf_hierarchy4_n65536_d32_p0_g7000017_s1613.csv": "2cbdc505d91185e3064c6a20b1f90732c9f9467bf7df8d221b430e68d57c8d6c",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0048_packed_leaf_hierarchy4_n65536_d32_p0_g7000017_s1613.log": "788e89df1d7c6d01e2a177cf490eb179f9785ce199950af82e08eb1d95933490",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired_cases/0048_packed_leaf_hierarchy4_n65536_d32_p0_g7000017_s1613.rss.jsonl": "8d4514c8ea996d29b892b6fbcc6590daa133bc8add963302359c1f2a02b88385",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/run_mst_search.py": "843d65154d232bc12a946ad7d8793ab26840f7785507286a6e4d8ed09dfcad80",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/analyze_mst_search.py": "91d3fcad871444e9325c1465782365b5c3ed08fb2344aeeb62fbfc18254f5ba6",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/run_crossover.py": "1669d3b761e0d4c09c432382c3a2e8738c0031c1c9e6dc69cfcb7734809a052f",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/analyze_continuation.py": "7a0afa5fe802516cb5ec27a7d567a0875c66807aa4a04ce0ff752f0bc31b9168",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/crossover_clocks.py": "725d469933eaf5ead32a38bf52b9f32e46a7ee3d4e386777c257c1ab3929fc0b",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/run_crossover_baselines.py": "2291db9114448516fc5ffb6c4b0fd119d23741bcfa2275ad7f25996c3b73921e",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/run_multigraph_experiment.py": "f039d2523e212d9431ed9e062459a6eb3cf2e3ebf463c49d4d57097bcef4fd8e",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/recover_mst_search.py": "73f02f494f29b2f9183c9fc889dcda73444fe2ca4a240469a7d57dfec226058b",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/audit_attachment_recovery_power.py": "e7a72cc054c6cfbcb1c6d5c6686e2332864632a12e10b60a9d3f16b6a5ca0c61",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/audit_mst_search_power.py": "566530914ee74564c5d5ba640b700f5ecfccc5927ac5ed046cb6e3bbdbd225c5",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/run_retention_control.py": "f913b9b0721102489f17eafe9bc82d4886ef3bbfad9d9f2d4963ee84f5df4f85",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/run_edge_view_experiment.py": "67d018d74e6658988421b98ae613ce5e649b4f80e5436fc8776540d2298fd227",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/run_packed_sampling.py": "7c574c45054544eadfa5f07d0f2806364b7aee9e4c6bdfaf0565224cd87802b4",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/plot_packed_sampling.py": "9492caebdeb8c18066e5fd15c198627974a8135fa99ed2b9f8abce50c53e4989",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/plot_retention_control.py": "a19d4edf72aea875885aa3494ca268038d2654531b9e3c670b21355e2b7e635a"
+  },
+  "matplotlib_version": "3.9.4",
+  "checked_outputs": 2016,
+  "timed_outputs": 1728,
+  "warmup_outputs": 288,
+  "rows_removed": 0,
+  "rows_adjusted": 0,
+  "flagged_calls_retained": 0,
+  "coverage": [
+    {
+      "figure": "variant_gains_wall",
+      "group": "Ordered core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.7948197046905374,
+        1.1595615878758674
+      ]
+    },
+    {
+      "figure": "variant_gains_wall",
+      "group": "Shuffled core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.7167088125907635,
+        1.1777712528282727
+      ]
+    },
+    {
+      "figure": "variant_gains_wall",
+      "group": "Random G(n,m) \u00b7 m/n = 16",
+      "case_ids": [
+        "gnm_random_n4096_d16_p0",
+        "gnm_random_n1048576_d16_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.7373152572096128,
+        1.1548794706788443
+      ]
+    },
+    {
+      "figure": "variant_gains_cpu",
+      "group": "Ordered core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.7948197046905374,
+        1.1595615878758674
+      ]
+    },
+    {
+      "figure": "variant_gains_cpu",
+      "group": "Shuffled core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.7167088125907635,
+        1.1777712528282727
+      ]
+    },
+    {
+      "figure": "variant_gains_cpu",
+      "group": "Random G(n,m) \u00b7 m/n = 16",
+      "case_ids": [
+        "gnm_random_n4096_d16_p0",
+        "gnm_random_n1048576_d16_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.7373152572096128,
+        1.1548794706788443
+      ]
+    },
+    {
+      "figure": "scalar_ratios_wall",
+      "group": "Ordered core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 40,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.3101750578514463,
+        2.5078606344986807
+      ]
+    },
+    {
+      "figure": "scalar_ratios_wall",
+      "group": "Shuffled core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 40,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.33475735028009124,
+        3.0936932514223616
+      ]
+    },
+    {
+      "figure": "scalar_ratios_wall",
+      "group": "Random G(n,m) \u00b7 m/n = 16",
+      "case_ids": [
+        "gnm_random_n4096_d16_p0",
+        "gnm_random_n1048576_d16_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 40,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.366507413753607,
+        2.168216221821125
+      ]
+    },
+    {
+      "figure": "scalar_ratios_cpu",
+      "group": "Ordered core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 40,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.3101750578514463,
+        2.5078606344986807
+      ]
+    },
+    {
+      "figure": "scalar_ratios_cpu",
+      "group": "Shuffled core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 40,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.33475735028009124,
+        3.0936932514223616
+      ]
+    },
+    {
+      "figure": "scalar_ratios_cpu",
+      "group": "Random G(n,m) \u00b7 m/n = 16",
+      "case_ids": [
+        "gnm_random_n4096_d16_p0",
+        "gnm_random_n1048576_d16_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 40,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.366507413753607,
+        2.168216221821125
+      ]
+    },
+    {
+      "figure": "packed_ratios_wall",
+      "group": "Ordered core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 40,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.2829542457949736,
+        2.33796877361522
+      ]
+    },
+    {
+      "figure": "packed_ratios_wall",
+      "group": "Shuffled core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 40,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.30411547187428695,
+        2.715954339099639
+      ]
+    },
+    {
+      "figure": "packed_ratios_wall",
+      "group": "Random G(n,m) \u00b7 m/n = 16",
+      "case_ids": [
+        "gnm_random_n4096_d16_p0",
+        "gnm_random_n1048576_d16_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 40,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.33977803068123696,
+        1.817401022346113
+      ]
+    },
+    {
+      "figure": "packed_ratios_cpu",
+      "group": "Ordered core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 40,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.2829542457949736,
+        2.33796877361522
+      ]
+    },
+    {
+      "figure": "packed_ratios_cpu",
+      "group": "Shuffled core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 40,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.30411547187428695,
+        2.715954339099639
+      ]
+    },
+    {
+      "figure": "packed_ratios_cpu",
+      "group": "Random G(n,m) \u00b7 m/n = 16",
+      "case_ids": [
+        "gnm_random_n4096_d16_p0",
+        "gnm_random_n1048576_d16_p0"
+      ],
+      "algorithms": [
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 10,
+      "realization_points": 40,
+      "trial_range_endpoints": 20,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.33977803068123696,
+        1.817401022346113
+      ]
+    },
+    {
+      "figure": "scalar_times_wall",
+      "group": "Ordered core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.04184403199955331,
+        16.308796925053468
+      ]
+    },
+    {
+      "figure": "scalar_times_wall",
+      "group": "Shuffled core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.03322512200266566,
+        13.101324474518147
+      ]
+    },
+    {
+      "figure": "scalar_times_wall",
+      "group": "Random G(n,m) \u00b7 m/n = 16",
+      "case_ids": [
+        "gnm_random_n4096_d16_p0",
+        "gnm_random_n1048576_d16_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.0009011648659594097,
+        7.340308260106919
+      ]
+    },
+    {
+      "figure": "scalar_times_cpu",
+      "group": "Ordered core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.04184403199955331,
+        16.308796925053468
+      ]
+    },
+    {
+      "figure": "scalar_times_cpu",
+      "group": "Shuffled core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.03322512200266566,
+        13.101324474518147
+      ]
+    },
+    {
+      "figure": "scalar_times_cpu",
+      "group": "Random G(n,m) \u00b7 m/n = 16",
+      "case_ids": [
+        "gnm_random_n4096_d16_p0",
+        "gnm_random_n1048576_d16_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.0009011648659594097,
+        7.340308260106919
+      ]
+    },
+    {
+      "figure": "packed_times_wall",
+      "group": "Ordered core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.04208500838199803,
+        16.10135222921733
+      ]
+    },
+    {
+      "figure": "packed_times_wall",
+      "group": "Shuffled core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.03328259315681588,
+        13.232308808688853
+      ]
+    },
+    {
+      "figure": "packed_times_wall",
+      "group": "Random G(n,m) \u00b7 m/n = 16",
+      "case_ids": [
+        "gnm_random_n4096_d16_p0",
+        "gnm_random_n1048576_d16_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.000902225019623285,
+        7.21691486728259
+      ]
+    },
+    {
+      "figure": "packed_times_cpu",
+      "group": "Ordered core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_hierarchy4_n65536_d32_p0",
+        "leaf_hierarchy4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.04208500838199803,
+        16.10135222921733
+      ]
+    },
+    {
+      "figure": "packed_times_cpu",
+      "group": "Shuffled core ranks \u00b7 m/n = 32",
+      "case_ids": [
+        "leaf_shuffled4_n65536_d32_p0",
+        "leaf_shuffled4_n1048576_d32_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.03328259315681588,
+        13.232308808688853
+      ]
+    },
+    {
+      "figure": "packed_times_cpu",
+      "group": "Random G(n,m) \u00b7 m/n = 16",
+      "case_ids": [
+        "gnm_random_n4096_d16_p0",
+        "gnm_random_n1048576_d16_p0"
+      ],
+      "algorithms": [
+        "kkt",
+        "compacting_boruvka",
+        "multigraph_boruvka",
+        "kruskal",
+        "prim",
+        "boruvka"
+      ],
+      "pooled_points": 12,
+      "realization_points": 48,
+      "trial_range_endpoints": 24,
+      "all_points_in_bounds": true,
+      "y_limits": [
+        0.000902225019623285,
+        7.21691486728259
+      ]
+    }
+  ],
+  "control_normalization": false,
+  "confidence_intervals": false,
+  "interpolated_crossover": false,
+  "matched_clock_axes": true,
+  "output_sha256": {
+    "variant_gains_wall.png": "eda5555dfd24e89b17a13180f5d01740829be998617487b54c0b3c06cf64f9b5",
+    "variant_gains_wall.svg": "4602e93635ef5c2743edb8d20de877edfcf7b8bbb2b7e99024eb092224c94ec4",
+    "variant_gains_wall.pdf": "5f98b21df115b8052415e3d33fc1ffbc5344fef29cc3495b000c32bf7038a8a1",
+    "variant_gains_cpu.png": "e4267e520b8a7b13a1d1decf67ef74f485cb9dab5e238ca7d24afe5007bfdb45",
+    "variant_gains_cpu.svg": "d72028e329b328cd37436cbdc60628bdeb34688b4c5a790a87e0e96f93999f67",
+    "variant_gains_cpu.pdf": "6fbd9ce7ec6c3894dcbd4cbfead3a30e239e0c68507e25ab53a3afd4022dc729",
+    "scalar_ratios_wall.png": "07283f0b913aa0d686441c13e82b730349e367afe1ad0e4c47789efcdbf2143b",
+    "scalar_ratios_wall.svg": "e6be16e0f200c40e44e832d77093dddb0160fc4f976fc4de0fabcf4c1ebace9b",
+    "scalar_ratios_wall.pdf": "6387d3d28d8ecc874618ccfe1c7dcf33bf49a1e4d490bc1870bdb4cf172f498e",
+    "scalar_ratios_cpu.png": "9f6958a84b3e5b7ccc56dde84c5d59afeb7744375317706f7073d7a3d6209fb8",
+    "scalar_ratios_cpu.svg": "e155168a7e459ada3d0c1bd4358948b40702300482564a9b8478c23c48506fdc",
+    "scalar_ratios_cpu.pdf": "f5f5eebcbedbb286ba0764e12897e365c1cc155aaebc7b44f636bb8d51e039ba",
+    "packed_ratios_wall.png": "081d65aad50dce64d885d5c79d1976676507d0407331cff7e7bf6889707e847d",
+    "packed_ratios_wall.svg": "1e1167795121b99a5487e2f9919fbd9aaa11996b8b9cb4cb4fbbe2d1a0cbe738",
+    "packed_ratios_wall.pdf": "1e21dc02e6a6e18a3ac669daf1efec4d501756e07c395c919e135a36667041e8",
+    "packed_ratios_cpu.png": "2080215496403c1e6ae13d8af5e4dc7c574f7535af04526da81df105d3a624cc",
+    "packed_ratios_cpu.svg": "d5b0d34f27b71cd0e5f68a91dee0a78c00ac9094f85b672c487e08c6e3dd38c7",
+    "packed_ratios_cpu.pdf": "54e6a7077199c2e148e21a2e9c08940bd2525c6d9f72691298fcbe994439ff2b",
+    "scalar_times_wall.png": "d77db7df9e8165cf97b8a6e10c0ebb38458f845ed550724fdcf78ac0178d13d6",
+    "scalar_times_wall.svg": "6def6ea76e1cfca456364a843d97bb4e9d2fa1a6e6224ae9075c8f6c1771cacd",
+    "scalar_times_wall.pdf": "9b6c373680889b22e52c5adf6b4cc628cbac8fcc6aec523af77b7064eff1f431",
+    "scalar_times_cpu.png": "4af42968df99d60f659460ffded4217bf5136ac9f2129b90fee6406f2f825ae2",
+    "scalar_times_cpu.svg": "8b84dd0367cb82e5185637e21714ddf332062e8851f4fa817d575f3a16c51700",
+    "scalar_times_cpu.pdf": "e125b0ca9269cbfa05dde3fab2c6ebfe8aa50d532d6fef3e9962076c28624e99",
+    "packed_times_wall.png": "1ad0fc5f394b1b4636df654d86622daddc9cb6a6bf1277abe5fc85e57fff351d",
+    "packed_times_wall.svg": "f6d30e01fc484785fb47b1d0aac72b249fe2f8bae4720192a7cd0cb28ba915fa",
+    "packed_times_wall.pdf": "4125ad47eaec36a638c552ebacd4cc801eff8b8135b5d88fab1b4f227c6566be",
+    "packed_times_cpu.png": "7f5d4bafacca5ebdfb36cca6f33864848f31fd73066b4d8a26dfc79ac589ef66",
+    "packed_times_cpu.svg": "cf29219a5d028f5a6bb27b44b395fc905fbe77de33dbd0e3e711373955132b41",
+    "packed_times_cpu.pdf": "9a08051da503b30ecaf730d56063c97f3e7df20751ee22165742af44b8ff17d4",
+    "plotted_values.json": "04da1cba27b3b1c770c7586443006ff90ea79e46718d13f1d2ba385692a714fc"
+  },
+  "visual_review": "pending: inspect all ten PNGs before publication"
+}

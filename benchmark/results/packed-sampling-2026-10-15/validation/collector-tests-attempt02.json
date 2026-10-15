@@ -1,0 +1,20 @@
+{
+  "validation": "failed",
+  "command": [
+    "python3",
+    "-B",
+    "benchmark/test_packed_sampling.py"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-packed-sampling",
+  "exit_status": 1,
+  "test_groups": 9,
+  "reported_seconds": 18.143,
+  "native_processes_launched": false,
+  "reason": "Negative manifest mutation used unsupported non-power-of-two n; validator correctly rejected before expected case-set message. Replace with valid undeclared power of two to reach intended gate.",
+  "source_sha256": {
+    "benchmark/run_packed_sampling.py": "7c574c45054544eadfa5f07d0f2806364b7aee9e4c6bdfaf0565224cd87802b4",
+    "benchmark/test_packed_sampling.py": "75a828d5641b32f35f92eed476fc749ab55898784279410a86f3c127b651af25"
+  },
+  "log": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/collector-tests-attempt02.log",
+  "log_sha256": "c2abe0bf3b7fffb1eb4ebfcaea79d61b04339a806ad9b3ff80942d7f2dffd6ed"
+}

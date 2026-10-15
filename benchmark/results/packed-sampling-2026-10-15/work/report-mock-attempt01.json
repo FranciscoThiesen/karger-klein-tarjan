@@ -1,0 +1,23 @@
+{
+  "schema": "packed_work_report_mock_v1",
+  "status": "pass",
+  "source_sha256": {
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/work/collect.py": "77ba37a4a5d3d6fa7262b92f25ff624b42d90000f8a511c23bd01b7f2cfc5994",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/work/report.py": "020d8145a28acc05f47a96eeeae80ec353226cd3f282c036ada7aa9c7f0948b1",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/work/test_collect.py": "5178c0d916577cc7335043efeb9e1a8ff4be9e1cff3a701dc7cd3fd27254a864"
+  },
+  "native_solver_executed": false,
+  "started_utc": "2026-10-15T10:10:51.276753+00:00",
+  "checks": [
+    "full synthetic 48-child report",
+    "65 complete counter summaries",
+    "zero denominator preserved",
+    "known +1 sampled-edge differences",
+    "390 case rows",
+    "24 rigorous paired engine bounds"
+  ],
+  "elapsed_seconds": 0.642714667133987,
+  "finished_utc": "2026-10-15T10:10:51.918164+00:00",
+  "log": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/work/report-mock-attempt01.log",
+  "log_sha256": "bc99c142bc4c670b10325324cbfd493cfa19b08e3a4a29432acc45de69b9a49d"
+}

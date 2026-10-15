@@ -1,0 +1,73 @@
+{
+  "schema": "packed_work_readiness_v1",
+  "status": "pass",
+  "created_utc": "2026-10-15T09:57:03.612956+00:00",
+  "freeze": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/work/freeze.json",
+  "freeze_sha256": "003c6c8090a7b2fe6176fb940f96f25a3187d7a502236edd9846163d246def45",
+  "strict_frozen_provenance_rechecked": true,
+  "bound_artifacts": 256,
+  "schedule_children": 48,
+  "certified_solver_outputs_planned": 144,
+  "canonical_member_bound_counter_fields": 65,
+  "native_profiles": {
+    "scalar": {
+      "binary": "/Users/random_person/Desktop/kkt-packed-sampling/bin/packed-sampling/work/scalar/retention_work",
+      "binary_sha256": "64b8832c96ab14eb5d3438edee3c9c1a3233b08f4d62df1d6d797028a76d09c3",
+      "file_description": "Mach-O 64-bit executable arm64",
+      "main_stack_bytes": 536870912
+    },
+    "packed": {
+      "binary": "/Users/random_person/Desktop/kkt-packed-sampling/bin/packed-sampling/work/packed/retention_work",
+      "binary_sha256": "d27699fa8959c5df43014cbaae0ef1e6651a0ee9ce94cb4ca01a6196a02f750f",
+      "file_description": "Mach-O 64-bit executable arm64",
+      "main_stack_bytes": 536870912
+    }
+  },
+  "existing_smoke_outputs_revalidated": [
+    {
+      "path": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/work/smoke-packed-gnm_random-n512-d128.json",
+      "sha256": "c09ff3180a6b916e5a800cfe586e51ddc4883a3208bd2d8efe13326b1fdbb8cb",
+      "log_sha256": "96b8cc8b1f0befe200169a590faf01a02538b510807b26704aa0fb9f6dd078bd"
+    },
+    {
+      "path": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/work/smoke-packed-gnm_random-n64-d16.json",
+      "sha256": "6f84d9fa4633897ccbac6117ed17685a7a7dcd382498af78b589d892d2d2d94d",
+      "log_sha256": "1998c17859156ac41a99f280b72209c09166fb4e52a37830b5470cf642aa94d2"
+    },
+    {
+      "path": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/work/smoke-packed-leaf_distance4-n512-d16.json",
+      "sha256": "524fb4b5d3759311cd85d3c95e21992622c63d5aa30cf195b5959122bc43ca4b",
+      "log_sha256": "20e8369bad113eb083e9ebce26fed98b7f9f6be17fd0cba039faf6ac2ab58c09"
+    },
+    {
+      "path": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/work/smoke-packed-leaf_hierarchy4-n512-d16.json",
+      "sha256": "6924e826ed99dd0a042285e3e3490ceea7e725c326bbc1652fa4927e10deb871",
+      "log_sha256": "67344b859c2c81ece7008b555d908e194dadf5e3558ca7d9c721b3b04bb9b4df"
+    },
+    {
+      "path": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/work/smoke-scalar-gnm_random-n512-d128.json",
+      "sha256": "70811adf43b0f96c4e000d57c295b995a87fd67a7c778723c98b587905a11a81",
+      "log_sha256": "96b8cc8b1f0befe200169a590faf01a02538b510807b26704aa0fb9f6dd078bd"
+    },
+    {
+      "path": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/work/smoke-scalar-gnm_random-n64-d16.json",
+      "sha256": "aed73c1655ba2fe4d07eee8babc3c090c17248bb3c305128297e4e276d22b27a",
+      "log_sha256": "1998c17859156ac41a99f280b72209c09166fb4e52a37830b5470cf642aa94d2"
+    },
+    {
+      "path": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/work/smoke-scalar-leaf_distance4-n512-d16.json",
+      "sha256": "0be0928a40445720e1c3a7f6495d34d66abe2da548004f3eec6cc99cb17a760c",
+      "log_sha256": "20e8369bad113eb083e9ebce26fed98b7f9f6be17fd0cba039faf6ac2ab58c09"
+    },
+    {
+      "path": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/work/smoke-scalar-leaf_hierarchy4-n512-d16.json",
+      "sha256": "8f95a2b84e33922f84f4a8365c15aa094645d29d5c54011eab16254e781d28ba",
+      "log_sha256": "67344b859c2c81ece7008b555d908e194dadf5e3558ca7d9c721b3b04bb9b4df"
+    }
+  ],
+  "mock_test_receipt": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/work/tests-attempt01.json",
+  "mock_test_receipt_sha256": "2d773bd0c73e7917d9a72751f76677ff880c742e3917388a0645094f43f00417",
+  "fresh_native_solver_execution": false,
+  "large_work_capture_started": false,
+  "root_release_required": true
+}

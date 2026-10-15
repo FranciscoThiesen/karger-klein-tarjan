@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "rejected_original_parent_drift": [
+    "kkt/kkt.cpp",
+    "verifier/verifier_v2.cpp",
+    "benchmark/build_edge_verifier.py",
+    ".build/edge-verifier/timing-build/edge/kkt/kkt.o",
+    ".build/edge-verifier/timing-build/shared/verifier/verifier_v2.o",
+    ".build/edge-verifier/timing-build/shared/benchmark/retention_control.o",
+    "bin/edge-verifier/timing-build/edge/retention_control",
+    "edge-build.json"
+  ],
+  "helper_function_restored_after_each_failure": true,
+  "restored_parent_proof_passed_after_each_failure": true,
+  "native_solver_or_build_executed": false
+}

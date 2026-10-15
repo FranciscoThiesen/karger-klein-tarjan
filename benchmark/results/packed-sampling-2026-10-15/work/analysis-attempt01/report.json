@@ -1,0 +1,20 @@
+{
+  "schema": "packed_work_report_v1",
+  "status": "pass",
+  "capture": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/work/capture-attempt01.json",
+  "capture_sha256": "313bda1b4b8a766a2485b7feaba7ff73ee4ea5889bda06386ad60d479b2ba191",
+  "script_sha256": "020d8145a28acc05f47a96eeeae80ec353226cd3f282c036ada7aa9c7f0948b1",
+  "certified_solver_outputs": 144,
+  "known_empty_owned_groups": 48,
+  "counter_fields": 65,
+  "individual_counter_pairs": 1560,
+  "per_case_counter_rows": 390,
+  "paired_engine_bounds": 24,
+  "comparator_counters_and_rounds_identical": true,
+  "output_sha256": {
+    "counter_difference_summary.csv": "88377135e24346d1b309586b0ee7132bc1a61b43ce3b10c135cbdddb1c4d2337",
+    "case_counter_ratios.csv": "ed1ca0a27b9fb70938d3474d4ba44520bd252595d5027d28f07655a6be753083",
+    "paired_engine_word_bounds.csv": "79f2ed68ed8a2b54fa85f4ad8d9a24bf7454b3a6c3f96c183691915d1be2a451",
+    "README.md": "fd780cc532ccecc399c3f043c27b48e038ac0dce8995a29b53145b0bea8ed742"
+  }
+}

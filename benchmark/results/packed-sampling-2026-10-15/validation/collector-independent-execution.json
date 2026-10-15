@@ -1,0 +1,37 @@
+{
+  "status": "pass",
+  "created_utc": "2026-10-15T08:44:14.072905+00:00",
+  "source_sha256": {
+    "benchmark/run_packed_sampling.py": "7c574c45054544eadfa5f07d0f2806364b7aee9e4c6bdfaf0565224cd87802b4",
+    "benchmark/test_packed_sampling.py": "683694f1de808a98a530689b956c52cdc09850e51b6890ea595f53cc58a6d534",
+    "benchmark/results/packed-sampling-2026-10-15/PROTOCOL.md": "73eaa99e129f79d4ca9ff343893c92c100fe732f50a24508ec7a273b9ec52a07",
+    "benchmark/results/packed-sampling-2026-10-15/manifest.csv": "bf0a9d0c5ff2458d5df952872e02c2f8322dc1ee5c56cb01ae36240f2a9c39d3",
+    "benchmark/results/packed-sampling-2026-10-15/validation/independent_collector_checks.py": "bdffa315e898d3c171f1e0ad7bfd887060c036fd94bfd1daeae2a01d63cf6cae"
+  },
+  "sources_unchanged": true,
+  "native_build_or_solver_executed": false,
+  "runs": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "benchmark/test_packed_sampling.py"
+      ],
+      "exit_status": 0,
+      "elapsed_seconds": 18.62218866730109,
+      "log": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/collector-independent-tests.log",
+      "log_sha256": "fe4381052e7a3fc0231fbe0d301c477ec0d5f35d5fc48a8c6509652be179844b"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/independent_collector_checks.py"
+      ],
+      "exit_status": 0,
+      "elapsed_seconds": 0.6148628341034055,
+      "log": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/collector-independent-parent-proof.log",
+      "log_sha256": "6f652a7e55c8cff555521290a4c9ef93721645d3b1c574012702436a3d2416d5"
+    }
+  ]
+}

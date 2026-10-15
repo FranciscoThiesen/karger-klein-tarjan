@@ -1,0 +1,23 @@
+{
+  "validation": "pass",
+  "command": [
+    "python3",
+    "-B",
+    "benchmark/test_packed_sampling.py"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-packed-sampling",
+  "exit_status": 0,
+  "test_groups": 9,
+  "reported_seconds": 18.047,
+  "native_processes_launched": false,
+  "source_sha256": {
+    "benchmark/run_packed_sampling.py": "7c574c45054544eadfa5f07d0f2806364b7aee9e4c6bdfaf0565224cd87802b4",
+    "benchmark/test_packed_sampling.py": "683694f1de808a98a530689b956c52cdc09850e51b6890ea595f53cc58a6d534",
+    "benchmark/plot_packed_sampling.py": "9492caebdeb8c18066e5fd15c198627974a8135fa99ed2b9f8abce50c53e4989",
+    "benchmark/results/packed-sampling-2026-10-15/PROTOCOL.md": "73eaa99e129f79d4ca9ff343893c92c100fe732f50a24508ec7a273b9ec52a07",
+    "benchmark/results/packed-sampling-2026-10-15/manifest.csv": "bf0a9d0c5ff2458d5df952872e02c2f8322dc1ee5c56cb01ae36240f2a9c39d3"
+  },
+  "log": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/collector-tests-attempt03.log",
+  "log_sha256": "bb8641a0c8ec30d76f17fb52e157625c2bb2ca755eb0da47a75d183165da1af6",
+  "plot_validation": "All five plot kinds prepare against complete synthetic tables; rendering and visual QA pending real data."
+}

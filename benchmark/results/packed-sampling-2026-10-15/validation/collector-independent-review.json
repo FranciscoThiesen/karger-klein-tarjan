@@ -1,0 +1,36 @@
+{
+  "schema": "packed_sampling_independent_collector_review_v1",
+  "status": "pass",
+  "reviewer": "multigraph_candidate",
+  "created_utc": "2026-10-15T08:45:17.503099+00:00",
+  "source_sha256": {
+    "benchmark/run_packed_sampling.py": "7c574c45054544eadfa5f07d0f2806364b7aee9e4c6bdfaf0565224cd87802b4",
+    "benchmark/test_packed_sampling.py": "683694f1de808a98a530689b956c52cdc09850e51b6890ea595f53cc58a6d534",
+    "benchmark/results/packed-sampling-2026-10-15/PROTOCOL.md": "73eaa99e129f79d4ca9ff343893c92c100fe732f50a24508ec7a273b9ec52a07",
+    "benchmark/results/packed-sampling-2026-10-15/manifest.csv": "bf0a9d0c5ff2458d5df952872e02c2f8322dc1ee5c56cb01ae36240f2a9c39d3",
+    "benchmark/results/packed-sampling-2026-10-15/validation/independent_collector_checks.py": "bdffa315e898d3c171f1e0ad7bfd887060c036fd94bfd1daeae2a01d63cf6cae"
+  },
+  "findings": [],
+  "scope": [
+    "benchmark/run_packed_sampling.py",
+    "benchmark/test_packed_sampling.py",
+    "benchmark/results/packed-sampling-2026-10-15/PROTOCOL.md",
+    "benchmark/results/packed-sampling-2026-10-15/manifest.csv"
+  ],
+  "conclusions": {
+    "parent_provenance": "Unique basename/hash equality checks current helper copies; original helpers are hash-checked; scoped parent helpers() replacement is restored with finally and original full Edge source/recipe/object/binary proof still runs. Eight temporary original-parent drift mutations independently rejected and restored proof passed afterward.",
+    "build_isolation": "Exact compiler/link commands reconstructed; scalar and packed share seven physical production objects plus harness; only packed kkt.o adds packed-sampling macro.",
+    "schedule": "Six cases x two graph seeds x two sampling seeds x two variants = 48 children. Adjacent variant order counterbalanced by graph/sampling indices, case order reversed for graph two.",
+    "outputs": "42 ordered six-solver rows per child = 2016 checked rows (1728 timed, 288 warmups). Exact schedule identities, commands, rows, certificates, and combined ordered raw concatenation checked.",
+    "fingerprints": "Base key (case_id,graph_seed) excludes sampling seed and variant, requiring their inputs equal. Matched hierarchy/shuffled twins additionally require equal topology/order and unequal weighted fingerprint.",
+    "aggregation": "Both clocks, all losses and flags retained. 1728 all-six cross-variant pairs and 2880 within-variant five-comparator pairs. Case medians pool all 24 ratios; realization medians use 6, graph/sampling marginals 12.",
+    "lifecycle": "Copied bounded monitor stops for ceiling, three unavailable samples, poison, native failure or unknown/nonempty group; partial evidence retained and another child forbidden. Full loader rereads resources and post-wrapper empty-group proof.",
+    "interpretation": "Protocol distinguishes deterministic MT seeds from ideal independent words and counterbalancing from randomized causal isolation; only tested endpoint brackets can be classified, no asymptotic or Wikipedia claim."
+  },
+  "mocked_groups_passed": 9,
+  "additional_original_parent_drift_rejections": 8,
+  "native_build_or_solver_executed": false,
+  "all_review_processes_exited": true,
+  "execution_receipt": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/collector-independent-execution.json",
+  "execution_receipt_sha256": "863b93c45f8d21873459c4b7c23f8d2c49e2867112c5c36aa077429b6e1b0312"
+}

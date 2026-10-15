@@ -1,0 +1,26 @@
+{
+  "schema": "packed_work_mock_tests_v1",
+  "status": "pass",
+  "command": [
+    "python3",
+    "-B",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/work/test_collect.py"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-packed-sampling",
+  "source_sha256": {
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/work/collect.py": "77ba37a4a5d3d6fa7262b92f25ff624b42d90000f8a511c23bd01b7f2cfc5994",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/work/test_collect.py": "5178c0d916577cc7335043efeb9e1a8ff4be9e1cff3a701dc7cd3fd27254a864",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/work/PROTOCOL.md": "56b9862be4322c3a7bf550744601a6fd1ef13bb0f169a96a9dd0df748fa6be80"
+  },
+  "started_utc": "2026-10-15T09:54:49.715014+00:00",
+  "native_build_or_solver_executed": false,
+  "timeout_seconds": 180,
+  "process_group": 19901,
+  "exit_status": 0,
+  "owned_group_known_empty": true,
+  "sources_unchanged": true,
+  "elapsed_seconds": 1.617206041701138,
+  "finished_utc": "2026-10-15T09:54:51.333683+00:00",
+  "log": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/work/tests-attempt01.log",
+  "log_sha256": "c45162a58967c924c87e66c658770fe2625e8a78ef414087611704d779a72656"
+}

@@ -1,0 +1,29 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "benchmark/run_packed_sampling.py",
+    "preflight",
+    "--scalar-binary",
+    "bin/packed-sampling/timing-build/scalar/retention_control",
+    "--packed-binary",
+    "bin/packed-sampling/timing-build/packed/retention_control",
+    "--scalar-build-record",
+    "benchmark/results/packed-sampling-2026-10-15/validation/timing-build-scalar-build-record.json",
+    "--packed-build-record",
+    "benchmark/results/packed-sampling-2026-10-15/validation/timing-build-packed-build-record.json",
+    "--parent-freeze",
+    "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/freeze.json",
+    "--manifest",
+    "benchmark/results/packed-sampling-2026-10-15/manifest.csv",
+    "--protocol",
+    "benchmark/results/packed-sampling-2026-10-15/PROTOCOL.md",
+    "--freeze",
+    "benchmark/results/packed-sampling-2026-10-15/freeze.json"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-packed-sampling",
+  "started_utc": "2026-10-15T08:46:48.065736+00:00",
+  "finished_utc": "2026-10-15T08:46:48.754623+00:00",
+  "exit_status": 0,
+  "native_solver_executed": false
+}

@@ -1,0 +1,288 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "variant": "scalar",
+      "test": "edge_verifier_view_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-packed-sampling/bin/packed-sampling/sanitizer-correctness/scalar/edge_verifier_view_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "a92d9d2032bac7fe4f97686664a0c417ce3f33f354761d872da1dad1761479a9",
+      "stdout": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-scalar-edge_verifier_view_test.stdout",
+      "stdout_sha256": "33ce3dc5cd7323c3e34fd0ec56a50b1342296fccd75a812ea010445ade6eb45e",
+      "stderr": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-scalar-edge_verifier_view_test.stderr",
+      "stderr_sha256": "3c849bfdd4f9dd7ef1cbdf8178aa97569f7dbf9f295a03769cd1ad6b3b15afa1"
+    },
+    {
+      "variant": "scalar",
+      "test": "multigraph_contraction_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-packed-sampling/bin/packed-sampling/sanitizer-correctness/scalar/multigraph_contraction_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "b64734ba205c0f93af100bbf08a210e49dac9873d23f3d6a8f7913e5708b09ad",
+      "stdout": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-scalar-multigraph_contraction_test.stdout",
+      "stdout_sha256": "73d0bdf13bf5c47d302b2825ef5921a4736d34160950772f5875733591f63020",
+      "stderr": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-scalar-multigraph_contraction_test.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "variant": "scalar",
+      "test": "regression_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-packed-sampling/bin/packed-sampling/sanitizer-correctness/scalar/regression_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "1bf00efea981025bb15cc09fa279649d3920d19de4ee627467be75e646279e79",
+      "stdout": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-scalar-regression_test.stdout",
+      "stdout_sha256": "ceb1244312ac6700ed3f6c27a774e6780d06e3de4251c55a74b240be0ce59673",
+      "stderr": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-scalar-regression_test.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "variant": "scalar",
+      "test": "contraction_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-packed-sampling/bin/packed-sampling/sanitizer-correctness/scalar/contraction_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "12773e52be796d6fc7b2e4880555040b6c19c771d86fa68f4207b047fa2afa9e",
+      "stdout": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-scalar-contraction_test.stdout",
+      "stdout_sha256": "05a683bc160ad41d441b986d9935c4cd760018ac2aafa6de1dc5561b89272bba",
+      "stderr": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-scalar-contraction_test.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "variant": "scalar",
+      "test": "simple_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-packed-sampling/bin/packed-sampling/sanitizer-correctness/scalar/simple_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "bb6d2998d8e349815c68404a1cb052b4ff91b501470bd528716e50e50c6758d4",
+      "stdout": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-scalar-simple_test.stdout",
+      "stdout_sha256": "5d48380038a8069a95022a025f93ff4061bd0e9b3e8caa1ae5beeeb8d2d42fad",
+      "stderr": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-scalar-simple_test.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "variant": "scalar",
+      "test": "core_attachment_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-packed-sampling/bin/packed-sampling/sanitizer-correctness/scalar/core_attachment_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "b3ca4d54643a66e17e62bf7189f9ddf253d4d1a58d6fc1a0b70fdcfff75bc3ec",
+      "stdout": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-scalar-core_attachment_test.stdout",
+      "stdout_sha256": "733333ae0f9a48b7fdaad44ed281d9dd8edd7e1ea57029ec2074750ff73fb230",
+      "stderr": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-scalar-core_attachment_test.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "variant": "scalar",
+      "test": "packed_sampling_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-packed-sampling/bin/packed-sampling/sanitizer-correctness/scalar/packed_sampling_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "1482a7055470d9b4062da5b6fbe19825fc869d9889356dc0b491388f5278e4bf",
+      "stdout": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-scalar-packed_sampling_test.stdout",
+      "stdout_sha256": "06174d422165984ea99a53db3c770fab3b92b47db86073dcf4831947aeb8faf6",
+      "stderr": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-scalar-packed_sampling_test.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "variant": "scalar",
+      "test": "packed_sampling_integration_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-packed-sampling/bin/packed-sampling/sanitizer-correctness/scalar/packed_sampling_integration_test",
+        "scalar"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "13873854faee13f3b29788214b2edeaa37d7d5f49da8297e0719f6e72b9cd32d",
+      "stdout": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-scalar-packed_sampling_integration_test.stdout",
+      "stdout_sha256": "0691a52cfadb093b99e76f8388894193f271e0b3d3bdaa86b3647584e5c84fe5",
+      "stderr": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-scalar-packed_sampling_integration_test.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "variant": "packed",
+      "test": "edge_verifier_view_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-packed-sampling/bin/packed-sampling/sanitizer-correctness/packed/edge_verifier_view_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "0c6dc21130e2028182c1fd885109af7f1f52e880753e545ed6102dda31767b6f",
+      "stdout": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-packed-edge_verifier_view_test.stdout",
+      "stdout_sha256": "8fefa8fc345396ed0aa4ba90c598941c5e2477aebe4a660cab9c122f9bd5dc6f",
+      "stderr": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-packed-edge_verifier_view_test.stderr",
+      "stderr_sha256": "3c849bfdd4f9dd7ef1cbdf8178aa97569f7dbf9f295a03769cd1ad6b3b15afa1"
+    },
+    {
+      "variant": "packed",
+      "test": "multigraph_contraction_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-packed-sampling/bin/packed-sampling/sanitizer-correctness/packed/multigraph_contraction_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "2f84407924b91eee340a247a522ee21454335ac6a3fc405356d20b3a50f8a17e",
+      "stdout": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-packed-multigraph_contraction_test.stdout",
+      "stdout_sha256": "73d0bdf13bf5c47d302b2825ef5921a4736d34160950772f5875733591f63020",
+      "stderr": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-packed-multigraph_contraction_test.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "variant": "packed",
+      "test": "regression_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-packed-sampling/bin/packed-sampling/sanitizer-correctness/packed/regression_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "5977ccb5d2c571b4f8b22c37b66e6fe924e49c397c98e22f4e2a6ded9a1750ed",
+      "stdout": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-packed-regression_test.stdout",
+      "stdout_sha256": "ceb1244312ac6700ed3f6c27a774e6780d06e3de4251c55a74b240be0ce59673",
+      "stderr": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-packed-regression_test.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "variant": "packed",
+      "test": "contraction_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-packed-sampling/bin/packed-sampling/sanitizer-correctness/packed/contraction_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "fb2cadb52c36d025fe586f8b4c8efb99c382b4df1200d2fd54eb86be52bcc03d",
+      "stdout": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-packed-contraction_test.stdout",
+      "stdout_sha256": "05a683bc160ad41d441b986d9935c4cd760018ac2aafa6de1dc5561b89272bba",
+      "stderr": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-packed-contraction_test.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "variant": "packed",
+      "test": "simple_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-packed-sampling/bin/packed-sampling/sanitizer-correctness/packed/simple_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "ef412380ba3fa0e0e5beeea2bd485dcc6805a6e50cc7e9bff82eeaf105711588",
+      "stdout": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-packed-simple_test.stdout",
+      "stdout_sha256": "5d48380038a8069a95022a025f93ff4061bd0e9b3e8caa1ae5beeeb8d2d42fad",
+      "stderr": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-packed-simple_test.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "variant": "packed",
+      "test": "core_attachment_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-packed-sampling/bin/packed-sampling/sanitizer-correctness/packed/core_attachment_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "4361d1f7cd24a4b4d0a04f5d813d95d0de846cfcb074359fe653229534e3bebc",
+      "stdout": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-packed-core_attachment_test.stdout",
+      "stdout_sha256": "733333ae0f9a48b7fdaad44ed281d9dd8edd7e1ea57029ec2074750ff73fb230",
+      "stderr": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-packed-core_attachment_test.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "variant": "packed",
+      "test": "packed_sampling_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-packed-sampling/bin/packed-sampling/sanitizer-correctness/packed/packed_sampling_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "f1402da6176cf8410047a3d8507c82e3a0883e77178408041d3ad214518a7feb",
+      "stdout": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-packed-packed_sampling_test.stdout",
+      "stdout_sha256": "06174d422165984ea99a53db3c770fab3b92b47db86073dcf4831947aeb8faf6",
+      "stderr": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-packed-packed_sampling_test.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "variant": "packed",
+      "test": "packed_sampling_integration_test",
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-packed-sampling/bin/packed-sampling/sanitizer-correctness/packed/packed_sampling_integration_test",
+        "packed"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "01b3d691baf0bf4200b06a95ca35d10accab64fc3b538e0b86940b4bb0057416",
+      "stdout": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-packed-packed_sampling_integration_test.stdout",
+      "stdout_sha256": "164b44c051d29fbcbd33f820a2b3e702cdd45b7dc646dcc0be56a66061503876",
+      "stderr": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-packed-packed_sampling_integration_test.stderr",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "paired_mst": {
+    "status": "pass",
+    "pairs": 1344,
+    "fields_per_pair": 65,
+    "different_recursive_work_pairs": 539,
+    "identical_input_fingerprints_and_sorted_mst_ids": true,
+    "note": "Different samples and recursive counters are expected; equality is not required.",
+    "scalar_records": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-scalar-edge_verifier_view_test.stdout",
+    "scalar_records_sha256": "33ce3dc5cd7323c3e34fd0ec56a50b1342296fccd75a812ea010445ade6eb45e",
+    "packed_records": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-packed-edge_verifier_view_test.stdout",
+    "packed_records_sha256": "8fefa8fc345396ed0aa4ba90c598941c5e2477aebe4a660cab9c122f9bd5dc6f",
+    "wrong_dispatch_negative_gate": "rejected"
+  },
+  "wrong_policy_gates": [
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-packed-sampling/bin/packed-sampling/sanitizer-correctness/scalar/packed_sampling_integration_test",
+        "packed"
+      ],
+      "exit_status": 1,
+      "log": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-scalar-wrong-policy.log",
+      "sha256": "ed2db2afcba49d6018eab896f1fbfeb3b4324d4af7177c3a650816152b2b7bcc"
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-packed-sampling/bin/packed-sampling/sanitizer-correctness/packed/packed_sampling_integration_test",
+        "scalar"
+      ],
+      "exit_status": 1,
+      "log": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/sanitizer-correctness-packed-wrong-policy.log",
+      "sha256": "ed2db2afcba49d6018eab896f1fbfeb3b4324d4af7177c3a650816152b2b7bcc"
+    }
+  ],
+  "sanitizer_options": {
+    "ASAN_OPTIONS": "detect_leaks=1:abort_on_error=1",
+    "UBSAN_OPTIONS": "halt_on_error=1:print_stacktrace=1"
+  }
+}

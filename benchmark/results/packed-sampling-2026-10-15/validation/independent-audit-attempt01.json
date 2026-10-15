@@ -1,0 +1,31 @@
+{
+  "schema": "independent_audit_invocation_v1",
+  "argv": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "-B",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/independent_numerical_audit.py",
+    "--capture",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/paired.json",
+    "--analysis-dir",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/analysis",
+    "--output-dir",
+    "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/independent-numerical-audit"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-packed-sampling",
+  "python_version": "3.9.6 (default, Mar 29 2024, 10:51:09) \n[Clang 15.0.0 (clang-1500.3.9.4)]",
+  "source": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/independent_numerical_audit.py",
+  "source_sha256": "48aa9426cbf1b5518e60a440fdfc8c2633884c859ad0e924810f319cf4f4253a",
+  "started_utc": "2026-10-15T09:54:49.932064+00:00",
+  "root_release": "Packed timing completed PASS48/2016; nonperformance work explicitly released",
+  "finished_utc": "2026-10-15T09:54:50.485016+00:00",
+  "elapsed_monotonic_ns": 552521667,
+  "exit_status": 0,
+  "exception": null,
+  "source_sha256_after": "48aa9426cbf1b5518e60a440fdfc8c2633884c859ad0e924810f319cf4f4253a",
+  "stdout": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/independent-audit-attempt01.stdout",
+  "stderr": "/Users/random_person/Desktop/kkt-packed-sampling/benchmark/results/packed-sampling-2026-10-15/validation/independent-audit-attempt01.stderr",
+  "stdout_sha256": "6de04c92965b3154da5869a83fb25c3edae1f85f68a7ac95f22e3415f6d9a86d",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source_copy_sha256": "48aa9426cbf1b5518e60a440fdfc8c2633884c859ad0e924810f319cf4f4253a",
+  "native_performance_executed": false
+}
