@@ -1,0 +1,41 @@
+{
+  "schema": "current_hierarchy_export_outer_v1",
+  "validation": "running",
+  "command": [
+    "/usr/bin/arch",
+    "-arm64",
+    "/usr/bin/python3",
+    "-B",
+    "-u",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_hierarchy_view/build_native_view.py",
+    "--output",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/validation/root-view-attempt01/inner",
+    "--released"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-eighth-sampling",
+  "package": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_hierarchy_view",
+  "source_sha256": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_hierarchy_view/export_root_view.cpp": "c2f07a5a6f589b981117f798f56ad1f6fe16ed629db94a0a5fa87ffdec011b63",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_hierarchy_view/INDEPENDENT_NATIVE_PREPARATION_REVIEW.md": "d561a6aedcfe06f1593af267467a7c29f8576b3c9799f1df85d708a1f4660db4",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_hierarchy_view/build_native_view.py": "421504731d0099be8eb8d57670801edeaee81ef506588791f337b8fd88868d0f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_hierarchy_view/run_export_attempt.py": "d2fc52eba41bddced661e4bee6c6d17cc1c2572a80b1de2b74b66707d4a1b27f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_hierarchy_view/INDEPENDENT_SOURCE_REVIEW.md": "9a7be4b0fa18cd993c6a45ade0b83a0ba06d4e04332f0f6232e2d44d405ff82e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_hierarchy_view/validate_export.py": "57d60841d4da12f129cbcf4781aeb79a94bfe167659dca372a50f809954df0c5",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_hierarchy_view/viewer.html": "d94c9fa42753af98b4f75cea89ae202f3854a376e3d3bc43793fd4182538114a",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_hierarchy_view/build_view.py": "6a304e750d007539ebfd4d006f589bba9b721615f6e4ef8648aed4e2e0d4d634",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_hierarchy_view/test_run_export_attempt.py": "2607c7e2c90739f400ad5c82d6c626554a80447de5dcfaf13ec2e3ed4b93c310",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_hierarchy_view/PLAN.md": "1c56388c3ff58e40ec9414bc1ca07e7461995e74df700d34597c92e3d317b742",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/current_hierarchy_view/test_export.py": "54f8cdfb3bb84f99fdd3f78adcdb0be4709f1a131d7e6dcf6037ae91e7a69a4b"
+  },
+  "started_monotonic_ns": 83277625,
+  "complete_interval_budget_seconds": 1200,
+  "deadline_scope": "launch through cleanup, full inner proof and final artifact hashing; receipt serialization excluded",
+  "native_execution_authorized": true,
+  "native_execution": null,
+  "performance_execution": false,
+  "outer_observations": [],
+  "outer_group_verified_empty": false,
+  "detached_native_groups_verified_empty": false,
+  "detached_native_process_may_still_be_running": false,
+  "all_owned_groups_verified_empty": false
+}

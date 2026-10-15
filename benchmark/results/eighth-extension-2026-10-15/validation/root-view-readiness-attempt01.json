@@ -1,0 +1,28 @@
+{
+  "schema": "current_hierarchy_view_completion_v1",
+  "validation": "partial_browser_environment_blocked",
+  "native_export": "pass",
+  "test_groups": 10,
+  "timing_join": "pass",
+  "viewer": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/current-hierarchy-view-attempt01/index.html",
+  "viewer_sha256": "42dc93bfc533c04396b1ca1eef8fadcace1e8ab49def1b7f27dd3749949b0a82",
+  "browser_state_checks_completed": 0,
+  "desktop_mobile_visual_qa": "pending",
+  "performance_execution": false,
+  "all_owned_jobs_stopped": true,
+  "failures_preserved": [
+    "CUA Chrome/IAB unavailable; listBrowsers empty; native getApp Firefox/Chrome cgWindowNotFound",
+    "Headless Chromium abort before page load: bootstrap_check_in MachPortRendezvousServer error 141, SIGTRAP"
+  ],
+  "bound_sha256": {
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/validation/root-view-install-attempt01.json": "940413ab712eb7e859a066754b7da2412ac3c5f0c4117d96e7bd1a9bc8191228",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/validation/root-view-tests-attempt01.json": "987ce4163491cba64e65d4921a0a9e0850dac6ef6daf66fd73dfdfa94d3e0f4e",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/validation/root-view-outer-tests-attempt01.json": "3b03afc12e35703cb06eb354b70a66c396fe9addaab2c8ae22da34aa48a2d6eb",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/validation/root-view-attempt01/receipt.json": "45027152e590d1bb2662ec6a0ae826c23dbef8e56b7cf3bc1c8a68c2731d0367",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/validation/root-view-assembly-attempt01.json": "c72955df0d180fccbcdb13e7618b4f4357b5f1ef1dc61147e9205afba1f907c9",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/validation/root-view-browser-attempt01.json": "b0977dbd2adc80174c8f58d31901d2ba2dac623a46973600a4a40ddd53a8e9e4",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/validation/root-view-browser-attempt01.stderr": "be2286c0993d597d0d5387d0ff706b545d5e563c30773a9138cf6d2a00bbed9f",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/validation/root-view-browser-attempt01-artifacts/browser.json": "5bf4db8ccd6dd0d973fcdcb02bbd2761e4f8fd71bf623bc202c156dc7bf59ae3",
+    "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/validation/verify_current_view.py": "1211e7a21cf525bf1a53896565b2ee2d426279f2bcb66f06da8ca420c5cdbfb2"
+  }
+}

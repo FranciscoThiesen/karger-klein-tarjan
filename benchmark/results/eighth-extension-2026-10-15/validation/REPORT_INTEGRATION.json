@@ -37,7 +37,12 @@
   },
   "no_native_execution": true,
   "no_frozen_input_changes": true,
-  "independent_editorial_review": "pending",
+  "independent_editorial_review": {
+    "validation": "pass",
+    "receipt": "/Users/random_person/Desktop/kkt-eighth-sampling/benchmark/results/eighth-extension-2026-10-15/validation/INDEPENDENT_REPORT_EDITORIAL_REVIEW.md",
+    "sha256": "2128042cb8c4b71d145ebc47b756e269ac11cdb666ce3511ecf381d96b4ff4d9",
+    "scope": "focused editorial corroboration; not a replacement raw audit"
+  },
   "post_integration_scope_fix_snapshot": {
     "path": "/tmp/kkt-current-report-extension-before-open-question-fix.md",
     "sha256": "38c72bc9925371dfecd0951530224fa15b5134acb47721a468943003891f1f81"
