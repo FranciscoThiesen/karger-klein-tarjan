@@ -1,0 +1,50 @@
+{
+  "utc": "2026-10-15T04:47:33.896432+00:00",
+  "commands": [
+    {
+      "command": [
+        "make",
+        "-j4",
+        "CXX=/opt/homebrew/opt/llvm/bin/clang++",
+        "BUILD_DIR=.build/multigraph-clang22-sanitizer",
+        "BIN_DIR=bin/multigraph-clang22-sanitizer",
+        "CXXFLAGS=-std=c++17 -O1 -g -Wall -Wextra -fsanitize=address,undefined -fno-omit-frame-pointer -DKKT_EXPERIMENT_RETAIN_PARALLEL -DKKT_ENABLE_WORK_STATS",
+        "bin/multigraph-clang22-sanitizer/test_runner",
+        "bin/multigraph-clang22-sanitizer/regression_runner",
+        "bin/multigraph-clang22-sanitizer/contraction_runner",
+        "bin/multigraph-clang22-sanitizer/core_attachment_test"
+      ],
+      "exit_status": 0
+    },
+    {
+      "command": [
+        "/opt/homebrew/opt/llvm/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "test/multigraph_contraction_test.cpp",
+        ".build/multigraph-clang22-sanitizer/lca/lca.o",
+        ".build/multigraph-clang22-sanitizer/kruskal/kruskal.o",
+        ".build/multigraph-clang22-sanitizer/kkt/kkt.o",
+        ".build/multigraph-clang22-sanitizer/prim/prim.o",
+        ".build/multigraph-clang22-sanitizer/boruvka/boruvka.o",
+        ".build/multigraph-clang22-sanitizer/verifier/verifier_v2.o",
+        ".build/multigraph-clang22-sanitizer/union_find/union_find.o",
+        ".build/multigraph-clang22-sanitizer/graph_utils/graph_utils.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-o",
+        "bin/multigraph-clang22-sanitizer/multigraph_contraction_test"
+      ],
+      "exit_status": 0
+    }
+  ]
+}

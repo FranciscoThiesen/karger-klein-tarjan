@@ -1,0 +1,50 @@
+{
+  "utc": "2026-10-15T04:48:20.836199+00:00",
+  "profile": "Homebrew Clang22 ASan+UBSan O1 with candidate macro and counters; correctness only",
+  "environment": {
+    "ASAN_OPTIONS": "detect_leaks=1:halt_on_error=1",
+    "UBSAN_OPTIONS": "halt_on_error=1:print_stacktrace=1"
+  },
+  "tests": [
+    {
+      "command": [
+        "bin/multigraph-clang22-sanitizer/multigraph_contraction_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "10be86280bd586ee5fcef5b7833ee5588f91caf2ca3bc3ef477ee00992a2820d",
+      "log": "candidate-clang22-sanitizer-multigraph_contraction_test.log"
+    },
+    {
+      "command": [
+        "bin/multigraph-clang22-sanitizer/test_runner"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "50170e6386a94a542f7117af887e16797758aaeabcebc18323d857d90dd23eff",
+      "log": "candidate-clang22-sanitizer-test_runner.log"
+    },
+    {
+      "command": [
+        "bin/multigraph-clang22-sanitizer/regression_runner"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "fe7a0f3a73f74da2b22743504f42b7dfc1fff53ab95248632d1989c52d9b030b",
+      "log": "candidate-clang22-sanitizer-regression_runner.log"
+    },
+    {
+      "command": [
+        "bin/multigraph-clang22-sanitizer/contraction_runner"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "31dcd9fe2725055664789a8b998a6c930f9400a468f6991bb507921c42d9be9a",
+      "log": "candidate-clang22-sanitizer-contraction_runner.log"
+    },
+    {
+      "command": [
+        "bin/multigraph-clang22-sanitizer/core_attachment_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "f6526963b6195e6c55ce9eb2c6d252daffbee441626dc5ec54a056185833708b",
+      "log": "candidate-clang22-sanitizer-core_attachment_test.log"
+    }
+  ]
+}

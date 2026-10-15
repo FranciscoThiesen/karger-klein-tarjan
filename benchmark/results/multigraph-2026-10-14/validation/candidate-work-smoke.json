@@ -1,0 +1,52 @@
+{
+  "utc": "2026-10-15T04:49:41.465810+00:00",
+  "profile": "Mach-O 64-bit executable arm64",
+  "binary_sha256": "60e6b89d5f5b859383b550d0d588882719173a07321b1e0abb1b2cb2a68fcfec",
+  "tests": [
+    {
+      "command": [
+        "/Users/random_person/Desktop/kkt-contraction-experiment/bin/multigraph-check/multigraph_work",
+        "leaf_hierarchy4",
+        "512",
+        "16",
+        "2000003",
+        "607"
+      ],
+      "exit_status": 0,
+      "log": "/Users/random_person/Desktop/kkt-contraction-experiment/benchmark/results/multigraph-2026-10-14/validation/candidate-work-smoke-leaf_hierarchy4.json",
+      "log_sha256": "d4097a33c7e2e5af60832605a64d0b44422b90f41a1aa5de21c26ca4a8af1228",
+      "kkt_root_vertices": 64,
+      "kkt_root_edges": 7744
+    },
+    {
+      "command": [
+        "/Users/random_person/Desktop/kkt-contraction-experiment/bin/multigraph-check/multigraph_work",
+        "lifted_hierarchy4",
+        "256",
+        "16",
+        "2000003",
+        "607"
+      ],
+      "exit_status": 0,
+      "log": "/Users/random_person/Desktop/kkt-contraction-experiment/benchmark/results/multigraph-2026-10-14/validation/candidate-work-smoke-lifted_hierarchy4.json",
+      "log_sha256": "684837de7fef7b39a8f990888b7fbc48acc10f2d9bfece456820020ef01cb832",
+      "kkt_root_vertices": 32,
+      "kkt_root_edges": 3392
+    },
+    {
+      "command": [
+        "/Users/random_person/Desktop/kkt-contraction-experiment/bin/multigraph-check/multigraph_work",
+        "gnm_random",
+        "64",
+        "16",
+        "2000003",
+        "607"
+      ],
+      "exit_status": 0,
+      "log": "/Users/random_person/Desktop/kkt-contraction-experiment/benchmark/results/multigraph-2026-10-14/validation/candidate-work-smoke-gnm_random.json",
+      "log_sha256": "c329cc23506d182e6072acf7b904874d9d2c4dee57d1fde8f539e25d66f4eb3b",
+      "kkt_root_vertices": 5,
+      "kkt_root_edges": 729
+    }
+  ]
+}

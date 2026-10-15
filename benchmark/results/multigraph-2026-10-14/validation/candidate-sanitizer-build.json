@@ -1,0 +1,49 @@
+{
+  "utc": "2026-10-15T04:46:09.340098+00:00",
+  "commands": [
+    {
+      "command": [
+        "make",
+        "-j4",
+        "BUILD_DIR=.build/multigraph-sanitizer",
+        "BIN_DIR=bin/multigraph-sanitizer",
+        "CXXFLAGS=-std=c++17 -O1 -g -Wall -Wextra -fsanitize=address,undefined -fno-omit-frame-pointer -DKKT_EXPERIMENT_RETAIN_PARALLEL -DKKT_ENABLE_WORK_STATS",
+        "bin/multigraph-sanitizer/test_runner",
+        "bin/multigraph-sanitizer/regression_runner",
+        "bin/multigraph-sanitizer/contraction_runner",
+        "bin/multigraph-sanitizer/core_attachment_test"
+      ],
+      "exit_status": 0
+    },
+    {
+      "command": [
+        "/usr/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O1",
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-fsanitize=address,undefined",
+        "-fno-omit-frame-pointer",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "test/multigraph_contraction_test.cpp",
+        ".build/multigraph-sanitizer/lca/lca.o",
+        ".build/multigraph-sanitizer/kruskal/kruskal.o",
+        ".build/multigraph-sanitizer/kkt/kkt.o",
+        ".build/multigraph-sanitizer/prim/prim.o",
+        ".build/multigraph-sanitizer/boruvka/boruvka.o",
+        ".build/multigraph-sanitizer/verifier/verifier_v2.o",
+        ".build/multigraph-sanitizer/union_find/union_find.o",
+        ".build/multigraph-sanitizer/graph_utils/graph_utils.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-o",
+        "bin/multigraph-sanitizer/multigraph_contraction_test"
+      ],
+      "exit_status": 0
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "utc": "2026-10-15T04:46:18.575833+00:00",
+  "profile": "Apple Clang ASan+UBSan O1 with candidate macro and counters; correctness only",
+  "environment": {
+    "ASAN_OPTIONS": "detect_leaks=1:halt_on_error=1",
+    "UBSAN_OPTIONS": "halt_on_error=1:print_stacktrace=1"
+  },
+  "tests": [
+    {
+      "command": [
+        "bin/multigraph-sanitizer/multigraph_contraction_test"
+      ],
+      "exit_status": -6,
+      "binary_sha256": "f4b45ea5a86d17afdcfa64e70b3a6c2c90dbe4c88435f2095652a4243948e2c6",
+      "log": "candidate-sanitizer-multigraph_contraction_test.log"
+    }
+  ]
+}

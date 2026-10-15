@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-15T04:46:37.019934+00:00",
+  "command": [
+    "bin/multigraph-sanitizer/contraction_runner"
+  ],
+  "environment": {
+    "ASAN_OPTIONS": "detect_leaks=0:verbosity=1:halt_on_error=1",
+    "UBSAN_OPTIONS": "halt_on_error=1:print_stacktrace=1"
+  },
+  "exit_status": -4
+}

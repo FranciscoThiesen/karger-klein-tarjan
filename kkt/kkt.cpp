@@ -1,5 +1,8 @@
 #include "kkt.hpp"
 #include "random_sampling.hpp"
+#ifdef KKT_EXPERIMENT_RETAIN_PARALLEL
+#include "experimental_multigraph_contraction.hpp"
+#endif
 #include "../common/work_stats.hpp"
 #include "../verifier/verifier_v2.hpp"
 #include <algorithm>
@@ -304,14 +307,22 @@ static void kkt_internal(problem& P, std::mt19937& rng, vector<int>& result)
     }
 
     // Apply Boruvka Step twice
+#ifdef KKT_EXPERIMENT_RETAIN_PARALLEL
+    auto [edges1, reduced1] = kkt_experiment::retain_parallel_step(P);
+#else
     auto [edges1, reduced1] = boruvka_step(P);
+#endif
     result.insert(result.end(), edges1.begin(), edges1.end());
 
     if (reduced1.graph_edges.empty() || reduced1.num_vertices == 0) {
         return;
     }
 
+#ifdef KKT_EXPERIMENT_RETAIN_PARALLEL
+    auto [edges2, reduced2] = kkt_experiment::retain_parallel_step(reduced1);
+#else
     auto [edges2, reduced2] = boruvka_step(reduced1);
+#endif
     result.insert(result.end(), edges2.begin(), edges2.end());
     KKT_WORK_ROOT_SET(root_after_two_vertices, reduced2.num_vertices);
     KKT_WORK_ROOT_SET(root_after_two_edges, reduced2.graph_edges.size());

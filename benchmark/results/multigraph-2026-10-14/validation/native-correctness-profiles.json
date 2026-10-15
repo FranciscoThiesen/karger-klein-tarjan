@@ -1,0 +1,47 @@
+{
+  "utc": "2026-10-15T04:50:38.199124+00:00",
+  "profiles": {
+    "bin/multigraph-check/multigraph_contraction_test": {
+      "file": "Mach-O 64-bit executable arm64",
+      "binary_sha256": "4eea345dd3bff96dcb200d95e3d2a66d5ac11f1d8c1286be9b679947bf9fa5b2"
+    },
+    "bin/multigraph-check/test_runner": {
+      "file": "Mach-O 64-bit executable arm64",
+      "binary_sha256": "4d037436bb16415c79761f387a3dccceb00a434696ad7e44cfdecb594ffd9c05"
+    },
+    "bin/multigraph-check/regression_runner": {
+      "file": "Mach-O 64-bit executable arm64",
+      "binary_sha256": "fbf687c68358e54da314e57589c4284f5d477e465f32c3231d5957a64823b92d"
+    },
+    "bin/multigraph-check/contraction_runner": {
+      "file": "Mach-O 64-bit executable arm64",
+      "binary_sha256": "2fc9bafcebfe69f86511ed626a7dbcc017c3b4b0b1867788c11ddc08b8393f69"
+    },
+    "bin/multigraph-check/core_attachment_test": {
+      "file": "Mach-O 64-bit executable arm64",
+      "binary_sha256": "d41b46129c398620774a938e22ee7b397fb6023f0508100c47614eab80ec1b9c"
+    },
+    "bin/multigraph-clang22-sanitizer/multigraph_contraction_test": {
+      "file": "Mach-O 64-bit executable arm64",
+      "binary_sha256": "10be86280bd586ee5fcef5b7833ee5588f91caf2ca3bc3ef477ee00992a2820d"
+    },
+    "bin/multigraph-clang22-sanitizer/test_runner": {
+      "file": "Mach-O 64-bit executable arm64",
+      "binary_sha256": "50170e6386a94a542f7117af887e16797758aaeabcebc18323d857d90dd23eff"
+    },
+    "bin/multigraph-clang22-sanitizer/regression_runner": {
+      "file": "Mach-O 64-bit executable arm64",
+      "binary_sha256": "fe7a0f3a73f74da2b22743504f42b7dfc1fff53ab95248632d1989c52d9b030b"
+    },
+    "bin/multigraph-clang22-sanitizer/contraction_runner": {
+      "file": "Mach-O 64-bit executable arm64",
+      "binary_sha256": "31dcd9fe2725055664789a8b998a6c930f9400a468f6991bb507921c42d9be9a"
+    },
+    "bin/multigraph-clang22-sanitizer/core_attachment_test": {
+      "file": "Mach-O 64-bit executable arm64",
+      "binary_sha256": "f6526963b6195e6c55ce9eb2c6d252daffbee441626dc5ec54a056185833708b"
+    }
+  },
+  "public_boruvka_step_source_identical_to_HEAD": true,
+  "public_boruvka_step_sha256": "6f9a0284c2247c519a671dc32f864a3577aeea1d39c9dfdf6e05752b72a436ca"
+}

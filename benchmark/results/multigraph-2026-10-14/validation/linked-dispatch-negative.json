@@ -1,0 +1,62 @@
+{
+  "utc": "2026-10-15T04:50:07.754258+00:00",
+  "validation": "pass: intentionally linked default KKT rejected",
+  "builds": [
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/usr/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O3",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-c",
+        "kkt/kkt.cpp",
+        "-o",
+        ".build/multigraph-check/kkt/reference-dispatch.o"
+      ],
+      "exit_status": 0
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/usr/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O3",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "test/multigraph_contraction_test.cpp",
+        ".build/multigraph-check/lca/lca.o",
+        ".build/multigraph-check/kruskal/kruskal.o",
+        ".build/multigraph-check/prim/prim.o",
+        ".build/multigraph-check/boruvka/boruvka.o",
+        ".build/multigraph-check/verifier/verifier_v2.o",
+        ".build/multigraph-check/union_find/union_find.o",
+        ".build/multigraph-check/graph_utils/graph_utils.o",
+        ".build/multigraph-check/kkt/reference-dispatch.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-o",
+        "bin/multigraph-check/reference-dispatch-rejection"
+      ],
+      "exit_status": 0
+    }
+  ],
+  "run_command": [
+    "bin/multigraph-check/reference-dispatch-rejection"
+  ],
+  "exit_status": 1,
+  "expected_error": "linked KKT is not using the multigraph candidate"
+}

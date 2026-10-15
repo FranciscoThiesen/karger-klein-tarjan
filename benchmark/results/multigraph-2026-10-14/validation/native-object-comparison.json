@@ -1,0 +1,46 @@
+{
+  "same_source_inventory": true,
+  "objects": {
+    "boruvka/boruvka.o": {
+      "reference": "1c58b8cb7c1a54989938eb3c2ec2a786ed2ef0ab2b4f257e99faf9107bfca674",
+      "multigraph": "1c58b8cb7c1a54989938eb3c2ec2a786ed2ef0ab2b4f257e99faf9107bfca674",
+      "identical": true
+    },
+    "graph_utils/graph_utils.o": {
+      "reference": "1e9aa75afc36902bf470d5fbe94964233b03df5f490d0e115feeaf9307744fe1",
+      "multigraph": "1e9aa75afc36902bf470d5fbe94964233b03df5f490d0e115feeaf9307744fe1",
+      "identical": true
+    },
+    "kkt/kkt.o": {
+      "reference": "d502ce01d7598509e65082b179f3ff8029a5be533a7a45717942c83057c2b24a",
+      "multigraph": "ebcd836f4d82ab0e2a8d1147074d9ee878efc09a44e638913935068284e8f27c",
+      "identical": false
+    },
+    "kruskal/kruskal.o": {
+      "reference": "d0d23eadc6eb81a4285a69077e56d07d32f3b32673e0a53ee6cb8537c659c942",
+      "multigraph": "d0d23eadc6eb81a4285a69077e56d07d32f3b32673e0a53ee6cb8537c659c942",
+      "identical": true
+    },
+    "lca/lca.o": {
+      "reference": "c7d6f8f4c332846ccfe17ccd1435fbfb2780de00f477a060655fb3af309b406c",
+      "multigraph": "c7d6f8f4c332846ccfe17ccd1435fbfb2780de00f477a060655fb3af309b406c",
+      "identical": true
+    },
+    "prim/prim.o": {
+      "reference": "4954cd12ab635f0eb57fc95e269f2f77dd4f7b98a7b6012667ca38fb5e0b2f8a",
+      "multigraph": "4954cd12ab635f0eb57fc95e269f2f77dd4f7b98a7b6012667ca38fb5e0b2f8a",
+      "identical": true
+    },
+    "union_find/union_find.o": {
+      "reference": "fcc799fa111afbfdc0afe4e36f2a2db3acf37a061bd7b9d0022bd206046cb1ca",
+      "multigraph": "fcc799fa111afbfdc0afe4e36f2a2db3acf37a061bd7b9d0022bd206046cb1ca",
+      "identical": true
+    },
+    "verifier/verifier_v2.o": {
+      "reference": "8b71c726de3e9adcb622c5d141fe95b84303046caeb800bf529ac3b7b5a5424b",
+      "multigraph": "8b71c726de3e9adcb622c5d141fe95b84303046caeb800bf529ac3b7b5a5424b",
+      "identical": true
+    }
+  },
+  "all_non_kkt_objects_identical": true
+}

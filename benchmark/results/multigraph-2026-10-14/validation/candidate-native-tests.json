@@ -1,0 +1,54 @@
+{
+  "utc": "2026-10-15T04:45:38.988648+00:00",
+  "profile": "native O3 with candidate macro and work counters; correctness only",
+  "tests": [
+    {
+      "command": [
+        "bin/multigraph-check/multigraph_contraction_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "41204b4a3c36680e346e87d8e47b0279f5ba3ce720a76f3eae6d5f114c7ff768",
+      "log": "candidate-native-multigraph_contraction_test.log"
+    },
+    {
+      "command": [
+        "bin/multigraph-check/test_runner"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "4d037436bb16415c79761f387a3dccceb00a434696ad7e44cfdecb594ffd9c05",
+      "log": "candidate-native-test_runner.log"
+    },
+    {
+      "command": [
+        "bin/multigraph-check/regression_runner"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "fbf687c68358e54da314e57589c4284f5d477e465f32c3231d5957a64823b92d",
+      "log": "candidate-native-regression_runner.log"
+    },
+    {
+      "command": [
+        "bin/multigraph-check/contraction_runner"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "2fc9bafcebfe69f86511ed626a7dbcc017c3b4b0b1867788c11ddc08b8393f69",
+      "log": "candidate-native-contraction_runner.log"
+    },
+    {
+      "command": [
+        "bin/multigraph-check/certificate_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "7f480413499f703ed6dd7ed59dd9a9b254973c54f7ad4fd986016cd0cc64aeb0",
+      "log": "candidate-native-certificate_test.log"
+    },
+    {
+      "command": [
+        "bin/multigraph-check/core_attachment_test"
+      ],
+      "exit_status": 0,
+      "binary_sha256": "d41b46129c398620774a938e22ee7b397fb6023f0508100c47614eab80ec1b9c",
+      "log": "candidate-native-core_attachment_test.log"
+    }
+  ]
+}
