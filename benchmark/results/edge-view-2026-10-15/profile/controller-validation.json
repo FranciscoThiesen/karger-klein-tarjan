@@ -1,0 +1,25 @@
+{
+  "schema": "kkt_profile_controller_validation_v1",
+  "validation": "pass",
+  "mock_tests": {
+    "tests": 2,
+    "lifecycle_scenarios": 8,
+    "no_release_gate": 1,
+    "log": "controller-mock-tests.log",
+    "log_sha256": "bcbdecc8bff9c0013d4293fa9e25023c53c8bd64c01e1af8e76b2a997b9ca9fa",
+    "native_processes_launched": 0
+  },
+  "independent_review": {
+    "agent": "/root/experiment_design",
+    "status": "pass",
+    "fixed_findings": [
+      "stdin close cannot bypass cleanup",
+      "pin final preparation/build/binary/object hashes",
+      "reread final stdout after driver exit"
+    ]
+  },
+  "controller_sha256": "60d610d0c48e4f071eae2d1a58a54e9540f2481495345f6e70a4aecf9084a87b",
+  "test_source_sha256": "617ab7857ba74d35669d5e1a22a5ed1b5b698814f8e14c059d6721765a2ebee7",
+  "driver_source_sha256": "357d8aabf05a3f587f11195bd0de9c9618496577245179ee5f4419dd49fe6a4d",
+  "driver_and_sampler_not_yet_run": true
+}

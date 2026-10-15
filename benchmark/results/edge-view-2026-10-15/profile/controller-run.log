@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/profile/profile_controller.py", line 240, in <module>
+    capture(parser.parse_args())
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/profile/profile_controller.py", line 230, in capture
+    if failure: raise failure
+                ^^^^^^^^^^^^^
+  File "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/profile/profile_controller.py", line 183, in capture
+    require(sampling.poll() is None, "sampler exited before confirmed attachment")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/analyze_continuation.py", line 36, in require
+    raise ValueError(message)
+ValueError: sampler exited before confirmed attachment

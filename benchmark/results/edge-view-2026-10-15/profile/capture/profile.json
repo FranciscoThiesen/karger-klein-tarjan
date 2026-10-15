@@ -1,0 +1,463 @@
+{
+  "schema": "kkt_sample_profile_v1",
+  "validation": "failed",
+  "diagnostic_only": true,
+  "profiling_overhead_present": true,
+  "benchmark_timing": false,
+  "fixture": {
+    "family": "leaf_hierarchy4",
+    "n": 2097152,
+    "m": 33554432,
+    "density": 16,
+    "intrusion_per_mille": 0,
+    "graph_seed": 6000011,
+    "kkt_seed": 1423,
+    "calls": 4
+  },
+  "prepared_commands": {
+    "schema": "kkt_profile_preparation_v1",
+    "status": "prepared_not_compiled_or_executed",
+    "working_directory": "/Users/random_person/Desktop/kkt-edge-verifier-view",
+    "parent_build_record": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/validation/timing-build-edge-build-record.json",
+    "parent_build_record_sha256": "001a9dc1ddc60936f0c123a146e6d95b3765c232a8d8093837e4223ed05c7c58",
+    "driver_source": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/profile/kkt_profile.cpp",
+    "driver_source_sha256": "357d8aabf05a3f587f11195bd0de9c9618496577245179ee5f4419dd49fe6a4d",
+    "object_paths": {
+      "boruvka/boruvka.o": "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/boruvka/boruvka.o",
+      "kruskal/kruskal.o": "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/kruskal/kruskal.o",
+      "prim/prim.o": "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/prim/prim.o",
+      "lca/lca.o": "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/lca/lca.o",
+      "union_find/union_find.o": "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/union_find/union_find.o",
+      "graph_utils/graph_utils.o": "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/graph_utils/graph_utils.o",
+      "verifier/verifier_v2.o": "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/verifier/verifier_v2.o",
+      "kkt/kkt.o": "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/edge/kkt/kkt.o"
+    },
+    "object_sha256": {
+      "boruvka/boruvka.o": "1c58b8cb7c1a54989938eb3c2ec2a786ed2ef0ab2b4f257e99faf9107bfca674",
+      "kruskal/kruskal.o": "d0d23eadc6eb81a4285a69077e56d07d32f3b32673e0a53ee6cb8537c659c942",
+      "prim/prim.o": "4954cd12ab635f0eb57fc95e269f2f77dd4f7b98a7b6012667ca38fb5e0b2f8a",
+      "lca/lca.o": "c7d6f8f4c332846ccfe17ccd1435fbfb2780de00f477a060655fb3af309b406c",
+      "union_find/union_find.o": "fcc799fa111afbfdc0afe4e36f2a2db3acf37a061bd7b9d0022bd206046cb1ca",
+      "graph_utils/graph_utils.o": "1e9aa75afc36902bf470d5fbe94964233b03df5f490d0e115feeaf9307744fe1",
+      "verifier/verifier_v2.o": "3443615d0a432f621d606f2423eb45b19ff88678023d803a02a370cd8b8f9a55",
+      "kkt/kkt.o": "9f1ae9eaa1410cf94d0938580503a5008a3042b0d32d3cf745864a9cdbbdac0d"
+    },
+    "compiler": "Apple clang version 15.0.0 (clang-1500.3.9.4)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+    "sdk": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+    "compile_command": [
+      "/usr/bin/arch",
+      "-arm64",
+      "/usr/bin/clang++",
+      "-isysroot",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+      "-std=c++17",
+      "-O3",
+      "-Wall",
+      "-Wextra",
+      "-march=native",
+      "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+      "-I.",
+      "-DKKT_EXPERIMENT_EDGE_VIEW",
+      "-c",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/profile/kkt_profile.cpp",
+      "-o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/profile/kkt_profile.o"
+    ],
+    "link_command": [
+      "/usr/bin/arch",
+      "-arm64",
+      "/usr/bin/clang++",
+      "-isysroot",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+      "-std=c++17",
+      "-O3",
+      "-Wall",
+      "-Wextra",
+      "-march=native",
+      "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+      "-I.",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/boruvka/boruvka.o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/kruskal/kruskal.o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/prim/prim.o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/lca/lca.o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/union_find/union_find.o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/graph_utils/graph_utils.o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/verifier/verifier_v2.o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/edge/kkt/kkt.o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/profile/kkt_profile.o",
+      "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+      "-Wl,-stack_size,0x20000000",
+      "-o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/profile/kkt_profile"
+    ],
+    "binary": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/profile/kkt_profile",
+    "required_main_stack_bytes": 536870912,
+    "fixture": {
+      "family": "leaf_hierarchy4",
+      "n": 2097152,
+      "m": 33554432,
+      "density": 16,
+      "intrusion_per_mille": 0,
+      "graph_seed": 6000011,
+      "kkt_seed": 1423,
+      "calls": 4
+    },
+    "sample_command_template": [
+      "/usr/bin/sample",
+      "<READY.pid>",
+      "60",
+      "1",
+      "-mayDie",
+      "-file",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/profile/sample.txt"
+    ],
+    "driver_bounds": {
+      "process_wall_seconds": 900,
+      "process_cpu_seconds": 600,
+      "ready_release_wait_seconds": 60
+    },
+    "external_monitor_required": true,
+    "note": "Commands are a preparation record only. Do not execute until root releases all current native timing. Hash-check every existing object before compilation/linking; never rebuild them.",
+    "edge_view_freeze": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/freeze.json",
+    "edge_view_freeze_sha256": "f976a7d61650f5aaf8e7221c7684461e36bcb51492347f45a56497b6b1cee306"
+  },
+  "prepared_commands_sha256": "ffa0d4a2cdc594afd7f6908193e09f7b58d2c82700dbb981d4cd4d658e780c8c",
+  "build_record": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/profile/profile-build.json",
+  "build_record_sha256": "59f0fc821014795cd80699f9b90c734415a1c867cc94a852ab31de0d4a2719b9",
+  "binary_sha256": "67f2898f9256dbd14e84ce0acd08183f71d334716807dfaf6777593e687395f2",
+  "driver_object_sha256": "89c2a4e31e57991a1d1ceb0fd9bbcd70ef20905701486342a80cae847126cf89",
+  "controller_sha256": "60d610d0c48e4f071eae2d1a58a54e9540f2481495345f6e70a4aecf9084a87b",
+  "started_utc": "2026-10-15T07:40:32.749280+00:00",
+  "groups": {
+    "driver": {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/profile/kkt_profile"
+      ],
+      "process_group": 9303,
+      "started_monotonic": 3607944.65809625
+    },
+    "sample": {
+      "command": [
+        "/usr/bin/sample",
+        "9303",
+        "60",
+        "1",
+        "-mayDie",
+        "-file",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/profile/capture/sample.txt"
+      ],
+      "process_group": 9312,
+      "started_monotonic": 3607980.857407583,
+      "exit_status": 0,
+      "group_exit_verification": {
+        "utc": "2026-10-15T07:41:10.938789+00:00",
+        "monotonic_ns": 3607982838946916,
+        "process_group": 9312,
+        "validation": "pass",
+        "members": [],
+        "rss_kib": 0
+      }
+    }
+  },
+  "markers": [
+    {
+      "event": "GENERATION_BEGIN",
+      "repetition": -1,
+      "utc_ns": 1792050033049157000
+    },
+    {
+      "event": "CERTIFICATE_BEGIN",
+      "repetition": -1,
+      "utc_ns": 1792050040101192000
+    },
+    {
+      "event": "READY",
+      "pid": 9303,
+      "family": "leaf_hierarchy4",
+      "n": 2097152,
+      "m": 33554432,
+      "density": 16,
+      "graph_seed": 6000011,
+      "kkt_seed": 1423,
+      "calls": 4,
+      "input_fingerprint": 14026451941408291652,
+      "topology_fingerprint": 2705006723483817198,
+      "validation": "pass"
+    }
+  ],
+  "cleanup": [
+    {
+      "name": "driver",
+      "started_monotonic_ns": 3607982843879625,
+      "process_group": 9303,
+      "signals": [
+        "SIGTERM"
+      ],
+      "native_exit_known": true,
+      "group_exit_known": true,
+      "returncode": -15,
+      "group_verification": {
+        "utc": "2026-10-15T07:41:11.025549+00:00",
+        "monotonic_ns": 3607982925703125,
+        "process_group": 9303,
+        "validation": "pass",
+        "members": [],
+        "rss_kib": 0
+      },
+      "finished_monotonic_ns": 3607982926362083,
+      "native_process_may_still_be_running": false
+    }
+  ],
+  "native_process_may_still_be_running": false,
+  "resource_rule": {
+    "rss_limit_kib": 41943040,
+    "poll_seconds": 2,
+    "sample_wait_limit_seconds": 5.0,
+    "measure": "Sequential bounded RSS observations summed across both owned groups",
+    "failure": "Stop above 40 GiB, after three consecutive unavailable observations, or immediately after a sampler timeout; retain all partial evidence. Unknown native/group exit blocks every subsequent child."
+  },
+  "deadlines_seconds": {
+    "ready": 600,
+    "attach_after_ready": 45,
+    "driver": 900,
+    "sampler": 90
+  },
+  "error": "ValueError('sampler exited before confirmed attachment')",
+  "finished_utc": "2026-10-15T07:41:11.026384+00:00",
+  "monitor_events": {
+    "9303": [
+      {
+        "process_group": 9303,
+        "requested_monotonic_ns": 3607944659919958,
+        "previous_request_gap_ns": null,
+        "provider_started_monotonic_ns": 3607944660865000,
+        "provider_finished_monotonic_ns": 3607944662496083,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3607944662787666,
+        "sampler_duration_ns": 2867708
+      },
+      {
+        "process_group": 9303,
+        "requested_monotonic_ns": 3607946670011708,
+        "previous_request_gap_ns": 2010091750,
+        "provider_started_monotonic_ns": 3607946670241333,
+        "provider_finished_monotonic_ns": 3607946670541250,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3607946670588166,
+        "sampler_duration_ns": 576458
+      },
+      {
+        "process_group": 9303,
+        "requested_monotonic_ns": 3607948679937375,
+        "previous_request_gap_ns": 2009925667,
+        "provider_started_monotonic_ns": 3607948680147958,
+        "provider_finished_monotonic_ns": 3607948680396708,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3607948680443583,
+        "sampler_duration_ns": 506208
+      },
+      {
+        "process_group": 9303,
+        "requested_monotonic_ns": 3607950690032541,
+        "previous_request_gap_ns": 2010095166,
+        "provider_started_monotonic_ns": 3607950690224791,
+        "provider_finished_monotonic_ns": 3607950690445708,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3607950690484583,
+        "sampler_duration_ns": 452042
+      },
+      {
+        "process_group": 9303,
+        "requested_monotonic_ns": 3607952700058833,
+        "previous_request_gap_ns": 2010026292,
+        "provider_started_monotonic_ns": 3607952700460833,
+        "provider_finished_monotonic_ns": 3607952700848541,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3607952700919708,
+        "sampler_duration_ns": 860875
+      },
+      {
+        "process_group": 9303,
+        "requested_monotonic_ns": 3607954710056791,
+        "previous_request_gap_ns": 2009997958,
+        "provider_started_monotonic_ns": 3607954710230291,
+        "provider_finished_monotonic_ns": 3607954710417791,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3607954710453291,
+        "sampler_duration_ns": 396500
+      },
+      {
+        "process_group": 9303,
+        "requested_monotonic_ns": 3607956720083291,
+        "previous_request_gap_ns": 2010026500,
+        "provider_started_monotonic_ns": 3607956720279791,
+        "provider_finished_monotonic_ns": 3607956720590708,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3607956720633583,
+        "sampler_duration_ns": 550292
+      },
+      {
+        "process_group": 9303,
+        "requested_monotonic_ns": 3607958730118083,
+        "previous_request_gap_ns": 2010034792,
+        "provider_started_monotonic_ns": 3607958730322583,
+        "provider_finished_monotonic_ns": 3607958730707000,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3607958730760791,
+        "sampler_duration_ns": 642708
+      },
+      {
+        "process_group": 9303,
+        "requested_monotonic_ns": 3607960739883666,
+        "previous_request_gap_ns": 2009765583,
+        "provider_started_monotonic_ns": 3607960740124625,
+        "provider_finished_monotonic_ns": 3607960740436041,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3607960740485000,
+        "sampler_duration_ns": 601334
+      },
+      {
+        "process_group": 9303,
+        "requested_monotonic_ns": 3607962749913625,
+        "previous_request_gap_ns": 2010029959,
+        "provider_started_monotonic_ns": 3607962750147583,
+        "provider_finished_monotonic_ns": 3607962750460416,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3607962750508375,
+        "sampler_duration_ns": 594750
+      },
+      {
+        "process_group": 9303,
+        "requested_monotonic_ns": 3607964759939916,
+        "previous_request_gap_ns": 2010026291,
+        "provider_started_monotonic_ns": 3607964760149750,
+        "provider_finished_monotonic_ns": 3607964760443916,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3607964760489416,
+        "sampler_duration_ns": 549500
+      },
+      {
+        "process_group": 9303,
+        "requested_monotonic_ns": 3607966769976625,
+        "previous_request_gap_ns": 2010036709,
+        "provider_started_monotonic_ns": 3607966770193875,
+        "provider_finished_monotonic_ns": 3607966770405833,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3607966770453541,
+        "sampler_duration_ns": 476916
+      },
+      {
+        "process_group": 9303,
+        "requested_monotonic_ns": 3607968780008708,
+        "previous_request_gap_ns": 2010032083,
+        "provider_started_monotonic_ns": 3607968780216666,
+        "provider_finished_monotonic_ns": 3607968780501000,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3607968780541000,
+        "sampler_duration_ns": 532292
+      },
+      {
+        "process_group": 9303,
+        "requested_monotonic_ns": 3607970790064500,
+        "previous_request_gap_ns": 2010055792,
+        "provider_started_monotonic_ns": 3607970790314833,
+        "provider_finished_monotonic_ns": 3607970790629666,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3607970790680333,
+        "sampler_duration_ns": 615833
+      },
+      {
+        "process_group": 9303,
+        "requested_monotonic_ns": 3607972800093041,
+        "previous_request_gap_ns": 2010028541,
+        "provider_started_monotonic_ns": 3607972800321208,
+        "provider_finished_monotonic_ns": 3607972800555000,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3607972800603291,
+        "sampler_duration_ns": 510250
+      },
+      {
+        "process_group": 9303,
+        "requested_monotonic_ns": 3607974810116708,
+        "previous_request_gap_ns": 2010023667,
+        "provider_started_monotonic_ns": 3607974810321458,
+        "provider_finished_monotonic_ns": 3607974810584583,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3607974810636083,
+        "sampler_duration_ns": 519375
+      },
+      {
+        "process_group": 9303,
+        "requested_monotonic_ns": 3607976820148208,
+        "previous_request_gap_ns": 2010031500,
+        "provider_started_monotonic_ns": 3607976820344458,
+        "provider_finished_monotonic_ns": 3607976820637583,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3607976820674125,
+        "sampler_duration_ns": 525917
+      },
+      {
+        "process_group": 9303,
+        "requested_monotonic_ns": 3607978830249625,
+        "previous_request_gap_ns": 2010101417,
+        "provider_started_monotonic_ns": 3607978830591791,
+        "provider_finished_monotonic_ns": 3607978830941250,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3607978830993458,
+        "sampler_duration_ns": 743833
+      },
+      {
+        "process_group": 9303,
+        "requested_monotonic_ns": 3607980832950333,
+        "previous_request_gap_ns": 2002700708,
+        "provider_started_monotonic_ns": 3607980833965625,
+        "provider_finished_monotonic_ns": 3607980834810750,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3607980835015125,
+        "sampler_duration_ns": 2064792
+      },
+      {
+        "process_group": 9303,
+        "requested_monotonic_ns": 3607982834611041,
+        "previous_request_gap_ns": 2001660708,
+        "provider_started_monotonic_ns": 3607982835991916,
+        "provider_finished_monotonic_ns": 3607982837094458,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3607982837427250,
+        "sampler_duration_ns": 2816209
+      },
+      {
+        "process_group": 9303,
+        "requested_monotonic_ns": 3607982925703125,
+        "previous_request_gap_ns": 91092084,
+        "provider_started_monotonic_ns": 3607982926036541,
+        "provider_finished_monotonic_ns": 3607982926292916,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3607982926337000,
+        "sampler_duration_ns": 633875
+      }
+    ],
+    "9312": [
+      {
+        "process_group": 9312,
+        "requested_monotonic_ns": 3607982838946916,
+        "previous_request_gap_ns": null,
+        "provider_started_monotonic_ns": 3607982839491500,
+        "provider_finished_monotonic_ns": 3607982839854708,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3607982839986166,
+        "sampler_duration_ns": 1039250
+      }
+    ]
+  },
+  "artifacts_sha256": {
+    "driver.stdout": "902786827a12699638321ebf78cf376211b66705ffc20d0e66442271e804a6a4",
+    "driver.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "sample.stderr": "9dbfdd78fb35fd6fd36a2d5ed40b8275c6ad8d00d70236722bd6b24a472c7405",
+    "resources.jsonl": "9731366733417520092cd8833b8b49e3fed2215904d263b41ab548b417c5c5e3",
+    "sample.txt": "ae6c162b9aef93f3f7026841eb3ee438372a1638ceff86eb506a65743586c337",
+    "sample.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

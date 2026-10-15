@@ -1,0 +1,238 @@
+{
+  "schema": "kkt_profile_build_v1",
+  "validation": "pass",
+  "started_utc": "2026-10-15T07:34:54.882689+00:00",
+  "prepared_commands_sha256": "ffa0d4a2cdc594afd7f6908193e09f7b58d2c82700dbb981d4cd4d658e780c8c",
+  "driver_source_sha256": "357d8aabf05a3f587f11195bd0de9c9618496577245179ee5f4419dd49fe6a4d",
+  "edge_view_freeze_sha256": "f976a7d61650f5aaf8e7221c7684461e36bcb51492347f45a56497b6b1cee306",
+  "production_object_sha256": {
+    "boruvka/boruvka.o": "1c58b8cb7c1a54989938eb3c2ec2a786ed2ef0ab2b4f257e99faf9107bfca674",
+    "kruskal/kruskal.o": "d0d23eadc6eb81a4285a69077e56d07d32f3b32673e0a53ee6cb8537c659c942",
+    "prim/prim.o": "4954cd12ab635f0eb57fc95e269f2f77dd4f7b98a7b6012667ca38fb5e0b2f8a",
+    "lca/lca.o": "c7d6f8f4c332846ccfe17ccd1435fbfb2780de00f477a060655fb3af309b406c",
+    "union_find/union_find.o": "fcc799fa111afbfdc0afe4e36f2a2db3acf37a061bd7b9d0022bd206046cb1ca",
+    "graph_utils/graph_utils.o": "1e9aa75afc36902bf470d5fbe94964233b03df5f490d0e115feeaf9307744fe1",
+    "verifier/verifier_v2.o": "3443615d0a432f621d606f2423eb45b19ff88678023d803a02a370cd8b8f9a55",
+    "kkt/kkt.o": "9f1ae9eaa1410cf94d0938580503a5008a3042b0d32d3cf745864a9cdbbdac0d"
+  },
+  "commands": [
+    [
+      "/usr/bin/arch",
+      "-arm64",
+      "/usr/bin/clang++",
+      "-isysroot",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+      "-std=c++17",
+      "-O3",
+      "-Wall",
+      "-Wextra",
+      "-march=native",
+      "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+      "-I.",
+      "-DKKT_EXPERIMENT_EDGE_VIEW",
+      "-c",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/profile/kkt_profile.cpp",
+      "-o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/profile/kkt_profile.o"
+    ],
+    [
+      "/usr/bin/arch",
+      "-arm64",
+      "/usr/bin/clang++",
+      "-isysroot",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+      "-std=c++17",
+      "-O3",
+      "-Wall",
+      "-Wextra",
+      "-march=native",
+      "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+      "-I.",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/boruvka/boruvka.o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/kruskal/kruskal.o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/prim/prim.o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/lca/lca.o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/union_find/union_find.o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/graph_utils/graph_utils.o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/verifier/verifier_v2.o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/edge/kkt/kkt.o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/profile/kkt_profile.o",
+      "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+      "-Wl,-stack_size,0x20000000",
+      "-o",
+      "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/profile/kkt_profile"
+    ]
+  ],
+  "exit_statuses": [
+    0,
+    0
+  ],
+  "compiler_command": [
+    "/usr/bin/arch",
+    "-arm64",
+    "/usr/bin/clang++",
+    "--version"
+  ],
+  "compiler": "Apple clang version 15.0.0 (clang-1500.3.9.4)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+  "sdk": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+  "binary": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/profile/kkt_profile",
+  "build_log": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/profile/build.log",
+  "children": [
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/usr/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O3",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-I.",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-c",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/profile/kkt_profile.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/profile/kkt_profile.o"
+      ],
+      "process_group": 8909,
+      "observations": [
+        {
+          "utc": "2026-10-15T07:34:54.888971+00:00",
+          "monotonic_ns": 3607606788180541,
+          "process_group": 8909,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 8909,
+              "rss_kib": 1728,
+              "command": "/usr/bin/arch"
+            }
+          ],
+          "rss_kib": 1728
+        }
+      ],
+      "group_exit_verification": {
+        "utc": "2026-10-15T07:34:55.930906+00:00",
+        "monotonic_ns": 3607607830130541,
+        "process_group": 8909,
+        "validation": "pass",
+        "members": [],
+        "rss_kib": 0
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/usr/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O3",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/shared/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/.build/edge-verifier/timing-build/edge/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/profile/kkt_profile.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/profile/kkt_profile"
+      ],
+      "process_group": 8911,
+      "observations": [
+        {
+          "utc": "2026-10-15T07:34:55.936884+00:00",
+          "monotonic_ns": 3607607836105708,
+          "process_group": 8911,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 8911,
+              "rss_kib": 460,
+              "command": "/usr/bin/arch"
+            }
+          ],
+          "rss_kib": 460
+        }
+      ],
+      "group_exit_verification": {
+        "utc": "2026-10-15T07:34:56.025685+00:00",
+        "monotonic_ns": 3607607924903583,
+        "process_group": 8911,
+        "validation": "pass",
+        "members": [],
+        "rss_kib": 0
+      }
+    }
+  ],
+  "cleanup": [],
+  "binary_sha256": "67f2898f9256dbd14e84ce0acd08183f71d334716807dfaf6777593e687395f2",
+  "driver_object_sha256": "89c2a4e31e57991a1d1ceb0fd9bbcd70ef20905701486342a80cae847126cf89",
+  "binary_profile": {
+    "file_description": "Mach-O 64-bit executable arm64",
+    "main_stack_bytes": 536870912,
+    "otool_load_commands": "/Users/random_person/Desktop/kkt-edge-verifier-view/benchmark/results/edge-view-2026-10-15/profile/kkt_profile:\nLoad command 0\n      cmd LC_SEGMENT_64\n  cmdsize 72\n  segname __PAGEZERO\n   vmaddr 0x0000000000000000\n   vmsize 0x0000000100000000\n  fileoff 0\n filesize 0\n  maxprot 0x00000000\n initprot 0x00000000\n   nsects 0\n    flags 0x0\nLoad command 1\n      cmd LC_SEGMENT_64\n  cmdsize 552\n  segname __TEXT\n   vmaddr 0x0000000100000000\n   vmsize 0x0000000000024000\n  fileoff 0\n filesize 147456\n  maxprot 0x00000005\n initprot 0x00000005\n   nsects 6\n    flags 0x0\nSection\n  sectname __text\n   segname __TEXT\n      addr 0x00000001000041fc\n      size 0x000000000001d318\n    offset 16892\n     align 2^2 (4)\n    reloff 0\n    nreloc 0\n     flags 0x80000400\n reserved1 0\n reserved2 0\nSection\n  sectname __stubs\n   segname __TEXT\n      addr 0x0000000100021514\n      size 0x00000000000002f4\n    offset 136468\n     align 2^2 (4)\n    reloff 0\n    nreloc 0\n     flags 0x80000408\n reserved1 0 (index into indirect symbol table)\n reserved2 12 (size of stubs)\nSection\n  sectname __gcc_except_tab\n   segname __TEXT\n      addr 0x0000000100021808\n      size 0x00000000000012a0\n    offset 137224\n     align 2^2 (4)\n    reloff 0\n    nreloc 0\n     flags 0x00000000\n reserved1 0\n reserved2 0\nSection\n  sectname __cstring\n   segname __TEXT\n      addr 0x0000000100022aa8\n      size 0x0000000000000ea5\n    offset 141992\n     align 2^0 (1)\n    reloff 0\n    nreloc 0\n     flags 0x00000002\n reserved1 0\n reserved2 0\nSection\n  sectname __const\n   segname __TEXT\n      addr 0x0000000100023950\n      size 0x0000000000000206\n    offset 145744\n     align 2^4 (16)\n    reloff 0\n    nreloc 0\n     flags 0x00000000\n reserved1 0\n reserved2 0\nSection\n  sectname __unwind_info\n   segname __TEXT\n      addr 0x0000000100023b58\n      size 0x00000000000004a0\n    offset 146264\n     align 2^2 (4)\n    reloff 0\n    nreloc 0\n     flags 0x00000000\n reserved1 0\n reserved2 0\nLoad command 2\n      cmd LC_SEGMENT_64\n  cmdsize 232\n  segname __DATA_CONST\n   vmaddr 0x0000000100024000\n   vmsize 0x0000000000004000\n  fileoff 147456\n filesize 16384\n  maxprot 0x00000003\n initprot 0x00000003\n   nsects 2\n    flags 0x10\nSection\n  sectname __got\n   segname __DATA_CONST\n      addr 0x0000000100024000\n      size 0x00000000000002b0\n    offset 147456\n     align 2^3 (8)\n    reloff 0\n    nreloc 0\n     flags 0x00000006\n reserved1 63 (index into indirect symbol table)\n reserved2 0\nSection\n  sectname __const\n   segname __DATA_CONST\n      addr 0x00000001000242b0\n      size 0x00000000000001b0\n    offset 148144\n     align 2^3 (8)\n    reloff 0\n    nreloc 0\n     flags 0x00000000\n reserved1 0\n reserved2 0\nLoad command 3\n      cmd LC_SEGMENT_64\n  cmdsize 72\n  segname __LINKEDIT\n   vmaddr 0x0000000100028000\n   vmsize 0x0000000000008000\n  fileoff 163840\n filesize 32632\n  maxprot 0x00000001\n initprot 0x00000001\n   nsects 0\n    flags 0x0\nLoad command 4\n      cmd LC_DYLD_CHAINED_FIXUPS\n  cmdsize 16\n  dataoff 163840\n datasize 3096\nLoad command 5\n      cmd LC_DYLD_EXPORTS_TRIE\n  cmdsize 16\n  dataoff 166936\n datasize 2088\nLoad command 6\n     cmd LC_SYMTAB\n cmdsize 24\n  symoff 169304\n   nsyms 339\n  stroff 175328\n strsize 19488\nLoad command 7\n            cmd LC_DYSYMTAB\n        cmdsize 80\n      ilocalsym 0\n      nlocalsym 218\n     iextdefsym 218\n     nextdefsym 35\n      iundefsym 253\n      nundefsym 86\n         tocoff 0\n           ntoc 0\n      modtaboff 0\n        nmodtab 0\n   extrefsymoff 0\n    nextrefsyms 0\n indirectsymoff 174728\n  nindirectsyms 149\n      extreloff 0\n        nextrel 0\n      locreloff 0\n        nlocrel 0\nLoad command 8\n          cmd LC_LOAD_DYLINKER\n      cmdsize 32\n         name /usr/lib/dyld (offset 12)\nLoad command 9\n     cmd LC_UUID\n cmdsize 24\n    uuid 14608C6A-BE7C-3404-9C31-1D3DF12A18C4\nLoad command 10\n      cmd LC_BUILD_VERSION\n  cmdsize 32\n platform 1\n    minos 14.5\n      sdk 14.5\n   ntools 1\n     tool 3\n  version 1053.12\nLoad command 11\n      cmd LC_SOURCE_VERSION\n  cmdsize 16\n  version 0.0\nLoad command 12\n       cmd LC_MAIN\n   cmdsize 24\n  entryoff 77012\n stacksize 536870912\nLoad command 13\n          cmd LC_LOAD_DYLIB\n      cmdsize 48\n         name /usr/lib/libc++.1.dylib (offset 24)\n   time stamp 2 Wed Dec 31 16:00:02 1969\n      current version 1700.255.5\ncompatibility version 1.0.0\nLoad command 14\n          cmd LC_LOAD_DYLIB\n      cmdsize 56\n         name /usr/lib/libSystem.B.dylib (offset 24)\n   time stamp 2 Wed Dec 31 16:00:02 1969\n      current version 1345.120.2\ncompatibility version 1.0.0\nLoad command 15\n      cmd LC_FUNCTION_STARTS\n  cmdsize 16\n  dataoff 169024\n datasize 280\nLoad command 16\n      cmd LC_DATA_IN_CODE\n  cmdsize 16\n  dataoff 169304\n datasize 0\nLoad command 17\n      cmd LC_CODE_SIGNATURE\n  cmdsize 16\n  dataoff 194816\n datasize 1656\n"
+  },
+  "finished_utc": "2026-10-15T07:34:56.161192+00:00",
+  "build_log_sha256": "5420ea742fd783006ec27f029a77cb46b7775fbb515b28e2f201c8f308229c2f",
+  "monitor_events": {
+    "8909": [
+      {
+        "process_group": 8909,
+        "requested_monotonic_ns": 3607606788180541,
+        "previous_request_gap_ns": null,
+        "provider_started_monotonic_ns": 3607606789232416,
+        "provider_finished_monotonic_ns": 3607606790900291,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3607606791295041,
+        "sampler_duration_ns": 3114500
+      },
+      {
+        "process_group": 8909,
+        "requested_monotonic_ns": 3607607830130541,
+        "previous_request_gap_ns": 1041950000,
+        "provider_started_monotonic_ns": 3607607830326500,
+        "provider_finished_monotonic_ns": 3607607830511458,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3607607830550875,
+        "sampler_duration_ns": 420334
+      }
+    ],
+    "8911": [
+      {
+        "process_group": 8911,
+        "requested_monotonic_ns": 3607607836105708,
+        "previous_request_gap_ns": null,
+        "provider_started_monotonic_ns": 3607607836356208,
+        "provider_finished_monotonic_ns": 3607607836551083,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3607607836591458,
+        "sampler_duration_ns": 485750
+      },
+      {
+        "process_group": 8911,
+        "requested_monotonic_ns": 3607607924903583,
+        "previous_request_gap_ns": 88797875,
+        "provider_started_monotonic_ns": 3607607925072791,
+        "provider_finished_monotonic_ns": 3607607925199291,
+        "outcome": "pass",
+        "returned_monotonic_ns": 3607607925229500,
+        "sampler_duration_ns": 325917
+      }
+    ]
+  }
+}
