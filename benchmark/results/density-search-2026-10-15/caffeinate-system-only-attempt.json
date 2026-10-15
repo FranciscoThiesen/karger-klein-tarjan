@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/usr/bin/arch",
+    "-arm64",
+    "/usr/bin/caffeinate",
+    "-s",
+    "-t",
+    "14400"
+  ],
+  "started_utc": "2026-10-15T07:36:20.617450+00:00",
+  "finished_utc": "2026-10-15T07:36:20.648580+00:00",
+  "pid": 9047,
+  "exit_status": 1,
+  "stdout": "",
+  "stderr": "Failed to create PreventSystemSleep assertion\n",
+  "sleep_inhibition_verified": false
+}
