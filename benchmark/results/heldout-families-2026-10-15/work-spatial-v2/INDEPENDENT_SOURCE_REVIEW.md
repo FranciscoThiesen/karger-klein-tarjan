@@ -22,3 +22,14 @@ Follow-up source review also passed the new outer build controller and unchanged
 - run_capture_attempt.py: `07bc782b7e2318de53bbc9fbec6797b81b7dc558469029d175e86a4b99698565`
 
 Attempt02 recovery source review PASS after the separately retained attempt01 link failure. The owner preserved old source snapshots, build/log artifacts and group-exit audit. The reviewed delta changes fresh build/bin/log/group/controller attempt paths and removes CPATH/LIBRARY_PATH only from the two frontend compile/link subprocess environments, recording the exact unset policy and original values. Driver, compiler argv, eight frozen objects, native gates and lifecycle checks are unchanged. The earlier builder/wrapper hashes above describe attempt01 source, not the later recovery source. No build or test was run by this reviewer.
+
+Post-release independent validation: all six spatial adapter mock groups PASS on the first independent attempt, actual exit 0, wrapper duration 7.328267875 s, owned process group verified empty. The suite also reread the real original artifact proof, corrected two-command frontend build, all twelve native gate records and their fourteen empty-group proofs; no native solver was launched by this test run. Exact unchanged source hashes, stdout/stderr and lifecycle evidence are in [independent-mocks-attempt01.json](independent-mocks-attempt01.json). Owner mock attempt01 remains failed/preserved; its only test correction was two fake-executable sentinel strings and comments.
+
+The protocol's added environment paragraph was read and agrees with the reviewed attempt02 correction. Final reviewed hashes superseding the historical values above:
+
+- PROTOCOL.md: `5e7773d136f642845ebda7e61e665d8ff33eef87100bcc7c371a6aa2793616ff`
+- test_collect.py: `8f6f145412ad3c9eaaddb1c7e2a5cd4f7b1c32150ca4aa94aac4def1dbdd7b37`
+- build_driver.py: `a4b3399bc43a4fc06ec4f2b03a21e0fe286b55684c31bf8824558a140820bd6d`
+- run_build_attempt.py: `5f84149304d52d61212e704e019ede94151b359aab60bc3971ef04e6f9e2fcb5`
+
+The driver, collector and copied capture wrapper retain their listed hashes. All reviewer-owned processes exited; no performance was launched.

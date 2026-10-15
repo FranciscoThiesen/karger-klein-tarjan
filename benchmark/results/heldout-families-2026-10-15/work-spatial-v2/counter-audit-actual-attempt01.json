@@ -1,0 +1,48 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "benchmark/results/heldout-families-2026-10-15/work-spatial-v2/audit_counters.py",
+    "--capture",
+    "benchmark/results/heldout-families-2026-10-15/work-spatial-v2/capture-attempt01.json",
+    "--analysis-dir",
+    "benchmark/results/heldout-families-2026-10-15/work-spatial-v2/analysis-attempt01",
+    "--output-dir",
+    "benchmark/results/heldout-families-2026-10-15/work-spatial-v2/independent-counter-audit-attempt01"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-compressed-queries",
+  "started_utc": "2026-10-15T14:34:05.292392+00:00",
+  "started_monotonic_ns": 25044250,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/audit_counters.py": "dcb06582d5fc00bcc80f659e3bc8c2b78b8f551c5037bf5279e3bb40b60bb66a",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/test_audit_counters.py": "cc12a87dd2bc6af8eff78376624870e1bfa47701518e7af867d1c9f0ee991b79"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 43138,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 43138,
+    "members": [],
+    "monotonic_ns": 1072051208,
+    "utc": "2026-10-15T14:34:06.339347+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/audit_counters.py": "dcb06582d5fc00bcc80f659e3bc8c2b78b8f551c5037bf5279e3bb40b60bb66a",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/test_audit_counters.py": "cc12a87dd2bc6af8eff78376624870e1bfa47701518e7af867d1c9f0ee991b79"
+  },
+  "finished_utc": "2026-10-15T14:34:06.339530+00:00",
+  "finished_monotonic_ns": 1072240375,
+  "elapsed_seconds": 1.047196125,
+  "stdout": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/counter-audit-actual-attempt01.stdout",
+  "stdout_sha256": "1b2196500fae6ca4f63c38edf02865ddb9bebfd8b764d1125895d0710fe71dec",
+  "stderr": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/counter-audit-actual-attempt01.stderr",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

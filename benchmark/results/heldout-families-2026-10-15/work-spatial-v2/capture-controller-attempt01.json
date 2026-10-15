@@ -1,0 +1,75 @@
+{
+  "schema": "heldout_work_controller_v1",
+  "validation": "pass",
+  "command": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "-B",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/collect.py",
+    "capture",
+    "--freeze",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/freeze.json",
+    "--output",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/capture-attempt01.json",
+    "--released"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-compressed-queries",
+  "started_utc": "2026-10-15T14:16:01.957481+00:00",
+  "started_monotonic_ns": 904286333,
+  "source_sha256": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/run_capture_attempt.py": "07bc782b7e2318de53bbc9fbec6797b81b7dc558469029d175e86a4b99698565",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/collect.py": "f720a86e39934a7a97a0ea1e2498c8362791949924a63a402122a382d1eba012",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/freeze.json": "cd6e7a349f689879af04b6b458bfd9a6db16ecfdf10e8fd93b134310e8e09663"
+  },
+  "deadline_seconds": 7200,
+  "native_solver_execution_authorized": true,
+  "performance_execution": false,
+  "all_owned_groups_verified_empty": true,
+  "outer_process_group": 42272,
+  "wrapper_exit_observed_monotonic_ns": 827438555208,
+  "outer_cleanup": {
+    "started_monotonic_ns": 827438720916,
+    "process_group": 42272,
+    "signals": [],
+    "native_exit_known": true,
+    "group_exit_known": true,
+    "returncode": 0,
+    "group_verification": {
+      "utc": "2026-10-15T14:29:48.493728+00:00",
+      "monotonic_ns": 827438738083,
+      "process_group": 42272,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    "finished_monotonic_ns": 827439140583,
+    "native_process_may_still_be_running": false
+  },
+  "exit_status": 0,
+  "native_solver_execution": true,
+  "checked_children": 72,
+  "checked_solver_outputs": 216,
+  "checked_replay_chains": 144,
+  "capture": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/capture-attempt01.json",
+  "capture_sha256": "c9c5f99ef7fa19e434251a9212760066f5c585f2ad8f35dd554e4e7e053ddc30",
+  "finished_utc": "2026-10-15T14:29:49.378041+00:00",
+  "finished_monotonic_ns": 828323077416,
+  "elapsed_seconds": 827.418791083,
+  "outer_monitor_events": {
+    "42272": [
+      {
+        "process_group": 42272,
+        "requested_monotonic_ns": 827438738083,
+        "previous_request_gap_ns": null,
+        "provider_started_monotonic_ns": 827438939500,
+        "provider_finished_monotonic_ns": 827439115333,
+        "outcome": "pass",
+        "returned_monotonic_ns": 827439136166,
+        "sampler_duration_ns": 398083
+      }
+    ]
+  },
+  "stdout": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/capture-controller-attempt01.stdout",
+  "stdout_sha256": "5168ec884fe10d09d1ed3a5326efbe47938a24d6ea4beb26dca78b8c7115cc77",
+  "stderr": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/capture-controller-attempt01.stderr",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

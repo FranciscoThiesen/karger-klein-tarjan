@@ -123,3 +123,7 @@ From the worktree, the read-only audit and plots reproduce into fresh output dir
 ```
 
 The [render receipt](validation/figures-attempt01.json) records `/usr/bin/python3`, source hashes, matplotlib 3.9.4 and the empty validation group. PNG, SVG and PDF artifacts are retained. The earlier HTML/PDF report edition is preserved; these linked results do not rewrite historical measurements. A larger-size search or another implementation requires its own declaration.
+
+## Completed work-count follow-up
+
+The [fresh diagnostic capture](work-spatial-v2/README.md) validates all 72 inputs and independently reconstructs every counter and contraction replay. At one million vertices, ordered attachment weights require 19 retained-edge Boruvka rounds versus 8–9 for the shuffled twin. The report includes all six families and sizes, separates scan counts from runtime, and retains the original frontend failure and its minimal repair.

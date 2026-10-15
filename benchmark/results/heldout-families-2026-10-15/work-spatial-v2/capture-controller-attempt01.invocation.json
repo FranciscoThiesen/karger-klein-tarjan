@@ -1,0 +1,27 @@
+{
+  "schema": "heldout_work_controller_v1",
+  "validation": "running",
+  "command": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "-B",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/collect.py",
+    "capture",
+    "--freeze",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/freeze.json",
+    "--output",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/capture-attempt01.json",
+    "--released"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-compressed-queries",
+  "started_utc": "2026-10-15T14:16:01.957481+00:00",
+  "started_monotonic_ns": 904286333,
+  "source_sha256": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/run_capture_attempt.py": "07bc782b7e2318de53bbc9fbec6797b81b7dc558469029d175e86a4b99698565",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/collect.py": "f720a86e39934a7a97a0ea1e2498c8362791949924a63a402122a382d1eba012",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/freeze.json": "cd6e7a349f689879af04b6b458bfd9a6db16ecfdf10e8fd93b134310e8e09663"
+  },
+  "deadline_seconds": 7200,
+  "native_solver_execution_authorized": true,
+  "performance_execution": false,
+  "all_owned_groups_verified_empty": false
+}
