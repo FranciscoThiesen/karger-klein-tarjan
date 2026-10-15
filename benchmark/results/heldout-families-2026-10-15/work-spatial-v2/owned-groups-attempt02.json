@@ -1,0 +1,621 @@
+{
+  "groups": [
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/usr/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O3",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "-c",
+        "benchmark/results/heldout-families-2026-10-15/work-spatial-v2/driver.cpp",
+        "-o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/heldout-spatial-work-attempt02/driver.o"
+      ],
+      "process_group": 41921,
+      "observations": [
+        {
+          "utc": "2026-10-15T14:10:45.264481+00:00",
+          "monotonic_ns": 1324409500,
+          "process_group": 41921,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 1324901333,
+        "process_group": 41921,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T14:10:45.264950+00:00",
+          "monotonic_ns": 1324903458,
+          "process_group": 41921,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 1324993041,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/usr/bin/clang++",
+        "-isysroot",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+        "-std=c++17",
+        "-O3",
+        "-Wall",
+        "-Wextra",
+        "-march=native",
+        "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+        "-DKKT_EXPERIMENT_EDGE_VIEW",
+        "-DKKT_ENABLE_WORK_STATS",
+        "-I.",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/native-correctness/shared/boruvka/boruvka.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/native-correctness/shared/kruskal/kruskal.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/native-correctness/shared/prim/prim.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/native-correctness/shared/lca/lca.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/native-correctness/shared/union_find/union_find.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/native-correctness/shared/graph_utils/graph_utils.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/native-correctness/shared/kkt/kkt.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/compressed-query/native-correctness/compressed/verifier/verifier_v2.o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/.build/heldout-spatial-work-attempt02/driver.o",
+        "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+        "-Wl,-stack_size,0x20000000",
+        "-o",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/heldout-spatial-work-attempt02/retention_work"
+      ],
+      "process_group": 41925,
+      "observations": [
+        {
+          "utc": "2026-10-15T14:10:45.311831+00:00",
+          "monotonic_ns": 1371762541,
+          "process_group": 41925,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 1372176458,
+        "process_group": 41925,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T14:10:45.312226+00:00",
+          "monotonic_ns": 1372179791,
+          "process_group": 41925,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 1372275333,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/heldout-spatial-work-attempt02/retention_work",
+        "leaf_distance4",
+        "1024",
+        "32",
+        "9000011",
+        "2003"
+      ],
+      "process_group": 41931,
+      "observations": [
+        {
+          "utc": "2026-10-15T14:10:45.741874+00:00",
+          "monotonic_ns": 1801785291,
+          "process_group": 41931,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 1802778625,
+        "process_group": 41931,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T14:10:45.742850+00:00",
+          "monotonic_ns": 1802800958,
+          "process_group": 41931,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 1803047416,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/heldout-spatial-work-attempt02/retention_work",
+        "leaf_shuffled4",
+        "1024",
+        "32",
+        "9000011",
+        "2003"
+      ],
+      "process_group": 41932,
+      "observations": [
+        {
+          "utc": "2026-10-15T14:10:45.796365+00:00",
+          "monotonic_ns": 1856285458,
+          "process_group": 41932,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 1856829125,
+        "process_group": 41932,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T14:10:45.796884+00:00",
+          "monotonic_ns": 1856835666,
+          "process_group": 41932,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 1856974625,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/heldout-spatial-work-attempt02/retention_work",
+        "grid2d_metric",
+        "1024",
+        "32",
+        "9000011",
+        "2003"
+      ],
+      "process_group": 41933,
+      "observations": [
+        {
+          "utc": "2026-10-15T14:10:45.847982+00:00",
+          "monotonic_ns": 1907896041,
+          "process_group": 41933,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 1908401458,
+        "process_group": 41933,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T14:10:45.848465+00:00",
+          "monotonic_ns": 1908416375,
+          "process_group": 41933,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 1908525000,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/heldout-spatial-work-attempt02/retention_work",
+        "grid2d_random",
+        "1024",
+        "32",
+        "9000011",
+        "2003"
+      ],
+      "process_group": 41935,
+      "observations": [
+        {
+          "utc": "2026-10-15T14:10:45.875665+00:00",
+          "monotonic_ns": 1935586500,
+          "process_group": 41935,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 1936125875,
+        "process_group": 41935,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T14:10:45.876179+00:00",
+          "monotonic_ns": 1936130500,
+          "process_group": 41935,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 1936251208,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/heldout-spatial-work-attempt02/retention_work",
+        "line_metric",
+        "1024",
+        "32",
+        "9000011",
+        "2003"
+      ],
+      "process_group": 41937,
+      "observations": [
+        {
+          "utc": "2026-10-15T14:10:45.902513+00:00",
+          "monotonic_ns": 1962434291,
+          "process_group": 41937,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 1962840750,
+        "process_group": 41937,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T14:10:45.902898+00:00",
+          "monotonic_ns": 1962849416,
+          "process_group": 41937,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 1962936750,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/heldout-spatial-work-attempt02/retention_work",
+        "line_random",
+        "1024",
+        "32",
+        "9000011",
+        "2003"
+      ],
+      "process_group": 41938,
+      "observations": [
+        {
+          "utc": "2026-10-15T14:10:45.925157+00:00",
+          "monotonic_ns": 1985072750,
+          "process_group": 41938,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 1985405708,
+        "process_group": 41938,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T14:10:45.925457+00:00",
+          "monotonic_ns": 1985408541,
+          "process_group": 41938,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 1985487833,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/heldout-spatial-work-attempt02/retention_work",
+        "line_random",
+        "1024",
+        "32",
+        "9000049",
+        "2003"
+      ],
+      "process_group": 41940,
+      "observations": [
+        {
+          "utc": "2026-10-15T14:10:45.949700+00:00",
+          "monotonic_ns": 2009631541,
+          "process_group": 41940,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 2009920666,
+        "process_group": 41940,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T14:10:45.949973+00:00",
+          "monotonic_ns": 2009924375,
+          "process_group": 41940,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 2010010083,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/heldout-spatial-work-attempt02/retention_work",
+        "line_metric",
+        "1024",
+        "32",
+        "9000049",
+        "2003"
+      ],
+      "process_group": 41941,
+      "observations": [
+        {
+          "utc": "2026-10-15T14:10:45.974607+00:00",
+          "monotonic_ns": 2034536375,
+          "process_group": 41941,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 2034806916,
+        "process_group": 41941,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T14:10:45.974861+00:00",
+          "monotonic_ns": 2034812416,
+          "process_group": 41941,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 2034885583,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/heldout-spatial-work-attempt02/retention_work",
+        "grid2d_random",
+        "1024",
+        "32",
+        "9000049",
+        "2003"
+      ],
+      "process_group": 41942,
+      "observations": [
+        {
+          "utc": "2026-10-15T14:10:45.998438+00:00",
+          "monotonic_ns": 2058377875,
+          "process_group": 41942,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 2058665666,
+        "process_group": 41942,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T14:10:45.998718+00:00",
+          "monotonic_ns": 2058669291,
+          "process_group": 41942,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 2058865583,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/heldout-spatial-work-attempt02/retention_work",
+        "grid2d_metric",
+        "1024",
+        "32",
+        "9000049",
+        "2003"
+      ],
+      "process_group": 41943,
+      "observations": [
+        {
+          "utc": "2026-10-15T14:10:46.021108+00:00",
+          "monotonic_ns": 2081047000,
+          "process_group": 41943,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 2081344875,
+        "process_group": 41943,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T14:10:46.021399+00:00",
+          "monotonic_ns": 2081350708,
+          "process_group": 41943,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 2081420708,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/heldout-spatial-work-attempt02/retention_work",
+        "leaf_shuffled4",
+        "1024",
+        "32",
+        "9000049",
+        "2003"
+      ],
+      "process_group": 41944,
+      "observations": [
+        {
+          "utc": "2026-10-15T14:10:46.047252+00:00",
+          "monotonic_ns": 2107186583,
+          "process_group": 41944,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 2107468916,
+        "process_group": 41944,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T14:10:46.047521+00:00",
+          "monotonic_ns": 2107471791,
+          "process_group": 41944,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 2107548958,
+        "native_process_may_still_be_running": false
+      }
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-compressed-queries/bin/heldout-spatial-work-attempt02/retention_work",
+        "leaf_distance4",
+        "1024",
+        "32",
+        "9000049",
+        "2003"
+      ],
+      "process_group": 41953,
+      "observations": [
+        {
+          "utc": "2026-10-15T14:10:46.093188+00:00",
+          "monotonic_ns": 2153112000,
+          "process_group": 41953,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "exit_status": 0,
+      "cleanup": {
+        "started_monotonic_ns": 2153493833,
+        "process_group": 41953,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-15T14:10:46.093546+00:00",
+          "monotonic_ns": 2153496791,
+          "process_group": 41953,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 2153576833,
+        "native_process_may_still_be_running": false
+      }
+    }
+  ]
+}

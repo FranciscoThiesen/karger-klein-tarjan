@@ -1,0 +1,44 @@
+{
+  "validation": "pass",
+  "audit": "failed linker attempt01 preservation and cleanup",
+  "created_utc": "2026-10-15T14:09:45.360922+00:00",
+  "owned_process_groups": [
+    41788,
+    41791,
+    41794
+  ],
+  "fresh_process_group_members": [],
+  "all_owned_groups_verified_empty": true,
+  "native_small_gates_executed": 0,
+  "compile_exit_status": 0,
+  "link_exit_status": 1,
+  "unchanged_parent_production_objects": {
+    "boruvka/boruvka.o": "1c58b8cb7c1a54989938eb3c2ec2a786ed2ef0ab2b4f257e99faf9107bfca674",
+    "kruskal/kruskal.o": "d0d23eadc6eb81a4285a69077e56d07d32f3b32673e0a53ee6cb8537c659c942",
+    "prim/prim.o": "4954cd12ab635f0eb57fc95e269f2f77dd4f7b98a7b6012667ca38fb5e0b2f8a",
+    "lca/lca.o": "a1eb3a9d6f33aa34886ebf9fd66efa6914aa3410b4689e20319e358cd55ea5c4",
+    "union_find/union_find.o": "fcc799fa111afbfdc0afe4e36f2a2db3acf37a061bd7b9d0022bd206046cb1ca",
+    "graph_utils/graph_utils.o": "1e9aa75afc36902bf470d5fbe94964233b03df5f490d0e115feeaf9307744fe1",
+    "kkt/kkt.o": "c8ae993206e67c2f1d6533bcd2719e89660e4780bd903a0c5e8a4cf8606e9795",
+    "verifier/verifier_v2.o": "21ba5d123684bcce9971ef49f9b75ecbef700a0d67bd75db212bc1f096b5b8e8"
+  },
+  "relevant_environment": {
+    "LIBRARY_PATH": "/usr/local/lib",
+    "CPATH": "/usr/local/include",
+    "SDKROOT": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+    "MACOSX_DEPLOYMENT_TARGET": null,
+    "CPLUS_INCLUDE_PATH": null,
+    "DEVELOPER_DIR": null
+  },
+  "artifacts_sha256": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/build-controller-attempt01.json": "39d28f8803b6f20b01aaa07a04144dd2b586f48cc3b4d8c65ec211af8d36b24b",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/build-controller-attempt01.invocation.json": "f86f9d13bf6fcff988a8778ddd4d0e704b3f9dc18e87202f6e769b8c0f4b6c37",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/build-controller-attempt01.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/build-controller-attempt01.stderr": "cedcf56683996dccb2dff74699413edee11da6bbb9b40cf03c80b17f44cbd5a7",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/owned-groups.json": "4ae4c99a2b5a44172e0135b55cc1a1385e25422999f7ac466df84dbd019fc249",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/build.log": "2b419761f543c9f3af7f9e132cd5c8642ced1e78c94ed4c45103477546589bc5",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/attempt01-sources/build_driver.py": "fc0d7e81d51c22b0fe37638d8a5811682aa210b3964a4b273bf01ccd372e1306",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/attempt01-sources/driver.cpp": "73cb49b5053f9e8ed59d9dba43e1f383b28d7cfc87fa66f60da79019eb7d31e4",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/attempt01-sources/run_build_attempt.py": "1307b1df0243988e4d05895346bcce9a7d6dfe08c79707ed0763dcec1fe043ff"
+  }
+}

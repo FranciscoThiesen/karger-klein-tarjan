@@ -1,0 +1,51 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "benchmark/results/heldout-families-2026-10-15/work-spatial-v2/collect.py",
+    "analyze",
+    "--capture",
+    "benchmark/results/heldout-families-2026-10-15/work-spatial-v2/capture-attempt01.json",
+    "--output-dir",
+    "benchmark/results/heldout-families-2026-10-15/work-spatial-v2/analysis-attempt01"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-compressed-queries",
+  "started_utc": "2026-10-15T14:32:48.534536+00:00",
+  "started_monotonic_ns": 33081833,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/collect.py": "f720a86e39934a7a97a0ea1e2498c8362791949924a63a402122a382d1eba012",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/PROTOCOL.md": "5e7773d136f642845ebda7e61e665d8ff33eef87100bcc7c371a6aa2793616ff",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/freeze.json": "cd6e7a349f689879af04b6b458bfd9a6db16ecfdf10e8fd93b134310e8e09663",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/capture-attempt01.json": "c9c5f99ef7fa19e434251a9212760066f5c585f2ad8f35dd554e4e7e053ddc30"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 43052,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 43052,
+    "members": [],
+    "monotonic_ns": 1143420208,
+    "utc": "2026-10-15T14:32:49.644857+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/collect.py": "f720a86e39934a7a97a0ea1e2498c8362791949924a63a402122a382d1eba012",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/PROTOCOL.md": "5e7773d136f642845ebda7e61e665d8ff33eef87100bcc7c371a6aa2793616ff",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/freeze.json": "cd6e7a349f689879af04b6b458bfd9a6db16ecfdf10e8fd93b134310e8e09663",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/capture-attempt01.json": "c9c5f99ef7fa19e434251a9212760066f5c585f2ad8f35dd554e4e7e053ddc30"
+  },
+  "finished_utc": "2026-10-15T14:32:49.645432+00:00",
+  "finished_monotonic_ns": 1144001250,
+  "elapsed_seconds": 1.110919417,
+  "stdout": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/analysis-controller-attempt01.stdout",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/analysis-controller-attempt01.stderr",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

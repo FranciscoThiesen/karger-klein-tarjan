@@ -1,0 +1,47 @@
+test_full72_fresh_capture_all216_counters_and144_chains (__main__.SpatialWorkTests) ... FAIL
+test_gate_metadata_matrix_and_command_mutations_rejected (__main__.SpatialWorkTests) ... ok
+test_inherited_invalid_counter_and_certificate_stop_after_one_child (__main__.SpatialWorkTests) ... FAIL
+test_new_freeze_full_matrix_and_parent_binding (__main__.SpatialWorkTests) ... ok
+test_real_full_parent_newmain_and_twelve_frontend_gates (__main__.SpatialWorkTests) ... ok
+test_scopes_restore_and_parent_proof_never_uses_replacement (__main__.SpatialWorkTests) ... ok
+
+======================================================================
+FAIL: test_full72_fresh_capture_all216_counters_and144_chains (__main__.SpatialWorkTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/test_collect.py", line 54, in test_full72_fresh_capture_all216_counters_and144_chains
+    factory = mock_capture(root,frozen,freeze)
+  File "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/test_collect.py", line 26, in mock_capture
+    work.capture(args,sampler=sampler,popen=factory)
+  File "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/collect.py", line 91, in capture
+    with configured(): return engine.capture(args,**kwargs)
+  File "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/collect.py", line 233, in capture
+    if failure: raise failure
+  File "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/collect.py", line 199, in capture
+    process = popen(argv,cwd=ROOT,stdout=stdout,stderr=stderr,start_new_session=True); item['process_group'] = process.pid
+  File "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/work/test_collect.py", line 92, in __call__
+    assert argv == work.command("/never-executed/" + spec["variant"], spec)
+AssertionError
+
+======================================================================
+FAIL: test_inherited_invalid_counter_and_certificate_stop_after_one_child (__main__.SpatialWorkTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/test_collect.py", line 136, in test_inherited_invalid_counter_and_certificate_stop_after_one_child
+    mock_capture(root,frozen,freeze,
+  File "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/test_collect.py", line 26, in mock_capture
+    work.capture(args,sampler=sampler,popen=factory)
+  File "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/collect.py", line 91, in capture
+    with configured(): return engine.capture(args,**kwargs)
+  File "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/collect.py", line 233, in capture
+    if failure: raise failure
+  File "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/collect.py", line 199, in capture
+    process = popen(argv,cwd=ROOT,stdout=stdout,stderr=stderr,start_new_session=True); item['process_group'] = process.pid
+  File "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/compressed-query-2026-10-15/work/test_collect.py", line 92, in __call__
+    assert argv == work.command("/never-executed/" + spec["variant"], spec)
+AssertionError
+
+----------------------------------------------------------------------
+Ran 6 tests in 6.219s
+
+FAILED (failures=2)

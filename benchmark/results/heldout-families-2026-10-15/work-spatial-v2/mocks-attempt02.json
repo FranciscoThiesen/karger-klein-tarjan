@@ -1,0 +1,50 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "benchmark/results/heldout-families-2026-10-15/work-spatial-v2/test_collect.py"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-compressed-queries",
+  "started_utc": "2026-10-15T14:12:26.959807+00:00",
+  "started_monotonic_ns": 25793750,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/collect.py": "f720a86e39934a7a97a0ea1e2498c8362791949924a63a402122a382d1eba012",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/test_collect.py": "8f6f145412ad3c9eaaddb1c7e2a5cd4f7b1c32150ca4aa94aac4def1dbdd7b37",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/PROTOCOL.md": "5e7773d136f642845ebda7e61e665d8ff33eef87100bcc7c371a6aa2793616ff",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/build_driver.py": "a4b3399bc43a4fc06ec4f2b03a21e0fe286b55684c31bf8824558a140820bd6d",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/driver.cpp": "73cb49b5053f9e8ed59d9dba43e1f383b28d7cfc87fa66f60da79019eb7d31e4",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/build-record.json": "2c93d8504ed4d984d0baa72cff502387f67d4fec9733ff264a650eca43eee365"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 42010,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 42010,
+    "members": [],
+    "monotonic_ns": 7076119916,
+    "utc": "2026-10-15T14:12:34.010131+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/collect.py": "f720a86e39934a7a97a0ea1e2498c8362791949924a63a402122a382d1eba012",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/test_collect.py": "8f6f145412ad3c9eaaddb1c7e2a5cd4f7b1c32150ca4aa94aac4def1dbdd7b37",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/PROTOCOL.md": "5e7773d136f642845ebda7e61e665d8ff33eef87100bcc7c371a6aa2793616ff",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/build_driver.py": "a4b3399bc43a4fc06ec4f2b03a21e0fe286b55684c31bf8824558a140820bd6d",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/driver.cpp": "73cb49b5053f9e8ed59d9dba43e1f383b28d7cfc87fa66f60da79019eb7d31e4",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/build-record.json": "2c93d8504ed4d984d0baa72cff502387f67d4fec9733ff264a650eca43eee365"
+  },
+  "finished_utc": "2026-10-15T14:12:34.010600+00:00",
+  "finished_monotonic_ns": 7076598208,
+  "elapsed_seconds": 7.050804458,
+  "stdout": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/mocks-attempt02.stdout",
+  "stdout_sha256": "5168ec884fe10d09d1ed3a5326efbe47938a24d6ea4beb26dca78b8c7115cc77",
+  "stderr": "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work-spatial-v2/mocks-attempt02.stderr",
+  "stderr_sha256": "6f157219c46c6bb3420ecc307768befdb115da1c1ea04195941ea08c76234edb"
+}

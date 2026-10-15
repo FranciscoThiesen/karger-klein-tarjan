@@ -1,0 +1,27 @@
+{
+  "schema": "heldout_work_controller_v1",
+  "validation": "running",
+  "command": [
+    "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "-B",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/collect.py",
+    "capture",
+    "--freeze",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/freeze.json",
+    "--output",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/capture-attempt01.json",
+    "--released"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-compressed-queries",
+  "started_utc": "2026-10-15T13:53:27.637991+00:00",
+  "started_monotonic_ns": 470672083,
+  "source_sha256": {
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/run_capture_attempt.py": "07bc782b7e2318de53bbc9fbec6797b81b7dc558469029d175e86a4b99698565",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/collect.py": "8f6742f286ffcc227908ace7710a5cebfb14a00e1d09a3cacaa3e026e002640a",
+    "/Users/random_person/Desktop/kkt-compressed-queries/benchmark/results/heldout-families-2026-10-15/work/freeze.json": "db107c2370735e7bdcec777320ea069374c8247d8d02ba67684528541561bcaf"
+  },
+  "deadline_seconds": 7200,
+  "native_solver_execution_authorized": true,
+  "performance_execution": false,
+  "all_owned_groups_verified_empty": false
+}
