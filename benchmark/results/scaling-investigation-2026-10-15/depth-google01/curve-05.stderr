@@ -1,0 +1,75 @@
+Unable to determine clock rate from sysctl: hw.cpufrequency: No such file or directory
+2026-10-15T20:53:20-07:00
+Running /Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth
+Run on (16 X 24.2403 MHz CPU s)
+CPU Caches:
+  L1 Data 64 KiB (x16)
+  L1 Instruction 128 KiB (x16)
+  L2 Unified 4096 KiB (x4)
+Load Average: 12.80, 12.36, 18.21
+crossover_topology_attempts=1
+complexity_certificate_v1 {"family":"gnm_random","algorithm":"kkt","n":1024,"m":16384,"graph_seed":19000013,"sampling_seed":3001,"invocation":0,"input_fingerprint":8302793838246251722,"topology_fingerprint":15847973163861974314,"validation":"pass"}
+crossover_topology_attempts=1
+complexity_certificate_v1 {"family":"gnm_random","algorithm":"kkt","n":1024,"m":16384,"graph_seed":19000013,"sampling_seed":3001,"invocation":1,"input_fingerprint":8302793838246251722,"topology_fingerprint":15847973163861974314,"validation":"pass"}
+crossover_topology_attempts=1
+complexity_certificate_v1 {"family":"gnm_random","algorithm":"kkt","n":1024,"m":16384,"graph_seed":19000013,"sampling_seed":3001,"invocation":2,"input_fingerprint":8302793838246251722,"topology_fingerprint":15847973163861974314,"validation":"pass"}
+crossover_topology_attempts=1
+complexity_certificate_v1 {"family":"gnm_random","algorithm":"kkt","n":2048,"m":32768,"graph_seed":19000013,"sampling_seed":3001,"invocation":0,"input_fingerprint":16022878460045970550,"topology_fingerprint":7215381312482773914,"validation":"pass"}
+crossover_topology_attempts=1
+complexity_certificate_v1 {"family":"gnm_random","algorithm":"kkt","n":2048,"m":32768,"graph_seed":19000013,"sampling_seed":3001,"invocation":1,"input_fingerprint":16022878460045970550,"topology_fingerprint":7215381312482773914,"validation":"pass"}
+crossover_topology_attempts=1
+complexity_certificate_v1 {"family":"gnm_random","algorithm":"kkt","n":2048,"m":32768,"graph_seed":19000013,"sampling_seed":3001,"invocation":2,"input_fingerprint":16022878460045970550,"topology_fingerprint":7215381312482773914,"validation":"pass"}
+crossover_topology_attempts=1
+complexity_certificate_v1 {"family":"gnm_random","algorithm":"kkt","n":4096,"m":65536,"graph_seed":19000013,"sampling_seed":3001,"invocation":0,"input_fingerprint":13386120594786941843,"topology_fingerprint":5017215858160053042,"validation":"pass"}
+crossover_topology_attempts=1
+complexity_certificate_v1 {"family":"gnm_random","algorithm":"kkt","n":4096,"m":65536,"graph_seed":19000013,"sampling_seed":3001,"invocation":1,"input_fingerprint":13386120594786941843,"topology_fingerprint":5017215858160053042,"validation":"pass"}
+crossover_topology_attempts=1
+complexity_certificate_v1 {"family":"gnm_random","algorithm":"kkt","n":4096,"m":65536,"graph_seed":19000013,"sampling_seed":3001,"invocation":2,"input_fingerprint":13386120594786941843,"topology_fingerprint":5017215858160053042,"validation":"pass"}
+crossover_topology_attempts=1
+complexity_certificate_v1 {"family":"gnm_random","algorithm":"kkt","n":8192,"m":131072,"graph_seed":19000013,"sampling_seed":3001,"invocation":0,"input_fingerprint":16577632128547811326,"topology_fingerprint":15136913420930376940,"validation":"pass"}
+crossover_topology_attempts=1
+complexity_certificate_v1 {"family":"gnm_random","algorithm":"kkt","n":8192,"m":131072,"graph_seed":19000013,"sampling_seed":3001,"invocation":1,"input_fingerprint":16577632128547811326,"topology_fingerprint":15136913420930376940,"validation":"pass"}
+crossover_topology_attempts=1
+complexity_certificate_v1 {"family":"gnm_random","algorithm":"kkt","n":8192,"m":131072,"graph_seed":19000013,"sampling_seed":3001,"invocation":2,"input_fingerprint":16577632128547811326,"topology_fingerprint":15136913420930376940,"validation":"pass"}
+crossover_topology_attempts=1
+complexity_certificate_v1 {"family":"gnm_random","algorithm":"kkt","n":16384,"m":262144,"graph_seed":19000013,"sampling_seed":3001,"invocation":0,"input_fingerprint":1296474056166040056,"topology_fingerprint":16398861198918454792,"validation":"pass"}
+crossover_topology_attempts=1
+complexity_certificate_v1 {"family":"gnm_random","algorithm":"kkt","n":16384,"m":262144,"graph_seed":19000013,"sampling_seed":3001,"invocation":1,"input_fingerprint":1296474056166040056,"topology_fingerprint":16398861198918454792,"validation":"pass"}
+crossover_topology_attempts=1
+complexity_certificate_v1 {"family":"gnm_random","algorithm":"kkt","n":16384,"m":262144,"graph_seed":19000013,"sampling_seed":3001,"invocation":2,"input_fingerprint":1296474056166040056,"topology_fingerprint":16398861198918454792,"validation":"pass"}
+crossover_topology_attempts=1
+complexity_certificate_v1 {"family":"gnm_random","algorithm":"kkt","n":32768,"m":524288,"graph_seed":19000013,"sampling_seed":3001,"invocation":0,"input_fingerprint":11867273676132710112,"topology_fingerprint":11919434110571594616,"validation":"pass"}
+crossover_topology_attempts=1
+complexity_certificate_v1 {"family":"gnm_random","algorithm":"kkt","n":32768,"m":524288,"graph_seed":19000013,"sampling_seed":3001,"invocation":1,"input_fingerprint":11867273676132710112,"topology_fingerprint":11919434110571594616,"validation":"pass"}
+crossover_topology_attempts=1
+complexity_certificate_v1 {"family":"gnm_random","algorithm":"kkt","n":32768,"m":524288,"graph_seed":19000013,"sampling_seed":3001,"invocation":2,"input_fingerprint":11867273676132710112,"topology_fingerprint":11919434110571594616,"validation":"pass"}
+crossover_topology_attempts=1
+complexity_certificate_v1 {"family":"gnm_random","algorithm":"kkt","n":65536,"m":1048576,"graph_seed":19000013,"sampling_seed":3001,"invocation":0,"input_fingerprint":6314081648577457404,"topology_fingerprint":4147845087008785516,"validation":"pass"}
+crossover_topology_attempts=1
+complexity_certificate_v1 {"family":"gnm_random","algorithm":"kkt","n":65536,"m":1048576,"graph_seed":19000013,"sampling_seed":3001,"invocation":1,"input_fingerprint":6314081648577457404,"topology_fingerprint":4147845087008785516,"validation":"pass"}
+crossover_topology_attempts=1
+complexity_certificate_v1 {"family":"gnm_random","algorithm":"kkt","n":65536,"m":1048576,"graph_seed":19000013,"sampling_seed":3001,"invocation":2,"input_fingerprint":6314081648577457404,"topology_fingerprint":4147845087008785516,"validation":"pass"}
+crossover_topology_attempts=1
+complexity_certificate_v1 {"family":"gnm_random","algorithm":"kkt","n":131072,"m":2097152,"graph_seed":19000013,"sampling_seed":3001,"invocation":0,"input_fingerprint":2654491181005786205,"topology_fingerprint":5237391795172400005,"validation":"pass"}
+crossover_topology_attempts=1
+complexity_certificate_v1 {"family":"gnm_random","algorithm":"kkt","n":131072,"m":2097152,"graph_seed":19000013,"sampling_seed":3001,"invocation":1,"input_fingerprint":2654491181005786205,"topology_fingerprint":5237391795172400005,"validation":"pass"}
+crossover_topology_attempts=1
+complexity_certificate_v1 {"family":"gnm_random","algorithm":"kkt","n":131072,"m":2097152,"graph_seed":19000013,"sampling_seed":3001,"invocation":2,"input_fingerprint":2654491181005786205,"topology_fingerprint":5237391795172400005,"validation":"pass"}
+crossover_topology_attempts=1
+complexity_certificate_v1 {"family":"gnm_random","algorithm":"kkt","n":262144,"m":4194304,"graph_seed":19000013,"sampling_seed":3001,"invocation":0,"input_fingerprint":13170609380445686394,"topology_fingerprint":6474442158763610990,"validation":"pass"}
+crossover_topology_attempts=1
+complexity_certificate_v1 {"family":"gnm_random","algorithm":"kkt","n":262144,"m":4194304,"graph_seed":19000013,"sampling_seed":3001,"invocation":1,"input_fingerprint":13170609380445686394,"topology_fingerprint":6474442158763610990,"validation":"pass"}
+crossover_topology_attempts=1
+complexity_certificate_v1 {"family":"gnm_random","algorithm":"kkt","n":262144,"m":4194304,"graph_seed":19000013,"sampling_seed":3001,"invocation":2,"input_fingerprint":13170609380445686394,"topology_fingerprint":6474442158763610990,"validation":"pass"}
+crossover_topology_attempts=1
+complexity_certificate_v1 {"family":"gnm_random","algorithm":"kkt","n":524288,"m":8388608,"graph_seed":19000013,"sampling_seed":3001,"invocation":0,"input_fingerprint":4825315742419505313,"topology_fingerprint":3003538417647018461,"validation":"pass"}
+crossover_topology_attempts=1
+complexity_certificate_v1 {"family":"gnm_random","algorithm":"kkt","n":524288,"m":8388608,"graph_seed":19000013,"sampling_seed":3001,"invocation":1,"input_fingerprint":4825315742419505313,"topology_fingerprint":3003538417647018461,"validation":"pass"}
+crossover_topology_attempts=1
+complexity_certificate_v1 {"family":"gnm_random","algorithm":"kkt","n":524288,"m":8388608,"graph_seed":19000013,"sampling_seed":3001,"invocation":2,"input_fingerprint":4825315742419505313,"topology_fingerprint":3003538417647018461,"validation":"pass"}
+crossover_topology_attempts=1
+complexity_certificate_v1 {"family":"gnm_random","algorithm":"kkt","n":1048576,"m":16777216,"graph_seed":19000013,"sampling_seed":3001,"invocation":0,"input_fingerprint":12251413790145082475,"topology_fingerprint":16973601718252145320,"validation":"pass"}
+crossover_topology_attempts=1
+complexity_certificate_v1 {"family":"gnm_random","algorithm":"kkt","n":1048576,"m":16777216,"graph_seed":19000013,"sampling_seed":3001,"invocation":1,"input_fingerprint":12251413790145082475,"topology_fingerprint":16973601718252145320,"validation":"pass"}
+crossover_topology_attempts=1
+complexity_certificate_v1 {"family":"gnm_random","algorithm":"kkt","n":1048576,"m":16777216,"graph_seed":19000013,"sampling_seed":3001,"invocation":2,"input_fingerprint":12251413790145082475,"topology_fingerprint":16973601718252145320,"validation":"pass"}

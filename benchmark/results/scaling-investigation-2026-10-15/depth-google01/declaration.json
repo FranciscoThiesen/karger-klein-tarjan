@@ -1,0 +1,88 @@
+{
+  "schedule": [
+    {
+      "policy": "reference",
+      "spec": {
+        "family": "leaf_hierarchy4",
+        "algorithm": "kkt",
+        "graph_seed": 19000013,
+        "sampling_seed": 3001,
+        "size_order": "ascending"
+      }
+    },
+    {
+      "policy": "depth",
+      "spec": {
+        "family": "leaf_hierarchy4",
+        "algorithm": "kkt",
+        "graph_seed": 19000013,
+        "sampling_seed": 3001,
+        "size_order": "ascending"
+      }
+    },
+    {
+      "policy": "depth",
+      "spec": {
+        "family": "leaf_shuffled4",
+        "algorithm": "kkt",
+        "graph_seed": 19000013,
+        "sampling_seed": 3001,
+        "size_order": "ascending"
+      }
+    },
+    {
+      "policy": "reference",
+      "spec": {
+        "family": "leaf_shuffled4",
+        "algorithm": "kkt",
+        "graph_seed": 19000013,
+        "sampling_seed": 3001,
+        "size_order": "ascending"
+      }
+    },
+    {
+      "policy": "reference",
+      "spec": {
+        "family": "gnm_random",
+        "algorithm": "kkt",
+        "graph_seed": 19000013,
+        "sampling_seed": 3001,
+        "size_order": "ascending"
+      }
+    },
+    {
+      "policy": "depth",
+      "spec": {
+        "family": "gnm_random",
+        "algorithm": "kkt",
+        "graph_seed": 19000013,
+        "sampling_seed": 3001,
+        "size_order": "ascending"
+      }
+    }
+  ],
+  "sizes": [
+    1024,
+    2048,
+    4096,
+    8192,
+    16384,
+    32768,
+    65536,
+    131072,
+    262144,
+    524288,
+    1048576
+  ],
+  "child_seconds": 600,
+  "campaign_seconds": 4200,
+  "rss_bytes": 12884901888,
+  "rows": 594,
+  "warmup_rows": 198,
+  "timed_rows": 396,
+  "certificates": 198,
+  "callbacks_per_size": 3,
+  "timed_calls_per_callback": 2,
+  "rows_removed": 0,
+  "rows_adjusted": 0
+}

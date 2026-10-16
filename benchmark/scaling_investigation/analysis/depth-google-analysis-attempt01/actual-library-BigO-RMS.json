@@ -1,0 +1,188 @@
+[
+  {
+    "policy": "reference",
+    "spec": {
+      "family": "leaf_hierarchy4",
+      "algorithm": "kkt",
+      "graph_seed": 19000013,
+      "sampling_seed": 3001,
+      "size_order": "ascending"
+    },
+    "library_big_o": {
+      "name": "kkt/leaf_hierarchy4/graph_19000013/sampler_3001/iterations:2/repeats:3/process_time/manual_time_BigO",
+      "run_name": "kkt/leaf_hierarchy4/graph_19000013/sampler_3001/iterations:2/repeats:3/process_time/manual_time",
+      "run_type": "aggregate",
+      "repetitions": 3,
+      "threads": 1,
+      "aggregate_name": "BigO",
+      "cpu_coefficient": 2.8823321418160974,
+      "real_coefficient": 2.8898556382339864,
+      "big_o": "NlgN",
+      "time_unit": "ns"
+    },
+    "library_rms": {
+      "name": "kkt/leaf_hierarchy4/graph_19000013/sampler_3001/iterations:2/repeats:3/process_time/manual_time_RMS",
+      "run_name": "kkt/leaf_hierarchy4/graph_19000013/sampler_3001/iterations:2/repeats:3/process_time/manual_time",
+      "run_type": "aggregate",
+      "repetitions": 3,
+      "threads": 1,
+      "aggregate_name": "RMS",
+      "rms": 0.08116217960283752
+    }
+  },
+  {
+    "policy": "depth",
+    "spec": {
+      "family": "leaf_hierarchy4",
+      "algorithm": "kkt",
+      "graph_seed": 19000013,
+      "sampling_seed": 3001,
+      "size_order": "ascending"
+    },
+    "library_big_o": {
+      "name": "kkt/leaf_hierarchy4/graph_19000013/sampler_3001/iterations:2/repeats:3/process_time/manual_time_BigO",
+      "run_name": "kkt/leaf_hierarchy4/graph_19000013/sampler_3001/iterations:2/repeats:3/process_time/manual_time",
+      "run_type": "aggregate",
+      "repetitions": 3,
+      "threads": 1,
+      "aggregate_name": "BigO",
+      "cpu_coefficient": 2.4502644278600014,
+      "real_coefficient": 2.450422676766894,
+      "big_o": "NlgN",
+      "time_unit": "ns"
+    },
+    "library_rms": {
+      "name": "kkt/leaf_hierarchy4/graph_19000013/sampler_3001/iterations:2/repeats:3/process_time/manual_time_RMS",
+      "run_name": "kkt/leaf_hierarchy4/graph_19000013/sampler_3001/iterations:2/repeats:3/process_time/manual_time",
+      "run_type": "aggregate",
+      "repetitions": 3,
+      "threads": 1,
+      "aggregate_name": "RMS",
+      "rms": 0.07740151277103914
+    }
+  },
+  {
+    "policy": "depth",
+    "spec": {
+      "family": "leaf_shuffled4",
+      "algorithm": "kkt",
+      "graph_seed": 19000013,
+      "sampling_seed": 3001,
+      "size_order": "ascending"
+    },
+    "library_big_o": {
+      "name": "kkt/leaf_shuffled4/graph_19000013/sampler_3001/iterations:2/repeats:3/process_time/manual_time_BigO",
+      "run_name": "kkt/leaf_shuffled4/graph_19000013/sampler_3001/iterations:2/repeats:3/process_time/manual_time",
+      "run_type": "aggregate",
+      "repetitions": 3,
+      "threads": 1,
+      "aggregate_name": "BigO",
+      "cpu_coefficient": 2.354625900619482,
+      "real_coefficient": 2.3594882399704757,
+      "big_o": "NlgN",
+      "time_unit": "ns"
+    },
+    "library_rms": {
+      "name": "kkt/leaf_shuffled4/graph_19000013/sampler_3001/iterations:2/repeats:3/process_time/manual_time_RMS",
+      "run_name": "kkt/leaf_shuffled4/graph_19000013/sampler_3001/iterations:2/repeats:3/process_time/manual_time",
+      "run_type": "aggregate",
+      "repetitions": 3,
+      "threads": 1,
+      "aggregate_name": "RMS",
+      "rms": 0.10773939928837006
+    }
+  },
+  {
+    "policy": "reference",
+    "spec": {
+      "family": "leaf_shuffled4",
+      "algorithm": "kkt",
+      "graph_seed": 19000013,
+      "sampling_seed": 3001,
+      "size_order": "ascending"
+    },
+    "library_big_o": {
+      "name": "kkt/leaf_shuffled4/graph_19000013/sampler_3001/iterations:2/repeats:3/process_time/manual_time_BigO",
+      "run_name": "kkt/leaf_shuffled4/graph_19000013/sampler_3001/iterations:2/repeats:3/process_time/manual_time",
+      "run_type": "aggregate",
+      "repetitions": 3,
+      "threads": 1,
+      "aggregate_name": "BigO",
+      "cpu_coefficient": 2.626335225226564,
+      "real_coefficient": 2.644394948720239,
+      "big_o": "NlgN",
+      "time_unit": "ns"
+    },
+    "library_rms": {
+      "name": "kkt/leaf_shuffled4/graph_19000013/sampler_3001/iterations:2/repeats:3/process_time/manual_time_RMS",
+      "run_name": "kkt/leaf_shuffled4/graph_19000013/sampler_3001/iterations:2/repeats:3/process_time/manual_time",
+      "run_type": "aggregate",
+      "repetitions": 3,
+      "threads": 1,
+      "aggregate_name": "RMS",
+      "rms": 0.069856164986858
+    }
+  },
+  {
+    "policy": "reference",
+    "spec": {
+      "family": "gnm_random",
+      "algorithm": "kkt",
+      "graph_seed": 19000013,
+      "sampling_seed": 3001,
+      "size_order": "ascending"
+    },
+    "library_big_o": {
+      "name": "kkt/gnm_random/graph_19000013/sampler_3001/iterations:2/repeats:3/process_time/manual_time_BigO",
+      "run_name": "kkt/gnm_random/graph_19000013/sampler_3001/iterations:2/repeats:3/process_time/manual_time",
+      "run_type": "aggregate",
+      "repetitions": 3,
+      "threads": 1,
+      "aggregate_name": "BigO",
+      "cpu_coefficient": 2.923486738979674,
+      "real_coefficient": 2.9467782540618943,
+      "big_o": "NlgN",
+      "time_unit": "ns"
+    },
+    "library_rms": {
+      "name": "kkt/gnm_random/graph_19000013/sampler_3001/iterations:2/repeats:3/process_time/manual_time_RMS",
+      "run_name": "kkt/gnm_random/graph_19000013/sampler_3001/iterations:2/repeats:3/process_time/manual_time",
+      "run_type": "aggregate",
+      "repetitions": 3,
+      "threads": 1,
+      "aggregate_name": "RMS",
+      "rms": 0.10407756059729632
+    }
+  },
+  {
+    "policy": "depth",
+    "spec": {
+      "family": "gnm_random",
+      "algorithm": "kkt",
+      "graph_seed": 19000013,
+      "sampling_seed": 3001,
+      "size_order": "ascending"
+    },
+    "library_big_o": {
+      "name": "kkt/gnm_random/graph_19000013/sampler_3001/iterations:2/repeats:3/process_time/manual_time_BigO",
+      "run_name": "kkt/gnm_random/graph_19000013/sampler_3001/iterations:2/repeats:3/process_time/manual_time",
+      "run_type": "aggregate",
+      "repetitions": 3,
+      "threads": 1,
+      "aggregate_name": "BigO",
+      "cpu_coefficient": 2.482563312957877,
+      "real_coefficient": 2.482670669709161,
+      "big_o": "NlgN",
+      "time_unit": "ns"
+    },
+    "library_rms": {
+      "name": "kkt/gnm_random/graph_19000013/sampler_3001/iterations:2/repeats:3/process_time/manual_time_RMS",
+      "run_name": "kkt/gnm_random/graph_19000013/sampler_3001/iterations:2/repeats:3/process_time/manual_time",
+      "run_type": "aggregate",
+      "repetitions": 3,
+      "threads": 1,
+      "aggregate_name": "RMS",
+      "rms": 0.05201160621981812
+    }
+  }
+]

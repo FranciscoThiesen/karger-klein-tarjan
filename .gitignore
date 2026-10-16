@@ -32,3 +32,12 @@ benchmark/results/current-complexity-2026-10-15/*-power-audit/pmset.log
 benchmark/results/current-complexity-2026-10-15/*-power-audit/events.json
 benchmark/results/lower-density-2026-10-15/*-power-audit/pmset.log
 benchmark/results/lower-density-2026-10-15/*-power-audit/events.json
+
+# Keep native scaling-study artifacts local; commit sources, hashes and receipts.
+benchmark/results/scaling-investigation-2026-10-15/depth-correctness*/**/*.o
+benchmark/results/scaling-investigation-2026-10-15/depth-correctness*/**/*.dSYM/
+benchmark/results/scaling-investigation-2026-10-15/depth-correctness*/**/depth-test
+benchmark/results/scaling-investigation-2026-10-15/depth-correctness*/**/wrong-dispatch
+benchmark/results/scaling-investigation-2026-10-15/depth-correctness*/**/edge_verifier_view_test
+benchmark/results/scaling-investigation-2026-10-15/depth-correctness*/**/retention_control_test
+benchmark/results/scaling-investigation-2026-10-15/host-memory-build*/host_memory

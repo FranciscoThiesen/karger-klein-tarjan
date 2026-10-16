@@ -1,0 +1,1248 @@
+{
+  "command": [
+    "/usr/bin/arch",
+    "-arm64",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth",
+    "leaf_shuffled4",
+    "kkt",
+    "19000013",
+    "3001",
+    "ascending",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/depth-google01/02.csv",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/depth-google01/02.benchmark.json"
+  ],
+  "cwd": "/Users/random_person/Desktop/kkt-linear-scaling",
+  "pgid": 88461,
+  "exit_code": 0,
+  "validation": "pass",
+  "group_empty": true,
+  "native_process_may_still_be_running": false,
+  "start_utc_ns": 1792122361506676000,
+  "started_monotonic_ns": 426669684166,
+  "exit_monotonic_ns": 594438179625,
+  "deadline_seconds": 600,
+  "rss_limit_bytes": 12884901888,
+  "observations": [
+    {
+      "utc": "2026-10-16T03:46:03.518971+00:00",
+      "monotonic_ns": 428681949125,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 72128,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 72128
+    },
+    {
+      "utc": "2026-10-16T03:46:05.529606+00:00",
+      "monotonic_ns": 430692616791,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 209984,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 209984
+    },
+    {
+      "utc": "2026-10-16T03:46:07.539944+00:00",
+      "monotonic_ns": 432702958458,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 260576,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 260576
+    },
+    {
+      "utc": "2026-10-16T03:46:09.550311+00:00",
+      "monotonic_ns": 434713327916,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 414192,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 414192
+    },
+    {
+      "utc": "2026-10-16T03:46:11.560713+00:00",
+      "monotonic_ns": 436723733791,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 515984,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 515984
+    },
+    {
+      "utc": "2026-10-16T03:46:13.571070+00:00",
+      "monotonic_ns": 438734092000,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 516032,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 516032
+    },
+    {
+      "utc": "2026-10-16T03:46:15.571938+00:00",
+      "monotonic_ns": 440734964791,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 721840,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 721840
+    },
+    {
+      "utc": "2026-10-16T03:46:17.579428+00:00",
+      "monotonic_ns": 442742456166,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 823712,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 823712
+    },
+    {
+      "utc": "2026-10-16T03:46:19.586264+00:00",
+      "monotonic_ns": 444749297000,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 1014704,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 1014704
+    },
+    {
+      "utc": "2026-10-16T03:46:21.596643+00:00",
+      "monotonic_ns": 446759679416,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 1031104,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 1031104
+    },
+    {
+      "utc": "2026-10-16T03:46:23.603761+00:00",
+      "monotonic_ns": 448766798791,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 1031136,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 1031136
+    },
+    {
+      "utc": "2026-10-16T03:46:25.614221+00:00",
+      "monotonic_ns": 450777262958,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 1031136,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 1031136
+    },
+    {
+      "utc": "2026-10-16T03:46:27.620855+00:00",
+      "monotonic_ns": 452783900458,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 1031248,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 1031248
+    },
+    {
+      "utc": "2026-10-16T03:46:29.622241+00:00",
+      "monotonic_ns": 454785290750,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 1031248,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 1031248
+    },
+    {
+      "utc": "2026-10-16T03:46:31.630885+00:00",
+      "monotonic_ns": 456793936875,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 1144736,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 1144736
+    },
+    {
+      "utc": "2026-10-16T03:46:33.641271+00:00",
+      "monotonic_ns": 458804326041,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 1544256,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 1544256
+    },
+    {
+      "utc": "2026-10-16T03:46:35.643269+00:00",
+      "monotonic_ns": 460806327375,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 1579840,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 1579840
+    },
+    {
+      "utc": "2026-10-16T03:46:37.653592+00:00",
+      "monotonic_ns": 462816652166,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 1648768,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 1648768
+    },
+    {
+      "utc": "2026-10-16T03:46:39.658412+00:00",
+      "monotonic_ns": 464821475000,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 1648768,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 1648768
+    },
+    {
+      "utc": "2026-10-16T03:46:41.668886+00:00",
+      "monotonic_ns": 466831952250,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 2036400,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 2036400
+    },
+    {
+      "utc": "2026-10-16T03:46:43.671915+00:00",
+      "monotonic_ns": 468834986333,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 2039104,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 2039104
+    },
+    {
+      "utc": "2026-10-16T03:46:45.682281+00:00",
+      "monotonic_ns": 470845354666,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 2039104,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 2039104
+    },
+    {
+      "utc": "2026-10-16T03:46:47.685208+00:00",
+      "monotonic_ns": 472848284166,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 2071920,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 2071920
+    },
+    {
+      "utc": "2026-10-16T03:46:49.692223+00:00",
+      "monotonic_ns": 474855302583,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 2071920,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 2071920
+    },
+    {
+      "utc": "2026-10-16T03:46:51.702586+00:00",
+      "monotonic_ns": 476865667416,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 2071920,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 2071920
+    },
+    {
+      "utc": "2026-10-16T03:46:53.708375+00:00",
+      "monotonic_ns": 478871460416,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 2071920,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 2071920
+    },
+    {
+      "utc": "2026-10-16T03:46:55.718780+00:00",
+      "monotonic_ns": 480881869500,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 2035296,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 2035296
+    },
+    {
+      "utc": "2026-10-16T03:46:57.728317+00:00",
+      "monotonic_ns": 482891409541,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 2035376,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 2035376
+    },
+    {
+      "utc": "2026-10-16T03:46:59.738679+00:00",
+      "monotonic_ns": 484901774750,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 2068304,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 2068304
+    },
+    {
+      "utc": "2026-10-16T03:47:01.745614+00:00",
+      "monotonic_ns": 486908711291,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 2068304,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 2068304
+    },
+    {
+      "utc": "2026-10-16T03:47:03.752698+00:00",
+      "monotonic_ns": 488915799458,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 2068304,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 2068304
+    },
+    {
+      "utc": "2026-10-16T03:47:05.753852+00:00",
+      "monotonic_ns": 490916956166,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 2068304,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 2068304
+    },
+    {
+      "utc": "2026-10-16T03:47:07.759654+00:00",
+      "monotonic_ns": 492922761541,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 1742432,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 1742432
+    },
+    {
+      "utc": "2026-10-16T03:47:09.766522+00:00",
+      "monotonic_ns": 494929632583,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 2036960,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 2036960
+    },
+    {
+      "utc": "2026-10-16T03:47:11.767054+00:00",
+      "monotonic_ns": 496930167166,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 2220144,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 2220144
+    },
+    {
+      "utc": "2026-10-16T03:47:13.767450+00:00",
+      "monotonic_ns": 498930568250,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 2642224,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 2642224
+    },
+    {
+      "utc": "2026-10-16T03:47:15.769494+00:00",
+      "monotonic_ns": 500932613666,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 3062992,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 3062992
+    },
+    {
+      "utc": "2026-10-16T03:47:17.774710+00:00",
+      "monotonic_ns": 502937833083,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 3062992,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 3062992
+    },
+    {
+      "utc": "2026-10-16T03:47:19.785120+00:00",
+      "monotonic_ns": 504948246916,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 3146256,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 3146256
+    },
+    {
+      "utc": "2026-10-16T03:47:21.787563+00:00",
+      "monotonic_ns": 506950694375,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 3176272,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 3176272
+    },
+    {
+      "utc": "2026-10-16T03:47:23.788246+00:00",
+      "monotonic_ns": 508951380083,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 3398496,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 3398496
+    },
+    {
+      "utc": "2026-10-16T03:47:25.790042+00:00",
+      "monotonic_ns": 510953177583,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 3398496,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 3398496
+    },
+    {
+      "utc": "2026-10-16T03:47:27.797053+00:00",
+      "monotonic_ns": 512960191166,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 3398496,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 3398496
+    },
+    {
+      "utc": "2026-10-16T03:47:29.806715+00:00",
+      "monotonic_ns": 514969857125,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 3398496,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 3398496
+    },
+    {
+      "utc": "2026-10-16T03:47:31.812032+00:00",
+      "monotonic_ns": 516975176875,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 3398496,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 3398496
+    },
+    {
+      "utc": "2026-10-16T03:47:33.814683+00:00",
+      "monotonic_ns": 518977830791,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 3398496,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 3398496
+    },
+    {
+      "utc": "2026-10-16T03:47:35.822736+00:00",
+      "monotonic_ns": 520985889166,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 3406720,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 3406720
+    },
+    {
+      "utc": "2026-10-16T03:47:37.825761+00:00",
+      "monotonic_ns": 522988915958,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 3686080,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 3686080
+    },
+    {
+      "utc": "2026-10-16T03:47:39.829485+00:00",
+      "monotonic_ns": 524992641791,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 4184816,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 4184816
+    },
+    {
+      "utc": "2026-10-16T03:47:41.830616+00:00",
+      "monotonic_ns": 526993776791,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 4185232,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 4185232
+    },
+    {
+      "utc": "2026-10-16T03:47:43.834749+00:00",
+      "monotonic_ns": 528997914041,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 4172624,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 4172624
+    },
+    {
+      "utc": "2026-10-16T03:47:45.845285+00:00",
+      "monotonic_ns": 531008453000,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 3462192,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 3462192
+    },
+    {
+      "utc": "2026-10-16T03:47:47.845841+00:00",
+      "monotonic_ns": 533009011000,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 3462192,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 3462192
+    },
+    {
+      "utc": "2026-10-16T03:47:49.854123+00:00",
+      "monotonic_ns": 535017297583,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 3624560,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 3624560
+    },
+    {
+      "utc": "2026-10-16T03:47:51.854534+00:00",
+      "monotonic_ns": 537017709708,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 3624688,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 3624688
+    },
+    {
+      "utc": "2026-10-16T03:47:53.856278+00:00",
+      "monotonic_ns": 539019457583,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 3689424,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 3689424
+    },
+    {
+      "utc": "2026-10-16T03:47:55.858616+00:00",
+      "monotonic_ns": 541021793833,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 3315680,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 3315680
+    },
+    {
+      "utc": "2026-10-16T03:47:57.859811+00:00",
+      "monotonic_ns": 543022997416,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 3316880,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 3316880
+    },
+    {
+      "utc": "2026-10-16T03:47:59.870166+00:00",
+      "monotonic_ns": 545033355041,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 3316880,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 3316880
+    },
+    {
+      "utc": "2026-10-16T03:48:01.880575+00:00",
+      "monotonic_ns": 547043767541,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 3316880,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 3316880
+    },
+    {
+      "utc": "2026-10-16T03:48:03.889027+00:00",
+      "monotonic_ns": 549052221500,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 3316880,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 3316880
+    },
+    {
+      "utc": "2026-10-16T03:48:05.890442+00:00",
+      "monotonic_ns": 551053641916,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 3316880,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 3316880
+    },
+    {
+      "utc": "2026-10-16T03:48:07.891628+00:00",
+      "monotonic_ns": 553054827875,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 3316880,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 3316880
+    },
+    {
+      "utc": "2026-10-16T03:48:09.894385+00:00",
+      "monotonic_ns": 555057589583,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 3435344,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 3435344
+    },
+    {
+      "utc": "2026-10-16T03:48:11.900821+00:00",
+      "monotonic_ns": 557064029291,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 4238032,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 4238032
+    },
+    {
+      "utc": "2026-10-16T03:48:13.904859+00:00",
+      "monotonic_ns": 559068071208,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 4238064,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 4238064
+    },
+    {
+      "utc": "2026-10-16T03:48:15.912761+00:00",
+      "monotonic_ns": 561075976208,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 4238064,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 4238064
+    },
+    {
+      "utc": "2026-10-16T03:48:17.913917+00:00",
+      "monotonic_ns": 563077127416,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 4238208,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 4238208
+    },
+    {
+      "utc": "2026-10-16T03:48:19.921320+00:00",
+      "monotonic_ns": 565084541041,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 3557280,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 3557280
+    },
+    {
+      "utc": "2026-10-16T03:48:21.923805+00:00",
+      "monotonic_ns": 567087029625,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 3557280,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 3557280
+    },
+    {
+      "utc": "2026-10-16T03:48:23.934245+00:00",
+      "monotonic_ns": 569097471583,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 3558080,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 3558080
+    },
+    {
+      "utc": "2026-10-16T03:48:25.939574+00:00",
+      "monotonic_ns": 571102804458,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 3558080,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 3558080
+    },
+    {
+      "utc": "2026-10-16T03:48:27.940194+00:00",
+      "monotonic_ns": 573103427958,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 3812048,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 3812048
+    },
+    {
+      "utc": "2026-10-16T03:48:29.941232+00:00",
+      "monotonic_ns": 575104466833,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 2922480,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 2922480
+    },
+    {
+      "utc": "2026-10-16T03:48:31.942197+00:00",
+      "monotonic_ns": 577105435708,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 2922480,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 2922480
+    },
+    {
+      "utc": "2026-10-16T03:48:33.947517+00:00",
+      "monotonic_ns": 579110758916,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 2922480,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 2922480
+    },
+    {
+      "utc": "2026-10-16T03:48:35.951523+00:00",
+      "monotonic_ns": 581114768916,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 2922480,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 2922480
+    },
+    {
+      "utc": "2026-10-16T03:48:37.953624+00:00",
+      "monotonic_ns": 583116872958,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 2922480,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 2922480
+    },
+    {
+      "utc": "2026-10-16T03:48:39.963226+00:00",
+      "monotonic_ns": 585126477583,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 2922480,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 2922480
+    },
+    {
+      "utc": "2026-10-16T03:48:41.973672+00:00",
+      "monotonic_ns": 587136928708,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 2267104,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 2267104
+    },
+    {
+      "utc": "2026-10-16T03:48:43.975792+00:00",
+      "monotonic_ns": 589139050666,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 3858400,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 3858400
+    },
+    {
+      "utc": "2026-10-16T03:48:45.984391+00:00",
+      "monotonic_ns": 591147653125,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 4175456,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 4175456
+    },
+    {
+      "utc": "2026-10-16T03:48:47.985286+00:00",
+      "monotonic_ns": 593148551791,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 88461,
+          "rss_kib": 4175456,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-google-build01/depth"
+        }
+      ],
+      "rss_kib": 4175456
+    },
+    {
+      "utc": "2026-10-16T03:48:49.274700+00:00",
+      "monotonic_ns": 594437967125,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    }
+  ],
+  "peak_sampled_group_rss_bytes": 4339924992,
+  "environment_policy": {
+    "removed": {
+      "CPATH": "/usr/local/include",
+      "LIBRARY_PATH": "/usr/local/lib"
+    },
+    "required_empty": {
+      "APPVEYOR": null,
+      "CC": null,
+      "CFLAGS": null,
+      "CMAKE_GENERATOR": null,
+      "CMAKE_OSX_ARCHITECTURES": null,
+      "CMAKE_POLICY_VERSION_MINIMUM": null,
+      "CMAKE_TOOLCHAIN_FILE": null,
+      "CPLUS_INCLUDE_PATH": null,
+      "CPPFLAGS": null,
+      "CXX": null,
+      "CXXFLAGS": null,
+      "C_INCLUDE_PATH": null,
+      "LDFLAGS": null,
+      "MACOSX_DEPLOYMENT_TARGET": null
+    },
+    "retained": {
+      "SDKROOT": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+      "DEVELOPER_DIR": null
+    }
+  },
+  "cleanup": {
+    "started_monotonic_ns": 594438222500,
+    "process_group": 88461,
+    "signals": [],
+    "native_exit_known": true,
+    "group_exit_known": true,
+    "returncode": 0,
+    "group_verification": {
+      "utc": "2026-10-16T03:48:49.274961+00:00",
+      "monotonic_ns": 594438232041,
+      "process_group": 88461,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    "finished_monotonic_ns": 594438321250,
+    "native_process_may_still_be_running": false
+  },
+  "finished_monotonic_ns": 594438376791,
+  "end_utc_ns": 1792122529275105000,
+  "duration_s": 167.768692625,
+  "rss_samples": 84,
+  "stdout_sha256": "1c22efc759412c4e9ffd34ed9825e384ea09bd86e2d6b025126bd1d9c173c744",
+  "stderr_sha256": "8de80dc38b1efa07eb1bb0307a1be544ae459497ce9299bb93d0fd835239647b"
+}

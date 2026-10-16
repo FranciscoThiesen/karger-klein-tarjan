@@ -1,0 +1,30 @@
+# Ancestor-depth candidate preparation
+
+Source text only. `depth_queries.patch` has not been applied, compiled or run. It adds `verifier/experimental_depth_queries.hpp` and changes only the compressed-query helper and verifier caller. No generic LCA source, sampling, contraction, layout flattening, masks/rank reconstruction or live production source has been changed. Do not apply while baseline diagnostics are active.
+
+The opt-in is `KKT_EXPERIMENT_DEPTH_QUERIES`, requiring `KKT_EXPERIMENT_COMPRESSED_QUERIES`. Reference and candidate retain the same existing optimized flags. The candidate returns only ancestor depth, while the reference returns a vertex ID. Its Euler values and sparse-table values change meaning; microtable cells remain relative argmin offsets. The exact paired work identity is all fields equal except `reference.initialized_slots - candidate.initialized_slots == reference.lca_vertices`. Preserve loop LCA calls. Generic LCA is unchanged.
+
+The existing ID-taking compressed-helper methods retain their original bodies verbatim; depth-taking methods are additional private operations. This avoids changing the reference helper's guard ordering or delegation structure.
+
+The private header implementation also creates an **inlining opportunity** absent from the out-of-line generic `LCA::query` in the current non-LTO build. Do not attribute the total candidate difference solely to storing depths. `KKT_EXPERIMENT_DEPTH_QUERY_NOINLINE` adds the Clang/GCC `noinline` attribute to the private query, with no other change. A future selected-input comparison should retain reference, depth-inline and depth-noinline. Use the same noinline flag on the candidate verifier and focused test translation units to keep the header-defined class identical across them. Verify the exact object command and, if needed, generated call boundaries; equal output cannot discriminate inline versus noinline policy. If benefits vanish with noinline, a separate generic-LCA inlining control should precede a complexity-increasing adoption decision.
+
+A later generic-inline-only patch could conditionally place `query`, `min_by_h` and `lca_in_block` definitions in the generic header and suppress exactly those out-of-line definitions. It would keep ID-returning semantics, all arrays/counters and strict ties unchanged. That control is only an outline here, not included in this patch; it would require consistent macro selection in all LCA-consuming translation units to avoid ODR violations.
+
+After explicit root release and patch inspection, the focused `depth_queries_test.cpp` is intended to link the existing generic LCA object plus **two separate verifier objects**. Compile reference verifier normally with compressed queries and work stats. Compile the candidate verifier with those same flags plus depth queries and these four symbol-renaming definitions only for that verifier translation unit:
+
+```text
+-Dheavy_edge_marks=depth_heavy_edge_marks
+-Dverify_mst=depth_verify_mst
+-Dverify_general_graph=depth_verify_general_graph
+-Dfbt_reduction=depth_fbt_reduction
+```
+
+This isolates exported entry points while keeping the shared compressed helper definition identical in both objects. Compile the test with the repository root include path and `KKT_ENABLE_WORK_STATS`; it explicitly declares the renamed heavy-mark overloads. Link any other unchanged production dependencies required by the existing verifier build. Do not compile the test itself with the renaming macros. The positive initialization delta on connected calls is an actual candidate-dispatch discriminator: linking a second reference implementation under the candidate names must fail, despite equal answers. Native and sanitizer variants, this negative link gate, patch-application checks and full-solver differential gates are all still pending.
+
+The fourth rename is necessary because `fbt_reduction` has global strong linkage. `test_graph` is already in an anonymous namespace, so its macro-dependent layout is TU-local; the remaining shared class/template bodies are identical. Inspect the final object symbols before accepting the paired link. The FBT leaf precondition is proved by construction and exercised by the oracles: no new per-edge leaf/child-array assertions are added to the gather loop. Existing reference assertions remain unchanged, and the new depth API retains endpoint/depth bounds.
+
+Tests enumerate all vertex pairs on paths, stars, balanced and deterministic irregular trees, including reversed labels/child order, singleton and partial-block/size-transition cases. Parent-walk LCA and independent forest-path maxima supply the oracles. For the smaller same trees, both tuple/Edge verifier overloads are compared under connected/disconnected forests, repeated external IDs and self-loops. Separate fixtures include negative/extreme signed weights and empty inputs. The old ID-based and new depth-based helper methods are compared directly, with duplicate requests and root-depth zero. Full KKT tests must retain its distinct-ID, loop-free, uniquely ordered valid-input contract; the broader legacy helper cases do not broaden that solver contract.
+
+Four separate invalid-call modes are prepared: `guard-add-negative`, `guard-add-equal`, `guard-add-deeper`, and `guard-lookup-absent`. An eventual bounded runner must require actual SIGABRT for each assertion gate, preserve stderr and prove the owned group empty. A normal zero exit means the guard failed; an unrelated nonzero exit is not acceptance. This test source refuses NDEBUG. None of these negative children has run.
+
+The initial patch text was assembled with source-only string/diff operations. One unsuccessful source-generation attempt stopped on a nonunique comment anchor before writing any file; that anchor was removed. No patch application or native validation is claimed. Baseline captures and their source inventory remain untouched. Candidate runner/build provenance, final-object proof, exact RNG/selected IDs/full 65-field differential gates and any subsequent paired uninstrumented campaign are owned by root and the candidate agent.

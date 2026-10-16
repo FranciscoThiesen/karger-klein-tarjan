@@ -1,0 +1,26 @@
+{
+  "time_utc_ns": 1792119670538488000,
+  "observations": {
+    "cpu": {
+      "receipt": "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/depth-environment-before01/cpu.json",
+      "output": "hw.model: Mac15,9\nhw.memsize: 137438953472\nhw.physicalcpu: 16\nhw.logicalcpu: 16\nhw.pagesize: 16384\nmachdep.cpu.brand_string: Apple M3 Max\n"
+    },
+    "os": {
+      "receipt": "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/depth-environment-before01/os.json",
+      "output": "ProductName:\t\tmacOS\nProductVersion:\t\t26.6.2\nBuildVersion:\t\t25G83\n"
+    },
+    "power": {
+      "receipt": "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/depth-environment-before01/power.json",
+      "output": "Now drawing from 'AC Power'\n"
+    },
+    "thermal": {
+      "receipt": "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/depth-environment-before01/thermal.json",
+      "output": "Error:Failed to get thermal warning level with error code 0xe00002bc\nError: Failed to get performance warning level with error code 0xe00002bc\nError: No CPU power status with error code 0xe00002bc\n"
+    },
+    "power-settings": {
+      "receipt": "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/depth-environment-before01/power-settings.json",
+      "output": "AC Power:\n Sleep On Power Button 1\n powermode            0\n standby              0\n hibernatemode        0\n powernap             1\n hibernatefile        /var/vm/sleepimage\n ttyskeepawake        1\n womp                 1\n displaysleep         10\n networkoversleep     0\n sleep                1\n tcpkeepalive         1\n disksleep            10\n"
+    }
+  },
+  "note": "Point-in-time OS reports, not CPU frequency, cache events, core affinity, or a guarantee of quiescence during subsequent timing."
+}

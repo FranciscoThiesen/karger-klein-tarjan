@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/candidates/test_run_candidate.py"
+  ],
+  "cwd": "/Users/random_person/Desktop/kkt-linear-scaling",
+  "exit_code": 0,
+  "group": 74144,
+  "group_empty": true,
+  "native_execution": false,
+  "elapsed_s": 0.149913459,
+  "source_sha256": {
+    "benchmark/scaling_investigation/candidates/run_candidate.py": "afd30b4ddb81d15990316d3414d30ea1bc2f1449c24ca8cdfdf034e9ee8936cf",
+    "benchmark/scaling_investigation/candidates/test_run_candidate.py": "f833f76e96c89346436079f12dd26ce1c56baf897704a467189bdbc1b22f4e40",
+    "benchmark/scaling_investigation/candidates/CANDIDATE_PROTOCOL.md": "2c96e420a5c6901f4afa1ef40d5ad09014510aa8825554f8235967b8b84bfbea"
+  },
+  "source_unchanged": true,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "531486cd386ec6ac3d939d9d334adaf2ba3a20b95ac85ec97d315e3345ade62f",
+  "validation": "pass"
+}

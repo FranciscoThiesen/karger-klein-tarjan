@@ -1,0 +1,42 @@
+00000000000014a8 T depth_verify_mst(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int)
+0000000000000000 T depth_fbt_reduction(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int)
+0000000000004a90 T depth_verify_general_graph(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int)
+0000000000003074 T verifier_detail::depth_heavy_edge_marks(std::__1::vector<Edge, std::__1::allocator<Edge>> const&, std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int)
+0000000000001f38 T verifier_detail::depth_heavy_edge_marks(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int)
+000000000000784c T verifier_detail::compressed_tree_path_maxima::set_depths(int, int)
+0000000000007138 T verifier_detail::compressed_tree_path_maxima::compute_answer()
+0000000000007088 T verifier_detail::compressed_tree_path_maxima::add_request_depth(int, int)
+00000000000078f8 T verifier_detail::compressed_tree_path_maxima::init(int)
+00000000000079b4 T verifier_detail::compressed_tree_path_maxima::visit(int, int)
+000000000000744c T verifier_detail::compressed_tree_path_maxima::compressed_tree_path_maxima(int, std::__1::vector<int, std::__1::allocator<int>> const&, std::__1::vector<int, std::__1::allocator<int>> const&, std::__1::vector<int, std::__1::allocator<int>> const&)
+0000000000007c4c T verifier_detail::compressed_tree_path_maxima::~compressed_tree_path_maxima()
+00000000000057c8 T verifier_detail::depth_lca::precompute(std::__1::vector<std::__1::vector<int, std::__1::allocator<int>>, std::__1::allocator<std::__1::vector<int, std::__1::allocator<int>>>> const&, int)
+00000000000063c8 T verifier_detail::depth_lca::dfs(std::__1::vector<std::__1::vector<int, std::__1::allocator<int>>, std::__1::allocator<std::__1::vector<int, std::__1::allocator<int>>>> const&, int, int, int)
+0000000000005660 T verifier_detail::depth_lca::depth_lca(int, std::__1::vector<std::__1::vector<int, std::__1::allocator<int>>, std::__1::allocator<std::__1::vector<int, std::__1::allocator<int>>>> const&, int)
+0000000000006de0 T verifier_detail::depth_lca::~depth_lca()
+0000000000005410 T verifier_detail::depth_lca::operator=(verifier_detail::depth_lca&&)
+0000000000008664 S kkt_work::active
+0000000000007370 T verifier_detail::compressed_tree_path_maxima::lookup_depth(int, int) const
+0000000000006f20 T verifier_detail::depth_lca::query_depth(int, int) const
+0000000000006dcc T std::__1::vector<std::__1::vector<std::__1::vector<int, std::__1::allocator<int>>, std::__1::allocator<std::__1::vector<int, std::__1::allocator<int>>>>, std::__1::allocator<std::__1::vector<std::__1::vector<int, std::__1::allocator<int>>, std::__1::allocator<std::__1::vector<int, std::__1::allocator<int>>>>>>::__throw_length_error[abi:ue170006]() const
+0000000000007dbc T std::__1::vector<std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>>, std::__1::allocator<std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>>>>::__throw_length_error[abi:ue170006]() const
+000000000000516c T std::__1::vector<std::__1::vector<int, std::__1::allocator<int>>, std::__1::allocator<std::__1::vector<int, std::__1::allocator<int>>>>::__throw_length_error[abi:ue170006]() const
+0000000000007da8 T std::__1::vector<std::__1::pair<int, unsigned long>, std::__1::allocator<std::__1::pair<int, unsigned long>>>::__throw_length_error[abi:ue170006]() const
+0000000000005158 T std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>>::__throw_length_error[abi:ue170006]() const
+00000000000051d8 T std::__1::vector<unsigned char, std::__1::allocator<unsigned char>>::__throw_length_error[abi:ue170006]() const
+00000000000050d0 T std::__1::vector<int, std::__1::allocator<int>>::__throw_length_error[abi:ue170006]() const
+00000000000078e4 T std::__1::vector<unsigned long, std::__1::allocator<unsigned long>>::__throw_length_error[abi:ue170006]() const
+0000000000005134 T std::length_error::length_error[abi:ue170006](char const*)
+0000000000004f24 T void std::__1::__hash_table<int, std::__1::hash<int>, std::__1::equal_to<int>, std::__1::allocator<int>>::__do_rehash<true>(unsigned long)
+0000000000004bec T std::__1::pair<std::__1::__hash_iterator<std::__1::__hash_node<int, void*>*>, bool> std::__1::__hash_table<int, std::__1::hash<int>, std::__1::equal_to<int>, std::__1::allocator<int>>::__emplace_unique_key_args<int, int const&>(int const&, int const&)
+0000000000004ba4 T std::__1::unordered_set<int, std::__1::hash<int>, std::__1::equal_to<int>, std::__1::allocator<int>>::~unordered_set[abi:ue170006]()
+00000000000050e4 T std::__1::__throw_length_error[abi:ue170006](char const*)
+0000000000006ba4 T std::__1::vector<std::__1::vector<std::__1::vector<int, std::__1::allocator<int>>, std::__1::allocator<std::__1::vector<int, std::__1::allocator<int>>>>, std::__1::allocator<std::__1::vector<std::__1::vector<int, std::__1::allocator<int>>, std::__1::allocator<std::__1::vector<int, std::__1::allocator<int>>>>>>::__append(unsigned long)
+0000000000006314 T std::__1::vector<std::__1::vector<std::__1::vector<int, std::__1::allocator<int>>, std::__1::allocator<std::__1::vector<int, std::__1::allocator<int>>>>, std::__1::allocator<std::__1::vector<std::__1::vector<int, std::__1::allocator<int>>, std::__1::allocator<std::__1::vector<int, std::__1::allocator<int>>>>>>::~vector[abi:ue170006]()
+0000000000007cdc T std::__1::vector<std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>>, std::__1::allocator<std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>>>>::vector(unsigned long)
+0000000000006710 T std::__1::vector<std::__1::vector<int, std::__1::allocator<int>>, std::__1::allocator<std::__1::vector<int, std::__1::allocator<int>>>>::assign(unsigned long, std::__1::vector<int, std::__1::allocator<int>> const&)
+0000000000001368 T std::__1::vector<std::__1::vector<int, std::__1::allocator<int>>, std::__1::allocator<std::__1::vector<int, std::__1::allocator<int>>>>::vector(unsigned long)
+0000000000001434 T std::__1::vector<std::__1::vector<int, std::__1::allocator<int>>, std::__1::allocator<std::__1::vector<int, std::__1::allocator<int>>>>::~vector[abi:ue170006]()
+0000000000006a60 T void std::__1::vector<int, std::__1::allocator<int>>::__assign_with_size[abi:ue170006]<int*, int*>(int*, int*, long)
+00000000000051ec T std::__1::vector<int, std::__1::allocator<int>>::assign(unsigned long, int const&)
+0000000000004efc T std::__throw_bad_array_new_length[abi:ue170006]()

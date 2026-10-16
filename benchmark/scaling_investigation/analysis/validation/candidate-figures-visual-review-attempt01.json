@@ -1,0 +1,70 @@
+{
+  "schema": "kkt_depth_candidate_visual_review_v1",
+  "validation": "pass",
+  "native_execution": false,
+  "render_actual_exit_code": 0,
+  "render_session": 5839,
+  "render_completion_chunk": "23bae1",
+  "inline_analysis_actual_exit_code": 0,
+  "inline_analysis_completion_chunk": "e25661",
+  "input_provenance_sha256": "5ecdedd58f5e84bea8fc9e173bfb9f2dfdb287665e3e5026ff5a8534f5443232",
+  "source_sha256": {
+    "benchmark/scaling_investigation/analysis/plot_candidate.py": "fa92500f2b57de1755c24f656393725c0780a6874cdc0009e6247f25780e3628",
+    "benchmark/scaling_investigation/analysis/analyze_candidate.py": "ac982d24ea72149aaa33abd04fafb1b2b5eeb1b972e6c4ba4f05178a0c16cf11"
+  },
+  "files_sha256": {
+    "inline-controls-cpu_ns.svg": "5435cc99bd4c97b504086d0355fb8ddbf8f4cbcc97bf072a48c97385a1c4bff1",
+    "ratios.csv": "273537611334c0122b1a7d73809e8cfa84e24f6d72a0ee42fcfcfa01ad107601",
+    "provenance.json": "5ecdedd58f5e84bea8fc9e173bfb9f2dfdb287665e3e5026ff5a8534f5443232",
+    "curve-bending-cpu_ns.svg": "7c44604f2795c079d6e4732da41be9ee3b161cd2f7af25f557ea1c0e09ccd056",
+    "curve-bending-wall_ns.png": "6d1bdc9b6ca3733d95f3c0692a35284627f5473876a75e6607e3c898fc21fded",
+    "curve-bending-wall_ns.svg": "75d32c1672ec970715109feaca3a2c13f337ece305cb9a6401e2d3e815d4b479",
+    "bending.csv": "724764520824f776f650924ed27c04cdb3f8f84b645a26d3ae6b7effbb734162",
+    "curve-bending-cpu_ns.png": "07c06a857a97d8ff176ff71c5ee0a249f08f9b7f69ad5c027e9ffa0f9ad5694e",
+    "ratio-summary.csv": "9e4c203d8ad20bd7d36c7ed3206693ff6539cd9cd1045fd83d7d74b23be647fa",
+    "inline-controls-cpu_ns.png": "f8686eb2f6e48543902c0cf782d78c2f7cf5b7fbd6484f9d0450f19dcc0f8024",
+    "paired-ratios-cpu_ns.svg": "8ce047565666c0a63e73bb3e5a64e43c7638cf0a24dd724ec84c1cd8a5e05806",
+    "paired-ratios-wall_ns.svg": "fefd0f6e1c287e5b448f28ddde84d6b614d046784712d8651064cb3c0d16bec5",
+    "inline-controls-wall_ns.png": "29323470becfd7abfcf9662cf17804a45545fdc9c7cfaf1821e26cfb1d281c41",
+    "inline-summary.csv": "77d6b30d5a4ac1ffcb95ccac60d97527714f6e345421e0b26c3d4ee4629d6428",
+    "bending-trials.csv": "72567f7ccdacdabbacadde50b42c7a12b68d11dc91e0af4c9bc2fda7b63f78c3",
+    "inline-controls-wall_ns.svg": "cadfaea46a294d2a3894b7c75fc508a952af304c4421dae0651d80555dee064b",
+    "paired-ratios-wall_ns.png": "5b7136bb355e40c0c93ee660f0c0c529f778d962c4398e72ae359909d49ae816",
+    "paired-ratios-cpu_ns.png": "0e3f676877fc8445c3a7a4b2a52fcacb9ef5998d96e56b2709b0c20defe25586",
+    "inline-ratios.csv": "986dda5e96aa91d6a351f5fd87d03429605622bfdeed6eff2084115089cc48b0"
+  },
+  "image_reviews": {
+    "curve-bending-wall_ns.png": {
+      "validation": "pass",
+      "readability": "Titles, all three panels, units, legends and captions are legible. No clipping or overlap observed.",
+      "scope": "Direct PNG visual inspection; full ranges, loss points and distinct statistics retained."
+    },
+    "curve-bending-cpu_ns.png": {
+      "validation": "pass",
+      "readability": "Titles, all three panels, units, legends and captions are legible. No clipping or overlap observed.",
+      "scope": "Direct PNG visual inspection; full ranges, loss points and distinct statistics retained."
+    },
+    "inline-controls-cpu_ns.png": {
+      "validation": "pass",
+      "readability": "Titles, all three panels, units, legends and captions are legible. No clipping or overlap observed.",
+      "scope": "Direct PNG visual inspection; full ranges, loss points and distinct statistics retained."
+    },
+    "inline-controls-wall_ns.png": {
+      "validation": "pass",
+      "readability": "Titles, all three panels, units, legends and captions are legible. No clipping or overlap observed.",
+      "scope": "Direct PNG visual inspection; full ranges, loss points and distinct statistics retained."
+    },
+    "paired-ratios-wall_ns.png": {
+      "validation": "pass",
+      "readability": "Titles, all three panels, units, legends and captions are legible. No clipping or overlap observed.",
+      "scope": "Direct PNG visual inspection; full ranges, loss points and distinct statistics retained."
+    },
+    "paired-ratios-cpu_ns.png": {
+      "validation": "pass",
+      "readability": "Titles, all three panels, units, legends and captions are legible. No clipping or overlap observed.",
+      "scope": "Direct PNG visual inspection; full ranges, loss points and distinct statistics retained."
+    }
+  },
+  "strongest_central_plot": "curve-bending-cpu_ns.png",
+  "all_owned_execution_stopped": true
+}

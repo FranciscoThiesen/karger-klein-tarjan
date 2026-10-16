@@ -1,0 +1,27 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "-v",
+    "test_plot_candidate.py"
+  ],
+  "cwd": "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis",
+  "native_execution": false,
+  "rendering": false,
+  "source_sha256": {
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/plot_candidate.py": "5f68f68c64a45115445290c2e59aaa49e8af9df7a1aee724390f035ac3e6e5a7",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/test_plot_candidate.py": "4496ce9dc960ba397e798fba53281e56874783a35b7f72982c223f8db2fb1b0c",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/analyze_candidate.py": "ac982d24ea72149aaa33abd04fafb1b2b5eeb1b972e6c4ba4f05178a0c16cf11",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/test_analyze_candidate.py": "25f82ec4f9295656cd017d86de1ce1888b7f30131f28d11f2ac2550c2738e59f",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/analyze_diagnostics.py": "e6b34e8f86f7beff00a50f11a0ba858b3c058d1550ddbeeac84bd0aaf57b947e"
+  },
+  "validation": "pass",
+  "process_group": 54585,
+  "actual_exit_code": 0,
+  "group_members_after_exit": [],
+  "duration_s": 0.336856375,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "230a1dd12bc791c938f70a18e73698ab3813ddb470c4dc7089c6d9efe85babfc"
+}

@@ -1,0 +1,132 @@
+#ifndef KKT_EXPERIMENTAL_DEPTH_QUERIES_HPP
+#define KKT_EXPERIMENTAL_DEPTH_QUERIES_HPP
+// Private verifier RMQ returning only ancestor depth. Generic LCA is unchanged.
+// Sparse/microtable layouts stay nested, exactly as in the reference.
+#include <algorithm>
+#include <cassert>
+#include <cstdint>
+#include <vector>
+#include "../common/work_stats.hpp"
+#include "../common/phase_stats.hpp"
+namespace verifier_detail {
+class depth_lca {
+    int n = 0, block_size = 0, block_cnt = 0;
+    std::vector<int> first_visit, euler_depth, log_2;
+    std::vector<std::vector<int>> st;
+    std::vector<std::vector<std::vector<int>>> blocks;
+    std::vector<int> block_mask;
+
+    void dfs(const std::vector<std::vector<int>>& graph, int v, int p, int h) {
+        first_visit[v] = static_cast<int>(euler_depth.size());
+        euler_depth.push_back(h);
+        for (int u : graph[v]) {
+            if (u == p) continue;
+            dfs(graph, u, v, h + 1);
+            euler_depth.push_back(h);
+        }
+    }
+    // Microtable argmin ties retain the reference's second operand.
+    int min_depth_position(int i, int j) const {
+        return euler_depth[i] < euler_depth[j] ? i : j;
+    }
+    void precompute(const std::vector<std::vector<int>>& graph, int root) {
+        KKT_PHASE(lca_build);
+        KKT_WORK_ADD(lca_calls, 1);
+        KKT_WORK_ADD(lca_vertices, n);
+        first_visit.assign(n, -1);
+        // Only logical counter change: height[n] is no longer initialized.
+        KKT_WORK_ADD(initialized_slots, n);
+        euler_depth.reserve(2 * static_cast<std::size_t>(n));
+        dfs(graph, root, -1, 0);
+        const int m = static_cast<int>(euler_depth.size());
+        KKT_WORK_ADD(lca_euler_entries, m);
+        log_2.reserve(static_cast<std::size_t>(m) + 1);
+        log_2.push_back(-1);
+        for (int i = 1; i <= m; ++i) log_2.push_back(log_2[i / 2] + 1);
+        KKT_WORK_ADD(lca_log_entries, static_cast<std::uint64_t>(m) + 1);
+        block_size = std::max(1, log_2[m] / 2);
+        block_cnt = (m + block_size - 1) / block_size;
+        st.assign(block_cnt, std::vector<int>(log_2[block_cnt] + 1));
+        KKT_WORK_ADD(initialized_slots, static_cast<std::uint64_t>(block_cnt) * (log_2[block_cnt] + 2));
+        KKT_WORK_ADD(initialized_slots, log_2[block_cnt] + 1);
+        KKT_WORK_ADD(lca_sparse_cells, static_cast<std::uint64_t>(block_cnt) * (log_2[block_cnt] + 1));
+        KKT_WORK_ADD(lca_block_scan_visits, m);
+        for (int i = 0, j = 0, b = 0; i < m; ++i, ++j) {
+            if (j == block_size) j = 0, ++b;
+            if (j == 0 || euler_depth[i] < st[b][0]) st[b][0] = euler_depth[i];
+        }
+        for (int level = 1; level <= log_2[block_cnt]; ++level)
+            for (int i = 0; i < block_cnt; ++i) {
+                const int next = i + (1 << (level - 1));
+                st[i][level] = next >= block_cnt ? st[i][level - 1]
+                    : std::min(st[i][level - 1], st[next][level - 1]);
+            }
+        block_mask.assign(block_cnt, 0);
+        KKT_WORK_ADD(initialized_slots, block_cnt);
+        KKT_WORK_ADD(lca_block_scan_visits, m);
+        for (int i = 0, j = 0, b = 0; i < m; ++i, ++j) {
+            if (j == block_size) j = 0, ++b;
+            // A set bit is a +1 depth step, exactly as in generic LCA.
+            if (j > 0 && euler_depth[i - 1] < euler_depth[i])
+                block_mask[b] += 1 << (j - 1);
+        }
+        const int possibilities = 1 << (block_size - 1);
+        blocks.resize(possibilities);
+        KKT_WORK_ADD(initialized_slots, possibilities);
+        KKT_WORK_ADD(lca_mask_slots, possibilities);
+        KKT_WORK_ADD(lca_block_scan_visits, block_cnt);
+        for (int b = 0; b < block_cnt; ++b) {
+            const int mask = block_mask[b];
+            if (!blocks[mask].empty()) continue;
+            blocks[mask].assign(block_size, std::vector<int>(block_size));
+            KKT_WORK_ADD(lca_micro_tables, 1);
+            KKT_WORK_ADD(initialized_slots, static_cast<std::uint64_t>(block_size) * (block_size + 1));
+            KKT_WORK_ADD(initialized_slots, block_size);
+            KKT_WORK_ADD(lca_micro_cells, static_cast<std::uint64_t>(block_size) * (block_size + 1) / 2);
+            for (int left = 0; left < block_size; ++left) {
+                blocks[mask][left][left] = left;
+                for (int right = left + 1; right < block_size; ++right) {
+                    blocks[mask][left][right] = blocks[mask][left][right - 1];
+                    if (b * block_size + right < m)
+                        blocks[mask][left][right] = min_depth_position(
+                            b * block_size + blocks[mask][left][right],
+                            b * block_size + right) - b * block_size;
+                }
+            }
+        }
+    }
+    int in_block(int b, int left, int right) const {
+        return euler_depth[blocks[block_mask[b]][left][right] + b * block_size];
+    }
+public:
+    depth_lca() = default;
+    depth_lca(int count, const std::vector<std::vector<int>>& graph, int root) : n(count) {
+        assert(n > 0 && graph.size() == static_cast<std::size_t>(n));
+        assert(root >= 0 && root < n);
+        precompute(graph, root);
+    }
+#ifdef KKT_EXPERIMENT_DEPTH_QUERY_NOINLINE
+#if !defined(__clang__) && !defined(__GNUC__)
+#error "The depth-query noinline control requires Clang or GCC"
+#endif
+    __attribute__((noinline))
+#endif
+    int query_depth(int v, int u) const {
+        KKT_WORK_ADD(lca_queries, 1);
+        assert(v >= 0 && v < n && u >= 0 && u < n);
+        int left = first_visit[v], right = first_visit[u];
+        if (left > right) std::swap(left, right);
+        const int bl = left / block_size, br = right / block_size;
+        if (bl == br) return in_block(bl, left % block_size, right % block_size);
+        int answer = std::min(in_block(bl, left % block_size, block_size - 1),
+                              in_block(br, 0, right % block_size));
+        if (bl + 1 < br) {
+            const int level = log_2[br - bl - 1];
+            answer = std::min(answer, std::min(st[bl + 1][level],
+                                              st[br - (1 << level)][level]));
+        }
+        return answer;
+    }
+};
+} // namespace verifier_detail
+#endif

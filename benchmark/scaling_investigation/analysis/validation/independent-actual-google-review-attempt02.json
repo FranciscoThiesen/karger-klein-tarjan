@@ -1,0 +1,252 @@
+{
+  "validation": "pass",
+  "native_execution": false,
+  "repository_analyzers_imported": false,
+  "raw_google_rows": 594,
+  "actual_library_rows": [
+    {
+      "family": "leaf_hierarchy4",
+      "policy": "reference",
+      "model": "NlgN",
+      "cpu_coefficient": 2.8823321418160974,
+      "manual_coefficient": 2.8898556382339864,
+      "cpu_rms": 0.08116217960283752
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "policy": "depth",
+      "model": "NlgN",
+      "cpu_coefficient": 2.4502644278600014,
+      "manual_coefficient": 2.450422676766894,
+      "cpu_rms": 0.07740151277103914
+    },
+    {
+      "family": "leaf_shuffled4",
+      "policy": "depth",
+      "model": "NlgN",
+      "cpu_coefficient": 2.354625900619482,
+      "manual_coefficient": 2.3594882399704757,
+      "cpu_rms": 0.10773939928837006
+    },
+    {
+      "family": "leaf_shuffled4",
+      "policy": "reference",
+      "model": "NlgN",
+      "cpu_coefficient": 2.626335225226564,
+      "manual_coefficient": 2.644394948720239,
+      "cpu_rms": 0.069856164986858
+    },
+    {
+      "family": "gnm_random",
+      "policy": "reference",
+      "model": "NlgN",
+      "cpu_coefficient": 2.923486738979674,
+      "manual_coefficient": 2.9467782540618943,
+      "cpu_rms": 0.10407756059729632
+    },
+    {
+      "family": "gnm_random",
+      "policy": "depth",
+      "model": "NlgN",
+      "cpu_coefficient": 2.482563312957877,
+      "manual_coefficient": 2.482670669709161,
+      "cpu_rms": 0.05201160621981812
+    }
+  ],
+  "coefficient_ratios": [
+    {
+      "family": "leaf_hierarchy4",
+      "cpu": 0.8500978746731599,
+      "manual": 0.8479394764038687
+    },
+    {
+      "family": "leaf_shuffled4",
+      "cpu": 0.8965443093489169,
+      "manual": 0.8922601524073988
+    },
+    {
+      "family": "gnm_random",
+      "cpu": 0.8491789204504195,
+      "manual": 0.8425033903677691
+    }
+  ],
+  "clock_statistics": {
+    "elapsed_ns": {
+      "individual_pairs": {
+        "count": 198,
+        "wins": 198,
+        "ties": 0,
+        "losses": 0,
+        "minimum": 0.31136786244071624,
+        "maximum": 0.9902015396148378
+      },
+      "paired_medians": {
+        "count": 33,
+        "wins": 33,
+        "ties": 0,
+        "losses": 0,
+        "minimum": 0.7860605940826215,
+        "maximum": 0.938172323494167
+      },
+      "separate_medians": {
+        "count": 33,
+        "wins": 33,
+        "ties": 0,
+        "losses": 0,
+        "minimum": 0.790430798634307,
+        "maximum": 0.929566284057254
+      }
+    },
+    "process_cpu_elapsed_ns": {
+      "individual_pairs": {
+        "count": 198,
+        "wins": 198,
+        "ties": 0,
+        "losses": 0,
+        "minimum": 0.38267296243071236,
+        "maximum": 0.9733865101462362
+      },
+      "paired_medians": {
+        "count": 33,
+        "wins": 33,
+        "ties": 0,
+        "losses": 0,
+        "minimum": 0.7973760611561495,
+        "maximum": 0.9372299729594121
+      },
+      "separate_medians": {
+        "count": 33,
+        "wins": 33,
+        "ties": 0,
+        "losses": 0,
+        "minimum": 0.801629847613364,
+        "maximum": 0.9295454545454546
+      }
+    }
+  },
+  "largest_google_inputs": [
+    {
+      "family": "leaf_hierarchy4",
+      "wall_paired": 0.8455586880786087,
+      "cpu_paired": 0.8479670126570998,
+      "wall_separate": 0.843917018324372,
+      "cpu_separate": 0.8447293733512619
+    },
+    {
+      "family": "leaf_shuffled4",
+      "wall_paired": 0.8941700706619392,
+      "cpu_paired": 0.8986317179817153,
+      "wall_separate": 0.8941426631696574,
+      "cpu_separate": 0.8988973182780522
+    },
+    {
+      "family": "gnm_random",
+      "wall_paired": 0.8291152285677461,
+      "cpu_paired": 0.8341694644787371,
+      "wall_separate": 0.8208498732808956,
+      "cpu_separate": 0.8317190724896076
+    }
+  ],
+  "primary_campaign_crosscheck": {
+    "wall_ns": {
+      "individual_pairs": {
+        "count": 108,
+        "wins": 105,
+        "ties": 0,
+        "losses": 3,
+        "minimum": 0.49561037425758175,
+        "maximum": 1.5589484146576682
+      },
+      "paired_medians": {
+        "count": 36,
+        "wins": 36,
+        "ties": 0,
+        "losses": 0,
+        "minimum": 0.7580686970905907,
+        "maximum": 0.9904367826954199
+      },
+      "separate_medians": {
+        "count": 36,
+        "wins": 35,
+        "ties": 0,
+        "losses": 1,
+        "minimum": 0.7456036560033237,
+        "maximum": 1.0136880873162382
+      },
+      "largest_separate_median_ratios": {
+        "count": 6,
+        "wins": 6,
+        "ties": 0,
+        "losses": 0,
+        "minimum": 0.8589019547780956,
+        "maximum": 0.9448668012903921
+      }
+    },
+    "cpu_ns": {
+      "individual_pairs": {
+        "count": 108,
+        "wins": 106,
+        "ties": 0,
+        "losses": 2,
+        "minimum": 0.4992707826932426,
+        "maximum": 1.3905817174515236
+      },
+      "paired_medians": {
+        "count": 36,
+        "wins": 36,
+        "ties": 0,
+        "losses": 0,
+        "minimum": 0.7613458528951487,
+        "maximum": 0.9932546374367622
+      },
+      "separate_medians": {
+        "count": 36,
+        "wins": 35,
+        "ties": 0,
+        "losses": 1,
+        "minimum": 0.7529411764705882,
+        "maximum": 1.0181488203266789
+      },
+      "largest_separate_median_ratios": {
+        "count": 6,
+        "wins": 6,
+        "ties": 0,
+        "losses": 0,
+        "minimum": 0.8587218362737145,
+        "maximum": 0.9431304985965505
+      }
+    }
+  },
+  "input_sha256": {
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/validation/review_actual_google.py": "f845080c5f0f2aa75ff238c60949f1abf9163647046ccaeadcc130fea0398d28",
+    "/Users/random_person/Desktop/kkt-linear-scaling/docs/scaling-investigation/RESULTS.md": "fd9ed533742381e14d2d7e1792b61f0e6a2eea89afce52507779920de5a1a567",
+    "/Users/random_person/Desktop/kkt-linear-scaling/docs/scaling-investigation/HOST_MEMORY.md": "8b8468b3e19d441eaba39d4503a445c040b01638882c5ef5e352a845b6934ad5",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/current_complexity/current_complexity.cpp": "ccc746954240cb7432cf137357b32f077994729df6fa01e092aadec1f53629a4",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/depth-google-analysis-attempt01/provenance.json": "40f21ee77289c8de7e87b1db595000ff342b60348a104317ab5c5451c4e541a5",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/depth-google01/capture.json": "e9d680002e27e039b67128068c0258577e3cc78960e914f92dff85bcc335ee87",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/depth-google01/00.csv": "95ca9158b7511d5dd199500ac2ac57324d1b07a685dc1fd7753b5c3b217595bd",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/depth-google01/00.benchmark.json": "8cccbb503a4ea3a27ec49bb50090aba210fcddf692ab7848a773480c9f758029",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/depth-google-analysis-attempt01/original-library-00.json": "8cccbb503a4ea3a27ec49bb50090aba210fcddf692ab7848a773480c9f758029",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/depth-google01/01.csv": "81a5335142ac844ec42c05062632c2375f86584d8f3773419e3bfa6620db60dc",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/depth-google01/01.benchmark.json": "13c95cc19cb9b2f783f29a655a97b31909a2fcb20b9e646a71663e9fbff9199c",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/depth-google-analysis-attempt01/original-library-01.json": "13c95cc19cb9b2f783f29a655a97b31909a2fcb20b9e646a71663e9fbff9199c",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/depth-google01/02.csv": "61d60658a46881ba674a600ce1461d35ff71282b78cafd8d0915edb81ab2c181",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/depth-google01/02.benchmark.json": "0681622ea3cf42ef3f49aa62410d4f24187b31d5fbd5fcbd19d58d92545a2eae",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/depth-google-analysis-attempt01/original-library-02.json": "0681622ea3cf42ef3f49aa62410d4f24187b31d5fbd5fcbd19d58d92545a2eae",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/depth-google01/03.csv": "7597b082d08be5dd01e440f99a0ff747a562baee99a744e9a4f628c95dc755de",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/depth-google01/03.benchmark.json": "88e22bfaaf96cb30cf2449ebff98014a0d1323c20ded7307e187a69d13e6cdfe",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/depth-google-analysis-attempt01/original-library-03.json": "88e22bfaaf96cb30cf2449ebff98014a0d1323c20ded7307e187a69d13e6cdfe",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/depth-google01/04.csv": "afdcb894006e90f6e4c4dfc8f8abe537026983eb17ba6a99be4a2c21c8666d7e",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/depth-google01/04.benchmark.json": "c12b86c8d5ea26f1c5dd7ec7f718aae2a8f6be9a63991140101f3fe9438b9d10",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/depth-google-analysis-attempt01/original-library-04.json": "c12b86c8d5ea26f1c5dd7ec7f718aae2a8f6be9a63991140101f3fe9438b9d10",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/depth-google01/05.csv": "c92faa1e2ed296ae86fc79a613efafebe5fbbb2b902c620e870578a38c4c9e70",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/depth-google01/05.benchmark.json": "8b03d4b638a01ef963668b75b068a733bee7f3a43f49545dc19f1bb46a61f7d6",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/depth-google-analysis-attempt01/original-library-05.json": "8b03d4b638a01ef963668b75b068a733bee7f3a43f49545dc19f1bb46a61f7d6",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/depth-google-analysis-attempt01/native-pairs.csv": "39b2e9b1a95840844969e8da05572174a64e38659124e55c4b1fc1f5250db73c",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/depth-google-analysis-attempt01/native-summary.csv": "7892d381031ad50882a9881fe63e349a65888a1ea4c4ee0017dbece2ce967c86",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/depth-google-analysis-attempt01/native-two-call-means.csv": "5b119ec8415843983debc87b03cec960c86f6c5610d736cdbea7f7ac37b9e8c4",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/depth-google-analysis-attempt01/native-times.csv": "78f8981a9c1d826dc368e5d952de0b1575476e29ab2126ba5c92042c48e62755",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/depth-google-analysis-attempt01/library-coefficient-comparison.csv": "0adf7bffb1caaf04e4da6ae85825267a00a1e5c9414b5c14593386ced883a2d6",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/depth-timing-analysis-attempt01/all_raw_rows.json": "2342c69ae5e3e6ba703408a6f90dd6f493deba932caef785d7ab0d9fb24ac2dd"
+  }
+}

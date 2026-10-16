@@ -1,0 +1,46 @@
+{
+  "schema": "independent_postcapture_validation_v1",
+  "validation": "pass",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "benchmark/scaling_investigation/analysis/inspect_candidate_google.py",
+    "--analysis",
+    "benchmark/scaling_investigation/analysis/depth-google-analysis-attempt01",
+    "--output",
+    "benchmark/scaling_investigation/analysis/depth-google-summary-attempt01"
+  ],
+  "working_directory": "/Users/random_person/Desktop/kkt-linear-scaling",
+  "started_utc": "2026-10-16T03:57:41.201358+00:00",
+  "started_monotonic_ns": 20491708,
+  "source_sha256_before": {
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/inspect_candidate_google.py": "7840f19f68ddf6fc0d017da90734b5f4c7f81ecb0e0ba23e7a4a2476195ec543",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/analyze_candidate_google.py": "2e2542fd5da46f828eb33d2b67813f3ad311e6487e7b679d7bf68aaadc1e14a5"
+  },
+  "native_solver_execution": false,
+  "owned_groups_verified_empty": true,
+  "process_group": 17884,
+  "exit_status": 0,
+  "group_exit_verification": {
+    "validation": "pass",
+    "process_group": 17884,
+    "members": [],
+    "monotonic_ns": 310030833,
+    "utc": "2026-10-16T03:57:41.490882+00:00",
+    "method": "/bin/ps -axo pid=,pgid=",
+    "query_exit_status": 0
+  },
+  "source_sha256_after": {
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/heldout-families-2026-10-15/validation/run_postcapture_validation.py": "399bd86ef0bac1322c68f8df5d89fc18c2922b26b5cea9b007d64abfe7ff9f69",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/inspect_candidate_google.py": "7840f19f68ddf6fc0d017da90734b5f4c7f81ecb0e0ba23e7a4a2476195ec543",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/analyze_candidate_google.py": "2e2542fd5da46f828eb33d2b67813f3ad311e6487e7b679d7bf68aaadc1e14a5"
+  },
+  "finished_utc": "2026-10-16T03:57:41.491112+00:00",
+  "finished_monotonic_ns": 310267958,
+  "elapsed_seconds": 0.28977625,
+  "stdout": "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/validation/google-summary-attempt01.stdout",
+  "stdout_sha256": "51c7a66187725b076d98adab750cd29477d1eeb4c6e283b78aaadfcad99d383b",
+  "stderr": "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/validation/google-summary-attempt01.stderr",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

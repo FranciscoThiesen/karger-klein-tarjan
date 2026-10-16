@@ -1,0 +1,29 @@
+F..F.
+======================================================================
+FAIL: test_declaration_and_input_changes_cannot_be_self_consistently_accepted (__main__.GoogleTests)
+----------------------------------------------------------------------
+RuntimeError: conflicting provenance: /private/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/tmpgk0y5a80/capture/declaration.json
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/google/test_run_google.py", line 140, in test_declaration_and_input_changes_cannot_be_self_consistently_accepted
+    with self.assertRaisesRegex(RuntimeError,'declaration drift'): target.load(output/'capture.json')
+AssertionError: "declaration drift" does not match "conflicting provenance: /private/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/tmpgk0y5a80/capture/declaration.json"
+
+======================================================================
+FAIL: test_full_matrix_raw_library_validation_and_missing_binding (__main__.GoogleTests)
+----------------------------------------------------------------------
+RuntimeError: artifact drift: /private/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/tmp3k7gzcxc/capture/capture.json
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/google/test_run_google.py", line 97, in test_full_matrix_raw_library_validation_and_missing_binding
+    with self.assertRaisesRegex(RuntimeError,'omitted required proof'): target.load(output/'capture.json')
+AssertionError: "omitted required proof" does not match "artifact drift: /private/var/folders/zm/cc_htkx55lv0mz6vsfhzslkm0000gn/T/tmp3k7gzcxc/capture/capture.json"
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.240s
+
+FAILED (failures=2)

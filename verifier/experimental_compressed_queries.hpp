@@ -126,6 +126,18 @@ public:
         KKT_WORK_ADD(path_query_visits, 1);
     }
 
+    // Private depth API; keep the original ID API's body unchanged.
+    // Caller supplies the depth of an actual proper ancestor.
+    void add_request_depth(int lower, int upper_depth) {
+        assert(!computed_);
+        assert(lower >= 0 && lower < n_);
+        assert(upper_depth >= 0 && upper_depth < depth_[lower]);
+        requested_[lower] |= bit(upper_depth);
+        ++logical_requests_;
+        KKT_WORK_ADD(verifier_queries, 1);
+        KKT_WORK_ADD(path_query_visits, 1);
+    }
+
     void compute_answer() {
         KKT_PHASE(path_solve);
         assert(!computed_);
@@ -152,6 +164,16 @@ public:
         assert(lower >= 0 && lower < n_ && upper >= 0 && upper < n_);
         assert(depth_[upper] < depth_[lower]);
         const std::size_t index = offsets_[lower] + rank(requested_[lower], depth_[upper]);
+        assert(index < offsets_[lower + 1]);
+        KKT_WORK_ADD(path_query_visits, 1);
+        return values_[index];
+    }
+
+    int lookup_depth(int lower, int upper_depth) const {
+        assert(computed_);
+        assert(lower >= 0 && lower < n_);
+        assert(upper_depth >= 0 && upper_depth < depth_[lower]);
+        const std::size_t index = offsets_[lower] + rank(requested_[lower], upper_depth);
         assert(index < offsets_[lower + 1]);
         KKT_WORK_ADD(path_query_visits, 1);
         return values_[index];

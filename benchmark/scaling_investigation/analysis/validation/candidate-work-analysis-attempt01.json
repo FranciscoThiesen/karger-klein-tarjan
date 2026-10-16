@@ -1,0 +1,38 @@
+{
+  "validation": "pass",
+  "native_execution": false,
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "benchmark/scaling_investigation/analysis/analyze_candidate.py",
+    "--work",
+    "benchmark/results/scaling-investigation-2026-10-15/depth-work01/capture.json",
+    "--output",
+    "benchmark/scaling_investigation/analysis/depth-work-analysis-attempt01"
+  ],
+  "actual_exit_code": 0,
+  "tool_chunk": "f5af68",
+  "tool_wall_seconds": 0.551179917,
+  "execution": "Synchronous analysis; launches no child process or native solver",
+  "field_comparisons": 4680,
+  "equal": 4608,
+  "decreased": 72,
+  "increased": 0,
+  "undefined_both_zero": 204,
+  "inputs": 72,
+  "saving_per_N_by_family": {
+    "gnm_random": {
+      "min": 0.003331801470588235,
+      "max": 0.004595588235294118
+    },
+    "leaf_hierarchy4": {
+      "min": 0.006806344696969697,
+      "max": 0.007279829545454545
+    },
+    "leaf_shuffled4": {
+      "min": 0.002382220643939394,
+      "max": 0.003048058712121212
+    }
+  },
+  "provenance_sha256": "763f0d28539b8110868bf92a13a1da97621e167aed1b3a24314d6b1f1dd2adf8"
+}

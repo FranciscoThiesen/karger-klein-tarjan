@@ -1,0 +1,14 @@
+AC Power:
+ Sleep On Power Button 1
+ powermode            0
+ standby              0
+ hibernatemode        0
+ powernap             1
+ hibernatefile        /var/vm/sleepimage
+ ttyskeepawake        1
+ womp                 1
+ displaysleep         10
+ networkoversleep     0
+ sleep                1
+ tcpkeepalive         1
+ disksleep            10

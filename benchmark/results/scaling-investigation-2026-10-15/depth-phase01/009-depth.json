@@ -1,0 +1,336 @@
+{
+  "command": [
+    "/usr/bin/arch",
+    "-arm64",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-build01/depth-phase/diagnostic",
+    "leaf_hierarchy4",
+    "1048576",
+    "19000043",
+    "3001",
+    "3"
+  ],
+  "cwd": "/Users/random_person/Desktop/kkt-linear-scaling",
+  "pgid": 22048,
+  "exit_code": 0,
+  "validation": "pass",
+  "group_empty": true,
+  "native_process_may_still_be_running": false,
+  "start_utc_ns": 1792121027994757000,
+  "started_monotonic_ns": 244161533583,
+  "exit_monotonic_ns": 280605147125,
+  "deadline_seconds": 300,
+  "rss_limit_bytes": 12884901888,
+  "observations": [
+    {
+      "utc": "2026-10-16T03:23:49.999815+00:00",
+      "monotonic_ns": 246166569416,
+      "process_group": 22048,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 22048,
+          "rss_kib": 1062880,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-build01/depth-phase/diagnostic"
+        }
+      ],
+      "rss_kib": 1062880
+    },
+    {
+      "utc": "2026-10-16T03:23:52.000438+00:00",
+      "monotonic_ns": 248167195708,
+      "process_group": 22048,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 22048,
+          "rss_kib": 1577664,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-build01/depth-phase/diagnostic"
+        }
+      ],
+      "rss_kib": 1577664
+    },
+    {
+      "utc": "2026-10-16T03:23:54.002965+00:00",
+      "monotonic_ns": 250169716041,
+      "process_group": 22048,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 22048,
+          "rss_kib": 2057952,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-build01/depth-phase/diagnostic"
+        }
+      ],
+      "rss_kib": 2057952
+    },
+    {
+      "utc": "2026-10-16T03:23:56.007366+00:00",
+      "monotonic_ns": 252174107583,
+      "process_group": 22048,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 22048,
+          "rss_kib": 2749600,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-build01/depth-phase/diagnostic"
+        }
+      ],
+      "rss_kib": 2749600
+    },
+    {
+      "utc": "2026-10-16T03:23:58.010508+00:00",
+      "monotonic_ns": 254177236791,
+      "process_group": 22048,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 22048,
+          "rss_kib": 2991392,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-build01/depth-phase/diagnostic"
+        }
+      ],
+      "rss_kib": 2991392
+    },
+    {
+      "utc": "2026-10-16T03:24:00.015588+00:00",
+      "monotonic_ns": 256182309458,
+      "process_group": 22048,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 22048,
+          "rss_kib": 3286432,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-build01/depth-phase/diagnostic"
+        }
+      ],
+      "rss_kib": 3286432
+    },
+    {
+      "utc": "2026-10-16T03:24:02.017617+00:00",
+      "monotonic_ns": 258184335041,
+      "process_group": 22048,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 22048,
+          "rss_kib": 3523936,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-build01/depth-phase/diagnostic"
+        }
+      ],
+      "rss_kib": 3523936
+    },
+    {
+      "utc": "2026-10-16T03:24:04.028102+00:00",
+      "monotonic_ns": 260194813833,
+      "process_group": 22048,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 22048,
+          "rss_kib": 3523936,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-build01/depth-phase/diagnostic"
+        }
+      ],
+      "rss_kib": 3523936
+    },
+    {
+      "utc": "2026-10-16T03:24:06.030817+00:00",
+      "monotonic_ns": 262197520083,
+      "process_group": 22048,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 22048,
+          "rss_kib": 3523936,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-build01/depth-phase/diagnostic"
+        }
+      ],
+      "rss_kib": 3523936
+    },
+    {
+      "utc": "2026-10-16T03:24:08.033721+00:00",
+      "monotonic_ns": 264200415833,
+      "process_group": 22048,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 22048,
+          "rss_kib": 3523936,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-build01/depth-phase/diagnostic"
+        }
+      ],
+      "rss_kib": 3523936
+    },
+    {
+      "utc": "2026-10-16T03:24:10.043707+00:00",
+      "monotonic_ns": 266210395125,
+      "process_group": 22048,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 22048,
+          "rss_kib": 3523936,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-build01/depth-phase/diagnostic"
+        }
+      ],
+      "rss_kib": 3523936
+    },
+    {
+      "utc": "2026-10-16T03:24:12.054150+00:00",
+      "monotonic_ns": 268220829625,
+      "process_group": 22048,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 22048,
+          "rss_kib": 3523936,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-build01/depth-phase/diagnostic"
+        }
+      ],
+      "rss_kib": 3523936
+    },
+    {
+      "utc": "2026-10-16T03:24:14.061225+00:00",
+      "monotonic_ns": 270227899000,
+      "process_group": 22048,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 22048,
+          "rss_kib": 2273824,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-build01/depth-phase/diagnostic"
+        }
+      ],
+      "rss_kib": 2273824
+    },
+    {
+      "utc": "2026-10-16T03:24:16.065081+00:00",
+      "monotonic_ns": 272231743041,
+      "process_group": 22048,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 22048,
+          "rss_kib": 3667200,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-build01/depth-phase/diagnostic"
+        }
+      ],
+      "rss_kib": 3667200
+    },
+    {
+      "utc": "2026-10-16T03:24:18.071754+00:00",
+      "monotonic_ns": 274238413125,
+      "process_group": 22048,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 22048,
+          "rss_kib": 3753104,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-build01/depth-phase/diagnostic"
+        }
+      ],
+      "rss_kib": 3753104
+    },
+    {
+      "utc": "2026-10-16T03:24:20.077602+00:00",
+      "monotonic_ns": 276244252583,
+      "process_group": 22048,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 22048,
+          "rss_kib": 3761680,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-build01/depth-phase/diagnostic"
+        }
+      ],
+      "rss_kib": 3761680
+    },
+    {
+      "utc": "2026-10-16T03:24:22.083378+00:00",
+      "monotonic_ns": 278250021166,
+      "process_group": 22048,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 22048,
+          "rss_kib": 3763776,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-build01/depth-phase/diagnostic"
+        }
+      ],
+      "rss_kib": 3763776
+    },
+    {
+      "utc": "2026-10-16T03:24:24.084216+00:00",
+      "monotonic_ns": 280250851125,
+      "process_group": 22048,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 22048,
+          "rss_kib": 3763856,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/depth-build01/depth-phase/diagnostic"
+        }
+      ],
+      "rss_kib": 3763856
+    },
+    {
+      "utc": "2026-10-16T03:24:24.438238+00:00",
+      "monotonic_ns": 280604873291,
+      "process_group": 22048,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    }
+  ],
+  "peak_sampled_group_rss_bytes": 3854188544,
+  "environment_policy": {
+    "removed": {
+      "CPATH": "/usr/local/include",
+      "LIBRARY_PATH": "/usr/local/lib"
+    },
+    "required_empty": {
+      "APPVEYOR": null,
+      "CC": null,
+      "CFLAGS": null,
+      "CMAKE_GENERATOR": null,
+      "CMAKE_OSX_ARCHITECTURES": null,
+      "CMAKE_POLICY_VERSION_MINIMUM": null,
+      "CMAKE_TOOLCHAIN_FILE": null,
+      "CPLUS_INCLUDE_PATH": null,
+      "CPPFLAGS": null,
+      "CXX": null,
+      "CXXFLAGS": null,
+      "C_INCLUDE_PATH": null,
+      "LDFLAGS": null,
+      "MACOSX_DEPLOYMENT_TARGET": null
+    },
+    "retained": {
+      "SDKROOT": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+      "DEVELOPER_DIR": null
+    }
+  },
+  "cleanup": {
+    "started_monotonic_ns": 280605194166,
+    "process_group": 22048,
+    "signals": [],
+    "native_exit_known": true,
+    "group_exit_known": true,
+    "returncode": 0,
+    "group_verification": {
+      "utc": "2026-10-16T03:24:24.438558+00:00",
+      "monotonic_ns": 280605196125,
+      "process_group": 22048,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    "finished_monotonic_ns": 280605296583,
+    "native_process_may_still_be_running": false
+  },
+  "finished_monotonic_ns": 280605409166,
+  "end_utc_ns": 1792121064438771000,
+  "duration_s": 36.443875583,
+  "rss_samples": 19,
+  "stdout_sha256": "aa7230de294eb98465de36743b85443eea34f7ec1aae464107178e2b0e94d21d",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

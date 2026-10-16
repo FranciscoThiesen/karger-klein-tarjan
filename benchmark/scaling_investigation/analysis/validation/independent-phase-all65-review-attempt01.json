@@ -1,0 +1,233 @@
+{
+  "validation": "pass",
+  "native_execution": false,
+  "repository_analyzers_imported": false,
+  "scope": "Independent arithmetic of completed raw/canonical data; existing strict collectors retain build/lifecycle responsibility.",
+  "phase": {
+    "total": {
+      "lower": 18,
+      "higher": 0,
+      "ratio_min": 0.8351020533863812,
+      "ratio_max": 0.9768919444099363,
+      "maximum_absolute_delta_ns_per_N": 8.294600843179106
+    },
+    "query_gather": {
+      "lower": 18,
+      "higher": 0,
+      "ratio_min": 0.6254766684027658,
+      "ratio_max": 0.7687483099529129,
+      "maximum_absolute_delta_ns_per_N": 8.469611745892148
+    },
+    "minimum_scan": {
+      "lower": 7,
+      "higher": 11,
+      "ratio_min": 0.8660373091319642,
+      "ratio_max": 1.108485258931851,
+      "maximum_absolute_delta_ns_per_N": 1.4913539212159437
+    },
+    "outside_collector": {
+      "lower": 10,
+      "higher": 8,
+      "ratio_min": 0.5012048192771085,
+      "ratio_max": 2.9761904761904763,
+      "maximum_absolute_delta_ns_per_N": 5.1787405303030304e-05
+    }
+  },
+  "work": {
+    "points": 4680,
+    "curves": 780,
+    "summaries": 195,
+    "zero_points": 204,
+    "ratio_status": {
+      "defined": 739,
+      "all_zero": 30,
+      "zero_at_small_input": 11
+    },
+    "endpoint_direction": {
+      "decrease": 345,
+      "increase": 396,
+      "equal": 39
+    },
+    "selected": {
+      "leaf_hierarchy4/path_query_visits": {
+        "minimum_defined_ratio": 1.041609688450598,
+        "maximum_defined_ratio": 1.0750573281727274,
+        "maximum_endpoint_delta": 0.3134074355616714,
+        "maximum_peak_delta": 0.3134074355616714
+      },
+      "leaf_hierarchy4/verifier_queries": {
+        "minimum_defined_ratio": 1.0384077258930293,
+        "maximum_defined_ratio": 1.0719050784250619,
+        "maximum_endpoint_delta": 0.14958520369096237,
+        "maximum_peak_delta": 0.14958520369096237
+      },
+      "leaf_hierarchy4/initialized_slots": {
+        "minimum_defined_ratio": 1.0499148706346848,
+        "maximum_defined_ratio": 1.0818623950302864,
+        "maximum_endpoint_delta": 0.19577011917576645,
+        "maximum_peak_delta": 0.19577011917576645
+      },
+      "leaf_hierarchy4/path_binary_search_steps": {
+        "minimum_defined_ratio": 1.2351962002840908,
+        "maximum_defined_ratio": 2.2038875214041096,
+        "maximum_endpoint_delta": 0.0026007276592832623,
+        "maximum_peak_delta": 0.004564689867424242
+      },
+      "leaf_shuffled4/path_query_visits": {
+        "minimum_defined_ratio": 1.0823530057638817,
+        "maximum_defined_ratio": 1.1645887917682132,
+        "maximum_endpoint_delta": 0.6165455615881718,
+        "maximum_peak_delta": 0.6165455615881718
+      },
+      "leaf_shuffled4/verifier_queries": {
+        "minimum_defined_ratio": 1.0808500610060858,
+        "maximum_defined_ratio": 1.1626081918046856,
+        "maximum_endpoint_delta": 0.30419742699825403,
+        "maximum_peak_delta": 0.30419742699825403
+      },
+      "leaf_shuffled4/initialized_slots": {
+        "minimum_defined_ratio": 1.0724804558274483,
+        "maximum_defined_ratio": 1.153968917746142,
+        "maximum_endpoint_delta": 0.31533738338586054,
+        "maximum_peak_delta": 0.31533738338586054
+      },
+      "leaf_shuffled4/path_binary_search_steps": {
+        "minimum_defined_ratio": 1.5064364346590908,
+        "maximum_defined_ratio": 1.9458403716216217,
+        "maximum_endpoint_delta": 0.002076640273585464,
+        "maximum_peak_delta": 0.0023285836884469695
+      },
+      "gnm_random/path_query_visits": {
+        "minimum_defined_ratio": 1.0914613429967654,
+        "maximum_defined_ratio": 1.1950635427805547,
+        "maximum_endpoint_delta": 0.6758871078491211,
+        "maximum_peak_delta": 0.6758871078491211
+      },
+      "gnm_random/verifier_queries": {
+        "minimum_defined_ratio": 1.0900293663030929,
+        "maximum_defined_ratio": 1.1923042541641757,
+        "maximum_endpoint_delta": 0.3325997520895565,
+        "maximum_peak_delta": 0.3325997520895565
+      },
+      "gnm_random/initialized_slots": {
+        "minimum_defined_ratio": 1.0647804995486372,
+        "maximum_defined_ratio": 1.1712885677846714,
+        "maximum_endpoint_delta": 0.3457356621237362,
+        "maximum_peak_delta": 0.3457356621237362
+      },
+      "gnm_random/path_binary_search_steps": {
+        "minimum_defined_ratio": 1.0097423735119047,
+        "maximum_defined_ratio": 1.0097423735119047,
+        "maximum_endpoint_delta": 0.002539466409122243,
+        "maximum_peak_delta": 0.00335693359375
+      }
+    }
+  },
+  "inline": {
+    "cases": 36,
+    "raw_rows": 72,
+    "gnm_large_exception": [
+      {
+        "clock": "wall_ns",
+        "median_paired_ratio": 1.0227945078396934,
+        "ratio_of_separate_medians": 0.9869965888702146
+      },
+      {
+        "clock": "cpu_ns",
+        "median_paired_ratio": 1.0177537784634725,
+        "ratio_of_separate_medians": 0.9893679417161657
+      }
+    ]
+  },
+  "input_sha256": {
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/validation/review_phase_all65.py": "170dab4430dcd794545d39347502b7998d5fc275353b88d206935261d1cec350",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/depth-phase-analysis-attempt01/provenance.json": "33bff1c4dfdde0468c5e3024e82bff07fc737170beeed9f067028f0b695bc689",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/depth-phase-analysis-attempt01/all_raw_rows.json": "239aaa98f6a21028d6d69b948b2cb8f2fafb015c8a954543f30524a7679e0d4a",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/depth-phase-analysis-attempt01/phase-times.csv": "22d10da3532db18bd46fd718f08f61d5adb97bc61db13183524b28cbd8378bee",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/depth-phase-analysis-attempt01/phase-deltas.csv": "5bf8e276ac69a065dd4464a57ddd22fc7c8e700c94e0e3e6b16d41e7203bf226",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/depth-phase-summary-attempt01/provenance.json": "a374bd04b549fe24fc7aed0daf887b59f028f3d24e3fee00547e13584fd45bff",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/depth-phase-summary-attempt01/all-input-additive-summary.csv": "9a08d983a7eb4a66a4d99208a7f5aa3aeee4a6cf048ad484944eea2178d7ef69",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/000-work.stdout": "af4b00702e1ce3073d6a030bd2d19432cbcb90ee5fcc760c432302408e08e2b9",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/001-work.stdout": "d0cd12d52ec615e6253ce3cbcb45d20c21212ac94cedd1bf40d74cd5ccb9109e",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/002-work.stdout": "b754b0430674c2265d6016b0eb32d29b48d082f0cf2d85454ed6b09c603c6dd3",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/003-work.stdout": "70d39656a2e528b8ba5efb3cefbbb1c13806db39b8efc761c3ede0fd4f5b17dc",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/004-work.stdout": "0ce3b60b269d64454b8d0f02494ece8f269c64b9534504eeaff69a4636c9d09c",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/005-work.stdout": "8e8a91f10cda4600d10c3437a8f5c481cb4c3a23650f3b715c3ca6d1c0a8f63e",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/006-work.stdout": "e3d56be746555532ef0255e0aa94a5d1e2a88c994439d2f61772053204561791",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/007-work.stdout": "d55b036798f3845137c117da35b23babc6db9908e90d635cce609ff9bbedf8e7",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/008-work.stdout": "40d69314c9cd7c405cef74deb6ebbe38f31dd5b8fdd98cbe0230be1e6efb1a37",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/009-work.stdout": "8f041e3729f7dc5e6fdad2a455bdff1ee4cf24bcc0c33f008c4037cb6774986d",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/010-work.stdout": "8a6da7bf88784d8f1e724129001fd953e5d7e75f5b16234f9d6983187c062aa5",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/011-work.stdout": "7ad4b064bb40230174a9627851f03c5f589987585a9dc94bb16a518710c67fba",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/012-work.stdout": "238322e05291d8b36d85539e13b855bbba4e8a30e8ffdab195d0357a3ec96317",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/013-work.stdout": "a8a2a2582674a0ff26348dcb2311f272f046dd30f1f21cc14d0ffbc214febe01",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/014-work.stdout": "ff1bd64789376b014027353beca808ca7870e3f9b1a7b11e25f4c0cab02482f0",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/015-work.stdout": "a9edacdacab785b8dfd66f163a7b6d2ca1d64af51b8000d87a841b25165fd937",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/016-work.stdout": "1e0463fe9f69abdce9dbe7487eecc4263660340996002772eb0a74981394045a",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/017-work.stdout": "29cee1cf21a8d576751833566768579882174d54737b37c5471696417ca325eb",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/018-work.stdout": "b759731847b24a4b4350924aa0839f1baafd2f572ebedf60ceb74a395ec4c615",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/019-work.stdout": "f19977b42efef136b280a5ef6a8af4f17c6ccaa757f74707e0c7cb6f2c792281",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/020-work.stdout": "61750b0744e6b572208c5d4a48e10cf68916cf7583d0d6d0f816019b7b893a1e",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/021-work.stdout": "f2fee92d4930a6dd5f67fd71d80f5682d3b7bd3f9a87615187e224b2dfcf9ae8",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/022-work.stdout": "13f9a28fc694197d549d846b5abb6ff9776bd1c10e144dfac46b96d0417956c8",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/023-work.stdout": "83108fbd9bec1474b1caf270337f11138829700fcc58b5777da25d1a5eec2acb",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/024-work.stdout": "22a4e6037fa9422b50f084b487547a3639016a48973b8d9d147150e95339a0f5",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/025-work.stdout": "b10ecbada633955db4b01e4af53a1f77af5770174da0acb74c37f300c750a88c",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/026-work.stdout": "32dc8a23341a32ea885a7c6d7112c93e3c67822ff8ca62b908ea0283612ede71",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/027-work.stdout": "df3b35758b655ff0712ed0a061ac7c2864ea42ce1a4c40d08cfca3618b48c76b",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/028-work.stdout": "f7fab0989f25be4741f9930f0ede5b0a14e143528017ffa0f08f43d5d2a956b1",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/029-work.stdout": "f11aa552820e8c9693ff7bfcae04e9b46936d16eb7894e93479f38540e4158ec",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/030-work.stdout": "1c6257ae793834ba12e4a6ea722c69c918133ab308fbb579cde4cb63a5be6abc",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/031-work.stdout": "adf0dd097d6448afff24bd2502d8ab1ae6a52b4cbc1f76d5643637eeb185a3cf",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/032-work.stdout": "f41d5a57d242f19995ce9e604a4d7e10b2d44d27cefd503da1b68e90a83aacd8",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/033-work.stdout": "f32c7d85ee0cb9201b62475ed6c60111535b1434193140eb97a342f938249156",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/034-work.stdout": "59f96db1082a474f9087cdf1702f5ce9d7b739822dc45a474dffba81923ecc31",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/035-work.stdout": "f3e6f9c1db547fe1c09ff41ce04db5303ad4dc44d536c65dbdc65580f6cd26ba",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/036-work.stdout": "691233a5bb12f2dda3fe103c297f11b3032eebeedc08f066e8e886c52fe99b3a",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/037-work.stdout": "cffc11b710ba27dd995edfa35785e397bfdde471c8bc391d6174110273f0e88c",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/038-work.stdout": "767ac05d35a06f6be8ab6110deeab30ab8626ebd2104575db6757b85a9767e59",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/039-work.stdout": "3d49539c643f7c7f2b31745fa950323d39137cb8715098da58bd779560488957",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/040-work.stdout": "9b8a719c4da12f630050d5adfbeac8cb51d31730f2a0ac5ad41f5041f5e0ce45",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/041-work.stdout": "f81f0c556b69921bcac2d8d44fbfc0bd7bbe1fcb8b1a0257a328cf927566444e",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/042-work.stdout": "5403883f31edb33544ae83c1c25ec3d8404f7a10926e587e543b14807eb1da32",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/043-work.stdout": "69fb95761a8f7246346e44e25d1e138155664401ae805864c15f1b2961e8ab36",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/044-work.stdout": "e6d80172d433cdab20e18f615e02069159a406b2b42d2293b5103e2368affdb5",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/045-work.stdout": "0ba5c2e7e4cc9b1dc4b9a8ececb42ce9fb5add9cb5d8f82186a86efd613ef79f",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/046-work.stdout": "6276ed194c350470fee2b58fefccdb545a8d0f509c29dbf4d2575c816ea6c850",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/047-work.stdout": "00df53fe30ccc7c4e1045f62a7b0dd08c9ba9f7fb0b9e10314ba71243b9af155",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/048-work.stdout": "77676c31b24475860a1c20c805763df77e834cd9500bb25e5d34f8969a9d43e7",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/049-work.stdout": "81e15b240867e1dad41968fd5fe2da2136ddf15b0dd0c75179ac1560617c5edd",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/050-work.stdout": "ef14662b9883f7ec9a73d6fdf0961dc043f51c9d201872f60f2b3371be3cd63f",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/051-work.stdout": "393f2eb235f23fcb8c6075104618cf761ab796e8bafa4018826d169af4e5d226",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/052-work.stdout": "d880b6f33783ed56747bad05f19614e99aabdf0b7afb3c2de0a812704679a4c2",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/053-work.stdout": "f08c8954eac30ad4fa0cee29ed81e65ff98091b92199dd3d15d4368b77fee459",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/054-work.stdout": "f19167e94ba92d8fa2ac6232a513fcf4f11a50a2899036658237f65e20ef3fda",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/055-work.stdout": "47624fcaaa3d72c7619f28582dd589af9bc90efdcde64154fc8fa6c9727b884a",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/056-work.stdout": "f1f1981caf36ccf2c900c12336edbde330b453626a73c5c981b6c6eaa23174fa",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/057-work.stdout": "1c7da065022af776df2e4814b27ea5c6016b043e037fc63ebaed2eb8769acf44",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/058-work.stdout": "11366e26114501022a17e641b2ee2efcf31f166c43e0646b90d4c9c70e724fba",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/059-work.stdout": "d92b1f398fea70be502e0aec5640607a6468aed07431e115ff44cccd90d8cb45",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/060-work.stdout": "5dcb491b930016b3388a2cb85a2e61157a6b9be5a68597fb01e7785ca988ca59",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/061-work.stdout": "eda6ca9547acaf305040b5494b45b563396497298531506a889fffee97fdb652",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/062-work.stdout": "7090ee1963a2523f3561d8420f03f7b92493228e3c8ddb221276003cd6b8536b",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/063-work.stdout": "3d977d410269c00d988f8ca383ffc7772497ccb5ff81484ef865b9e190618af3",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/064-work.stdout": "95f2c313755166c6e6cfedc70861488dda2b6945ed43749c241d89c7b840eb5c",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/065-work.stdout": "da87ed25d73c419fc9b5426d3db9cc7b94b0066ce84d33c662fb7ccc65d7d5a8",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/066-work.stdout": "22c0f38c2d66143ec042bf05957fdd67f0e79e6046931509e7a70876be34311c",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/067-work.stdout": "b7e81bd0099066f520dcd1c8fd0bde1f25f02623866bec9ae0316a831db2f99d",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/068-work.stdout": "15323d1907e6094f1d58a0183b34b16936b88df078e84948b73c86890e70f2c8",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/069-work.stdout": "be6269ebe8543befc9e7f4522eca75dd4e3e83cbb98da33af3dc3074d5b769b1",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/070-work.stdout": "941db78fcb915a43e9523a3cfb40f94b0aa1ab785521b4899d2744d70744ffb6",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/work01/071-work.stdout": "7f6701094a8425faf9403989ed6dd20b44a7380c9bebb7679a5ad8da9f57f0a5",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/depth-work-analysis-attempt01/provenance.json": "763f0d28539b8110868bf92a13a1da97621e167aed1b3a24314d6b1f1dd2adf8",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/depth-work-analysis-attempt01/all_raw_rows.json": "2d7a5e4f8374d543491eb80fe40ad81ab2e36a6efec107bfbb207d6826170611",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/depth-work-analysis-attempt01/work-counters.csv": "ca99556afe09f0c9f1d4d8d376dad06071d182630f35d8a6edadb8854db48cbd",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/all-work-fields-attempt01/provenance.json": "ddf9de6b23b9f6ccdbee97adf0c4a0baf2160e95d82f0aaed61ff0e78f1bfbd4",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/all-work-fields-attempt01/all-points.csv": "aa37bc748b16c1b9321fdf18912d8ecb2bf03124cfae2011b5b1f55af0ab2832",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/all-work-fields-attempt01/all-curves.csv": "0973877aee2d8d1b558aaa7ac7b51b563e835bae90d05c15534ad0d78748ed51",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/all-work-fields-attempt01/all-family-fields.csv": "cd86d2e499ef19551002f02c028058ed61b55b2824ef9a60be02b72bc1787bd8",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/depth-inline-analysis-attempt01/provenance.json": "81990a7055ff53837ddbf242d811625c88f3fc32857fd680b097259ad75bd0ec",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/depth-inline-analysis-attempt01/all_raw_rows.json": "783ea5e2b586ad1fb935516022ef8cbcd252a36ac69e5a8dff8819ceab2e7ae0",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/depth-inline-analysis-attempt01/inline-control-cases.csv": "77d6b30d5a4ac1ffcb95ccac60d97527714f6e345421e0b26c3d4ee4629d6428"
+  }
+}

@@ -7,6 +7,12 @@
 #ifdef KKT_EXPERIMENT_COMPRESSED_QUERIES
 #include "experimental_compressed_queries.hpp"
 #endif
+#ifdef KKT_EXPERIMENT_DEPTH_QUERIES
+#ifndef KKT_EXPERIMENT_COMPRESSED_QUERIES
+#error "Depth queries require the compressed verifier"
+#endif
+#include "experimental_depth_queries.hpp"
+#endif
 #include "../common/edge.hpp"
 #include "../common/work_stats.hpp"
 #include "../common/phase_stats.hpp"
@@ -316,7 +322,11 @@ struct test_graph
 	int root, total_nodes;
 	vector<int> child, sibling, weight;
 	const vector<QueryEdge>& G;
+#ifdef KKT_EXPERIMENT_DEPTH_QUERIES
+	verifier_detail::depth_lca lca;
+#else
 	LCA lca;
+#endif
 
 	test_graph(const vector<QueryEdge>& edges,
 			   const vector<tuple<int, int, int, int>>& spanning_tree,
@@ -345,7 +355,11 @@ struct test_graph
 			weight[node] = cost;
 			adj[parent].push_back(node);
 		}
+#ifdef KKT_EXPERIMENT_DEPTH_QUERIES
+		lca = verifier_detail::depth_lca(total_nodes, adj, root);
+#else
 		lca = LCA(total_nodes, adj, root);
+#endif
 	}
 
 	// This functions return all the F-heavy edges of a graph taking into
@@ -363,9 +377,19 @@ struct test_graph
 		KKT_PHASE(query_gather);
 		for (size_t i = 0; i < G.size(); ++i) {
 			const int from = query_from(G[i]), to = query_to(G[i]);
+#ifdef KKT_EXPERIMENT_DEPTH_QUERIES
+			// Original vertices are FBT leaves. Distinct endpoints have a
+			// proper ancestor; retain one LCA invocation for loops as well.
+			const int ancestor = ancestors[i] = lca.query_depth(from, to);
+			if (from != to) {
+				verifier.add_request_depth(from, ancestor);
+				verifier.add_request_depth(to, ancestor);
+			}
+#else
 			const int ancestor = ancestors[i] = lca.query(from, to);
 			if (ancestor != from) verifier.add_request(from, ancestor);
 			if (ancestor != to) verifier.add_request(to, ancestor);
+#endif
 		}
 		}
 		verifier.compute_answer();
@@ -380,8 +404,13 @@ struct test_graph
 			if (from == to) continue;
 			const int ancestor = ancestors[i];
 			int maximum = numeric_limits<int>::lowest();
+#ifdef KKT_EXPERIMENT_DEPTH_QUERIES
+			maximum = max(maximum, verifier.lookup_depth(from, ancestor));
+			maximum = max(maximum, verifier.lookup_depth(to, ancestor));
+#else
 			if (ancestor != from) maximum = max(maximum, verifier.lookup(from, ancestor));
 			if (ancestor != to) maximum = max(maximum, verifier.lookup(to, ancestor));
+#endif
 			if (maximum < query_cost(G[i])) heavy_marks[i] = 1;
 		}
 		}

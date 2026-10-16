@@ -1,0 +1,21 @@
+--- benchmark/results/scaling-investigation-2026-10-15/depth-correctness02/runner-repair-before/run_correctness.py	2026-10-15 20:00:55
++++ benchmark/scaling_investigation/candidates/run_correctness.py	2026-10-15 20:04:55
+@@ -26,6 +26,8 @@
+ SAN_ENV = {'ASAN_OPTIONS': 'detect_leaks=0:halt_on_error=1:abort_on_error=1',
+            'UBSAN_OPTIONS': 'halt_on_error=1:print_stacktrace=1'}
+ SUITES = ('edge_verifier_view_test', 'retention_control_test')
++# The two explicit gnm_random fixtures report their deterministic topology attempts.
++RETENTION_STDERR = 'crossover_topology_attempts=1\ncrossover_topology_attempts=1\n'
+ WRONG_MESSAGE = 'depth dispatch / exact removed-height initialization mismatch\n'
+ GUARDS = ('guard-add-negative', 'guard-add-equal', 'guard-add-deeper', 'guard-lookup-absent')
+ 
+@@ -157,7 +159,8 @@
+ def check_suite(name, stdout, stderr):
+     if name == 'retention_control_test':
+         match = re.fullmatch(r'PASS simple_cases=(\d+) solver_outputs=(\d+) raw_cases=(\d+) exhaustive_cases=(\d+) rejected_trees=(\d+) rejected_options=(\d+)\n', stdout)
+-        require(match is not None and stderr == '' and tuple(map(int,match.groups())) == (28,819,35,35,140,10),
++        require(match is not None and stderr == RETENTION_STDERR
++                and tuple(map(int,match.groups())) == (28,819,35,35,140,10),
+                 'retention suite did not complete')
+     else:
+         match = re.fullmatch(r'PASS (\d+) positional oracle cases; (\d+) independently checked full KKT records\n', stderr)

@@ -1,0 +1,232 @@
+{
+  "mode": "timing",
+  "cases": [
+    {
+      "family": "leaf_hierarchy4",
+      "n": 1024,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 1024,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "gnm_random",
+      "n": 1024,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "n": 4096,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 4096,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "gnm_random",
+      "n": 4096,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "n": 16384,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 16384,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "gnm_random",
+      "n": 16384,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "n": 65536,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 65536,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "gnm_random",
+      "n": 65536,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "n": 262144,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 262144,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "gnm_random",
+      "n": 262144,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "n": 1048576,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 1048576,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "gnm_random",
+      "n": 1048576,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "n": 1048576,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 1048576,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "gnm_random",
+      "n": 1048576,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "n": 262144,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 262144,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "gnm_random",
+      "n": 262144,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "n": 65536,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 65536,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "gnm_random",
+      "n": 65536,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "n": 16384,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 16384,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "gnm_random",
+      "n": 16384,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "n": 4096,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 4096,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "gnm_random",
+      "n": 4096,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "n": 1024,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 1024,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "gnm_random",
+      "n": 1024,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    }
+  ],
+  "policies": [
+    "reference",
+    "depth"
+  ],
+  "instrumentation": "reference",
+  "repetitions": 3,
+  "warmups": 1,
+  "input_boundary": "unchanged tuple conversion + solver + temporary input destruction",
+  "global_limit_seconds": 7200,
+  "child_limit_seconds": 300,
+  "rss_limit_bytes": 12884901888
+}
