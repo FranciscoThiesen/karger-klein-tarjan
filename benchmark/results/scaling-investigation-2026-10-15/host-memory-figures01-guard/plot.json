@@ -1,0 +1,84 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/audit/analyze_host_memory.py",
+    "--capture",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory01/attempt.json",
+    "--output",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-figures01",
+    "--plot"
+  ],
+  "cwd": "/Users/random_person/Desktop/kkt-linear-scaling",
+  "pgid": 17534,
+  "exit_code": 0,
+  "validation": "pass",
+  "group_empty": true,
+  "native_process_may_still_be_running": false,
+  "start_utc_ns": 1792122970519951000,
+  "started_monotonic_ns": 48976125,
+  "exit_monotonic_ns": 1179971333,
+  "deadline_seconds": 120,
+  "rss_limit_bytes": 1073741824,
+  "observations": [
+    {
+      "utc": "2026-10-16T03:56:11.650466+00:00",
+      "monotonic_ns": 1179461125,
+      "process_group": 17534,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    }
+  ],
+  "peak_sampled_group_rss_bytes": 0,
+  "environment_policy": {
+    "removed": {
+      "CPATH": "/usr/local/include",
+      "LIBRARY_PATH": "/usr/local/lib"
+    },
+    "required_empty": {
+      "APPVEYOR": null,
+      "CC": null,
+      "CFLAGS": null,
+      "CMAKE_GENERATOR": null,
+      "CMAKE_OSX_ARCHITECTURES": null,
+      "CMAKE_POLICY_VERSION_MINIMUM": null,
+      "CMAKE_TOOLCHAIN_FILE": null,
+      "CPLUS_INCLUDE_PATH": null,
+      "CPPFLAGS": null,
+      "CXX": null,
+      "CXXFLAGS": null,
+      "C_INCLUDE_PATH": null,
+      "LDFLAGS": null,
+      "MACOSX_DEPLOYMENT_TARGET": null
+    },
+    "retained": {
+      "SDKROOT": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+      "DEVELOPER_DIR": null
+    }
+  },
+  "cleanup": {
+    "started_monotonic_ns": 1179993875,
+    "process_group": 17534,
+    "signals": [],
+    "native_exit_known": true,
+    "group_exit_known": true,
+    "returncode": 0,
+    "group_verification": {
+      "utc": "2026-10-16T03:56:11.650970+00:00",
+      "monotonic_ns": 1179996541,
+      "process_group": 17534,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    "finished_monotonic_ns": 1180079500,
+    "native_process_may_still_be_running": false
+  },
+  "finished_monotonic_ns": 1180097125,
+  "end_utc_ns": 1792122971651070000,
+  "duration_s": 1.131121,
+  "rss_samples": 1,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

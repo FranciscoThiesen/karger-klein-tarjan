@@ -1,0 +1,63 @@
+0000000100003a48 s GCC_except_table0
+0000000100003ad8 s GCC_except_table1
+0000000100003bd4 s GCC_except_table10
+0000000100003c18 s GCC_except_table11
+0000000100003bc4 s GCC_except_table7
+                 U __Unwind_Resume
+0000000100003c50 s (anonymous namespace)::footprints
+00000001000034c8 t (anonymous namespace)::scan(unsigned int const*, unsigned long, unsigned long long)
+00000001000033f0 t std::__1::array<unsigned int, 8ul> (anonymous namespace)::chase<1ul>(unsigned int const*, std::__1::array<unsigned int, 8ul>, unsigned long long)
+0000000100003418 t std::__1::array<unsigned int, 8ul> (anonymous namespace)::chase<4ul>(unsigned int const*, std::__1::array<unsigned int, 8ul>, unsigned long long)
+000000010000345c t std::__1::array<unsigned int, 8ul> (anonymous namespace)::chase<8ul>(unsigned int const*, std::__1::array<unsigned int, 8ul>, unsigned long long)
+00000001000024e0 t (anonymous namespace)::footprint(unsigned long, char const*)
+00000001000035b0 t std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>::__throw_length_error[abi:ue170006]() const
+                 U std::__1::locale::use_facet(std::__1::locale::id&) const
+                 U std::__1::ios_base::getloc() const
+                 U std::logic_error::logic_error(char const*)
+000000010000358c t std::length_error::length_error[abi:ue170006](char const*)
+                 U std::length_error::~length_error()
+                 U std::runtime_error::runtime_error(char const*)
+                 U std::runtime_error::~runtime_error()
+                 U std::__1::basic_ostream<char, std::__1::char_traits<char>>::flush()
+                 U std::__1::basic_ostream<char, std::__1::char_traits<char>>::sentry::sentry(std::__1::basic_ostream<char, std::__1::char_traits<char>>&)
+                 U std::__1::basic_ostream<char, std::__1::char_traits<char>>::sentry::~sentry()
+                 U std::__1::basic_ostream<char, std::__1::char_traits<char>>::operator<<(int)
+                 U std::__1::basic_ostream<char, std::__1::char_traits<char>>::operator<<(unsigned int)
+                 U std::__1::basic_ostream<char, std::__1::char_traits<char>>::operator<<(unsigned long)
+                 U std::__1::basic_ostream<char, std::__1::char_traits<char>>::operator<<(long long)
+                 U std::__1::basic_ostream<char, std::__1::char_traits<char>>::operator<<(unsigned long long)
+0000000100003728 t std::__1::ostreambuf_iterator<char, std::__1::char_traits<char>> std::__1::__pad_and_output[abi:ue170006]<char, std::__1::char_traits<char>>(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char>>, char const*, char const*, char const*, std::__1::ios_base&, char)
+000000010000353c t std::__1::__throw_length_error[abi:ue170006](char const*)
+00000001000035c4 t std::__1::basic_ostream<char, std::__1::char_traits<char>>& std::__1::__put_character_sequence[abi:ue170006]<char, std::__1::char_traits<char>>(std::__1::basic_ostream<char, std::__1::char_traits<char>>&, char const*, unsigned long)
+                 U std::__1::cerr
+                 U std::__1::cout
+                 U std::__1::ctype<char>::id
+                 U std::__1::chrono::steady_clock::now()
+                 U std::__1::locale::~locale()
+                 U std::__1::ios_base::__set_badbit_and_consider_rethrow()
+                 U std::__1::ios_base::clear(unsigned int)
+                 U std::terminate()
+                 U typeinfo for std::length_error
+                 U typeinfo for std::runtime_error
+                 U typeinfo for std::exception
+                 U vtable for std::length_error
+                 U operator delete(void*)
+                 U operator new(unsigned long)
+00000001000033e4 t ___clang_call_terminate
+                 U ___cxa_allocate_exception
+                 U ___cxa_begin_catch
+                 U ___cxa_end_catch
+                 U ___cxa_free_exception
+                 U ___cxa_throw
+                 U ___gxx_personality_v0
+                 U ___stack_chk_fail
+                 U ___stack_chk_guard
+0000000100000000 T __mh_execute_header
+                 U _alarm
+                 U _bzero
+                 U _clock_gettime
+00000001000020dc T _main
+                 U _memmove
+                 U _memset
+                 U _setrlimit
+                 U _strlen

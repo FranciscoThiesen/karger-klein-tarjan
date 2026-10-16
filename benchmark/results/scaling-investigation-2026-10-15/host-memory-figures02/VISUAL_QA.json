@@ -1,0 +1,31 @@
+{
+  "schema": "host_memory_visual_qa_v1",
+  "validation": "pass",
+  "original_resolution_review": true,
+  "actual_outer_exit_code": 0,
+  "actual_outer_exit_chunk": "ad27f1",
+  "owned_group_empty": true,
+  "duration_s": 0.844328875,
+  "matplotlib_version": "3.9.4",
+  "numeric_csvs_identical_to_strict_analysis": true,
+  "source_delta": "Exactly one ax.set_xlim line, replacing unused blank logarithmic-axis interval; original source preserved.",
+  "checks": [
+    "Two clocks; all7footprints and4accessmodes; bothprocessorders retained.",
+    "112medianpoints,336measuredclockvalues and112min-max ranges retained by unchanged plot logic.",
+    "All ticks, axes,8legendentries, title and fullqualification caption readable; no clipping/overlap.",
+    "Actual chase loop/hot-stackstore scope disclosed; no purelatency/cachemiss/KKTattribution."
+  ],
+  "supersedes_layout_only": "host-memory-figures01",
+  "sha256": {
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/audit/analyze_host_memory.py": "ae6a60b4e53d742b351d5265be50fda26cfee9fa27dd867c3d80863b233531b9",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/audit/analyze_host_memory_v2.py": "01cfec0b75ffff2da1589ac7c401ed7378016a949f3c1861831d909ed4f6f272",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-figures02/host-memory.png": "23ff07ba5f917f97f85658eb8bf5880efd2b46285179bed322f726ef558f24f4",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-figures02/host-memory.svg": "02a08bf0a0da586a44a5bf52218eb574fab2cfa6a01c3b6b6e71f62767c31873",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-figures02/all-calls.csv": "eb9fab6528884836e22aee22dde4426951f925754c531f7c70a4a131009a78dc",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-figures02/summary.csv": "e9d78afb85ed4031f4f85e19ac2e0c5c3337db064348bd5473d4f7e1296b40b9",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-figures02/analysis.json": "24c52eff04b8c75875afa7294daf16af8c967bcbe54f21069bcfd3d332714771",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-figures02-guard/plot.json": "14e2f09f277233f68ab44682279ad1d58ed8f4e05fbd97912e153e82fde3f8f3",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-figures02-guard/plot.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-figures02-guard/plot.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

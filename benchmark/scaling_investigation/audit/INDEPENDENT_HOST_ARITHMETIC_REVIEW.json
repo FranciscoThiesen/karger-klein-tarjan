@@ -1,0 +1,277 @@
+{
+  "validation": "pass",
+  "native_execution": false,
+  "producer_imported": false,
+  "raw_rows": 224,
+  "timed_rows": 168,
+  "warmup_rows": 56,
+  "checked_summaries": 112,
+  "exact_published_cpu_rows": 4,
+  "endpoints": [
+    {
+      "chains": 1,
+      "order": "ascending",
+      "clock": "cpu",
+      "small": {
+        "minimum": 1.1197919274368633,
+        "median": 1.136242801550483,
+        "maximum": 1.1537069541421154
+      },
+      "large": {
+        "minimum": 104.74670899071265,
+        "median": 105.52955602190207,
+        "maximum": 105.94565584866722
+      },
+      "large_over_small_median": 92.87588522268267
+    },
+    {
+      "chains": 1,
+      "order": "ascending",
+      "clock": "wall",
+      "small": {
+        "minimum": 1.1198440814761728,
+        "median": 1.1435294658997222,
+        "maximum": 1.1629307685228498
+      },
+      "large": {
+        "minimum": 105.40595839931564,
+        "median": 106.13600068759885,
+        "maximum": 106.53019337406474
+      },
+      "large_over_small_median": 92.81439949961559
+    },
+    {
+      "chains": 1,
+      "order": "descending",
+      "clock": "cpu",
+      "small": {
+        "minimum": 1.1072153533862337,
+        "median": 1.1194939043550947,
+        "maximum": 1.1197323228205096
+      },
+      "large": {
+        "minimum": 104.87748151899265,
+        "median": 107.56684180887136,
+        "maximum": 109.1725901734399
+      },
+      "large_over_small_median": 96.08524118837185
+    },
+    {
+      "chains": 1,
+      "order": "descending",
+      "clock": "wall",
+      "small": {
+        "minimum": 1.1082931836637575,
+        "median": 1.120286168915668,
+        "maximum": 1.1208101530980334
+      },
+      "large": {
+        "minimum": 105.41574345076397,
+        "median": 108.77501742838982,
+        "maximum": 110.37072491849665
+      },
+      "large_over_small_median": 97.09574254020634
+    },
+    {
+      "chains": 4,
+      "order": "ascending",
+      "clock": "cpu",
+      "small": {
+        "minimum": 0.2802609060950727,
+        "median": 0.2804993245604875,
+        "maximum": 0.285088880019722
+      },
+      "large": {
+        "minimum": 23.966837421971597,
+        "median": 24.73835957605382,
+        "maximum": 25.12322658384963
+      },
+      "large_over_small_median": 88.19400764980875
+    },
+    {
+      "chains": 4,
+      "order": "ascending",
+      "clock": "wall",
+      "small": {
+        "minimum": 0.2803999636650259,
+        "median": 0.2811599225235355,
+        "maximum": 0.29240039949398067
+      },
+      "large": {
+        "minimum": 24.17757449027324,
+        "median": 24.977431248459222,
+        "maximum": 25.315091340498284
+      },
+      "large_over_small_median": 88.8370967820579
+    },
+    {
+      "chains": 4,
+      "order": "descending",
+      "clock": "cpu",
+      "small": {
+        "minimum": 0.2801416968623653,
+        "median": 0.2813337891894392,
+        "maximum": 0.28556571695055155
+      },
+      "large": {
+        "minimum": 23.42616394702723,
+        "median": 25.81952771209349,
+        "maximum": 26.33337910967869
+      },
+      "large_over_small_median": 91.77542372881356
+    },
+    {
+      "chains": 4,
+      "order": "descending",
+      "clock": "wall",
+      "small": {
+        "minimum": 0.2801491474394095,
+        "median": 0.2813933938057929,
+        "maximum": 0.2859233446486737
+      },
+      "large": {
+        "minimum": 23.465048508620974,
+        "median": 26.110726065289466,
+        "maximum": 27.084797163106362
+      },
+      "large_over_small_median": 92.79082821436135
+    },
+    {
+      "chains": 8,
+      "order": "ascending",
+      "clock": "cpu",
+      "small": {
+        "minimum": 0.14919035473329795,
+        "median": 0.14936916858235905,
+        "maximum": 0.14954798243142012
+      },
+      "large": {
+        "minimum": 11.355275461542385,
+        "median": 11.622542561272354,
+        "maximum": 12.138599329662643
+      },
+      "large_over_small_median": 77.81085395051875
+    },
+    {
+      "chains": 8,
+      "order": "ascending",
+      "clock": "wall",
+      "small": {
+        "minimum": 0.1492797616578285,
+        "median": 0.1494039776783096,
+        "maximum": 0.14958273192275431
+      },
+      "large": {
+        "minimum": 11.411661428612982,
+        "median": 11.68869623484791,
+        "maximum": 12.292918184796244
+      },
+      "large_over_small_median": 78.23550896359347
+    },
+    {
+      "chains": 8,
+      "order": "descending",
+      "clock": "cpu",
+      "small": {
+        "minimum": 0.14370673002875803,
+        "median": 0.14924995934965166,
+        "maximum": 0.1496671916641275
+      },
+      "large": {
+        "minimum": 10.994369509520764,
+        "median": 11.344606235215075,
+        "maximum": 12.16822282399043
+      },
+      "large_over_small_median": 76.01078274760383
+    },
+    {
+      "chains": 8,
+      "order": "descending",
+      "clock": "wall",
+      "small": {
+        "minimum": 0.14404695317890492,
+        "median": 0.14930956396600534,
+        "maximum": 0.149664747874857
+      },
+      "large": {
+        "minimum": 11.07125946461703,
+        "median": 11.352024506557223,
+        "maximum": 12.180198345089748
+      },
+      "large_over_small_median": 76.03012295409182
+    },
+    {
+      "chains": 0,
+      "order": "ascending",
+      "clock": "cpu",
+      "small": {
+        "minimum": 0.1577138148718763,
+        "median": 0.15830986103541325,
+        "maximum": 0.16021720875873147
+      },
+      "large": {
+        "minimum": 0.1531242594126418,
+        "median": 0.1613496964694517,
+        "maximum": 0.16754857657023595
+      },
+      "large_over_small_median": 1.0192018072289157
+    },
+    {
+      "chains": 0,
+      "order": "ascending",
+      "clock": "wall",
+      "small": {
+        "minimum": 0.15779332743009214,
+        "median": 0.15834961731452116,
+        "maximum": 0.1602296661235494
+      },
+      "large": {
+        "minimum": 0.15328316531984076,
+        "median": 0.16713879483280428,
+        "maximum": 0.1676205789467912
+      },
+      "large_over_small_median": 1.055504886385836
+    },
+    {
+      "chains": 0,
+      "order": "descending",
+      "clock": "cpu",
+      "small": {
+        "minimum": 0.15586607176491177,
+        "median": 0.15699855947563196,
+        "maximum": 0.16075365030591474
+      },
+      "large": {
+        "minimum": 0.16099206877132952,
+        "median": 0.16206495186569603,
+        "maximum": 0.16540281038150292
+      },
+      "large_over_small_median": 1.0322703113135916
+    },
+    {
+      "chains": 0,
+      "order": "descending",
+      "clock": "wall",
+      "small": {
+        "minimum": 0.1559306235644228,
+        "median": 0.15706060788125617,
+        "maximum": 0.16081569871153892
+      },
+      "large": {
+        "minimum": 0.16147140909604593,
+        "median": 0.16213200705909392,
+        "maximum": 0.16554437134534294
+      },
+      "large_over_small_median": 1.0322894406576595
+    }
+  ],
+  "input_sha256": {
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/audit/review_host_memory_arithmetic.py": "52ae54dfb0dc9a1f33c84c85bf0a6db08503a256282169abf951cd885c06c525",
+    "/Users/random_person/Desktop/kkt-linear-scaling/docs/scaling-investigation/HOST_MEMORY.md": "6dd4a6d807ea570796858875f31fb1fc0b5a9a67f47e28901b37c374aebb9438",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-analysis01/analysis.json": "1d29cb7723d257e18876e0eed39250a66bfc3b9de753a05ce74dafbaed05bace",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory01/ascending.stdout": "04d17f03b227cd86338068a27a86baa2d56ffb327e311a9b480c8f046d8dcdfa",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory01/descending.stdout": "5a32759cb820c9d81b32f104b3fba707e93aa7f3d7080d869b8904d5f4a8b853",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-analysis01/summary.csv": "e9d78afb85ed4031f4f85e19ac2e0c5c3337db064348bd5473d4f7e1296b40b9",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-analysis01/all-calls.csv": "eb9fab6528884836e22aee22dde4426951f925754c531f7c70a4a131009a78dc"
+  }
+}

@@ -1,0 +1,454 @@
+{
+  "schema": "host_memory_run_v1",
+  "validation": "pass",
+  "commands": [
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/host_memory",
+        "ascending"
+      ],
+      "cwd": "/Users/random_person/Desktop/kkt-linear-scaling",
+      "pgid": 51061,
+      "exit_code": 0,
+      "validation": "pass",
+      "group_empty": true,
+      "native_process_may_still_be_running": false,
+      "start_utc_ns": 1792121878394587000,
+      "started_monotonic_ns": 165366291,
+      "exit_monotonic_ns": 17767745125,
+      "deadline_seconds": 300,
+      "rss_limit_bytes": 1073741824,
+      "observations": [
+        {
+          "utc": "2026-10-16T03:38:00.398264+00:00",
+          "monotonic_ns": 2168970250,
+          "process_group": 51061,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 51061,
+              "rss_kib": 13136,
+              "command": "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/host_memory"
+            }
+          ],
+          "rss_kib": 13136
+        },
+        {
+          "utc": "2026-10-16T03:38:02.409893+00:00",
+          "monotonic_ns": 4180651958,
+          "process_group": 51061,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 51061,
+              "rss_kib": 45936,
+              "command": "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/host_memory"
+            }
+          ],
+          "rss_kib": 45936
+        },
+        {
+          "utc": "2026-10-16T03:38:04.413382+00:00",
+          "monotonic_ns": 6184133750,
+          "process_group": 51061,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 51061,
+              "rss_kib": 177040,
+              "command": "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/host_memory"
+            }
+          ],
+          "rss_kib": 177040
+        },
+        {
+          "utc": "2026-10-16T03:38:06.417818+00:00",
+          "monotonic_ns": 8188563000,
+          "process_group": 51061,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 51061,
+              "rss_kib": 177040,
+              "command": "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/host_memory"
+            }
+          ],
+          "rss_kib": 177040
+        },
+        {
+          "utc": "2026-10-16T03:38:08.418747+00:00",
+          "monotonic_ns": 10189481333,
+          "process_group": 51061,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 51061,
+              "rss_kib": 177040,
+              "command": "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/host_memory"
+            }
+          ],
+          "rss_kib": 177040
+        },
+        {
+          "utc": "2026-10-16T03:38:10.425931+00:00",
+          "monotonic_ns": 12196658125,
+          "process_group": 51061,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 51061,
+              "rss_kib": 177040,
+              "command": "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/host_memory"
+            }
+          ],
+          "rss_kib": 177040
+        },
+        {
+          "utc": "2026-10-16T03:38:12.432648+00:00",
+          "monotonic_ns": 14203370458,
+          "process_group": 51061,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 51061,
+              "rss_kib": 177040,
+              "command": "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/host_memory"
+            }
+          ],
+          "rss_kib": 177040
+        },
+        {
+          "utc": "2026-10-16T03:38:14.433284+00:00",
+          "monotonic_ns": 16203998916,
+          "process_group": 51061,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 51061,
+              "rss_kib": 177040,
+              "command": "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/host_memory"
+            }
+          ],
+          "rss_kib": 177040
+        },
+        {
+          "utc": "2026-10-16T03:38:15.996541+00:00",
+          "monotonic_ns": 17767249708,
+          "process_group": 51061,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "peak_sampled_group_rss_bytes": 181288960,
+      "environment_policy": {
+        "removed": {
+          "CPATH": "/usr/local/include",
+          "LIBRARY_PATH": "/usr/local/lib"
+        },
+        "required_empty": {
+          "APPVEYOR": null,
+          "CC": null,
+          "CFLAGS": null,
+          "CMAKE_GENERATOR": null,
+          "CMAKE_OSX_ARCHITECTURES": null,
+          "CMAKE_POLICY_VERSION_MINIMUM": null,
+          "CMAKE_TOOLCHAIN_FILE": null,
+          "CPLUS_INCLUDE_PATH": null,
+          "CPPFLAGS": null,
+          "CXX": null,
+          "CXXFLAGS": null,
+          "C_INCLUDE_PATH": null,
+          "LDFLAGS": null,
+          "MACOSX_DEPLOYMENT_TARGET": null
+        },
+        "retained": {
+          "SDKROOT": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+          "DEVELOPER_DIR": null
+        }
+      },
+      "cleanup": {
+        "started_monotonic_ns": 17767789416,
+        "process_group": 51061,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-16T03:38:15.997080+00:00",
+          "monotonic_ns": 17767792166,
+          "process_group": 51061,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 17768079500,
+        "native_process_may_still_be_running": false
+      },
+      "finished_monotonic_ns": 17768145875,
+      "end_utc_ns": 1792121895997434000,
+      "duration_s": 17.602779584,
+      "rss_samples": 9,
+      "stdout_sha256": "04d17f03b227cd86338068a27a86baa2d56ffb327e311a9b480c8f046d8dcdfa",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/host_memory",
+        "descending"
+      ],
+      "cwd": "/Users/random_person/Desktop/kkt-linear-scaling",
+      "pgid": 54562,
+      "exit_code": 0,
+      "validation": "pass",
+      "group_empty": true,
+      "native_process_may_still_be_running": false,
+      "start_utc_ns": 1792121896044397000,
+      "started_monotonic_ns": 17815108458,
+      "exit_monotonic_ns": 36033576791,
+      "deadline_seconds": 300,
+      "rss_limit_bytes": 1073741824,
+      "observations": [
+        {
+          "utc": "2026-10-16T03:38:18.048706+00:00",
+          "monotonic_ns": 19819371291,
+          "process_group": 54562,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 54562,
+              "rss_kib": 148944,
+              "command": "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/host_memory"
+            }
+          ],
+          "rss_kib": 148944
+        },
+        {
+          "utc": "2026-10-16T03:38:20.057308+00:00",
+          "monotonic_ns": 21828001208,
+          "process_group": 54562,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 54562,
+              "rss_kib": 148944,
+              "command": "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/host_memory"
+            }
+          ],
+          "rss_kib": 148944
+        },
+        {
+          "utc": "2026-10-16T03:38:22.066789+00:00",
+          "monotonic_ns": 23837471833,
+          "process_group": 54562,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 54562,
+              "rss_kib": 148960,
+              "command": "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/host_memory"
+            }
+          ],
+          "rss_kib": 148960
+        },
+        {
+          "utc": "2026-10-16T03:38:24.069105+00:00",
+          "monotonic_ns": 25839782458,
+          "process_group": 54562,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 54562,
+              "rss_kib": 148960,
+              "command": "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/host_memory"
+            }
+          ],
+          "rss_kib": 148960
+        },
+        {
+          "utc": "2026-10-16T03:38:26.077105+00:00",
+          "monotonic_ns": 27847775791,
+          "process_group": 54562,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 54562,
+              "rss_kib": 148960,
+              "command": "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/host_memory"
+            }
+          ],
+          "rss_kib": 148960
+        },
+        {
+          "utc": "2026-10-16T03:38:28.078501+00:00",
+          "monotonic_ns": 29849163791,
+          "process_group": 54562,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 54562,
+              "rss_kib": 169488,
+              "command": "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/host_memory"
+            }
+          ],
+          "rss_kib": 169488
+        },
+        {
+          "utc": "2026-10-16T03:38:30.079954+00:00",
+          "monotonic_ns": 31850608750,
+          "process_group": 54562,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 54562,
+              "rss_kib": 169488,
+              "command": "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/host_memory"
+            }
+          ],
+          "rss_kib": 169488
+        },
+        {
+          "utc": "2026-10-16T03:38:32.085788+00:00",
+          "monotonic_ns": 33856433041,
+          "process_group": 54562,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 54562,
+              "rss_kib": 174640,
+              "command": "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/host_memory"
+            }
+          ],
+          "rss_kib": 174640
+        },
+        {
+          "utc": "2026-10-16T03:38:34.088051+00:00",
+          "monotonic_ns": 35858690625,
+          "process_group": 54562,
+          "validation": "pass",
+          "members": [
+            {
+              "pid": 54562,
+              "rss_kib": 176976,
+              "command": "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/host_memory"
+            }
+          ],
+          "rss_kib": 176976
+        },
+        {
+          "utc": "2026-10-16T03:38:34.262057+00:00",
+          "monotonic_ns": 36032693041,
+          "process_group": 54562,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        }
+      ],
+      "peak_sampled_group_rss_bytes": 181223424,
+      "environment_policy": {
+        "removed": {
+          "CPATH": "/usr/local/include",
+          "LIBRARY_PATH": "/usr/local/lib"
+        },
+        "required_empty": {
+          "APPVEYOR": null,
+          "CC": null,
+          "CFLAGS": null,
+          "CMAKE_GENERATOR": null,
+          "CMAKE_OSX_ARCHITECTURES": null,
+          "CMAKE_POLICY_VERSION_MINIMUM": null,
+          "CMAKE_TOOLCHAIN_FILE": null,
+          "CPLUS_INCLUDE_PATH": null,
+          "CPPFLAGS": null,
+          "CXX": null,
+          "CXXFLAGS": null,
+          "C_INCLUDE_PATH": null,
+          "LDFLAGS": null,
+          "MACOSX_DEPLOYMENT_TARGET": null
+        },
+        "retained": {
+          "SDKROOT": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+          "DEVELOPER_DIR": null
+        }
+      },
+      "cleanup": {
+        "started_monotonic_ns": 36033653166,
+        "process_group": 54562,
+        "signals": [],
+        "native_exit_known": true,
+        "group_exit_known": true,
+        "returncode": 0,
+        "group_verification": {
+          "utc": "2026-10-16T03:38:34.263017+00:00",
+          "monotonic_ns": 36033658166,
+          "process_group": 54562,
+          "validation": "pass",
+          "members": [],
+          "rss_kib": 0
+        },
+        "finished_monotonic_ns": 36034011125,
+        "native_process_may_still_be_running": false
+      },
+      "finished_monotonic_ns": 36034102791,
+      "end_utc_ns": 1792121914263460000,
+      "duration_s": 18.218994333,
+      "rss_samples": 10,
+      "stdout_sha256": "5a32759cb820c9d81b32f104b3fba707e93aa7f3d7080d869b8904d5f4a8b853",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "bound_sha256": {
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/audit/host_memory.cpp": "6f34d7deeba2ff7321592bd7eb91674fa7908351b72d27f560a673abaa2fcaa8",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/audit/run_host_memory.py": "b94d59922467bfc87d64d533e15569fcd87313c1628d318fa9a102a1603b5bcc",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/candidates/run_candidate.py": "afd30b4ddb81d15990316d3414d30ea1bc2f1449c24ca8cdfdf034e9ee8936cf",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/run.py": "a4b721a522f5a6f21673abfcc4d06f3c688742d45fec5aad5c80c670a3a87be7",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/recover_mst_search.py": "73f02f494f29b2f9183c9fc889dcda73444fe2ca4a240469a7d57dfec226058b",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/run_mst_search.py": "843d65154d232bc12a946ad7d8793ab26840f7785507286a6e4d8ed09dfcad80",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/analyze_mst_search.py": "91d3fcad871444e9325c1465782365b5c3ed08fb2344aeeb62fbfc18254f5ba6",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/run_crossover.py": "1669d3b761e0d4c09c432382c3a2e8738c0031c1c9e6dc69cfcb7734809a052f",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/analyze_continuation.py": "7a0afa5fe802516cb5ec27a7d567a0875c66807aa4a04ce0ff752f0bc31b9168",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/crossover_clocks.py": "725d469933eaf5ead32a38bf52b9f32e46a7ee3d4e386777c257c1ab3929fc0b",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/run_crossover_baselines.py": "2291db9114448516fc5ffb6c4b0fd119d23741bcfa2275ad7f25996c3b73921e",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/attempt.json": "874863a9e07d914f64f6091c0c1fea3a15c96607f0985102bbdd595e4e09c20b",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/sdk.json": "cde039c2a74a7334c4f5c7c61b8bd6314f03a16a8ab7ff3435cd2ba7a059a736",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/compiler.json": "1c810b027bbc559b32471008418a184b8efaa2a149d5a7668a86fda918a871eb",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/compile.json": "0f31e383d8ec10ab7f51fa76998d21fdd4c0a06e54bc78e342589b25a90ad9a8",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/profile.json": "375e3123ed1ba08341c8dabf627186e5d45b7770ada860e396d967945d413dbe",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/load-commands.json": "3eb561589a26bf3955559d479fb6845878528d8f992b1a3265faebe9d74815b8",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/symbols.json": "4b51e1b2d462137af25835214526d351d8f9c4c6506394a8d1f67ee8a0b9756c",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/assembly.json": "01e9fc625bcd2aa4c3e3236f959c8bcbaa29036a9dd883c19f919876255b2169",
+    "/usr/bin/clang++": "b8763cf250e607a778bb4603cecb5b90338814d0a3dfcba0d57b1de242f610e9",
+    "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/SDKSettings.json": "bf4fa9729513257ab0aaa2c63b8f412425dff8ceef35666dea5cfde7a0c2f56e",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/sdk.stdout": "5cb2cff3541ae65432805aa9d9bbfa3454381ef60694cc7b47eed0e2bf973aaf",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/sdk.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/compiler.stdout": "d20a5fd6e6a0360a3455982524af022e9e3d4b8f16b1955c8c6f1bacf6b0be85",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/compiler.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/compile.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/compile.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/host_memory": "effb3a4046c3de54b9c5a1587cdfdcafcfad949d0d6ba4d30135ed578b6d937f",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/profile.stdout": "643cc5d2dac8a288bdceeae0d8057fecf55ce5eb10dd5ea30d2d48cc957c662b",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/profile.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/load-commands.stdout": "3056575ecc408750c141019569aad68279f9b872af178e6b21026b207ce016fb",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/load-commands.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/symbols.stdout": "e68e4d07d7e4e62bab9727bdfb644714865b4d291f92745e8ecd1e72f0bb87f6",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/symbols.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/assembly.stdout": "f706e53c7666e1e2176570fe012eddbd6d148b9a667ac6586bdd767470985030",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/assembly.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory01/ascending.json": "3c9a66e23a5e34ede37591136679cfa1e039a00e58daa6ea0edb27f2a8fb76bb",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory01/ascending.stdout": "04d17f03b227cd86338068a27a86baa2d56ffb327e311a9b480c8f046d8dcdfa",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory01/ascending.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory01/descending.json": "7b0cb68dbca625eb09964de8e09a7e53aad755c5ddda315f8f8e97f027787e45",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory01/descending.stdout": "5a32759cb820c9d81b32f104b3fba707e93aa7f3d7080d869b8904d5f4a8b853",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory01/descending.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "build_record": "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/attempt.json",
+  "assembly_review_acknowledged": true,
+  "checked_rows": 224,
+  "measured_rows": 168,
+  "warmup_rows": 56,
+  "native_process_may_still_be_running": false
+}

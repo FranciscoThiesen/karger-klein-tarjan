@@ -1,0 +1,79 @@
+{
+  "command": [
+    "/usr/bin/nm",
+    "-C",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-build01/host_memory"
+  ],
+  "cwd": "/Users/random_person/Desktop/kkt-linear-scaling",
+  "pgid": 99067,
+  "exit_code": 0,
+  "validation": "pass",
+  "group_empty": true,
+  "native_process_may_still_be_running": false,
+  "start_utc_ns": 1792121641727535000,
+  "started_monotonic_ns": 924097458,
+  "exit_monotonic_ns": 947984833,
+  "deadline_seconds": 300,
+  "rss_limit_bytes": 1073741824,
+  "observations": [
+    {
+      "utc": "2026-10-16T03:34:01.750822+00:00",
+      "monotonic_ns": 947360875,
+      "process_group": 99067,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    }
+  ],
+  "peak_sampled_group_rss_bytes": 0,
+  "environment_policy": {
+    "removed": {
+      "CPATH": "/usr/local/include",
+      "LIBRARY_PATH": "/usr/local/lib"
+    },
+    "required_empty": {
+      "APPVEYOR": null,
+      "CC": null,
+      "CFLAGS": null,
+      "CMAKE_GENERATOR": null,
+      "CMAKE_OSX_ARCHITECTURES": null,
+      "CMAKE_POLICY_VERSION_MINIMUM": null,
+      "CMAKE_TOOLCHAIN_FILE": null,
+      "CPLUS_INCLUDE_PATH": null,
+      "CPPFLAGS": null,
+      "CXX": null,
+      "CXXFLAGS": null,
+      "C_INCLUDE_PATH": null,
+      "LDFLAGS": null,
+      "MACOSX_DEPLOYMENT_TARGET": null
+    },
+    "retained": {
+      "SDKROOT": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+      "DEVELOPER_DIR": null
+    }
+  },
+  "cleanup": {
+    "started_monotonic_ns": 948048583,
+    "process_group": 99067,
+    "signals": [],
+    "native_exit_known": true,
+    "group_exit_known": true,
+    "returncode": 0,
+    "group_verification": {
+      "utc": "2026-10-16T03:34:01.751494+00:00",
+      "monotonic_ns": 948055583,
+      "process_group": 99067,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    "finished_monotonic_ns": 948275041,
+    "native_process_may_still_be_running": false
+  },
+  "finished_monotonic_ns": 948397916,
+  "end_utc_ns": 1792121641751836000,
+  "duration_s": 0.024300458,
+  "rss_samples": 1,
+  "stdout_sha256": "e68e4d07d7e4e62bab9727bdfb644714865b4d291f92745e8ecd1e72f0bb87f6",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

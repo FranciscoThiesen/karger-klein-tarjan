@@ -140,6 +140,25 @@ six endpoint inputs found no growing twofold instrumentation factor, but does
 not prove that every phase timer is unbiased. The full calibration ranges and
 exact additive endpoint decompositions remain in the diagnostic report.
 
+### A fixed-work host check makes the cost model concrete
+
+The separate [host memory-access calibration](HOST_MEMORY.md) holds the logical
+indexed-array load count fixed at 16,777,224 per call. Across 16 KiB–64 MiB,
+one dependent chain's CPU median rises from about 1.1 to 106–108 ns per logical
+load, a 93–96× increase across the two size orders. At 64 MiB, eight independent
+chains cost about 11.3–11.6 ns per load; the contiguous scalar scan stays near
+0.16 ns at both endpoints. All seven footprints, both orders, both clocks,
+warmups and three-call ranges remain in its linked tables.
+
+This illustrates why an N-dependent effective cost in `T ≈ W × c` is plausible
+on this host, even with fixed logical work. It is not pure memory latency:
+the kernels include loop work, hot-stack stores, copying and clock overhead.
+Nor does it measure KKT cache misses, identify a KKT cache threshold or assign
+any fraction of KKT time to memory stalls. The all-65-counter mix changes remain
+part of the explanation to investigate. These artificial access patterns support
+a machine-cost mechanism; they do not establish memory as the sole cause of
+the observed KKT fit.
+
 ## The first intervention: return the depth the verifier actually needs
 
 The compressed verifier needs an ancestor's **depth** to add and look up its

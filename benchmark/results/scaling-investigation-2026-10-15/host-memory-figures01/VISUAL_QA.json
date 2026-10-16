@@ -1,0 +1,20 @@
+{
+  "schema": "host_memory_visual_qa_v1",
+  "validation": "layout_failed",
+  "data_validation": "pass",
+  "original_resolution_review": true,
+  "issue": "Log x autoscaling leaves a large blank interval before the declared 16 KiB minimum. No omitted data or numeric defect found.",
+  "actual_outer_exit_code": 0,
+  "actual_outer_exit_chunk": "3e2751",
+  "group_empty": true,
+  "repair": "Separate v2 source, explicit x limits only; first source and outputs preserved.",
+  "sha256": {
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/audit/analyze_host_memory.py": "ae6a60b4e53d742b351d5265be50fda26cfee9fa27dd867c3d80863b233531b9",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-figures01/host-memory.png": "60b1adb0e11c00104b24d40d23fbac5bb461de2b29eaab73e5f13c6011d75c93",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-figures01/host-memory.svg": "6c881425234c102f1d99b4028433c93b384b5eaca78efd355606542e07e98691",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-figures01/all-calls.csv": "eb9fab6528884836e22aee22dde4426951f925754c531f7c70a4a131009a78dc",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-figures01/summary.csv": "e9d78afb85ed4031f4f85e19ac2e0c5c3337db064348bd5473d4f7e1296b40b9",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-figures01/analysis.json": "7988a8fa5ecdda602996b2d888c0f8631c1b4352be5570b4b8c57ed9bc02ebf7",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/scaling-investigation-2026-10-15/host-memory-figures01-guard/plot.json": "35efebd41181c2be71826654cd0bbb708baaec2322510fde0c44317d7c8781a0"
+  }
+}
