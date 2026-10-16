@@ -1,0 +1,196 @@
+{
+  "command": [
+    "/usr/bin/arch",
+    "-arm64",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build04/phase/diagnostic",
+    "gnm_random",
+    "1048576",
+    "19000043",
+    "3011",
+    "3"
+  ],
+  "cwd": "/Users/random_person/Desktop/kkt-linear-scaling",
+  "pgid": 36977,
+  "exit_code": 0,
+  "validation": "pass",
+  "group_empty": true,
+  "native_process_may_still_be_running": false,
+  "start_utc_ns": 1792117084394758000,
+  "started_monotonic_ns": 378433951041,
+  "exit_monotonic_ns": 396137832333,
+  "deadline_seconds": 300,
+  "rss_limit_bytes": 12884901888,
+  "observations": [
+    {
+      "utc": "2026-10-16T02:18:06.402597+00:00",
+      "monotonic_ns": 380441785291,
+      "process_group": 36977,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 36977,
+          "rss_kib": 836016,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build04/phase/diagnostic"
+        }
+      ],
+      "rss_kib": 836016
+    },
+    {
+      "utc": "2026-10-16T02:18:08.407580+00:00",
+      "monotonic_ns": 382446784458,
+      "process_group": 36977,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 36977,
+          "rss_kib": 1257376,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build04/phase/diagnostic"
+        }
+      ],
+      "rss_kib": 1257376
+    },
+    {
+      "utc": "2026-10-16T02:18:10.416007+00:00",
+      "monotonic_ns": 384455216250,
+      "process_group": 36977,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 36977,
+          "rss_kib": 1643200,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build04/phase/diagnostic"
+        }
+      ],
+      "rss_kib": 1643200
+    },
+    {
+      "utc": "2026-10-16T02:18:12.426445+00:00",
+      "monotonic_ns": 386465661625,
+      "process_group": 36977,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 36977,
+          "rss_kib": 1644688,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build04/phase/diagnostic"
+        }
+      ],
+      "rss_kib": 1644688
+    },
+    {
+      "utc": "2026-10-16T02:18:14.434340+00:00",
+      "monotonic_ns": 388473563666,
+      "process_group": 36977,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 36977,
+          "rss_kib": 1644688,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build04/phase/diagnostic"
+        }
+      ],
+      "rss_kib": 1644688
+    },
+    {
+      "utc": "2026-10-16T02:18:16.440099+00:00",
+      "monotonic_ns": 390479331125,
+      "process_group": 36977,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 36977,
+          "rss_kib": 1681840,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build04/phase/diagnostic"
+        }
+      ],
+      "rss_kib": 1681840
+    },
+    {
+      "utc": "2026-10-16T02:18:18.450461+00:00",
+      "monotonic_ns": 392489698875,
+      "process_group": 36977,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 36977,
+          "rss_kib": 2306720,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build04/phase/diagnostic"
+        }
+      ],
+      "rss_kib": 2306720
+    },
+    {
+      "utc": "2026-10-16T02:18:20.460905+00:00",
+      "monotonic_ns": 394500151708,
+      "process_group": 36977,
+      "validation": "pass",
+      "members": [
+        {
+          "pid": 36977,
+          "rss_kib": 2307104,
+          "command": "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build04/phase/diagnostic"
+        }
+      ],
+      "rss_kib": 2307104
+    },
+    {
+      "utc": "2026-10-16T02:18:22.098316+00:00",
+      "monotonic_ns": 396137568000,
+      "process_group": 36977,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    }
+  ],
+  "peak_sampled_group_rss_bytes": 2362474496,
+  "environment_policy": {
+    "removed": {
+      "CPATH": "/usr/local/include",
+      "LIBRARY_PATH": "/usr/local/lib"
+    },
+    "required_empty": {
+      "APPVEYOR": null,
+      "CC": null,
+      "CFLAGS": null,
+      "CMAKE_GENERATOR": null,
+      "CMAKE_OSX_ARCHITECTURES": null,
+      "CMAKE_POLICY_VERSION_MINIMUM": null,
+      "CMAKE_TOOLCHAIN_FILE": null,
+      "CPLUS_INCLUDE_PATH": null,
+      "CPPFLAGS": null,
+      "CXX": null,
+      "CXXFLAGS": null,
+      "C_INCLUDE_PATH": null,
+      "LDFLAGS": null,
+      "MACOSX_DEPLOYMENT_TARGET": null
+    },
+    "retained": {
+      "SDKROOT": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+      "DEVELOPER_DIR": null
+    }
+  },
+  "cleanup": {
+    "started_monotonic_ns": 396137874458,
+    "process_group": 36977,
+    "signals": [],
+    "native_exit_known": true,
+    "group_exit_known": true,
+    "returncode": 0,
+    "group_verification": {
+      "utc": "2026-10-16T02:18:22.098621+00:00",
+      "monotonic_ns": 396137876791,
+      "process_group": 36977,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    "finished_monotonic_ns": 396137964958,
+    "native_process_may_still_be_running": false
+  },
+  "finished_monotonic_ns": 396138061750,
+  "end_utc_ns": 1792117102098806000,
+  "duration_s": 17.704110709,
+  "rss_samples": 9,
+  "stdout_sha256": "9d3c8cd467a4693cf37241b17c3cc62ba32e2728809bb8e040727d485021331d",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

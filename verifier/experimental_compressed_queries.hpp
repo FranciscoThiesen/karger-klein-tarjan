@@ -11,6 +11,7 @@
 #include <vector>
 
 #include "../common/work_stats.hpp"
+#include "../common/phase_stats.hpp"
 #include "median_table.hpp"
 
 namespace verifier_detail {
@@ -126,6 +127,7 @@ public:
     }
 
     void compute_answer() {
+        KKT_PHASE(path_solve);
         assert(!computed_);
         KKT_WORK_ADD(verifier_vertex_visits, n_);
         for (int vertex = 0; vertex < n_; ++vertex) {
@@ -140,8 +142,8 @@ public:
         path_.assign(static_cast<std::size_t>(height_) + 1, 0);
         KKT_WORK_ADD(initialized_slots, path_.size());
         KKT_WORK_MAX(path_max_height, height_);
-        median_ = median_table(height_);
-        visit(root_, 0);
+        { KKT_PHASE(median_table); median_ = median_table(height_); }
+        { KKT_PHASE(path_walk); visit(root_, 0); }
         computed_ = true;
     }
 

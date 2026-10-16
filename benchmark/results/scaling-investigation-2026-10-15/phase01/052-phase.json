@@ -1,0 +1,84 @@
+{
+  "command": [
+    "/usr/bin/arch",
+    "-arm64",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build04/phase/diagnostic",
+    "gnm_random",
+    "65536",
+    "19000043",
+    "3001",
+    "3"
+  ],
+  "cwd": "/Users/random_person/Desktop/kkt-linear-scaling",
+  "pgid": 37278,
+  "exit_code": 0,
+  "validation": "pass",
+  "group_empty": true,
+  "native_process_may_still_be_running": false,
+  "start_utc_ns": 1792117138878470000,
+  "started_monotonic_ns": 432917853958,
+  "exit_monotonic_ns": 433477134541,
+  "deadline_seconds": 300,
+  "rss_limit_bytes": 12884901888,
+  "observations": [
+    {
+      "utc": "2026-10-16T02:18:59.437407+00:00",
+      "monotonic_ns": 433476776625,
+      "process_group": 37278,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    }
+  ],
+  "peak_sampled_group_rss_bytes": 0,
+  "environment_policy": {
+    "removed": {
+      "CPATH": "/usr/local/include",
+      "LIBRARY_PATH": "/usr/local/lib"
+    },
+    "required_empty": {
+      "APPVEYOR": null,
+      "CC": null,
+      "CFLAGS": null,
+      "CMAKE_GENERATOR": null,
+      "CMAKE_OSX_ARCHITECTURES": null,
+      "CMAKE_POLICY_VERSION_MINIMUM": null,
+      "CMAKE_TOOLCHAIN_FILE": null,
+      "CPLUS_INCLUDE_PATH": null,
+      "CPPFLAGS": null,
+      "CXX": null,
+      "CXXFLAGS": null,
+      "C_INCLUDE_PATH": null,
+      "LDFLAGS": null,
+      "MACOSX_DEPLOYMENT_TARGET": null
+    },
+    "retained": {
+      "SDKROOT": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+      "DEVELOPER_DIR": null
+    }
+  },
+  "cleanup": {
+    "started_monotonic_ns": 433477167458,
+    "process_group": 37278,
+    "signals": [],
+    "native_exit_known": true,
+    "group_exit_known": true,
+    "returncode": 0,
+    "group_verification": {
+      "utc": "2026-10-16T02:18:59.437784+00:00",
+      "monotonic_ns": 433477169583,
+      "process_group": 37278,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    "finished_monotonic_ns": 433477267166,
+    "native_process_may_still_be_running": false
+  },
+  "finished_monotonic_ns": 433477377750,
+  "end_utc_ns": 1792117139437991000,
+  "duration_s": 0.559523792,
+  "rss_samples": 1,
+  "stdout_sha256": "145a4acd889b0906ab755e55ae134ca963d9d6bec4fb8238f0ff08ad676227a7",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

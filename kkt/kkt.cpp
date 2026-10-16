@@ -5,6 +5,7 @@
 #include "experimental_multigraph_contraction.hpp"
 #endif
 #include "../common/work_stats.hpp"
+#include "../common/phase_stats.hpp"
 #include "../verifier/verifier_v2.hpp"
 #include <algorithm>
 #include <cassert>
@@ -23,6 +24,7 @@ using namespace std;
 // Complexity: O(n + m)
 pair<vector<int>, problem> boruvka_step(const problem& P)
 {
+    KKT_PHASE(contraction);
     int n = P.num_vertices;
     vector<int> smallest_incident_edge(n, -1);
     int total_edges = static_cast<int>(P.graph_edges.size());
@@ -188,6 +190,7 @@ pair<vector<int>, problem> boruvka_step(const problem& P)
 // Complexity: O(n + m)
 static problem remove_isolated_vertices_owned(problem P)
 {
+    KKT_PHASE(isolation);
     int prev_size = P.num_vertices;
     vector<int> degree(prev_size, 0);
     KKT_WORK_ADD(isolation_calls, 1);
@@ -247,6 +250,7 @@ static problem remove_isolated_vertices(problem&& P)
 template <bool use_parent_positions>
 static problem sample_edges(const problem& P, std::mt19937& rng)
 {
+    KKT_PHASE(sampling);
     vector<Edge> H;
     H.reserve(P.graph_edges.size() / 2);
     KKT_WORK_ADD(sampling_calls, 1);
@@ -306,6 +310,7 @@ vector<Edge> get_mst_edges_from_problem(const unordered_set<int>& mst_id, const 
 // Append only selected IDs; recursive work must scale with the current graph.
 static void kkt_internal(problem& P, std::mt19937& rng, vector<int>& result)
 {
+    KKT_PHASE(recursion);
     KKT_WORK_RECURSION();
     KKT_WORK_ADD(kkt_calls, 1);
     KKT_WORK_ADD(kkt_vertices, P.num_vertices);
@@ -353,6 +358,8 @@ static void kkt_internal(problem& P, std::mt19937& rng, vector<int>& result)
     // H may renumber vertices, but its returned IDs still index G. Nested
     // samples use their own positions only to construct their own verifiers.
     vector<tuple<int, int, int, int>> H_MSF;
+    {
+    KKT_PHASE(forest_recovery);
     H_MSF.reserve(kkt_h_result.size());
     KKT_WORK_ADD(kkt_edge_visits, kkt_h_result.size());
     for (int position : kkt_h_result) {
@@ -361,6 +368,7 @@ static void kkt_internal(problem& P, std::mt19937& rng, vector<int>& result)
         H_MSF.emplace_back(e.from, e.to, e.cost, e.id);
     }
     KKT_WORK_ADD(edge_materializations, H_MSF.size());
+    }
 
     // Find F-heavy edges
 #ifdef KKT_EXPERIMENT_EDGE_VIEW
@@ -379,6 +387,8 @@ static void kkt_internal(problem& P, std::mt19937& rng, vector<int>& result)
 
     // Filter out heavy edges
     vector<Edge> relevant_edges;
+    {
+    KKT_PHASE(filtering);
     relevant_edges.reserve(G.graph_edges.size());
     KKT_WORK_ADD(kkt_edge_visits, G.graph_edges.size());
     for (size_t i = 0; i < G.graph_edges.size(); ++i) {
@@ -388,6 +398,7 @@ static void kkt_internal(problem& P, std::mt19937& rng, vector<int>& result)
     }
     KKT_WORK_ADD(filtered_edges, relevant_edges.size());
     KKT_WORK_ADD(edge_materializations, relevant_edges.size());
+    }
 
     problem G_remaining = remove_isolated_vertices(
         problem(G.num_vertices, std::move(relevant_edges), P.max_edge_id));
@@ -406,6 +417,7 @@ unordered_set<int> kkt(problem& P, unsigned int seed)
     vector<int> selected_ids;
     std::mt19937 rng(seed);
     kkt_internal(P, rng, selected_ids);
+    KKT_PHASE(output);
     KKT_WORK_ADD(hash_insert_items, selected_ids.size());
     // The result size is known. Reserve buckets once instead of repeatedly
     // growing and relinking the public set while inserting selected edges.

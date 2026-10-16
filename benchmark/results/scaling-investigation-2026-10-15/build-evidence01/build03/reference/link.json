@@ -1,0 +1,69 @@
+{
+  "command": [
+    "/usr/bin/arch",
+    "-arm64",
+    "/usr/bin/clang++",
+    "-isysroot",
+    "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+    "-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build03/reference/boruvka.o",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build03/reference/kruskal.o",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build03/reference/prim.o",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build03/reference/lca.o",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build03/reference/union_find.o",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build03/reference/graph_utils.o",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build03/reference/verifier_v2.o",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build03/reference/kkt.o",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build03/reference/diagnostic.o",
+    "-Wl,-stack_size,0x20000000",
+    "-o",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build03/reference/diagnostic"
+  ],
+  "cwd": "/Users/random_person/Desktop/kkt-linear-scaling",
+  "pgid": 35937,
+  "exit_code": 1,
+  "validation": "failed",
+  "group_empty": true,
+  "native_process_may_still_be_running": false,
+  "start_utc_ns": 1792116522722739000,
+  "started_monotonic_ns": 4266596333,
+  "exit_monotonic_ns": 4315085875,
+  "deadline_seconds": 60,
+  "rss_limit_bytes": 12884901888,
+  "observations": [
+    {
+      "utc": "2026-10-16T02:08:42.770822+00:00",
+      "monotonic_ns": 4314652250,
+      "process_group": 35937,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    }
+  ],
+  "peak_sampled_group_rss_bytes": 0,
+  "error": "RuntimeError('nonzero native exit')",
+  "cleanup": {
+    "started_monotonic_ns": 4315132625,
+    "process_group": 35937,
+    "signals": [],
+    "native_exit_known": true,
+    "group_exit_known": true,
+    "returncode": 1,
+    "group_verification": {
+      "utc": "2026-10-16T02:08:42.771278+00:00",
+      "monotonic_ns": 4315135416,
+      "process_group": 35937,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    "finished_monotonic_ns": 4315237625,
+    "native_process_may_still_be_running": false
+  },
+  "finished_monotonic_ns": 4315333416,
+  "end_utc_ns": 1792116522771476000,
+  "duration_s": 0.048737083,
+  "rss_samples": 1,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "188883525470fbf35ab7ac6ab1f98c836c56365e191a2f9d6ec595db2015f5f9"
+}

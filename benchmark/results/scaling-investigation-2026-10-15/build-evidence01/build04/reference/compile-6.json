@@ -1,0 +1,95 @@
+{
+  "command": [
+    "/usr/bin/arch",
+    "-arm64",
+    "/usr/bin/clang++",
+    "-std=c++17",
+    "-O3",
+    "-march=native",
+    "-Wall",
+    "-Wextra",
+    "-I/Users/random_person/Desktop/kkt-linear-scaling",
+    "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+    "-DKKT_EXPERIMENT_EDGE_VIEW",
+    "-DKKT_EXPERIMENT_COMPRESSED_QUERIES",
+    "-DKKT_EXPERIMENT_EIGHTH_SAMPLING",
+    "-isysroot",
+    "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+    "-c",
+    "/Users/random_person/Desktop/kkt-linear-scaling/verifier/verifier_v2.cpp",
+    "-o",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build04/reference/verifier_v2.o"
+  ],
+  "cwd": "/Users/random_person/Desktop/kkt-linear-scaling",
+  "pgid": 36149,
+  "exit_code": 0,
+  "validation": "pass",
+  "group_empty": true,
+  "native_process_may_still_be_running": false,
+  "start_utc_ns": 1792116663917911000,
+  "started_monotonic_ns": 2144597750,
+  "exit_monotonic_ns": 2763487333,
+  "deadline_seconds": 180,
+  "rss_limit_bytes": 4294967296,
+  "observations": [
+    {
+      "utc": "2026-10-16T02:11:04.536334+00:00",
+      "monotonic_ns": 2763003208,
+      "process_group": 36149,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    }
+  ],
+  "peak_sampled_group_rss_bytes": 0,
+  "environment_policy": {
+    "removed": {
+      "CPATH": "/usr/local/include",
+      "LIBRARY_PATH": "/usr/local/lib"
+    },
+    "required_empty": {
+      "APPVEYOR": null,
+      "CC": null,
+      "CFLAGS": null,
+      "CMAKE_GENERATOR": null,
+      "CMAKE_OSX_ARCHITECTURES": null,
+      "CMAKE_POLICY_VERSION_MINIMUM": null,
+      "CMAKE_TOOLCHAIN_FILE": null,
+      "CPLUS_INCLUDE_PATH": null,
+      "CPPFLAGS": null,
+      "CXX": null,
+      "CXXFLAGS": null,
+      "C_INCLUDE_PATH": null,
+      "LDFLAGS": null,
+      "MACOSX_DEPLOYMENT_TARGET": null
+    },
+    "retained": {
+      "SDKROOT": "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+      "DEVELOPER_DIR": null
+    }
+  },
+  "cleanup": {
+    "started_monotonic_ns": 2763515666,
+    "process_group": 36149,
+    "signals": [],
+    "native_exit_known": true,
+    "group_exit_known": true,
+    "returncode": 0,
+    "group_verification": {
+      "utc": "2026-10-16T02:11:04.536830+00:00",
+      "monotonic_ns": 2763518500,
+      "process_group": 36149,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    "finished_monotonic_ns": 2763612750,
+    "native_process_may_still_be_running": false
+  },
+  "finished_monotonic_ns": 2763637166,
+  "end_utc_ns": 1792116664536948000,
+  "duration_s": 0.619039416,
+  "rss_samples": 1,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

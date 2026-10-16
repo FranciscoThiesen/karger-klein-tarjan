@@ -1,0 +1,31 @@
+{
+  "command": [
+    "/usr/bin/clang++",
+    "-isysroot",
+    "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build02/reference/boruvka.o",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build02/reference/kruskal.o",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build02/reference/prim.o",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build02/reference/lca.o",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build02/reference/union_find.o",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build02/reference/graph_utils.o",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build02/reference/verifier_v2.o",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build02/reference/kkt.o",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build02/reference/diagnostic.o",
+    "-Wl,-stack_size,0x20000000",
+    "-o",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build02/reference/diagnostic"
+  ],
+  "cwd": "/Users/random_person/Desktop/kkt-linear-scaling",
+  "pgid": 33537,
+  "exit_code": 1,
+  "group_empty": true,
+  "failure": null,
+  "start_utc_ns": 1792116019226286000,
+  "end_utc_ns": 1792116019453693000,
+  "duration_s": 0.22740762500000056,
+  "peak_sampled_group_rss_bytes": 1556480,
+  "rss_samples": 1,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "daea110eae512552130b227bf3a7d0e64323ff25b1353770076218acc8d05fec"
+}

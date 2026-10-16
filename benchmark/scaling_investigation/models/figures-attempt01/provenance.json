@@ -1,0 +1,21 @@
+{
+  "validation": "pass",
+  "native_execution": false,
+  "matplotlib": "3.9.4",
+  "input_sha256": {
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/models/attempt03/provenance.json": "2891ec028e28cc687ebd1f31b914885e448e93ced85f59d2ba5c2adefd24e4cd",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/models/plot_models.py": "b8b2051ad92012c16c2313210d591dc29102eaa182dd3d56f201849d9c8af8c4",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/models/attempt03/means.csv": "2ce33142c99bf6bc58300248de423f18275bb5170f103b057643023d64829a2e",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/models/attempt03/holdouts.csv": "94f857c3e3f88d8522157c52df03412b4517305f2b8aa7e39a71f91af77fbfbd"
+  },
+  "output_sha256": {
+    "blocked-prediction.png": "fc4cc4d60f96e9ca896838054ba82119588d644c1e495179046edcc0c816f5e9",
+    "blocked-prediction.svg": "73bd0bade1d9a07d6f5c25e112c9ab946c6445fe8d267c0b22e93a3741a0b4c1",
+    "normalization.svg": "85b89bc0e8ae285a85409c3541b957797a114bf1946e17dcfa9149f8a41db99d",
+    "normalization.png": "388b59f01fd1ce7085ec327e20cbfa1b065813a5a2d6961bf5854b9d03faa0e2"
+  },
+  "included_curves": 24,
+  "normalization_means": 792,
+  "holdout_points": 144,
+  "other_clocks_and_folds": "complete CSV tables linked from model note"
+}

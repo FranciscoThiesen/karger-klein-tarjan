@@ -1,0 +1,69 @@
+{
+  "command": [
+    "/usr/bin/arch",
+    "-arm64",
+    "/usr/bin/clang++",
+    "-std=c++17",
+    "-O3",
+    "-march=native",
+    "-Wall",
+    "-Wextra",
+    "-I/Users/random_person/Desktop/kkt-linear-scaling",
+    "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+    "-DKKT_EXPERIMENT_EDGE_VIEW",
+    "-DKKT_EXPERIMENT_COMPRESSED_QUERIES",
+    "-DKKT_EXPERIMENT_EIGHTH_SAMPLING",
+    "-isysroot",
+    "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+    "-c",
+    "/Users/random_person/Desktop/kkt-linear-scaling/graph_utils/graph_utils.cpp",
+    "-o",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build03/reference/graph_utils.o"
+  ],
+  "cwd": "/Users/random_person/Desktop/kkt-linear-scaling",
+  "pgid": 35925,
+  "exit_code": 0,
+  "validation": "pass",
+  "group_empty": true,
+  "native_process_may_still_be_running": false,
+  "start_utc_ns": 1792116520200326000,
+  "started_monotonic_ns": 1744174333,
+  "exit_monotonic_ns": 2114289333,
+  "deadline_seconds": 180,
+  "rss_limit_bytes": 4294967296,
+  "observations": [
+    {
+      "utc": "2026-10-16T02:08:40.570093+00:00",
+      "monotonic_ns": 2113920541,
+      "process_group": 35925,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    }
+  ],
+  "peak_sampled_group_rss_bytes": 0,
+  "cleanup": {
+    "started_monotonic_ns": 2114324833,
+    "process_group": 35925,
+    "signals": [],
+    "native_exit_known": true,
+    "group_exit_known": true,
+    "returncode": 0,
+    "group_verification": {
+      "utc": "2026-10-16T02:08:40.570478+00:00",
+      "monotonic_ns": 2114328125,
+      "process_group": 35925,
+      "validation": "pass",
+      "members": [],
+      "rss_kib": 0
+    },
+    "finished_monotonic_ns": 2114420416,
+    "native_process_may_still_be_running": false
+  },
+  "finished_monotonic_ns": 2114438166,
+  "end_utc_ns": 1792116520570588000,
+  "duration_s": 0.370263833,
+  "rss_samples": 1,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

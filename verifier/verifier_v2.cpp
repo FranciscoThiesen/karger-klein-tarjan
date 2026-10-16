@@ -9,6 +9,7 @@
 #endif
 #include "../common/edge.hpp"
 #include "../common/work_stats.hpp"
+#include "../common/phase_stats.hpp"
 // #include "../boruvka/boruvka.hpp"
 // #include "../graph_utils/graph_utils.hpp"
 // #include "../kruskal/kruskal.hpp"
@@ -72,6 +73,7 @@ vector<tuple<int, int, int, int>>
 	fbt_reduction(const vector<tuple<int, int, int, int>>& edges,
 				  int total_nodes)
 {
+	KKT_PHASE(fbt);
 	KKT_WORK_ADD(fbt_calls, 1);
 	KKT_WORK_ADD(fbt_input_vertices, total_nodes);
 	KKT_WORK_ADD(edge_materializations, edges.size());
@@ -320,6 +322,7 @@ struct test_graph
 			   const vector<tuple<int, int, int, int>>& spanning_tree,
 			   const int n) : G(edges)
 	{
+		KKT_PHASE(tree_setup);
 		auto fbt_mst = fbt_reduction(spanning_tree, n);
 		KKT_WORK_ADD(verifier_edge_visits, 2 * fbt_mst.size());
 		// Each tuple already records child -> parent, and fresh parent IDs
@@ -350,21 +353,27 @@ struct test_graph
 	// explained on the Karger-Klein-Tarjan' 1995 paper.
 	vector<unsigned char> compute_heavy_marks()
 	{
+		KKT_PHASE(queries);
 #ifdef KKT_EXPERIMENT_COMPRESSED_QUERIES
 		verifier_detail::compressed_tree_path_maxima verifier(root, child, sibling, weight);
 		vector<int> ancestors(G.size());
 		KKT_WORK_ADD(initialized_slots, ancestors.size());
 		KKT_WORK_ADD(verifier_edge_visits, G.size());
+		{
+		KKT_PHASE(query_gather);
 		for (size_t i = 0; i < G.size(); ++i) {
 			const int from = query_from(G[i]), to = query_to(G[i]);
 			const int ancestor = ancestors[i] = lca.query(from, to);
 			if (ancestor != from) verifier.add_request(from, ancestor);
 			if (ancestor != to) verifier.add_request(to, ancestor);
 		}
+		}
 		verifier.compute_answer();
 		vector<unsigned char> heavy_marks(G.size(), 0);
 		KKT_WORK_ADD(initialized_slots, heavy_marks.size());
 		KKT_WORK_ADD(verifier_edge_visits, G.size());
+		{
+		KKT_PHASE(mark_scatter);
 		for (size_t i = 0; i < G.size(); ++i) {
 			const int from = query_from(G[i]), to = query_to(G[i]);
 			// Preserve the API's unmarked self-loop result before any lookup.
@@ -374,6 +383,7 @@ struct test_graph
 			if (ancestor != from) maximum = max(maximum, verifier.lookup(from, ancestor));
 			if (ancestor != to) maximum = max(maximum, verifier.lookup(to, ancestor));
 			if (maximum < query_cost(G[i])) heavy_marks[i] = 1;
+		}
 		}
 		return heavy_marks;
 #else
@@ -447,6 +457,7 @@ vector<unsigned char>
 					  const vector<tuple<int, int, int, int>>& spanning_tree,
 					  const int n)
 {
+	KKT_PHASE(tree_setup);
 	if (n == 0 || graph.empty() || spanning_tree.empty()) {
 		KKT_WORK_ADD(initialized_slots, graph.size());
 		return vector<unsigned char>(graph.size(), 0);
@@ -490,6 +501,7 @@ vector<unsigned char>
 									 const vector<tuple<int, int, int, int>>& general_graph,
 									 const int n)
 {
+	KKT_PHASE(partition);
 	KKT_WORK_ADD(verifier_calls, 1);
 	KKT_WORK_ADD(verifier_vertices, n);
 	KKT_WORK_ADD(verifier_edges, graph.size());

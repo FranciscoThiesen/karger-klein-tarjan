@@ -1,0 +1,40 @@
+{
+  "validation": "pass",
+  "native_execution": false,
+  "owned_processes_running": false,
+  "analysis_actual_exit": {
+    "code": 0,
+    "chunk": "471e20",
+    "seconds": 0.456456875
+  },
+  "plot_actual_exit": {
+    "code": 0,
+    "session": 90353,
+    "chunk": "4065b1"
+  },
+  "counts": {
+    "exact_google_joins": 72,
+    "raw_rows": 516,
+    "figures": 15,
+    "selected_count_curves": 84,
+    "selected_N": 84
+  },
+  "proof_sha256": {
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/attempt01/provenance.json": "1b6c677bc997491b7a341e1ec69634b5e785131667f45247a80b60e6ec9b5dc9",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/figures-attempt02/provenance.json": "3d9757d734bf968538f162fafe83d2b4a668bf139b26d6a3eb0718563cca6e7d"
+  },
+  "checked_input_files": 762,
+  "checked_output_files": 42,
+  "documentation_sha256": {
+    "/Users/random_person/Desktop/kkt-linear-scaling/docs/scaling-investigation/DIAGNOSTICS.md": "418701a77b18cc79269c80bb5e763cf04e433e01cc38f43c7a408555131327f3"
+  },
+  "qa_sha256": "82a6587285efd5fd41346b4db25a173bde5f33a2234afb1a684bbcab9639bdde",
+  "source_sha256": {
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/analyze_diagnostics.py": "e6b34e8f86f7beff00a50f11a0ba858b3c058d1550ddbeeac84bd0aaf57b947e",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/test_analyze_diagnostics.py": "72b448468ce3e6e2c567a67e106f223aab7404b6fe0b2017ab6f0e36065577ba",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/plot_diagnostics.py": "fa5da199329138d429cdf33adec37565232c81a02c3a865b0b5a5817e5cc9405",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/inspect_phase.py": "4a17f132147624a0dac255de19fc0d8e246fd1e93485d6467d72eb07bbee2dcb",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/inspect_work.py": "28f0e4f6c25c30c5b41b1e541c122e44ebc9aaf3b24404338960350bf4f1654e",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/README.md": "cbc32c89cabf724a1a5b47f10a7e12137bc822414d9bb8dac36431f7e5042fad"
+  }
+}

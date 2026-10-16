@@ -1,0 +1,23 @@
+{
+  "validation": "pass",
+  "mock_groups": 9,
+  "mock_runtime_seconds": 0.028,
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "benchmark/scaling_investigation/audit/test_run.py"
+  ],
+  "cwd": "/Users/random_person/Desktop/kkt-linear-scaling",
+  "actual_exit_code": 0,
+  "tool_chunk": "c1e7e0",
+  "native_execution": false,
+  "process_provider_execution": false,
+  "mocked_subprocesses": true,
+  "owned_jobs_remaining": false,
+  "source_sha256": {
+    "benchmark/scaling_investigation/run.py": "a4b721a522f5a6f21673abfcc4d06f3c688742d45fec5aad5c80c670a3a87be7",
+    "benchmark/scaling_investigation/audit/test_run.py": "7cf3247e1bd2177f37a63ec479bcd71cbd01c311609ba5d795e1e666c8f65c73",
+    "benchmark/scaling_investigation/audit/mock-tests-attempt02.stdout": "119cfe5cc9fedbb6e2f8e8ab48d37223f06b3e983c5a8c0a6efe5c5d0f67efcd",
+    "benchmark/scaling_investigation/audit/mock-tests-attempt02.stderr": "b2b47a7c9b68a52ffbc1b6d3bced5b2fe894866c65c7614dc32b7fde7191ada9"
+  }
+}

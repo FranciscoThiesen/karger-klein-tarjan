@@ -1,0 +1,18 @@
+{
+  "validation": "pass",
+  "mock_groups": 8,
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "benchmark/scaling_investigation/audit/test_run.py"
+  ],
+  "actual_exit_code": 0,
+  "native_execution": false,
+  "source_sha256": {
+    "benchmark/scaling_investigation/run.py": "78a0f0054ce97d2cba95d0f22d91f1f603906dbb463a4e1e328d20da5cd843ff",
+    "benchmark/scaling_investigation/audit/test_run.py": "11135bc67a884763c187483c63925091d4fb7031fbb082d6e4154ed9a514f44c",
+    "benchmark/scaling_investigation/audit/mock-tests-attempt01.stdout": "119cfe5cc9fedbb6e2f8e8ab48d37223f06b3e983c5a8c0a6efe5c5d0f67efcd",
+    "benchmark/scaling_investigation/audit/mock-tests-attempt01.stderr": "23d8c27ebb71ae62238cb96abbd7a3c1068b2160d1cd439e8dd97bb6f854c2c2"
+  },
+  "owned_jobs_remaining": false
+}

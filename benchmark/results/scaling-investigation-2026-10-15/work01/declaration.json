@@ -1,0 +1,448 @@
+{
+  "schema": "kkt_scaling_capture_v1",
+  "mode": "work",
+  "cases": [
+    {
+      "family": "leaf_hierarchy4",
+      "n": 1024,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "n": 1024,
+      "graph_seed": 19000013,
+      "sampling_seed": 3011
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 1024,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 1024,
+      "graph_seed": 19000013,
+      "sampling_seed": 3011
+    },
+    {
+      "family": "gnm_random",
+      "n": 1024,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "gnm_random",
+      "n": 1024,
+      "graph_seed": 19000013,
+      "sampling_seed": 3011
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "n": 4096,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "n": 4096,
+      "graph_seed": 19000013,
+      "sampling_seed": 3011
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 4096,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 4096,
+      "graph_seed": 19000013,
+      "sampling_seed": 3011
+    },
+    {
+      "family": "gnm_random",
+      "n": 4096,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "gnm_random",
+      "n": 4096,
+      "graph_seed": 19000013,
+      "sampling_seed": 3011
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "n": 16384,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "n": 16384,
+      "graph_seed": 19000013,
+      "sampling_seed": 3011
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 16384,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 16384,
+      "graph_seed": 19000013,
+      "sampling_seed": 3011
+    },
+    {
+      "family": "gnm_random",
+      "n": 16384,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "gnm_random",
+      "n": 16384,
+      "graph_seed": 19000013,
+      "sampling_seed": 3011
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "n": 65536,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "n": 65536,
+      "graph_seed": 19000013,
+      "sampling_seed": 3011
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 65536,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 65536,
+      "graph_seed": 19000013,
+      "sampling_seed": 3011
+    },
+    {
+      "family": "gnm_random",
+      "n": 65536,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "gnm_random",
+      "n": 65536,
+      "graph_seed": 19000013,
+      "sampling_seed": 3011
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "n": 262144,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "n": 262144,
+      "graph_seed": 19000013,
+      "sampling_seed": 3011
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 262144,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 262144,
+      "graph_seed": 19000013,
+      "sampling_seed": 3011
+    },
+    {
+      "family": "gnm_random",
+      "n": 262144,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "gnm_random",
+      "n": 262144,
+      "graph_seed": 19000013,
+      "sampling_seed": 3011
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "n": 1048576,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "n": 1048576,
+      "graph_seed": 19000013,
+      "sampling_seed": 3011
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 1048576,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 1048576,
+      "graph_seed": 19000013,
+      "sampling_seed": 3011
+    },
+    {
+      "family": "gnm_random",
+      "n": 1048576,
+      "graph_seed": 19000013,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "gnm_random",
+      "n": 1048576,
+      "graph_seed": 19000013,
+      "sampling_seed": 3011
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "n": 1048576,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "n": 1048576,
+      "graph_seed": 19000043,
+      "sampling_seed": 3011
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 1048576,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 1048576,
+      "graph_seed": 19000043,
+      "sampling_seed": 3011
+    },
+    {
+      "family": "gnm_random",
+      "n": 1048576,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "gnm_random",
+      "n": 1048576,
+      "graph_seed": 19000043,
+      "sampling_seed": 3011
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "n": 262144,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "n": 262144,
+      "graph_seed": 19000043,
+      "sampling_seed": 3011
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 262144,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 262144,
+      "graph_seed": 19000043,
+      "sampling_seed": 3011
+    },
+    {
+      "family": "gnm_random",
+      "n": 262144,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "gnm_random",
+      "n": 262144,
+      "graph_seed": 19000043,
+      "sampling_seed": 3011
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "n": 65536,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "n": 65536,
+      "graph_seed": 19000043,
+      "sampling_seed": 3011
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 65536,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 65536,
+      "graph_seed": 19000043,
+      "sampling_seed": 3011
+    },
+    {
+      "family": "gnm_random",
+      "n": 65536,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "gnm_random",
+      "n": 65536,
+      "graph_seed": 19000043,
+      "sampling_seed": 3011
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "n": 16384,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "n": 16384,
+      "graph_seed": 19000043,
+      "sampling_seed": 3011
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 16384,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 16384,
+      "graph_seed": 19000043,
+      "sampling_seed": 3011
+    },
+    {
+      "family": "gnm_random",
+      "n": 16384,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "gnm_random",
+      "n": 16384,
+      "graph_seed": 19000043,
+      "sampling_seed": 3011
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "n": 4096,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "n": 4096,
+      "graph_seed": 19000043,
+      "sampling_seed": 3011
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 4096,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 4096,
+      "graph_seed": 19000043,
+      "sampling_seed": 3011
+    },
+    {
+      "family": "gnm_random",
+      "n": 4096,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "gnm_random",
+      "n": 4096,
+      "graph_seed": 19000043,
+      "sampling_seed": 3011
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "n": 1024,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_hierarchy4",
+      "n": 1024,
+      "graph_seed": 19000043,
+      "sampling_seed": 3011
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 1024,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "leaf_shuffled4",
+      "n": 1024,
+      "graph_seed": 19000043,
+      "sampling_seed": 3011
+    },
+    {
+      "family": "gnm_random",
+      "n": 1024,
+      "graph_seed": 19000043,
+      "sampling_seed": 3001
+    },
+    {
+      "family": "gnm_random",
+      "n": 1024,
+      "graph_seed": 19000043,
+      "sampling_seed": 3011
+    }
+  ],
+  "variants": [
+    "work"
+  ],
+  "repetitions": 1,
+  "warmups": 1,
+  "build_sha256": "5f7d4bb8d580ed4360f4dd15999256cdbccc1bd78ca7de36e6b6fcdeb4732a96",
+  "global_limit_seconds": 7200,
+  "child_limit_seconds": 300,
+  "rss_limit_bytes": 12884901888,
+  "timing_claim": "phase/allocation/work builds are diagnostic; only reference is uninstrumented"
+}

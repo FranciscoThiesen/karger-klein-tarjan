@@ -1,0 +1,13 @@
+ld: warning: ignoring file '/usr/local/lib/libunwind.1.0.dylib': found architecture 'x86_64', required architecture 'arm64'
+Undefined symbols for architecture arm64:
+  "__Unwind_Resume", referenced from:
+      boruvka(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in boruvka.o
+      std::__1::vector<std::__1::vector<int, std::__1::allocator<int>>, std::__1::allocator<std::__1::vector<int, std::__1::allocator<int>>>>::vector(unsigned long) in boruvka.o
+      std::__1::__throw_length_error[abi:ue170006](char const*) in boruvka.o
+      std::__1::pair<std::__1::__hash_iterator<std::__1::__hash_node<int, void*>*>, bool> std::__1::__hash_table<int, std::__1::hash<int>, std::__1::equal_to<int>, std::__1::allocator<int>>::__emplace_unique_key_args<int, int const&>(int const&, int const&) in boruvka.o
+      kruskal(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in kruskal.o
+      kruskal(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in kruskal.o
+      prim(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in prim.o
+      ...
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)

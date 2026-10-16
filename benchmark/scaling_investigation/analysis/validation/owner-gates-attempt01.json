@@ -1,0 +1,31 @@
+{
+  "validation": "pass",
+  "native_execution": false,
+  "synthetic_tests": {
+    "groups": 7,
+    "actual_exit_status": 0,
+    "unified_exec_chunk_id": "2ae8d6",
+    "reported_elapsed_seconds": 0.26,
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "-m",
+      "unittest",
+      "-v",
+      "test_analyze_diagnostics.py"
+    ]
+  },
+  "actual_completed_smoke_loader": {
+    "actual_exit_status": 0,
+    "unified_exec_chunk_id": "84cd00",
+    "receipt": "validation/loader-smoke-attempt02.json",
+    "receipt_sha256": "0701624f8eb0cff9dfd55725cf48d3434e68caf31063314255a1140bfc94f3a0"
+  },
+  "plot_source_status": "prepared; no import or render during active native capture",
+  "source_sha256": {
+    "analyze_diagnostics.py": "914366133676e80d5e6507fa89a1d1e8c7cce82184ad64a37ce94a19cad8d569",
+    "test_analyze_diagnostics.py": "aadd14f43f18792c55a562f793a5d51b0bed0bed16dcb135ed1f1e6c49a0eb9e",
+    "plot_diagnostics.py": "5385ee75d30998c215758aef3e6e50b72dc49d24a0546cecded59ca84e8d151a",
+    "README.md": "ac536e8950eac206be5842ffd41876dfd9603ac60023a2bca6bc74e5ff9def47"
+  }
+}

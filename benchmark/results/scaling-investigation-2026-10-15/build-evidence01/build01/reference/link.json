@@ -1,0 +1,29 @@
+{
+  "command": [
+    "/usr/bin/clang++",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build01/reference/boruvka.o",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build01/reference/kruskal.o",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build01/reference/prim.o",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build01/reference/lca.o",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build01/reference/union_find.o",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build01/reference/graph_utils.o",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build01/reference/verifier_v2.o",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build01/reference/kkt.o",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build01/reference/diagnostic.o",
+    "-Wl,-stack_size,0x20000000",
+    "-o",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build01/reference/diagnostic"
+  ],
+  "cwd": "/Users/random_person/Desktop/kkt-linear-scaling",
+  "pgid": 26084,
+  "exit_code": 1,
+  "group_empty": true,
+  "failure": null,
+  "start_utc_ns": 1792115820539790000,
+  "end_utc_ns": 1792115820774743000,
+  "duration_s": 0.23495312500000054,
+  "peak_sampled_group_rss_bytes": 5242880,
+  "rss_samples": 1,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "cf46561418df7ce7635fc7e668b59ee4b57e23a8f7c057d6a830e44a4f87fb8c"
+}

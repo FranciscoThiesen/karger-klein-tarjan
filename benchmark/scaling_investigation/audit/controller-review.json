@@ -1,0 +1,42 @@
+{
+  "schema": "scaling_controller_review_v1",
+  "validation": "pass",
+  "scope": "Source review plus nine mocked controller groups; no native build or execution by reviewer",
+  "reviewed_sha256": {
+    "common/phase_stats.hpp": "1c4775ee6a650fbdafdc4d56e2feb2d0cefd3deab8cd94563c082ff718f0943a",
+    "benchmark/scaling_investigation/diagnostic.cpp": "bda8d363bfd127db4c3557dfdbc55fc9be378e6f67de469f66d6e90c825ab3ab",
+    "benchmark/scaling_investigation/run.py": "a4b721a522f5a6f21673abfcc4d06f3c688742d45fec5aad5c80c670a3a87be7",
+    "benchmark/scaling_investigation/phase_stats_test.cpp": "5e1af1c4a59255325ab00661d740b69d4382ec2e6bbf5adb13d0ac7ab6e9f6fb",
+    "docs/scaling-investigation/PROTOCOL.md": "7bf3213e90efe41c7b73bc2adb9ad1fd290e7f75644b5622736abd0a52a95504",
+    "kkt/kkt.cpp": "090fe210c83da14cc2a64d484cbd0d5f7caa756e6cfa54d026c43f758c20d628",
+    "kkt/experimental_multigraph_contraction.hpp": "2ccec9a8c64ecc2272e7ba05d3aad0fe2741f1d7a7129520eced902b5f603d0f",
+    "lca/lca.cpp": "efe728911067b86b7e9129793049866b6ef6ad4aef6268fadc9175764671dc7a",
+    "verifier/verifier_v2.cpp": "486ecfd321f01231a746f5be904cad53b76cdcd1ca1b83d37d87e965d261e356",
+    "verifier/experimental_compressed_queries.hpp": "56f8d67ec1af2b7624bf84575df4b45ef3a822d7792e20f63828ec581bb32d22"
+  },
+  "runner_owned_by_reviewer": true,
+  "native_gates_pending_with_parent": [
+    "four native builds and actual binary profiles",
+    "phase_stats_test.cpp",
+    "certified smoke inputs and deterministic work bounds",
+    "native work/counter equivalence gates as appropriate"
+  ],
+  "findings_fixed": [
+    "bounded process sampler and cleanup reuse",
+    "interruption and repeated SIGTERM preservation",
+    "unknown Popen/cleanup state blocks all later launches",
+    "observed native-exit and campaign deadlines",
+    "exact row/counter/phase/integer schema and pinned fixture joins",
+    "before/after source and binary hashes with failed campaign persistence",
+    "explicit SDK library search plus cleaned CPATH/LIBRARY_PATH environment",
+    "driver temporary-input lifetime matches timing boundary",
+    "phase collectors reject nesting"
+  ],
+  "measurement_limits": [
+    "exclusive phase wall attribution is not CPU attribution",
+    "allocation variant replaces new/delete and is diagnostic only, not a native allocator performance estimate",
+    "existing logical counters do not measure allocator growth relocations or hardware cache/TLB cost",
+    "unknown surviving detached group fails closed and forbids continuation; no invented empty proof",
+    "source review preserves dataflow; native correctness evidence comes from separately certified ID sets and parent-run gates"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "command": [
+    "/usr/bin/clang++",
+    "-std=c++17",
+    "-O3",
+    "-march=native",
+    "-Wall",
+    "-Wextra",
+    "-I/Users/random_person/Desktop/kkt-linear-scaling",
+    "-DKKT_EXPERIMENT_RETAIN_PARALLEL",
+    "-DKKT_EXPERIMENT_EDGE_VIEW",
+    "-DKKT_EXPERIMENT_COMPRESSED_QUERIES",
+    "-DKKT_EXPERIMENT_EIGHTH_SAMPLING",
+    "-isysroot",
+    "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+    "-c",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/diagnostic.cpp",
+    "-o",
+    "/Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build01/reference/diagnostic.o"
+  ],
+  "cwd": "/Users/random_person/Desktop/kkt-linear-scaling",
+  "pgid": 26049,
+  "exit_code": 0,
+  "group_empty": true,
+  "failure": null,
+  "start_utc_ns": 1792115819602044000,
+  "end_utc_ns": 1792115820539125000,
+  "duration_s": 0.9370772500000006,
+  "peak_sampled_group_rss_bytes": 158040064,
+  "rss_samples": 4,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

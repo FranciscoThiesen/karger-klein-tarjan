@@ -7,6 +7,7 @@
 // public step continues to deduplicate them. Input order is preserved here,
 // so enabling this experiment changes subsequent random sampling trajectories.
 #include "kkt.hpp"
+#include "../common/phase_stats.hpp"
 
 #include <algorithm>
 #include <cassert>
@@ -17,6 +18,7 @@ namespace kkt_experiment {
 
 inline std::pair<std::vector<int>, problem> retain_parallel_step(const problem& P)
 {
+    KKT_PHASE(contraction);
     const int n = P.num_vertices;
     const int total_edges = static_cast<int>(P.graph_edges.size());
     std::vector<int> smallest_incident_edge(n, -1);
@@ -25,6 +27,8 @@ inline std::pair<std::vector<int>, problem> retain_parallel_step(const problem& 
     KKT_WORK_ADD(contraction_edges, total_edges);
     KKT_WORK_ADD(initialized_slots, n);
     KKT_WORK_ADD(contraction_edge_visits, total_edges);
+    {
+    KKT_PHASE(minimum_scan);
     for (int i = 0; i < total_edges; ++i) {
         const Edge& edge = P.graph_edges[i];
         if (smallest_incident_edge[edge.from] == -1 ||
@@ -35,6 +39,7 @@ inline std::pair<std::vector<int>, problem> retain_parallel_step(const problem& 
             edge.cost < P.graph_edges[smallest_incident_edge[edge.to]].cost) {
             smallest_incident_edge[edge.to] = i;
         }
+    }
     }
 
     std::vector<int> selected_edges;

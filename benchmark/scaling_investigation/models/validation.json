@@ -1,0 +1,57 @@
+{
+  "schema": "scaling_models_validation_v1",
+  "validation": "pass",
+  "native_solver_execution": false,
+  "tests": {
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "-m",
+      "unittest",
+      "-v",
+      "test_analyze_models.py"
+    ],
+    "working_directory": "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/models",
+    "actual_exit_status": 0,
+    "groups": 6,
+    "unified_exec_chunk_id": "c31763",
+    "reported_elapsed_seconds": 0.008,
+    "output": "Ran 6 tests in 0.008s; OK"
+  },
+  "analysis": {
+    "actual_exit_status": 0,
+    "session_id": 36754,
+    "completion_chunk_id": "9add04",
+    "provenance": "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/models/attempt03/provenance.json"
+  },
+  "figures": {
+    "actual_exit_status": 0,
+    "session_id": 36596,
+    "completion_chunk_id": "e1ae94",
+    "viewed_original_resolution": [
+      "normalization.png",
+      "blocked-prediction.png"
+    ],
+    "verdict": "pass",
+    "checks": [
+      "All six family/algorithm panels present",
+      "All four curve labels and every plotted two-call mean retained",
+      "Holdout model axes and percent units readable",
+      "256K hinge unavailable explained rather than drawn as zero",
+      "No clipped titles, labels, caption or legend observed"
+    ]
+  },
+  "source_sha256": {
+    "benchmark/scaling_investigation/models/analyze_models.py": "aaa6fa4c6b60ec40fdcd5c86e0f82b73b4d440621ae9c67a43c9d79fda180714",
+    "benchmark/scaling_investigation/models/test_analyze_models.py": "3bb0e9d30f421d6dce04fcf1d496e57dc32ab474ef12cec1aa96732713ab0923",
+    "benchmark/scaling_investigation/models/PLAN.md": "606d8d8c52a4c77ebe759ff0c2fe11480cbd7fb7120742fc4e37b0f18352b13b",
+    "benchmark/scaling_investigation/models/plot_models.py": "b8b2051ad92012c16c2313210d591dc29102eaa182dd3d56f201849d9c8af8c4",
+    "docs/kkt-scaling-model-analysis.md": "ee0c991f330d52dfc3d57c1dc49c9bab2183720273d5c01fffe1106b2496cba4"
+  },
+  "artifact_sha256": {
+    "benchmark/scaling_investigation/models/attempt03/provenance.json": "2891ec028e28cc687ebd1f31b914885e448e93ced85f59d2ba5c2adefd24e4cd",
+    "benchmark/scaling_investigation/models/figures-attempt01/provenance.json": "291cb6bfe93ade928f187423fb1e17675406a61394b5f77777d4f24733cdd2b2",
+    "benchmark/scaling_investigation/models/figures-attempt01/normalization.png": "388b59f01fd1ce7085ec327e20cbfa1b065813a5a2d6961bf5854b9d03faa0e2",
+    "benchmark/scaling_investigation/models/figures-attempt01/blocked-prediction.png": "fc4cc4d60f96e9ca896838054ba82119588d644c1e495179046edcc0c816f5e9"
+  }
+}

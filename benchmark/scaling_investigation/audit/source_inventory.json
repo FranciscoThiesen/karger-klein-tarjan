@@ -1,0 +1,23 @@
+{
+  "schema": "scaling_source_audit_v1",
+  "revision": "a8f506b8490ffafabb7caf0fa46978f87edb1799",
+  "scope": "source accounting only; no native benchmark, build, profiler or new correctness execution",
+  "files": {
+    "kkt/kkt.cpp": "f5681b0384fb26ee6af5a23e4f7109b990393d831fc6ceb5385ce43643f5fd9a",
+    "kkt/kkt.hpp": "db6d56d7741a2edaea19b535bcb6a969ba29964aaefb7da21d8935c746771cc2",
+    "kkt/experimental_multigraph_contraction.hpp": "c18798f5ef678dfa94abbb29213dfc886123a33961a2149ce1c9e6b32987f8c2",
+    "kkt/experimental_eighth_sampling.hpp": "dc58872c0f6c8542ce67d8c9f3a1c5c5c4fd9f2b1e5ae9c1bb65b5e6c70293bd",
+    "verifier/verifier_v2.cpp": "5bfcae5761ad40ff0c587985e8bcf600f54e9223815a22e58428c8ef0948a6eb",
+    "verifier/experimental_compressed_queries.hpp": "3a60df765b5d48add30c3b4429ad501ae7c87de9d8d780151ca5afcb48aa8b60",
+    "verifier/median_table.hpp": "9aeb79481afe0e949347eb29045ad9f5dc6017d114fa7ce813e348adadfb382a",
+    "lca/lca.cpp": "d21ea8d45c76eb2b782c08afbe25394b7da25b862dea28ddd1499c14877a46ca",
+    "lca/lca.hpp": "69aac6fadf9f8310c7b8914de2d044cd2466b17464787a699919b987c1ee88f2",
+    "common/work_stats.hpp": "85f6aca4f517cccef93a01c22005808834e66dbbc6b9dba448bb6b7b4574c1d0",
+    "common/edge.hpp": "83b38d4622875bb311c967c771c13a888922c45b5e58d7ded61692692008b2ce",
+    "benchmark/current_complexity/current_complexity.cpp": "ccc746954240cb7432cf137357b32f077994729df6fa01e092aadec1f53629a4",
+    "benchmark/retention_control.cpp": "310db459ebf3d8743a750e7928bd035b82b2e38971de8820358b910579e3a2e9",
+    "benchmark/results/practical-2026-10-10/minimum_candidate.patch": "721aab019e6abc79c29ba78feec039add6e674a5c95cf03042e095e5d4209bdf"
+  },
+  "production_modified_by_auditor": false,
+  "review_document": "docs/scaling-investigation/source-audit.md"
+}

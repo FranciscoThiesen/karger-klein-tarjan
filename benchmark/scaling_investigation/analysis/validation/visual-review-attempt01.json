@@ -1,0 +1,8 @@
+{
+  "validation": "failed",
+  "scope": "Original-resolution visual review of calibration, endpoint-contributions, allocation and three count grids.",
+  "reason": "Near-constant positive series retain too little top headroom when resetting only the lower y limit; some top markers are clipped. Data and table provenance pass.",
+  "source_sha256": "d319e079b4d9fcf961aa8d6dc2af4da6cfa7abe45c0582a8139d9d0b3fb4f542",
+  "figures_provenance_sha256": "f93323197331aead6a8894bf9c2f542c64e643abda8aa117442d57f914217c29",
+  "repair": "Add explicit 6% y headroom for zero-based panels; preserve all original figures."
+}

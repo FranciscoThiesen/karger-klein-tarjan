@@ -1,0 +1,3618 @@
+{
+  "validation": "pass",
+  "scope": "Independent stdlib raw means, origin N/NlgN final-three-size heldout error and affine-N centered OLS; no analyzer import, no native execution. Other seven-model outputs source-reviewed only.",
+  "raw_means_checked": 3168,
+  "final3_holdout_models_checked": 192,
+  "NlgN_better_curves_clocks": 96,
+  "affine_intercepts_checked": 192,
+  "negative_affine_intercepts": 192,
+  "holdouts": [
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_steady"
+      ],
+      "nrms_N": 0.31815745292763553,
+      "nrms_NlgN": 0.19932697557385462,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "nrms_N": 0.32530144352019513,
+      "nrms_NlgN": 0.20667866078241556,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_manual"
+      ],
+      "nrms_N": 0.3181574529276354,
+      "nrms_NlgN": 0.19932697557385443,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "nrms_N": 0.3252687625476256,
+      "nrms_NlgN": 0.20664428011506,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_steady"
+      ],
+      "nrms_N": 0.450943449960527,
+      "nrms_NlgN": 0.3453539885759194,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "nrms_N": 0.45121662276895325,
+      "nrms_NlgN": 0.3455624037596649,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_manual"
+      ],
+      "nrms_N": 0.4509434499605272,
+      "nrms_NlgN": 0.3453539885759196,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "nrms_N": 0.45119571762106864,
+      "nrms_NlgN": 0.3455394389719157,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_steady"
+      ],
+      "nrms_N": 0.2508577634190059,
+      "nrms_NlgN": 0.12670397485900659,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "nrms_N": 0.25090064400595696,
+      "nrms_NlgN": 0.1267500300876967,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_manual"
+      ],
+      "nrms_N": 0.2508577634190059,
+      "nrms_NlgN": 0.12670397485900659,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "nrms_N": 0.25088040890697033,
+      "nrms_NlgN": 0.12672883657900394,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_steady"
+      ],
+      "nrms_N": 0.21110394086853737,
+      "nrms_NlgN": 0.07432418473040164,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "nrms_N": 0.2111361331770033,
+      "nrms_NlgN": 0.07436029118305891,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_manual"
+      ],
+      "nrms_N": 0.2111039408685374,
+      "nrms_NlgN": 0.0743241847304017,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "nrms_N": 0.21110751482375845,
+      "nrms_NlgN": 0.07432869424820068,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "native_steady"
+      ],
+      "nrms_N": 0.36730976568865176,
+      "nrms_NlgN": 0.2506923219550299,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "native_process_cpu"
+      ],
+      "nrms_N": 0.367304060528611,
+      "nrms_NlgN": 0.25068573935933136,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "library_manual"
+      ],
+      "nrms_N": 0.36730976568865176,
+      "nrms_NlgN": 0.2506923219550299,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "library_process_cpu"
+      ],
+      "nrms_N": 0.36728505214771673,
+      "nrms_NlgN": 0.25066475169185726,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "native_steady"
+      ],
+      "nrms_N": 0.2522788640932381,
+      "nrms_NlgN": 0.12077007993581462,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "native_process_cpu"
+      ],
+      "nrms_N": 0.2522792848541194,
+      "nrms_NlgN": 0.12077103714093941,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "library_manual"
+      ],
+      "nrms_N": 0.2522788640932381,
+      "nrms_NlgN": 0.12077007993581462,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "library_process_cpu"
+      ],
+      "nrms_N": 0.2522559215071086,
+      "nrms_NlgN": 0.12074562446221931,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "native_steady"
+      ],
+      "nrms_N": 0.2398479811570298,
+      "nrms_NlgN": 0.10688714037526782,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "native_process_cpu"
+      ],
+      "nrms_N": 0.23987351868424078,
+      "nrms_NlgN": 0.10690826876821286,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "library_manual"
+      ],
+      "nrms_N": 0.23984798115702977,
+      "nrms_NlgN": 0.10688714037526775,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "library_process_cpu"
+      ],
+      "nrms_N": 0.2398505312031027,
+      "nrms_NlgN": 0.10688386764586665,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "native_steady"
+      ],
+      "nrms_N": 0.48624568797102535,
+      "nrms_NlgN": 0.3848247804588185,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "native_process_cpu"
+      ],
+      "nrms_N": 0.47664301886021376,
+      "nrms_NlgN": 0.37402609542136595,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "library_manual"
+      ],
+      "nrms_N": 0.4862456879710254,
+      "nrms_NlgN": 0.3848247804588186,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "library_process_cpu"
+      ],
+      "nrms_N": 0.47662056802552266,
+      "nrms_NlgN": 0.3740017552885906,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_steady"
+      ],
+      "nrms_N": 0.20843141176085303,
+      "nrms_NlgN": 0.07242079874795879,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "nrms_N": 0.21096461262203337,
+      "nrms_NlgN": 0.07530199554333619,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_manual"
+      ],
+      "nrms_N": 0.20843141176085303,
+      "nrms_NlgN": 0.0724207987479588,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "nrms_N": 0.21092494803867273,
+      "nrms_NlgN": 0.0752586848052682,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_steady"
+      ],
+      "nrms_N": 0.2597618968280694,
+      "nrms_NlgN": 0.1292650550469334,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "nrms_N": 0.2597571778056977,
+      "nrms_NlgN": 0.12925947097772966,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_manual"
+      ],
+      "nrms_N": 0.2597618968280695,
+      "nrms_NlgN": 0.12926505504693342,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "nrms_N": 0.25972611132209317,
+      "nrms_NlgN": 0.12922613564437038,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_steady"
+      ],
+      "nrms_N": 0.26833525477922454,
+      "nrms_NlgN": 0.13859287543211368,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "nrms_N": 0.26833002588059696,
+      "nrms_NlgN": 0.1385871059367674,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_manual"
+      ],
+      "nrms_N": 0.2683352547792246,
+      "nrms_NlgN": 0.1385928754321137,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "nrms_N": 0.2683026946060755,
+      "nrms_NlgN": 0.1385574268602845,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_steady"
+      ],
+      "nrms_N": 0.24950662035630788,
+      "nrms_NlgN": 0.11814926366120454,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "nrms_N": 0.24949946686558253,
+      "nrms_NlgN": 0.11814089111503359,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_manual"
+      ],
+      "nrms_N": 0.249506620356308,
+      "nrms_NlgN": 0.11814926366120478,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "nrms_N": 0.24947295425353092,
+      "nrms_NlgN": 0.11811138875158358,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "native_steady"
+      ],
+      "nrms_N": 0.369531604055052,
+      "nrms_NlgN": 0.2565401789012059,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "native_process_cpu"
+      ],
+      "nrms_N": 0.36952760054951894,
+      "nrms_NlgN": 0.25653563116619854,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "library_manual"
+      ],
+      "nrms_N": 0.3695316040550519,
+      "nrms_NlgN": 0.2565401789012059,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "library_process_cpu"
+      ],
+      "nrms_N": 0.36950167397883443,
+      "nrms_NlgN": 0.25650691693080735,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "native_steady"
+      ],
+      "nrms_N": 0.25789176125617164,
+      "nrms_NlgN": 0.12886651311872876,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "native_process_cpu"
+      ],
+      "nrms_N": 0.25788786010387704,
+      "nrms_NlgN": 0.12886219005444235,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "library_manual"
+      ],
+      "nrms_N": 0.2578917612561717,
+      "nrms_NlgN": 0.1288665131187288,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "library_process_cpu"
+      ],
+      "nrms_N": 0.2578644730348747,
+      "nrms_NlgN": 0.12883630276460645,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "native_steady"
+      ],
+      "nrms_N": 0.24807567435504232,
+      "nrms_NlgN": 0.11656312832343986,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "native_process_cpu"
+      ],
+      "nrms_N": 0.24806801298696116,
+      "nrms_NlgN": 0.11655465255836223,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "library_manual"
+      ],
+      "nrms_N": 0.24807567435504238,
+      "nrms_NlgN": 0.11656312832343992,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "library_process_cpu"
+      ],
+      "nrms_N": 0.24802571206863291,
+      "nrms_NlgN": 0.11650777443000954,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "native_steady"
+      ],
+      "nrms_N": 0.3698930662676957,
+      "nrms_NlgN": 0.2567591083187033,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "native_process_cpu"
+      ],
+      "nrms_N": 0.3698881524518449,
+      "nrms_NlgN": 0.2567537038736191,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "library_manual"
+      ],
+      "nrms_N": 0.3698930662676957,
+      "nrms_NlgN": 0.2567591083187033,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "library_process_cpu"
+      ],
+      "nrms_N": 0.36983227257943235,
+      "nrms_NlgN": 0.25669139227575544,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_steady"
+      ],
+      "nrms_N": 0.29518140066849763,
+      "nrms_NlgN": 0.16378803178727877,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "nrms_N": 0.2951666104859529,
+      "nrms_NlgN": 0.16377116018743476,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_manual"
+      ],
+      "nrms_N": 0.29518140066849763,
+      "nrms_NlgN": 0.16378803178727874,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "nrms_N": 0.2951118843927966,
+      "nrms_NlgN": 0.16370932823637513,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_steady"
+      ],
+      "nrms_N": 0.3150191130284742,
+      "nrms_NlgN": 0.18894794195492154,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "nrms_N": 0.31501122500111334,
+      "nrms_NlgN": 0.18893873985243273,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_manual"
+      ],
+      "nrms_N": 0.31501911302847424,
+      "nrms_NlgN": 0.1889479419549216,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "nrms_N": 0.31493484579553543,
+      "nrms_NlgN": 0.18885305919501763,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_steady"
+      ],
+      "nrms_N": 0.31673654256733375,
+      "nrms_NlgN": 0.19102551843359022,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "nrms_N": 0.3167308562269231,
+      "nrms_NlgN": 0.19101929813621302,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_manual"
+      ],
+      "nrms_N": 0.31673654256733375,
+      "nrms_NlgN": 0.19102551843359022,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "nrms_N": 0.31665900328605295,
+      "nrms_NlgN": 0.1909385707311738,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_steady"
+      ],
+      "nrms_N": 0.2962275991876321,
+      "nrms_NlgN": 0.1651352712366516,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "nrms_N": 0.2962214073335058,
+      "nrms_NlgN": 0.16512810882296783,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_manual"
+      ],
+      "nrms_N": 0.296227599187632,
+      "nrms_NlgN": 0.16513527123665153,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "nrms_N": 0.2961604534803867,
+      "nrms_NlgN": 0.16505950027385183,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "native_steady"
+      ],
+      "nrms_N": 0.33889598413453087,
+      "nrms_NlgN": 0.21178670592674292,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "native_process_cpu"
+      ],
+      "nrms_N": 0.33889192416038505,
+      "nrms_NlgN": 0.2117824437135094,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "library_manual"
+      ],
+      "nrms_N": 0.3388959841345309,
+      "nrms_NlgN": 0.21178670592674298,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "library_process_cpu"
+      ],
+      "nrms_N": 0.3387951022862508,
+      "nrms_NlgN": 0.21167407583365527,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "native_steady"
+      ],
+      "nrms_N": 0.3009359333341051,
+      "nrms_NlgN": 0.1705507687246529,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "native_process_cpu"
+      ],
+      "nrms_N": 0.30093096878446113,
+      "nrms_NlgN": 0.17054525995936518,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "library_manual"
+      ],
+      "nrms_N": 0.3009359333341051,
+      "nrms_NlgN": 0.1705507687246529,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "library_process_cpu"
+      ],
+      "nrms_N": 0.30086069876640426,
+      "nrms_NlgN": 0.17046651993341805,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "native_steady"
+      ],
+      "nrms_N": 0.3043313731311818,
+      "nrms_NlgN": 0.17472081057607533,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "native_process_cpu"
+      ],
+      "nrms_N": 0.30432769599553305,
+      "nrms_NlgN": 0.17471672647971148,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "library_manual"
+      ],
+      "nrms_N": 0.3043313731311819,
+      "nrms_NlgN": 0.17472081057607564,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "library_process_cpu"
+      ],
+      "nrms_N": 0.3042552688946638,
+      "nrms_NlgN": 0.1746352887071945,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "native_steady"
+      ],
+      "nrms_N": 0.34467057638277054,
+      "nrms_NlgN": 0.2182858863001837,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "native_process_cpu"
+      ],
+      "nrms_N": 0.34465799383485585,
+      "nrms_NlgN": 0.21827131314809334,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "library_manual"
+      ],
+      "nrms_N": 0.3446705763827704,
+      "nrms_NlgN": 0.21828588630018353,
+      "NlgN_better": true
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "library_process_cpu"
+      ],
+      "nrms_N": 0.3445686404577926,
+      "nrms_NlgN": 0.21817196336708167,
+      "NlgN_better": true
+    }
+  ],
+  "affine": [
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_steady"
+      ],
+      "window": "full11",
+      "intercept_ns": -43920341.770398796
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_steady"
+      ],
+      "window": "upper6",
+      "intercept_ns": -100905669.86815906
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -44556042.96255642
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -102094688.22553909
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_manual"
+      ],
+      "window": "full11",
+      "intercept_ns": -43920341.770398796
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_manual"
+      ],
+      "window": "upper6",
+      "intercept_ns": -100905669.86815906
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -44550768.63032085
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -102087340.79602015
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_steady"
+      ],
+      "window": "full11",
+      "intercept_ns": -78542535.91175771
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_steady"
+      ],
+      "window": "upper6",
+      "intercept_ns": -182477946.53316736
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -78805295.24942064
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -183238965.17412925
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_manual"
+      ],
+      "window": "full11",
+      "intercept_ns": -78542535.91175759
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_manual"
+      ],
+      "window": "upper6",
+      "intercept_ns": -182477946.53316736
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -78800433.43700373
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -183232450.24875426
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_steady"
+      ],
+      "window": "full11",
+      "intercept_ns": -36163637.3769362
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_steady"
+      ],
+      "window": "upper6",
+      "intercept_ns": -78013635.5621891
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -36174001.52457619
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -78039941.12769485
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_manual"
+      ],
+      "window": "full11",
+      "intercept_ns": -36163637.3769362
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_manual"
+      ],
+      "window": "upper6",
+      "intercept_ns": -78013635.5621891
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -36169509.177948594
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -78033685.73797703
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_steady"
+      ],
+      "window": "full11",
+      "intercept_ns": -24336376.595956802
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_steady"
+      ],
+      "window": "upper6",
+      "intercept_ns": -53237649.32421219
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -24339623.27722889
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -53246701.49253726
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_manual"
+      ],
+      "window": "full11",
+      "intercept_ns": -24336376.595956802
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_manual"
+      ],
+      "window": "upper6",
+      "intercept_ns": -53237649.32421243
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -24335876.87522918
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -53241111.111112356
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "native_steady"
+      ],
+      "window": "full11",
+      "intercept_ns": -56725096.27481997
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "native_steady"
+      ],
+      "window": "upper6",
+      "intercept_ns": -130087236.862355
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "native_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -56724639.89510918
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "native_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -130086427.03150916
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "library_manual"
+      ],
+      "window": "full11",
+      "intercept_ns": -56725096.27481997
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "library_manual"
+      ],
+      "window": "upper6",
+      "intercept_ns": -130087236.862355
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "library_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -56721001.98195076
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "library_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -130080665.0082916
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "native_steady"
+      ],
+      "window": "full11",
+      "intercept_ns": -29192225.97734475
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "native_steady"
+      ],
+      "window": "upper6",
+      "intercept_ns": -65241208.09121072
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "native_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -29191672.124649346
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "native_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -65240171.641791105
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "library_manual"
+      ],
+      "window": "full11",
+      "intercept_ns": -29192225.97734475
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "library_manual"
+      ],
+      "window": "upper6",
+      "intercept_ns": -65241208.09121072
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "library_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -29188257.470426083
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "library_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -65235702.321724296
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "native_steady"
+      ],
+      "window": "full11",
+      "intercept_ns": -28726325.62663126
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "native_steady"
+      ],
+      "window": "upper6",
+      "intercept_ns": -65038886.119402885
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "native_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -28766498.475423813
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "native_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -65038029.02155888
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "library_manual"
+      ],
+      "window": "full11",
+      "intercept_ns": -28726325.62663126
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "library_manual"
+      ],
+      "window": "upper6",
+      "intercept_ns": -65038886.119402885
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "library_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -28762430.021951556
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "library_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -65033729.6849128
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "native_steady"
+      ],
+      "window": "full11",
+      "intercept_ns": -86760917.60534823
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "native_steady"
+      ],
+      "window": "upper6",
+      "intercept_ns": -203482246.71641803
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "native_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -84342146.32882047
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "native_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -197598533.16749573
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "library_manual"
+      ],
+      "window": "full11",
+      "intercept_ns": -86760917.60534823
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "library_manual"
+      ],
+      "window": "upper6",
+      "intercept_ns": -203482246.71641803
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "library_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -84336458.9889009
+    },
+    {
+      "identity": [
+        "leaf_hierarchy4",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "library_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -197591552.2388034
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_steady"
+      ],
+      "window": "full11",
+      "intercept_ns": -20239446.558116853
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_steady"
+      ],
+      "window": "upper6",
+      "intercept_ns": -43774246.9038142
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -20322834.339553654
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -43991562.18905473
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_manual"
+      ],
+      "window": "full11",
+      "intercept_ns": -20239446.558116853
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_manual"
+      ],
+      "window": "upper6",
+      "intercept_ns": -43774246.9038142
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -20317852.603975892
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -43985395.522387385
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_steady"
+      ],
+      "window": "full11",
+      "intercept_ns": -24303921.459568143
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_steady"
+      ],
+      "window": "upper6",
+      "intercept_ns": -55847680.69237155
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -24309349.524332225
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -55846936.98175776
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_manual"
+      ],
+      "window": "full11",
+      "intercept_ns": -24303921.459568202
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_manual"
+      ],
+      "window": "upper6",
+      "intercept_ns": -55847680.69237155
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -24305604.58592546
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -55842503.31675047
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_steady"
+      ],
+      "window": "full11",
+      "intercept_ns": -24761365.95444572
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_steady"
+      ],
+      "window": "upper6",
+      "intercept_ns": -56854851.123548865
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -24760969.72191733
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -56854383.08457714
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_manual"
+      ],
+      "window": "full11",
+      "intercept_ns": -24761365.95444572
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_manual"
+      ],
+      "window": "upper6",
+      "intercept_ns": -56854851.123548985
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -24758287.07769215
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -56850550.580430806
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_steady"
+      ],
+      "window": "full11",
+      "intercept_ns": -22767448.090468287
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_steady"
+      ],
+      "window": "upper6",
+      "intercept_ns": -50279336.19983411
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -22767890.870837927
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -50279359.03814256
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_manual"
+      ],
+      "window": "full11",
+      "intercept_ns": -22767448.090468347
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_manual"
+      ],
+      "window": "upper6",
+      "intercept_ns": -50279336.19983411
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -22764731.674594462
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -50274980.099502325
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "native_steady"
+      ],
+      "window": "full11",
+      "intercept_ns": -24623060.693255246
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "native_steady"
+      ],
+      "window": "upper6",
+      "intercept_ns": -56340998.64925367
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "native_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -24622751.738016844
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "native_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -56340794.361525774
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "library_manual"
+      ],
+      "window": "full11",
+      "intercept_ns": -24623060.693255246
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "library_manual"
+      ],
+      "window": "upper6",
+      "intercept_ns": -56340998.64925367
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "library_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -24620277.1679492
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "library_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -56337051.40962416
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "native_steady"
+      ],
+      "window": "full11",
+      "intercept_ns": -22248256.462678373
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "native_steady"
+      ],
+      "window": "upper6",
+      "intercept_ns": -48536000.74626863
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "native_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -22247785.248201013
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "native_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -48535333.333333254
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "library_manual"
+      ],
+      "window": "full11",
+      "intercept_ns": -22248256.462678373
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "library_manual"
+      ],
+      "window": "upper6",
+      "intercept_ns": -48536000.74626863
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "library_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -22245320.069519997
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "library_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -48531430.34826028
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "native_steady"
+      ],
+      "window": "full11",
+      "intercept_ns": -22759298.96828884
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "native_steady"
+      ],
+      "window": "upper6",
+      "intercept_ns": -49924145.67578769
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "native_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -22758327.600926936
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "native_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -49922102.81923711
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "library_manual"
+      ],
+      "window": "full11",
+      "intercept_ns": -22759298.96828884
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "library_manual"
+      ],
+      "window": "upper6",
+      "intercept_ns": -49924145.67578769
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "library_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -22753274.63715446
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "library_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -49915512.4378134
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "native_steady"
+      ],
+      "window": "full11",
+      "intercept_ns": -24831239.709415734
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "native_steady"
+      ],
+      "window": "upper6",
+      "intercept_ns": -56924634.26948589
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "native_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -24830638.09610927
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "native_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -56923847.42951906
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "library_manual"
+      ],
+      "window": "full11",
+      "intercept_ns": -24831239.709415734
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "library_manual"
+      ],
+      "window": "upper6",
+      "intercept_ns": -56924634.26948589
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "library_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -24825774.881085694
+    },
+    {
+      "identity": [
+        "leaf_shuffled4",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "library_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -56916946.93200868
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_steady"
+      ],
+      "window": "full11",
+      "intercept_ns": -14287257.840254903
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_steady"
+      ],
+      "window": "upper6",
+      "intercept_ns": -32691749.47346598
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -14287161.361141592
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -32690668.325041473
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_manual"
+      ],
+      "window": "full11",
+      "intercept_ns": -14287257.840254903
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_manual"
+      ],
+      "window": "upper6",
+      "intercept_ns": -32691749.47346598
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -14283616.538602263
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -32686321.72470975
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_steady"
+      ],
+      "window": "full11",
+      "intercept_ns": -11478781.572783232
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_steady"
+      ],
+      "window": "upper6",
+      "intercept_ns": -26344032.647595346
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -11481332.967435062
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -26343354.892205656
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_manual"
+      ],
+      "window": "full11",
+      "intercept_ns": -11478781.572783262
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_manual"
+      ],
+      "window": "upper6",
+      "intercept_ns": -26344032.647595406
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -11476950.817172498
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000013",
+        "3001",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -26338827.529020786
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_steady"
+      ],
+      "window": "full11",
+      "intercept_ns": -11420121.338882774
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_steady"
+      ],
+      "window": "upper6",
+      "intercept_ns": -26204198.885572135
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -11419674.777411878
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -26203881.426202357
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_manual"
+      ],
+      "window": "full11",
+      "intercept_ns": -11420121.338882774
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_manual"
+      ],
+      "window": "upper6",
+      "intercept_ns": -26204198.885572135
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -11416119.801195264
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -26199446.102819204
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_steady"
+      ],
+      "window": "full11",
+      "intercept_ns": -14226881.36089766
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_steady"
+      ],
+      "window": "upper6",
+      "intercept_ns": -32514583.383913755
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -14227751.920966
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "native_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -32514024.046434462
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_manual"
+      ],
+      "window": "full11",
+      "intercept_ns": -14226881.36089763
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_manual"
+      ],
+      "window": "upper6",
+      "intercept_ns": -32514583.383913696
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -14224094.279789805
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000013",
+        "3011",
+        "ascending",
+        "library_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -32509105.30679834
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "native_steady"
+      ],
+      "window": "full11",
+      "intercept_ns": -15530801.616691023
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "native_steady"
+      ],
+      "window": "upper6",
+      "intercept_ns": -36030346.08955222
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "native_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -15530347.816806912
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "native_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -36029917.91044778
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "library_manual"
+      ],
+      "window": "full11",
+      "intercept_ns": -15530801.616691053
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "library_manual"
+      ],
+      "window": "upper6",
+      "intercept_ns": -36030346.08955222
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "library_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -15526332.75399521
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000043",
+        "3001",
+        "descending",
+        "library_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -36023655.058047235
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "native_steady"
+      ],
+      "window": "full11",
+      "intercept_ns": -14584428.713227212
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "native_steady"
+      ],
+      "window": "upper6",
+      "intercept_ns": -32938501.416252077
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "native_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -14584145.993413836
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "native_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -32937991.70812601
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "library_manual"
+      ],
+      "window": "full11",
+      "intercept_ns": -14584428.713227212
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "library_manual"
+      ],
+      "window": "upper6",
+      "intercept_ns": -32938501.416252077
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "library_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -14580299.091352701
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000043",
+        "3001",
+        "descending",
+        "library_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -32932558.87230563
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "native_steady"
+      ],
+      "window": "full11",
+      "intercept_ns": -14459471.14358458
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "native_steady"
+      ],
+      "window": "upper6",
+      "intercept_ns": -32659405.74875623
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "native_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -14459177.338699818
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "native_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -32659223.051409602
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "library_manual"
+      ],
+      "window": "full11",
+      "intercept_ns": -14459471.143584609
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "library_manual"
+      ],
+      "window": "upper6",
+      "intercept_ns": -32659405.74875623
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "library_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -14455137.821684808
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "kkt",
+        "19000043",
+        "3011",
+        "descending",
+        "library_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -32653770.31509453
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "native_steady"
+      ],
+      "window": "full11",
+      "intercept_ns": -15800950.266008079
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "native_steady"
+      ],
+      "window": "upper6",
+      "intercept_ns": -36712315.79519069
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "native_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -15800663.952921063
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "native_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -36712354.892205656
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "library_manual"
+      ],
+      "window": "full11",
+      "intercept_ns": -15800950.266008079
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "library_manual"
+      ],
+      "window": "upper6",
+      "intercept_ns": -36712315.79519069
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "library_process_cpu"
+      ],
+      "window": "full11",
+      "intercept_ns": -15796709.598731816
+    },
+    {
+      "identity": [
+        "gnm_random",
+        "multigraph_boruvka",
+        "19000043",
+        "3011",
+        "descending",
+        "library_process_cpu"
+      ],
+      "window": "upper6",
+      "intercept_ns": -36706519.071311355
+    }
+  ],
+  "input_sha256": {
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/01.csv": "a8448730c33a5f1052dba7a05a48b430a234b6ee8c9a0ed2872339f0652191ab",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/01.benchmark.json": "3b7f78d6a24134e4cb8a7b5fcfac113714c2aa01a99418ae32ad054e3b105b1b",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/02.csv": "196051ed01011350b2f265270c55bb1660b73b1fb1b69e0b3850dd5082b64f2c",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/02.benchmark.json": "dcfc12db6b220d73caa857d9d314fb8eea7f2558d61c68603e90e141e305157e",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/03.csv": "0b3becb11189e44b99e0fb22787ede92ed1d52ca9e5b930d4016ce1032179970",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/03.benchmark.json": "6b4e15e39b6c28df96fca865b1fad03576e9547b9adf29594ffd74838a3f9b86",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/04.csv": "1fd176ca47c2dfc0132ee5fd6cbd18657389bcdf950eb109884f622608a29880",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/04.benchmark.json": "551a6ff6bec9912ce22480d467c05c43f9c950a9878327f4f531c616cc9ca58d",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/05.csv": "76733823ae897a61c632895e3bf172f4e3d106f5b03704c35b07425788305eec",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/05.benchmark.json": "9953bd873f30cdf092c221b804349dcede7cdfd492ca19759f6c62b364d02fed",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/06.csv": "b66b206f73220c036581389c505485b8c6342a08122470bdb161a95e931d25d6",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/06.benchmark.json": "21e826d66de5d8a0176b7458322062d24ff2e47988f7b829a19a650aa47e4864",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/07.csv": "406b271a21ea099427cec05e1da3d1ae82dad0396ec4b36be45d1b09902a8b6b",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/07.benchmark.json": "53392b4029b0f9ca4042268ef201c3a86a689ab6d45fd2dad651a553aa5d19a5",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/08.csv": "7dc7e44f507c21ef39a85cab68c106215b14af395a55bc2245d70eba64b48154",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/08.benchmark.json": "efc53282d00c7570f2acdc12a13800805989414f81240eb73488d2f95d419ea5",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/09.csv": "9985f8cabcbd07b62228424457c65c6fd2923693cef2d360f39d8381cd92f4ed",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/09.benchmark.json": "5a6636ca49c6131a4cc98b3baa36117bea5485d8912995b3b98322087a76963f",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/10.csv": "3ed25245e313d821a3c1b2f437dcbfd197d928cfe800ff9bf926aee3369762aa",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/10.benchmark.json": "9394f545d4f3caa2e5fba069bfbcb3497b7af2048c1846a51853f948d3c51ea9",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/11.csv": "00a0dc0d2c343e1473fd172cb637bfe9c45adc5e2256bb996700b4ddc280e093",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/11.benchmark.json": "d5ba3bf8623d231c6a2681cf1456dbc23645b76afb74ea77f27d5aeaa909cceb",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/12.csv": "4aed619f04cfd75eccc2c2807191def8d6d0463d54d54a332baeba67a5708d4b",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/12.benchmark.json": "4b76262ac035461905a346100bb74af2e9a206af54cb6ad59b364ed5b46c8931",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/13.csv": "37d7e66b0d6ff993e6759c8040aa6b39f579bb10fe3a3fe6f55da8a02245d95c",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/13.benchmark.json": "f18b741e6656dde00be2688bd43b23023c2c3d3853b4a878da937c5c319c34b8",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/14.csv": "bab8853b260686d3734fc61cc8495ee24000dc971765ab45861a07d5fa945271",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/14.benchmark.json": "829143b18a6d71d09c1a40a291f3e86e084ba4920d224b16c35061af19d9575c",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/15.csv": "b101f92ef822125175c50b473ab86e998da904f0997c8498055506c93fbd9bda",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/15.benchmark.json": "cc33d51e456b7024a3625d5eab3fd150f0718ae96074340bca81d1bd4b071cef",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/16.csv": "bac3609b6bff00f7fe8c6b0c250061d52c8fa3a33121de65c099d335ec192508",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/16.benchmark.json": "d63fbfe5b9b738fdcc7e1595a49dc041c125155bbdcf3ec1eef778c1e97d589f",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/17.csv": "dad3c60431cf6507d8641c148b70bf2b51c144c680ee901ad66cd2704cd8fd09",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/17.benchmark.json": "47620a80dcae3493ae6d3b65078b184a6e66057179ca11413512e39c209a26ad",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/18.csv": "10b7e33851e608f04e348321ba0b0485542aadccf7e77b9705bb81f1f1eb15ae",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/18.benchmark.json": "17aacccbcf84134f9a7e59eac9b8a05e591fe05f31664b2edd18cf7587f07375",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/19.csv": "aede7810fd2000159d8d99b1d116148f9a89cf0bec16c33a94b69f7e83d66b5c",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/19.benchmark.json": "a11752d536b4440379af30a8500c468ad233d5d4f19b1c2ef8c21a181b73a3d7",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/20.csv": "d2757f70990f4d86ca2f10cdcb078cd44f4f9ce9d60ba4480ce3842e223e5df4",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/20.benchmark.json": "61732e848a9916cad64a1280314c7088f6af30ef3c0526c42c514047bf2b0603",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/21.csv": "0c4e52c31f994a3575f28f61600670f5c572b359ebac37b3e3eb4135e377d669",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/21.benchmark.json": "7608394d94cae2152d612dcb068c68eaa88fbe9ae82ff32721d7a758014a03cc",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/22.csv": "8f066520e6c5104baaba24fef22ce119995c5a7e753f61fb9a050081c99466b6",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/22.benchmark.json": "04e7670aa7fcad7978894c4eb9ff110df4bdd66a835da1e213bb20b2a70f2dd5",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/23.csv": "0b624fccfee303dc00ce12a532e953bbc34faafa7c7b03dc6782510020bc5cd8",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/23.benchmark.json": "e925ffd2a41e525490bc8b0e8581b91fbe7fc8e150792a2be38db7ae3a1afae8",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/24.csv": "ef990b800b4b3464526ed76d31fffbe9d4ecfe60e2b80c508017a86c29831a59",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/results/current-complexity-2026-10-15/capture-attempt01/capture_curves/24.benchmark.json": "7b0f6ae033ed2018c2d62eea1a33d15e073d532fef94c4b8f11700e67cb46cff",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/models/attempt03/means.csv": "2ce33142c99bf6bc58300248de423f18275bb5170f103b057643023d64829a2e",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/models/attempt03/holdouts.csv": "94f857c3e3f88d8522157c52df03412b4517305f2b8aa7e39a71f91af77fbfbd",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/models/attempt03/fits.csv": "def6d7541889a8793d586ac595854d6d64e1c7ce7f21a69ea8b3571c35ae7028"
+  }
+}

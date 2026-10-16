@@ -1,0 +1,21 @@
+{
+  "validation": "pass",
+  "native_execution": false,
+  "scope": "Validate unchanged live executable helper hashes before controller import; synthetic omitted-source fixture isolates inventory gate.",
+  "test_command": [
+    "/usr/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "-v",
+    "test_analyze_diagnostics.py"
+  ],
+  "test_groups": 8,
+  "actual_exit_code": 0,
+  "tool_chunk": "53ae2d",
+  "unittest_seconds": 0.254,
+  "source_sha256": {
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/analyze_diagnostics.py": "e6b34e8f86f7beff00a50f11a0ba858b3c058d1550ddbeeac84bd0aaf57b947e",
+    "/Users/random_person/Desktop/kkt-linear-scaling/benchmark/scaling_investigation/analysis/test_analyze_diagnostics.py": "72b448468ce3e6e2c567a67e106f223aab7404b6fe0b2017ab6f0e36065577ba"
+  }
+}

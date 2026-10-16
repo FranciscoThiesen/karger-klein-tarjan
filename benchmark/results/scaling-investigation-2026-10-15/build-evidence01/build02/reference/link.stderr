@@ -1,0 +1,277 @@
+ld: warning: ignoring file '/usr/local/lib/libc++.1.0.dylib': found architecture 'x86_64', required architecture 'arm64'
+ld: warning: ignoring file '/usr/local/lib/libunwind.1.0.dylib': found architecture 'x86_64', required architecture 'arm64'
+Undefined symbols for architecture arm64:
+  "__Unwind_Resume", referenced from:
+      boruvka(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in boruvka.o
+      std::__1::vector<std::__1::vector<int, std::__1::allocator<int>>, std::__1::allocator<std::__1::vector<int, std::__1::allocator<int>>>>::vector(unsigned long) in boruvka.o
+      std::__1::__throw_length_error[abi:ue170006](char const*) in boruvka.o
+      std::__1::pair<std::__1::__hash_iterator<std::__1::__hash_node<int, void*>*>, bool> std::__1::__hash_table<int, std::__1::hash<int>, std::__1::equal_to<int>, std::__1::allocator<int>>::__emplace_unique_key_args<int, int const&>(int const&, int const&) in boruvka.o
+      kruskal(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in kruskal.o
+      kruskal(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in kruskal.o
+      prim(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in prim.o
+      ...
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>::compare(unsigned long, unsigned long, char const*) const", referenced from:
+      benchmark_crossover::make_fixture(benchmark_crossover::Spec const&, unsigned int) in diagnostic.o
+      benchmark_crossover::edge_count(benchmark_crossover::Spec const&) in diagnostic.o
+      benchmark_attachments::block_size(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) in diagnostic.o
+  "std::__1::locale::use_facet(std::__1::locale::id&) const", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char>>& std::__1::__put_character_sequence[abi:ue170006]<char, std::__1::char_traits<char>>(std::__1::basic_ostream<char, std::__1::char_traits<char>>&, char const*, unsigned long) in diagnostic.o
+  "std::__1::ios_base::getloc() const", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char>>& std::__1::__put_character_sequence[abi:ue170006]<char, std::__1::char_traits<char>>(std::__1::basic_ostream<char, std::__1::char_traits<char>>&, char const*, unsigned long) in diagnostic.o
+  "std::exception::what() const", referenced from:
+      vtable for std::__1::bad_function_call in boruvka.o
+  "std::logic_error::logic_error(char const*)", referenced from:
+      std::length_error::length_error[abi:ue170006](char const*) in boruvka.o
+      std::out_of_range::out_of_range[abi:ue170006](char const*) in diagnostic.o
+  "std::length_error::~length_error()", referenced from:
+      std::__1::__throw_length_error[abi:ue170006](char const*) in boruvka.o
+  "std::out_of_range::~out_of_range()", referenced from:
+      std::__1::__throw_out_of_range[abi:ue170006](char const*) in diagnostic.o
+  "std::runtime_error::runtime_error(char const*)", referenced from:
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      ...
+  "std::runtime_error::runtime_error(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&)", referenced from:
+      benchmark_crossover::edge_count(benchmark_crossover::Spec const&) in diagnostic.o
+      benchmark_attachments::block_size(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) in diagnostic.o
+      benchmark_validation::detail::reject(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) in diagnostic.o
+  "std::runtime_error::~runtime_error()", referenced from:
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      ...
+  "std::bad_array_new_length::bad_array_new_length()", referenced from:
+      std::__throw_bad_array_new_length[abi:ue170006]() in boruvka.o
+  "std::bad_array_new_length::~bad_array_new_length()", referenced from:
+      std::__throw_bad_array_new_length[abi:ue170006]() in boruvka.o
+  "std::__1::__next_prime(unsigned long)", referenced from:
+      std::__1::pair<std::__1::__hash_iterator<std::__1::__hash_node<int, void*>*>, bool> std::__1::__hash_table<int, std::__1::hash<int>, std::__1::equal_to<int>, std::__1::allocator<int>>::__emplace_unique_key_args<int, int const&>(int const&, int const&) in boruvka.o
+      std::__1::pair<std::__1::__hash_iterator<std::__1::__hash_node<int, void*>*>, bool> std::__1::__hash_table<int, std::__1::hash<int>, std::__1::equal_to<int>, std::__1::allocator<int>>::__emplace_unique_key_args<int, int const&>(int const&, int const&) in boruvka.o
+      kkt(problem&, unsigned int) in kkt.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      benchmark_crossover::make_fixture(benchmark_crossover::Spec const&, unsigned int) in diagnostic.o
+      benchmark_crossover::make_fixture(benchmark_crossover::Spec const&, unsigned int) in diagnostic.o
+      benchmark_crossover::make_fixture(benchmark_crossover::Spec const&, unsigned int) in diagnostic.o
+      ...
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>::append(char const*)", referenced from:
+      benchmark_validation::certify_mst(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in diagnostic.o
+      benchmark_validation::certify_mst(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in diagnostic.o
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>::append(char const*, unsigned long)", referenced from:
+      benchmark_validation::certify_mst(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in diagnostic.o
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>::insert(unsigned long, char const*)", referenced from:
+      benchmark_validation::certify_mst(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in diagnostic.o
+  "std::__1::basic_ostream<char, std::__1::char_traits<char>>::flush()", referenced from:
+      _main in diagnostic.o
+  "std::__1::basic_ostream<char, std::__1::char_traits<char>>::sentry::sentry(std::__1::basic_ostream<char, std::__1::char_traits<char>>&)", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char>>& std::__1::__put_character_sequence[abi:ue170006]<char, std::__1::char_traits<char>>(std::__1::basic_ostream<char, std::__1::char_traits<char>>&, char const*, unsigned long) in diagnostic.o
+  "std::__1::basic_ostream<char, std::__1::char_traits<char>>::sentry::~sentry()", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char>>& std::__1::__put_character_sequence[abi:ue170006]<char, std::__1::char_traits<char>>(std::__1::basic_ostream<char, std::__1::char_traits<char>>&, char const*, unsigned long) in diagnostic.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char>>& std::__1::__put_character_sequence[abi:ue170006]<char, std::__1::char_traits<char>>(std::__1::basic_ostream<char, std::__1::char_traits<char>>&, char const*, unsigned long) in diagnostic.o
+  "std::__1::basic_ostream<char, std::__1::char_traits<char>>::operator<<(unsigned int)", referenced from:
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+  "std::__1::basic_ostream<char, std::__1::char_traits<char>>::operator<<(unsigned long)", referenced from:
+      _main in diagnostic.o
+  "std::__1::basic_ostream<char, std::__1::char_traits<char>>::operator<<(long long)", referenced from:
+      _main in diagnostic.o
+  "std::__1::basic_ostream<char, std::__1::char_traits<char>>::operator<<(unsigned long long)", referenced from:
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      ...
+  "std::__1::random_device::random_device(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&)", referenced from:
+      get_random_spanning_tree(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in graph_utils.o
+      build_random_connected_graph(int, int, unsigned int) in graph_utils.o
+  "std::__1::random_device::~random_device()", referenced from:
+      get_random_spanning_tree(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in graph_utils.o
+      get_random_spanning_tree(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in graph_utils.o
+      build_random_connected_graph(int, int, unsigned int) in graph_utils.o
+      build_random_connected_graph(int, int, unsigned int) in graph_utils.o
+  "std::__1::random_device::operator()()", referenced from:
+      get_random_spanning_tree(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in graph_utils.o
+  "std::__1::cerr", referenced from:
+      _main in diagnostic.o
+  "std::__1::cout", referenced from:
+      _main in diagnostic.o
+  "std::__1::ctype<char>::id", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char>>& std::__1::__put_character_sequence[abi:ue170006]<char, std::__1::char_traits<char>>(std::__1::basic_ostream<char, std::__1::char_traits<char>>&, char const*, unsigned long) in diagnostic.o
+  "void std::__1::__sort<std::__1::__less<int, int>&, int*>(int*, int*, std::__1::__less<int, int>&)", referenced from:
+      benchmark_validation::certify_mst(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in diagnostic.o
+  "void std::__1::__sort<std::__1::__less<unsigned long long, unsigned long long>&, unsigned long long*>(unsigned long long*, unsigned long long*, std::__1::__less<unsigned long long, unsigned long long>&)", referenced from:
+      benchmark_validation::certify_mst(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in diagnostic.o
+  "std::__1::chrono::steady_clock::now()", referenced from:
+      _main in diagnostic.o
+      _main in diagnostic.o
+  "std::__1::locale::~locale()", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char>>& std::__1::__put_character_sequence[abi:ue170006]<char, std::__1::char_traits<char>>(std::__1::basic_ostream<char, std::__1::char_traits<char>>&, char const*, unsigned long) in diagnostic.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char>>& std::__1::__put_character_sequence[abi:ue170006]<char, std::__1::char_traits<char>>(std::__1::basic_ostream<char, std::__1::char_traits<char>>&, char const*, unsigned long) in diagnostic.o
+  "std::__1::stoull(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, unsigned long*, int)", referenced from:
+      (anonymous namespace)::number(char const*) in diagnostic.o
+  "std::__1::ios_base::__set_badbit_and_consider_rethrow()", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char>>& std::__1::__put_character_sequence[abi:ue170006]<char, std::__1::char_traits<char>>(std::__1::basic_ostream<char, std::__1::char_traits<char>>&, char const*, unsigned long) in diagnostic.o
+  "std::__1::ios_base::clear(unsigned int)", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char>>& std::__1::__put_character_sequence[abi:ue170006]<char, std::__1::char_traits<char>>(std::__1::basic_ostream<char, std::__1::char_traits<char>>&, char const*, unsigned long) in diagnostic.o
+  "std::__1::to_string(int)", referenced from:
+      benchmark_validation::certify_mst(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in diagnostic.o
+  "std::__1::to_string(long long)", referenced from:
+      benchmark_validation::certify_mst(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in diagnostic.o
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> std::__1::operator+<char, std::__1::char_traits<char>, std::__1::allocator<char>>(char const*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&)", referenced from:
+      benchmark_crossover::edge_count(benchmark_crossover::Spec const&) in diagnostic.o
+      benchmark_attachments::block_size(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) in diagnostic.o
+      benchmark_validation::detail::reject(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) in diagnostic.o
+  "std::exception::~exception()", referenced from:
+      std::__1::bad_function_call::~bad_function_call() in boruvka.o
+      std::__1::bad_function_call::~bad_function_call() in boruvka.o
+  "std::terminate()", referenced from:
+      ___clang_call_terminate in diagnostic.o
+  "typeinfo for std::length_error", referenced from:
+      std::__1::__throw_length_error[abi:ue170006](char const*) in boruvka.o
+  "typeinfo for std::out_of_range", referenced from:
+      std::__1::__throw_out_of_range[abi:ue170006](char const*) in diagnostic.o
+  "typeinfo for std::runtime_error", referenced from:
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      ...
+  "typeinfo for std::bad_array_new_length", referenced from:
+      std::__throw_bad_array_new_length[abi:ue170006]() in boruvka.o
+  "typeinfo for std::exception", referenced from:
+      typeinfo for std::__1::bad_function_call in boruvka.o
+      GCC_except_table0 in diagnostic.o
+  "vtable for __cxxabiv1::__class_type_info", referenced from:
+      typeinfo for std::__1::__function::__base<void (int, int)> in boruvka.o
+      typeinfo for boruvka(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int)::$_0 in boruvka.o
+   NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+  "vtable for __cxxabiv1::__si_class_type_info", referenced from:
+      typeinfo for std::__1::bad_function_call in boruvka.o
+      typeinfo for std::__1::__function::__func<boruvka(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int)::$_0, std::__1::allocator<boruvka(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int)::$_0>, void (int, int)> in boruvka.o
+   NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+  "vtable for std::length_error", referenced from:
+      std::length_error::length_error[abi:ue170006](char const*) in boruvka.o
+   NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+  "vtable for std::out_of_range", referenced from:
+      std::out_of_range::out_of_range[abi:ue170006](char const*) in diagnostic.o
+   NOTE: a missing vtable usually means the first non-inline virtual member function has no definition.
+  "operator delete(void*)", referenced from:
+      boruvka(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in boruvka.o
+      boruvka(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in boruvka.o
+      boruvka(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in boruvka.o
+      boruvka(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in boruvka.o
+      boruvka(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in boruvka.o
+      boruvka(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in boruvka.o
+      boruvka(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in boruvka.o
+      boruvka(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in boruvka.o
+      boruvka(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in boruvka.o
+      boruvka(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in boruvka.o
+      boruvka(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in boruvka.o
+      boruvka(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in boruvka.o
+      ...
+  "operator new(unsigned long)", referenced from:
+      boruvka(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in boruvka.o
+      boruvka(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in boruvka.o
+      boruvka(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in boruvka.o
+      boruvka(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in boruvka.o
+      boruvka(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in boruvka.o
+      boruvka(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in boruvka.o
+      std::__1::vector<std::__1::vector<int, std::__1::allocator<int>>, std::__1::allocator<std::__1::vector<int, std::__1::allocator<int>>>>::vector(unsigned long) in boruvka.o
+      ...
+  "___cxa_allocate_exception", referenced from:
+      std::__1::__throw_length_error[abi:ue170006](char const*) in boruvka.o
+      std::__throw_bad_array_new_length[abi:ue170006]() in boruvka.o
+      std::__1::__throw_bad_function_call[abi:ue170006]() in boruvka.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      ...
+  "___cxa_begin_catch", referenced from:
+      _main in diagnostic.o
+      ___clang_call_terminate in diagnostic.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char>>& std::__1::__put_character_sequence[abi:ue170006]<char, std::__1::char_traits<char>>(std::__1::basic_ostream<char, std::__1::char_traits<char>>&, char const*, unsigned long) in diagnostic.o
+  "___cxa_end_catch", referenced from:
+      _main in diagnostic.o
+      _main in diagnostic.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char>>& std::__1::__put_character_sequence[abi:ue170006]<char, std::__1::char_traits<char>>(std::__1::basic_ostream<char, std::__1::char_traits<char>>&, char const*, unsigned long) in diagnostic.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char>>& std::__1::__put_character_sequence[abi:ue170006]<char, std::__1::char_traits<char>>(std::__1::basic_ostream<char, std::__1::char_traits<char>>&, char const*, unsigned long) in diagnostic.o
+  "___cxa_free_exception", referenced from:
+      std::__1::__throw_length_error[abi:ue170006](char const*) in boruvka.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      (anonymous namespace)::number(char const*) in diagnostic.o
+      ...
+  "___cxa_throw", referenced from:
+      std::__1::__throw_length_error[abi:ue170006](char const*) in boruvka.o
+      std::__throw_bad_array_new_length[abi:ue170006]() in boruvka.o
+      std::__1::__throw_bad_function_call[abi:ue170006]() in boruvka.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      _main in diagnostic.o
+      ...
+  "___gxx_personality_v0", referenced from:
+      /Users/random_person/Desktop/kkt-linear-scaling/.build/scaling-investigation/build02/reference/union_find.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)

@@ -1,5 +1,6 @@
 #include "lca.hpp"
 #include "../common/work_stats.hpp"
+#include "../common/phase_stats.hpp"
 
 void LCA::dfs(const vector<vector<int>>& graph, int v, int p, int h)
 {
@@ -22,6 +23,7 @@ int LCA::min_by_h(int i, int j)
 
 void LCA::precompute_lca(const vector<vector<int>>& graph, int root)
 {
+    KKT_PHASE(lca_build);
 	KKT_WORK_ADD(lca_calls, 1);
 	KKT_WORK_ADD(lca_vertices, n);
 	// get euler tour & indices of first occurences
