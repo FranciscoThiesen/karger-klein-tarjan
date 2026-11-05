@@ -238,6 +238,6 @@ Use [run_diagnostics.py](run_diagnostics.py) afterward for the separately built 
 | Continued-contraction diagnostic | [report](diagnostics/ablation_analysis/report.md), [primary](diagnostics/primary.csv), [repeat](diagnostics/repeat.csv), [trace](diagnostics/trace.csv) |
 | Manual-time fits and built-in labels | [report](diagnostics/complexity_analysis/report.md), [raw Google Benchmark JSON](diagnostics/timing.json) |
 | Checked complete small-graph exports | [graph_views.json](graph_views.json), [exporter](../../export_graph_views.cpp) |
-| Overall narrative and interactive graphs | [Markdown report](../../../docs/kkt-report/REPORT.md), [HTML report](../../../docs/kkt-report/report.html), [offline explorer](../../../docs/kkt-report/graph-explorer.html) |
+| Overall narrative and interactive graphs | [Markdown report](../../../docs/kkt-report/REPORT.md), [local HTML report and explorer build](../../../docs/kkt-report/README.md) |
 
 Each main analysis directory contains PNG, SVG and PDF versions of `family_ratios`, `family_work`, `spatial_weighting` and `core_leaf_parameters`, alongside all numeric tables. Raw observations are never replaced by fitted or plotted values.

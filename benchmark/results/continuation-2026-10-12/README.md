@@ -270,7 +270,7 @@ Whole-process instruction/cycle totals include setup and both solvers.
 
 ## Explore the mechanism
 
-The [offline interactive explorer](visualization/index.html) contains seven
+The [locally generated interactive explorer](visualization/README.md) contains seven
 complete, certified n=64, m=256 fixtures. Compare weight variants, move through
 actual production contraction stages and inspect component membership, selected
 edges and residual edges. Layout positions are schematic; small pictures explain

@@ -1,8 +1,9 @@
 # Report and visual artifacts
 
-Read [Making KKT practical](REPORT.md), or open [the offline HTML edition](report.html)
-in a browser. The [standalone 3D explorer](graph-explorer.html) contains all graph
-data and code locally. The HTML files need no server, account, or internet connection.
+Read [Making KKT practical](REPORT.md). The HTML edition and standalone 3D explorer
+are local build outputs, excluded from Git; their Markdown, renderer sources,
+figures and checked graph inputs remain tracked. Once built, `report.html` and
+`graph-explorer.html` need no server, account, or internet connection.
 Evidence links outside those files resolve in a repository checkout; the figures
 and interactive graphs themselves remain usable when the HTML is copied elsewhere.
 
@@ -11,7 +12,23 @@ algorithm comparisons, and the continuation-strategy ablation. Its print compani
 is generated at `output/pdf/kkt-practical-report.pdf`; the checked page count and
 content hashes are in [render_metadata.json](render_metadata.json).
 
-To regenerate after running the strict evidence analyzers:
+To build the HTML editions from the retained inputs, run from the repository root:
+
+```sh
+python3 docs/kkt-report/build_graph_views.py
+python3 docs/kkt-report/build_report.py
+```
+
+Open `docs/kkt-report/report.html` or `docs/kkt-report/graph-explorer.html` in a
+browser. `explorer_fragment.html` is the intermediate embedded by the report.
+These commands also regenerate graph layouts, figures and `render_metadata.json`;
+use a disposable checkout if you need to preserve those retained files exactly.
+The retained metadata and QA records describe the original render and PDF,
+not a new validation of a rebuilt edition. HTML generation requires Python,
+NumPy, Matplotlib, NetworkX and Markdown; it does not require a browser.
+
+To regenerate the complete report and repeat presentation checks after running
+the strict evidence analyzers:
 
 ```sh
 python3 docs/kkt-report/build_graph_views.py

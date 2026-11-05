@@ -5,7 +5,7 @@ Francisco Thiesen's Karger–Klein–Tarjan repository · 10–11 October 2026
 
 This report asks three distinct questions: whether the original implementation faithfully realized KKT's local complexity bounds; whether the current implementation *measures* like linear time; and which graph structures make it competitive in practice. The answers come from source inspection, certified benchmark outputs, separate work counters, two complete new timing campaigns, and a controlled comparison with repeated compacting Borůvka steps.
 
-The main document is this Markdown file. The [HTML edition](report.html) adds a fully offline, interactive 3D graph explorer. The [standalone explorer](graph-explorer.html) exposes actual contraction and filtering results for seven complete small graphs. A paginated companion checks the requested 40-page limit.
+The main document is this Markdown file. The [locally generated HTML edition and standalone explorer](README.md) expose actual contraction and filtering results for seven complete small graphs, fully offline. Generated HTML is excluded from Git. A paginated companion checks the requested 40-page limit.
 
 **Measured source.** New benchmark infrastructure is revision `c9ed4ca`. The production KKT algorithm is unchanged from `2d4fbf1`; all four algorithm implementations, the earlier fixtures, and the original timing boundary were checked against `1a3fc3c`. Raw evidence, precise commands, binary/source hashes and validation records are retained in [the new experiment directory](../../benchmark/results/common-2026-10-11/).
 
@@ -304,7 +304,7 @@ Teal edges in the first two panels are selected safe edges. Purple vertices iden
 
 The small instance illustrates the mechanism. It is not substituted for a timed large instance, and its residual counts should not be quoted as the 262,144-vertex case's counts.
 
-[Open the interactive 3D explorer](graph-explorer.html) to rotate this graph, inspect member counts, step through contraction, and view the sampled forest and removable heavy edges. The explorer includes seven full graphs, including a regular negative control. Nothing is downsampled from a large graph and presented as the full input.
+[Build the interactive 3D explorer](README.md), then open `graph-explorer.html` to rotate this graph, inspect member counts, step through contraction, and view the sampled forest and removable heavy edges. The explorer includes seven full graphs, including a regular negative control. Nothing is downsampled from a large graph and presented as the full input.
 
 <!-- EXPLORER -->
 
@@ -483,7 +483,7 @@ For every row, [primary analysis](../../benchmark/results/common-2026-10-11/prim
 | Original structural repair campaign | [repair-2026-10-09](../../benchmark/results/repair-2026-10-09/README.md) |
 | Six accepted practical optimizations and rejected experiment | [practical-2026-10-10](../../benchmark/results/practical-2026-10-10/README.md) |
 | Earlier six additional shapes and controls | [shapes-2026-10-11](../../benchmark/results/shapes-2026-10-11/README.md) |
-| Standalone offline visual inspection | [graph explorer](graph-explorer.html), [checked raw exports](../../benchmark/results/common-2026-10-11/graph_views.json) |
+| Standalone offline visual inspection | [local explorer build](README.md), [checked raw exports](../../benchmark/results/common-2026-10-11/graph_views.json) |
 
 Primary algorithm and tooling references:
 

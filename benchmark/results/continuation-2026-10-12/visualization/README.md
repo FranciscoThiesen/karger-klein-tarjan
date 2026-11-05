@@ -14,6 +14,20 @@ memberships and minimum parallel edges. The union of selected IDs must equal
 the certified MST. JSON includes original labels, input ordering, backbone IDs,
 all-edge dyadic levels, exact stage edges, selected IDs and removal accounting.
 
+The generated `index.html` is excluded from Git. Rebuild it from the retained
+[checked fixtures](graphs.json) and [source template](index.template.html),
+without compiling or running a solver, from the repository root:
+
+```sh
+kkt_view_dir=benchmark/results/continuation-2026-10-12/visualization
+python3 "$kkt_view_dir/build_view.py" "$kkt_view_dir/graphs.json" \
+  --output "$kkt_view_dir/index.html"
+node "$kkt_view_dir/validate_view.js"
+```
+
+Open the resulting `index.html` locally. The historical validation records below
+describe the original capture, not a fresh browser inspection of a rebuild.
+
 The exporter was compiled with `/usr/bin/clang++` and the matching Apple SDK,
 linking the existing native, uninstrumented production objects. With those Make
 objects already built, reproduce from the repository root:
@@ -52,7 +66,7 @@ does not depict KKT sampling, verify a runtime crossover, or establish that
 these engineered constructions represent application workloads.
 
 Compilation, generation and the JSON/JavaScript checks completed while no timed
-algorithm process was active. The generated [index.html](index.html) embeds all
+algorithm process was active. The locally generated `index.html` embeds all
 data. `export.log` records seven certified fixtures; `javascript_validation.json`
 records 492 control combinations and 984 panel states passing exact SVG
 edge/node-count, next-selection and visibility-label checks. The JavaScript test

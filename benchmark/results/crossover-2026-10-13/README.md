@@ -126,7 +126,7 @@ MST edges and two production contraction rounds. The line is truly one
 dimensional; curved edge routing only separates overlapping lines visually.
 The random-weight twins keep the topology and geometry. [The export archive](graph-views-final/README.md)
 retains all tuples and selected IDs; the earlier report also has an
-[offline 3D explorer](../../../docs/kkt-report/graph-explorer.html) for its own
+[locally generated 3D explorer](../../../docs/kkt-report/README.md) for its own
 small fixtures. Neither small visualization substitutes for the large traces.
 
 A useful cost diagnostic is the total edge volume entering contraction rounds,
