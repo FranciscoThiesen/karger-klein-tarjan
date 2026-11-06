@@ -1,0 +1,86 @@
+{
+  "schema": "kkt_lean_checked_v1",
+  "date": "2026-11-05",
+  "status": "checked_conditional_cost_model_not_cpp_verification",
+  "lean": {
+    "version": "4.24.0",
+    "commit": "797c613eb9b6d4ec95db23e3e00af9ac6657f24b",
+    "platform": "arm64-apple-darwin23.6.0",
+    "archive_url": "https://github.com/leanprover/lean4/releases/download/v4.24.0/lean-4.24.0-darwin_aarch64.tar.zst",
+    "archive_sha256": "17ee554702c199fc03f37b1c3708245671c93f5d932dcff55a03fa6cdb5e5adf",
+    "archive_bytes": 445109541,
+    "archive_digest_verified_against_official_github_release": true
+  },
+  "mathlib": {
+    "tag": "v4.24.0",
+    "commit": "f897ebcf72cd16f89ab4577d0c826cd14afaafc7",
+    "precompiled_cache": "official Azure mathlib cache",
+    "dependency_manifest": "mathlib-dependency-manifest.json"
+  },
+  "original_check": {
+    "exit_code": 1,
+    "source_sha256": "309c622527d70bc2db9b825c673fdb7483fed165529301c26e425f59118e2cf0",
+    "failed_goals": [
+      "eighth_sample_step light_edges",
+      "eighth_sample_step vertex_budget"
+    ],
+    "repair": "Explicitly normalize rational division before linarith in the eighth-sampling specialization. The statements are unchanged.",
+    "diagnostics": "original-check.stdout"
+  },
+  "project_build": {
+    "exit_code": 0,
+    "command": [
+      "lake",
+      "build"
+    ],
+    "directory": "lean/kkt_recurrence",
+    "new_declarations_with_axiom_reports": 10,
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "contains_sorryAx": false,
+    "stdout": "project-build.stdout",
+    "stderr": "project-build.stderr",
+    "trust_level": "Lean default; official cached dependency oleans; new declarations elaborated and checked"
+  },
+  "scope": {
+    "proved": [
+      "Three conditional affine arithmetic lemmas",
+      "Well-founded finite-outcome recursive expected-work definition and uniform affine bound under explicit premises",
+      "Triangular all-colliding chain traversal count and absence of a uniform linear bound in its natural-number model",
+      "Uniform bounded per-operation costs preserve linear total-cost upper bounds",
+      "No surjective mapping from 32-bit seeds onto all 33-bit patterns"
+    ],
+    "not_proved": [
+      "Graph/MSF correctness",
+      "KKT independent-sampling lemma",
+      "Per-node C++ verifier/allocation/scan work bound",
+      "C++/libc++ refinement",
+      "Actual PRNG expected-time guarantee",
+      "A cache-miss or wall-clock asymptotic theorem"
+    ]
+  },
+  "sources": {
+    "KKTRecurrence.lean": "8b04fa1eaa4e44d712fe4322997fbd3f41213e05e2126d646384428e990f2437",
+    "ExpectedWork.lean": "fe04821072d5f43db7f5596dda07823c95c2ded2f05e5f5baa78964aff138246",
+    "lean-toolchain": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434",
+    "lakefile.toml": "cc75ee5ba61d52c1edf7a14f9a7df7f36a98a60829e6da15f4be6e951fbe3ead",
+    "lake-manifest.json": "4d6d2e91c1755de414db09915eb980c47389ace52ed8ec6d05c045b10ae5056e"
+  },
+  "evidence": {
+    "KKTRecurrence.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "KKTRecurrence.stdout": "a0cbddba3bd205bff10cf84467fcf57226bf0be206e5c3dea3a0c66d33945908",
+    "intermediate-ExpectedWork.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "intermediate-ExpectedWork.stdout": "8ae9e096b277fcbecc9b78865ed69517dfcec45d31b71f2fd8aafddbd34951d9",
+    "mathlib-dependency-manifest.json": "d1208145605d20579ecc91977126e7647e0216a3f7b7d2b9a55d33d040bcd0b8",
+    "original-check.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "original-check.stdout": "994a619a8c1b273d7b828c845bb0a716c9b826458850651be9358840e09ab6d2",
+    "project-build.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "project-build.stdout": "e00102495d925f4d6e4b9c62e95714fcbceb254d385d4962bf34d00ece1ba277",
+    "project-update.stderr": "71202e950cb2eb2d9edcb02ea16ed2af16a8cbb05801a902e132952398d54340",
+    "project-update.stdout": "7f996a5e62fcbe863fedffb5a70e52ce4312b8e2780f85f8baa5faf26be83796"
+  },
+  "intermediate_checks": "intermediate-ExpectedWork.* predates the final collision nonlinearity lemma; project-build.* is the authoritative final check."
+}

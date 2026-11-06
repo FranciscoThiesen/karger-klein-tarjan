@@ -1,0 +1,29 @@
+/Users/random_person/Desktop/kkt-lean-complexity/lean/kkt_recurrence/KKTRecurrence.lean:77:4: error: linarith failed to find a contradiction
+case light_edges.h
+c m n ms ml ns nl : ℝ
+hc : 0 ≤ c
+hm : 0 ≤ m
+hn : 0 ≤ n
+sample_edges : ms ≤ m / 8
+light_edges : ml ≤ 2 * n
+sample_vertices : ns ≤ n / 4
+light_vertices : nl ≤ n / 4
+a✝ : n / (4 * (1 / 8)) < ml
+⊢ False
+failed
+/Users/random_person/Desktop/kkt-lean-complexity/lean/kkt_recurrence/KKTRecurrence.lean:81:4: error: linarith failed to find a contradiction
+case vertex_budget.h
+c m n ms ml ns nl : ℝ
+hc : 0 ≤ c
+hm : 0 ≤ m
+hn : 0 ≤ n
+sample_edges : ms ≤ m / 8
+light_edges : ml ≤ 2 * n
+sample_vertices : ns ≤ n / 4
+light_vertices : nl ≤ n / 4
+a✝ : 46 / 7 * c < c + 8 / 7 * c / (4 * (1 / 8)) + 46 / 7 * c / 2
+⊢ False
+failed
+'KKTRecurrence.affine_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KKTRecurrence.half_sample_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KKTRecurrence.eighth_sample_step' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

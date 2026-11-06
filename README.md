@@ -48,6 +48,10 @@ Alternatively, use Bazel:
 
 ### How to run benchmarks
 
+A [standalone Lean project](lean/kkt_recurrence/README.md) checks a conditional
+recursive expected-work bound and makes the cost-model assumptions explicit.
+It is an abstract proof, not formal verification of the C++ implementation.
+
 The [in-depth KKT report](docs/kkt-report/REPORT.md) explains the original
 complexity defects, current Google Benchmark fits, and repeated comparisons
 across 11 new graph variants and two unchanged controls. The [local HTML build](docs/kkt-report/README.md)

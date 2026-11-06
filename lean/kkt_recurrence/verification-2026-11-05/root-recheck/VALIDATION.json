@@ -1,0 +1,42 @@
+{
+  "status": "pass",
+  "scope": "Independent recompilation of actual repository proof sources using pinned checked dependencies; no C++ refinement claim.",
+  "records": [
+    {
+      "source": "KKTRecurrence.lean",
+      "sha256": "8b04fa1eaa4e44d712fe4322997fbd3f41213e05e2126d646384428e990f2437",
+      "command": [
+        "/private/tmp/kkt-lean-verification-2026-11-05/lean-4.24.0-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "/Users/random_person/Desktop/kkt-lean-complexity/lean/kkt_recurrence/KKTRecurrence.lean"
+      ],
+      "exit_code": 0,
+      "theorems": [
+        "KKTRecurrence.affine_step",
+        "KKTRecurrence.half_sample_step",
+        "KKTRecurrence.eighth_sample_step"
+      ]
+    },
+    {
+      "source": "ExpectedWork.lean",
+      "sha256": "fe04821072d5f43db7f5596dda07823c95c2ded2f05e5f5baa78964aff138246",
+      "command": [
+        "/private/tmp/kkt-lean-verification-2026-11-05/lean-4.24.0-darwin_aarch64/bin/lake",
+        "env",
+        "lean",
+        "/Users/random_person/Desktop/kkt-lean-complexity/lean/kkt_recurrence/ExpectedWork.lean"
+      ],
+      "exit_code": 0,
+      "theorems": [
+        "KKTExpectedWork.expectedWork_eq",
+        "KKTExpectedWork.affine_expected_work_bound",
+        "KKTExpectedWork.collision_chain_traversals",
+        "KKTExpectedWork.collision_work_not_uniform_linear",
+        "KKTExpectedWork.bounded_operation_cost",
+        "KKTExpectedWork.sum_cost_le_uniform",
+        "KKTExpectedWork.no_full_33_bit_support_from_32_bit_seed"
+      ]
+    }
+  ]
+}

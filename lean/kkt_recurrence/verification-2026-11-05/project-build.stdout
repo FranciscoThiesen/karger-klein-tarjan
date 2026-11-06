@@ -1,0 +1,13 @@
+ℹ [7351/7354] Built KKTRecurrence (3.6s)
+info: KKTRecurrence.lean:85:0: 'KKTRecurrence.affine_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: KKTRecurrence.lean:86:0: 'KKTRecurrence.half_sample_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: KKTRecurrence.lean:87:0: 'KKTRecurrence.eighth_sample_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [7353/7354] Built ExpectedWork (3.5s)
+info: ExpectedWork.lean:158:0: 'KKTExpectedWork.expectedWork_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ExpectedWork.lean:159:0: 'KKTExpectedWork.affine_expected_work_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ExpectedWork.lean:160:0: 'KKTExpectedWork.collision_chain_traversals' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ExpectedWork.lean:161:0: 'KKTExpectedWork.collision_work_not_uniform_linear' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ExpectedWork.lean:162:0: 'KKTExpectedWork.bounded_operation_cost' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ExpectedWork.lean:163:0: 'KKTExpectedWork.sum_cost_le_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: ExpectedWork.lean:164:0: 'KKTExpectedWork.no_full_33_bit_support_from_32_bit_seed' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (7354 jobs).
