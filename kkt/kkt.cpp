@@ -293,7 +293,7 @@ vector<Edge> get_mst_edges_from_problem(const unordered_set<int>& mst_id, const 
 }
 
 // Append only selected IDs; recursive work must scale with the current graph.
-static void kkt_internal(problem& P, std::mt19937& rng, vector<int>& result)
+static void kkt_internal(const problem& P, std::mt19937& rng, vector<int>& result)
 {
     KKT_WORK_RECURSION();
     KKT_WORK_ADD(kkt_calls, 1);
@@ -373,16 +373,24 @@ static void kkt_internal(problem& P, std::mt19937& rng, vector<int>& result)
     kkt_internal(G_remaining, rng, result);
 }
 
-// KKT algorithm using Hagerup verification
-unordered_set<int> kkt(problem& P, unsigned int seed)
+// Return the already accumulated IDs without imposing a lookup container.
+vector<int> kkt_edge_ids(const problem& P, unsigned int seed)
 {
     if (P.graph_edges.empty()) {
-        return unordered_set<int>();
+        return {};
     }
 
     vector<int> selected_ids;
     std::mt19937 rng(seed);
     kkt_internal(P, rng, selected_ids);
+    return selected_ids;
+}
+
+// Preserve the existing set-returning API and its hash-cost qualification.
+unordered_set<int> kkt(problem& P, unsigned int seed)
+{
+    const auto selected_ids = kkt_edge_ids(P, seed);
+    if (selected_ids.empty()) return {};
     KKT_WORK_ADD(hash_insert_items, selected_ids.size());
     // The result size is known. Reserve buckets once instead of repeatedly
     // growing and relinking the public set while inserting selected edges.

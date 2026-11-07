@@ -72,14 +72,30 @@ void check_problem(problem input, const EdgeIds& expected,
     const auto original_edges = input.graph_edges;
     const auto original_max_id = input.max_edge_id;
     const int original_vertices = input.num_vertices;
-    for (unsigned int seed : {0u, 1u, 7u, 42u,
-                              std::numeric_limits<unsigned int>::max()}) {
-        require_same_ids(kkt(input, seed), expected,
-                         context + ", seed " + std::to_string(seed));
+    const auto check_unchanged = [&] {
         require(input.graph_edges == original_edges &&
                     input.max_edge_id == original_max_id &&
                     input.num_vertices == original_vertices,
                 context + ": KKT modified its input");
+    };
+    for (unsigned int seed : {0u, 1u, 7u, 42u,
+                              std::numeric_limits<unsigned int>::max()}) {
+        const std::string seeded = context + ", seed " + std::to_string(seed);
+        // Calling through a const reference also checks the new API contract.
+        const problem& read_only = input;
+        const auto vector_ids = kkt_edge_ids(read_only, seed);
+        check_unchanged();
+        const EdgeIds vector_as_set(vector_ids.begin(), vector_ids.end());
+        require(vector_ids.size() == vector_as_set.size(),
+                seeded + ": vector API emitted duplicate IDs");
+        require_same_ids(vector_as_set, expected, seeded + ", vector API");
+        require(kkt_edge_ids(read_only, seed) == vector_ids,
+                seeded + ": vector API seed replay changed the result");
+        check_unchanged();
+        const auto set_ids = kkt(input, seed);
+        require_same_ids(set_ids, expected, seeded + ", set API");
+        require_same_ids(set_ids, vector_as_set, seeded + ", API agreement");
+        check_unchanged();
     }
 }
 
@@ -187,6 +203,27 @@ void test_random_graphs() {
         assign_unique_weights(graph, rng);
         check_id_layouts(graph, n, "connected graph n=" + std::to_string(n));
     }
+}
+
+void test_signed_weights() {
+    auto path = hierarchical_path(256);
+    int largest = 0;
+    for (const auto& edge : path) largest = std::max(largest, std::get<2>(edge));
+    for (auto& edge : path) std::get<2>(edge) -= largest + 1;
+    check_id_layouts(path, 256, "recursive path with all-negative weights");
+
+    std::mt19937 rng(20261107);
+    Graph graph;
+    append_component(graph, 0, 129, 129 * 6, rng);
+    assign_unique_weights(graph, rng);
+    const std::int64_t span = std::int64_t(std::numeric_limits<int>::max()) -
+                              std::numeric_limits<int>::min();
+    for (auto& edge : graph) {
+        const std::int64_t rank = std::get<2>(edge) - 1;
+        std::get<2>(edge) = static_cast<int>(std::numeric_limits<int>::min() +
+            rank * span / static_cast<std::int64_t>(graph.size() - 1));
+    }
+    check_id_layouts(graph, 129, "random graph spanning signed weight limits");
 }
 
 void test_disconnected_graphs() {
@@ -622,6 +659,7 @@ int main() {
     run("empty graphs and isolated vertices", test_empty_graphs);
     run("recursive hierarchical paths", test_recursive_paths);
     run("deterministic random graphs", test_random_graphs);
+    run("negative and signed boundary weights through both output APIs", test_signed_weights);
     run("disconnected minimum spanning forests", test_disconnected_graphs);
     run("parallel edges after forced contractions", test_parallel_edges_after_contraction);
     run("exhaustive upper-median tables through height 20", test_median_tables);

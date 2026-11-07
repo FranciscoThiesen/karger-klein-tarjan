@@ -1,0 +1,49 @@
+/opt/homebrew/opt/llvm/bin/clang++ --driver-mode=g++ -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -std=c++17 -O1 -g -Wall -Wextra -fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer -arch arm64 -I. -c boruvka/boruvka.cpp -o .build/output-api-sanitize-llvm-arm64/boruvka/boruvka.o
+/opt/homebrew/opt/llvm/bin/clang++ --driver-mode=g++ -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -std=c++17 -O1 -g -Wall -Wextra -fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer -arch arm64 -I. -c prim/prim.cpp -o .build/output-api-sanitize-llvm-arm64/prim/prim.o
+/opt/homebrew/opt/llvm/bin/clang++ --driver-mode=g++ -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -std=c++17 -O1 -g -Wall -Wextra -fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer -arch arm64 -I. -c kruskal/kruskal.cpp -o .build/output-api-sanitize-llvm-arm64/kruskal/kruskal.o
+/opt/homebrew/opt/llvm/bin/clang++ --driver-mode=g++ -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -std=c++17 -O1 -g -Wall -Wextra -fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer -arch arm64 -I. -c lca/lca.cpp -o .build/output-api-sanitize-llvm-arm64/lca/lca.o
+/opt/homebrew/opt/llvm/bin/clang++ --driver-mode=g++ -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -std=c++17 -O1 -g -Wall -Wextra -fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer -arch arm64 -I. -c union_find/union_find.cpp -o .build/output-api-sanitize-llvm-arm64/union_find/union_find.o
+/opt/homebrew/opt/llvm/bin/clang++ --driver-mode=g++ -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -std=c++17 -O1 -g -Wall -Wextra -fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer -arch arm64 -I. -c graph_utils/graph_utils.cpp -o .build/output-api-sanitize-llvm-arm64/graph_utils/graph_utils.o
+/opt/homebrew/opt/llvm/bin/clang++ --driver-mode=g++ -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -std=c++17 -O1 -g -Wall -Wextra -fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer -arch arm64 -I. -c verifier/verifier_v2.cpp -o .build/output-api-sanitize-llvm-arm64/verifier/verifier_v2.o
+/opt/homebrew/opt/llvm/bin/clang++ --driver-mode=g++ -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -std=c++17 -O1 -g -Wall -Wextra -fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer -arch arm64 -I. -c kkt/kkt.cpp -o .build/output-api-sanitize-llvm-arm64/kkt/kkt.o
+/opt/homebrew/opt/llvm/bin/clang++ --driver-mode=g++ -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -std=c++17 -O1 -g -Wall -Wextra -fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer -arch arm64 -I. benchmark/certificate_test.cpp -L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib -o bin/output-api-sanitize-llvm-arm64/certificate_test
+/opt/homebrew/opt/llvm/bin/clang++ --driver-mode=g++ -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -std=c++17 -O1 -g -Wall -Wextra -fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer -arch arm64 -I. test/simple_test.cpp .build/output-api-sanitize-llvm-arm64/boruvka/boruvka.o .build/output-api-sanitize-llvm-arm64/kruskal/kruskal.o .build/output-api-sanitize-llvm-arm64/prim/prim.o .build/output-api-sanitize-llvm-arm64/lca/lca.o .build/output-api-sanitize-llvm-arm64/union_find/union_find.o .build/output-api-sanitize-llvm-arm64/graph_utils/graph_utils.o .build/output-api-sanitize-llvm-arm64/verifier/verifier_v2.o .build/output-api-sanitize-llvm-arm64/kkt/kkt.o -L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib -o bin/output-api-sanitize-llvm-arm64/test_runner
+/opt/homebrew/opt/llvm/bin/clang++ --driver-mode=g++ -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -std=c++17 -O1 -g -Wall -Wextra -fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer -arch arm64 -I. test/regression_test.cpp .build/output-api-sanitize-llvm-arm64/boruvka/boruvka.o .build/output-api-sanitize-llvm-arm64/kruskal/kruskal.o .build/output-api-sanitize-llvm-arm64/lca/lca.o .build/output-api-sanitize-llvm-arm64/union_find/union_find.o .build/output-api-sanitize-llvm-arm64/graph_utils/graph_utils.o .build/output-api-sanitize-llvm-arm64/verifier/verifier_v2.o .build/output-api-sanitize-llvm-arm64/kkt/kkt.o -L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib -o bin/output-api-sanitize-llvm-arm64/regression_runner
+/opt/homebrew/opt/llvm/bin/clang++ --driver-mode=g++ -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -std=c++17 -O1 -g -Wall -Wextra -fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer -arch arm64 -I. test/contraction_test.cpp .build/output-api-sanitize-llvm-arm64/boruvka/boruvka.o .build/output-api-sanitize-llvm-arm64/kruskal/kruskal.o .build/output-api-sanitize-llvm-arm64/lca/lca.o .build/output-api-sanitize-llvm-arm64/union_find/union_find.o .build/output-api-sanitize-llvm-arm64/graph_utils/graph_utils.o .build/output-api-sanitize-llvm-arm64/verifier/verifier_v2.o .build/output-api-sanitize-llvm-arm64/kkt/kkt.o -L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib -o bin/output-api-sanitize-llvm-arm64/contraction_runner
+bin/output-api-sanitize-llvm-arm64/test_runner
+=== KKT MST Algorithm Tests ===
+
+Running small_triangle... PASSED
+Running small_path... PASSED
+Running complete_graph_4... PASSED
+Running prim_and_kkt_in_same_binary... PASSED
+Running random_small... PASSED
+Running random_medium... PASSED
+Running random_large... PASSED
+Running boruvka_comparison... PASSED
+
+=== Results ===
+Passed: 8
+Failed: 0
+bin/output-api-sanitize-llvm-arm64/regression_runner
+PASS edge ID metadata and duplicate endpoint selection
+PASS empty graphs and isolated vertices
+PASS recursive hierarchical paths
+PASS deterministic random graphs
+PASS negative and signed boundary weights through both output APIs
+PASS disconnected minimum spanning forests
+PASS parallel edges after forced contractions
+PASS exhaustive upper-median tables through height 20
+PASS forest heavy edges against direct path searches
+PASS heavy-edge positions preserve IDs and component mappings
+PASS contiguous queries preserve negative, equal, and empty paths
+PASS verifier empty inputs and components without queries
+PASS LCA queries outlive input adjacency
+PASS isolate compaction preserves inputs and handles empty samples
+PASS sampling consumes a continuing reproducible stream
+PASS KKT preserves global C random state
+16 passed, 0 failed
+bin/output-api-sanitize-llvm-arm64/contraction_runner
+PASS 214 contraction cases against independent partition/order oracle
+bin/output-api-sanitize-llvm-arm64/certificate_test
+PASS independent MST certificate positive and negative cases

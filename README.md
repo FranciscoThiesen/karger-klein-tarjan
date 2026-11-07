@@ -13,6 +13,14 @@ The objectives of this projects are the following:
 and it simplifies the design/analysis of the algorithm.
 2. We are at all times dealing with __undirected graphs__!!
 
+### Choosing the KKT result representation
+
+Use `kkt_edge_ids(const problem&, seed)` to obtain a vector of selected edge IDs
+without output hashing or sorting. The existing `kkt(problem&, seed)` remains
+available when a hash set is needed. Both accept disconnected forests and leave
+the input unchanged; see the [API contract and collision-work regression](docs/output-api/README.md)
+for the full input assumptions and checked boundary between the two APIs.
+
 ### How to build the project
 
 For a dependency-free C++17 build and correctness tests, run:

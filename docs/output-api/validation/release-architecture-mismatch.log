@@ -1,0 +1,54 @@
+/usr/bin/clang++ -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -std=c++17 -O3 -Wall -Wextra -march=native -I. test/regression_test.cpp .build/boruvka/boruvka.o .build/kruskal/kruskal.o .build/lca/lca.o .build/union_find/union_find.o .build/graph_utils/graph_utils.o .build/verifier/verifier_v2.o .build/kkt/kkt.o -L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib -o bin/regression_runner
+ld: warning: ignoring file '/Users/random_person/Desktop/kkt-vector-api/.build/kruskal/kruskal.o': found architecture 'arm64', required architecture 'x86_64'
+ld: warning: ignoring file '/Users/random_person/Desktop/kkt-vector-api/.build/union_find/union_find.o': found architecture 'arm64', required architecture 'x86_64'
+ld: warning: ignoring file '/Users/random_person/Desktop/kkt-vector-api/.build/lca/lca.o': found architecture 'arm64', required architecture 'x86_64'
+ld: warning: ignoring file '/Users/random_person/Desktop/kkt-vector-api/.build/kkt/kkt.o': found architecture 'arm64', required architecture 'x86_64'
+ld: warning: ignoring file '/Users/random_person/Desktop/kkt-vector-api/.build/graph_utils/graph_utils.o': found architecture 'arm64', required architecture 'x86_64'
+ld: warning: ignoring file '/Users/random_person/Desktop/kkt-vector-api/.build/boruvka/boruvka.o': found architecture 'arm64', required architecture 'x86_64'
+ld: warning: ignoring file '/Users/random_person/Desktop/kkt-vector-api/.build/verifier/verifier_v2.o': found architecture 'arm64', required architecture 'x86_64'
+Undefined symbols for architecture x86_64:
+  "verify_mst(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int)", referenced from:
+      (anonymous namespace)::test_verifier_query_layout() in regression_test-35f0a4.o
+      (anonymous namespace)::test_verifier_empty_components() in regression_test-35f0a4.o
+      (anonymous namespace)::test_verifier_empty_components() in regression_test-35f0a4.o
+      (anonymous namespace)::test_verifier_empty_components() in regression_test-35f0a4.o
+      (anonymous namespace)::check_heavy_marks(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) in regression_test-35f0a4.o
+  "kkt_edge_ids(problem const&, unsigned int)", referenced from:
+      (anonymous namespace)::check_problem(problem, std::__1::unordered_set<int, std::__1::hash<int>, std::__1::equal_to<int>, std::__1::allocator<int>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) in regression_test-35f0a4.o
+      (anonymous namespace)::check_problem(problem, std::__1::unordered_set<int, std::__1::hash<int>, std::__1::equal_to<int>, std::__1::allocator<int>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) in regression_test-35f0a4.o
+  "verify_general_graph(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int)", referenced from:
+      (anonymous namespace)::test_verifier_query_layout() in regression_test-35f0a4.o
+      (anonymous namespace)::test_verifier_query_layout() in regression_test-35f0a4.o
+      (anonymous namespace)::test_verifier_empty_components() in regression_test-35f0a4.o
+      (anonymous namespace)::test_verifier_empty_components() in regression_test-35f0a4.o
+      (anonymous namespace)::test_verifier_empty_components() in regression_test-35f0a4.o
+      (anonymous namespace)::test_verifier_empty_components() in regression_test-35f0a4.o
+      (anonymous namespace)::test_verifier_empty_components() in regression_test-35f0a4.o
+      ...
+  "remove_isolated_vertices(problem const&)", referenced from:
+      (anonymous namespace)::test_isolated_vertex_compaction()::$_6::operator()(problem const&, int, std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) const in regression_test-35f0a4.o
+  "kkt(problem&, unsigned int)", referenced from:
+      (anonymous namespace)::test_global_random_state() in regression_test-35f0a4.o
+      (anonymous namespace)::test_global_random_state() in regression_test-35f0a4.o
+      (anonymous namespace)::check_problem(problem, std::__1::unordered_set<int, std::__1::hash<int>, std::__1::equal_to<int>, std::__1::allocator<int>> const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) in regression_test-35f0a4.o
+  "kruskal(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int)", referenced from:
+      (anonymous namespace)::kruskal_ids(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int) in regression_test-35f0a4.o
+  "kkt_detail::random_sampling(problem const&, std::__1::mersenne_twister_engine<unsigned int, 32ul, 624ul, 397ul, 31ul, 2567483615u, 11ul, 4294967295u, 7ul, 2636928640u, 15ul, 4022730752u, 18ul, 1812433253u>&)", referenced from:
+      (anonymous namespace)::test_isolated_vertex_compaction() in regression_test-35f0a4.o
+      (anonymous namespace)::test_isolated_vertex_compaction() in regression_test-35f0a4.o
+      (anonymous namespace)::test_sampling_stream() in regression_test-35f0a4.o
+      (anonymous namespace)::test_sampling_stream() in regression_test-35f0a4.o
+  "verifier_detail::heavy_edge_marks(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int)", referenced from:
+      (anonymous namespace)::test_verifier_query_layout() in regression_test-35f0a4.o
+      (anonymous namespace)::test_verifier_query_layout() in regression_test-35f0a4.o
+      (anonymous namespace)::test_verifier_query_layout() in regression_test-35f0a4.o
+      (anonymous namespace)::check_heavy_marks(std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, std::__1::vector<std::__1::tuple<int, int, int, int>, std::__1::allocator<std::__1::tuple<int, int, int, int>>> const&, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) in regression_test-35f0a4.o
+  "LCA::query(int, int)", referenced from:
+      (anonymous namespace)::test_lca_adjacency_lifetime()::$_5::operator()(LCA&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) const in regression_test-35f0a4.o
+  "LCA::LCA(int, std::__1::vector<std::__1::vector<int, std::__1::allocator<int>>, std::__1::allocator<std::__1::vector<int, std::__1::allocator<int>>>> const&, int)", referenced from:
+      (anonymous namespace)::test_lca_adjacency_lifetime() in regression_test-35f0a4.o
+      (anonymous namespace)::test_lca_adjacency_lifetime() in regression_test-35f0a4.o
+      (anonymous namespace)::test_lca_adjacency_lifetime() in regression_test-35f0a4.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [bin/regression_runner] Error 1

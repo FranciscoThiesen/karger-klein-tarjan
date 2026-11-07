@@ -1,0 +1,8 @@
+[
+  "make",
+  "-j3",
+  "test",
+  "BUILD_DIR=.build/output-api-sanitize",
+  "BIN_DIR=bin/output-api-sanitize",
+  "CXXFLAGS=-std=c++17 -O1 -g -Wall -Wextra -fsanitize=address,undefined -fno-omit-frame-pointer"
+]

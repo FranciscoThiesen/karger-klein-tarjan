@@ -1,0 +1,73 @@
+{
+  "status": "pass",
+  "date": "2026-11-07",
+  "scope": "Output API, existing full correctness suites and exact SDK unique-insertion loop counts; no timed performance claim",
+  "source_sha256": {
+    "kkt/kkt.cpp": "486b0074bafc7babc3413b4ad993de5e2e0cbc3abe117ef1e187b01d6562ef73",
+    "kkt/kkt.hpp": "3cdf8366a6d8cce26d5727315bfc1f9c1f86394fa875d9e20e116df4352de480",
+    "test/regression_test.cpp": "c3b8660a750d81c3da70a52a2f10d5242b7d27092192016ddd3356bb2d06088d",
+    "test/output_api_witness.cpp": "c2bfb71f37bd3a5a62d790d2fcb3669dcde7817bbfeb86f81d0f8f04e7b3c78e",
+    "test/run_output_api_witness.py": "ea77a3d2c202b7d9955db851069f7934e50d62e85af0bbfaa99d15db8e801869"
+  },
+  "compilers": {
+    "/usr/bin/clang++": "Apple clang version 15.0.0 (clang-1500.3.9.4)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+    "/opt/homebrew/opt/llvm/bin/clang++": "Homebrew clang version 22.1.8\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /opt/homebrew/Cellar/llvm/22.1.8/bin\nConfiguration file: /opt/homebrew/Cellar/llvm/22.1.8/etc/clang/arm64-apple-darwin25.cfg\n"
+  },
+  "binaries": {
+    "bin/test_runner": {
+      "sha256": "9b5f9fb52eb0e2e69ba0ec6c58b936e9adfd4e08b723fe1d60e6dd059d96d18c",
+      "format": "bin/test_runner: Mach-O 64-bit executable arm64"
+    },
+    "bin/regression_runner": {
+      "sha256": "a28b0b90bd9a252dc1286b38b7619f5119ac62698e3684e5dec6721dd6b621ef",
+      "format": "bin/regression_runner: Mach-O 64-bit executable arm64"
+    },
+    "bin/contraction_runner": {
+      "sha256": "2ecd8fc86a7c0e5f4f1a9290c9f7ca8795bc80d988670fe49462b0fa40a75d89",
+      "format": "bin/contraction_runner: Mach-O 64-bit executable arm64"
+    },
+    "bin/certificate_test": {
+      "sha256": "7f480413499f703ed6dd7ed59dd9a9b254973c54f7ad4fd986016cd0cc64aeb0",
+      "format": "bin/certificate_test: Mach-O 64-bit executable arm64"
+    },
+    "bin/output-api-sanitize-llvm-arm64/test_runner": {
+      "sha256": "169e38928708c3ad2d1dfabd8801e69092b3ca22c018e1b26e16375d6e0d5358",
+      "format": "bin/output-api-sanitize-llvm-arm64/test_runner: Mach-O 64-bit executable arm64"
+    },
+    "bin/output-api-sanitize-llvm-arm64/regression_runner": {
+      "sha256": "f3d607898f5f2830432fda5bcedb6580cc057062e2a75290a5edbcc76a382092",
+      "format": "bin/output-api-sanitize-llvm-arm64/regression_runner: Mach-O 64-bit executable arm64"
+    },
+    "bin/output-api-sanitize-llvm-arm64/contraction_runner": {
+      "sha256": "454ff91d8d8a390b66749a9aad7f72fd5980988a61958c20858288bdb478efa7",
+      "format": "bin/output-api-sanitize-llvm-arm64/contraction_runner: Mach-O 64-bit executable arm64"
+    },
+    "bin/output-api-sanitize-llvm-arm64/certificate_test": {
+      "sha256": "c678e695ae9819372cb512ffea3e740dab70c527a8ba2d9ff456e20ad3eaa21a",
+      "format": "bin/output-api-sanitize-llvm-arm64/certificate_test: Mach-O 64-bit executable arm64"
+    }
+  },
+  "release_suite": {
+    "exit_code": 0,
+    "simple": 8,
+    "regression_groups": 16,
+    "contraction_cases": 214,
+    "certificate_positive_negative": "pass"
+  },
+  "asan_ubsan_suite": {
+    "exit_code": 0,
+    "same_suite": "pass",
+    "recover_undefined_behavior": false
+  },
+  "hash_witness": {
+    "result": "hash-witness-native-2026-11-07/RESULTS.json",
+    "sha256": "e728e54fe00dee29a5f5a66d1ff95ebe9b0b9fd239170549bc8bc28567d6730c",
+    "cases": 16,
+    "status": "pass"
+  },
+  "retained_failed_attempts": [
+    "release-architecture-mismatch.log",
+    "sanitizer-rosetta-failed.log",
+    "sanitizer-apple-runtime-failed.log"
+  ]
+}

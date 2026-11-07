@@ -53,10 +53,20 @@ int get_solution_cost(const problem& P, const unordered_set<int>& used);
 // Get MST edges from their respective indices.
 vector<Edge> get_mst_edges_from_problem(const unordered_set<int>& mst_id, const problem& P);
 
-// KKT algorithm implementation. It returns a hash_set with all the MST edges
-// Assumptions: The graph of the problem is connected and undirected.
-// The seed initializes one private random stream for the entire invocation.
-// Expected complexity: O(n + m), assuming constant-time hash table operations.
+// Return the minimum spanning forest's original edge IDs, each exactly once.
+// Input: undirected, loop-free graph with distinct weights, unique edge IDs,
+// and endpoints in [0, num_vertices). Disconnected graphs and isolates are
+// supported. IDs may be sparse or negative; they are not storage indices.
+// Inputs and representability of internal int indices are not validated.
+// The input is unchanged; seed initializes one private stream per invocation.
+// Result order is unspecified. Output uses the internal vector directly, with
+// amortized linear append work and no ID hashing or sorting. Expected O(n+m)
+// work still relies on the KKT sampling and linear-verifier assumptions.
+vector<int> kkt_edge_ids(const problem& P, unsigned int seed = 0);
+
+// Compatibility wrapper with the same input contract. Adds hash-set creation
+// to kkt_edge_ids; expected O(n+m) additionally requires constant expected hash
+// insertion cost. Arbitrary IDs can produce quadratic collision-chain work.
 unordered_set<int> kkt(problem& P, unsigned int seed = 0);
 
 #endif
