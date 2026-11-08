@@ -21,6 +21,23 @@ available when a hash set is needed. Both accept disconnected forests and leave
 the input unchanged; see the [API contract and collision-work regression](docs/output-api/README.md)
 for the full input assumptions and checked boundary between the two APIs.
 
+### Optional preprocessing for tied weights
+
+The solver itself still requires distinct weights. For repeated signed 32-bit
+weights, the opt-in [stable weight-rank adapter](docs/weight-ranks/README.md)
+constructs a copy ordered by `(original weight, input position)` using four
+linear radix passes:
+
+```cpp
+#include "kkt/experimental_weight_ranks.hpp"
+auto ranked = kkt_experiment::with_stable_weight_ranks(input);
+auto ids = kkt_edge_ids(ranked, seed);
+```
+
+The returned IDs refer to the original graph. Report costs using **original
+weights**, not ranks. Preprocessing adds copying, allocations and passes; it
+is not enabled automatically and has no claimed timing advantage.
+
 ### How to build the project
 
 For a dependency-free C++17 build and correctness tests, run:

@@ -86,3 +86,10 @@ cc_test(
     ],
     visibility = ["//visibility:public"],
 )
+
+cc_test(
+    name = "weight_rank_test",
+    srcs = ["test/weight_rank_test.cpp"],
+    copts = ["-std=c++17"],
+    deps = ["//kkt:kkt"],
+)

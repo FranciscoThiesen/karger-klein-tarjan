@@ -3,7 +3,7 @@ load("@rules_cc//cc:defs.bzl", "cc_library")
 cc_library(
     name = "kkt",
     srcs = ["kkt.cpp"],
-    hdrs = ["kkt.hpp", "random_sampling.hpp"],
+    hdrs = ["kkt.hpp", "random_sampling.hpp", "experimental_weight_ranks.hpp"],
     copts = [
         "-std=c++17",
     ],
@@ -19,7 +19,7 @@ cc_library(
 cc_library(
     name = "kkt_work_stats",
     srcs = ["kkt.cpp"],
-    hdrs = ["kkt.hpp", "random_sampling.hpp"],
+    hdrs = ["kkt.hpp", "random_sampling.hpp", "experimental_weight_ranks.hpp"],
     copts = ["-std=c++17"],
     defines = ["KKT_ENABLE_WORK_STATS"],
     deps = ["//common:edge", "//common:work_stats", "//verifier:verifier_v2_work_stats"],

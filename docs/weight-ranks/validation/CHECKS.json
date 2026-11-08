@@ -1,0 +1,57 @@
+{
+  "status": "pass",
+  "base_revision": "039a8d8e098b71df7aa3c0b48d874dbb19055b72",
+  "builds": {
+    "native": {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/usr/bin/make",
+        "-j2",
+        "CXX=/usr/bin/clang++ --driver-mode=g++",
+        "CXXFLAGS=-std=c++17 -O2 -Wall -Wextra -UNDEBUG -arch arm64",
+        "BUILD_DIR=.build/weight-ranks-native",
+        "BIN_DIR=bin/weight-ranks-native",
+        "weight-rank-test"
+      ],
+      "compiler": "Apple clang version 15.0.0 (clang-1500.3.9.4)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+      "exit": 0,
+      "binary_sha256": "858150044f64f3234aa83f5abca2bc00be87f3002020117e42d557575a563d5d",
+      "file": "/Users/random_person/Desktop/kkt-weight-ranks/bin/weight-ranks-native/weight_rank_runner: Mach-O 64-bit executable arm64",
+      "architectures": "arm64"
+    },
+    "sanitizer": {
+      "command": [
+        "/usr/bin/arch",
+        "-arm64",
+        "/usr/bin/make",
+        "-j2",
+        "CXX=/opt/homebrew/opt/llvm/bin/clang++ --driver-mode=g++",
+        "CXXFLAGS=-std=c++17 -O1 -g -Wall -Wextra -UNDEBUG -arch arm64 -fsanitize=address,undefined -fno-sanitize-recover=all -fno-omit-frame-pointer",
+        "BUILD_DIR=.build/weight-ranks-sanitizer",
+        "BIN_DIR=bin/weight-ranks-sanitizer",
+        "weight-rank-test"
+      ],
+      "compiler": "Homebrew clang version 22.1.8\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /opt/homebrew/Cellar/llvm/22.1.8/bin\nConfiguration file: /opt/homebrew/Cellar/llvm/22.1.8/etc/clang/arm64-apple-darwin25.cfg\n",
+      "exit": 0,
+      "binary_sha256": "9464c380e292d6a234eff9a414bdfac78e1748cb0bca4044f4baf68585bbba69",
+      "file": "/Users/random_person/Desktop/kkt-weight-ranks/bin/weight-ranks-sanitizer/weight_rank_runner: Mach-O 64-bit executable arm64",
+      "architectures": "arm64"
+    }
+  },
+  "source_sha256": {
+    "test/weight_rank_test.cpp": "a443b063b848bcb14adb062224ef01a519fd6d73bddecaaf3a8e0aa6dc30f668",
+    "kkt/experimental_weight_ranks.hpp": "b6bec3e7fef9ee7ec3600ac89ad0683a7254d09e398c53e0b168526305769324",
+    "kkt/kkt.cpp": "486b0074bafc7babc3413b4ad993de5e2e0cbc3abe117ef1e187b01d6562ef73",
+    "verifier/verifier_v2.cpp": "650b83b0ab1c29673bfcbcf5ac5c2fa3f386e4d349c715310418d2df68809a29",
+    "lca/lca.cpp": "d21ea8d45c76eb2b782c08afbe25394b7da25b862dea28ddd1499c14877a46ca"
+  },
+  "coverage": {
+    "fixtures_per_build": 169,
+    "solver_calls_per_build": 507,
+    "public_solver": "default production; no research contraction/verifier overlay",
+    "research_header_identical": true,
+    "independent_source_review": "No substantive issue; comparison-sort/Kruskal oracles and Make/Bazel declarations reviewed; reviewer ran no heavy processes.",
+    "bazel_execution": "not run"
+  }
+}

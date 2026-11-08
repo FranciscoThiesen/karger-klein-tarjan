@@ -32,7 +32,7 @@ OBJS = $(SRCS:%.cpp=$(BUILD_DIR)/%.o)
 # Headers
 HDRS = $(wildcard */*.hpp)
 
-.PHONY: all clean test benchmark scaling-benchmark diverse-benchmark work-sweep shape-work common-work mst-search mst-search-large-stack debug
+.PHONY: all clean test weight-rank-test benchmark scaling-benchmark diverse-benchmark work-sweep shape-work common-work mst-search mst-search-large-stack debug
 
 all: $(BIN_DIR)/test_runner $(BIN_DIR)/regression_runner
 
@@ -162,6 +162,14 @@ $(BIN_DIR)/regression_runner: test/regression_test.cpp $(filter-out $(BUILD_DIR)
 	@mkdir -p $(BIN_DIR)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -I. $^ $(LDFLAGS) -o $@
 
+# Optional tied-weight preprocessing has an independent ordering/MSF oracle.
+$(BIN_DIR)/weight_rank_runner: test/weight_rank_test.cpp $(filter-out $(BUILD_DIR)/prim/prim.o,$(OBJS))
+	@mkdir -p $(BIN_DIR)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -I. $^ $(LDFLAGS) -o $@
+
+weight-rank-test: $(BIN_DIR)/weight_rank_runner
+	$(BIN_DIR)/weight_rank_runner
+
 $(BIN_DIR)/contraction_runner: test/contraction_test.cpp $(filter-out $(BUILD_DIR)/prim/prim.o,$(OBJS))
 	@mkdir -p $(BIN_DIR)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -I. $^ $(LDFLAGS) -o $@
@@ -187,11 +195,12 @@ $(BIN_DIR)/benchmark: benchmark/mst_benchmark.cpp $(OBJS)
 debug:
 	$(MAKE) CXXFLAGS="$(DEBUG_FLAGS)" BUILD_DIR="$(BUILD_DIR)/debug" BIN_DIR="$(BIN_DIR)/debug" all
 
-test: $(BIN_DIR)/test_runner $(BIN_DIR)/regression_runner $(BIN_DIR)/contraction_runner $(BIN_DIR)/certificate_test
+test: $(BIN_DIR)/test_runner $(BIN_DIR)/regression_runner $(BIN_DIR)/contraction_runner $(BIN_DIR)/certificate_test $(BIN_DIR)/weight_rank_runner
 	$(BIN_DIR)/test_runner
 	$(BIN_DIR)/regression_runner
 	$(BIN_DIR)/contraction_runner
 	$(BIN_DIR)/certificate_test
+	$(BIN_DIR)/weight_rank_runner
 
 clean:
 	rm -rf $(BUILD_DIR) $(BIN_DIR)
